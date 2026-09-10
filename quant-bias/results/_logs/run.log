@@ -35,3 +35,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
         return next(layer for layer in module.modules() if isinstance(layer, torch.nn.Linear)).weight.dtype
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     StopIteration
+[2026-09-10_08:20:24] >>> e0/M7
+[2026-09-10_08:25:10] <<< e0/M7 ok in 286s
