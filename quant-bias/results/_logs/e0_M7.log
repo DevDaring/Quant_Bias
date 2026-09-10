@@ -1,56 +1,45 @@
-[08:20:26] === E0 model=M7 tag=lfm2_2.6b-smoke device=cuda seed=20260908 profile=smoke ===
-[08:20:27] Loading LiquidAI/LFM2-2.6B@main (36ed799f7024ef169ba92ffe184821835e15cc66) dtype=torch.bfloat16 device=cuda
-Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 9080.13it/s]
-[08:21:11]   attention: flash_attention_2
+[08:52:02] === E0 model=M7 tag=lfm2_2.6b-smoke device=cuda seed=20260908 profile=smoke ===
+[08:52:02] Loading LiquidAI/LFM2-2.6B@main (36ed799f7024ef169ba92ffe184821835e15cc66) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 12304.35it/s]
+[08:52:40]   attention: flash_attention_2
 [transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
-[08:21:12] adapter: {'model_id': 'LiquidAI/LFM2-2.6B', 'revision': '36ed799f7024ef169ba92ffe184821835e15cc66', 'family': 'lfm2', 'n_layers': 30, 'n_components': 166, 'component_weights': 2434793472, 'excluded_weights': 134478848, 'tied_lm_head': True, 'dtype': 'torch.bfloat16', 'components_per_layer': ['conv.out_proj', 'conv.in_proj', 'feed_forward.w1', 'feed_forward.w2', 'feed_forward.w3'], 'component_kinds': {'attn': 32, 'conv': 44, 'mlp': 90, 'other': 0}, 'layer_types': ['conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv']}
-Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 268991.46 examples/s]
-Generating train split:   0%|          | 0/1801350 [00:00<?, ? examples/s]Generating train split:   2%|▏         | 36000/1801350 [00:00<00:05, 352506.13 examples/s]Generating train split:   4%|▍         | 81000/1801350 [00:00<00:04, 403662.33 examples/s]Generating train split:   7%|▋         | 125000/1801350 [00:00<00:04, 413474.52 examples/s]Generating train split:   9%|▉         | 169000/1801350 [00:00<00:03, 421641.96 examples/s]Generating train split:  12%|█▏        | 223000/1801350 [00:00<00:04, 389205.01 examples/s]Generating train split:  15%|█▍        | 267000/1801350 [00:00<00:03, 400774.93 examples/s]Generating train split:  17%|█▋        | 311000/1801350 [00:00<00:03, 409065.85 examples/s]Generating train split:  20%|█▉        | 354000/1801350 [00:00<00:03, 412491.54 examples/s]Generating train split:  23%|██▎       | 407000/1801350 [00:01<00:03, 386295.24 examples/s]Generating train split:  25%|██▍       | 447000/1801350 [00:01<00:03, 389548.65 examples/s]Generating train split:  27%|██▋       | 491000/1801350 [00:01<00:03, 399288.16 examples/s]Generating train split:  30%|██▉       | 534000/1801350 [00:01<00:03, 406380.52 examples/s]Generating train split:  32%|███▏      | 577000/1801350 [00:01<00:02, 411299.50 examples/s]Generating train split:  35%|███▍      | 630000/1801350 [00:01<00:03, 385886.97 examples/s]Generating train split:  37%|███▋      | 673000/1801350 [00:01<00:02, 395777.58 examples/s]Generating train split:  40%|███▉      | 715000/1801350 [00:01<00:02, 400520.10 examples/s]Generating train split:  42%|████▏     | 757000/1801350 [00:01<00:02, 404425.60 examples/s]Generating train split:  45%|████▌     | 813000/1801350 [00:02<00:02, 377860.88 examples/s]Generating train split:  47%|████▋     | 853000/1801350 [00:02<00:02, 381391.23 examples/s]Generating train split:  50%|████▉     | 896000/1801350 [00:02<00:02, 390961.53 examples/s]Generating train split:  52%|█████▏    | 944675/1801350 [00:02<00:02, 358602.73 examples/s]Generating train split:  55%|█████▍    | 988675/1801350 [00:02<00:02, 377787.32 examples/s]Generating train split:  57%|█████▋    | 1030675/1801350 [00:02<00:01, 386122.76 examples/s]Generating train split:  60%|█████▉    | 1075675/1801350 [00:02<00:01, 399599.41 examples/s]Generating train split:  63%|██████▎   | 1136675/1801350 [00:02<00:01, 364771.65 examples/s]Generating train split:  65%|██████▌   | 1178675/1801350 [00:03<00:01, 375601.51 examples/s]Generating train split:  68%|██████▊   | 1220675/1801350 [00:03<00:01, 385424.32 examples/s]Generating train split:  70%|███████   | 1263675/1801350 [00:03<00:01, 395263.66 examples/s]Generating train split:  73%|███████▎  | 1307675/1801350 [00:03<00:01, 360427.87 examples/s]Generating train split:  75%|███████▍  | 1350675/1801350 [00:03<00:01, 376776.61 examples/s]Generating train split:  77%|███████▋  | 1392675/1801350 [00:03<00:01, 386446.21 examples/s]Generating train split:  80%|███████▉  | 1436675/1801350 [00:03<00:00, 397434.63 examples/s]Generating train split:  83%|████████▎ | 1498675/1801350 [00:03<00:00, 365515.11 examples/s]Generating train split:  86%|████████▌ | 1540675/1801350 [00:03<00:00, 378023.16 examples/s]Generating train split:  89%|████████▉ | 1601675/1801350 [00:04<00:00, 384125.65 examples/s]Generating train split:  91%|█████████▏| 1644675/1801350 [00:04<00:00, 393224.88 examples/s]Generating train split:  94%|█████████▍| 1696675/1801350 [00:04<00:00, 372717.36 examples/s]Generating train split:  97%|█████████▋| 1740675/1801350 [00:04<00:00, 386731.70 examples/s]Generating train split:  99%|█████████▉| 1783675/1801350 [00:04<00:00, 395379.28 examples/s]Generating train split: 100%|██████████| 1801350/1801350 [00:04<00:00, 387882.16 examples/s]
-Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 273642.82 examples/s]
-Generating test split:   0%|          | 0/58492 [00:00<?, ? examples/s]Generating test split:  22%|██▏       | 12756/58492 [00:00<00:00, 91206.95 examples/s]Generating test split:  42%|████▏     | 24278/58492 [00:00<00:00, 91747.83 examples/s]Generating test split:  82%|████████▏ | 47777/58492 [00:00<00:00, 128589.96 examples/s]Generating test split: 100%|██████████| 58492/58492 [00:00<00:00, 114911.85 examples/s]
-[08:22:28] BBQ: 22 examples, 11 template clusters
-Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 27252.72 examples/s]
-Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 31670.82 examples/s]
-Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 30819.87 examples/s]
-Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 33656.42 examples/s]
-Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 54218.98 examples/s]
-Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 61364.18 examples/s]
-Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 35157.47 examples/s]
-Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 35118.82 examples/s]
-[08:23:00] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-Generating train split:   0%|          | 0/9450 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 9450/9450 [00:00<00:00, 116515.29 examples/s]
-[08:23:04] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[08:23:16] calibration[generic] seed=20260908: 8x128 tokens, hash=1fcd00030296019b
-[08:23:19]   GPTQ layer 0: 5 components
-[08:23:22]   GPTQ layer 1: 5 components
-[08:23:24]   GPTQ layer 2: 7 components
-[08:23:25]   GPTQ layer 3: 5 components
-[08:23:27]   GPTQ layer 4: 5 components
-[08:23:29]   GPTQ layer 5: 7 components
-[08:23:31]   GPTQ layer 6: 5 components
-[08:23:33]   GPTQ layer 7: 5 components
-[08:23:35]   GPTQ layer 8: 5 components
-[08:23:37]   GPTQ layer 9: 7 components
-[08:23:38]   GPTQ layer 10: 5 components
-[08:23:40]   GPTQ layer 11: 5 components
-[08:23:42]   GPTQ layer 12: 5 components
-[08:23:44]   GPTQ layer 13: 7 components
-[08:23:45]   GPTQ layer 14: 5 components
-[08:23:47]   GPTQ layer 15: 5 components
-[08:23:49]   GPTQ layer 16: 5 components
-[08:23:51]   GPTQ layer 17: 7 components
-[08:23:53]   GPTQ layer 18: 5 components
-[08:23:54]   GPTQ layer 19: 5 components
-[08:23:56]   GPTQ layer 20: 5 components
-[08:23:58]   GPTQ layer 21: 7 components
-[08:24:00]   GPTQ layer 22: 5 components
-[08:24:02]   GPTQ layer 23: 5 components
-[08:24:04]   GPTQ layer 24: 7 components
-[08:24:05]   GPTQ layer 25: 5 components
-[08:24:07]   GPTQ layer 26: 5 components
-[08:24:09]   GPTQ layer 27: 7 components
-[08:24:11]   GPTQ layer 28: 5 components
-[08:24:13]   GPTQ layer 29: 5 components
-[08:24:43] Wanda per-row 50%: achieved 0.5000 over 2434793472 weights
-[08:25:09]   scored 3/3 candidate sequences
-[08:25:09] === done in 283s -> /workspace/Quant_Bias/quant-bias/results/e0/lfm2_2.6b-smoke ===
+[08:52:41]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 14008.93it/s]
+[08:52:43] adapter: {'model_id': 'LiquidAI/LFM2-2.6B', 'revision': '36ed799f7024ef169ba92ffe184821835e15cc66', 'family': 'lfm2', 'n_layers': 30, 'n_components': 166, 'component_weights': 2434793472, 'excluded_weights': 134478848, 'tied_lm_head': True, 'dtype': 'torch.bfloat16', 'components_per_layer': ['conv.out_proj', 'conv.in_proj', 'feed_forward.w1', 'feed_forward.w2', 'feed_forward.w3'], 'component_kinds': {'attn': 32, 'conv': 44, 'mlp': 90, 'other': 0}, 'layer_types': ['conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv']}
+[08:53:03] BBQ: 22 examples, 11 template clusters
+[08:53:10] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[08:53:11] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[08:53:16] calibration[generic] seed=20260908: 8x128 tokens, hash=1fcd00030296019b
+[08:53:19]   GPTQ layer 0: 5 components
+[08:53:22]   GPTQ layer 1: 5 components
+[08:53:24]   GPTQ layer 2: 7 components
+[08:53:26]   GPTQ layer 3: 5 components
+[08:53:28]   GPTQ layer 4: 5 components
+[08:53:31]   GPTQ layer 5: 7 components
+[08:53:33]   GPTQ layer 6: 5 components
+[08:53:35]   GPTQ layer 7: 5 components
+[08:53:38]   GPTQ layer 8: 5 components
+[08:53:40]   GPTQ layer 9: 7 components
+[08:53:42]   GPTQ layer 10: 5 components
+[08:53:44]   GPTQ layer 11: 5 components
+[08:53:47]   GPTQ layer 12: 5 components
+[08:53:49]   GPTQ layer 13: 7 components
+[08:53:51]   GPTQ layer 14: 5 components
+[08:53:53]   GPTQ layer 15: 5 components
+[08:53:56]   GPTQ layer 16: 5 components
+[08:53:58]   GPTQ layer 17: 7 components
+[08:54:00]   GPTQ layer 18: 5 components
+[08:54:03]   GPTQ layer 19: 5 components
+[08:54:05]   GPTQ layer 20: 5 components
+[08:54:07]   GPTQ layer 21: 7 components
+[08:54:09]   GPTQ layer 22: 5 components
+[08:54:12]   GPTQ layer 23: 5 components
+[08:54:14]   GPTQ layer 24: 7 components
+[08:54:16]   GPTQ layer 25: 5 components
+[08:54:18]   GPTQ layer 26: 5 components
+[08:54:21]   GPTQ layer 27: 7 components
+[08:54:23]   GPTQ layer 28: 5 components
+[08:54:25]   GPTQ layer 29: 5 components
+[08:54:34] Wanda per-row 50%: achieved 0.5000 over 2434793472 weights
+[08:54:43]   scored 3/3 candidate sequences
+[08:54:43] === done in 161s -> /workspace/Quant_Bias/quant-bias/results/e0/lfm2_2.6b-smoke ===
