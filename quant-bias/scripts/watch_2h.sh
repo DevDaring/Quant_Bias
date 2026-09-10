@@ -50,6 +50,29 @@ check_once(){
     LATEST=$(ls -t /workspace/run.log /workspace/full_console.log 2>/dev/null | head -1)
     echo "reading: $LATEST"
     tail -3 "$LATEST" 2>/dev/null
+    echo "--- liveness: real progress, not just the stage-boundary log ---"
+    # run.log only gets a line when a stage STARTS or FINISHES, so a single
+    # stage that legitimately runs for hours (E2 on a large model) makes this
+    # look frozen even while it is actively working -- per-site progress goes
+    # to a separate per-experiment log (e.g. e2_M2.log), so freshness of
+    # WHICHEVER log file was touched most recently is the real liveness signal.
+    NOW=$(date -u +%s)
+    NEWEST_LOG=$(ls -t /workspace/Quant_Bias/quant-bias/results/_logs/*.log 2>/dev/null | head -1)
+    if [ -n "$NEWEST_LOG" ]; then
+      AGE=$(( NOW - $(stat -c %Y "$NEWEST_LOG") ))
+      echo "freshest log: $NEWEST_LOG (${AGE}s old)"
+      if [ "$AGE" -gt 900 ]; then
+        echo "PROC_ALERT: no result log written in ${AGE}s (>15 min) -- likely stalled or hung"
+      fi
+    else
+      echo "PROC_ALERT: no per-experiment log files found at all"
+    fi
+    # a single nvidia-smi sample is noisy on bursty workloads; two samples a
+    # few seconds apart tell 'idle between bursts' from 'actually idle' apart
+    echo "--- gpu (two samples, 5s apart) ---"
+    nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader
+    sleep 5
+    nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader
     echo "--- content-correctness validator ---"
     cd /workspace/Quant_Bias/quant-bias
     export GIT_SSH_COMMAND="ssh -i /root/.ssh/quantbias_deploy -o StrictHostKeyChecking=no -o UserKnownHostsFile=/root/.ssh/known_hosts"
