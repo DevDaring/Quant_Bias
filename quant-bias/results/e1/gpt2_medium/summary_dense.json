@@ -15,7 +15,7 @@
   "manifest": {
     "backend": "simulated",
     "calibration_hash": "",
-    "code_revision": "git:af3eb96+src:a17bd48e2e46",
+    "code_revision": "git:ede8797+src:a17bd48e2e46",
     "data_revisions": {},
     "error": "",
     "experiment_id": "e1",
@@ -41,7 +41,7 @@
       "quick": false,
       "sampling_profile": "budget"
     },
-    "finished": "2026-09-10T10:10:28",
+    "finished": "2026-09-10T10:38:23",
     "hardware": {
       "cpu_count": 96,
       "cuda": true,
@@ -58,7 +58,7 @@
     "precision_map_hash": "13001de4b9301d9a",
     "seed": 20260908,
     "split_hash": "",
-    "started": "2026-09-10T10:09:29",
+    "started": "2026-09-10T10:37:25",
     "status": "ok",
     "tokenizer_revision": "6dcaa7a952f72f9298047fd5137cd6e4f05f41da"
   },
