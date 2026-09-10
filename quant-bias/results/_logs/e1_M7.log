@@ -1,0 +1,84 @@
+[09:12:18] === E1 model=M7 tag=lfm2_2.6b-smoke device=cuda seed=20260908 profile=smoke ===
+[09:12:19] Loading LiquidAI/LFM2-2.6B@main (36ed799f7024ef169ba92ffe184821835e15cc66) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 12579.46it/s]
+[09:12:21]   attention: flash_attention_2
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[09:12:23]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 14392.03it/s]
+[09:12:24] === E1 dense on final ===
+[09:12:32] BBQ: 22 examples, 11 template clusters
+[09:12:38] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[09:12:39] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[09:12:41] === E1 rtn8 on final ===
+[09:12:51] counterfactual pairs: 46
+[09:12:53] === E1 rtn4 on final ===
+[09:12:56] counterfactual pairs: 46
+[09:12:57] === E1 gptq4 on final ===
+HTTP Error 502 thrown while requesting GET https://huggingface.co/api/datasets/allenai/c4/tree/1588ec454efa1a09f29cd18ddd04fe05fc8653a2/en?expand=false&recursive=false&limit=1000&cursor=ZXlKbWFXeGxYMjVoYldVaU9pSmxiaTlqTkMxMGNtRnBiaTR3TURrNU9TMXZaaTB3TVRBeU5DNXFjMjl1TG1kNklpd2lkSEpsWlY5dmFXUWlPaUprWXprME0yTTBZelF3WmpVelpEQXlZak14WTJWa01XUmxabUUzWlRWbU5ETTRaRFU0TmpKbEluMD06MTAwMA%3D%3D
+Retrying in 1s [Retry 1/5].
+[09:13:39] calibration[generic] seed=20260908: 8x128 tokens, hash=1fcd00030296019b
+[09:13:42]   GPTQ layer 0: 5 components
+[09:13:44]   GPTQ layer 1: 5 components
+[09:13:47]   GPTQ layer 2: 7 components
+[09:13:49]   GPTQ layer 3: 5 components
+[09:13:52]   GPTQ layer 4: 5 components
+[09:13:54]   GPTQ layer 5: 7 components
+[09:13:56]   GPTQ layer 6: 5 components
+[09:13:59]   GPTQ layer 7: 5 components
+[09:14:01]   GPTQ layer 8: 5 components
+[09:14:04]   GPTQ layer 9: 7 components
+[09:14:06]   GPTQ layer 10: 5 components
+[09:14:08]   GPTQ layer 11: 5 components
+[09:14:10]   GPTQ layer 12: 5 components
+[09:14:13]   GPTQ layer 13: 7 components
+[09:14:15]   GPTQ layer 14: 5 components
+[09:14:18]   GPTQ layer 15: 5 components
+[09:14:20]   GPTQ layer 16: 5 components
+[09:14:22]   GPTQ layer 17: 7 components
+[09:14:25]   GPTQ layer 18: 5 components
+[09:14:27]   GPTQ layer 19: 5 components
+[09:14:29]   GPTQ layer 20: 5 components
+[09:14:32]   GPTQ layer 21: 7 components
+[09:14:34]   GPTQ layer 22: 5 components
+[09:14:36]   GPTQ layer 23: 5 components
+[09:14:39]   GPTQ layer 24: 7 components
+[09:14:41]   GPTQ layer 25: 5 components
+[09:14:44]   GPTQ layer 26: 5 components
+[09:14:46]   GPTQ layer 27: 7 components
+[09:14:48]   GPTQ layer 28: 5 components
+[09:14:51]   GPTQ layer 29: 5 components
+[09:14:51] counterfactual pairs: 46
+[09:14:53] === E1 gptq8 on final ===
+[09:14:56]   GPTQ layer 0: 5 components
+[09:14:58]   GPTQ layer 1: 5 components
+[09:15:01]   GPTQ layer 2: 7 components
+[09:15:03]   GPTQ layer 3: 5 components
+[09:15:05]   GPTQ layer 4: 5 components
+[09:15:08]   GPTQ layer 5: 7 components
+[09:15:10]   GPTQ layer 6: 5 components
+[09:15:12]   GPTQ layer 7: 5 components
+[09:15:14]   GPTQ layer 8: 5 components
+[09:15:17]   GPTQ layer 9: 7 components
+[09:15:19]   GPTQ layer 10: 5 components
+[09:15:22]   GPTQ layer 11: 5 components
+[09:15:24]   GPTQ layer 12: 5 components
+[09:15:27]   GPTQ layer 13: 7 components
+[09:15:29]   GPTQ layer 14: 5 components
+[09:15:31]   GPTQ layer 15: 5 components
+[09:15:33]   GPTQ layer 16: 5 components
+[09:15:36]   GPTQ layer 17: 7 components
+[09:15:38]   GPTQ layer 18: 5 components
+[09:15:40]   GPTQ layer 19: 5 components
+[09:15:43]   GPTQ layer 20: 5 components
+[09:15:45]   GPTQ layer 21: 7 components
+[09:15:48]   GPTQ layer 22: 5 components
+[09:15:50]   GPTQ layer 23: 5 components
+[09:15:53]   GPTQ layer 24: 7 components
+[09:15:55]   GPTQ layer 25: 5 components
+[09:15:57]   GPTQ layer 26: 5 components
+[09:16:00]   GPTQ layer 27: 7 components
+[09:16:02]   GPTQ layer 28: 5 components
+[09:16:04]   GPTQ layer 29: 5 components
+[09:16:05] counterfactual pairs: 46
+[09:16:06] report written: /workspace/Quant_Bias/quant-bias/results/e1/lfm2_2.6b-smoke/REPORT.md
+[09:16:06] === done in 228s -> /workspace/Quant_Bias/quant-bias/results/e1/lfm2_2.6b-smoke ===
