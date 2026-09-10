@@ -44,7 +44,12 @@ check_once(){
     echo "--- disk ---"
     df -h /workspace | tail -1
     echo "--- current stage ---"
-    tail -3 /workspace/full_console.log 2>/dev/null
+    # AUTORUN writes run.log; a manually-launched copy writes full_console.log.
+    # Whichever was modified most recently is the one actually driving the live
+    # process, so tail that one rather than an assumed fixed path.
+    LATEST=$(ls -t /workspace/run.log /workspace/full_console.log 2>/dev/null | head -1)
+    echo "reading: $LATEST"
+    tail -3 "$LATEST" 2>/dev/null
     echo "--- content-correctness validator ---"
     cd /workspace/Quant_Bias/quant-bias
     export GIT_SSH_COMMAND="ssh -i /root/.ssh/quantbias_deploy -o StrictHostKeyChecking=no -o UserKnownHostsFile=/root/.ssh/known_hosts"
