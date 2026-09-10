@@ -1,47 +1,47 @@
-[08:56:56] === E0 model=M3 tag=mistral_7b_v0_1-smoke device=cuda seed=20260908 profile=smoke ===
-[08:56:57] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
-Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:24<00:24, 24.76s/it]Fetching 2 files: 100%|██████████| 2/2 [00:37<00:00, 17.55s/it]Fetching 2 files: 100%|██████████| 2/2 [00:37<00:00, 18.63s/it]
-Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 12909.92it/s]
-[08:57:40]   attention: flash_attention_2
-[08:57:40]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 11140.00it/s]
-[08:57:44] adapter: {'model_id': 'mistralai/Mistral-7B-v0.1', 'revision': '27d67f1b5f57dc0953326b2601d68371d40ea8da', 'family': 'llama', 'n_layers': 32, 'n_components': 224, 'component_weights': 6979321856, 'excluded_weights': 262410240, 'tied_lm_head': False, 'dtype': 'torch.bfloat16', 'components_per_layer': ['self_attn.q_proj', 'self_attn.k_proj', 'self_attn.v_proj', 'self_attn.o_proj', 'mlp.gate_proj', 'mlp.up_proj', 'mlp.down_proj'], 'component_kinds': {'attn': 128, 'conv': 0, 'mlp': 96, 'other': 0}, 'layer_types': None}
-[08:58:16] BBQ: 22 examples, 11 template clusters
-[08:58:23] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[08:58:24] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[08:58:28] calibration[generic] seed=20260908: 8x128 tokens, hash=9c6857465cb268a5
-[08:58:35]   GPTQ layer 0: 7 components
-[08:58:39]   GPTQ layer 1: 7 components
-[08:58:44]   GPTQ layer 2: 7 components
-[08:58:48]   GPTQ layer 3: 7 components
-[08:58:52]   GPTQ layer 4: 7 components
-[08:58:57]   GPTQ layer 5: 7 components
-[08:59:01]   GPTQ layer 6: 7 components
-[08:59:05]   GPTQ layer 7: 7 components
-[08:59:10]   GPTQ layer 8: 7 components
-[08:59:14]   GPTQ layer 9: 7 components
-[08:59:18]   GPTQ layer 10: 7 components
-[08:59:23]   GPTQ layer 11: 7 components
-[08:59:27]   GPTQ layer 12: 7 components
-[08:59:31]   GPTQ layer 13: 7 components
-[08:59:36]   GPTQ layer 14: 7 components
-[08:59:40]   GPTQ layer 15: 7 components
-[08:59:44]   GPTQ layer 16: 7 components
-[08:59:49]   GPTQ layer 17: 7 components
-[08:59:53]   GPTQ layer 18: 7 components
-[08:59:57]   GPTQ layer 19: 7 components
-[09:00:02]   GPTQ layer 20: 7 components
-[09:00:06]   GPTQ layer 21: 7 components
-[09:00:10]   GPTQ layer 22: 7 components
-[09:00:15]   GPTQ layer 23: 7 components
-[09:00:19]   GPTQ layer 24: 7 components
-[09:00:23]   GPTQ layer 25: 7 components
-[09:00:27]   GPTQ layer 26: 7 components
-[09:00:32]   GPTQ layer 27: 7 components
-[09:00:36]   GPTQ layer 28: 7 components
-[09:00:40]   GPTQ layer 29: 7 components
-[09:00:45]   GPTQ layer 30: 7 components
-[09:00:49]   GPTQ layer 31: 7 components
-[09:01:08] Wanda per-row 50%: achieved 0.5000 over 6979321856 weights
-[09:01:22]   scored 3/3 candidate sequences
-[09:01:23] === done in 267s -> /workspace/Quant_Bias/quant-bias/results/e0/mistral_7b_v0_1-smoke ===
+[10:00:27] === E0 model=M3 tag=mistral_7b_v0_1 device=cuda seed=20260908 profile=budget ===
+[10:00:28] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:17<00:17, 17.77s/it]Fetching 2 files: 100%|██████████| 2/2 [00:28<00:00, 13.84s/it]Fetching 2 files: 100%|██████████| 2/2 [00:28<00:00, 14.43s/it]
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 12125.88it/s]
+[10:01:01]   attention: flash_attention_2
+[10:01:01]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 10978.67it/s]
+[10:01:05] adapter: {'model_id': 'mistralai/Mistral-7B-v0.1', 'revision': '27d67f1b5f57dc0953326b2601d68371d40ea8da', 'family': 'llama', 'n_layers': 32, 'n_components': 224, 'component_weights': 6979321856, 'excluded_weights': 262410240, 'tied_lm_head': False, 'dtype': 'torch.bfloat16', 'components_per_layer': ['self_attn.q_proj', 'self_attn.k_proj', 'self_attn.v_proj', 'self_attn.o_proj', 'mlp.gate_proj', 'mlp.up_proj', 'mlp.down_proj'], 'component_kinds': {'attn': 128, 'conv': 0, 'mlp': 96, 'other': 0}, 'layer_types': None}
+[10:01:40] BBQ: 7868 examples, 343 template clusters
+[10:01:46] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[10:01:47] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[10:01:53] calibration[generic] seed=20260908: 128x512 tokens, hash=905970a5ebc93504
+[10:02:00]   GPTQ layer 0: 7 components
+[10:02:06]   GPTQ layer 1: 7 components
+[10:02:12]   GPTQ layer 2: 7 components
+[10:02:17]   GPTQ layer 3: 7 components
+[10:02:23]   GPTQ layer 4: 7 components
+[10:02:29]   GPTQ layer 5: 7 components
+[10:02:34]   GPTQ layer 6: 7 components
+[10:02:40]   GPTQ layer 7: 7 components
+[10:02:46]   GPTQ layer 8: 7 components
+[10:02:52]   GPTQ layer 9: 7 components
+[10:02:57]   GPTQ layer 10: 7 components
+[10:03:03]   GPTQ layer 11: 7 components
+[10:03:09]   GPTQ layer 12: 7 components
+[10:03:14]   GPTQ layer 13: 7 components
+[10:03:20]   GPTQ layer 14: 7 components
+[10:03:26]   GPTQ layer 15: 7 components
+[10:03:32]   GPTQ layer 16: 7 components
+[10:03:37]   GPTQ layer 17: 7 components
+[10:03:43]   GPTQ layer 18: 7 components
+[10:03:49]   GPTQ layer 19: 7 components
+[10:03:54]   GPTQ layer 20: 7 components
+[10:04:00]   GPTQ layer 21: 7 components
+[10:04:06]   GPTQ layer 22: 7 components
+[10:04:11]   GPTQ layer 23: 7 components
+[10:04:17]   GPTQ layer 24: 7 components
+[10:04:23]   GPTQ layer 25: 7 components
+[10:04:28]   GPTQ layer 26: 7 components
+[10:04:34]   GPTQ layer 27: 7 components
+[10:04:40]   GPTQ layer 28: 7 components
+[10:04:46]   GPTQ layer 29: 7 components
+[10:04:51]   GPTQ layer 30: 7 components
+[10:04:57]   GPTQ layer 31: 7 components
+[10:05:20] Wanda per-row 50%: achieved 0.5000 over 6979321856 weights
+[10:05:35]   scored 3/3 candidate sequences
+[10:05:36] === done in 309s -> /workspace/Quant_Bias/quant-bias/results/e0/mistral_7b_v0_1 ===
