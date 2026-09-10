@@ -1,0 +1,6 @@
+[22:34:10] === E6 model=M6 tag=gpt2_medium device=cuda seed=20260908 profile=budget ===
+[22:34:10] Loading openai-community/gpt2-medium@main (6dcaa7a952f72f9298047fd5137cd6e4f05f41da) dtype=torch.float32 device=cuda
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 14241.13it/s]
+[22:34:13]   attention: sdpa
+[22:34:13] E6: Prior Lyapunov rho tracks this study's utility measure at rho_s=-0.00 (n=39), confirming the two pipelines measure the same layers. It does not predict group-conditioned harmful flips (rho_s=-0.04, p=0.83), so utility-derived layer sensitivity does not identify where quantization changes socially relevant decisions. This study's group-conditioned residual energy relates to harm at rho_s=0.64 (n=40).
+[22:34:14] === done in 4s -> /workspace/Quant_Bias/quant-bias/results/e6/gpt2_medium ===
