@@ -1,0 +1,20 @@
+[2026-09-10_08:19:32] ===== MODE=smoke  flags:--smoke --device cuda --attn flash_attention_2 =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-10_08:19:32] --- Stage A: adapter and pipeline checks (all models) ---
+[2026-09-10_08:19:32] >>> e0/M1
+[2026-09-10_08:19:46] <<< e0/M1 FAILED in 14s -- see results/_logs/e0_M1.log
+        return self._call_impl(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+        return forward_call(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/conda/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 211, in forward
+        attn_output, attn_weights = attention_interface(
+                                    ^^^^^^^^^^^^^^^^^^^^
+      File "/opt/conda/lib/python3.11/site-packages/transformers/integrations/flash_attention.py", line 71, in flash_attention_forward
+        target_dtype = get_target_dtype(query, module)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/conda/lib/python3.11/site-packages/transformers/integrations/flash_attention.py", line 22, in get_target_dtype
+        return next(layer for layer in module.modules() if isinstance(layer, torch.nn.Linear)).weight.dtype
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    StopIteration
