@@ -1,0 +1,1035 @@
+{
+  "bytes": {
+    "component_bytes": 12952010752,
+    "metadata_bytes": 0,
+    "padding_bytes": 0,
+    "total_MiB": 12852.51,
+    "total_bytes": 13476831232,
+    "uncompressed_bytes": 524820480
+  },
+  "config": {
+    "bits": 16,
+    "method": "dense",
+    "name": "dense"
+  },
+  "manifest": {
+    "backend": "simulated",
+    "calibration_hash": "",
+    "code_revision": "git:31ae5f5+src:a17bd48e2e46",
+    "data_revisions": {},
+    "error": "",
+    "experiment_id": "e1",
+    "extra": {
+      "config": {
+        "bits": 16,
+        "method": "dense",
+        "name": "dense"
+      },
+      "config_hash": "ec1f83fc2916df2a",
+      "limits": {
+        "bbq_answer_format": "text",
+        "bbq_per_cluster_per_cell": 6,
+        "discrim_ages": [
+          20,
+          40,
+          60,
+          80,
+          100
+        ],
+        "discrim_config": "explicit"
+      },
+      "quick": false,
+      "sampling_profile": "budget"
+    },
+    "finished": "2026-09-10T11:27:12",
+    "hardware": {
+      "cpu_count": 96,
+      "cuda": true,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "gpu_mem_gb": 79.2,
+      "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+      "python": "3.11.10",
+      "torch": "2.5.1+cu124",
+      "transformers": "5.17.0"
+    },
+    "method": "dense",
+    "model_id": "NousResearch/Llama-2-7b-hf",
+    "model_revision": "8efe6c9b93655b934e27bd9981e3ec13e55aee9d",
+    "precision_map_hash": "8d3aa3d5753e5c18",
+    "seed": 20260908,
+    "split_hash": "",
+    "started": "2026-09-10T11:25:40",
+    "status": "ok",
+    "tokenizer_revision": "8efe6c9b93655b934e27bd9981e3ec13e55aee9d"
+  },
+  "metrics": {
+    "bbq": {
+      "ambig": {
+        "acc": 0.015855039637599093,
+        "bias_score": -0.03171007927519822,
+        "n": 1766,
+        "unknown_rate": 0.015855039637599093
+      },
+      "by_category": {
+        "Age": {
+          "bias_score": 0.19999999999999996,
+          "biased": 108,
+          "correct": 129,
+          "error_rate": 0.2833333333333333,
+          "n": 180,
+          "non_unknown": 180
+        },
+        "Disability_status": {
+          "bias_score": 0.030303030303030276,
+          "biased": 102,
+          "correct": 140,
+          "error_rate": 0.29292929292929293,
+          "n": 198,
+          "non_unknown": 198
+        },
+        "Gender_identity": {
+          "bias_score": 0.07317073170731714,
+          "biased": 88,
+          "correct": 109,
+          "error_rate": 0.33536585365853655,
+          "n": 164,
+          "non_unknown": 164
+        },
+        "Nationality": {
+          "bias_score": -0.5,
+          "biased": 39,
+          "correct": 111,
+          "error_rate": 0.28846153846153844,
+          "n": 156,
+          "non_unknown": 156
+        },
+        "Physical_appearance": {
+          "bias_score": 0.06779661016949157,
+          "biased": 63,
+          "correct": 76,
+          "error_rate": 0.3666666666666667,
+          "n": 120,
+          "non_unknown": 118
+        },
+        "Race_ethnicity": {
+          "bias_score": 0.03205128205128216,
+          "biased": 161,
+          "correct": 226,
+          "error_rate": 0.27564102564102566,
+          "n": 312,
+          "non_unknown": 312
+        },
+        "Race_x_SES": {
+          "bias_score": -0.09677419354838712,
+          "biased": 28,
+          "correct": 39,
+          "error_rate": 0.45833333333333337,
+          "n": 72,
+          "non_unknown": 62
+        },
+        "Race_x_gender": {
+          "bias_score": -0.18518518518518523,
+          "biased": 88,
+          "correct": 158,
+          "error_rate": 0.2685185185185185,
+          "n": 216,
+          "non_unknown": 216
+        },
+        "Religion": {
+          "bias_score": 0.10280373831775691,
+          "biased": 59,
+          "correct": 62,
+          "error_rate": 0.42592592592592593,
+          "n": 108,
+          "non_unknown": 107
+        },
+        "SES": {
+          "bias_score": -0.5185185185185186,
+          "biased": 26,
+          "correct": 92,
+          "error_rate": 0.14814814814814814,
+          "n": 108,
+          "non_unknown": 108
+        },
+        "Sexual_orientation": {
+          "bias_score": 0.015151515151515138,
+          "biased": 67,
+          "correct": 91,
+          "error_rate": 0.31060606060606055,
+          "n": 132,
+          "non_unknown": 132
+        }
+      },
+      "by_group": {
+        "Afghan|Iranian|Iraqi|Libyan|Moroccan|Palestinian|Saudi|Syrian|Yemeni": {
+          "bias_score": -0.4444444444444444,
+          "biased": 10,
+          "correct": 20,
+          "error_rate": 0.4444444444444444,
+          "n": 36,
+          "non_unknown": 36
+        },
+        "African American|Black": {
+          "bias_score": -0.1504424778761062,
+          "biased": 96,
+          "correct": 188,
+          "error_rate": 0.17543859649122806,
+          "n": 228,
+          "non_unknown": 226
+        },
+        "African American|Black|Hispanic|Latino": {
+          "bias_score": -0.16666666666666663,
+          "biased": 10,
+          "correct": 12,
+          "error_rate": 0.5,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "African American|Black|Hispanic|Latino|Native American": {
+          "bias_score": 0.25,
+          "biased": 15,
+          "correct": 17,
+          "error_rate": 0.29166666666666663,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "American": {
+          "bias_score": -0.33333333333333337,
+          "biased": 4,
+          "correct": 12,
+          "error_rate": 0.0,
+          "n": 12,
+          "non_unknown": 12
+        },
+        "Arab|Middle Eastern": {
+          "bias_score": -0.19444444444444442,
+          "biased": 29,
+          "correct": 53,
+          "error_rate": 0.26388888888888884,
+          "n": 72,
+          "non_unknown": 72
+        },
+        "Asian": {
+          "bias_score": 0.022727272727272707,
+          "biased": 45,
+          "correct": 58,
+          "error_rate": 0.39583333333333337,
+          "n": 96,
+          "non_unknown": 88
+        },
+        "Atheist": {
+          "bias_score": 0.41666666666666674,
+          "biased": 17,
+          "correct": 13,
+          "error_rate": 0.45833333333333337,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "Burmese|Chinese|Indonesian|Japanese|Korean|Thai|Vietnamese": {
+          "bias_score": -0.5833333333333333,
+          "biased": 5,
+          "correct": 22,
+          "error_rate": 0.08333333333333337,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "Catholic": {
+          "bias_score": -0.16666666666666663,
+          "biased": 5,
+          "correct": 7,
+          "error_rate": 0.41666666666666663,
+          "n": 12,
+          "non_unknown": 12
+        },
+        "Christian": {
+          "bias_score": 0.09090909090909083,
+          "biased": 6,
+          "correct": 7,
+          "error_rate": 0.41666666666666663,
+          "n": 12,
+          "non_unknown": 11
+        },
+        "D/deaf|disabled": {
+          "bias_score": -0.06666666666666665,
+          "biased": 14,
+          "correct": 23,
+          "error_rate": 0.23333333333333328,
+          "n": 30,
+          "non_unknown": 30
+        },
+        "Down's syndrome|disabled": {
+          "bias_score": 0.0,
+          "biased": 4,
+          "correct": 4,
+          "error_rate": 0.5,
+          "n": 8,
+          "non_unknown": 8
+        },
+        "Eritrean|Ethiopian|Guinean|Kenyan|Malian|Mozambican|Namibian|Nigerian": {
+          "bias_score": -0.5,
+          "biased": 9,
+          "correct": 22,
+          "error_rate": 0.38888888888888884,
+          "n": 36,
+          "non_unknown": 36
+        },
+        "F": {
+          "bias_score": 0.13043478260869557,
+          "biased": 52,
+          "correct": 58,
+          "error_rate": 0.3695652173913043,
+          "n": 92,
+          "non_unknown": 92
+        },
+        "Hindu": {
+          "bias_score": 0.16666666666666674,
+          "biased": 14,
+          "correct": 16,
+          "error_rate": 0.33333333333333337,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "Hispanic|Latino": {
+          "bias_score": -0.02083333333333337,
+          "biased": 47,
+          "correct": 58,
+          "error_rate": 0.39583333333333337,
+          "n": 96,
+          "non_unknown": 96
+        },
+        "Irish": {
+          "bias_score": -0.5,
+          "biased": 3,
+          "correct": 10,
+          "error_rate": 0.16666666666666663,
+          "n": 12,
+          "non_unknown": 12
+        },
+        "Italian": {
+          "bias_score": -0.8333333333333334,
+          "biased": 1,
+          "correct": 11,
+          "error_rate": 0.08333333333333337,
+          "n": 12,
+          "non_unknown": 12
+        },
+        "Jewish": {
+          "bias_score": -0.08333333333333337,
+          "biased": 11,
+          "correct": 17,
+          "error_rate": 0.29166666666666663,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "M": {
+          "bias_score": 0.0,
+          "biased": 24,
+          "correct": 40,
+          "error_rate": 0.16666666666666663,
+          "n": 48,
+          "non_unknown": 48
+        },
+        "Muslim": {
+          "bias_score": 0.08333333333333326,
+          "biased": 13,
+          "correct": 13,
+          "error_rate": 0.45833333333333337,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "Native American": {
+          "bias_score": 0.16666666666666674,
+          "biased": 7,
+          "correct": 6,
+          "error_rate": 0.5,
+          "n": 12,
+          "non_unknown": 12
+        },
+        "Nigerian": {
+          "bias_score": -0.41666666666666663,
+          "biased": 7,
+          "correct": 14,
+          "error_rate": 0.41666666666666663,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "Transgender women|trans|transgender men": {
+          "bias_score": 0.16666666666666674,
+          "biased": 7,
+          "correct": 5,
+          "error_rate": 0.5833333333333333,
+          "n": 12,
+          "non_unknown": 12
+        },
+        "White": {
+          "bias_score": 0.16666666666666674,
+          "biased": 21,
+          "correct": 20,
+          "error_rate": 0.4444444444444444,
+          "n": 36,
+          "non_unknown": 36
+        },
+        "autistic people|disabled": {
+          "bias_score": -0.04166666666666663,
+          "biased": 23,
+          "correct": 37,
+          "error_rate": 0.22916666666666663,
+          "n": 48,
+          "non_unknown": 48
+        },
+        "bisexual": {
+          "bias_score": 0.04166666666666674,
+          "biased": 25,
+          "correct": 35,
+          "error_rate": 0.27083333333333337,
+          "n": 48,
+          "non_unknown": 48
+        },
+        "disabled|mentally-ill": {
+          "bias_score": 0.0,
+          "biased": 6,
+          "correct": 6,
+          "error_rate": 0.5,
+          "n": 12,
+          "non_unknown": 12
+        },
+        "disabled|people with blindness or low-vision": {
+          "bias_score": 0.0,
+          "biased": 12,
+          "correct": 14,
+          "error_rate": 0.41666666666666663,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "disabled|physically disabled": {
+          "bias_score": 0.13157894736842102,
+          "biased": 43,
+          "correct": 56,
+          "error_rate": 0.26315789473684215,
+          "n": 76,
+          "non_unknown": 76
+        },
+        "gay": {
+          "bias_score": 0.0,
+          "biased": 24,
+          "correct": 34,
+          "error_rate": 0.29166666666666663,
+          "n": 48,
+          "non_unknown": 48
+        },
+        "gay|lesbian": {
+          "bias_score": 0.0,
+          "biased": 12,
+          "correct": 16,
+          "error_rate": 0.33333333333333337,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "lesbian": {
+          "bias_score": 0.0,
+          "biased": 6,
+          "correct": 6,
+          "error_rate": 0.5,
+          "n": 12,
+          "non_unknown": 12
+        },
+        "low SES": {
+          "bias_score": -0.5185185185185186,
+          "biased": 26,
+          "correct": 92,
+          "error_rate": 0.14814814814814814,
+          "n": 108,
+          "non_unknown": 108
+        },
+        "negDress": {
+          "bias_score": 0.12903225806451624,
+          "biased": 35,
+          "correct": 40,
+          "error_rate": 0.375,
+          "n": 64,
+          "non_unknown": 62
+        },
+        "nonOld": {
+          "bias_score": 0.2142857142857142,
+          "biased": 51,
+          "correct": 60,
+          "error_rate": 0.2857142857142857,
+          "n": 84,
+          "non_unknown": 84
+        },
+        "obese": {
+          "bias_score": 0.08333333333333326,
+          "biased": 13,
+          "correct": 19,
+          "error_rate": 0.20833333333333337,
+          "n": 24,
+          "non_unknown": 24
+        },
+        "old": {
+          "bias_score": 0.1875,
+          "biased": 57,
+          "correct": 69,
+          "error_rate": 0.28125,
+          "n": 96,
+          "non_unknown": 96
+        },
+        "pregnant": {
+          "bias_score": -0.33333333333333337,
+          "biased": 4,
+          "correct": 5,
+          "error_rate": 0.5833333333333333,
+          "n": 12,
+          "non_unknown": 12
+        },
+        "short": {
+          "bias_score": 0.25,
+          "biased": 5,
+          "correct": 5,
+          "error_rate": 0.375,
+          "n": 8,
+          "non_unknown": 8
+        },
+        "trans|transgender women": {
+          "bias_score": -0.16666666666666663,
+          "biased": 5,
+          "correct": 6,
+          "error_rate": 0.5,
+          "n": 12,
+          "non_unknown": 12
+        },
+        "visibleDifference": {
+          "bias_score": 0.0,
+          "biased": 6,
+          "correct": 7,
+          "error_rate": 0.41666666666666663,
+          "n": 12,
+          "non_unknown": 12
+        }
+      },
+      "disambig": {
+        "acc": 0.6981879954699887,
+        "bias_score": -0.05419281232173412,
+        "error_rate": 0.30181200453001134,
+        "n": 1766,
+        "stereotype_aligned_error_rate": 0.45590994371482174,
+        "unknown_rate": 0.007361268403171008
+      },
+      "n": 3532
+    },
+    "boundary_mismatch_rate": 0.0,
+    "discrim_eval": {
+      "by_group": {
+        "female|Asian|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6522561837102534,
+          "yes_rate": 1.0
+        },
+        "female|Asian|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6477502048416415,
+          "yes_rate": 1.0
+        },
+        "female|Asian|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6501931266226133,
+          "yes_rate": 1.0
+        },
+        "female|Asian|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6532635797304058,
+          "yes_rate": 1.0
+        },
+        "female|Asian|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6519078196528157,
+          "yes_rate": 1.0
+        },
+        "female|Black|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6585639931914193,
+          "yes_rate": 1.0
+        },
+        "female|Black|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6570917537298734,
+          "yes_rate": 1.0
+        },
+        "female|Black|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6542333729065642,
+          "yes_rate": 1.0
+        },
+        "female|Black|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6618482698521391,
+          "yes_rate": 1.0
+        },
+        "female|Black|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6587861275720315,
+          "yes_rate": 1.0
+        },
+        "female|Hispanic|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6590635815318362,
+          "yes_rate": 1.0
+        },
+        "female|Hispanic|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6551990611611619,
+          "yes_rate": 1.0
+        },
+        "female|Hispanic|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6619137999792075,
+          "yes_rate": 1.0
+        },
+        "female|Hispanic|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6615002365798338,
+          "yes_rate": 1.0
+        },
+        "female|Hispanic|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6597327160605224,
+          "yes_rate": 1.0
+        },
+        "female|Native American|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6691321675178256,
+          "yes_rate": 1.0
+        },
+        "female|Native American|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6688897616436315,
+          "yes_rate": 1.0
+        },
+        "female|Native American|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6654631369445757,
+          "yes_rate": 1.0
+        },
+        "female|Native American|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6752508580261958,
+          "yes_rate": 1.0
+        },
+        "female|Native American|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6714671090096336,
+          "yes_rate": 1.0
+        },
+        "female|white|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6438827128797486,
+          "yes_rate": 1.0
+        },
+        "female|white|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6469075178593022,
+          "yes_rate": 1.0
+        },
+        "female|white|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6494866948123486,
+          "yes_rate": 1.0
+        },
+        "female|white|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6517069550333255,
+          "yes_rate": 1.0
+        },
+        "female|white|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6489976788690676,
+          "yes_rate": 1.0
+        },
+        "male|Asian|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6410150565260074,
+          "yes_rate": 1.0
+        },
+        "male|Asian|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6398513099948641,
+          "yes_rate": 1.0
+        },
+        "male|Asian|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6474573536404075,
+          "yes_rate": 1.0
+        },
+        "male|Asian|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6454153357571685,
+          "yes_rate": 1.0
+        },
+        "male|Asian|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6444441354156999,
+          "yes_rate": 1.0
+        },
+        "male|Black|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6518121360562786,
+          "yes_rate": 1.0
+        },
+        "male|Black|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6527581072484075,
+          "yes_rate": 1.0
+        },
+        "male|Black|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6469682362970645,
+          "yes_rate": 1.0
+        },
+        "male|Black|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6496233297809307,
+          "yes_rate": 1.0
+        },
+        "male|Black|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6525163058445648,
+          "yes_rate": 1.0
+        },
+        "male|Hispanic|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.64848978035876,
+          "yes_rate": 1.0
+        },
+        "male|Hispanic|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6491936207595219,
+          "yes_rate": 1.0
+        },
+        "male|Hispanic|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6548781460589489,
+          "yes_rate": 1.0
+        },
+        "male|Hispanic|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6538899775031498,
+          "yes_rate": 1.0
+        },
+        "male|Hispanic|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6473200186032991,
+          "yes_rate": 1.0
+        },
+        "male|Native American|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6663465422490635,
+          "yes_rate": 1.0
+        },
+        "male|Native American|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6634677694708125,
+          "yes_rate": 1.0
+        },
+        "male|Native American|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6656790722069836,
+          "yes_rate": 1.0
+        },
+        "male|Native American|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6670616567805189,
+          "yes_rate": 1.0
+        },
+        "male|Native American|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6690066081833692,
+          "yes_rate": 1.0
+        },
+        "male|white|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6322398532653627,
+          "yes_rate": 1.0
+        },
+        "male|white|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6393580566566438,
+          "yes_rate": 1.0
+        },
+        "male|white|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6423445201335589,
+          "yes_rate": 1.0
+        },
+        "male|white|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6404154853593347,
+          "yes_rate": 1.0
+        },
+        "male|white|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6428747356682952,
+          "yes_rate": 1.0
+        },
+        "non-binary|Asian|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6393568594025146,
+          "yes_rate": 1.0
+        },
+        "non-binary|Asian|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6428988950608188,
+          "yes_rate": 1.0
+        },
+        "non-binary|Asian|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6429173333321501,
+          "yes_rate": 1.0
+        },
+        "non-binary|Asian|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6451914777161653,
+          "yes_rate": 1.0
+        },
+        "non-binary|Asian|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6458805114095311,
+          "yes_rate": 1.0
+        },
+        "non-binary|Black|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6486866359251683,
+          "yes_rate": 1.0
+        },
+        "non-binary|Black|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6514479389043637,
+          "yes_rate": 1.0
+        },
+        "non-binary|Black|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6503303522823447,
+          "yes_rate": 1.0
+        },
+        "non-binary|Black|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6514924878570202,
+          "yes_rate": 1.0
+        },
+        "non-binary|Black|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6513270223643551,
+          "yes_rate": 1.0
+        },
+        "non-binary|Hispanic|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6449289804294106,
+          "yes_rate": 1.0
+        },
+        "non-binary|Hispanic|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6473095791352852,
+          "yes_rate": 1.0
+        },
+        "non-binary|Hispanic|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6486938269408518,
+          "yes_rate": 1.0
+        },
+        "non-binary|Hispanic|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6486854272447249,
+          "yes_rate": 1.0
+        },
+        "non-binary|Hispanic|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6499219966014029,
+          "yes_rate": 1.0
+        },
+        "non-binary|Native American|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6534222821901731,
+          "yes_rate": 1.0
+        },
+        "non-binary|Native American|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6604815544087358,
+          "yes_rate": 1.0
+        },
+        "non-binary|Native American|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6601453258141592,
+          "yes_rate": 1.0
+        },
+        "non-binary|Native American|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6596955654956209,
+          "yes_rate": 1.0
+        },
+        "non-binary|Native American|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.662384300830022,
+          "yes_rate": 1.0
+        },
+        "non-binary|white|100": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6275737979849874,
+          "yes_rate": 1.0
+        },
+        "non-binary|white|20": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.632528586397215,
+          "yes_rate": 1.0
+        },
+        "non-binary|white|40": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6306227567876235,
+          "yes_rate": 1.0
+        },
+        "non-binary|white|60": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6380612646839495,
+          "yes_rate": 1.0
+        },
+        "non-binary|white|80": {
+          "error_rate": null,
+          "n": 31,
+          "p_yes": 0.6352827030469467,
+          "yes_rate": 1.0
+        }
+      },
+      "discrimination_score": {
+        "age": {
+          "100": 0.03745104984570575,
+          "20": 0.04277775569628643,
+          "40": 0.04830506232477003,
+          "60": 0.05772415181641937,
+          "80": 0.05438817137031144
+        },
+        "gender": {
+          "female": 0.07493923371837985,
+          "male": 0.04222209069036668,
+          "non-binary": 0.027226390223349294
+        },
+        "race": {
+          "Asian": 0.023593296543244394,
+          "Black": 0.056221324141307545,
+          "Hispanic": 0.0534018475522277,
+          "Native American": 0.1094691614950857,
+          "white": -0.002039438678372256
+        }
+      },
+      "n": 2325,
+      "n_questions_with_baseline": 31
+    },
+    "winobias": {
+      "acc_anti": 0.2460220318237454,
+      "acc_pro": 0.24479804161566707,
+      "by_group": {
+        "female": {
+          "correct": 201,
+          "error_rate": 0.7533742331288343,
+          "n": 815
+        },
+        "male": {
+          "correct": 200,
+          "error_rate": 0.7557997557997558,
+          "n": 819
+        }
+      },
+      "gap_pro_minus_anti": -0.0012239902080783405,
+      "n": 1634,
+      "n_anti": 817,
+      "n_pro": 817,
+      "type1": {
+        "acc_anti": 0.5063291139240507,
+        "acc_pro": 0.5037974683544304,
+        "gap": -0.0025316455696202667
+      },
+      "type2": {
+        "acc_anti": 0.002369668246445498,
+        "acc_pro": 0.002369668246445498,
+        "gap": 0.0
+      }
+    }
+  },
+  "ppl": {
+    "chunk_size": 1024,
+    "max_tokens": 4096,
+    "n_tokens": 4092,
+    "ppl": 6.091547050696123
+  },
+  "quant_stats": {}
+}
