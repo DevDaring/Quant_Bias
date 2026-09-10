@@ -1,84 +1,275 @@
-[09:12:18] === E1 model=M7 tag=lfm2_2.6b-smoke device=cuda seed=20260908 profile=smoke ===
-[09:12:19] Loading LiquidAI/LFM2-2.6B@main (36ed799f7024ef169ba92ffe184821835e15cc66) dtype=torch.bfloat16 device=cuda
-Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 12579.46it/s]
-[09:12:21]   attention: flash_attention_2
+[10:43:00] === E1 model=M7 tag=lfm2_2.6b device=cuda seed=20260908 profile=budget ===
+[10:43:01] Loading LiquidAI/LFM2-2.6B@main (36ed799f7024ef169ba92ffe184821835e15cc66) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 12935.03it/s]
+[10:43:03]   attention: flash_attention_2
 [transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
-[09:12:23]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 14392.03it/s]
-[09:12:24] === E1 dense on final ===
-[09:12:32] BBQ: 22 examples, 11 template clusters
-[09:12:38] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[09:12:39] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[09:12:41] === E1 rtn8 on final ===
-[09:12:51] counterfactual pairs: 46
-[09:12:53] === E1 rtn4 on final ===
-[09:12:56] counterfactual pairs: 46
-[09:12:57] === E1 gptq4 on final ===
-HTTP Error 502 thrown while requesting GET https://huggingface.co/api/datasets/allenai/c4/tree/1588ec454efa1a09f29cd18ddd04fe05fc8653a2/en?expand=false&recursive=false&limit=1000&cursor=ZXlKbWFXeGxYMjVoYldVaU9pSmxiaTlqTkMxMGNtRnBiaTR3TURrNU9TMXZaaTB3TVRBeU5DNXFjMjl1TG1kNklpd2lkSEpsWlY5dmFXUWlPaUprWXprME0yTTBZelF3WmpVelpEQXlZak14WTJWa01XUmxabUUzWlRWbU5ETTRaRFU0TmpKbEluMD06MTAwMA%3D%3D
-Retrying in 1s [Retry 1/5].
-[09:13:39] calibration[generic] seed=20260908: 8x128 tokens, hash=1fcd00030296019b
-[09:13:42]   GPTQ layer 0: 5 components
-[09:13:44]   GPTQ layer 1: 5 components
-[09:13:47]   GPTQ layer 2: 7 components
-[09:13:49]   GPTQ layer 3: 5 components
-[09:13:52]   GPTQ layer 4: 5 components
-[09:13:54]   GPTQ layer 5: 7 components
-[09:13:56]   GPTQ layer 6: 5 components
-[09:13:59]   GPTQ layer 7: 5 components
-[09:14:01]   GPTQ layer 8: 5 components
-[09:14:04]   GPTQ layer 9: 7 components
-[09:14:06]   GPTQ layer 10: 5 components
-[09:14:08]   GPTQ layer 11: 5 components
-[09:14:10]   GPTQ layer 12: 5 components
-[09:14:13]   GPTQ layer 13: 7 components
-[09:14:15]   GPTQ layer 14: 5 components
-[09:14:18]   GPTQ layer 15: 5 components
-[09:14:20]   GPTQ layer 16: 5 components
-[09:14:22]   GPTQ layer 17: 7 components
-[09:14:25]   GPTQ layer 18: 5 components
-[09:14:27]   GPTQ layer 19: 5 components
-[09:14:29]   GPTQ layer 20: 5 components
-[09:14:32]   GPTQ layer 21: 7 components
-[09:14:34]   GPTQ layer 22: 5 components
-[09:14:36]   GPTQ layer 23: 5 components
-[09:14:39]   GPTQ layer 24: 7 components
-[09:14:41]   GPTQ layer 25: 5 components
-[09:14:44]   GPTQ layer 26: 5 components
-[09:14:46]   GPTQ layer 27: 7 components
-[09:14:48]   GPTQ layer 28: 5 components
-[09:14:51]   GPTQ layer 29: 5 components
-[09:14:51] counterfactual pairs: 46
-[09:14:53] === E1 gptq8 on final ===
-[09:14:56]   GPTQ layer 0: 5 components
-[09:14:58]   GPTQ layer 1: 5 components
-[09:15:01]   GPTQ layer 2: 7 components
-[09:15:03]   GPTQ layer 3: 5 components
-[09:15:05]   GPTQ layer 4: 5 components
-[09:15:08]   GPTQ layer 5: 7 components
-[09:15:10]   GPTQ layer 6: 5 components
-[09:15:12]   GPTQ layer 7: 5 components
-[09:15:14]   GPTQ layer 8: 5 components
-[09:15:17]   GPTQ layer 9: 7 components
-[09:15:19]   GPTQ layer 10: 5 components
-[09:15:22]   GPTQ layer 11: 5 components
-[09:15:24]   GPTQ layer 12: 5 components
-[09:15:27]   GPTQ layer 13: 7 components
-[09:15:29]   GPTQ layer 14: 5 components
-[09:15:31]   GPTQ layer 15: 5 components
-[09:15:33]   GPTQ layer 16: 5 components
-[09:15:36]   GPTQ layer 17: 7 components
-[09:15:38]   GPTQ layer 18: 5 components
-[09:15:40]   GPTQ layer 19: 5 components
-[09:15:43]   GPTQ layer 20: 5 components
-[09:15:45]   GPTQ layer 21: 7 components
-[09:15:48]   GPTQ layer 22: 5 components
-[09:15:50]   GPTQ layer 23: 5 components
-[09:15:53]   GPTQ layer 24: 7 components
-[09:15:55]   GPTQ layer 25: 5 components
-[09:15:57]   GPTQ layer 26: 5 components
-[09:16:00]   GPTQ layer 27: 7 components
-[09:16:02]   GPTQ layer 28: 5 components
-[09:16:04]   GPTQ layer 29: 5 components
-[09:16:05] counterfactual pairs: 46
-[09:16:06] report written: /workspace/Quant_Bias/quant-bias/results/e1/lfm2_2.6b-smoke/REPORT.md
-[09:16:06] === done in 228s -> /workspace/Quant_Bias/quant-bias/results/e1/lfm2_2.6b-smoke ===
+[10:43:04]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 11518.89it/s]
+[10:43:06] === E1 dense on final ===
+[10:43:14] BBQ: 7868 examples, 343 template clusters
+[10:43:21] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[10:43:22] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[10:43:28]   scored 504/18514 candidate sequences
+[10:43:29]   scored 1000/18514 candidate sequences
+[10:43:30]   scored 1504/18514 candidate sequences
+[10:43:31]   scored 2000/18514 candidate sequences
+[10:43:32]   scored 2504/18514 candidate sequences
+[10:43:33]   scored 3000/18514 candidate sequences
+[10:43:34]   scored 3504/18514 candidate sequences
+[10:43:35]   scored 4000/18514 candidate sequences
+[10:43:36]   scored 4504/18514 candidate sequences
+[10:43:37]   scored 5000/18514 candidate sequences
+[10:43:38]   scored 5504/18514 candidate sequences
+[10:43:39]   scored 6000/18514 candidate sequences
+[10:43:40]   scored 6504/18514 candidate sequences
+[10:43:41]   scored 7000/18514 candidate sequences
+[10:43:42]   scored 7504/18514 candidate sequences
+[10:43:43]   scored 8000/18514 candidate sequences
+[10:43:44]   scored 8504/18514 candidate sequences
+[10:43:45]   scored 9000/18514 candidate sequences
+[10:43:46]   scored 9504/18514 candidate sequences
+[10:43:47]   scored 10000/18514 candidate sequences
+[10:43:48]   scored 10504/18514 candidate sequences
+[10:43:48]   scored 11000/18514 candidate sequences
+[10:43:49]   scored 11504/18514 candidate sequences
+[10:43:50]   scored 12000/18514 candidate sequences
+[10:43:51]   scored 12504/18514 candidate sequences
+[10:43:52]   scored 13000/18514 candidate sequences
+[10:43:54]   scored 13504/18514 candidate sequences
+[10:43:55]   scored 14000/18514 candidate sequences
+[10:43:56]   scored 14504/18514 candidate sequences
+[10:43:57]   scored 15000/18514 candidate sequences
+[10:43:59]   scored 15504/18514 candidate sequences
+[10:44:00]   scored 16000/18514 candidate sequences
+[10:44:01]   scored 16504/18514 candidate sequences
+[10:44:03]   scored 17000/18514 candidate sequences
+[10:44:04]   scored 17504/18514 candidate sequences
+[10:44:06]   scored 18000/18514 candidate sequences
+[10:44:08]   scored 18504/18514 candidate sequences
+[10:44:10] === E1 rtn8 on final ===
+[10:44:24]   scored 504/18514 candidate sequences
+[10:44:25]   scored 1000/18514 candidate sequences
+[10:44:26]   scored 1504/18514 candidate sequences
+[10:44:27]   scored 2000/18514 candidate sequences
+[10:44:28]   scored 2504/18514 candidate sequences
+[10:44:29]   scored 3000/18514 candidate sequences
+[10:44:30]   scored 3504/18514 candidate sequences
+[10:44:31]   scored 4000/18514 candidate sequences
+[10:44:32]   scored 4504/18514 candidate sequences
+[10:44:33]   scored 5000/18514 candidate sequences
+[10:44:34]   scored 5504/18514 candidate sequences
+[10:44:35]   scored 6000/18514 candidate sequences
+[10:44:36]   scored 6504/18514 candidate sequences
+[10:44:37]   scored 7000/18514 candidate sequences
+[10:44:38]   scored 7504/18514 candidate sequences
+[10:44:39]   scored 8000/18514 candidate sequences
+[10:44:40]   scored 8504/18514 candidate sequences
+[10:44:40]   scored 9000/18514 candidate sequences
+[10:44:41]   scored 9504/18514 candidate sequences
+[10:44:42]   scored 10000/18514 candidate sequences
+[10:44:43]   scored 10504/18514 candidate sequences
+[10:44:44]   scored 11000/18514 candidate sequences
+[10:44:45]   scored 11504/18514 candidate sequences
+[10:44:46]   scored 12000/18514 candidate sequences
+[10:44:47]   scored 12504/18514 candidate sequences
+[10:44:48]   scored 13000/18514 candidate sequences
+[10:44:49]   scored 13504/18514 candidate sequences
+[10:44:51]   scored 14000/18514 candidate sequences
+[10:44:52]   scored 14504/18514 candidate sequences
+[10:44:53]   scored 15000/18514 candidate sequences
+[10:44:54]   scored 15504/18514 candidate sequences
+[10:44:56]   scored 16000/18514 candidate sequences
+[10:44:57]   scored 16504/18514 candidate sequences
+[10:44:59]   scored 17000/18514 candidate sequences
+[10:45:00]   scored 17504/18514 candidate sequences
+[10:45:02]   scored 18000/18514 candidate sequences
+[10:45:03]   scored 18504/18514 candidate sequences
+[10:45:12] counterfactual pairs: 5326
+/workspace/Quant_Bias/quant-bias/quantbias/report.py:64: UserWarning: Tight layout not applied. The bottom and top margins cannot be made large enough to accommodate all Axes decorations.
+  fig.tight_layout()
+[10:45:14] === E1 rtn4 on final ===
+[10:45:22]   scored 504/18514 candidate sequences
+[10:45:23]   scored 1000/18514 candidate sequences
+[10:45:24]   scored 1504/18514 candidate sequences
+[10:45:25]   scored 2000/18514 candidate sequences
+[10:45:26]   scored 2504/18514 candidate sequences
+[10:45:27]   scored 3000/18514 candidate sequences
+[10:45:28]   scored 3504/18514 candidate sequences
+[10:45:29]   scored 4000/18514 candidate sequences
+[10:45:29]   scored 4504/18514 candidate sequences
+[10:45:30]   scored 5000/18514 candidate sequences
+[10:45:31]   scored 5504/18514 candidate sequences
+[10:45:32]   scored 6000/18514 candidate sequences
+[10:45:33]   scored 6504/18514 candidate sequences
+[10:45:34]   scored 7000/18514 candidate sequences
+[10:45:35]   scored 7504/18514 candidate sequences
+[10:45:36]   scored 8000/18514 candidate sequences
+[10:45:37]   scored 8504/18514 candidate sequences
+[10:45:38]   scored 9000/18514 candidate sequences
+[10:45:39]   scored 9504/18514 candidate sequences
+[10:45:40]   scored 10000/18514 candidate sequences
+[10:45:41]   scored 10504/18514 candidate sequences
+[10:45:42]   scored 11000/18514 candidate sequences
+[10:45:43]   scored 11504/18514 candidate sequences
+[10:45:44]   scored 12000/18514 candidate sequences
+[10:45:45]   scored 12504/18514 candidate sequences
+[10:45:46]   scored 13000/18514 candidate sequences
+[10:45:47]   scored 13504/18514 candidate sequences
+[10:45:48]   scored 14000/18514 candidate sequences
+[10:45:50]   scored 14504/18514 candidate sequences
+[10:45:51]   scored 15000/18514 candidate sequences
+[10:45:52]   scored 15504/18514 candidate sequences
+[10:45:54]   scored 16000/18514 candidate sequences
+[10:45:55]   scored 16504/18514 candidate sequences
+[10:45:56]   scored 17000/18514 candidate sequences
+[10:45:58]   scored 17504/18514 candidate sequences
+[10:46:00]   scored 18000/18514 candidate sequences
+[10:46:01]   scored 18504/18514 candidate sequences
+[10:46:10] counterfactual pairs: 5326
+/workspace/Quant_Bias/quant-bias/quantbias/report.py:64: UserWarning: Tight layout not applied. The bottom and top margins cannot be made large enough to accommodate all Axes decorations.
+  fig.tight_layout()
+[10:46:11] === E1 gptq4 on final ===
+[10:46:17] calibration[generic] seed=20260908: 128x512 tokens, hash=7e17a14d7af60ed9
+[10:46:20]   GPTQ layer 0: 5 components
+[10:46:23]   GPTQ layer 1: 5 components
+[10:46:26]   GPTQ layer 2: 7 components
+[10:46:29]   GPTQ layer 3: 5 components
+[10:46:31]   GPTQ layer 4: 5 components
+[10:46:35]   GPTQ layer 5: 7 components
+[10:46:37]   GPTQ layer 6: 5 components
+[10:46:40]   GPTQ layer 7: 5 components
+[10:46:43]   GPTQ layer 8: 5 components
+[10:46:46]   GPTQ layer 9: 7 components
+[10:46:49]   GPTQ layer 10: 5 components
+[10:46:51]   GPTQ layer 11: 5 components
+[10:46:54]   GPTQ layer 12: 5 components
+[10:46:57]   GPTQ layer 13: 7 components
+[10:47:00]   GPTQ layer 14: 5 components
+[10:47:03]   GPTQ layer 15: 5 components
+[10:47:05]   GPTQ layer 16: 5 components
+[10:47:09]   GPTQ layer 17: 7 components
+[10:47:11]   GPTQ layer 18: 5 components
+[10:47:14]   GPTQ layer 19: 5 components
+[10:47:17]   GPTQ layer 20: 5 components
+[10:47:20]   GPTQ layer 21: 7 components
+[10:47:23]   GPTQ layer 22: 5 components
+[10:47:25]   GPTQ layer 23: 5 components
+[10:47:29]   GPTQ layer 24: 7 components
+[10:47:31]   GPTQ layer 25: 5 components
+[10:47:34]   GPTQ layer 26: 5 components
+[10:47:37]   GPTQ layer 27: 7 components
+[10:47:40]   GPTQ layer 28: 5 components
+[10:47:43]   GPTQ layer 29: 5 components
+[10:47:49]   scored 504/18514 candidate sequences
+[10:47:49]   scored 1000/18514 candidate sequences
+[10:47:50]   scored 1504/18514 candidate sequences
+[10:47:51]   scored 2000/18514 candidate sequences
+[10:47:52]   scored 2504/18514 candidate sequences
+[10:47:53]   scored 3000/18514 candidate sequences
+[10:47:54]   scored 3504/18514 candidate sequences
+[10:47:55]   scored 4000/18514 candidate sequences
+[10:47:56]   scored 4504/18514 candidate sequences
+[10:47:57]   scored 5000/18514 candidate sequences
+[10:47:58]   scored 5504/18514 candidate sequences
+[10:47:59]   scored 6000/18514 candidate sequences
+[10:48:00]   scored 6504/18514 candidate sequences
+[10:48:01]   scored 7000/18514 candidate sequences
+[10:48:02]   scored 7504/18514 candidate sequences
+[10:48:03]   scored 8000/18514 candidate sequences
+[10:48:04]   scored 8504/18514 candidate sequences
+[10:48:05]   scored 9000/18514 candidate sequences
+[10:48:06]   scored 9504/18514 candidate sequences
+[10:48:07]   scored 10000/18514 candidate sequences
+[10:48:08]   scored 10504/18514 candidate sequences
+[10:48:09]   scored 11000/18514 candidate sequences
+[10:48:10]   scored 11504/18514 candidate sequences
+[10:48:11]   scored 12000/18514 candidate sequences
+[10:48:12]   scored 12504/18514 candidate sequences
+[10:48:13]   scored 13000/18514 candidate sequences
+[10:48:14]   scored 13504/18514 candidate sequences
+[10:48:15]   scored 14000/18514 candidate sequences
+[10:48:16]   scored 14504/18514 candidate sequences
+[10:48:18]   scored 15000/18514 candidate sequences
+[10:48:19]   scored 15504/18514 candidate sequences
+[10:48:20]   scored 16000/18514 candidate sequences
+[10:48:22]   scored 16504/18514 candidate sequences
+[10:48:23]   scored 17000/18514 candidate sequences
+[10:48:25]   scored 17504/18514 candidate sequences
+[10:48:26]   scored 18000/18514 candidate sequences
+[10:48:28]   scored 18504/18514 candidate sequences
+[10:48:37] counterfactual pairs: 5326
+/workspace/Quant_Bias/quant-bias/quantbias/report.py:64: UserWarning: Tight layout not applied. The bottom and top margins cannot be made large enough to accommodate all Axes decorations.
+  fig.tight_layout()
+[10:48:39] === E1 gptq8 on final ===
+[10:48:42]   GPTQ layer 0: 5 components
+[10:48:45]   GPTQ layer 1: 5 components
+[10:48:48]   GPTQ layer 2: 7 components
+[10:48:51]   GPTQ layer 3: 5 components
+[10:48:53]   GPTQ layer 4: 5 components
+[10:48:57]   GPTQ layer 5: 7 components
+[10:48:59]   GPTQ layer 6: 5 components
+[10:49:02]   GPTQ layer 7: 5 components
+[10:49:05]   GPTQ layer 8: 5 components
+[10:49:08]   GPTQ layer 9: 7 components
+[10:49:11]   GPTQ layer 10: 5 components
+[10:49:13]   GPTQ layer 11: 5 components
+[10:49:16]   GPTQ layer 12: 5 components
+[10:49:19]   GPTQ layer 13: 7 components
+[10:49:22]   GPTQ layer 14: 5 components
+[10:49:25]   GPTQ layer 15: 5 components
+[10:49:28]   GPTQ layer 16: 5 components
+[10:49:31]   GPTQ layer 17: 7 components
+[10:49:33]   GPTQ layer 18: 5 components
+[10:49:36]   GPTQ layer 19: 5 components
+[10:49:39]   GPTQ layer 20: 5 components
+[10:49:42]   GPTQ layer 21: 7 components
+[10:49:45]   GPTQ layer 22: 5 components
+[10:49:47]   GPTQ layer 23: 5 components
+[10:49:51]   GPTQ layer 24: 7 components
+[10:49:53]   GPTQ layer 25: 5 components
+[10:49:56]   GPTQ layer 26: 5 components
+[10:49:59]   GPTQ layer 27: 7 components
+[10:50:02]   GPTQ layer 28: 5 components
+[10:50:05]   GPTQ layer 29: 5 components
+[10:50:10]   scored 504/18514 candidate sequences
+[10:50:11]   scored 1000/18514 candidate sequences
+[10:50:12]   scored 1504/18514 candidate sequences
+[10:50:13]   scored 2000/18514 candidate sequences
+[10:50:14]   scored 2504/18514 candidate sequences
+[10:50:15]   scored 3000/18514 candidate sequences
+[10:50:16]   scored 3504/18514 candidate sequences
+[10:50:17]   scored 4000/18514 candidate sequences
+[10:50:18]   scored 4504/18514 candidate sequences
+[10:50:19]   scored 5000/18514 candidate sequences
+[10:50:20]   scored 5504/18514 candidate sequences
+[10:50:21]   scored 6000/18514 candidate sequences
+[10:50:22]   scored 6504/18514 candidate sequences
+[10:50:23]   scored 7000/18514 candidate sequences
+[10:50:24]   scored 7504/18514 candidate sequences
+[10:50:25]   scored 8000/18514 candidate sequences
+[10:50:26]   scored 8504/18514 candidate sequences
+[10:50:27]   scored 9000/18514 candidate sequences
+[10:50:28]   scored 9504/18514 candidate sequences
+[10:50:29]   scored 10000/18514 candidate sequences
+[10:50:30]   scored 10504/18514 candidate sequences
+[10:50:31]   scored 11000/18514 candidate sequences
+[10:50:32]   scored 11504/18514 candidate sequences
+[10:50:33]   scored 12000/18514 candidate sequences
+[10:50:34]   scored 12504/18514 candidate sequences
+[10:50:35]   scored 13000/18514 candidate sequences
+[10:50:36]   scored 13504/18514 candidate sequences
+[10:50:37]   scored 14000/18514 candidate sequences
+[10:50:38]   scored 14504/18514 candidate sequences
+[10:50:40]   scored 15000/18514 candidate sequences
+[10:50:41]   scored 15504/18514 candidate sequences
+[10:50:42]   scored 16000/18514 candidate sequences
+[10:50:44]   scored 16504/18514 candidate sequences
+[10:50:45]   scored 17000/18514 candidate sequences
+[10:50:47]   scored 17504/18514 candidate sequences
+[10:50:48]   scored 18000/18514 candidate sequences
+[10:50:50]   scored 18504/18514 candidate sequences
+[10:50:59] counterfactual pairs: 5326
+/workspace/Quant_Bias/quant-bias/quantbias/report.py:64: UserWarning: Tight layout not applied. The bottom and top margins cannot be made large enough to accommodate all Axes decorations.
+  fig.tight_layout()
+[10:51:01] report written: /workspace/Quant_Bias/quant-bias/results/e1/lfm2_2.6b/REPORT.md
+[10:51:01] === done in 481s -> /workspace/Quant_Bias/quant-bias/results/e1/lfm2_2.6b ===
