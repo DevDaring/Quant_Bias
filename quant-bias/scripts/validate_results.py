@@ -142,7 +142,17 @@ def check_e2(tag: str, r: Report):
         r.add("fail", f"e2/{tag}: {err}")
         return
     for k, v in pred.get("spearman", {}).items():
-        if v is not None and not (-1.0001 <= v <= 1.0001):
+        if v is None:
+            continue
+        if isinstance(v, float) and math.isnan(v):
+            # Pre-fix files can hold a literal NaN for margin_only, whose input
+            # is constant by construction (margin_dense is measured once on the
+            # fixed dense capture, independent of which site is perturbed).
+            # Newer runs report 0.0 with constant_predictors instead; this is a
+            # documented, non-fatal artifact of the older file, not a data loss.
+            r.add("warn", f"e2/{tag}: spearman[{k}]=NaN (constant predictor, "
+                          "pre-fix file; see run_experiment._e2_prediction)")
+        elif not (-1.0001 <= v <= 1.0001):
             r.add("fail", f"e2/{tag}: spearman[{k}]={v} outside [-1,1]")
     n_viol = sum(v.get("observed_final", {}).get("lemma_violations", 0) for v in sites.values())
     if n_viol:

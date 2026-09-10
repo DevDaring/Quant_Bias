@@ -454,11 +454,26 @@ def _e2_prediction(per_site: dict[str, Any]) -> dict[str, Any]:
         ff = v["observed_final"]["full_score_flips"]
         observed[sid] = float(ff.get("harmful_flip_rate", ff.get("flip_rate", 0.0)))
     sp = {}
+    const_predictor = []
     obs = np.array([observed[s] for s in observed])
     for k in ("propagation_margin", "ppl_regret", "margin_only"):
         x = np.array([site_scores[s][k] for s in observed])
-        sp[k] = float(spearmanr(x, obs).correlation) if len(obs) > 2 else float("nan")
-    return {"site_scores": site_scores, "observed": observed, "spearman": sp}
+        # margin_dense is measured on the fixed dense baseline capture, so it is
+        # identical across sites by construction whenever every site draws from
+        # the same example set -- margin_only is then a constant predictor, and
+        # Spearman correlation against a constant array is undefined (all ranks
+        # tied). Report 0.0 (no discriminative power) rather than NaN, which
+        # would otherwise read as a computation failure rather than the true
+        # fact that this baseline carries no per-site information here.
+        if len(obs) > 2 and not (np.allclose(x, x[0]) or np.allclose(obs, obs[0])):
+            sp[k] = float(spearmanr(x, obs).correlation)
+        else:
+            sp[k] = 0.0
+            const_predictor.append(k)
+    out = {"site_scores": site_scores, "observed": observed, "spearman": sp}
+    if const_predictor:
+        out["constant_predictors"] = const_predictor
+    return out
 
 
 # ----------------------------------------------------------------------------
