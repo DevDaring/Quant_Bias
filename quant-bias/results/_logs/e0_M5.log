@@ -1,0 +1,51 @@
+[09:05:38] === E0 model=M5 tag=qwen3_8b-smoke device=cuda seed=20260908 profile=smoke ===
+[09:05:38] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:09<00:37,  9.45s/it]Fetching 5 files:  40%|████      | 2/5 [00:21<00:33, 11.06s/it]Fetching 5 files:  60%|██████    | 3/5 [00:22<00:13,  6.51s/it]Fetching 5 files:  80%|████████  | 4/5 [00:23<00:04,  4.18s/it]Fetching 5 files: 100%|██████████| 5/5 [00:24<00:00,  3.01s/it]Fetching 5 files: 100%|██████████| 5/5 [00:24<00:00,  4.86s/it]
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 11908.77it/s]
+[09:06:09]   attention: flash_attention_2
+[09:06:09]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 11317.48it/s]
+[09:06:13] adapter: {'model_id': 'Qwen/Qwen3-8B', 'revision': 'b968826d9c46dd6066d109eabc6255188de91218', 'family': 'llama', 'n_layers': 36, 'n_components': 252, 'component_weights': 6945767424, 'excluded_weights': 1244967936, 'tied_lm_head': False, 'dtype': 'torch.bfloat16', 'components_per_layer': ['self_attn.q_proj', 'self_attn.k_proj', 'self_attn.v_proj', 'self_attn.o_proj', 'mlp.gate_proj', 'mlp.up_proj', 'mlp.down_proj'], 'component_kinds': {'attn': 144, 'conv': 0, 'mlp': 108, 'other': 0}, 'layer_types': ['full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention']}
+[09:06:46] BBQ: 22 examples, 11 template clusters
+[09:06:54] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[09:06:55] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[09:07:00] calibration[generic] seed=20260908: 8x128 tokens, hash=cdd893ec6bb19afe
+[09:07:06]   GPTQ layer 0: 7 components
+[09:07:10]   GPTQ layer 1: 7 components
+[09:07:14]   GPTQ layer 2: 7 components
+[09:07:18]   GPTQ layer 3: 7 components
+[09:07:22]   GPTQ layer 4: 7 components
+[09:07:26]   GPTQ layer 5: 7 components
+[09:07:30]   GPTQ layer 6: 7 components
+[09:07:34]   GPTQ layer 7: 7 components
+[09:07:38]   GPTQ layer 8: 7 components
+[09:07:42]   GPTQ layer 9: 7 components
+[09:07:46]   GPTQ layer 10: 7 components
+[09:07:50]   GPTQ layer 11: 7 components
+[09:07:54]   GPTQ layer 12: 7 components
+[09:07:58]   GPTQ layer 13: 7 components
+[09:08:03]   GPTQ layer 14: 7 components
+[09:08:07]   GPTQ layer 15: 7 components
+[09:08:11]   GPTQ layer 16: 7 components
+[09:08:15]   GPTQ layer 17: 7 components
+[09:08:19]   GPTQ layer 18: 7 components
+[09:08:23]   GPTQ layer 19: 7 components
+[09:08:27]   GPTQ layer 20: 7 components
+[09:08:31]   GPTQ layer 21: 7 components
+[09:08:35]   GPTQ layer 22: 7 components
+[09:08:39]   GPTQ layer 23: 7 components
+[09:08:43]   GPTQ layer 24: 7 components
+[09:08:47]   GPTQ layer 25: 7 components
+[09:08:51]   GPTQ layer 26: 7 components
+[09:08:55]   GPTQ layer 27: 7 components
+[09:08:59]   GPTQ layer 28: 7 components
+[09:09:03]   GPTQ layer 29: 7 components
+[09:09:07]   GPTQ layer 30: 7 components
+[09:09:12]   GPTQ layer 31: 7 components
+[09:09:16]   GPTQ layer 32: 7 components
+[09:09:20]   GPTQ layer 33: 7 components
+[09:09:24]   GPTQ layer 34: 7 components
+[09:09:28]   GPTQ layer 35: 7 components
+[09:09:47] Wanda per-row 50%: achieved 0.5000 over 6945767424 weights
+[09:10:03]   scored 3/3 candidate sequences
+[09:10:03] === done in 265s -> /workspace/Quant_Bias/quant-bias/results/e0/qwen3_8b-smoke ===
