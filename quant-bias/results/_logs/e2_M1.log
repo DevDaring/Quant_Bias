@@ -1,0 +1,220 @@
+[11:56:02] === E2 model=M1 tag=gpt2_small device=cuda seed=20260908 profile=budget ===
+[11:56:03] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 14785.56it/s]
+[11:56:05]   attention: sdpa
+[11:56:13] BBQ: 7868 examples, 343 template clusters
+[11:56:20] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[11:56:21] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[11:56:21] counterfactual pairs: 3627
+[11:56:21] counterfactual pairs: 5326
+[11:56:21] E2: 1419 selection examples, 1452 final examples
+[11:56:41]   scored 512/3425 candidate sequences
+[11:56:41]   scored 1008/3425 candidate sequences
+[11:56:41]   scored 1504/3425 candidate sequences
+[11:56:41]   scored 2000/3425 candidate sequences
+[11:56:42]   scored 2512/3425 candidate sequences
+[11:56:42]   scored 3008/3425 candidate sequences
+[11:56:44] E2 stage 1: 12 sites at layer granularity
+[11:57:04]   scored 512/3425 candidate sequences
+[11:57:04]   scored 1008/3425 candidate sequences
+[11:57:04]   scored 1504/3425 candidate sequences
+[11:57:05]   scored 2000/3425 candidate sequences
+[11:57:05]   scored 2512/3425 candidate sequences
+[11:57:06]   scored 3008/3425 candidate sequences
+[transformers] `loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+[11:57:23]   L0.all: ppl=23.11 worst-group flip=0.100 viol=0 (39s)
+[11:57:42]   scored 512/3425 candidate sequences
+[11:57:42]   scored 1008/3425 candidate sequences
+[11:57:42]   scored 1504/3425 candidate sequences
+[11:57:43]   scored 2000/3425 candidate sequences
+[11:57:43]   scored 2512/3425 candidate sequences
+[11:57:44]   scored 3008/3425 candidate sequences
+[11:58:01]   L1.all: ppl=23.18 worst-group flip=0.125 viol=0 (38s)
+[11:58:21]   scored 512/3425 candidate sequences
+[11:58:21]   scored 1008/3425 candidate sequences
+[11:58:21]   scored 1504/3425 candidate sequences
+[11:58:22]   scored 2000/3425 candidate sequences
+[11:58:22]   scored 2512/3425 candidate sequences
+[11:58:23]   scored 3008/3425 candidate sequences
+[11:58:40]   L2.all: ppl=23.36 worst-group flip=0.083 viol=0 (39s)
+[11:58:59]   scored 512/3425 candidate sequences
+[11:59:00]   scored 1008/3425 candidate sequences
+[11:59:00]   scored 1504/3425 candidate sequences
+[11:59:00]   scored 2000/3425 candidate sequences
+[11:59:01]   scored 2512/3425 candidate sequences
+[11:59:01]   scored 3008/3425 candidate sequences
+[11:59:18]   L3.all: ppl=23.29 worst-group flip=0.100 viol=0 (38s)
+[11:59:37]   scored 512/3425 candidate sequences
+[11:59:37]   scored 1008/3425 candidate sequences
+[11:59:38]   scored 1504/3425 candidate sequences
+[11:59:38]   scored 2000/3425 candidate sequences
+[11:59:38]   scored 2512/3425 candidate sequences
+[11:59:39]   scored 3008/3425 candidate sequences
+[11:59:56]   L4.all: ppl=23.39 worst-group flip=0.125 viol=0 (38s)
+[12:00:15]   scored 512/3425 candidate sequences
+[12:00:16]   scored 1008/3425 candidate sequences
+[12:00:16]   scored 1504/3425 candidate sequences
+[12:00:16]   scored 2000/3425 candidate sequences
+[12:00:17]   scored 2512/3425 candidate sequences
+[12:00:17]   scored 3008/3425 candidate sequences
+[12:00:34]   L5.all: ppl=23.62 worst-group flip=0.375 viol=0 (38s)
+[12:00:53]   scored 512/3425 candidate sequences
+[12:00:53]   scored 1008/3425 candidate sequences
+[12:00:54]   scored 1504/3425 candidate sequences
+[12:00:54]   scored 2000/3425 candidate sequences
+[12:00:54]   scored 2512/3425 candidate sequences
+[12:00:55]   scored 3008/3425 candidate sequences
+[12:01:12]   L6.all: ppl=23.54 worst-group flip=0.022 viol=0 (37s)
+[12:01:29]   scored 512/3425 candidate sequences
+[12:01:29]   scored 1008/3425 candidate sequences
+[12:01:29]   scored 1504/3425 candidate sequences
+[12:01:29]   scored 2000/3425 candidate sequences
+[12:01:30]   scored 2512/3425 candidate sequences
+[12:01:30]   scored 3008/3425 candidate sequences
+[12:01:44]   L7.all: ppl=23.50 worst-group flip=0.167 viol=0 (32s)
+[12:02:01]   scored 512/3425 candidate sequences
+[12:02:01]   scored 1008/3425 candidate sequences
+[12:02:02]   scored 1504/3425 candidate sequences
+[12:02:02]   scored 2000/3425 candidate sequences
+[12:02:03]   scored 2512/3425 candidate sequences
+[12:02:03]   scored 3008/3425 candidate sequences
+[12:02:19]   L8.all: ppl=23.56 worst-group flip=0.125 viol=0 (35s)
+[12:02:38]   scored 512/3425 candidate sequences
+[12:02:38]   scored 1008/3425 candidate sequences
+[12:02:38]   scored 1504/3425 candidate sequences
+[12:02:38]   scored 2000/3425 candidate sequences
+[12:02:39]   scored 2512/3425 candidate sequences
+[12:02:39]   scored 3008/3425 candidate sequences
+[12:02:54]   L9.all: ppl=23.44 worst-group flip=0.083 viol=0 (34s)
+[12:03:11]   scored 512/3425 candidate sequences
+[12:03:11]   scored 1008/3425 candidate sequences
+[12:03:12]   scored 1504/3425 candidate sequences
+[12:03:12]   scored 2000/3425 candidate sequences
+[12:03:12]   scored 2512/3425 candidate sequences
+[12:03:13]   scored 3008/3425 candidate sequences
+[12:03:28]   L10.all: ppl=23.46 worst-group flip=0.250 viol=0 (35s)
+[12:03:46]   scored 512/3425 candidate sequences
+[12:03:46]   scored 1008/3425 candidate sequences
+[12:03:46]   scored 1504/3425 candidate sequences
+[12:03:46]   scored 2000/3425 candidate sequences
+[12:03:47]   scored 2512/3425 candidate sequences
+[12:03:47]   scored 3008/3425 candidate sequences
+[12:04:03]   L11.all: ppl=23.40 worst-group flip=0.083 viol=0 (35s)
+/workspace/Quant_Bias/quant-bias/quantbias/run_experiment.py:460: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  sp[k] = float(spearmanr(x, obs).correlation) if len(obs) > 2 else float("nan")
+[12:04:03] E2 stage 2: per-component pass over layers [8, 4, 5, 6]
+[12:04:21]   scored 512/3425 candidate sequences
+[12:04:21]   scored 1008/3425 candidate sequences
+[12:04:21]   scored 1504/3425 candidate sequences
+[12:04:22]   scored 2000/3425 candidate sequences
+[12:04:22]   scored 2512/3425 candidate sequences
+[12:04:23]   scored 3008/3425 candidate sequences
+[12:04:39]   L8.attn.c_attn: ppl=23.41 worst-group flip=0.250 viol=0 (36s)
+[12:04:56]   scored 512/3425 candidate sequences
+[12:04:56]   scored 1008/3425 candidate sequences
+[12:04:56]   scored 1504/3425 candidate sequences
+[12:04:57]   scored 2000/3425 candidate sequences
+[12:04:57]   scored 2512/3425 candidate sequences
+[12:04:58]   scored 3008/3425 candidate sequences
+[12:05:14]   L8.attn.c_proj: ppl=23.27 worst-group flip=0.000 viol=0 (35s)
+[12:05:30]   scored 512/3425 candidate sequences
+[12:05:30]   scored 1008/3425 candidate sequences
+[12:05:30]   scored 1504/3425 candidate sequences
+[12:05:30]   scored 2000/3425 candidate sequences
+[12:05:31]   scored 2512/3425 candidate sequences
+[12:05:31]   scored 3008/3425 candidate sequences
+[12:05:44]   L8.mlp.c_fc: ppl=23.31 worst-group flip=0.250 viol=0 (31s)
+[12:06:01]   scored 512/3425 candidate sequences
+[12:06:02]   scored 1008/3425 candidate sequences
+[12:06:02]   scored 1504/3425 candidate sequences
+[12:06:02]   scored 2000/3425 candidate sequences
+[12:06:03]   scored 2512/3425 candidate sequences
+[12:06:03]   scored 3008/3425 candidate sequences
+[12:06:18]   L8.mlp.c_proj: ppl=23.27 worst-group flip=0.083 viol=0 (34s)
+[12:06:37]   scored 512/3425 candidate sequences
+[12:06:37]   scored 1008/3425 candidate sequences
+[12:06:38]   scored 1504/3425 candidate sequences
+[12:06:38]   scored 2000/3425 candidate sequences
+[12:06:38]   scored 2512/3425 candidate sequences
+[12:06:39]   scored 3008/3425 candidate sequences
+[12:06:52]   L4.attn.c_attn: ppl=23.27 worst-group flip=0.125 viol=0 (34s)
+[12:07:11]   scored 512/3425 candidate sequences
+[12:07:11]   scored 1008/3425 candidate sequences
+[12:07:11]   scored 1504/3425 candidate sequences
+[12:07:12]   scored 2000/3425 candidate sequences
+[12:07:12]   scored 2512/3425 candidate sequences
+[12:07:13]   scored 3008/3425 candidate sequences
+[12:07:28]   L4.attn.c_proj: ppl=23.26 worst-group flip=0.125 viol=0 (36s)
+[12:07:45]   scored 512/3425 candidate sequences
+[12:07:45]   scored 1008/3425 candidate sequences
+[12:07:46]   scored 1504/3425 candidate sequences
+[12:07:46]   scored 2000/3425 candidate sequences
+[12:07:46]   scored 2512/3425 candidate sequences
+[12:07:47]   scored 3008/3425 candidate sequences
+[12:08:03]   L4.mlp.c_fc: ppl=23.35 worst-group flip=0.083 viol=0 (34s)
+[12:08:19]   scored 512/3425 candidate sequences
+[12:08:20]   scored 1008/3425 candidate sequences
+[12:08:20]   scored 1504/3425 candidate sequences
+[12:08:20]   scored 2000/3425 candidate sequences
+[12:08:21]   scored 2512/3425 candidate sequences
+[12:08:21]   scored 3008/3425 candidate sequences
+[12:08:36]   L4.mlp.c_proj: ppl=23.23 worst-group flip=0.125 viol=0 (33s)
+[12:08:53]   scored 512/3425 candidate sequences
+[12:08:53]   scored 1008/3425 candidate sequences
+[12:08:54]   scored 1504/3425 candidate sequences
+[12:08:54]   scored 2000/3425 candidate sequences
+[12:08:54]   scored 2512/3425 candidate sequences
+[12:08:55]   scored 3008/3425 candidate sequences
+[12:09:10]   L5.attn.c_attn: ppl=23.39 worst-group flip=0.125 viol=0 (33s)
+[12:09:27]   scored 512/3425 candidate sequences
+[12:09:28]   scored 1008/3425 candidate sequences
+[12:09:28]   scored 1504/3425 candidate sequences
+[12:09:28]   scored 2000/3425 candidate sequences
+[12:09:29]   scored 2512/3425 candidate sequences
+[12:09:29]   scored 3008/3425 candidate sequences
+[12:09:44]   L5.attn.c_proj: ppl=23.28 worst-group flip=0.083 viol=0 (34s)
+[12:10:00]   scored 512/3425 candidate sequences
+[12:10:01]   scored 1008/3425 candidate sequences
+[12:10:01]   scored 1504/3425 candidate sequences
+[12:10:01]   scored 2000/3425 candidate sequences
+[12:10:02]   scored 2512/3425 candidate sequences
+[12:10:02]   scored 3008/3425 candidate sequences
+[12:10:18]   L5.mlp.c_fc: ppl=23.39 worst-group flip=0.167 viol=0 (34s)
+[12:10:36]   scored 512/3425 candidate sequences
+[12:10:36]   scored 1008/3425 candidate sequences
+[12:10:36]   scored 1504/3425 candidate sequences
+[12:10:37]   scored 2000/3425 candidate sequences
+[12:10:37]   scored 2512/3425 candidate sequences
+[12:10:38]   scored 3008/3425 candidate sequences
+[12:10:54]   L5.mlp.c_proj: ppl=23.28 worst-group flip=0.125 viol=0 (36s)
+[12:11:12]   scored 512/3425 candidate sequences
+[12:11:12]   scored 1008/3425 candidate sequences
+[12:11:12]   scored 1504/3425 candidate sequences
+[12:11:13]   scored 2000/3425 candidate sequences
+[12:11:13]   scored 2512/3425 candidate sequences
+[12:11:14]   scored 3008/3425 candidate sequences
+[12:11:29]   L6.attn.c_attn: ppl=23.33 worst-group flip=0.125 viol=0 (35s)
+[12:11:46]   scored 512/3425 candidate sequences
+[12:11:46]   scored 1008/3425 candidate sequences
+[12:11:47]   scored 1504/3425 candidate sequences
+[12:11:47]   scored 2000/3425 candidate sequences
+[12:11:48]   scored 2512/3425 candidate sequences
+[12:11:48]   scored 3008/3425 candidate sequences
+[12:12:03]   L6.attn.c_proj: ppl=23.28 worst-group flip=0.083 viol=0 (34s)
+[12:12:21]   scored 512/3425 candidate sequences
+[12:12:22]   scored 1008/3425 candidate sequences
+[12:12:22]   scored 1504/3425 candidate sequences
+[12:12:22]   scored 2000/3425 candidate sequences
+[12:12:23]   scored 2512/3425 candidate sequences
+[12:12:23]   scored 3008/3425 candidate sequences
+[12:12:39]   L6.mlp.c_fc: ppl=23.41 worst-group flip=0.167 viol=0 (35s)
+[12:12:56]   scored 512/3425 candidate sequences
+[12:12:56]   scored 1008/3425 candidate sequences
+[12:12:57]   scored 1504/3425 candidate sequences
+[12:12:57]   scored 2000/3425 candidate sequences
+[12:12:57]   scored 2512/3425 candidate sequences
+[12:12:58]   scored 3008/3425 candidate sequences
+[12:13:14]   L6.mlp.c_proj: ppl=23.23 worst-group flip=0.022 viol=0 (35s)
+/workspace/Quant_Bias/quant-bias/quantbias/report.py:120: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho = spearmanr(xs[ok], ys[ok]).correlation if ok.sum() > 2 else float("nan")
+[12:13:18] === done in 1036s -> /workspace/Quant_Bias/quant-bias/results/e2/gpt2_small ===

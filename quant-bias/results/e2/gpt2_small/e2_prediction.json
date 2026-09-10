@@ -1,0 +1,83 @@
+{
+  "observed": {
+    "L0.all": 0.01859504132231405,
+    "L1.all": 0.014462809917355372,
+    "L10.all": 0.015151515151515152,
+    "L11.all": 0.012396694214876033,
+    "L2.all": 0.02203856749311295,
+    "L3.all": 0.01997245179063361,
+    "L4.all": 0.013774104683195593,
+    "L5.all": 0.01997245179063361,
+    "L6.all": 0.01997245179063361,
+    "L7.all": 0.012396694214876033,
+    "L8.all": 0.008264462809917356,
+    "L9.all": 0.014462809917355372
+  },
+  "site_scores": {
+    "L0.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.0,
+      "propagation_margin": 6.012937130524811
+    },
+    "L1.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.07724507634806699,
+      "propagation_margin": 5.620290519357237
+    },
+    "L10.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.3518204079025331,
+      "propagation_margin": 8.847363465312084
+    },
+    "L11.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.2969376453387369,
+      "propagation_margin": 7.164825498785652
+    },
+    "L2.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.2584150979074238,
+      "propagation_margin": 6.086844744762555
+    },
+    "L3.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.18568562568663438,
+      "propagation_margin": 6.87871422269558
+    },
+    "L4.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.2858203596167215,
+      "propagation_margin": 16.79611288588846
+    },
+    "L5.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.5137646585559601,
+      "propagation_margin": 12.877298767387819
+    },
+    "L6.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.4377788370377722,
+      "propagation_margin": 12.012441547491157
+    },
+    "L7.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.3990412601608426,
+      "propagation_margin": 8.69282519206273
+    },
+    "L8.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.45158261722635373,
+      "propagation_margin": 18.68417553614599
+    },
+    "L9.all": {
+      "margin_only": 1.8434428887262646,
+      "ppl_regret": 0.3385865129123218,
+      "propagation_margin": 8.238479818652612
+    }
+  },
+  "spearman": {
+    "margin_only": NaN,
+    "ppl_regret": -0.1908234430398593,
+    "propagation_margin": -0.3145053042693977
+  }
+}
