@@ -62,3 +62,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-10_09:10:08] --- Stage B: quantization x subgroup outcomes (all models) ---
 [2026-09-10_09:10:08] >>> e1/M1
 [2026-09-10_09:10:55] <<< e1/M1 ok in 47s
+[2026-09-10_09:10:58] >>> e1/M6
+[2026-09-10_09:12:13] <<< e1/M6 ok in 75s

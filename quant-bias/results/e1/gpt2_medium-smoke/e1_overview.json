@@ -1,0 +1,139 @@
+{
+  "dense": {
+    "bbq": {
+      "acc": 0.2,
+      "bias_score": 0.19999999999999996,
+      "error_rate": 0.8,
+      "n": 5,
+      "stereotype_aligned_error_rate": 0.75,
+      "unknown_rate": 0.0
+    },
+    "bytes": {
+      "component_bytes": 604422144,
+      "metadata_bytes": 0,
+      "padding_bytes": 0,
+      "total_MiB": 677.19,
+      "total_bytes": 710088704,
+      "uncompressed_bytes": 105666560
+    },
+    "harm_bbq": {},
+    "ppl": {
+      "chunk_size": 1024,
+      "max_tokens": 1024,
+      "n_tokens": 1023,
+      "ppl": 12.496258116448985
+    }
+  },
+  "gptq4": {
+    "bbq": {
+      "acc": 0.6,
+      "bias_score": -0.19999999999999996,
+      "error_rate": 0.4,
+      "n": 5,
+      "stereotype_aligned_error_rate": 1.0,
+      "unknown_rate": 0.0
+    },
+    "bytes": {
+      "component_bytes": 151437312,
+      "metadata_bytes": 5898240,
+      "padding_bytes": 0,
+      "total_MiB": 250.82,
+      "total_bytes": 263002112,
+      "uncompressed_bytes": 105666560
+    },
+    "harm_bbq": {
+      "groups": [],
+      "note": "no group with n>=20"
+    },
+    "ppl": {
+      "chunk_size": 1024,
+      "max_tokens": 1024,
+      "n_tokens": 1023,
+      "ppl": 13.363054503883351
+    }
+  },
+  "gptq8": {
+    "bbq": {
+      "acc": 0.2,
+      "bias_score": 0.19999999999999996,
+      "error_rate": 0.8,
+      "n": 5,
+      "stereotype_aligned_error_rate": 0.75,
+      "unknown_rate": 0.0
+    },
+    "bytes": {
+      "component_bytes": 302432256,
+      "metadata_bytes": 7077888,
+      "padding_bytes": 0,
+      "total_MiB": 395.94,
+      "total_bytes": 415176704,
+      "uncompressed_bytes": 105666560
+    },
+    "harm_bbq": {
+      "groups": [],
+      "note": "no group with n>=20"
+    },
+    "ppl": {
+      "chunk_size": 1024,
+      "max_tokens": 1024,
+      "n_tokens": 1023,
+      "ppl": 12.470792864750608
+    }
+  },
+  "rtn4": {
+    "bbq": {
+      "acc": 0.4,
+      "bias_score": 0.19999999999999996,
+      "error_rate": 0.6,
+      "n": 5,
+      "stereotype_aligned_error_rate": 1.0,
+      "unknown_rate": 0.0
+    },
+    "bytes": {
+      "component_bytes": 151437312,
+      "metadata_bytes": 5898240,
+      "padding_bytes": 0,
+      "total_MiB": 250.82,
+      "total_bytes": 263002112,
+      "uncompressed_bytes": 105666560
+    },
+    "harm_bbq": {
+      "groups": [],
+      "note": "no group with n>=20"
+    },
+    "ppl": {
+      "chunk_size": 1024,
+      "max_tokens": 1024,
+      "n_tokens": 1023,
+      "ppl": 13.052538046307383
+    }
+  },
+  "rtn8": {
+    "bbq": {
+      "acc": 0.2,
+      "bias_score": 0.19999999999999996,
+      "error_rate": 0.8,
+      "n": 5,
+      "stereotype_aligned_error_rate": 0.75,
+      "unknown_rate": 0.0
+    },
+    "bytes": {
+      "component_bytes": 302432256,
+      "metadata_bytes": 7077888,
+      "padding_bytes": 0,
+      "total_MiB": 395.94,
+      "total_bytes": 415176704,
+      "uncompressed_bytes": 105666560
+    },
+    "harm_bbq": {
+      "groups": [],
+      "note": "no group with n>=20"
+    },
+    "ppl": {
+      "chunk_size": 1024,
+      "max_tokens": 1024,
+      "n_tokens": 1023,
+      "ppl": 12.532264567504724
+    }
+  }
+}

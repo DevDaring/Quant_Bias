@@ -1,0 +1,68 @@
+[09:11:00] === E1 model=M6 tag=gpt2_medium-smoke device=cuda seed=20260908 profile=smoke ===
+[09:11:01] Loading openai-community/gpt2-medium@main (6dcaa7a952f72f9298047fd5137cd6e4f05f41da) dtype=torch.float32 device=cuda
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 14733.50it/s]
+[09:11:03]   attention: sdpa
+[09:11:04] === E1 dense on final ===
+[09:11:11] BBQ: 22 examples, 11 template clusters
+[09:11:18] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[09:11:19] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[transformers] `loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+[09:11:20] === E1 rtn8 on final ===
+[09:11:26] counterfactual pairs: 46
+[09:11:26] === E1 rtn4 on final ===
+[09:11:27] counterfactual pairs: 46
+[09:11:28] === E1 gptq4 on final ===
+[09:11:32] calibration[generic] seed=20260908: 8x128 tokens, hash=c370baf51c734559
+[09:11:33]   GPTQ layer 0: 4 components
+[09:11:34]   GPTQ layer 1: 4 components
+[09:11:35]   GPTQ layer 2: 4 components
+[09:11:36]   GPTQ layer 3: 4 components
+[09:11:37]   GPTQ layer 4: 4 components
+[09:11:37]   GPTQ layer 5: 4 components
+[09:11:38]   GPTQ layer 6: 4 components
+[09:11:39]   GPTQ layer 7: 4 components
+[09:11:40]   GPTQ layer 8: 4 components
+[09:11:40]   GPTQ layer 9: 4 components
+[09:11:41]   GPTQ layer 10: 4 components
+[09:11:42]   GPTQ layer 11: 4 components
+[09:11:43]   GPTQ layer 12: 4 components
+[09:11:44]   GPTQ layer 13: 4 components
+[09:11:44]   GPTQ layer 14: 4 components
+[09:11:45]   GPTQ layer 15: 4 components
+[09:11:46]   GPTQ layer 16: 4 components
+[09:11:47]   GPTQ layer 17: 4 components
+[09:11:47]   GPTQ layer 18: 4 components
+[09:11:48]   GPTQ layer 19: 4 components
+[09:11:49]   GPTQ layer 20: 4 components
+[09:11:50]   GPTQ layer 21: 4 components
+[09:11:51]   GPTQ layer 22: 4 components
+[09:11:51]   GPTQ layer 23: 4 components
+[09:11:52] counterfactual pairs: 46
+[09:11:52] === E1 gptq8 on final ===
+[09:11:53]   GPTQ layer 0: 4 components
+[09:11:54]   GPTQ layer 1: 4 components
+[09:11:55]   GPTQ layer 2: 4 components
+[09:11:55]   GPTQ layer 3: 4 components
+[09:11:56]   GPTQ layer 4: 4 components
+[09:11:57]   GPTQ layer 5: 4 components
+[09:11:58]   GPTQ layer 6: 4 components
+[09:11:59]   GPTQ layer 7: 4 components
+[09:11:59]   GPTQ layer 8: 4 components
+[09:12:00]   GPTQ layer 9: 4 components
+[09:12:01]   GPTQ layer 10: 4 components
+[09:12:02]   GPTQ layer 11: 4 components
+[09:12:02]   GPTQ layer 12: 4 components
+[09:12:03]   GPTQ layer 13: 4 components
+[09:12:04]   GPTQ layer 14: 4 components
+[09:12:05]   GPTQ layer 15: 4 components
+[09:12:05]   GPTQ layer 16: 4 components
+[09:12:06]   GPTQ layer 17: 4 components
+[09:12:07]   GPTQ layer 18: 4 components
+[09:12:08]   GPTQ layer 19: 4 components
+[09:12:09]   GPTQ layer 20: 4 components
+[09:12:09]   GPTQ layer 21: 4 components
+[09:12:10]   GPTQ layer 22: 4 components
+[09:12:11]   GPTQ layer 23: 4 components
+[09:12:11] counterfactual pairs: 46
+[09:12:12] report written: /workspace/Quant_Bias/quant-bias/results/e1/gpt2_medium-smoke/REPORT.md
+[09:12:12] === done in 71s -> /workspace/Quant_Bias/quant-bias/results/e1/gpt2_medium-smoke ===
