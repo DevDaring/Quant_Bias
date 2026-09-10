@@ -1,0 +1,272 @@
+[22:35:40] === E3 model=M2 tag=qwen3_5_2b device=cuda seed=20260908 profile=budget ===
+[22:35:40] Loading Qwen/Qwen3.5-2B@main (15852e8c16360a2fea060d615a32b45270f8a8fc) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 13197.94it/s]
+[22:35:44]   attention: flash_attention_2
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[22:35:50]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 10719.24it/s]
+[22:36:00] BBQ: 7868 examples, 343 template clusters
+[22:36:07] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[22:36:08] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[22:36:17]   scored 500/12842 candidate sequences
+[22:36:21]   scored 1000/12842 candidate sequences
+[22:36:25]   scored 1500/12842 candidate sequences
+[22:36:30]   scored 2000/12842 candidate sequences
+[22:36:34]   scored 2500/12842 candidate sequences
+[22:36:38]   scored 3000/12842 candidate sequences
+[22:36:43]   scored 3500/12842 candidate sequences
+[22:36:47]   scored 4000/12842 candidate sequences
+[22:36:52]   scored 4500/12842 candidate sequences
+[22:36:56]   scored 5000/12842 candidate sequences
+[22:37:01]   scored 5500/12842 candidate sequences
+[22:37:05]   scored 6000/12842 candidate sequences
+[22:37:10]   scored 6500/12842 candidate sequences
+[22:37:14]   scored 7000/12842 candidate sequences
+[22:37:19]   scored 7500/12842 candidate sequences
+[22:37:24]   scored 8000/12842 candidate sequences
+[22:37:29]   scored 8500/12842 candidate sequences
+[22:37:34]   scored 9000/12842 candidate sequences
+[22:37:39]   scored 9500/12842 candidate sequences
+[22:37:44]   scored 10000/12842 candidate sequences
+[22:37:49]   scored 10500/12842 candidate sequences
+[22:37:54]   scored 11000/12842 candidate sequences
+[22:38:00]   scored 11500/12842 candidate sequences
+[22:38:05]   scored 12000/12842 candidate sequences
+[22:38:10]   scored 12500/12842 candidate sequences
+[22:38:14] counterfactual pairs: 3627
+[22:38:20] calibration[generic] seed=20260908: 128x512 tokens, hash=2a83b29315aa39da
+[22:39:28]   scored 500/12842 candidate sequences
+[22:39:32]   scored 1000/12842 candidate sequences
+[22:39:37]   scored 1500/12842 candidate sequences
+[22:39:41]   scored 2000/12842 candidate sequences
+[22:39:45]   scored 2500/12842 candidate sequences
+[22:39:49]   scored 3000/12842 candidate sequences
+[22:39:54]   scored 3500/12842 candidate sequences
+[22:39:58]   scored 4000/12842 candidate sequences
+[22:40:02]   scored 4500/12842 candidate sequences
+[22:40:07]   scored 5000/12842 candidate sequences
+[22:40:11]   scored 5500/12842 candidate sequences
+[22:40:15]   scored 6000/12842 candidate sequences
+[22:40:20]   scored 6500/12842 candidate sequences
+[22:40:25]   scored 7000/12842 candidate sequences
+[22:40:29]   scored 7500/12842 candidate sequences
+[22:40:34]   scored 8000/12842 candidate sequences
+[22:40:39]   scored 8500/12842 candidate sequences
+[22:40:43]   scored 9000/12842 candidate sequences
+[22:40:48]   scored 9500/12842 candidate sequences
+[22:40:53]   scored 10000/12842 candidate sequences
+[22:40:58]   scored 10500/12842 candidate sequences
+[22:41:03]   scored 11000/12842 candidate sequences
+[22:41:09]   scored 11500/12842 candidate sequences
+[22:41:14]   scored 12000/12842 candidate sequences
+[22:41:19]   scored 12500/12842 candidate sequences
+[22:42:48] calibration[generic] seed=20260909: 128x512 tokens, hash=6758130e9501de0b
+[22:43:57]   scored 500/12842 candidate sequences
+[22:44:01]   scored 1000/12842 candidate sequences
+[22:44:06]   scored 1500/12842 candidate sequences
+[22:44:10]   scored 2000/12842 candidate sequences
+[22:44:14]   scored 2500/12842 candidate sequences
+[22:44:19]   scored 3000/12842 candidate sequences
+[22:44:23]   scored 3500/12842 candidate sequences
+[22:44:28]   scored 4000/12842 candidate sequences
+[22:44:32]   scored 4500/12842 candidate sequences
+[22:44:37]   scored 5000/12842 candidate sequences
+[22:44:41]   scored 5500/12842 candidate sequences
+[22:44:46]   scored 6000/12842 candidate sequences
+[22:44:50]   scored 6500/12842 candidate sequences
+[22:44:55]   scored 7000/12842 candidate sequences
+[22:45:00]   scored 7500/12842 candidate sequences
+[22:45:05]   scored 8000/12842 candidate sequences
+[22:45:10]   scored 8500/12842 candidate sequences
+[22:45:15]   scored 9000/12842 candidate sequences
+[22:45:20]   scored 9500/12842 candidate sequences
+[22:45:25]   scored 10000/12842 candidate sequences
+[22:45:30]   scored 10500/12842 candidate sequences
+[22:45:36]   scored 11000/12842 candidate sequences
+[22:45:41]   scored 11500/12842 candidate sequences
+[22:45:47]   scored 12000/12842 candidate sequences
+[22:45:52]   scored 12500/12842 candidate sequences
+[22:47:22] calibration[generic] seed=20260910: 128x512 tokens, hash=31a194ebc7afcf7c
+[22:48:31]   scored 500/12842 candidate sequences
+[22:48:36]   scored 1000/12842 candidate sequences
+[22:48:40]   scored 1500/12842 candidate sequences
+[22:48:45]   scored 2000/12842 candidate sequences
+[22:48:49]   scored 2500/12842 candidate sequences
+[22:48:54]   scored 3000/12842 candidate sequences
+[22:48:58]   scored 3500/12842 candidate sequences
+[22:49:03]   scored 4000/12842 candidate sequences
+[22:49:07]   scored 4500/12842 candidate sequences
+[22:49:12]   scored 5000/12842 candidate sequences
+[22:49:16]   scored 5500/12842 candidate sequences
+[22:49:21]   scored 6000/12842 candidate sequences
+[22:49:26]   scored 6500/12842 candidate sequences
+[22:49:30]   scored 7000/12842 candidate sequences
+[22:49:35]   scored 7500/12842 candidate sequences
+[22:49:40]   scored 8000/12842 candidate sequences
+[22:49:45]   scored 8500/12842 candidate sequences
+[22:49:50]   scored 9000/12842 candidate sequences
+[22:49:55]   scored 9500/12842 candidate sequences
+[22:50:00]   scored 10000/12842 candidate sequences
+[22:50:06]   scored 10500/12842 candidate sequences
+[22:50:11]   scored 11000/12842 candidate sequences
+[22:50:17]   scored 11500/12842 candidate sequences
+[22:50:22]   scored 12000/12842 candidate sequences
+[22:50:27]   scored 12500/12842 candidate sequences
+[22:51:58] calibration[balanced] seed=20260908: 128x512 tokens, hash=ca6cd90864979f5c
+[22:53:07]   scored 500/12842 candidate sequences
+[22:53:12]   scored 1000/12842 candidate sequences
+[22:53:16]   scored 1500/12842 candidate sequences
+[22:53:20]   scored 2000/12842 candidate sequences
+[22:53:25]   scored 2500/12842 candidate sequences
+[22:53:29]   scored 3000/12842 candidate sequences
+[22:53:34]   scored 3500/12842 candidate sequences
+[22:53:38]   scored 4000/12842 candidate sequences
+[22:53:43]   scored 4500/12842 candidate sequences
+[22:53:47]   scored 5000/12842 candidate sequences
+[22:53:52]   scored 5500/12842 candidate sequences
+[22:53:56]   scored 6000/12842 candidate sequences
+[22:54:01]   scored 6500/12842 candidate sequences
+[22:54:06]   scored 7000/12842 candidate sequences
+[22:54:11]   scored 7500/12842 candidate sequences
+[22:54:15]   scored 8000/12842 candidate sequences
+[22:54:20]   scored 8500/12842 candidate sequences
+[22:54:25]   scored 9000/12842 candidate sequences
+[22:54:30]   scored 9500/12842 candidate sequences
+[22:54:35]   scored 10000/12842 candidate sequences
+[22:54:41]   scored 10500/12842 candidate sequences
+[22:54:46]   scored 11000/12842 candidate sequences
+[22:54:51]   scored 11500/12842 candidate sequences
+[22:54:57]   scored 12000/12842 candidate sequences
+[22:55:02]   scored 12500/12842 candidate sequences
+[22:56:32] calibration[balanced] seed=20260909: 128x512 tokens, hash=e63c083412a6dea1
+[22:57:41]   scored 500/12842 candidate sequences
+[22:57:46]   scored 1000/12842 candidate sequences
+[22:57:50]   scored 1500/12842 candidate sequences
+[22:57:54]   scored 2000/12842 candidate sequences
+[22:57:59]   scored 2500/12842 candidate sequences
+[22:58:03]   scored 3000/12842 candidate sequences
+[22:58:08]   scored 3500/12842 candidate sequences
+[22:58:12]   scored 4000/12842 candidate sequences
+[22:58:17]   scored 4500/12842 candidate sequences
+[22:58:21]   scored 5000/12842 candidate sequences
+[22:58:26]   scored 5500/12842 candidate sequences
+[22:58:30]   scored 6000/12842 candidate sequences
+[22:58:35]   scored 6500/12842 candidate sequences
+[22:58:40]   scored 7000/12842 candidate sequences
+[22:58:44]   scored 7500/12842 candidate sequences
+[22:58:49]   scored 8000/12842 candidate sequences
+[22:58:54]   scored 8500/12842 candidate sequences
+[22:58:59]   scored 9000/12842 candidate sequences
+[22:59:04]   scored 9500/12842 candidate sequences
+[22:59:09]   scored 10000/12842 candidate sequences
+[22:59:15]   scored 10500/12842 candidate sequences
+[22:59:20]   scored 11000/12842 candidate sequences
+[22:59:25]   scored 11500/12842 candidate sequences
+[22:59:31]   scored 12000/12842 candidate sequences
+[22:59:36]   scored 12500/12842 candidate sequences
+[23:01:06] calibration[balanced] seed=20260910: 128x512 tokens, hash=1ebab411972ee958
+[23:02:15]   scored 500/12842 candidate sequences
+[23:02:19]   scored 1000/12842 candidate sequences
+[23:02:24]   scored 1500/12842 candidate sequences
+[23:02:28]   scored 2000/12842 candidate sequences
+[23:02:33]   scored 2500/12842 candidate sequences
+[23:02:37]   scored 3000/12842 candidate sequences
+[23:02:42]   scored 3500/12842 candidate sequences
+[23:02:46]   scored 4000/12842 candidate sequences
+[23:02:51]   scored 4500/12842 candidate sequences
+[23:02:55]   scored 5000/12842 candidate sequences
+[23:03:00]   scored 5500/12842 candidate sequences
+[23:03:04]   scored 6000/12842 candidate sequences
+[23:03:09]   scored 6500/12842 candidate sequences
+[23:03:14]   scored 7000/12842 candidate sequences
+[23:03:19]   scored 7500/12842 candidate sequences
+[23:03:23]   scored 8000/12842 candidate sequences
+[23:03:28]   scored 8500/12842 candidate sequences
+[23:03:33]   scored 9000/12842 candidate sequences
+[23:03:38]   scored 9500/12842 candidate sequences
+[23:03:43]   scored 10000/12842 candidate sequences
+[23:03:49]   scored 10500/12842 candidate sequences
+[23:03:54]   scored 11000/12842 candidate sequences
+[23:03:59]   scored 11500/12842 candidate sequences
+[23:04:05]   scored 12000/12842 candidate sequences
+[23:04:10]   scored 12500/12842 candidate sequences
+[23:05:39] calibration[imbalanced] seed=20260908: 128x512 tokens, hash=99b10032bdf96055
+[23:06:48]   scored 500/12842 candidate sequences
+[23:06:53]   scored 1000/12842 candidate sequences
+[23:06:57]   scored 1500/12842 candidate sequences
+[23:07:02]   scored 2000/12842 candidate sequences
+[23:07:06]   scored 2500/12842 candidate sequences
+[23:07:11]   scored 3000/12842 candidate sequences
+[23:07:15]   scored 3500/12842 candidate sequences
+[23:07:20]   scored 4000/12842 candidate sequences
+[23:07:24]   scored 4500/12842 candidate sequences
+[23:07:29]   scored 5000/12842 candidate sequences
+[23:07:33]   scored 5500/12842 candidate sequences
+[23:07:38]   scored 6000/12842 candidate sequences
+[23:07:42]   scored 6500/12842 candidate sequences
+[23:07:47]   scored 7000/12842 candidate sequences
+[23:07:52]   scored 7500/12842 candidate sequences
+[23:07:57]   scored 8000/12842 candidate sequences
+[23:08:02]   scored 8500/12842 candidate sequences
+[23:08:07]   scored 9000/12842 candidate sequences
+[23:08:12]   scored 9500/12842 candidate sequences
+[23:08:17]   scored 10000/12842 candidate sequences
+[23:08:22]   scored 10500/12842 candidate sequences
+[23:08:28]   scored 11000/12842 candidate sequences
+[23:08:33]   scored 11500/12842 candidate sequences
+[23:08:38]   scored 12000/12842 candidate sequences
+[23:08:44]   scored 12500/12842 candidate sequences
+[23:10:13] calibration[imbalanced] seed=20260909: 128x512 tokens, hash=4cee26390d666bba
+[23:11:22]   scored 500/12842 candidate sequences
+[23:11:26]   scored 1000/12842 candidate sequences
+[23:11:31]   scored 1500/12842 candidate sequences
+[23:11:35]   scored 2000/12842 candidate sequences
+[23:11:40]   scored 2500/12842 candidate sequences
+[23:11:44]   scored 3000/12842 candidate sequences
+[23:11:49]   scored 3500/12842 candidate sequences
+[23:11:53]   scored 4000/12842 candidate sequences
+[23:11:58]   scored 4500/12842 candidate sequences
+[23:12:02]   scored 5000/12842 candidate sequences
+[23:12:06]   scored 5500/12842 candidate sequences
+[23:12:11]   scored 6000/12842 candidate sequences
+[23:12:16]   scored 6500/12842 candidate sequences
+[23:12:20]   scored 7000/12842 candidate sequences
+[23:12:25]   scored 7500/12842 candidate sequences
+[23:12:30]   scored 8000/12842 candidate sequences
+[23:12:35]   scored 8500/12842 candidate sequences
+[23:12:40]   scored 9000/12842 candidate sequences
+[23:12:45]   scored 9500/12842 candidate sequences
+[23:12:50]   scored 10000/12842 candidate sequences
+[23:12:55]   scored 10500/12842 candidate sequences
+[23:13:01]   scored 11000/12842 candidate sequences
+[23:13:06]   scored 11500/12842 candidate sequences
+[23:13:11]   scored 12000/12842 candidate sequences
+[23:13:17]   scored 12500/12842 candidate sequences
+[23:14:46] calibration[imbalanced] seed=20260910: 128x512 tokens, hash=3b60c8a13979cb12
+[23:15:54]   scored 500/12842 candidate sequences
+[23:15:59]   scored 1000/12842 candidate sequences
+[23:16:03]   scored 1500/12842 candidate sequences
+[23:16:08]   scored 2000/12842 candidate sequences
+[23:16:12]   scored 2500/12842 candidate sequences
+[23:16:17]   scored 3000/12842 candidate sequences
+[23:16:21]   scored 3500/12842 candidate sequences
+[23:16:26]   scored 4000/12842 candidate sequences
+[23:16:30]   scored 4500/12842 candidate sequences
+[23:16:35]   scored 5000/12842 candidate sequences
+[23:16:39]   scored 5500/12842 candidate sequences
+[23:16:44]   scored 6000/12842 candidate sequences
+[23:16:48]   scored 6500/12842 candidate sequences
+[23:16:53]   scored 7000/12842 candidate sequences
+[23:16:58]   scored 7500/12842 candidate sequences
+[23:17:03]   scored 8000/12842 candidate sequences
+[23:17:08]   scored 8500/12842 candidate sequences
+[23:17:13]   scored 9000/12842 candidate sequences
+[23:17:18]   scored 9500/12842 candidate sequences
+[23:17:23]   scored 10000/12842 candidate sequences
+[23:17:28]   scored 10500/12842 candidate sequences
+[23:17:33]   scored 11000/12842 candidate sequences
+[23:17:39]   scored 11500/12842 candidate sequences
+[23:17:44]   scored 12000/12842 candidate sequences
+[23:17:50]   scored 12500/12842 candidate sequences
+[23:19:16] === done in 2616s -> /workspace/Quant_Bias/quant-bias/results/e3/qwen3_5_2b ===
