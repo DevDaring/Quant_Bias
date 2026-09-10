@@ -48,42 +48,62 @@ def call(method: str, path: str, body: dict | None = None, timeout: int = 120):
 
 
 def sdl(pubkey: str, gpu: str, ram: str, cpu: int, mem: str, disk: str, price: int,
-        image: str = "pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime") -> str:
-    """Build the SDL with a YAML serializer so quoting is safe.
+        image: str = "pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime",
+        deploy_key: str = "", hf_token: str = "", autorun: str = "") -> str:
+    """Build the SDL. The container is self-healing.
 
-    Two lessons from the first attempt, both encoded here:
-      * the boot script must NEVER exit -- ``sshd -D`` in the foreground dies if
-        anything goes wrong and the pod crash-loops with ready_replicas=0, which
-        looks identical to a slow image pull. Ending in ``sleep infinity`` keeps
-        the pod alive so it can be inspected.
-      * avoid ``bash -l`` and escaped sed regexes; append to sshd_config instead.
-    The runtime image is used rather than devel: flash-attn is installed from a
-    prebuilt wheel, so nvcc is not needed and the pull is roughly half the size.
+    Akash containers are ephemeral: a restart wipes the filesystem entirely.
+    Rather than depend on an operator re-bootstrapping by hand, the boot script
+    re-clones the repository, reinstalls, and re-enters the run loop on every
+    start. Stage state lives in the git remote, so a restart resumes at the next
+    unfinished stage instead of repeating completed work.
+
+    The script must never exit -- a foreground process that dies turns into a
+    crash loop that is indistinguishable from a slow image pull.
     """
     import yaml
-    boot = "\n".join([
+    lines = [
         "set -x",
         "export DEBIAN_FRONTEND=noninteractive",
         "mkdir -p /run/sshd /root/.ssh /workspace",
         "echo \"$PUBKEY\" >> /root/.ssh/authorized_keys",
-        "chmod 700 /root/.ssh",
-        "chmod 600 /root/.ssh/authorized_keys",
+        "chmod 700 /root/.ssh; chmod 600 /root/.ssh/authorized_keys",
         "apt-get update -qq || true",
         "apt-get install -yqq openssh-server git curl ca-certificates tmux || true",
         "printf 'PermitRootLogin prohibit-password\\nPasswordAuthentication no\\nClientAliveInterval 60\\n' >> /etc/ssh/sshd_config",
         "/usr/sbin/sshd || true",
+        # repo-scoped deploy key, delivered via env
+        "if [ -n \"$DEPLOY_KEY\" ]; then printf '%s\\n' \"$DEPLOY_KEY\" > /root/.ssh/quantbias_deploy; chmod 600 /root/.ssh/quantbias_deploy; fi",
+        "ssh-keyscan -t ed25519 github.com >> /root/.ssh/known_hosts 2>/dev/null",
+        "export GIT_SSH_COMMAND='ssh -i /root/.ssh/quantbias_deploy -o StrictHostKeyChecking=no -o UserKnownHostsFile=/root/.ssh/known_hosts'",
         "touch /workspace/BOOT_DONE",
+        # self-healing supervisor: re-bootstrap and resume on every container start
+        "if [ -n \"$AUTORUN\" ]; then",
+        "  ( cd /workspace",
+        "    git clone -q git@github.com:DevDaring/Quant_Bias.git Quant_Bias 2>/dev/null || (cd Quant_Bias && git pull -q --rebase origin main)",
+        "    export HF_TOKEN=\"$HF_TOKEN\" HF_HOME=/workspace/hf_cache WORK=/workspace ATTN=flash_attention_2 TOKENIZERS_PARALLELISM=false",
+        "    bash /workspace/Quant_Bias/quant-bias/scripts/vm_bootstrap.sh >> /workspace/bootstrap.log 2>&1",
+        "    bash /workspace/Quant_Bias/quant-bias/scripts/vm_run.sh \"$AUTORUN\" >> /workspace/run.log 2>&1",
+        "  ) &",
+        "fi",
         "sleep infinity",
-    ])
+    ]
+    env = [f"PUBKEY={pubkey}"]
+    if deploy_key:
+        env.append(f"DEPLOY_KEY={deploy_key}")
+    if hf_token:
+        env.append(f"HF_TOKEN={hf_token}")
+    if autorun:
+        env.append(f"AUTORUN={autorun}")
     doc = {
         "version": "2.0",
         "services": {
             "gpu": {
                 "image": image,
                 "expose": [{"port": 22, "as": 22, "to": [{"global": True}]}],
-                "env": [f"PUBKEY={pubkey}"],
+                "env": env,
                 "command": ["bash"],
-                "args": ["-c", boot],
+                "args": ["-c", "\n".join(lines)],
             }
         },
         "profiles": {
@@ -151,7 +171,9 @@ def ssh_endpoint(dseq: str):
 
 def cmd_create(a):
     pub = pathlib.Path(a.pubkey).expanduser().read_text().strip()
-    manifest_sdl = sdl(pub, a.gpu, a.ram, a.cpu, a.mem, a.disk, a.price, a.image)
+    dk = pathlib.Path(a.deploy_key).expanduser().read_text().strip() if a.deploy_key else ""
+    manifest_sdl = sdl(pub, a.gpu, a.ram, a.cpu, a.mem, a.disk, a.price, a.image,
+                       dk, os.environ.get("HUGGINGFACE_TOKEN", ""), a.autorun)
     print(f"creating deployment: gpu={a.gpu} ram={a.ram} disk={a.disk} limit={a.hours}h")
     code, d = call("POST", "/v1/deployments",
                    {"data": {"sdl": manifest_sdl, "runtimeLimitHours": a.hours}})
@@ -258,11 +280,13 @@ if __name__ == "__main__":
     sub = p.add_subparsers(dest="cmd", required=True)
     c = sub.add_parser("create"); c.set_defaults(f=cmd_create)
     c.add_argument("--gpu", default="a100"); c.add_argument("--ram", default="80Gi")
-    c.add_argument("--cpu", type=int, default=8); c.add_argument("--mem", default="64Gi")
-    c.add_argument("--disk", default="200Gi"); c.add_argument("--hours", type=int, default=30)
+    c.add_argument("--cpu", type=int, default=16); c.add_argument("--mem", default="64Gi")
+    c.add_argument("--disk", default="300Gi"); c.add_argument("--hours", type=int, default=30)
     c.add_argument("--price", type=int, default=100000, help="max uakt per block (ceiling only)")
     c.add_argument("--pubkey", default="~/.ssh/quantbias_ed25519.pub")
     c.add_argument("--image", default="pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime")
+    c.add_argument("--deploy-key", default="", help="path to the repo-scoped private key")
+    c.add_argument("--autorun", default="", help="smoke|full: self-heal and resume after a restart")
     c.add_argument("--bid-wait", type=int, default=180)
     c.add_argument("--ready-wait", type=int, default=420)
     c.add_argument("--max-tries", type=int, default=4, help="how many bids to try before giving up")
