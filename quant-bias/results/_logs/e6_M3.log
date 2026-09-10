@@ -1,0 +1,8 @@
+[22:34:53] === E6 model=M3 tag=mistral_7b_v0_1 device=cuda seed=20260908 profile=budget ===
+[22:34:54] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 12034.89it/s]
+[22:34:56]   attention: flash_attention_2
+[22:34:56]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 8112.77it/s]
+[22:35:01] E6: Prior Lyapunov rho tracks this study's utility measure at rho_s=0.00 (n=59), confirming the two pipelines measure the same layers. It does not predict group-conditioned harmful flips (rho_s=-0.07, p=0.59), so utility-derived layer sensitivity does not identify where quantization changes socially relevant decisions. This study's group-conditioned residual energy relates to harm at rho_s=0.37 (n=60).
+[22:35:01] === done in 8s -> /workspace/Quant_Bias/quant-bias/results/e6/mistral_7b_v0_1 ===
