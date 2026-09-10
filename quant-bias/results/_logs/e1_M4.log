@@ -1,0 +1,85 @@
+[09:25:40] === E1 model=M4 tag=llama_2_7b-smoke device=cuda seed=20260908 profile=smoke ===
+[09:25:40] Loading NousResearch/Llama-2-7b-hf@main (8efe6c9b93655b934e27bd9981e3ec13e55aee9d) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   5%|▌         | 15/291 [00:00<00:02, 111.12it/s]Loading weights:  11%|█         | 32/291 [00:00<00:01, 138.67it/s]Loading weights:  17%|█▋        | 49/291 [00:00<00:01, 151.69it/s]Loading weights:  22%|██▏       | 65/291 [00:00<00:01, 151.84it/s]Loading weights:  28%|██▊       | 81/291 [00:00<00:01, 153.82it/s]Loading weights:  33%|███▎      | 97/291 [00:00<00:01, 155.65it/s]Loading weights:  39%|███▉      | 113/291 [00:00<00:01, 154.78it/s]Loading weights:  44%|████▍     | 129/291 [00:00<00:01, 155.28it/s]Loading weights:  50%|████▉     | 145/291 [00:01<00:01, 125.20it/s]Loading weights:  55%|█████▍    | 159/291 [00:01<00:01, 128.63it/s]Loading weights:  59%|█████▉    | 173/291 [00:01<00:00, 129.77it/s]Loading weights:  64%|██████▍   | 187/291 [00:01<00:00, 132.06it/s]Loading weights:  69%|██████▉   | 201/291 [00:01<00:00, 132.27it/s]Loading weights:  75%|███████▍  | 217/291 [00:01<00:00, 113.40it/s]Loading weights:  79%|███████▉  | 230/291 [00:01<00:00, 117.16it/s]Loading weights:  84%|████████▍ | 245/291 [00:01<00:00, 124.46it/s]Loading weights:  89%|████████▊ | 258/291 [00:01<00:00, 125.20it/s]Loading weights:  93%|█████████▎| 272/291 [00:02<00:00, 128.41it/s]Loading weights:  99%|█████████▉| 288/291 [00:02<00:00, 135.85it/s]Loading weights: 100%|██████████| 291/291 [00:02<00:00, 135.58it/s]
+[09:25:45]   attention: flash_attention_2
+[09:25:45]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   5%|▌         | 15/291 [00:00<00:02, 108.86it/s]Loading weights:  11%|█▏        | 33/291 [00:00<00:01, 142.79it/s]Loading weights:  16%|█▋        | 48/291 [00:00<00:01, 145.68it/s]Loading weights:  22%|██▏       | 63/291 [00:00<00:01, 147.09it/s]Loading weights:  27%|██▋       | 78/291 [00:00<00:01, 145.92it/s]Loading weights:  32%|███▏      | 93/291 [00:00<00:01, 146.22it/s]Loading weights:  37%|███▋      | 109/291 [00:00<00:01, 145.83it/s]Loading weights:  44%|████▍     | 128/291 [00:00<00:01, 156.33it/s]Loading weights:  50%|████▉     | 145/291 [00:01<00:01, 130.03it/s]Loading weights:  55%|█████▍    | 159/291 [00:01<00:01, 130.45it/s]Loading weights:  60%|██████    | 176/291 [00:01<00:00, 140.63it/s]Loading weights:  66%|██████▋   | 193/291 [00:01<00:00, 148.27it/s]Loading weights:  72%|███████▏  | 209/291 [00:01<00:00, 146.11it/s]Loading weights:  78%|███████▊  | 227/291 [00:01<00:00, 128.40it/s]Loading weights:  83%|████████▎ | 241/291 [00:01<00:00, 131.25it/s]Loading weights:  88%|████████▊ | 255/291 [00:01<00:00, 133.15it/s]Loading weights:  92%|█████████▏| 269/291 [00:01<00:00, 133.01it/s]Loading weights:  97%|█████████▋| 283/291 [00:02<00:00, 130.67it/s]Loading weights: 100%|██████████| 291/291 [00:02<00:00, 136.11it/s]
+[09:25:52] === E1 dense on final ===
+[09:25:59] BBQ: 22 examples, 11 template clusters
+[09:26:07] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[09:26:08] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[09:26:10] === E1 rtn8 on final ===
+[09:26:29] counterfactual pairs: 46
+[09:26:30] === E1 rtn4 on final ===
+[09:26:37] counterfactual pairs: 46
+[09:26:39] === E1 gptq4 on final ===
+[09:26:44] calibration[generic] seed=20260908: 8x128 tokens, hash=308d7092ae95dc3c
+[09:26:50]   GPTQ layer 0: 7 components
+[09:26:54]   GPTQ layer 1: 7 components
+[09:26:59]   GPTQ layer 2: 7 components
+[09:27:03]   GPTQ layer 3: 7 components
+[09:27:08]   GPTQ layer 4: 7 components
+[09:27:12]   GPTQ layer 5: 7 components
+[09:27:16]   GPTQ layer 6: 7 components
+[09:27:20]   GPTQ layer 7: 7 components
+[09:27:25]   GPTQ layer 8: 7 components
+[09:27:29]   GPTQ layer 9: 7 components
+[09:27:33]   GPTQ layer 10: 7 components
+[09:27:37]   GPTQ layer 11: 7 components
+[09:27:42]   GPTQ layer 12: 7 components
+[09:27:46]   GPTQ layer 13: 7 components
+[09:27:51]   GPTQ layer 14: 7 components
+[09:27:55]   GPTQ layer 15: 7 components
+[09:28:00]   GPTQ layer 16: 7 components
+[09:28:05]   GPTQ layer 17: 7 components
+[09:28:10]   GPTQ layer 18: 7 components
+[09:28:14]   GPTQ layer 19: 7 components
+[09:28:18]   GPTQ layer 20: 7 components
+[09:28:22]   GPTQ layer 21: 7 components
+[09:28:26]   GPTQ layer 22: 7 components
+[09:28:30]   GPTQ layer 23: 7 components
+[09:28:35]   GPTQ layer 24: 7 components
+[09:28:39]   GPTQ layer 25: 7 components
+[09:28:43]   GPTQ layer 26: 7 components
+[09:28:48]   GPTQ layer 27: 7 components
+[09:28:53]   GPTQ layer 28: 7 components
+[09:28:58]   GPTQ layer 29: 7 components
+[09:29:03]   GPTQ layer 30: 7 components
+[09:29:08]   GPTQ layer 31: 7 components
+[09:29:10] counterfactual pairs: 46
+[09:29:14] === E1 gptq8 on final ===
+[09:29:21]   GPTQ layer 0: 7 components
+[09:29:26]   GPTQ layer 1: 7 components
+[09:29:31]   GPTQ layer 2: 7 components
+[09:29:36]   GPTQ layer 3: 7 components
+[09:29:41]   GPTQ layer 4: 7 components
+[09:29:46]   GPTQ layer 5: 7 components
+[09:29:51]   GPTQ layer 6: 7 components
+[09:29:56]   GPTQ layer 7: 7 components
+[09:30:01]   GPTQ layer 8: 7 components
+[09:30:06]   GPTQ layer 9: 7 components
+[09:30:11]   GPTQ layer 10: 7 components
+[09:30:16]   GPTQ layer 11: 7 components
+[09:30:21]   GPTQ layer 12: 7 components
+[09:30:26]   GPTQ layer 13: 7 components
+[09:30:32]   GPTQ layer 14: 7 components
+[09:30:37]   GPTQ layer 15: 7 components
+[09:30:42]   GPTQ layer 16: 7 components
+[09:30:47]   GPTQ layer 17: 7 components
+[09:30:52]   GPTQ layer 18: 7 components
+[09:30:57]   GPTQ layer 19: 7 components
+[09:31:02]   GPTQ layer 20: 7 components
+[09:31:07]   GPTQ layer 21: 7 components
+[09:31:12]   GPTQ layer 22: 7 components
+[09:31:17]   GPTQ layer 23: 7 components
+[09:31:22]   GPTQ layer 24: 7 components
+[09:31:27]   GPTQ layer 25: 7 components
+[09:31:32]   GPTQ layer 26: 7 components
+[09:31:37]   GPTQ layer 27: 7 components
+[09:31:42]   GPTQ layer 28: 7 components
+[09:31:47]   GPTQ layer 29: 7 components
+[09:31:52]   GPTQ layer 30: 7 components
+[09:31:57]   GPTQ layer 31: 7 components
+[09:31:58] counterfactual pairs: 46
+[09:32:02] report written: /workspace/Quant_Bias/quant-bias/results/e1/llama_2_7b-smoke/REPORT.md
+[09:32:02] === done in 382s -> /workspace/Quant_Bias/quant-bias/results/e1/llama_2_7b-smoke ===
