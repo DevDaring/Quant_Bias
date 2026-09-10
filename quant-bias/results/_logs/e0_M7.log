@@ -1,45 +1,45 @@
-[08:52:02] === E0 model=M7 tag=lfm2_2.6b-smoke device=cuda seed=20260908 profile=smoke ===
-[08:52:02] Loading LiquidAI/LFM2-2.6B@main (36ed799f7024ef169ba92ffe184821835e15cc66) dtype=torch.bfloat16 device=cuda
-Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 12304.35it/s]
-[08:52:40]   attention: flash_attention_2
+[09:54:51] === E0 model=M7 tag=lfm2_2.6b device=cuda seed=20260908 profile=budget ===
+[09:54:52] Loading LiquidAI/LFM2-2.6B@main (36ed799f7024ef169ba92ffe184821835e15cc66) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 12763.52it/s]
+[09:55:11]   attention: flash_attention_2
 [transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
-[08:52:41]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 14008.93it/s]
-[08:52:43] adapter: {'model_id': 'LiquidAI/LFM2-2.6B', 'revision': '36ed799f7024ef169ba92ffe184821835e15cc66', 'family': 'lfm2', 'n_layers': 30, 'n_components': 166, 'component_weights': 2434793472, 'excluded_weights': 134478848, 'tied_lm_head': True, 'dtype': 'torch.bfloat16', 'components_per_layer': ['conv.out_proj', 'conv.in_proj', 'feed_forward.w1', 'feed_forward.w2', 'feed_forward.w3'], 'component_kinds': {'attn': 32, 'conv': 44, 'mlp': 90, 'other': 0}, 'layer_types': ['conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv']}
-[08:53:03] BBQ: 22 examples, 11 template clusters
-[08:53:10] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[08:53:11] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[08:53:16] calibration[generic] seed=20260908: 8x128 tokens, hash=1fcd00030296019b
-[08:53:19]   GPTQ layer 0: 5 components
-[08:53:22]   GPTQ layer 1: 5 components
-[08:53:24]   GPTQ layer 2: 7 components
-[08:53:26]   GPTQ layer 3: 5 components
-[08:53:28]   GPTQ layer 4: 5 components
-[08:53:31]   GPTQ layer 5: 7 components
-[08:53:33]   GPTQ layer 6: 5 components
-[08:53:35]   GPTQ layer 7: 5 components
-[08:53:38]   GPTQ layer 8: 5 components
-[08:53:40]   GPTQ layer 9: 7 components
-[08:53:42]   GPTQ layer 10: 5 components
-[08:53:44]   GPTQ layer 11: 5 components
-[08:53:47]   GPTQ layer 12: 5 components
-[08:53:49]   GPTQ layer 13: 7 components
-[08:53:51]   GPTQ layer 14: 5 components
-[08:53:53]   GPTQ layer 15: 5 components
-[08:53:56]   GPTQ layer 16: 5 components
-[08:53:58]   GPTQ layer 17: 7 components
-[08:54:00]   GPTQ layer 18: 5 components
-[08:54:03]   GPTQ layer 19: 5 components
-[08:54:05]   GPTQ layer 20: 5 components
-[08:54:07]   GPTQ layer 21: 7 components
-[08:54:09]   GPTQ layer 22: 5 components
-[08:54:12]   GPTQ layer 23: 5 components
-[08:54:14]   GPTQ layer 24: 7 components
-[08:54:16]   GPTQ layer 25: 5 components
-[08:54:18]   GPTQ layer 26: 5 components
-[08:54:21]   GPTQ layer 27: 7 components
-[08:54:23]   GPTQ layer 28: 5 components
-[08:54:25]   GPTQ layer 29: 5 components
-[08:54:34] Wanda per-row 50%: achieved 0.5000 over 2434793472 weights
-[08:54:43]   scored 3/3 candidate sequences
-[08:54:43] === done in 161s -> /workspace/Quant_Bias/quant-bias/results/e0/lfm2_2.6b-smoke ===
+[09:55:12]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 11449.73it/s]
+[09:55:14] adapter: {'model_id': 'LiquidAI/LFM2-2.6B', 'revision': '36ed799f7024ef169ba92ffe184821835e15cc66', 'family': 'lfm2', 'n_layers': 30, 'n_components': 166, 'component_weights': 2434793472, 'excluded_weights': 134478848, 'tied_lm_head': True, 'dtype': 'torch.bfloat16', 'components_per_layer': ['conv.out_proj', 'conv.in_proj', 'feed_forward.w1', 'feed_forward.w2', 'feed_forward.w3'], 'component_kinds': {'attn': 32, 'conv': 44, 'mlp': 90, 'other': 0}, 'layer_types': ['conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv', 'full_attention', 'conv', 'conv']}
+[09:55:37] BBQ: 7868 examples, 343 template clusters
+[09:55:44] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[09:55:45] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[09:55:50] calibration[generic] seed=20260908: 128x512 tokens, hash=7e17a14d7af60ed9
+[09:55:54]   GPTQ layer 0: 5 components
+[09:55:57]   GPTQ layer 1: 5 components
+[09:56:00]   GPTQ layer 2: 7 components
+[09:56:03]   GPTQ layer 3: 5 components
+[09:56:06]   GPTQ layer 4: 5 components
+[09:56:09]   GPTQ layer 5: 7 components
+[09:56:12]   GPTQ layer 6: 5 components
+[09:56:15]   GPTQ layer 7: 5 components
+[09:56:18]   GPTQ layer 8: 5 components
+[09:56:21]   GPTQ layer 9: 7 components
+[09:56:24]   GPTQ layer 10: 5 components
+[09:56:27]   GPTQ layer 11: 5 components
+[09:56:30]   GPTQ layer 12: 5 components
+[09:56:33]   GPTQ layer 13: 7 components
+[09:56:36]   GPTQ layer 14: 5 components
+[09:56:39]   GPTQ layer 15: 5 components
+[09:56:42]   GPTQ layer 16: 5 components
+[09:56:46]   GPTQ layer 17: 7 components
+[09:56:48]   GPTQ layer 18: 5 components
+[09:56:51]   GPTQ layer 19: 5 components
+[09:56:54]   GPTQ layer 20: 5 components
+[09:56:58]   GPTQ layer 21: 7 components
+[09:57:01]   GPTQ layer 22: 5 components
+[09:57:04]   GPTQ layer 23: 5 components
+[09:57:07]   GPTQ layer 24: 7 components
+[09:57:10]   GPTQ layer 25: 5 components
+[09:57:13]   GPTQ layer 26: 5 components
+[09:57:16]   GPTQ layer 27: 7 components
+[09:57:19]   GPTQ layer 28: 5 components
+[09:57:22]   GPTQ layer 29: 5 components
+[09:57:35] Wanda per-row 50%: achieved 0.5000 over 2434793472 weights
+[09:57:44]   scored 3/3 candidate sequences
+[09:57:44] === done in 173s -> /workspace/Quant_Bias/quant-bias/results/e0/lfm2_2.6b ===
