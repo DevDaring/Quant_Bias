@@ -36,8 +36,11 @@ push(){
 git pull -q --rebase origin main 2>/dev/null || true
 
 run(){  # run <exp> <model>
-  local exp=$1 model=$2 key="$1/$2"
-  grep -qP "^${key}\tok$" "$STATE" 2>/dev/null && { log "skip $key (done)"; return 0; }
+  local exp=$1 model=$2 key="$MODE/$1/$2"
+  # State rows are "<mode>/<exp>/<model>\tok\t<seconds>". Matching a prefix
+  # (not an anchored whole line) is what makes resume actually work, and keying
+  # by mode stops a smoke row from being mistaken for a completed full stage.
+  grep -qF "${key}	ok	" "$STATE" 2>/dev/null && { log "skip $key (already ok)"; return 0; }
   log ">>> $key"
   local t0=$SECONDS
   if $PY -m quantbias.run_experiment --exp "$exp" --model "$model" $FLAGS \

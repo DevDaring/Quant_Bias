@@ -1,17 +1,17 @@
 {
-  "dseq": "1789029960760",
-  "created": "2026-09-10 08:46:03",
+  "dseq": "1789033777923",
+  "created": "2026-09-10 09:49:51",
   "gpu": "h100",
   "hours": 30,
-  "updated": "2026-09-10 08:47:10",
+  "updated": "2026-09-10 09:50:20",
   "provider": "akash1svfr9xarfkcxwdnx32nvl8cs9rfruu4nd56c4f",
   "gseq": 1,
   "oseq": 1,
-  "price_uakt_block": 4474.551591,
+  "price_uakt_block": 4523.399138,
   "ssh_host": "provider.h100.ams2.val.akash.pub",
-  "ssh_port": 31127,
+  "ssh_port": 31810,
   "ssh_provider": "akash1svfr9xarfkcxwdnx32nvl8cs9rfruu4nd56c4f",
   "ssh_state": "active",
-  "closed": "2026-09-10 08:45:53",
+  "closed": "2026-09-10 09:42:42",
   "lease_state": "active"
 }

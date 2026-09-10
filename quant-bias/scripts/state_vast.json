@@ -1,0 +1,12 @@
+{
+  "instance_id": 50478570,
+  "offer": "47195595",
+  "created": "2026-09-10 09:43:44",
+  "updated": "2026-09-10 09:48:56",
+  "ssh_host": "ssh4.vast.ai",
+  "ssh_port": 38570,
+  "status": "running",
+  "gpu": "A100 PCIE",
+  "dph": 1.075,
+  "destroyed": "2026-09-10 09:48:56"
+}
