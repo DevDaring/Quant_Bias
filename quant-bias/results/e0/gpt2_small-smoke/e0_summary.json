@@ -59,7 +59,7 @@
       "n_tokens": 1023,
       "ppl": 18.117049332052613
     },
-    "seconds": 7.26006555557251
+    "seconds": 7.090042352676392
   },
   "grid_rtn4": {
     "grid_ok_all": true,
@@ -76,7 +76,7 @@
   "manifest": {
     "backend": "simulated",
     "calibration_hash": "",
-    "code_revision": "git:ca252e6+src:a17bd48e2e46",
+    "code_revision": "git:46a7f44+src:a17bd48e2e46",
     "data_revisions": {},
     "error": "",
     "experiment_id": "e0",
@@ -95,13 +95,13 @@
       "quick": true,
       "sampling_profile": "smoke"
     },
-    "finished": "2026-09-10T08:29:19",
+    "finished": "2026-09-10T08:50:25",
     "hardware": {
-      "cpu_count": 128,
+      "cpu_count": 96,
       "cuda": true,
       "gpu": "NVIDIA H100 80GB HBM3",
       "gpu_mem_gb": 79.2,
-      "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+      "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
       "python": "3.11.10",
       "torch": "2.5.1+cu124",
       "transformers": "5.17.0"
@@ -112,7 +112,7 @@
     "precision_map_hash": "",
     "seed": 20260908,
     "split_hash": "",
-    "started": "2026-09-10T08:28:18",
+    "started": "2026-09-10T08:49:29",
     "status": "ok",
     "tokenizer_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e"
   },

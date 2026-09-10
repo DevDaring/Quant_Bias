@@ -1,25 +1,38 @@
-[08:28:13] === E0 model=M1 tag=gpt2_small-smoke device=cuda seed=20260908 profile=smoke ===
-[08:28:14] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 19200.65it/s]
-[08:28:18]   attention: sdpa
-[08:28:18] adapter: {'model_id': 'openai-community/gpt2', 'revision': '607a30d783dfa663caf39e06633721c8d4cfcd7e', 'family': 'gpt2', 'n_layers': 12, 'n_components': 48, 'component_weights': 84934656, 'excluded_weights': 39505152, 'tied_lm_head': True, 'dtype': 'torch.float32', 'components_per_layer': ['attn.c_attn', 'attn.c_proj', 'mlp.c_fc', 'mlp.c_proj'], 'component_kinds': {'attn': 24, 'conv': 0, 'mlp': 24, 'other': 0}, 'layer_types': None}
+[08:49:23] === E0 model=M1 tag=gpt2_small-smoke device=cuda seed=20260908 profile=smoke ===
+[08:49:23] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15738.08it/s]
+[08:49:29]   attention: sdpa
+[08:49:29] adapter: {'model_id': 'openai-community/gpt2', 'revision': '607a30d783dfa663caf39e06633721c8d4cfcd7e', 'family': 'gpt2', 'n_layers': 12, 'n_components': 48, 'component_weights': 84934656, 'excluded_weights': 39505152, 'tied_lm_head': True, 'dtype': 'torch.float32', 'components_per_layer': ['attn.c_attn', 'attn.c_proj', 'mlp.c_fc', 'mlp.c_proj'], 'component_kinds': {'attn': 24, 'conv': 0, 'mlp': 24, 'other': 0}, 'layer_types': None}
+Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 390822.68 examples/s]
+Generating train split:   0%|          | 0/1801350 [00:00<?, ? examples/s]Generating train split:   6%|▌         | 112000/1801350 [00:00<00:01, 1108250.86 examples/s]Generating train split:  13%|█▎        | 239000/1801350 [00:00<00:01, 1197185.38 examples/s]Generating train split:  22%|██▏       | 388000/1801350 [00:00<00:01, 1253311.39 examples/s]Generating train split:  30%|██▉       | 540000/1801350 [00:00<00:00, 1350850.10 examples/s]Generating train split:  41%|████▏     | 746000/1801350 [00:00<00:00, 1357760.57 examples/s]Generating train split:  52%|█████▏    | 932675/1801350 [00:00<00:00, 1310549.00 examples/s]Generating train split:  60%|██████    | 1085675/1801350 [00:00<00:00, 1368781.92 examples/s]Generating train split:  71%|███████▏  | 1285675/1801350 [00:00<00:00, 1310043.74 examples/s]Generating train split:  80%|███████▉  | 1435675/1801350 [00:01<00:00, 1354995.08 examples/s]Generating train split:  91%|█████████ | 1639675/1801350 [00:01<00:00, 1354631.57 examples/s]Generating train split: 100%|██████████| 1801350/1801350 [00:01<00:00, 1353054.74 examples/s]Generating train split: 100%|██████████| 1801350/1801350 [00:01<00:00, 1330407.27 examples/s]
+Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 927899.68 examples/s]
 [transformers] `loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
-[08:28:36] BBQ: 22 examples, 11 template clusters
-[08:28:53] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[08:28:56] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[08:29:06] calibration[generic] seed=20260908: 8x128 tokens, hash=c370baf51c734559
-[08:29:07]   GPTQ layer 0: 4 components
-[08:29:07]   GPTQ layer 1: 4 components
-[08:29:08]   GPTQ layer 2: 4 components
-[08:29:08]   GPTQ layer 3: 4 components
-[08:29:09]   GPTQ layer 4: 4 components
-[08:29:10]   GPTQ layer 5: 4 components
-[08:29:10]   GPTQ layer 6: 4 components
-[08:29:11]   GPTQ layer 7: 4 components
-[08:29:12]   GPTQ layer 8: 4 components
-[08:29:12]   GPTQ layer 9: 4 components
-[08:29:13]   GPTQ layer 10: 4 components
-[08:29:13]   GPTQ layer 11: 4 components
-[08:29:16] Wanda per-row 50%: achieved 0.5000 over 84934656 weights
-[08:29:19]   scored 3/3 candidate sequences
-[08:29:19] === done in 65s -> /workspace/Quant_Bias/quant-bias/results/e0/gpt2_small-smoke ===
+Generating test split:   0%|          | 0/58492 [00:00<?, ? examples/s]Generating test split:  42%|████▏     | 24278/58492 [00:00<00:00, 213909.15 examples/s]Generating test split: 100%|██████████| 58492/58492 [00:00<00:00, 251774.96 examples/s]Generating test split: 100%|██████████| 58492/58492 [00:00<00:00, 246089.22 examples/s]
+[08:49:52] BBQ: 22 examples, 11 template clusters
+Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 72574.69 examples/s]
+Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 104758.40 examples/s]
+Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 85823.61 examples/s]
+Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 109071.74 examples/s]
+Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 95671.01 examples/s]
+Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 114880.65 examples/s]
+Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 93859.88 examples/s]
+Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 121121.88 examples/s]
+[08:50:07] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+Generating train split:   0%|          | 0/9450 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 9450/9450 [00:00<00:00, 320281.95 examples/s]
+[08:50:08] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[08:50:14] calibration[generic] seed=20260908: 8x128 tokens, hash=c370baf51c734559
+[08:50:15]   GPTQ layer 0: 4 components
+[08:50:15]   GPTQ layer 1: 4 components
+[08:50:16]   GPTQ layer 2: 4 components
+[08:50:16]   GPTQ layer 3: 4 components
+[08:50:17]   GPTQ layer 4: 4 components
+[08:50:17]   GPTQ layer 5: 4 components
+[08:50:18]   GPTQ layer 6: 4 components
+[08:50:19]   GPTQ layer 7: 4 components
+[08:50:19]   GPTQ layer 8: 4 components
+[08:50:20]   GPTQ layer 9: 4 components
+[08:50:20]   GPTQ layer 10: 4 components
+[08:50:21]   GPTQ layer 11: 4 components
+[08:50:23] Wanda per-row 50%: achieved 0.5000 over 84934656 weights
+[08:50:25]   scored 3/3 candidate sequences
+[08:50:25] === done in 62s -> /workspace/Quant_Bias/quant-bias/results/e0/gpt2_small-smoke ===
