@@ -1,0 +1,47 @@
+[09:01:29] === E0 model=M4 tag=llama_2_7b-smoke device=cuda seed=20260908 profile=smoke ===
+[09:01:30] Loading NousResearch/Llama-2-7b-hf@main (8efe6c9b93655b934e27bd9981e3ec13e55aee9d) dtype=torch.bfloat16 device=cuda
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:21<00:21, 21.16s/it]Fetching 2 files: 100%|██████████| 2/2 [00:28<00:00, 13.29s/it]Fetching 2 files: 100%|██████████| 2/2 [00:28<00:00, 14.47s/it]
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:  10%|▉         | 29/291 [00:00<00:00, 268.10it/s]Loading weights:  20%|██        | 59/291 [00:00<00:00, 285.70it/s]Loading weights:  31%|███▏      | 91/291 [00:00<00:00, 296.02it/s]Loading weights:  42%|████▏     | 123/291 [00:00<00:00, 251.43it/s]Loading weights:  54%|█████▍    | 157/291 [00:00<00:00, 277.88it/s]Loading weights:  64%|██████▍   | 186/291 [00:00<00:00, 277.62it/s]Loading weights:  75%|███████▍  | 217/291 [00:00<00:00, 284.86it/s]Loading weights:  85%|████████▍ | 246/291 [00:00<00:00, 282.55it/s]Loading weights:  95%|█████████▍| 275/291 [00:00<00:00, 280.28it/s]Loading weights: 100%|██████████| 291/291 [00:01<00:00, 289.61it/s]
+[09:02:05]   attention: flash_attention_2
+[09:02:06]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 38/291 [00:00<00:00, 351.83it/s]Loading weights:  25%|██▌       | 74/291 [00:00<00:00, 264.90it/s]Loading weights:  35%|███▌      | 102/291 [00:00<00:00, 267.30it/s]Loading weights:  45%|████▌     | 132/291 [00:00<00:00, 269.15it/s]Loading weights:  57%|█████▋    | 166/291 [00:00<00:00, 287.99it/s]Loading weights:  67%|██████▋   | 196/291 [00:00<00:00, 289.39it/s]Loading weights:  78%|███████▊  | 226/291 [00:00<00:00, 288.54it/s]Loading weights:  88%|████████▊ | 256/291 [00:00<00:00, 288.21it/s]Loading weights:  98%|█████████▊| 285/291 [00:01<00:00, 285.92it/s]Loading weights: 100%|██████████| 291/291 [00:01<00:00, 289.90it/s]
+[09:02:10] adapter: {'model_id': 'NousResearch/Llama-2-7b-hf', 'revision': '8efe6c9b93655b934e27bd9981e3ec13e55aee9d', 'family': 'llama', 'n_layers': 32, 'n_components': 224, 'component_weights': 6476005376, 'excluded_weights': 262410240, 'tied_lm_head': False, 'dtype': 'torch.bfloat16', 'components_per_layer': ['self_attn.q_proj', 'self_attn.k_proj', 'self_attn.v_proj', 'self_attn.o_proj', 'mlp.gate_proj', 'mlp.up_proj', 'mlp.down_proj'], 'component_kinds': {'attn': 128, 'conv': 0, 'mlp': 96, 'other': 0}, 'layer_types': None}
+[09:02:40] BBQ: 22 examples, 11 template clusters
+[09:02:47] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[09:02:48] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[09:02:53] calibration[generic] seed=20260908: 8x128 tokens, hash=308d7092ae95dc3c
+[09:02:59]   GPTQ layer 0: 7 components
+[09:03:02]   GPTQ layer 1: 7 components
+[09:03:06]   GPTQ layer 2: 7 components
+[09:03:10]   GPTQ layer 3: 7 components
+[09:03:14]   GPTQ layer 4: 7 components
+[09:03:18]   GPTQ layer 5: 7 components
+[09:03:22]   GPTQ layer 6: 7 components
+[09:03:26]   GPTQ layer 7: 7 components
+[09:03:30]   GPTQ layer 8: 7 components
+[09:03:34]   GPTQ layer 9: 7 components
+[09:03:38]   GPTQ layer 10: 7 components
+[09:03:42]   GPTQ layer 11: 7 components
+[09:03:46]   GPTQ layer 12: 7 components
+[09:03:50]   GPTQ layer 13: 7 components
+[09:03:54]   GPTQ layer 14: 7 components
+[09:03:58]   GPTQ layer 15: 7 components
+[09:04:02]   GPTQ layer 16: 7 components
+[09:04:05]   GPTQ layer 17: 7 components
+[09:04:09]   GPTQ layer 18: 7 components
+[09:04:13]   GPTQ layer 19: 7 components
+[09:04:17]   GPTQ layer 20: 7 components
+[09:04:21]   GPTQ layer 21: 7 components
+[09:04:25]   GPTQ layer 22: 7 components
+[09:04:29]   GPTQ layer 23: 7 components
+[09:04:33]   GPTQ layer 24: 7 components
+[09:04:37]   GPTQ layer 25: 7 components
+[09:04:41]   GPTQ layer 26: 7 components
+[09:04:45]   GPTQ layer 27: 7 components
+[09:04:49]   GPTQ layer 28: 7 components
+[09:04:53]   GPTQ layer 29: 7 components
+[09:04:57]   GPTQ layer 30: 7 components
+[09:05:01]   GPTQ layer 31: 7 components
+[09:05:17] Wanda per-row 50%: achieved 0.5000 over 6476005376 weights
+[09:05:31]   scored 3/3 candidate sequences
+[09:05:31] === done in 242s -> /workspace/Quant_Bias/quant-bias/results/e0/llama_2_7b-smoke ===
