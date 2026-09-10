@@ -1,0 +1,486 @@
+{
+  "correlations": {
+    "V_final_vs_harmful_flips": {
+      "n": 28,
+      "p": 2.7625511151210857e-06,
+      "spearman": 0.7596076901036372
+    },
+    "prior_regret_vs_flip_spread": {
+      "n": 0,
+      "p": null,
+      "spearman": null
+    },
+    "prior_regret_vs_harmful_flips": {
+      "n": 0,
+      "p": null,
+      "spearman": null
+    },
+    "prior_regret_vs_ppl_utility": {
+      "n": 0,
+      "p": null,
+      "spearman": null
+    },
+    "prior_rho_vs_flip_spread": {
+      "n": 27,
+      "p": 0.672391729251666,
+      "spearman": 0.08526718121053482
+    },
+    "prior_rho_vs_harmful_flips": {
+      "n": 27,
+      "p": 0.1934377988638884,
+      "spearman": -0.2582256730002957
+    },
+    "prior_rho_vs_ppl_utility": {
+      "n": 27,
+      "p": 0.19429716561231106,
+      "spearman": -0.2577452787112896
+    },
+    "prior_rho_vs_worst_group_flip": {
+      "n": 27,
+      "p": 0.672391729251666,
+      "spearman": 0.08526718121053482
+    }
+  },
+  "interpretation": "Prior Lyapunov rho tracks this study's utility measure at rho_s=-0.26 (n=27), confirming the two pipelines measure the same layers. It does not predict group-conditioned harmful flips (rho_s=-0.26, p=0.19), so utility-derived layer sensitivity does not identify where quantization changes socially relevant decisions. This study's group-conditioned residual energy relates to harm at rho_s=0.76 (n=28).",
+  "li_key": "gpt2_small",
+  "manifest": {
+    "backend": "simulated",
+    "calibration_hash": "",
+    "code_revision": "git:db6a6ab+src:dd0bf2fde78f",
+    "data_revisions": {},
+    "error": "",
+    "experiment_id": "e6",
+    "extra": {
+      "config_hash": "ec1f83fc2916df2a",
+      "li_key": "gpt2_small",
+      "limits": {
+        "bbq_answer_format": "text",
+        "bbq_per_cluster_per_cell": 6,
+        "discrim_ages": [
+          20,
+          40,
+          60,
+          80,
+          100
+        ],
+        "discrim_config": "explicit"
+      },
+      "quick": false,
+      "sampling_profile": "budget"
+    },
+    "finished": "2026-09-10T22:34:03",
+    "hardware": {
+      "cpu_count": 96,
+      "cuda": true,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "gpu_mem_gb": 79.2,
+      "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+      "python": "3.11.10",
+      "torch": "2.5.1+cu124",
+      "transformers": "5.17.0"
+    },
+    "method": "analysis",
+    "model_id": "openai-community/gpt2",
+    "model_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "precision_map_hash": "",
+    "seed": 20260908,
+    "split_hash": "",
+    "started": "2026-09-10T22:34:03",
+    "status": "ok",
+    "tokenizer_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e"
+  },
+  "prior_dense_ppl": {
+    "Qwen3-8B": {
+      "model": "Qwen/Qwen3-8B",
+      "ppl": 9.27,
+      "source": "h100/qwen3_8b_results.json"
+    },
+    "gpt2_medium": {
+      "model": "openai-community/gpt2-medium",
+      "ppl": 19.9,
+      "source": "h100/gpt2_medium_unified.json"
+    },
+    "gpt2_small": {
+      "model": "openai-community/gpt2",
+      "ppl": 26.53,
+      "source": "h100/gpt2_small_unified.json"
+    },
+    "h100/mistral7b_fixed.json": {
+      "model": "mistralai/Mistral-7B-v0.1",
+      "ppl": 6.31,
+      "source": "h100/mistral7b_fixed.json"
+    },
+    "lfm2_2.6b": {
+      "model": "LiquidAI/LFM2-2.6B",
+      "ppl": 34.15,
+      "source": "h100/lfm2_2.6b_unified.json"
+    },
+    "mistral_7b": {
+      "model": "mistralai/Mistral-7B-v0.1",
+      "ppl": 6.31,
+      "source": "h100/unified_summary.json"
+    },
+    "qwen3_8b": {
+      "model": "Qwen/Qwen3-8B",
+      "ppl": 10.38,
+      "source": "h100/unified_summary.json"
+    }
+  },
+  "prior_regret": null,
+  "prior_rho": {
+    "n_layers_measured": 11,
+    "rho_per_layer": [
+      0.5951,
+      0.8344,
+      0.9597,
+      0.9502,
+      0.9418,
+      0.9216,
+      0.8944,
+      0.928,
+      0.9011,
+      0.6724,
+      0.686
+    ],
+    "source": "h100/gpt2_small_unified.json"
+  },
+  "provenance_note": "Prior perplexities come from runs with different token budgets and chunking conventions and are not comparable with this study's re-measured baselines; they document coverage only.",
+  "rows": [
+    {
+      "V_final_mean": 0.0006179810539550157,
+      "flip_spread": 0.1,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.01859504132231405,
+      "layer": 0,
+      "ppl_utility": 23.105147264629824,
+      "prior_regret": null,
+      "prior_rho": null,
+      "site": "L0.all",
+      "worst_group_flip": 0.1
+    },
+    {
+      "V_final_mean": 0.0005780586774179012,
+      "flip_spread": 0.125,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.014462809917355372,
+      "layer": 1,
+      "ppl_utility": 23.18239234097789,
+      "prior_regret": null,
+      "prior_rho": 0.5951,
+      "site": "L1.all",
+      "worst_group_flip": 0.125
+    },
+    {
+      "V_final_mean": 0.001102015918650485,
+      "flip_spread": 0.25,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.015151515151515152,
+      "layer": 10,
+      "ppl_utility": 23.456967672532357,
+      "prior_regret": null,
+      "prior_rho": 0.6724,
+      "site": "L10.all",
+      "worst_group_flip": 0.25
+    },
+    {
+      "V_final_mean": 0.0009903631033162253,
+      "flip_spread": 0.08333333333333333,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.012396694214876033,
+      "layer": 11,
+      "ppl_utility": 23.40208490996856,
+      "prior_regret": null,
+      "prior_rho": 0.686,
+      "site": "L11.all",
+      "worst_group_flip": 0.08333333333333333
+    },
+    {
+      "V_final_mean": 0.0006320768713079598,
+      "flip_spread": 0.08333333333333333,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.02203856749311295,
+      "layer": 2,
+      "ppl_utility": 23.363562362537248,
+      "prior_regret": null,
+      "prior_rho": 0.8344,
+      "site": "L2.all",
+      "worst_group_flip": 0.08333333333333333
+    },
+    {
+      "V_final_mean": 0.0006392583293186654,
+      "flip_spread": 0.1,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.01997245179063361,
+      "layer": 3,
+      "ppl_utility": 23.29083289031646,
+      "prior_regret": null,
+      "prior_rho": 0.9597,
+      "site": "L3.all",
+      "worst_group_flip": 0.1
+    },
+    {
+      "V_final_mean": 0.001725507294011533,
+      "flip_spread": 0.125,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.013774104683195593,
+      "layer": 4,
+      "ppl_utility": 23.390967624246546,
+      "prior_regret": null,
+      "prior_rho": 0.9502,
+      "site": "L4.all",
+      "worst_group_flip": 0.125
+    },
+    {
+      "V_final_mean": 0.0005576306834673817,
+      "flip_spread": 0.125,
+      "granularity": "component",
+      "harmful_flip_rate": 0.008264462809917356,
+      "layer": 4,
+      "ppl_utility": 23.26652913577298,
+      "prior_regret": null,
+      "prior_rho": 0.9502,
+      "site": "L4.attn.c_attn",
+      "worst_group_flip": 0.125
+    },
+    {
+      "V_final_mean": 7.60045339854823e-05,
+      "flip_spread": 0.125,
+      "granularity": "component",
+      "harmful_flip_rate": 0.0006887052341597796,
+      "layer": 4,
+      "ppl_utility": 23.263780673991963,
+      "prior_regret": null,
+      "prior_rho": 0.9502,
+      "site": "L4.attn.c_proj",
+      "worst_group_flip": 0.125
+    },
+    {
+      "V_final_mean": 0.0004552960295151116,
+      "flip_spread": 0.08333333333333333,
+      "granularity": "component",
+      "harmful_flip_rate": 0.006887052341597796,
+      "layer": 4,
+      "ppl_utility": 23.34888642884967,
+      "prior_regret": null,
+      "prior_rho": 0.9502,
+      "site": "L4.mlp.c_fc",
+      "worst_group_flip": 0.08333333333333333
+    },
+    {
+      "V_final_mean": 0.00016455822807166367,
+      "flip_spread": 0.125,
+      "granularity": "component",
+      "harmful_flip_rate": 0.008953168044077135,
+      "layer": 4,
+      "ppl_utility": 23.233895836318503,
+      "prior_regret": null,
+      "prior_rho": 0.9502,
+      "site": "L4.mlp.c_proj",
+      "worst_group_flip": 0.125
+    },
+    {
+      "V_final_mean": 0.0015910921752914239,
+      "flip_spread": 0.375,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.01997245179063361,
+      "layer": 5,
+      "ppl_utility": 23.618911923185784,
+      "prior_regret": null,
+      "prior_rho": 0.9418,
+      "site": "L5.all",
+      "worst_group_flip": 0.375
+    },
+    {
+      "V_final_mean": 0.0008236275152239197,
+      "flip_spread": 0.125,
+      "granularity": "component",
+      "harmful_flip_rate": 0.01997245179063361,
+      "layer": 5,
+      "ppl_utility": 23.385494594936006,
+      "prior_regret": null,
+      "prior_rho": 0.9418,
+      "site": "L5.attn.c_attn",
+      "worst_group_flip": 0.125
+    },
+    {
+      "V_final_mean": 0.00020169207342705955,
+      "flip_spread": 0.08333333333333333,
+      "granularity": "component",
+      "harmful_flip_rate": 0.0048209366391184574,
+      "layer": 5,
+      "ppl_utility": 23.276335829876388,
+      "prior_regret": null,
+      "prior_rho": 0.9418,
+      "site": "L5.attn.c_proj",
+      "worst_group_flip": 0.08333333333333333
+    },
+    {
+      "V_final_mean": 0.00048622754060688916,
+      "flip_spread": 0.16666666666666666,
+      "granularity": "component",
+      "harmful_flip_rate": 0.009641873278236915,
+      "layer": 5,
+      "ppl_utility": 23.39468767315306,
+      "prior_regret": null,
+      "prior_rho": 0.9418,
+      "site": "L5.mlp.c_fc",
+      "worst_group_flip": 0.16666666666666666
+    },
+    {
+      "V_final_mean": 0.000155789089691398,
+      "flip_spread": 0.125,
+      "granularity": "component",
+      "harmful_flip_rate": 0.005509641873278237,
+      "layer": 5,
+      "ppl_utility": 23.28156683161992,
+      "prior_regret": null,
+      "prior_rho": 0.9418,
+      "site": "L5.mlp.c_proj",
+      "worst_group_flip": 0.125
+    },
+    {
+      "V_final_mean": 0.0013648937611174215,
+      "flip_spread": 0.021739130434782608,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.01997245179063361,
+      "layer": 6,
+      "ppl_utility": 23.542926101667597,
+      "prior_regret": null,
+      "prior_rho": 0.9216,
+      "site": "L6.all",
+      "worst_group_flip": 0.021739130434782608
+    },
+    {
+      "V_final_mean": 0.000472831992254114,
+      "flip_spread": 0.125,
+      "granularity": "component",
+      "harmful_flip_rate": 0.015151515151515152,
+      "layer": 6,
+      "ppl_utility": 23.334748234498917,
+      "prior_regret": null,
+      "prior_rho": 0.9216,
+      "site": "L6.attn.c_attn",
+      "worst_group_flip": 0.125
+    },
+    {
+      "V_final_mean": 6.279831866593818e-05,
+      "flip_spread": 0.08333333333333333,
+      "granularity": "component",
+      "harmful_flip_rate": 0.002066115702479339,
+      "layer": 6,
+      "ppl_utility": 23.27986836160406,
+      "prior_regret": null,
+      "prior_rho": 0.9216,
+      "site": "L6.attn.c_proj",
+      "worst_group_flip": 0.08333333333333333
+    },
+    {
+      "V_final_mean": 0.00041856484005971034,
+      "flip_spread": 0.16666666666666666,
+      "granularity": "component",
+      "harmful_flip_rate": 0.013774104683195593,
+      "layer": 6,
+      "ppl_utility": 23.413252136718658,
+      "prior_regret": null,
+      "prior_rho": 0.9216,
+      "site": "L6.mlp.c_fc",
+      "worst_group_flip": 0.16666666666666666
+    },
+    {
+      "V_final_mean": 0.0002597867709599487,
+      "flip_spread": 0.021739130434782608,
+      "granularity": "component",
+      "harmful_flip_rate": 0.007575757575757576,
+      "layer": 6,
+      "ppl_utility": 23.23035643417414,
+      "prior_regret": null,
+      "prior_rho": 0.9216,
+      "site": "L6.mlp.c_proj",
+      "worst_group_flip": 0.021739130434782608
+    },
+    {
+      "V_final_mean": 0.0009077337432712521,
+      "flip_spread": 0.16666666666666666,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.012396694214876033,
+      "layer": 7,
+      "ppl_utility": 23.504188524790667,
+      "prior_regret": null,
+      "prior_rho": 0.8944,
+      "site": "L7.all",
+      "worst_group_flip": 0.16666666666666666
+    },
+    {
+      "V_final_mean": 0.0014982443407536782,
+      "flip_spread": 0.125,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.008264462809917356,
+      "layer": 8,
+      "ppl_utility": 23.556729881856178,
+      "prior_regret": null,
+      "prior_rho": 0.928,
+      "site": "L8.all",
+      "worst_group_flip": 0.125
+    },
+    {
+      "V_final_mean": 0.00035496180358560707,
+      "flip_spread": 0.25,
+      "granularity": "component",
+      "harmful_flip_rate": 0.0048209366391184574,
+      "layer": 8,
+      "ppl_utility": 23.414714706826715,
+      "prior_regret": null,
+      "prior_rho": 0.928,
+      "site": "L8.attn.c_attn",
+      "worst_group_flip": 0.25
+    },
+    {
+      "V_final_mean": 0.0001018609038694044,
+      "flip_spread": 0.0,
+      "granularity": "component",
+      "harmful_flip_rate": 0.004132231404958678,
+      "layer": 8,
+      "ppl_utility": 23.272659569239604,
+      "prior_regret": null,
+      "prior_rho": 0.928,
+      "site": "L8.attn.c_proj",
+      "worst_group_flip": 0.0
+    },
+    {
+      "V_final_mean": 0.0004056528119323348,
+      "flip_spread": 0.25,
+      "granularity": "component",
+      "harmful_flip_rate": 0.006887052341597796,
+      "layer": 8,
+      "ppl_utility": 23.30613634061664,
+      "prior_regret": null,
+      "prior_rho": 0.928,
+      "site": "L8.mlp.c_fc",
+      "worst_group_flip": 0.25
+    },
+    {
+      "V_final_mean": 0.0002485501061678531,
+      "flip_spread": 0.08333333333333333,
+      "granularity": "component",
+      "harmful_flip_rate": 0.0048209366391184574,
+      "layer": 8,
+      "ppl_utility": 23.270234942307084,
+      "prior_regret": null,
+      "prior_rho": 0.928,
+      "site": "L8.mlp.c_proj",
+      "worst_group_flip": 0.08333333333333333
+    },
+    {
+      "V_final_mean": 0.001010374593283605,
+      "flip_spread": 0.08333333333333333,
+      "granularity": "layer",
+      "harmful_flip_rate": 0.014462809917355372,
+      "layer": 9,
+      "ppl_utility": 23.443733777542146,
+      "prior_regret": null,
+      "prior_rho": 0.9011,
+      "site": "L9.all",
+      "worst_group_flip": 0.08333333333333333
+    }
+  ]
+}

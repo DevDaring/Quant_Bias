@@ -164,3 +164,6 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-10_20:17:50] <<< full/e2/M4 ok in 6548s
 [2026-09-10_20:17:55] >>> full/e2/M5
 [2026-09-10_22:33:53] <<< full/e2/M5 ok in 8158s
+[2026-09-10_22:33:57] --- Stage D: bridge to living-inference (all models) ---
+[2026-09-10_22:33:57] >>> full/e6/M1
+[2026-09-10_22:34:04] <<< full/e6/M1 ok in 7s
