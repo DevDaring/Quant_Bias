@@ -1,0 +1,443 @@
+[18:28:44] === E2 model=M4 tag=llama_2_7b device=cuda seed=20260908 profile=budget ===
+[18:28:45] Loading NousResearch/Llama-2-7b-hf@main (8efe6c9b93655b934e27bd9981e3ec13e55aee9d) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:  10%|▉         | 29/291 [00:00<00:01, 225.08it/s]Loading weights:  18%|█▊        | 52/291 [00:00<00:01, 217.85it/s]Loading weights:  25%|██▌       | 74/291 [00:00<00:01, 173.34it/s]Loading weights:  34%|███▍      | 100/291 [00:00<00:01, 184.67it/s]Loading weights:  41%|████      | 119/291 [00:00<00:00, 184.03it/s]Loading weights:  47%|████▋     | 138/291 [00:00<00:00, 183.17it/s]Loading weights:  54%|█████▍    | 157/291 [00:00<00:00, 185.00it/s]Loading weights:  60%|██████    | 176/291 [00:00<00:00, 184.83it/s]Loading weights:  67%|██████▋   | 195/291 [00:01<00:00, 156.35it/s]Loading weights:  73%|███████▎  | 213/291 [00:01<00:00, 152.85it/s]Loading weights:  81%|████████  | 235/291 [00:01<00:00, 166.54it/s]Loading weights:  87%|████████▋ | 253/291 [00:01<00:00, 168.74it/s]Loading weights:  93%|█████████▎| 271/291 [00:01<00:00, 148.53it/s]Loading weights: 100%|██████████| 291/291 [00:01<00:00, 171.31it/s]
+[18:28:49]   attention: flash_attention_2
+[18:28:49]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   6%|▌         | 18/291 [00:00<00:01, 155.85it/s]Loading weights:  13%|█▎        | 37/291 [00:00<00:01, 150.46it/s]Loading weights:  19%|█▉        | 56/291 [00:00<00:01, 162.60it/s]Loading weights:  26%|██▌       | 76/291 [00:00<00:01, 173.47it/s]Loading weights:  32%|███▏      | 94/291 [00:00<00:01, 109.29it/s]Loading weights:  37%|███▋      | 108/291 [00:01<00:03, 47.96it/s]Loading weights:  41%|████      | 119/291 [00:01<00:03, 54.92it/s]Loading weights:  44%|████▍     | 129/291 [00:01<00:02, 60.98it/s]Loading weights:  48%|████▊     | 139/291 [00:01<00:02, 65.68it/s]Loading weights:  51%|█████     | 149/291 [00:01<00:02, 67.55it/s]Loading weights:  54%|█████▍    | 158/291 [00:02<00:01, 70.10it/s]Loading weights:  57%|█████▋    | 167/291 [00:02<00:01, 72.40it/s]Loading weights:  60%|██████    | 176/291 [00:02<00:01, 74.18it/s]Loading weights:  64%|██████▎   | 185/291 [00:02<00:01, 74.64it/s]Loading weights:  67%|██████▋   | 194/291 [00:02<00:01, 66.50it/s]Loading weights:  70%|██████▉   | 203/291 [00:02<00:01, 70.04it/s]Loading weights:  73%|███████▎  | 213/291 [00:02<00:01, 76.43it/s]Loading weights:  76%|███████▋  | 222/291 [00:02<00:00, 70.61it/s]Loading weights:  79%|███████▉  | 230/291 [00:03<00:00, 72.04it/s]Loading weights:  84%|████████▍ | 245/291 [00:03<00:00, 83.47it/s]Loading weights:  88%|████████▊ | 256/291 [00:03<00:00, 89.59it/s]Loading weights:  91%|█████████▏| 266/291 [00:03<00:00, 90.78it/s]Loading weights:  95%|█████████▍| 276/291 [00:03<00:00, 83.36it/s]Loading weights:  99%|█████████▊| 287/291 [00:03<00:00, 89.06it/s]Loading weights: 100%|██████████| 291/291 [00:03<00:00, 80.29it/s]
+[18:29:05] BBQ: 7868 examples, 343 template clusters
+[18:29:12] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[18:29:13] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[18:29:13] counterfactual pairs: 3627
+[18:29:13] counterfactual pairs: 5326
+[18:29:13] E2: 1419 selection examples, 1452 final examples
+[18:30:00]   scored 504/3425 candidate sequences
+[18:30:01]   scored 1000/3425 candidate sequences
+[18:30:03]   scored 1504/3425 candidate sequences
+[18:30:04]   scored 2000/3425 candidate sequences
+[18:30:06]   scored 2504/3425 candidate sequences
+[18:30:09]   scored 3000/3425 candidate sequences
+[18:30:13] E2 stage 1: 32 sites at layer granularity
+[18:30:59]   scored 504/3425 candidate sequences
+[18:31:00]   scored 1000/3425 candidate sequences
+[18:31:02]   scored 1504/3425 candidate sequences
+[18:31:03]   scored 2000/3425 candidate sequences
+[18:31:05]   scored 2504/3425 candidate sequences
+[18:31:08]   scored 3000/3425 candidate sequences
+[18:31:58]   L0.all: ppl=5.09 worst-group flip=0.250 viol=0 (106s)
+[18:32:46]   scored 504/3425 candidate sequences
+[18:32:47]   scored 1000/3425 candidate sequences
+[18:32:48]   scored 1504/3425 candidate sequences
+[18:32:50]   scored 2000/3425 candidate sequences
+[18:32:52]   scored 2504/3425 candidate sequences
+[18:32:54]   scored 3000/3425 candidate sequences
+[18:33:45]   L1.all: ppl=5.19 worst-group flip=0.250 viol=0 (106s)
+[18:34:33]   scored 504/3425 candidate sequences
+[18:34:34]   scored 1000/3425 candidate sequences
+[18:34:35]   scored 1504/3425 candidate sequences
+[18:34:37]   scored 2000/3425 candidate sequences
+[18:34:39]   scored 2504/3425 candidate sequences
+[18:34:41]   scored 3000/3425 candidate sequences
+[18:35:31]   L2.all: ppl=5.08 worst-group flip=0.250 viol=0 (106s)
+[18:36:18]   scored 504/3425 candidate sequences
+[18:36:19]   scored 1000/3425 candidate sequences
+[18:36:21]   scored 1504/3425 candidate sequences
+[18:36:22]   scored 2000/3425 candidate sequences
+[18:36:24]   scored 2504/3425 candidate sequences
+[18:36:27]   scored 3000/3425 candidate sequences
+[18:37:17]   L3.all: ppl=5.08 worst-group flip=0.250 viol=1 (106s)
+[18:38:05]   scored 504/3425 candidate sequences
+[18:38:06]   scored 1000/3425 candidate sequences
+[18:38:07]   scored 1504/3425 candidate sequences
+[18:38:09]   scored 2000/3425 candidate sequences
+[18:38:11]   scored 2504/3425 candidate sequences
+[18:38:13]   scored 3000/3425 candidate sequences
+[18:39:05]   L4.all: ppl=5.08 worst-group flip=0.250 viol=0 (109s)
+[18:39:53]   scored 504/3425 candidate sequences
+[18:39:54]   scored 1000/3425 candidate sequences
+[18:39:55]   scored 1504/3425 candidate sequences
+[18:39:57]   scored 2000/3425 candidate sequences
+[18:39:59]   scored 2504/3425 candidate sequences
+[18:40:01]   scored 3000/3425 candidate sequences
+[18:40:51]   L5.all: ppl=5.09 worst-group flip=0.250 viol=0 (106s)
+[18:41:39]   scored 504/3425 candidate sequences
+[18:41:40]   scored 1000/3425 candidate sequences
+[18:41:41]   scored 1504/3425 candidate sequences
+[18:41:43]   scored 2000/3425 candidate sequences
+[18:41:45]   scored 2504/3425 candidate sequences
+[18:41:47]   scored 3000/3425 candidate sequences
+[18:42:37]   L6.all: ppl=5.06 worst-group flip=0.083 viol=0 (106s)
+[18:43:24]   scored 504/3425 candidate sequences
+[18:43:26]   scored 1000/3425 candidate sequences
+[18:43:27]   scored 1504/3425 candidate sequences
+[18:43:29]   scored 2000/3425 candidate sequences
+[18:43:30]   scored 2504/3425 candidate sequences
+[18:43:33]   scored 3000/3425 candidate sequences
+[18:44:25]   L7.all: ppl=5.09 worst-group flip=0.125 viol=0 (107s)
+[18:45:12]   scored 504/3425 candidate sequences
+[18:45:14]   scored 1000/3425 candidate sequences
+[18:45:15]   scored 1504/3425 candidate sequences
+[18:45:17]   scored 2000/3425 candidate sequences
+[18:45:18]   scored 2504/3425 candidate sequences
+[18:45:21]   scored 3000/3425 candidate sequences
+[18:46:11]   L8.all: ppl=5.09 worst-group flip=0.250 viol=1 (106s)
+[18:46:58]   scored 504/3425 candidate sequences
+[18:47:00]   scored 1000/3425 candidate sequences
+[18:47:01]   scored 1504/3425 candidate sequences
+[18:47:03]   scored 2000/3425 candidate sequences
+[18:47:04]   scored 2504/3425 candidate sequences
+[18:47:07]   scored 3000/3425 candidate sequences
+[18:47:58]   L9.all: ppl=5.09 worst-group flip=0.125 viol=0 (107s)
+[18:48:45]   scored 504/3425 candidate sequences
+[18:48:46]   scored 1000/3425 candidate sequences
+[18:48:47]   scored 1504/3425 candidate sequences
+[18:48:49]   scored 2000/3425 candidate sequences
+[18:48:51]   scored 2504/3425 candidate sequences
+[18:48:53]   scored 3000/3425 candidate sequences
+[18:49:44]   L10.all: ppl=5.10 worst-group flip=0.100 viol=0 (106s)
+[18:50:32]   scored 504/3425 candidate sequences
+[18:50:33]   scored 1000/3425 candidate sequences
+[18:50:34]   scored 1504/3425 candidate sequences
+[18:50:36]   scored 2000/3425 candidate sequences
+[18:50:38]   scored 2504/3425 candidate sequences
+[18:50:40]   scored 3000/3425 candidate sequences
+[18:51:31]   L11.all: ppl=5.07 worst-group flip=0.000 viol=0 (107s)
+[18:52:18]   scored 504/3425 candidate sequences
+[18:52:19]   scored 1000/3425 candidate sequences
+[18:52:20]   scored 1504/3425 candidate sequences
+[18:52:22]   scored 2000/3425 candidate sequences
+[18:52:24]   scored 2504/3425 candidate sequences
+[18:52:26]   scored 3000/3425 candidate sequences
+[18:53:18]   L12.all: ppl=5.08 worst-group flip=0.043 viol=0 (106s)
+[18:54:04]   scored 504/3425 candidate sequences
+[18:54:05]   scored 1000/3425 candidate sequences
+[18:54:07]   scored 1504/3425 candidate sequences
+[18:54:08]   scored 2000/3425 candidate sequences
+[18:54:10]   scored 2504/3425 candidate sequences
+[18:54:13]   scored 3000/3425 candidate sequences
+[18:55:03]   L13.all: ppl=5.09 worst-group flip=0.250 viol=1 (105s)
+[18:55:51]   scored 504/3425 candidate sequences
+[18:55:52]   scored 1000/3425 candidate sequences
+[18:55:54]   scored 1504/3425 candidate sequences
+[18:55:55]   scored 2000/3425 candidate sequences
+[18:55:57]   scored 2504/3425 candidate sequences
+[18:56:00]   scored 3000/3425 candidate sequences
+[18:56:50]   L14.all: ppl=5.09 worst-group flip=0.250 viol=0 (107s)
+[18:57:37]   scored 504/3425 candidate sequences
+[18:57:38]   scored 1000/3425 candidate sequences
+[18:57:39]   scored 1504/3425 candidate sequences
+[18:57:41]   scored 2000/3425 candidate sequences
+[18:57:43]   scored 2504/3425 candidate sequences
+[18:57:45]   scored 3000/3425 candidate sequences
+[18:58:37]   L15.all: ppl=5.09 worst-group flip=0.125 viol=1 (106s)
+[18:59:24]   scored 504/3425 candidate sequences
+[18:59:25]   scored 1000/3425 candidate sequences
+[18:59:27]   scored 1504/3425 candidate sequences
+[18:59:29]   scored 2000/3425 candidate sequences
+[18:59:30]   scored 2504/3425 candidate sequences
+[18:59:33]   scored 3000/3425 candidate sequences
+[19:00:23]   L16.all: ppl=5.08 worst-group flip=0.250 viol=1 (107s)
+[19:01:11]   scored 504/3425 candidate sequences
+[19:01:12]   scored 1000/3425 candidate sequences
+[19:01:14]   scored 1504/3425 candidate sequences
+[19:01:15]   scored 2000/3425 candidate sequences
+[19:01:17]   scored 2504/3425 candidate sequences
+[19:01:20]   scored 3000/3425 candidate sequences
+[19:02:10]   L17.all: ppl=5.09 worst-group flip=0.250 viol=0 (107s)
+[19:02:57]   scored 504/3425 candidate sequences
+[19:02:58]   scored 1000/3425 candidate sequences
+[19:03:00]   scored 1504/3425 candidate sequences
+[19:03:01]   scored 2000/3425 candidate sequences
+[19:03:03]   scored 2504/3425 candidate sequences
+[19:03:05]   scored 3000/3425 candidate sequences
+[19:03:56]   L18.all: ppl=5.09 worst-group flip=0.125 viol=0 (106s)
+[19:04:44]   scored 504/3425 candidate sequences
+[19:04:45]   scored 1000/3425 candidate sequences
+[19:04:46]   scored 1504/3425 candidate sequences
+[19:04:48]   scored 2000/3425 candidate sequences
+[19:04:50]   scored 2504/3425 candidate sequences
+[19:04:52]   scored 3000/3425 candidate sequences
+[19:05:43]   L19.all: ppl=5.08 worst-group flip=0.250 viol=0 (106s)
+[19:06:30]   scored 504/3425 candidate sequences
+[19:06:31]   scored 1000/3425 candidate sequences
+[19:06:32]   scored 1504/3425 candidate sequences
+[19:06:34]   scored 2000/3425 candidate sequences
+[19:06:36]   scored 2504/3425 candidate sequences
+[19:06:38]   scored 3000/3425 candidate sequences
+[19:07:30]   L20.all: ppl=5.09 worst-group flip=0.011 viol=0 (107s)
+[19:08:16]   scored 504/3425 candidate sequences
+[19:08:17]   scored 1000/3425 candidate sequences
+[19:08:19]   scored 1504/3425 candidate sequences
+[19:08:21]   scored 2000/3425 candidate sequences
+[19:08:22]   scored 2504/3425 candidate sequences
+[19:08:25]   scored 3000/3425 candidate sequences
+[19:09:16]   L21.all: ppl=5.09 worst-group flip=0.100 viol=0 (106s)
+[19:10:06]   scored 504/3425 candidate sequences
+[19:10:07]   scored 1000/3425 candidate sequences
+[19:10:08]   scored 1504/3425 candidate sequences
+[19:10:10]   scored 2000/3425 candidate sequences
+[19:10:12]   scored 2504/3425 candidate sequences
+[19:10:14]   scored 3000/3425 candidate sequences
+[19:11:07]   L22.all: ppl=5.08 worst-group flip=0.022 viol=0 (110s)
+[19:11:55]   scored 504/3425 candidate sequences
+[19:11:56]   scored 1000/3425 candidate sequences
+[19:11:58]   scored 1504/3425 candidate sequences
+[19:12:00]   scored 2000/3425 candidate sequences
+[19:12:01]   scored 2504/3425 candidate sequences
+[19:12:04]   scored 3000/3425 candidate sequences
+[19:12:57]   L23.all: ppl=5.08 worst-group flip=0.022 viol=0 (110s)
+[19:13:45]   scored 504/3425 candidate sequences
+[19:13:46]   scored 1000/3425 candidate sequences
+[19:13:47]   scored 1504/3425 candidate sequences
+[19:13:49]   scored 2000/3425 candidate sequences
+[19:13:51]   scored 2504/3425 candidate sequences
+[19:13:53]   scored 3000/3425 candidate sequences
+[19:14:45]   L24.all: ppl=5.08 worst-group flip=0.022 viol=0 (108s)
+[19:15:35]   scored 504/3425 candidate sequences
+[19:15:36]   scored 1000/3425 candidate sequences
+[19:15:37]   scored 1504/3425 candidate sequences
+[19:15:39]   scored 2000/3425 candidate sequences
+[19:15:41]   scored 2504/3425 candidate sequences
+[19:15:43]   scored 3000/3425 candidate sequences
+[19:16:36]   L25.all: ppl=5.08 worst-group flip=0.125 viol=0 (110s)
+[19:17:24]   scored 504/3425 candidate sequences
+[19:17:25]   scored 1000/3425 candidate sequences
+[19:17:26]   scored 1504/3425 candidate sequences
+[19:17:28]   scored 2000/3425 candidate sequences
+[19:17:30]   scored 2504/3425 candidate sequences
+[19:17:32]   scored 3000/3425 candidate sequences
+[19:18:23]   L26.all: ppl=5.09 worst-group flip=0.125 viol=0 (107s)
+[19:19:11]   scored 504/3425 candidate sequences
+[19:19:13]   scored 1000/3425 candidate sequences
+[19:19:14]   scored 1504/3425 candidate sequences
+[19:19:16]   scored 2000/3425 candidate sequences
+[19:19:18]   scored 2504/3425 candidate sequences
+[19:19:20]   scored 3000/3425 candidate sequences
+[19:20:10]   L27.all: ppl=5.09 worst-group flip=0.125 viol=0 (107s)
+[19:20:59]   scored 504/3425 candidate sequences
+[19:21:00]   scored 1000/3425 candidate sequences
+[19:21:02]   scored 1504/3425 candidate sequences
+[19:21:03]   scored 2000/3425 candidate sequences
+[19:21:05]   scored 2504/3425 candidate sequences
+[19:21:08]   scored 3000/3425 candidate sequences
+[19:21:58]   L28.all: ppl=5.09 worst-group flip=0.250 viol=1 (107s)
+[19:22:48]   scored 504/3425 candidate sequences
+[19:22:49]   scored 1000/3425 candidate sequences
+[19:22:50]   scored 1504/3425 candidate sequences
+[19:22:52]   scored 2000/3425 candidate sequences
+[19:22:54]   scored 2504/3425 candidate sequences
+[19:22:56]   scored 3000/3425 candidate sequences
+[19:23:48]   L29.all: ppl=5.09 worst-group flip=0.083 viol=0 (110s)
+[19:24:34]   scored 504/3425 candidate sequences
+[19:24:36]   scored 1000/3425 candidate sequences
+[19:24:37]   scored 1504/3425 candidate sequences
+[19:24:39]   scored 2000/3425 candidate sequences
+[19:24:41]   scored 2504/3425 candidate sequences
+[19:24:43]   scored 3000/3425 candidate sequences
+[19:25:33]   L30.all: ppl=5.12 worst-group flip=0.125 viol=0 (105s)
+[19:26:23]   scored 504/3425 candidate sequences
+[19:26:24]   scored 1000/3425 candidate sequences
+[19:26:26]   scored 1504/3425 candidate sequences
+[19:26:27]   scored 2000/3425 candidate sequences
+[19:26:29]   scored 2504/3425 candidate sequences
+[19:26:31]   scored 3000/3425 candidate sequences
+[19:27:24]   L31.all: ppl=5.09 worst-group flip=0.250 viol=1 (110s)
+[19:27:25] E2 stage 2: per-component pass over layers [1, 31, 30, 0]
+[19:28:13]   scored 504/3425 candidate sequences
+[19:28:14]   scored 1000/3425 candidate sequences
+[19:28:15]   scored 1504/3425 candidate sequences
+[19:28:17]   scored 2000/3425 candidate sequences
+[19:28:19]   scored 2504/3425 candidate sequences
+[19:28:21]   scored 3000/3425 candidate sequences
+[19:29:12]   L1.self_attn.q_proj: ppl=5.08 worst-group flip=0.125 viol=0 (107s)
+[19:30:00]   scored 504/3425 candidate sequences
+[19:30:01]   scored 1000/3425 candidate sequences
+[19:30:03]   scored 1504/3425 candidate sequences
+[19:30:04]   scored 2000/3425 candidate sequences
+[19:30:06]   scored 2504/3425 candidate sequences
+[19:30:09]   scored 3000/3425 candidate sequences
+[19:30:59]   L1.self_attn.k_proj: ppl=5.08 worst-group flip=0.250 viol=0 (107s)
+[19:31:45]   scored 504/3425 candidate sequences
+[19:31:46]   scored 1000/3425 candidate sequences
+[19:31:47]   scored 1504/3425 candidate sequences
+[19:31:49]   scored 2000/3425 candidate sequences
+[19:31:51]   scored 2504/3425 candidate sequences
+[19:31:53]   scored 3000/3425 candidate sequences
+[19:32:44]   L1.self_attn.v_proj: ppl=5.10 worst-group flip=0.250 viol=0 (105s)
+[19:33:33]   scored 504/3425 candidate sequences
+[19:33:35]   scored 1000/3425 candidate sequences
+[19:33:36]   scored 1504/3425 candidate sequences
+[19:33:38]   scored 2000/3425 candidate sequences
+[19:33:40]   scored 2504/3425 candidate sequences
+[19:33:42]   scored 3000/3425 candidate sequences
+[19:34:32]   L1.self_attn.o_proj: ppl=5.08 worst-group flip=0.125 viol=0 (107s)
+[19:35:18]   scored 504/3425 candidate sequences
+[19:35:19]   scored 1000/3425 candidate sequences
+[19:35:20]   scored 1504/3425 candidate sequences
+[19:35:22]   scored 2000/3425 candidate sequences
+[19:35:24]   scored 2504/3425 candidate sequences
+[19:35:26]   scored 3000/3425 candidate sequences
+[19:36:15]   L1.mlp.gate_proj: ppl=5.08 worst-group flip=0.250 viol=1 (103s)
+[19:37:03]   scored 504/3425 candidate sequences
+[19:37:05]   scored 1000/3425 candidate sequences
+[19:37:06]   scored 1504/3425 candidate sequences
+[19:37:08]   scored 2000/3425 candidate sequences
+[19:37:10]   scored 2504/3425 candidate sequences
+[19:37:12]   scored 3000/3425 candidate sequences
+[19:38:03]   L1.mlp.up_proj: ppl=5.08 worst-group flip=0.250 viol=1 (107s)
+[19:38:49]   scored 504/3425 candidate sequences
+[19:38:50]   scored 1000/3425 candidate sequences
+[19:38:52]   scored 1504/3425 candidate sequences
+[19:38:53]   scored 2000/3425 candidate sequences
+[19:38:55]   scored 2504/3425 candidate sequences
+[19:38:58]   scored 3000/3425 candidate sequences
+[19:39:48]   L1.mlp.down_proj: ppl=5.19 worst-group flip=0.250 viol=0 (105s)
+[19:40:35]   scored 504/3425 candidate sequences
+[19:40:36]   scored 1000/3425 candidate sequences
+[19:40:38]   scored 1504/3425 candidate sequences
+[19:40:40]   scored 2000/3425 candidate sequences
+[19:40:41]   scored 2504/3425 candidate sequences
+[19:40:44]   scored 3000/3425 candidate sequences
+[19:41:34]   L31.self_attn.q_proj: ppl=5.08 worst-group flip=0.000 viol=0 (106s)
+[19:42:22]   scored 504/3425 candidate sequences
+[19:42:23]   scored 1000/3425 candidate sequences
+[19:42:24]   scored 1504/3425 candidate sequences
+[19:42:26]   scored 2000/3425 candidate sequences
+[19:42:28]   scored 2504/3425 candidate sequences
+[19:42:30]   scored 3000/3425 candidate sequences
+[19:43:23]   L31.self_attn.k_proj: ppl=5.08 worst-group flip=0.011 viol=0 (108s)
+[19:44:11]   scored 504/3425 candidate sequences
+[19:44:12]   scored 1000/3425 candidate sequences
+[19:44:14]   scored 1504/3425 candidate sequences
+[19:44:15]   scored 2000/3425 candidate sequences
+[19:44:17]   scored 2504/3425 candidate sequences
+[19:44:20]   scored 3000/3425 candidate sequences
+[19:45:13]   L31.self_attn.v_proj: ppl=5.08 worst-group flip=0.011 viol=0 (110s)
+[19:46:01]   scored 504/3425 candidate sequences
+[19:46:02]   scored 1000/3425 candidate sequences
+[19:46:04]   scored 1504/3425 candidate sequences
+[19:46:06]   scored 2000/3425 candidate sequences
+[19:46:07]   scored 2504/3425 candidate sequences
+[19:46:10]   scored 3000/3425 candidate sequences
+[19:47:02]   L31.self_attn.o_proj: ppl=5.08 worst-group flip=0.022 viol=0 (109s)
+[19:47:51]   scored 504/3425 candidate sequences
+[19:47:52]   scored 1000/3425 candidate sequences
+[19:47:54]   scored 1504/3425 candidate sequences
+[19:47:56]   scored 2000/3425 candidate sequences
+[19:47:57]   scored 2504/3425 candidate sequences
+[19:48:00]   scored 3000/3425 candidate sequences
+[19:48:52]   L31.mlp.gate_proj: ppl=5.08 worst-group flip=0.125 viol=0 (110s)
+[19:49:41]   scored 504/3425 candidate sequences
+[19:49:42]   scored 1000/3425 candidate sequences
+[19:49:44]   scored 1504/3425 candidate sequences
+[19:49:45]   scored 2000/3425 candidate sequences
+[19:49:47]   scored 2504/3425 candidate sequences
+[19:49:50]   scored 3000/3425 candidate sequences
+[19:50:40]   L31.mlp.up_proj: ppl=5.09 worst-group flip=0.125 viol=0 (108s)
+[19:51:29]   scored 504/3425 candidate sequences
+[19:51:30]   scored 1000/3425 candidate sequences
+[19:51:32]   scored 1504/3425 candidate sequences
+[19:51:34]   scored 2000/3425 candidate sequences
+[19:51:35]   scored 2504/3425 candidate sequences
+[19:51:38]   scored 3000/3425 candidate sequences
+[19:52:31]   L31.mlp.down_proj: ppl=5.08 worst-group flip=0.250 viol=0 (111s)
+[19:53:20]   scored 504/3425 candidate sequences
+[19:53:21]   scored 1000/3425 candidate sequences
+[19:53:22]   scored 1504/3425 candidate sequences
+[19:53:24]   scored 2000/3425 candidate sequences
+[19:53:26]   scored 2504/3425 candidate sequences
+[19:53:28]   scored 3000/3425 candidate sequences
+[19:54:20]   L30.self_attn.q_proj: ppl=5.08 worst-group flip=0.011 viol=0 (108s)
+[19:55:09]   scored 504/3425 candidate sequences
+[19:55:10]   scored 1000/3425 candidate sequences
+[19:55:12]   scored 1504/3425 candidate sequences
+[19:55:13]   scored 2000/3425 candidate sequences
+[19:55:15]   scored 2504/3425 candidate sequences
+[19:55:18]   scored 3000/3425 candidate sequences
+[19:56:08]   L30.self_attn.k_proj: ppl=5.08 worst-group flip=0.000 viol=0 (107s)
+[19:56:57]   scored 504/3425 candidate sequences
+[19:56:58]   scored 1000/3425 candidate sequences
+[19:56:59]   scored 1504/3425 candidate sequences
+[19:57:01]   scored 2000/3425 candidate sequences
+[19:57:03]   scored 2504/3425 candidate sequences
+[19:57:05]   scored 3000/3425 candidate sequences
+[19:57:57]   L30.self_attn.v_proj: ppl=5.08 worst-group flip=0.000 viol=0 (109s)
+[19:58:45]   scored 504/3425 candidate sequences
+[19:58:46]   scored 1000/3425 candidate sequences
+[19:58:48]   scored 1504/3425 candidate sequences
+[19:58:49]   scored 2000/3425 candidate sequences
+[19:58:51]   scored 2504/3425 candidate sequences
+[19:58:54]   scored 3000/3425 candidate sequences
+[19:59:46]   L30.self_attn.o_proj: ppl=5.08 worst-group flip=0.011 viol=0 (109s)
+[20:00:34]   scored 504/3425 candidate sequences
+[20:00:35]   scored 1000/3425 candidate sequences
+[20:00:36]   scored 1504/3425 candidate sequences
+[20:00:38]   scored 2000/3425 candidate sequences
+[20:00:40]   scored 2504/3425 candidate sequences
+[20:00:42]   scored 3000/3425 candidate sequences
+[20:01:30]   L30.mlp.gate_proj: ppl=5.08 worst-group flip=0.000 viol=0 (103s)
+[20:02:16]   scored 504/3425 candidate sequences
+[20:02:17]   scored 1000/3425 candidate sequences
+[20:02:18]   scored 1504/3425 candidate sequences
+[20:02:20]   scored 2000/3425 candidate sequences
+[20:02:22]   scored 2504/3425 candidate sequences
+[20:02:24]   scored 3000/3425 candidate sequences
+[20:03:14]   L30.mlp.up_proj: ppl=5.08 worst-group flip=0.125 viol=0 (104s)
+[20:04:04]   scored 504/3425 candidate sequences
+[20:04:05]   scored 1000/3425 candidate sequences
+[20:04:06]   scored 1504/3425 candidate sequences
+[20:04:08]   scored 2000/3425 candidate sequences
+[20:04:10]   scored 2504/3425 candidate sequences
+[20:04:12]   scored 3000/3425 candidate sequences
+[20:05:03]   L30.mlp.down_proj: ppl=5.12 worst-group flip=0.125 viol=0 (108s)
+[20:05:51]   scored 504/3425 candidate sequences
+[20:05:52]   scored 1000/3425 candidate sequences
+[20:05:54]   scored 1504/3425 candidate sequences
+[20:05:55]   scored 2000/3425 candidate sequences
+[20:05:57]   scored 2504/3425 candidate sequences
+[20:06:00]   scored 3000/3425 candidate sequences
+[20:06:50]   L0.self_attn.q_proj: ppl=5.08 worst-group flip=0.125 viol=0 (107s)
+[20:07:39]   scored 504/3425 candidate sequences
+[20:07:41]   scored 1000/3425 candidate sequences
+[20:07:42]   scored 1504/3425 candidate sequences
+[20:07:44]   scored 2000/3425 candidate sequences
+[20:07:46]   scored 2504/3425 candidate sequences
+[20:07:48]   scored 3000/3425 candidate sequences
+[20:08:42]   L0.self_attn.k_proj: ppl=5.08 worst-group flip=0.022 viol=0 (111s)
+[20:09:29]   scored 504/3425 candidate sequences
+[20:09:30]   scored 1000/3425 candidate sequences
+[20:09:32]   scored 1504/3425 candidate sequences
+[20:09:33]   scored 2000/3425 candidate sequences
+[20:09:35]   scored 2504/3425 candidate sequences
+[20:09:38]   scored 3000/3425 candidate sequences
+[20:10:30]   L0.self_attn.v_proj: ppl=5.08 worst-group flip=0.250 viol=1 (107s)
+[20:11:18]   scored 504/3425 candidate sequences
+[20:11:19]   scored 1000/3425 candidate sequences
+[20:11:21]   scored 1504/3425 candidate sequences
+[20:11:22]   scored 2000/3425 candidate sequences
+[20:11:24]   scored 2504/3425 candidate sequences
+[20:11:27]   scored 3000/3425 candidate sequences
+[20:12:19]   L0.self_attn.o_proj: ppl=5.08 worst-group flip=0.250 viol=0 (108s)
+[20:13:07]   scored 504/3425 candidate sequences
+[20:13:08]   scored 1000/3425 candidate sequences
+[20:13:10]   scored 1504/3425 candidate sequences
+[20:13:11]   scored 2000/3425 candidate sequences
+[20:13:13]   scored 2504/3425 candidate sequences
+[20:13:16]   scored 3000/3425 candidate sequences
+[20:14:07]   L0.mlp.gate_proj: ppl=5.08 worst-group flip=0.011 viol=0 (108s)
+[20:14:53]   scored 504/3425 candidate sequences
+[20:14:54]   scored 1000/3425 candidate sequences
+[20:14:56]   scored 1504/3425 candidate sequences
+[20:14:57]   scored 2000/3425 candidate sequences
+[20:14:59]   scored 2504/3425 candidate sequences
+[20:15:02]   scored 3000/3425 candidate sequences
+[20:15:54]   L0.mlp.up_proj: ppl=5.08 worst-group flip=0.125 viol=0 (107s)
+[20:16:41]   scored 504/3425 candidate sequences
+[20:16:42]   scored 1000/3425 candidate sequences
+[20:16:44]   scored 1504/3425 candidate sequences
+[20:16:45]   scored 2000/3425 candidate sequences
+[20:16:47]   scored 2504/3425 candidate sequences
+[20:16:50]   scored 3000/3425 candidate sequences
+[20:17:42]   L0.mlp.down_proj: ppl=5.08 worst-group flip=0.125 viol=0 (108s)
+/workspace/Quant_Bias/quant-bias/quantbias/report.py:120: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho = spearmanr(xs[ok], ys[ok]).correlation if ok.sum() > 2 else float("nan")
+[20:17:48] === done in 6544s -> /workspace/Quant_Bias/quant-bias/results/e2/llama_2_7b ===
