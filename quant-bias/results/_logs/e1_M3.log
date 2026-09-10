@@ -1,0 +1,85 @@
+[09:18:44] === E1 model=M3 tag=mistral_7b_v0_1-smoke device=cuda seed=20260908 profile=smoke ===
+[09:18:44] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 12056.88it/s]
+[09:18:47]   attention: flash_attention_2
+[09:18:47]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 11350.82it/s]
+[09:18:50] === E1 dense on final ===
+[09:18:58] BBQ: 22 examples, 11 template clusters
+[09:19:05] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[09:19:06] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[09:19:09] === E1 rtn8 on final ===
+[09:19:26] counterfactual pairs: 46
+[09:19:27] === E1 rtn4 on final ===
+[09:19:33] counterfactual pairs: 46
+[09:19:34] === E1 gptq4 on final ===
+[09:19:41] calibration[generic] seed=20260908: 8x128 tokens, hash=9c6857465cb268a5
+[09:19:47]   GPTQ layer 0: 7 components
+[09:19:51]   GPTQ layer 1: 7 components
+[09:19:56]   GPTQ layer 2: 7 components
+[09:20:00]   GPTQ layer 3: 7 components
+[09:20:05]   GPTQ layer 4: 7 components
+[09:20:09]   GPTQ layer 5: 7 components
+[09:20:13]   GPTQ layer 6: 7 components
+[09:20:18]   GPTQ layer 7: 7 components
+[09:20:22]   GPTQ layer 8: 7 components
+[09:20:27]   GPTQ layer 9: 7 components
+[09:20:31]   GPTQ layer 10: 7 components
+[09:20:36]   GPTQ layer 11: 7 components
+[09:20:40]   GPTQ layer 12: 7 components
+[09:20:45]   GPTQ layer 13: 7 components
+[09:20:49]   GPTQ layer 14: 7 components
+[09:20:53]   GPTQ layer 15: 7 components
+[09:20:58]   GPTQ layer 16: 7 components
+[09:21:02]   GPTQ layer 17: 7 components
+[09:21:07]   GPTQ layer 18: 7 components
+[09:21:11]   GPTQ layer 19: 7 components
+[09:21:16]   GPTQ layer 20: 7 components
+[09:21:20]   GPTQ layer 21: 7 components
+[09:21:25]   GPTQ layer 22: 7 components
+[09:21:29]   GPTQ layer 23: 7 components
+[09:21:33]   GPTQ layer 24: 7 components
+[09:21:38]   GPTQ layer 25: 7 components
+[09:21:42]   GPTQ layer 26: 7 components
+[09:21:47]   GPTQ layer 27: 7 components
+[09:21:51]   GPTQ layer 28: 7 components
+[09:21:56]   GPTQ layer 29: 7 components
+[09:22:00]   GPTQ layer 30: 7 components
+[09:22:04]   GPTQ layer 31: 7 components
+[09:22:05] counterfactual pairs: 46
+[09:22:10] === E1 gptq8 on final ===
+[09:22:16]   GPTQ layer 0: 7 components
+[09:22:20]   GPTQ layer 1: 7 components
+[09:22:25]   GPTQ layer 2: 7 components
+[09:22:29]   GPTQ layer 3: 7 components
+[09:22:34]   GPTQ layer 4: 7 components
+[09:22:38]   GPTQ layer 5: 7 components
+[09:22:43]   GPTQ layer 6: 7 components
+[09:22:47]   GPTQ layer 7: 7 components
+[09:22:54]   GPTQ layer 8: 7 components
+[09:23:05]   GPTQ layer 9: 7 components
+[09:23:14]   GPTQ layer 10: 7 components
+[09:23:22]   GPTQ layer 11: 7 components
+[09:23:31]   GPTQ layer 12: 7 components
+[09:23:39]   GPTQ layer 13: 7 components
+[09:23:46]   GPTQ layer 14: 7 components
+[09:23:54]   GPTQ layer 15: 7 components
+[09:24:02]   GPTQ layer 16: 7 components
+[09:24:10]   GPTQ layer 17: 7 components
+[09:24:21]   GPTQ layer 18: 7 components
+[09:24:30]   GPTQ layer 19: 7 components
+[09:24:35]   GPTQ layer 20: 7 components
+[09:24:40]   GPTQ layer 21: 7 components
+[09:24:45]   GPTQ layer 22: 7 components
+[09:24:49]   GPTQ layer 23: 7 components
+[09:24:54]   GPTQ layer 24: 7 components
+[09:24:58]   GPTQ layer 25: 7 components
+[09:25:03]   GPTQ layer 26: 7 components
+[09:25:07]   GPTQ layer 27: 7 components
+[09:25:13]   GPTQ layer 28: 7 components
+[09:25:19]   GPTQ layer 29: 7 components
+[09:25:25]   GPTQ layer 30: 7 components
+[09:25:29]   GPTQ layer 31: 7 components
+[09:25:30] counterfactual pairs: 46
+[09:25:32] report written: /workspace/Quant_Bias/quant-bias/results/e1/mistral_7b_v0_1-smoke/REPORT.md
+[09:25:32] === done in 408s -> /workspace/Quant_Bias/quant-bias/results/e1/mistral_7b_v0_1-smoke ===

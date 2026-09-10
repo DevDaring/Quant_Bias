@@ -1,0 +1,89 @@
+{
+  "observed": {
+    "L0.all": 0.0,
+    "L1.all": 0.0,
+    "L1.mlp.down_proj": 0.0,
+    "L1.mlp.gate_proj": 0.0,
+    "L1.mlp.up_proj": 0.0,
+    "L1.self_attn.k_proj": 0.0,
+    "L1.self_attn.o_proj": 0.0,
+    "L1.self_attn.q_proj": 0.0,
+    "L1.self_attn.v_proj": 0.0,
+    "L2.all": 0.0,
+    "L3.all": 0.0,
+    "L4.all": 0.0,
+    "L5.all": 0.0
+  },
+  "site_scores": {
+    "L0.all": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.02872820359200645,
+      "propagation_margin": 1.8057807211195656
+    },
+    "L1.all": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.040750881601391065,
+      "propagation_margin": 2.9937002310437206
+    },
+    "L1.mlp.down_proj": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.0,
+      "propagation_margin": 1.6334481430157703
+    },
+    "L1.mlp.gate_proj": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.01858004599143026,
+      "propagation_margin": 0.4847805360501304
+    },
+    "L1.mlp.up_proj": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.01725648615107378,
+      "propagation_margin": 0.5616749231351865
+    },
+    "L1.self_attn.k_proj": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.008398502007977982,
+      "propagation_margin": 0.4618837266277325
+    },
+    "L1.self_attn.o_proj": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.013281641074043726,
+      "propagation_margin": 0.6818801187270472
+    },
+    "L1.self_attn.q_proj": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.0019495418275381482,
+      "propagation_margin": 0.4756178918521937
+    },
+    "L1.self_attn.v_proj": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.04343707492839144,
+      "propagation_margin": 1.7735437510326149
+    },
+    "L2.all": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.028903848469600923,
+      "propagation_margin": 1.018100020557341
+    },
+    "L3.all": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.024014074409770103,
+      "propagation_margin": 1.1820237154853546
+    },
+    "L4.all": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.022611640641101438,
+      "propagation_margin": 1.2894135640031994
+    },
+    "L5.all": {
+      "margin_only": 1.8091872791519434,
+      "ppl_regret": 0.03368328969261736,
+      "propagation_margin": 1.6798381087236114
+    }
+  },
+  "spearman": {
+    "margin_only": NaN,
+    "ppl_regret": NaN,
+    "propagation_margin": NaN
+  }
+}
