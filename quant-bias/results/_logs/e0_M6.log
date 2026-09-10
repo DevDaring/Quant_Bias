@@ -1,37 +1,38 @@
-[08:50:32] === E0 model=M6 tag=gpt2_medium-smoke device=cuda seed=20260908 profile=smoke ===
-[08:50:32] Loading openai-community/gpt2-medium@main (6dcaa7a952f72f9298047fd5137cd6e4f05f41da) dtype=torch.float32 device=cuda
-Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 14284.98it/s]
-[08:51:00]   attention: sdpa
-[08:51:00] adapter: {'model_id': 'openai-community/gpt2-medium', 'revision': '6dcaa7a952f72f9298047fd5137cd6e4f05f41da', 'family': 'gpt2', 'n_layers': 24, 'n_components': 96, 'component_weights': 301989888, 'excluded_weights': 52833280, 'tied_lm_head': True, 'dtype': 'torch.float32', 'components_per_layer': ['attn.c_attn', 'attn.c_proj', 'mlp.c_fc', 'mlp.c_proj'], 'component_kinds': {'attn': 48, 'conv': 0, 'mlp': 48, 'other': 0}, 'layer_types': None}
+[09:53:26] === E0 model=M6 tag=gpt2_medium device=cuda seed=20260908 profile=budget ===
+[09:53:27] Loading openai-community/gpt2-medium@main (6dcaa7a952f72f9298047fd5137cd6e4f05f41da) dtype=torch.float32 device=cuda
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 14169.62it/s]
+[09:53:41]   attention: sdpa
+[09:53:42] adapter: {'model_id': 'openai-community/gpt2-medium', 'revision': '6dcaa7a952f72f9298047fd5137cd6e4f05f41da', 'family': 'gpt2', 'n_layers': 24, 'n_components': 96, 'component_weights': 301989888, 'excluded_weights': 52833280, 'tied_lm_head': True, 'dtype': 'torch.float32', 'components_per_layer': ['attn.c_attn', 'attn.c_proj', 'mlp.c_fc', 'mlp.c_proj'], 'component_kinds': {'attn': 48, 'conv': 0, 'mlp': 48, 'other': 0}, 'layer_types': None}
 [transformers] `loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
-[08:51:14] BBQ: 22 examples, 11 template clusters
-[08:51:21] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[08:51:22] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[08:51:27] calibration[generic] seed=20260908: 8x128 tokens, hash=c370baf51c734559
-[08:51:28]   GPTQ layer 0: 4 components
-[08:51:29]   GPTQ layer 1: 4 components
-[08:51:30]   GPTQ layer 2: 4 components
-[08:51:31]   GPTQ layer 3: 4 components
-[08:51:32]   GPTQ layer 4: 4 components
-[08:51:32]   GPTQ layer 5: 4 components
-[08:51:33]   GPTQ layer 6: 4 components
-[08:51:34]   GPTQ layer 7: 4 components
-[08:51:35]   GPTQ layer 8: 4 components
-[08:51:36]   GPTQ layer 9: 4 components
-[08:51:36]   GPTQ layer 10: 4 components
-[08:51:37]   GPTQ layer 11: 4 components
-[08:51:38]   GPTQ layer 12: 4 components
-[08:51:39]   GPTQ layer 13: 4 components
-[08:51:40]   GPTQ layer 14: 4 components
-[08:51:40]   GPTQ layer 15: 4 components
-[08:51:41]   GPTQ layer 16: 4 components
-[08:51:42]   GPTQ layer 17: 4 components
-[08:51:43]   GPTQ layer 18: 4 components
-[08:51:44]   GPTQ layer 19: 4 components
-[08:51:45]   GPTQ layer 20: 4 components
-[08:51:45]   GPTQ layer 21: 4 components
-[08:51:46]   GPTQ layer 22: 4 components
-[08:51:47]   GPTQ layer 23: 4 components
-[08:51:51] Wanda per-row 50%: achieved 0.5000 over 301989888 weights
-[08:51:55]   scored 3/3 candidate sequences
-[08:51:55] === done in 84s -> /workspace/Quant_Bias/quant-bias/results/e0/gpt2_medium-smoke ===
+[09:53:57] BBQ: 7868 examples, 343 template clusters
+[09:54:04] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[09:54:05] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1111 > 1024). Running this sequence through the model will result in indexing errors
+[09:54:10] calibration[generic] seed=20260908: 128x512 tokens, hash=c33bcfa67386b8e3
+[09:54:12]   GPTQ layer 0: 4 components
+[09:54:13]   GPTQ layer 1: 4 components
+[09:54:14]   GPTQ layer 2: 4 components
+[09:54:15]   GPTQ layer 3: 4 components
+[09:54:16]   GPTQ layer 4: 4 components
+[09:54:17]   GPTQ layer 5: 4 components
+[09:54:18]   GPTQ layer 6: 4 components
+[09:54:18]   GPTQ layer 7: 4 components
+[09:54:19]   GPTQ layer 8: 4 components
+[09:54:20]   GPTQ layer 9: 4 components
+[09:54:21]   GPTQ layer 10: 4 components
+[09:54:22]   GPTQ layer 11: 4 components
+[09:54:23]   GPTQ layer 12: 4 components
+[09:54:24]   GPTQ layer 13: 4 components
+[09:54:25]   GPTQ layer 14: 4 components
+[09:54:26]   GPTQ layer 15: 4 components
+[09:54:27]   GPTQ layer 16: 4 components
+[09:54:28]   GPTQ layer 17: 4 components
+[09:54:29]   GPTQ layer 18: 4 components
+[09:54:30]   GPTQ layer 19: 4 components
+[09:54:31]   GPTQ layer 20: 4 components
+[09:54:32]   GPTQ layer 21: 4 components
+[09:54:33]   GPTQ layer 22: 4 components
+[09:54:34]   GPTQ layer 23: 4 components
+[09:54:40] Wanda per-row 50%: achieved 0.5000 over 301989888 weights
+[09:54:45]   scored 3/3 candidate sequences
+[09:54:45] === done in 79s -> /workspace/Quant_Bias/quant-bias/results/e0/gpt2_medium ===
