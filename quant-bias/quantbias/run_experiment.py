@@ -84,7 +84,7 @@ class Ctx:
             self.adapter = ModelAdapter.from_pretrained(
                 self.mcfg["id"], revision=self.mcfg.get("revision", "main"), dtype=self.mcfg.get("dtype", "auto"),
                 device=self.device, device_map=("auto" if self.device == "cuda" and self.args.device_map else None),
-                attn_implementation=self.args.attn)
+                attn_implementation=(self.mcfg.get("attn") or self.args.attn))
             q = self.cfg["quantization"]
             self.quantizer = Quantizer(self.adapter, group_size=q["group_size"], sym=q["symmetric"],
                                        percdamp=q["percdamp"])

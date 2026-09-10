@@ -129,6 +129,27 @@ class ModelAdapter:
             kw.pop("attn_implementation")
             model = _load(kw)
         log(f"  attention: {getattr(model.config, '_attn_implementation', 'unknown')}")
+        # A kernel can load happily and still fail on the first forward: GPT-2
+        # stores projections as Conv1D, and flash_attention_2's dtype probe
+        # searches for nn.Linear and raises StopIteration. Validate with a real
+        # forward pass and drop to sdpa if the chosen kernel cannot run.
+        if kw.get("attn_implementation") not in (None, "eager", "sdpa"):
+            try:
+                probe = tok("validate attention kernel", return_tensors="pt")
+                dev = next(model.parameters()).device
+                with torch.no_grad():
+                    model(**{k: v.to(dev) for k, v in probe.items()})
+            except Exception as e:
+                log(f"  {kw['attn_implementation']} failed a forward pass "
+                    f"({type(e).__name__}); reloading with sdpa")
+                del model
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+                kw["attn_implementation"] = "sdpa"
+                model = _load(kw)
+                if not device_map:
+                    model.to(device)
+                model.config.use_cache = False
         if not device_map:
             model.to(device)
         model.config.use_cache = False
