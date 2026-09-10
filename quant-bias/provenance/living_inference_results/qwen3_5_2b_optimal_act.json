@@ -1,0 +1,20 @@
+{
+  "model": "Qwen/Qwen3.5-2B",
+  "baseline": 13.54,
+  "uniform_act": {
+    "ppl": 26.09,
+    "deg": 1.93,
+    "sp": 0.5001
+  },
+  "optimal_act": {
+    "ppl": 163.9,
+    "deg": 12.1,
+    "sp": 0.4362
+  },
+  "rule_act": {
+    "ppl": 23.7,
+    "deg": 1.75,
+    "sp": 0.4808
+  },
+  "improvement_pct": -1098.1
+}

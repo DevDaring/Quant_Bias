@@ -1,0 +1,21 @@
+{
+  "baseline": 35.78,
+  "sp50": {
+    "uniform": 277.21,
+    "atp": 196.94,
+    "path1_global_atp": 74.53,
+    "path1_global_uni": 74.48,
+    "path3_nonlinear": 134.03,
+    "path2_recon_atp": 196.94,
+    "combined_global_nl": 78.87
+  },
+  "sp70": {
+    "uniform": 5529.15,
+    "atp": 3849.46,
+    "path1_global_atp": 1310.01,
+    "path1_global_uni": 1887.98,
+    "path3_nonlinear": 1845.03,
+    "path2_recon_atp": 3849.46,
+    "combined_global_nl": 962.74
+  }
+}

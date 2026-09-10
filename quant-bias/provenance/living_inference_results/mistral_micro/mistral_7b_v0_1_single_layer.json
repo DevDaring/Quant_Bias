@@ -1,0 +1,162 @@
+[
+  {
+    "layer": 0,
+    "ppl": 6.76,
+    "regret": 0.61
+  },
+  {
+    "layer": 1,
+    "ppl": 6.75,
+    "regret": 0.6
+  },
+  {
+    "layer": 2,
+    "ppl": 6.24,
+    "regret": 0.09
+  },
+  {
+    "layer": 3,
+    "ppl": 6.24,
+    "regret": 0.09
+  },
+  {
+    "layer": 4,
+    "ppl": 6.22,
+    "regret": 0.07
+  },
+  {
+    "layer": 5,
+    "ppl": 6.18,
+    "regret": 0.03
+  },
+  {
+    "layer": 6,
+    "ppl": 6.2,
+    "regret": 0.05
+  },
+  {
+    "layer": 7,
+    "ppl": 6.22,
+    "regret": 0.07
+  },
+  {
+    "layer": 8,
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  {
+    "layer": 9,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 10,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 11,
+    "ppl": 6.21,
+    "regret": 0.06
+  },
+  {
+    "layer": 12,
+    "ppl": 6.22,
+    "regret": 0.07
+  },
+  {
+    "layer": 13,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 14,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 15,
+    "ppl": 6.2,
+    "regret": 0.05
+  },
+  {
+    "layer": 16,
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  {
+    "layer": 17,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 18,
+    "ppl": 6.2,
+    "regret": 0.05
+  },
+  {
+    "layer": 19,
+    "ppl": 6.21,
+    "regret": 0.06
+  },
+  {
+    "layer": 20,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 21,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 22,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 23,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 24,
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  {
+    "layer": 25,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 26,
+    "ppl": 6.18,
+    "regret": 0.03
+  },
+  {
+    "layer": 27,
+    "ppl": 6.22,
+    "regret": 0.07
+  },
+  {
+    "layer": 28,
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  {
+    "layer": 29,
+    "ppl": 6.21,
+    "regret": 0.06
+  },
+  {
+    "layer": 30,
+    "ppl": 6.29,
+    "regret": 0.14
+  },
+  {
+    "layer": 31,
+    "ppl": 6.67,
+    "regret": 0.52
+  }
+]

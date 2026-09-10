@@ -1,0 +1,340 @@
+{
+  "total_violations": 0,
+  "total_checks": 1744896,
+  "n_configs": 37,
+  "configs": [
+    {
+      "config": "single_L0_50pct",
+      "sparsity": 0.5,
+      "ppl": 40.67,
+      "regret": 27.13,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L1_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.48,
+      "regret": -0.06,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L2_50pct",
+      "sparsity": 0.5,
+      "ppl": 15.0,
+      "regret": 1.46,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L3_50pct",
+      "sparsity": 0.5,
+      "ppl": 15.05,
+      "regret": 1.51,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L4_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.4,
+      "regret": -0.14,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L5_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.63,
+      "regret": 0.09,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L6_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.78,
+      "regret": 0.24,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L7_50pct",
+      "sparsity": 0.5,
+      "ppl": 14.62,
+      "regret": 1.08,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L8_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.89,
+      "regret": 0.35,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L9_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.6,
+      "regret": 0.06,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L10_50pct",
+      "sparsity": 0.5,
+      "ppl": 14.08,
+      "regret": 0.54,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L11_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.87,
+      "regret": 0.33,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L12_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.9,
+      "regret": 0.36,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L13_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.74,
+      "regret": 0.2,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L14_50pct",
+      "sparsity": 0.5,
+      "ppl": 14.03,
+      "regret": 0.49,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L15_50pct",
+      "sparsity": 0.5,
+      "ppl": 14.19,
+      "regret": 0.65,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L16_50pct",
+      "sparsity": 0.5,
+      "ppl": 14.15,
+      "regret": 0.61,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L17_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.88,
+      "regret": 0.34,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L18_50pct",
+      "sparsity": 0.5,
+      "ppl": 14.08,
+      "regret": 0.54,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L19_50pct",
+      "sparsity": 0.5,
+      "ppl": 14.4,
+      "regret": 0.86,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L20_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.92,
+      "regret": 0.38,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L21_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.93,
+      "regret": 0.39,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L22_50pct",
+      "sparsity": 0.5,
+      "ppl": 14.75,
+      "regret": 1.21,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "single_L23_50pct",
+      "sparsity": 0.5,
+      "ppl": 20.24,
+      "regret": 6.7,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "comp_q_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 14.19,
+      "regret": 0.65,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "comp_k_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 13.8,
+      "regret": 0.26,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "comp_v_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 15.73,
+      "regret": 2.19,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "comp_o_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 16.83,
+      "regret": 3.29,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "comp_gate_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 15.66,
+      "regret": 2.12,
+      "violations": 0,
+      "checks": 98304,
+      "tracked": 24
+    },
+    {
+      "config": "comp_up_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 21.25,
+      "regret": 7.71,
+      "violations": 0,
+      "checks": 98304,
+      "tracked": 24
+    },
+    {
+      "config": "comp_down_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 22.96,
+      "regret": 9.42,
+      "violations": 0,
+      "checks": 98304,
+      "tracked": 24
+    },
+    {
+      "config": "L0_sp50",
+      "sparsity": 0.5,
+      "ppl": 40.67,
+      "regret": 27.13,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "L0_sp70",
+      "sparsity": 0.7,
+      "ppl": 673.77,
+      "regret": 660.23,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "L0_sp80",
+      "sparsity": 0.8,
+      "ppl": 3724.95,
+      "regret": 3711.41,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "L0_sp90",
+      "sparsity": 0.9,
+      "ppl": 17164.1,
+      "regret": 17150.56,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "L0_sp95",
+      "sparsity": 0.95,
+      "ppl": 44037.13,
+      "regret": 44023.59,
+      "violations": 0,
+      "checks": 24576,
+      "tracked": 6
+    },
+    {
+      "config": "all_50pct",
+      "sparsity": 0.5,
+      "ppl": 150778.16,
+      "regret": 150764.62,
+      "violations": 0,
+      "checks": 614400,
+      "tracked": 150
+    }
+  ]
+}

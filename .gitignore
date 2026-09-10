@@ -1,0 +1,36 @@
+# ============ SECRETS — never commit ============
+.env
+.env.*
+*.pem
+*.key
+secrets/
+**/.env
+
+# environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# caches
+.cache/
+hf_cache/
+.pytest_cache/
+
+# dev smoke-run artifacts (regenerated on the GPU host)
+quant-bias/results/**/*-quick/
+
+# editor / os
+.vscode/
+.idea/
+.DS_Store
+*.tmp
+
+# ---- living-inference is a separate repository (nabaos/living-inference) with
+# its own history and a token in its remote URL. It is excluded wholesale.
+# Its RESULT JSONs are vendored (code-free) under
+# quant-bias/provenance/living_inference_results/ so the bridge experiment (E6)
+# is reproducible on a fresh clone.
+living-inference/

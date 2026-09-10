@@ -1,0 +1,21 @@
+# secrets — never commit
+.env
+*.pem
+*.key
+secrets/
+
+# environments
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# HF / torch caches
+.cache/
+hf_cache/
+
+# local scratch
+*.tmp
+.DS_Store
+results/*-quick/
+results/**/*-quick/

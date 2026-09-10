@@ -1,0 +1,14 @@
+{
+  "model": "Qwen/Qwen3-8B",
+  "short": "Qwen3-8B",
+  "n_layers": 36,
+  "d_model": 4096,
+  "baseline_ppl": 9.27,
+  "lyapunov": {
+    "contracting": 17,
+    "total": 35,
+    "max_rho": 1.2484
+  },
+  "ppl_50pct_wanda_inplace": 64435.03,
+  "note": "50% in-place Wanda is catastrophic on Qwen3-8B (ppl 64K vs 9.27 baseline). Contrasts with Mistral-7B where 50% Wanda gives ppl 15.13. Qwen3 architecture may have less weight redundancy or the in-place pruning pattern is destructive for this architecture."
+}

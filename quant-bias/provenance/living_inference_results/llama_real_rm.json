@@ -1,0 +1,49 @@
+{
+  "Dense": {
+    "tps": 16.0,
+    "ppl": 5.47,
+    "scores": {
+      "hellaswag": 69.0,
+      "arc_easy": 72.0,
+      "winogrande": 66.0,
+      "piqa": 78.5
+    },
+    "avg": 71.38
+  },
+  "Rho-4": {
+    "tps": 21.8,
+    "ppl": 7.92,
+    "scores": {
+      "hellaswag": 61.0,
+      "arc_easy": 61.0,
+      "winogrande": 59.0,
+      "piqa": 77.0
+    },
+    "avg": 64.5,
+    "speedup": 1.36,
+    "skip": [
+      10,
+      12,
+      13,
+      30
+    ]
+  },
+  "BI-4": {
+    "tps": 22.3,
+    "ppl": 8.45,
+    "scores": {
+      "hellaswag": 64.5,
+      "arc_easy": 62.0,
+      "winogrande": 68.0,
+      "piqa": 75.0
+    },
+    "avg": 67.38,
+    "speedup": 1.39,
+    "skip": [
+      24,
+      26,
+      27,
+      28
+    ]
+  }
+}

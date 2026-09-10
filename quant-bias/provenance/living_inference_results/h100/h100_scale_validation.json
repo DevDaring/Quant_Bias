@@ -1,0 +1,261 @@
+{
+  "mistral_7b": {
+    "model": "Mistral-7B",
+    "experiments": {
+      "wiki_4096_baseline": {
+        "ppl": 6.148074742283469,
+        "n_tokens": 4092,
+        "dataset": "wikitext"
+      },
+      "wiki_16384_baseline": {
+        "ppl": 5.540732030860402,
+        "n_tokens": 16368,
+        "dataset": "wikitext"
+      },
+      "wiki_51200_baseline": {
+        "ppl": 6.145259043128667,
+        "n_tokens": 51150,
+        "dataset": "wikitext"
+      },
+      "c4_baseline": {
+        "ppl": 8.29759089074869,
+        "n_tokens": 51150,
+        "dataset": "c4"
+      },
+      "wiki_50k_wanda": {
+        "ppl": 93.40763573458854,
+        "sparsity": 0.5000602833747587
+      },
+      "c4_wanda": {
+        "ppl": 97.11708020099971,
+        "sparsity": 0.5000602833747587
+      },
+      "per_layer_ablation": [
+        {
+          "layer": 0,
+          "ppl": 6.14,
+          "regret": -0.0,
+          "pruned_params": 109142897,
+          "total_params": 218103808
+        },
+        {
+          "layer": 1,
+          "ppl": 6.22,
+          "regret": 0.07,
+          "pruned_params": 108989206,
+          "total_params": 218103808
+        },
+        {
+          "layer": 2,
+          "ppl": 5.63,
+          "regret": -0.51,
+          "pruned_params": 109070018,
+          "total_params": 218103808
+        },
+        {
+          "layer": 3,
+          "ppl": 5.61,
+          "regret": -0.54,
+          "pruned_params": 108938098,
+          "total_params": 218103808
+        },
+        {
+          "layer": 4,
+          "ppl": 5.61,
+          "regret": -0.54,
+          "pruned_params": 109049337,
+          "total_params": 218103808
+        },
+        {
+          "layer": 5,
+          "ppl": 5.59,
+          "regret": -0.56,
+          "pruned_params": 109040229,
+          "total_params": 218103808
+        },
+        {
+          "layer": 6,
+          "ppl": 5.6,
+          "regret": -0.54,
+          "pruned_params": 109077162,
+          "total_params": 218103808
+        },
+        {
+          "layer": 7,
+          "ppl": 5.62,
+          "regret": -0.53,
+          "pruned_params": 109029017,
+          "total_params": 218103808
+        },
+        {
+          "layer": 8,
+          "ppl": 5.57,
+          "regret": -0.57,
+          "pruned_params": 109076398,
+          "total_params": 218103808
+        },
+        {
+          "layer": 9,
+          "ppl": 5.57,
+          "regret": -0.58,
+          "pruned_params": 109011326,
+          "total_params": 218103808
+        },
+        {
+          "layer": 10,
+          "ppl": 5.58,
+          "regret": -0.56,
+          "pruned_params": 109060117,
+          "total_params": 218103808
+        },
+        {
+          "layer": 11,
+          "ppl": 5.59,
+          "regret": -0.55,
+          "pruned_params": 109014448,
+          "total_params": 218103808
+        },
+        {
+          "layer": 12,
+          "ppl": 5.61,
+          "regret": -0.54,
+          "pruned_params": 109052211,
+          "total_params": 218103808
+        },
+        {
+          "layer": 13,
+          "ppl": 5.58,
+          "regret": -0.57,
+          "pruned_params": 109043275,
+          "total_params": 218103808
+        },
+        {
+          "layer": 14,
+          "ppl": 5.58,
+          "regret": -0.56,
+          "pruned_params": 109069717,
+          "total_params": 218103808
+        },
+        {
+          "layer": 15,
+          "ppl": 5.6,
+          "regret": -0.55,
+          "pruned_params": 109052575,
+          "total_params": 218103808
+        },
+        {
+          "layer": 16,
+          "ppl": 5.58,
+          "regret": -0.57,
+          "pruned_params": 109082799,
+          "total_params": 218103808
+        },
+        {
+          "layer": 17,
+          "ppl": 5.58,
+          "regret": -0.57,
+          "pruned_params": 109109483,
+          "total_params": 218103808
+        },
+        {
+          "layer": 18,
+          "ppl": 5.58,
+          "regret": -0.57,
+          "pruned_params": 108986434,
+          "total_params": 218103808
+        },
+        {
+          "layer": 19,
+          "ppl": 5.6,
+          "regret": -0.55,
+          "pruned_params": 109050638,
+          "total_params": 218103808
+        },
+        {
+          "layer": 20,
+          "ppl": 5.58,
+          "regret": -0.57,
+          "pruned_params": 109083627,
+          "total_params": 218103808
+        },
+        {
+          "layer": 21,
+          "ppl": 5.57,
+          "regret": -0.58,
+          "pruned_params": 109017236,
+          "total_params": 218103808
+        },
+        {
+          "layer": 22,
+          "ppl": 5.58,
+          "regret": -0.57,
+          "pruned_params": 109027341,
+          "total_params": 218103808
+        },
+        {
+          "layer": 23,
+          "ppl": 5.58,
+          "regret": -0.57,
+          "pruned_params": 109182688,
+          "total_params": 218103808
+        },
+        {
+          "layer": 24,
+          "ppl": 5.57,
+          "regret": -0.58,
+          "pruned_params": 109121164,
+          "total_params": 218103808
+        },
+        {
+          "layer": 25,
+          "ppl": 5.57,
+          "regret": -0.58,
+          "pruned_params": 109080096,
+          "total_params": 218103808
+        },
+        {
+          "layer": 26,
+          "ppl": 5.57,
+          "regret": -0.58,
+          "pruned_params": 109047569,
+          "total_params": 218103808
+        },
+        {
+          "layer": 27,
+          "ppl": 5.59,
+          "regret": -0.56,
+          "pruned_params": 108993914,
+          "total_params": 218103808
+        },
+        {
+          "layer": 28,
+          "ppl": 5.58,
+          "regret": -0.56,
+          "pruned_params": 109007051,
+          "total_params": 218103808
+        },
+        {
+          "layer": 29,
+          "ppl": 5.6,
+          "regret": -0.55,
+          "pruned_params": 109105621,
+          "total_params": 218103808
+        },
+        {
+          "layer": 30,
+          "ppl": 5.65,
+          "regret": -0.5,
+          "pruned_params": 109073467,
+          "total_params": 218103808
+        },
+        {
+          "layer": 31,
+          "ppl": 5.99,
+          "regret": -0.16,
+          "pruned_params": 109105799,
+          "total_params": 218103808
+        }
+      ]
+    }
+  }
+}

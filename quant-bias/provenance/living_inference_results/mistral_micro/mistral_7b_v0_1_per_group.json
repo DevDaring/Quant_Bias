@@ -1,0 +1,898 @@
+{
+  "L0_q_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L0_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L0_v_proj": {
+    "ppl": 6.45,
+    "regret": 0.3
+  },
+  "L0_o_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L0_gate_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L0_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L0_down_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L1_q_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L1_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L1_v_proj": {
+    "ppl": 6.18,
+    "regret": 0.03
+  },
+  "L1_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L1_gate_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L1_up_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L1_down_proj": {
+    "ppl": 6.56,
+    "regret": 0.41
+  },
+  "L2_q_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L2_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L2_v_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L2_o_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L2_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L2_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L2_down_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L3_q_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L3_k_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L3_v_proj": {
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  "L3_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L3_gate_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L3_up_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L3_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L4_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L4_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L4_v_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L4_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L4_gate_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L4_up_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L4_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L5_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L5_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L5_v_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L5_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L5_gate_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L5_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L5_down_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L6_q_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L6_k_proj": {
+    "ppl": 6.14,
+    "regret": -0.01
+  },
+  "L6_v_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L6_o_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L6_gate_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L6_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L6_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L7_q_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L7_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L7_v_proj": {
+    "ppl": 6.19,
+    "regret": 0.04
+  },
+  "L7_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L7_gate_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L7_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L7_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L8_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L8_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L8_v_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L8_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L8_gate_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L8_up_proj": {
+    "ppl": 6.14,
+    "regret": -0.01
+  },
+  "L8_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L9_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L9_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L9_v_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L9_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L9_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L9_up_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L9_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L10_q_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L10_k_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L10_v_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L10_o_proj": {
+    "ppl": 6.14,
+    "regret": -0.01
+  },
+  "L10_gate_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L10_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L10_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L11_q_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L11_k_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L11_v_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L11_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L11_gate_proj": {
+    "ppl": 6.14,
+    "regret": -0.01
+  },
+  "L11_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L11_down_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L12_q_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L12_k_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L12_v_proj": {
+    "ppl": 6.18,
+    "regret": 0.03
+  },
+  "L12_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L12_gate_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L12_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L12_down_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L13_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L13_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L13_v_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L13_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L13_gate_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L13_up_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L13_down_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L14_q_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L14_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L14_v_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L14_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L14_gate_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L14_up_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L14_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L15_q_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L15_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L15_v_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L15_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L15_gate_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L15_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L15_down_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L16_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L16_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L16_v_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L16_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L16_gate_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L16_up_proj": {
+    "ppl": 6.14,
+    "regret": -0.01
+  },
+  "L16_down_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L17_q_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L17_k_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L17_v_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L17_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L17_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L17_up_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L17_down_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L18_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L18_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L18_v_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L18_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L18_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L18_up_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L18_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L19_q_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L19_k_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L19_v_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L19_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L19_gate_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L19_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L19_down_proj": {
+    "ppl": 6.18,
+    "regret": 0.03
+  },
+  "L20_q_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L20_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L20_v_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L20_o_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L20_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L20_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L20_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L21_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L21_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L21_v_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L21_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L21_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L21_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L21_down_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L22_q_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L22_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L22_v_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L22_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L22_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L22_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L22_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L23_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L23_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L23_v_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L23_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L23_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L23_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L23_down_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L24_q_proj": {
+    "ppl": 6.14,
+    "regret": -0.01
+  },
+  "L24_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L24_v_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L24_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L24_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L24_up_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L24_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L25_q_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L25_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L25_v_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L25_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L25_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L25_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L25_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L26_q_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L26_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L26_v_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L26_o_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L26_gate_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L26_up_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L26_down_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L27_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L27_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L27_v_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L27_o_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L27_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L27_up_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L27_down_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L28_q_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L28_k_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L28_v_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L28_o_proj": {
+    "ppl": 6.14,
+    "regret": -0.01
+  },
+  "L28_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L28_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L28_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L29_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L29_k_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L29_v_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L29_o_proj": {
+    "ppl": 6.15,
+    "regret": -0.0
+  },
+  "L29_gate_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L29_up_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L29_down_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L30_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L30_k_proj": {
+    "ppl": 6.14,
+    "regret": -0.01
+  },
+  "L30_v_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "L30_o_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L30_gate_proj": {
+    "ppl": 6.18,
+    "regret": 0.03
+  },
+  "L30_up_proj": {
+    "ppl": 6.16,
+    "regret": 0.01
+  },
+  "L30_down_proj": {
+    "ppl": 6.23,
+    "regret": 0.08
+  },
+  "L31_q_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L31_k_proj": {
+    "ppl": 6.15,
+    "regret": 0.0
+  },
+  "L31_v_proj": {
+    "ppl": 6.4,
+    "regret": 0.25
+  },
+  "L31_o_proj": {
+    "ppl": 6.27,
+    "regret": 0.12
+  },
+  "L31_gate_proj": {
+    "ppl": 6.42,
+    "regret": 0.27
+  },
+  "L31_up_proj": {
+    "ppl": 6.21,
+    "regret": 0.06
+  },
+  "L31_down_proj": {
+    "ppl": 6.66,
+    "regret": 0.51
+  }
+}

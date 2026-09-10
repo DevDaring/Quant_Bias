@@ -1,0 +1,247 @@
+{
+  "model": "mistralai/Mistral-7B-v0.1",
+  "global_max_ratio": 0.789981,
+  "conservatism": 1.3,
+  "configs": [
+    {
+      "config": "single_L0",
+      "max_ratio": 0.509912,
+      "mean_ratio": 0.156832,
+      "conservatism": 2.0
+    },
+    {
+      "config": "single_L1",
+      "max_ratio": 0.528152,
+      "mean_ratio": 0.248995,
+      "conservatism": 1.9
+    },
+    {
+      "config": "single_L2",
+      "max_ratio": 0.584162,
+      "mean_ratio": 0.3182,
+      "conservatism": 1.7
+    },
+    {
+      "config": "single_L3",
+      "max_ratio": 0.476836,
+      "mean_ratio": 0.292264,
+      "conservatism": 2.1
+    },
+    {
+      "config": "single_L4",
+      "max_ratio": 0.552458,
+      "mean_ratio": 0.338137,
+      "conservatism": 1.8
+    },
+    {
+      "config": "single_L5",
+      "max_ratio": 0.523305,
+      "mean_ratio": 0.330468,
+      "conservatism": 1.9
+    },
+    {
+      "config": "single_L6",
+      "max_ratio": 0.599818,
+      "mean_ratio": 0.320286,
+      "conservatism": 1.7
+    },
+    {
+      "config": "single_L7",
+      "max_ratio": 0.58023,
+      "mean_ratio": 0.345229,
+      "conservatism": 1.7
+    },
+    {
+      "config": "single_L8",
+      "max_ratio": 0.57509,
+      "mean_ratio": 0.358279,
+      "conservatism": 1.7
+    },
+    {
+      "config": "single_L9",
+      "max_ratio": 0.69663,
+      "mean_ratio": 0.379882,
+      "conservatism": 1.4
+    },
+    {
+      "config": "single_L10",
+      "max_ratio": 0.627247,
+      "mean_ratio": 0.38148,
+      "conservatism": 1.6
+    },
+    {
+      "config": "single_L11",
+      "max_ratio": 0.658163,
+      "mean_ratio": 0.350907,
+      "conservatism": 1.5
+    },
+    {
+      "config": "single_L12",
+      "max_ratio": 0.709599,
+      "mean_ratio": 0.384968,
+      "conservatism": 1.4
+    },
+    {
+      "config": "single_L13",
+      "max_ratio": 0.718549,
+      "mean_ratio": 0.385625,
+      "conservatism": 1.4
+    },
+    {
+      "config": "single_L14",
+      "max_ratio": 0.753702,
+      "mean_ratio": 0.373842,
+      "conservatism": 1.3
+    },
+    {
+      "config": "single_L15",
+      "max_ratio": 0.754534,
+      "mean_ratio": 0.388947,
+      "conservatism": 1.3
+    },
+    {
+      "config": "single_L16",
+      "max_ratio": 0.782113,
+      "mean_ratio": 0.390682,
+      "conservatism": 1.3
+    },
+    {
+      "config": "single_L17",
+      "max_ratio": 0.749056,
+      "mean_ratio": 0.372729,
+      "conservatism": 1.3
+    },
+    {
+      "config": "single_L18",
+      "max_ratio": 0.765351,
+      "mean_ratio": 0.379202,
+      "conservatism": 1.3
+    },
+    {
+      "config": "single_L19",
+      "max_ratio": 0.738612,
+      "mean_ratio": 0.374096,
+      "conservatism": 1.4
+    },
+    {
+      "config": "single_L20",
+      "max_ratio": 0.704941,
+      "mean_ratio": 0.375281,
+      "conservatism": 1.4
+    },
+    {
+      "config": "single_L21",
+      "max_ratio": 0.67418,
+      "mean_ratio": 0.366936,
+      "conservatism": 1.5
+    },
+    {
+      "config": "single_L22",
+      "max_ratio": 0.68152,
+      "mean_ratio": 0.374623,
+      "conservatism": 1.5
+    },
+    {
+      "config": "single_L23",
+      "max_ratio": 0.708813,
+      "mean_ratio": 0.352148,
+      "conservatism": 1.4
+    },
+    {
+      "config": "single_L24",
+      "max_ratio": 0.686632,
+      "mean_ratio": 0.362232,
+      "conservatism": 1.5
+    },
+    {
+      "config": "single_L25",
+      "max_ratio": 0.731457,
+      "mean_ratio": 0.368762,
+      "conservatism": 1.4
+    },
+    {
+      "config": "single_L26",
+      "max_ratio": 0.764867,
+      "mean_ratio": 0.376115,
+      "conservatism": 1.3
+    },
+    {
+      "config": "single_L27",
+      "max_ratio": 0.685676,
+      "mean_ratio": 0.363492,
+      "conservatism": 1.5
+    },
+    {
+      "config": "single_L28",
+      "max_ratio": 0.69819,
+      "mean_ratio": 0.363234,
+      "conservatism": 1.4
+    },
+    {
+      "config": "single_L29",
+      "max_ratio": 0.656966,
+      "mean_ratio": 0.343937,
+      "conservatism": 1.5
+    },
+    {
+      "config": "single_L30",
+      "max_ratio": 0.674862,
+      "mean_ratio": 0.327272,
+      "conservatism": 1.5
+    },
+    {
+      "config": "single_L31",
+      "max_ratio": 0.521056,
+      "mean_ratio": 0.269455,
+      "conservatism": 1.9
+    },
+    {
+      "config": "comp_q_proj",
+      "max_ratio": 0.534642,
+      "mean_ratio": 0.333511,
+      "conservatism": 1.9
+    },
+    {
+      "config": "comp_k_proj",
+      "max_ratio": 0.29208,
+      "mean_ratio": 0.179886,
+      "conservatism": 3.4
+    },
+    {
+      "config": "comp_v_proj",
+      "max_ratio": 0.515423,
+      "mean_ratio": 0.340317,
+      "conservatism": 1.9
+    },
+    {
+      "config": "comp_o_proj",
+      "max_ratio": 0.669403,
+      "mean_ratio": 0.434715,
+      "conservatism": 1.5
+    },
+    {
+      "config": "comp_gate_proj",
+      "max_ratio": 0.675474,
+      "mean_ratio": 0.404017,
+      "conservatism": 1.5
+    },
+    {
+      "config": "comp_up_proj",
+      "max_ratio": 0.781589,
+      "mean_ratio": 0.444038,
+      "conservatism": 1.3
+    },
+    {
+      "config": "comp_down_proj",
+      "max_ratio": 0.581037,
+      "mean_ratio": 0.319664,
+      "conservatism": 1.7
+    },
+    {
+      "config": "all_50pct",
+      "max_ratio": 0.789981,
+      "mean_ratio": 0.34404,
+      "conservatism": 1.3
+    }
+  ]
+}

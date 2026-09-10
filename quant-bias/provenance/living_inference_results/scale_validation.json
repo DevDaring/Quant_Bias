@@ -1,0 +1,126 @@
+{
+  "wiki50k_baseline": {
+    "label": "Baseline (full precision)",
+    "perplexity": 31.823115221029894,
+    "violations": 0,
+    "elapsed_sec": 502.5
+  },
+  "wiki50k_single_layer": {
+    "layer_0": {
+      "label": "Layer 0 only",
+      "perplexity": 3919797.9266278814,
+      "violations": 0,
+      "elapsed_sec": 628.3
+    },
+    "layer_1": {
+      "label": "Layer 1 only",
+      "perplexity": 40.174011807925915,
+      "violations": 0,
+      "elapsed_sec": 602.3
+    },
+    "layer_2": {
+      "label": "Layer 2 only",
+      "perplexity": 91.47398094867731,
+      "violations": 0,
+      "elapsed_sec": 528.7
+    },
+    "layer_3": {
+      "label": "Layer 3 only",
+      "perplexity": 38.549771863309644,
+      "violations": 0,
+      "elapsed_sec": 520.3
+    },
+    "layer_5": {
+      "label": "Layer 5 only",
+      "perplexity": 42.193087474824594,
+      "violations": 0,
+      "elapsed_sec": 537.1
+    },
+    "layer_8": {
+      "label": "Layer 8 only",
+      "perplexity": 37.258564302099444,
+      "violations": 0,
+      "elapsed_sec": 542.0
+    },
+    "layer_11": {
+      "label": "Layer 11 only",
+      "perplexity": 94.5791017178795,
+      "violations": 0,
+      "elapsed_sec": 540.6
+    }
+  },
+  "wiki50k_component_type": {
+    "mlp_fc": {
+      "label": "mlp_fc across all layers",
+      "perplexity": 28947.082059632598,
+      "violations": 0,
+      "elapsed_sec": 625.5
+    },
+    "Q": {
+      "label": "Q across all layers",
+      "perplexity": 31980.86158694585,
+      "violations": 0,
+      "elapsed_sec": 656.1
+    },
+    "K": {
+      "label": "K across all layers",
+      "perplexity": 9334.88132608631,
+      "violations": 0,
+      "elapsed_sec": 669.1
+    },
+    "mlp_proj": {
+      "label": "mlp_proj across all layers",
+      "perplexity": 3389.527257002485,
+      "violations": 0,
+      "elapsed_sec": 832.2
+    },
+    "attn_proj": {
+      "label": "attn_proj across all layers",
+      "perplexity": 1266.772755206147,
+      "violations": 0,
+      "elapsed_sec": 480.5
+    },
+    "V": {
+      "label": "V across all layers",
+      "perplexity": 845.0984348741318,
+      "violations": 0,
+      "elapsed_sec": 654.2
+    }
+  },
+  "alt_baseline": {
+    "label": "C4 Baseline",
+    "perplexity": 35.07622372023919,
+    "violations": 0,
+    "elapsed_sec": 77.8
+  },
+  "alt_single_layer_0": {
+    "label": "C4 Layer 0 only",
+    "perplexity": 5250423.143071503,
+    "violations": 0,
+    "elapsed_sec": 101.5
+  },
+  "alt_single_layer_1": {
+    "label": "C4 Layer 1 only",
+    "perplexity": 41.97638840564767,
+    "violations": 0,
+    "elapsed_sec": 104.9
+  },
+  "alt_single_layer_3": {
+    "label": "C4 Layer 3 only",
+    "perplexity": 40.07163111487046,
+    "violations": 0,
+    "elapsed_sec": 103.3
+  },
+  "alt_single_layer_5": {
+    "label": "C4 Layer 5 only",
+    "perplexity": 42.730378416264266,
+    "violations": 0,
+    "elapsed_sec": 104.3
+  },
+  "alt_single_layer_11": {
+    "label": "C4 Layer 11 only",
+    "perplexity": 90.43271020295333,
+    "violations": 0,
+    "elapsed_sec": 104.0
+  }
+}

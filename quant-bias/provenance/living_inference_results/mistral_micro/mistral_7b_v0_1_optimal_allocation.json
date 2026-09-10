@@ -1,0 +1,17 @@
+{
+  "model": "Mistral-7B",
+  "baseline": 6.15,
+  "uniform": {
+    "ppl": 72.02,
+    "deg": 11.72
+  },
+  "optimal": {
+    "ppl": 5645.97,
+    "deg": 918.33
+  },
+  "rule_based": {
+    "ppl": 204.14,
+    "deg": 33.2
+  },
+  "improvement_pct": -8461.1
+}

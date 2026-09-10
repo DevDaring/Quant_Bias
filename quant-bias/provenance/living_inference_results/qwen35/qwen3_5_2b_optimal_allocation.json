@@ -1,0 +1,20 @@
+{
+  "model": "Qwen/Qwen3.5-2B",
+  "baseline": 13.54,
+  "uniform": {
+    "ppl": 120282.73,
+    "sparsity": 0.5001,
+    "deg": 8885.18
+  },
+  "optimal": {
+    "ppl": 924.96,
+    "sparsity": 0.4365,
+    "deg": 68.33
+  },
+  "rule_based": {
+    "ppl": 54247.29,
+    "sparsity": 0.4809,
+    "deg": 4007.2
+  },
+  "improvement_pct": 99.2
+}

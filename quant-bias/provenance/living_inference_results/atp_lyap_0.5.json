@@ -1,0 +1,6 @@
+{
+  "method": "atp_lyap",
+  "sparsity": 0.5,
+  "actual_sparsity": 0.472794448773478,
+  "ppl": 6.472905158996582
+}

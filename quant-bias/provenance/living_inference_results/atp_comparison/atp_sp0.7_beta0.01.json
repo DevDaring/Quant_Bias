@@ -1,0 +1,8 @@
+{
+  "mode": "atp",
+  "sparsity_target": 0.7,
+  "beta": 0.01,
+  "strength": 0.15,
+  "actual_sparsity": 0.6999037352250648,
+  "ppl": 20.127731323242188
+}

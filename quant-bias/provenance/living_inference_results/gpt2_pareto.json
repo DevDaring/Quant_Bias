@@ -1,0 +1,272 @@
+[
+  {
+    "label": "1% sparse, rank 4",
+    "sparsity": 0.01,
+    "rank": 4,
+    "perplexity": 9245.445196061028,
+    "flops_reduction": 57.411764705882355,
+    "violations": 0,
+    "avg_error_ratio": 0.15745649268495007
+  },
+  {
+    "label": "1% sparse, rank 16",
+    "sparsity": 0.01,
+    "rank": 16,
+    "perplexity": 8564.47258759756,
+    "flops_reduction": 14.352941176470589,
+    "violations": 0,
+    "avg_error_ratio": 0.14681406748332007
+  },
+  {
+    "label": "1% sparse, rank 32",
+    "sparsity": 0.01,
+    "rank": 32,
+    "perplexity": 4209.838211566026,
+    "flops_reduction": 7.176470588235294,
+    "violations": 0,
+    "avg_error_ratio": 0.1588417889344982
+  },
+  {
+    "label": "1% sparse, rank 64",
+    "sparsity": 0.01,
+    "rank": 64,
+    "perplexity": 3915.426652893883,
+    "flops_reduction": 3.588235294117647,
+    "violations": 0,
+    "avg_error_ratio": 0.17988649950182467
+  },
+  {
+    "label": "1% sparse, rank 128",
+    "sparsity": 0.01,
+    "rank": 128,
+    "perplexity": 4269.586482432316,
+    "flops_reduction": 2.9047619047619047,
+    "violations": 0,
+    "avg_error_ratio": 0.17927092535391542
+  },
+  {
+    "label": "1% sparse, rank 256",
+    "sparsity": 0.01,
+    "rank": 256,
+    "perplexity": 4749.57687839979,
+    "flops_reduction": 2.103448275862069,
+    "violations": 0,
+    "avg_error_ratio": 0.18532318128672914
+  },
+  {
+    "label": "5% sparse, rank 4",
+    "sparsity": 0.05,
+    "rank": 4,
+    "perplexity": 4948.162059579085,
+    "flops_reduction": 57.411764705882355,
+    "violations": 0,
+    "avg_error_ratio": 0.15742064552650264
+  },
+  {
+    "label": "5% sparse, rank 16",
+    "sparsity": 0.05,
+    "rank": 16,
+    "perplexity": 4404.57265667548,
+    "flops_reduction": 14.352941176470589,
+    "violations": 0,
+    "avg_error_ratio": 0.1452563689497718
+  },
+  {
+    "label": "5% sparse, rank 32",
+    "sparsity": 0.05,
+    "rank": 32,
+    "perplexity": 5277.948634295564,
+    "flops_reduction": 7.176470588235294,
+    "violations": 0,
+    "avg_error_ratio": 0.1445845597014441
+  },
+  {
+    "label": "5% sparse, rank 64",
+    "sparsity": 0.05,
+    "rank": 64,
+    "perplexity": 8199.204944576071,
+    "flops_reduction": 3.588235294117647,
+    "violations": 0,
+    "avg_error_ratio": 0.16954183883848953
+  },
+  {
+    "label": "5% sparse, rank 128",
+    "sparsity": 0.05,
+    "rank": 128,
+    "perplexity": 5870.050765779502,
+    "flops_reduction": 2.9047619047619047,
+    "violations": 0,
+    "avg_error_ratio": 0.17172944272829666
+  },
+  {
+    "label": "5% sparse, rank 256",
+    "sparsity": 0.05,
+    "rank": 256,
+    "perplexity": 11290.662672308254,
+    "flops_reduction": 2.103448275862069,
+    "violations": 0,
+    "avg_error_ratio": 0.19295030664319882
+  },
+  {
+    "label": "10% sparse, rank 4",
+    "sparsity": 0.1,
+    "rank": 4,
+    "perplexity": 4762.274497296592,
+    "flops_reduction": 57.411764705882355,
+    "violations": 0,
+    "avg_error_ratio": 0.1654866624930003
+  },
+  {
+    "label": "10% sparse, rank 16",
+    "sparsity": 0.1,
+    "rank": 16,
+    "perplexity": 7491.308738998551,
+    "flops_reduction": 14.352941176470589,
+    "violations": 0,
+    "avg_error_ratio": 0.15537371159088254
+  },
+  {
+    "label": "10% sparse, rank 32",
+    "sparsity": 0.1,
+    "rank": 32,
+    "perplexity": 18091.006257494173,
+    "flops_reduction": 7.176470588235294,
+    "violations": 0,
+    "avg_error_ratio": 0.15148978391600443
+  },
+  {
+    "label": "10% sparse, rank 64",
+    "sparsity": 0.1,
+    "rank": 64,
+    "perplexity": 15813.510925605984,
+    "flops_reduction": 3.588235294117647,
+    "violations": 0,
+    "avg_error_ratio": 0.18581597990285
+  },
+  {
+    "label": "10% sparse, rank 128",
+    "sparsity": 0.1,
+    "rank": 128,
+    "perplexity": 18184.356130191314,
+    "flops_reduction": 2.9047619047619047,
+    "violations": 0,
+    "avg_error_ratio": 0.17869448339661964
+  },
+  {
+    "label": "10% sparse, rank 256",
+    "sparsity": 0.1,
+    "rank": 256,
+    "perplexity": 17036.587543741152,
+    "flops_reduction": 2.103448275862069,
+    "violations": 0,
+    "avg_error_ratio": 0.17716933378283659
+  },
+  {
+    "label": "20% sparse, rank 4",
+    "sparsity": 0.2,
+    "rank": 4,
+    "perplexity": 38332.77969949703,
+    "flops_reduction": 57.411764705882355,
+    "violations": 0,
+    "avg_error_ratio": 0.1733674182639126
+  },
+  {
+    "label": "20% sparse, rank 16",
+    "sparsity": 0.2,
+    "rank": 16,
+    "perplexity": 48481.408321563,
+    "flops_reduction": 14.352941176470589,
+    "violations": 0,
+    "avg_error_ratio": 0.1681488922291447
+  },
+  {
+    "label": "20% sparse, rank 32",
+    "sparsity": 0.2,
+    "rank": 32,
+    "perplexity": 7515.056043206506,
+    "flops_reduction": 7.176470588235294,
+    "violations": 0,
+    "avg_error_ratio": 0.16137287808819864
+  },
+  {
+    "label": "20% sparse, rank 64",
+    "sparsity": 0.2,
+    "rank": 64,
+    "perplexity": 9248.281518128246,
+    "flops_reduction": 3.588235294117647,
+    "violations": 0,
+    "avg_error_ratio": 0.18868924347776536
+  },
+  {
+    "label": "20% sparse, rank 128",
+    "sparsity": 0.2,
+    "rank": 128,
+    "perplexity": 11686.942867305082,
+    "flops_reduction": 2.9047619047619047,
+    "violations": 0,
+    "avg_error_ratio": 0.18816795340819192
+  },
+  {
+    "label": "20% sparse, rank 256",
+    "sparsity": 0.2,
+    "rank": 256,
+    "perplexity": 9738.579264812233,
+    "flops_reduction": 2.103448275862069,
+    "violations": 0,
+    "avg_error_ratio": 0.17975337373259118
+  },
+  {
+    "label": "50% sparse, rank 4",
+    "sparsity": 0.5,
+    "rank": 4,
+    "perplexity": 4678.749327627904,
+    "flops_reduction": 57.411764705882355,
+    "violations": 0,
+    "avg_error_ratio": 0.20221285349965257
+  },
+  {
+    "label": "50% sparse, rank 16",
+    "sparsity": 0.5,
+    "rank": 16,
+    "perplexity": 9325.157059155375,
+    "flops_reduction": 14.352941176470589,
+    "violations": 0,
+    "avg_error_ratio": 0.21034925815081293
+  },
+  {
+    "label": "50% sparse, rank 32",
+    "sparsity": 0.5,
+    "rank": 32,
+    "perplexity": 9660.922624212193,
+    "flops_reduction": 7.176470588235294,
+    "violations": 0,
+    "avg_error_ratio": 0.18902161726851976
+  },
+  {
+    "label": "50% sparse, rank 64",
+    "sparsity": 0.5,
+    "rank": 64,
+    "perplexity": 5197.140039761291,
+    "flops_reduction": 3.588235294117647,
+    "violations": 0,
+    "avg_error_ratio": 0.20738024147293072
+  },
+  {
+    "label": "50% sparse, rank 128",
+    "sparsity": 0.5,
+    "rank": 128,
+    "perplexity": 5538.13943469451,
+    "flops_reduction": 2.9047619047619047,
+    "violations": 0,
+    "avg_error_ratio": 0.20407477568506163
+  },
+  {
+    "label": "50% sparse, rank 256",
+    "sparsity": 0.5,
+    "rank": 256,
+    "perplexity": 3914.024401649706,
+    "flops_reduction": 2.103448275862069,
+    "violations": 0,
+    "avg_error_ratio": 0.19783709238443326
+  }
+]

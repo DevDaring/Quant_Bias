@@ -1,0 +1,8 @@
+{
+  "mode": "atp_lyap",
+  "sparsity_target": 0.5,
+  "beta": 0.004,
+  "strength": 0.15,
+  "actual_sparsity": 0.4998899469721503,
+  "ppl": 7.267879486083984
+}

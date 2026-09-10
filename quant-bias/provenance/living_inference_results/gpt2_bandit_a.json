@@ -1,0 +1,736 @@
+{
+  "greedy": {
+    "results": [
+      {
+        "round": 0,
+        "group": null,
+        "ppl": 22.982805535654126,
+        "violations": 0,
+        "n_compressed_groups": 0,
+        "flops_saved_pct": 0.0
+      },
+      {
+        "round": 1,
+        "group": "layer3.attn_proj",
+        "ppl": 23.0,
+        "violations": 0,
+        "n_compressed_groups": 1,
+        "n_approx_matrices": 1,
+        "flops_saved_pct": 0.2,
+        "delta_ppl": 0.0
+      },
+      {
+        "round": 2,
+        "group": "layer1.V",
+        "ppl": 24.6,
+        "violations": 0,
+        "n_compressed_groups": 2,
+        "n_approx_matrices": 13,
+        "flops_saved_pct": 2.8,
+        "delta_ppl": 1.6
+      },
+      {
+        "round": 3,
+        "group": "layer3.V",
+        "ppl": 24.7,
+        "violations": 0,
+        "n_compressed_groups": 3,
+        "n_approx_matrices": 25,
+        "flops_saved_pct": 5.3,
+        "delta_ppl": 0.1
+      },
+      {
+        "round": 4,
+        "group": "layer1.Q",
+        "ppl": 25.0,
+        "violations": 0,
+        "n_compressed_groups": 4,
+        "n_approx_matrices": 37,
+        "flops_saved_pct": 7.9,
+        "delta_ppl": 0.3
+      },
+      {
+        "round": 5,
+        "group": "layer1.attn_proj",
+        "ppl": 24.2,
+        "violations": 0,
+        "n_compressed_groups": 5,
+        "n_approx_matrices": 38,
+        "flops_saved_pct": 8.1,
+        "delta_ppl": -0.8
+      },
+      {
+        "round": 6,
+        "group": "layer3.Q",
+        "ppl": 24.3,
+        "violations": 0,
+        "n_compressed_groups": 6,
+        "n_approx_matrices": 50,
+        "flops_saved_pct": 10.7,
+        "delta_ppl": 0.0
+      },
+      {
+        "round": 7,
+        "group": "layer3.K",
+        "ppl": 24.3,
+        "violations": 0,
+        "n_compressed_groups": 7,
+        "n_approx_matrices": 62,
+        "flops_saved_pct": 13.2,
+        "delta_ppl": 0.0
+      },
+      {
+        "round": 8,
+        "group": "layer1.K",
+        "ppl": 24.4,
+        "violations": 0,
+        "n_compressed_groups": 8,
+        "n_approx_matrices": 74,
+        "flops_saved_pct": 15.8,
+        "delta_ppl": 0.2
+      },
+      {
+        "round": 9,
+        "group": "layer11.K",
+        "ppl": 25.5,
+        "violations": 0,
+        "n_compressed_groups": 9,
+        "n_approx_matrices": 86,
+        "flops_saved_pct": 18.4,
+        "delta_ppl": 1.0
+      },
+      {
+        "round": 10,
+        "group": "layer11.Q",
+        "ppl": 26.0,
+        "violations": 0,
+        "n_compressed_groups": 10,
+        "n_approx_matrices": 98,
+        "flops_saved_pct": 20.9,
+        "delta_ppl": 0.5
+      },
+      {
+        "round": 11,
+        "group": "layer7.mlp_proj",
+        "ppl": 27.7,
+        "violations": 0,
+        "n_compressed_groups": 11,
+        "n_approx_matrices": 99,
+        "flops_saved_pct": 21.2,
+        "delta_ppl": 1.7
+      },
+      {
+        "round": 12,
+        "group": "layer8.V",
+        "ppl": 29.2,
+        "violations": 0,
+        "n_compressed_groups": 12,
+        "n_approx_matrices": 111,
+        "flops_saved_pct": 23.7,
+        "delta_ppl": 1.5
+      },
+      {
+        "round": 13,
+        "group": "layer7.mlp_fc",
+        "ppl": 29.1,
+        "violations": 0,
+        "n_compressed_groups": 13,
+        "n_approx_matrices": 112,
+        "flops_saved_pct": 23.9,
+        "delta_ppl": -0.1
+      },
+      {
+        "round": 14,
+        "group": "layer11.attn_proj",
+        "ppl": 29.2,
+        "violations": 0,
+        "n_compressed_groups": 14,
+        "n_approx_matrices": 113,
+        "flops_saved_pct": 24.1,
+        "delta_ppl": 0.1
+      },
+      {
+        "round": 15,
+        "group": "layer8.K",
+        "ppl": 29.6,
+        "violations": 0,
+        "n_compressed_groups": 15,
+        "n_approx_matrices": 125,
+        "flops_saved_pct": 26.7,
+        "delta_ppl": 0.3
+      },
+      {
+        "round": 16,
+        "group": "layer8.attn_proj",
+        "ppl": 29.9,
+        "violations": 0,
+        "n_compressed_groups": 16,
+        "n_approx_matrices": 126,
+        "flops_saved_pct": 26.9,
+        "delta_ppl": 0.3
+      },
+      {
+        "round": 17,
+        "group": "layer8.Q",
+        "ppl": 29.9,
+        "violations": 0,
+        "n_compressed_groups": 17,
+        "n_approx_matrices": 138,
+        "flops_saved_pct": 29.5,
+        "delta_ppl": 0.0
+      },
+      {
+        "round": 18,
+        "group": "layer11.V",
+        "ppl": 32.2,
+        "violations": 0,
+        "n_compressed_groups": 18,
+        "n_approx_matrices": 150,
+        "flops_saved_pct": 32.1,
+        "delta_ppl": 2.3
+      },
+      {
+        "round": 19,
+        "group": "layer9.mlp_proj",
+        "ppl": 35.3,
+        "violations": 0,
+        "n_compressed_groups": 19,
+        "n_approx_matrices": 151,
+        "flops_saved_pct": 32.3,
+        "delta_ppl": 3.1
+      },
+      {
+        "round": 20,
+        "group": "layer10.K",
+        "ppl": 39.0,
+        "violations": 0,
+        "n_compressed_groups": 20,
+        "n_approx_matrices": 163,
+        "flops_saved_pct": 34.8,
+        "delta_ppl": 3.7
+      },
+      {
+        "round": 21,
+        "group": "layer10.Q",
+        "ppl": 39.8,
+        "violations": 0,
+        "n_compressed_groups": 21,
+        "n_approx_matrices": 175,
+        "flops_saved_pct": 37.4,
+        "delta_ppl": 0.9
+      },
+      {
+        "round": 22,
+        "group": "layer10.mlp_proj",
+        "ppl": 52.4,
+        "violations": 0,
+        "n_compressed_groups": 22,
+        "n_approx_matrices": 176,
+        "flops_saved_pct": 37.6,
+        "delta_ppl": 12.6
+      },
+      {
+        "round": 23,
+        "group": "layer8.mlp_proj",
+        "ppl": 71.7,
+        "violations": 0,
+        "n_compressed_groups": 23,
+        "n_approx_matrices": 177,
+        "flops_saved_pct": 37.8,
+        "delta_ppl": 19.3
+      },
+      {
+        "round": 24,
+        "group": "layer11.mlp_proj",
+        "ppl": 118.2,
+        "violations": 0,
+        "n_compressed_groups": 24,
+        "n_approx_matrices": 178,
+        "flops_saved_pct": 38.0,
+        "delta_ppl": 46.5
+      },
+      {
+        "round": 25,
+        "group": "layer11.mlp_fc",
+        "ppl": 92.0,
+        "violations": 0,
+        "n_compressed_groups": 25,
+        "n_approx_matrices": 179,
+        "flops_saved_pct": 38.2,
+        "delta_ppl": -26.2
+      },
+      {
+        "round": 26,
+        "group": "layer8.mlp_fc",
+        "ppl": 99.3,
+        "violations": 0,
+        "n_compressed_groups": 26,
+        "n_approx_matrices": 180,
+        "flops_saved_pct": 38.5,
+        "delta_ppl": 7.3
+      },
+      {
+        "round": 27,
+        "group": "layer9.mlp_fc",
+        "ppl": 103.4,
+        "violations": 0,
+        "n_compressed_groups": 27,
+        "n_approx_matrices": 181,
+        "flops_saved_pct": 38.7,
+        "delta_ppl": 4.2
+      },
+      {
+        "round": 28,
+        "group": "layer10.attn_proj",
+        "ppl": 101.3,
+        "violations": 0,
+        "n_compressed_groups": 28,
+        "n_approx_matrices": 182,
+        "flops_saved_pct": 38.9,
+        "delta_ppl": -2.1
+      },
+      {
+        "round": 29,
+        "group": "layer10.V",
+        "ppl": 101.6,
+        "violations": 0,
+        "n_compressed_groups": 29,
+        "n_approx_matrices": 194,
+        "flops_saved_pct": 41.5,
+        "delta_ppl": 0.3
+      },
+      {
+        "round": 30,
+        "group": "layer10.mlp_fc",
+        "ppl": 111.6,
+        "violations": 0,
+        "n_compressed_groups": 30,
+        "n_approx_matrices": 195,
+        "flops_saved_pct": 41.7,
+        "delta_ppl": 10.0
+      },
+      {
+        "round": 31,
+        "group": "layer2.mlp_proj",
+        "ppl": 115.0,
+        "violations": 0,
+        "n_compressed_groups": 31,
+        "n_approx_matrices": 196,
+        "flops_saved_pct": 41.9,
+        "delta_ppl": 3.4
+      },
+      {
+        "round": 32,
+        "group": "layer3.mlp_proj",
+        "ppl": 139.7,
+        "violations": 0,
+        "n_compressed_groups": 32,
+        "n_approx_matrices": 197,
+        "flops_saved_pct": 42.1,
+        "delta_ppl": 24.7
+      },
+      {
+        "round": 33,
+        "group": "layer6.mlp_fc",
+        "ppl": 223.3,
+        "violations": 0,
+        "n_compressed_groups": 33,
+        "n_approx_matrices": 198,
+        "flops_saved_pct": 42.3,
+        "delta_ppl": 83.6
+      },
+      {
+        "round": 34,
+        "group": "layer5.V",
+        "ppl": 244.5,
+        "violations": 0,
+        "n_compressed_groups": 34,
+        "n_approx_matrices": 210,
+        "flops_saved_pct": 44.9,
+        "delta_ppl": 21.2
+      },
+      {
+        "round": 35,
+        "group": "layer6.V",
+        "ppl": 292.9,
+        "violations": 0,
+        "n_compressed_groups": 35,
+        "n_approx_matrices": 222,
+        "flops_saved_pct": 47.4,
+        "delta_ppl": 48.4
+      },
+      {
+        "round": 36,
+        "group": "layer4.K",
+        "ppl": 477.0,
+        "violations": 0,
+        "n_compressed_groups": 36,
+        "n_approx_matrices": 234,
+        "flops_saved_pct": 50.0,
+        "delta_ppl": 184.1
+      }
+    ],
+    "group_scores": [
+      [
+        "layer3.attn_proj",
+        22.997770613385754,
+        0.014965077731627474
+      ],
+      [
+        "layer1.V",
+        23.225113787812976,
+        0.24230825215884977
+      ],
+      [
+        "layer3.V",
+        23.249264556848026,
+        0.2664590211938993
+      ],
+      [
+        "layer1.Q",
+        23.301355792383866,
+        0.3185502567297398
+      ],
+      [
+        "layer1.attn_proj",
+        23.3323985254972,
+        0.3495929898430745
+      ],
+      [
+        "layer3.Q",
+        23.5527060819682,
+        0.5699005463140736
+      ],
+      [
+        "layer3.K",
+        23.5741528482435,
+        0.5913473125893738
+      ],
+      [
+        "layer2.V",
+        23.613996215029054,
+        0.631190679374928
+      ],
+      [
+        "layer4.K",
+        23.7045945806913,
+        0.7217890450371733
+      ],
+      [
+        "layer2.attn_proj",
+        23.82524133426513,
+        0.8424357986110032
+      ],
+      [
+        "layer11.Q",
+        23.940680459221937,
+        0.957874923567811
+      ],
+      [
+        "layer7.mlp_proj",
+        23.975615098199878,
+        0.9928095625457516
+      ],
+      [
+        "layer11.K",
+        23.979036012289914,
+        0.9962304766357875
+      ],
+      [
+        "layer6.K",
+        24.023334872974058,
+        1.0405293373199314
+      ],
+      [
+        "layer4.Q",
+        24.05544252089669,
+        1.0726369852425641
+      ],
+      [
+        "layer4.attn_proj",
+        24.103246944823415,
+        1.1204414091692882
+      ],
+      [
+        "layer10.V",
+        24.227315744812106,
+        1.2445102091579798
+      ],
+      [
+        "layer8.V",
+        24.281677717860237,
+        1.298872182206111
+      ],
+      [
+        "layer9.mlp_proj",
+        24.47128629713803,
+        1.4884807614839026
+      ],
+      [
+        "layer10.attn_proj",
+        24.485191666278283,
+        1.5023861306241564
+      ],
+      [
+        "layer10.K",
+        24.49535001364477,
+        1.5125444779906445
+      ],
+      [
+        "layer6.attn_proj",
+        24.49871455752126,
+        1.5159090218671345
+      ],
+      [
+        "layer10.mlp_proj",
+        24.54872488547458,
+        1.5659193498204544
+      ],
+      [
+        "layer3.mlp_proj",
+        24.650083492139274,
+        1.6672779564851474
+      ],
+      [
+        "layer10.Q",
+        24.66327926090573,
+        1.680473725251602
+      ],
+      [
+        "layer4.V",
+        24.68886644210279,
+        1.7060609064486627
+      ],
+      [
+        "layer11.attn_proj",
+        24.718851662733375,
+        1.7360461270792484
+      ],
+      [
+        "layer9.attn_proj",
+        24.72210369728255,
+        1.7392981616284224
+      ],
+      [
+        "layer8.attn_proj",
+        24.75652320216764,
+        1.7737176665135124
+      ],
+      [
+        "layer8.mlp_proj",
+        24.812397686935984,
+        1.829592151281858
+      ],
+      [
+        "layer8.K",
+        24.858377123006765,
+        1.8755715873526384
+      ],
+      [
+        "layer1.K",
+        24.94471726484452,
+        1.961911729190394
+      ],
+      [
+        "layer6.V",
+        24.974785418053482,
+        1.991979882399356
+      ],
+      [
+        "layer9.V",
+        25.051357052751065,
+        2.068551517096939
+      ],
+      [
+        "layer7.attn_proj",
+        25.06263739018834,
+        2.0798318545342127
+      ],
+      [
+        "layer7.V",
+        25.101466763264824,
+        2.1186612276106978
+      ],
+      [
+        "layer6.mlp_proj",
+        25.196826893226174,
+        2.2140213575720473
+      ],
+      [
+        "layer5.mlp_proj",
+        25.20377258825402,
+        2.2209670525998924
+      ],
+      [
+        "layer2.mlp_proj",
+        25.243273930842303,
+        2.2604683951881768
+      ],
+      [
+        "layer11.mlp_proj",
+        25.255106962136672,
+        2.272301426482546
+      ],
+      [
+        "layer9.mlp_fc",
+        25.372865414651237,
+        2.3900598789971106
+      ],
+      [
+        "layer7.K",
+        25.47102432622714,
+        2.488218790573015
+      ],
+      [
+        "layer8.mlp_fc",
+        25.47368698195338,
+        2.4908814462992552
+      ],
+      [
+        "layer8.Q",
+        25.65708808648224,
+        2.6742825508281136
+      ],
+      [
+        "layer9.K",
+        25.670523079195664,
+        2.687717543541538
+      ],
+      [
+        "layer2.K",
+        25.67378218505568,
+        2.690976649401552
+      ],
+      [
+        "layer10.mlp_fc",
+        25.72687713475514,
+        2.7440715991010123
+      ],
+      [
+        "layer2.Q",
+        25.789343586669357,
+        2.806538051015231
+      ],
+      [
+        "layer9.Q",
+        25.979121461867397,
+        2.9963159262132706
+      ],
+      [
+        "layer6.Q",
+        26.151304015346856,
+        3.1684984796927296
+      ],
+      [
+        "layer5.V",
+        26.17879609412482,
+        3.195990558470694
+      ],
+      [
+        "layer7.mlp_fc",
+        26.207973602002763,
+        3.225168066348637
+      ],
+      [
+        "layer7.Q",
+        26.355002037485495,
+        3.372196501831368
+      ],
+      [
+        "layer0.V",
+        26.404592745099908,
+        3.4217872094457817
+      ],
+      [
+        "layer11.V",
+        26.67330573908024,
+        3.690500203426115
+      ],
+      [
+        "layer4.mlp_proj",
+        26.70692047892623,
+        3.7241149432721024
+      ],
+      [
+        "layer6.mlp_fc",
+        26.975322579593662,
+        3.992517043939536
+      ],
+      [
+        "layer5.attn_proj",
+        27.230960837379104,
+        4.248155301724978
+      ],
+      [
+        "layer1.mlp_proj",
+        27.414322477432886,
+        4.43151694177876
+      ],
+      [
+        "layer11.mlp_fc",
+        30.320268473284223,
+        7.337462937630097
+      ],
+      [
+        "layer4.mlp_fc",
+        35.628160325359794,
+        12.645354789705667
+      ],
+      [
+        "layer5.K",
+        36.5153532782505,
+        13.532547742596375
+      ],
+      [
+        "layer5.Q",
+        36.95521209865607,
+        13.972406563001943
+      ],
+      [
+        "layer5.mlp_fc",
+        38.420591643511706,
+        15.43778610785758
+      ],
+      [
+        "layer3.mlp_fc",
+        42.39645406927864,
+        19.413648533624514
+      ],
+      [
+        "layer0.K",
+        78.94600892319426,
+        55.96320338754013
+      ],
+      [
+        "layer0.attn_proj",
+        94.98561192965599,
+        72.00280639400187
+      ],
+      [
+        "layer0.Q",
+        139.05826324556602,
+        116.0754577099119
+      ],
+      [
+        "layer1.mlp_fc",
+        1657.3931019237486,
+        1634.4102963880946
+      ],
+      [
+        "layer0.mlp_proj",
+        4048.4863295439413,
+        4025.503524008287
+      ],
+      [
+        "layer2.mlp_fc",
+        5056.089763114785,
+        5033.106957579131
+      ],
+      [
+        "layer0.mlp_fc",
+        459927.11727035337,
+        459904.1344648177
+      ]
+    ]
+  }
+}

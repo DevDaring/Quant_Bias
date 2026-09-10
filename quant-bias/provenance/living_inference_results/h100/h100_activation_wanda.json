@@ -1,0 +1,91 @@
+{
+  "baseline": {
+    "ppl": 6.15
+  },
+  "activation_wanda": {
+    "q_proj": {
+      "ppl": 6.17,
+      "regret": 0.02
+    },
+    "k_proj": {
+      "ppl": 6.16,
+      "regret": 0.01
+    },
+    "v_proj": {
+      "ppl": 6.31,
+      "regret": 0.16
+    },
+    "o_proj": {
+      "ppl": 6.28,
+      "regret": 0.13
+    },
+    "gate_proj": {
+      "ppl": 6.52,
+      "regret": 0.37
+    },
+    "up_proj": {
+      "ppl": 6.41,
+      "regret": 0.26
+    },
+    "down_proj": {
+      "ppl": 6.57,
+      "regret": 0.43
+    }
+  },
+  "simplified_wanda": {
+    "q_proj": {
+      "ppl": 6.31,
+      "regret": 0.16
+    },
+    "k_proj": {
+      "ppl": 6.17,
+      "regret": 0.02
+    },
+    "v_proj": {
+      "ppl": 20.45,
+      "regret": 14.31
+    },
+    "o_proj": {
+      "ppl": 6.55,
+      "regret": 0.4
+    },
+    "gate_proj": {
+      "ppl": 6.74,
+      "regret": 0.6
+    },
+    "up_proj": {
+      "ppl": 6.76,
+      "regret": 0.61
+    },
+    "down_proj": {
+      "ppl": 7.76,
+      "regret": 1.61
+    }
+  },
+  "layer_ablation": {
+    "layer_0": {
+      "ppl": 6.16,
+      "regret": 0.01
+    },
+    "layer_1": {
+      "ppl": 6.16,
+      "regret": 0.01
+    },
+    "layer_2": {
+      "ppl": 6.19,
+      "regret": 0.04
+    },
+    "layer_3": {
+      "ppl": 6.2,
+      "regret": 0.05
+    },
+    "layer_15": {
+      "ppl": 6.18,
+      "regret": 0.03
+    },
+    "layer_31": {
+      "ppl": 6.27,
+      "regret": 0.12
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "model": "Qwen/Qwen3.5-2B",
+  "global_max_ratio": 0.686108,
+  "conservatism": 1.5,
+  "configs": [
+    {
+      "config": "single_L0",
+      "max_ratio": 0.528993,
+      "mean_ratio": 0.322463,
+      "conservatism": 1.9
+    },
+    {
+      "config": "single_L1",
+      "max_ratio": 0.568996,
+      "mean_ratio": 0.39762,
+      "conservatism": 1.8
+    },
+    {
+      "config": "single_L2",
+      "max_ratio": 0.539185,
+      "mean_ratio": 0.373181,
+      "conservatism": 1.9
+    },
+    {
+      "config": "single_L3",
+      "max_ratio": 0.558862,
+      "mean_ratio": 0.34724,
+      "conservatism": 1.8
+    },
+    {
+      "config": "single_L4",
+      "max_ratio": 0.580743,
+      "mean_ratio": 0.368912,
+      "conservatism": 1.7
+    },
+    {
+      "config": "single_L5",
+      "max_ratio": 0.491699,
+      "mean_ratio": 0.333862,
+      "conservatism": 2.0
+    },
+    {
+      "config": "single_L6",
+      "max_ratio": 0.538088,
+      "mean_ratio": 0.336311,
+      "conservatism": 1.9
+    },
+    {
+      "config": "single_L7",
+      "max_ratio": 0.455772,
+      "mean_ratio": 0.304752,
+      "conservatism": 2.2
+    },
+    {
+      "config": "single_L8",
+      "max_ratio": 0.494127,
+      "mean_ratio": 0.333885,
+      "conservatism": 2.0
+    },
+    {
+      "config": "single_L9",
+      "max_ratio": 0.4377,
+      "mean_ratio": 0.310638,
+      "conservatism": 2.3
+    },
+    {
+      "config": "single_L10",
+      "max_ratio": 0.424025,
+      "mean_ratio": 0.30475,
+      "conservatism": 2.4
+    },
+    {
+      "config": "single_L11",
+      "max_ratio": 0.460743,
+      "mean_ratio": 0.296072,
+      "conservatism": 2.2
+    },
+    {
+      "config": "single_L12",
+      "max_ratio": 0.494009,
+      "mean_ratio": 0.351832,
+      "conservatism": 2.0
+    },
+    {
+      "config": "single_L13",
+      "max_ratio": 0.532125,
+      "mean_ratio": 0.386084,
+      "conservatism": 1.9
+    },
+    {
+      "config": "single_L14",
+      "max_ratio": 0.543065,
+      "mean_ratio": 0.385386,
+      "conservatism": 1.8
+    },
+    {
+      "config": "single_L15",
+      "max_ratio": 0.583708,
+      "mean_ratio": 0.330247,
+      "conservatism": 1.7
+    },
+    {
+      "config": "single_L16",
+      "max_ratio": 0.686108,
+      "mean_ratio": 0.399344,
+      "conservatism": 1.5
+    },
+    {
+      "config": "single_L17",
+      "max_ratio": 0.623686,
+      "mean_ratio": 0.424272,
+      "conservatism": 1.6
+    },
+    {
+      "config": "single_L18",
+      "max_ratio": 0.604402,
+      "mean_ratio": 0.402079,
+      "conservatism": 1.7
+    },
+    {
+      "config": "single_L19",
+      "max_ratio": 0.512873,
+      "mean_ratio": 0.310145,
+      "conservatism": 1.9
+    },
+    {
+      "config": "single_L20",
+      "max_ratio": 0.633664,
+      "mean_ratio": 0.431187,
+      "conservatism": 1.6
+    },
+    {
+      "config": "single_L21",
+      "max_ratio": 0.680096,
+      "mean_ratio": 0.45384,
+      "conservatism": 1.5
+    },
+    {
+      "config": "single_L22",
+      "max_ratio": 0.679656,
+      "mean_ratio": 0.447991,
+      "conservatism": 1.5
+    },
+    {
+      "config": "single_L23",
+      "max_ratio": 0.578615,
+      "mean_ratio": 0.379082,
+      "conservatism": 1.7
+    },
+    {
+      "config": "comp_q_proj",
+      "max_ratio": 0.446884,
+      "mean_ratio": 0.229206,
+      "conservatism": 2.2
+    },
+    {
+      "config": "comp_k_proj",
+      "max_ratio": 0.312877,
+      "mean_ratio": 0.215756,
+      "conservatism": 3.2
+    },
+    {
+      "config": "comp_v_proj",
+      "max_ratio": 0.437382,
+      "mean_ratio": 0.31827,
+      "conservatism": 2.3
+    },
+    {
+      "config": "comp_o_proj",
+      "max_ratio": 0.533276,
+      "mean_ratio": 0.375832,
+      "conservatism": 1.9
+    },
+    {
+      "config": "comp_gate_proj",
+      "max_ratio": 0.575874,
+      "mean_ratio": 0.410045,
+      "conservatism": 1.7
+    },
+    {
+      "config": "comp_up_proj",
+      "max_ratio": 0.617666,
+      "mean_ratio": 0.456472,
+      "conservatism": 1.6
+    },
+    {
+      "config": "comp_down_proj",
+      "max_ratio": 0.543239,
+      "mean_ratio": 0.339822,
+      "conservatism": 1.8
+    },
+    {
+      "config": "all_50pct",
+      "max_ratio": 0.657564,
+      "mean_ratio": 0.340335,
+      "conservatism": 1.5
+    }
+  ]
+}

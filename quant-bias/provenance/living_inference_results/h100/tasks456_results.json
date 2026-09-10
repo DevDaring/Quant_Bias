@@ -1,0 +1,32 @@
+{
+  "model": "mistralai/Mistral-7B-v0.1",
+  "baseline_ppl": 5.62,
+  "deep_lyapunov": {
+    "contracting": 18,
+    "total": 31,
+    "max_rho": 1.0715,
+    "note": "Full alpha^2/beta^2 decomposition confirms residual growth mechanism at 7B scale"
+  },
+  "catastrophe_threshold_L0": [
+    {"sparsity": 0.50, "ppl": 5.73, "regret": 0.11},
+    {"sparsity": 0.70, "ppl": 8.40, "regret": 2.79},
+    {"sparsity": 0.80, "ppl": 16.68, "regret": 11.06},
+    {"sparsity": 0.90, "ppl": 45.28, "regret": 39.67},
+    {"sparsity": 0.95, "ppl": 75.87, "regret": 70.26},
+    {"sparsity": 0.99, "ppl": 147.51, "regret": 141.90}
+  ],
+  "catastrophe_threshold": 0.99,
+  "catastrophe_threshold_note": "regret > 100 only at 99% sparsity. GPT-2 Small threshold < 5%. 20x difference.",
+  "mmlu": {
+    "baseline_5shot": 0.6263,
+    "wanda_50pct_5shot": 0.3657,
+    "absolute_drop": 0.2606,
+    "relative_drop_pct": 41.6
+  },
+  "hellaswag": {
+    "baseline_0shot": 0.8117,
+    "wanda_50pct_0shot": 0.722,
+    "absolute_drop": 0.0897,
+    "relative_drop_pct": 11.0
+  }
+}

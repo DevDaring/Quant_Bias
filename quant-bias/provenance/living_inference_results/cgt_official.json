@@ -1,0 +1,28 @@
+{
+  "baseline": 5.47,
+  "setup": "sequential_c4_32samples_seqlen2048_tf4.47",
+  "sp50": {
+    "atp_best": 6.88,
+    "atp_beta": 0.002,
+    "uniform": 6.94,
+    "cgt_mk35": 7.59,
+    "cgt_mk40": 6.91,
+    "cgt_mk45": 6.5
+  },
+  "sp70": {
+    "atp_best": 22.32,
+    "atp_beta": 0.01,
+    "uniform": 70.46,
+    "cgt_mk35": 9.78,
+    "cgt_mk40": 8.2,
+    "cgt_mk45": 7.31
+  },
+  "sp90": {
+    "atp_best": 7037.6,
+    "atp_beta": 0.004,
+    "uniform": 18510.21,
+    "cgt_mk35": 21.89,
+    "cgt_mk40": 10.97,
+    "cgt_mk45": 8.0
+  }
+}

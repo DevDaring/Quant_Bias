@@ -1,0 +1,53 @@
+{
+  "model": "openai-community/gpt2",
+  "short": "gpt2_small",
+  "params": "117M",
+  "architecture": "GPT-2 Small",
+  "dtype": "torch.float32",
+  "methodology": "model(input_ids, labels=input_ids) with HF auto-shift",
+  "max_tokens": 4096,
+  "chunk_size": 1024,
+  "dataset": "WikiText-103 test",
+  "n_layers": 12,
+  "baseline_ppl": 26.53,
+  "n_tokens_evaluated": 4092,
+  "lyapunov": {
+    "v_trajectory": [
+      1.2021106158499606e-05,
+      7.153879778343253e-06,
+      5.969515768811107e-06,
+      5.729034910473274e-06,
+      5.444004273158498e-06,
+      5.1272222663101275e-06,
+      4.7251719479390886e-06,
+      4.226019882480614e-06,
+      3.921561983588617e-06,
+      3.533874178174301e-06,
+      2.3760881049383897e-06,
+      1.6299920844176086e-06
+    ],
+    "rho_per_layer": [
+      0.5951,
+      0.8344,
+      0.9597,
+      0.9502,
+      0.9418,
+      0.9216,
+      0.8944,
+      0.928,
+      0.9011,
+      0.6724,
+      0.686
+    ],
+    "max_rho": 0.9597,
+    "contracting": 11,
+    "total": 11,
+    "epsilon": 0.01,
+    "seq_len": 512
+  },
+  "wanda_50pct": {
+    "pruned_ppl": 3196.89,
+    "degradation_factor": 120.49,
+    "actual_sparsity": 0.5003
+  }
+}

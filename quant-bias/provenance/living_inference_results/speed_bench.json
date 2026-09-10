@@ -1,0 +1,38 @@
+{
+  "LiquidAI/LFM2.5-1.2B-Thinking": {
+    "nl": 16,
+    "dense_tps": 71.1,
+    "skip_tps": 70.9,
+    "speedup": 1.0,
+    "skip": [
+      2,
+      3
+    ],
+    "n_rm": 2
+  },
+  "Qwen/Qwen3.5-2B": {
+    "nl": 24,
+    "dense_tps": 24.3,
+    "skip_tps": 24.5,
+    "speedup": 1.01,
+    "skip": [
+      7,
+      9,
+      11
+    ],
+    "n_rm": 3
+  },
+  "NousResearch/Llama-2-7b-hf": {
+    "nl": 32,
+    "dense_tps": 3.0,
+    "skip_tps": 0.6,
+    "speedup": 0.2,
+    "skip": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "n_rm": 4
+  }
+}

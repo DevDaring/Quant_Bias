@@ -1,0 +1,23 @@
+{
+  "baseline": 5.47,
+  "perrow_0.397": {
+    "ppl": 6.07,
+    "target_sp": 0.397,
+    "actual_sp": 0.397
+  },
+  "perrow_0.412": {
+    "ppl": 6.13,
+    "target_sp": 0.412,
+    "actual_sp": 0.4119
+  },
+  "perrow_0.443": {
+    "ppl": 6.33,
+    "target_sp": 0.443,
+    "actual_sp": 0.4429
+  },
+  "perrow_0.5": {
+    "ppl": 6.94,
+    "target_sp": 0.5,
+    "actual_sp": 0.5
+  }
+}

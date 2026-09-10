@@ -1,0 +1,62 @@
+{
+  "activation_wanda": {
+    "q_proj": {
+      "ppl": 13.64,
+      "regret": 0.1
+    },
+    "k_proj": {
+      "ppl": 13.52,
+      "regret": -0.02
+    },
+    "v_proj": {
+      "ppl": 13.59,
+      "regret": 0.05
+    },
+    "o_proj": {
+      "ppl": 13.77,
+      "regret": 0.23
+    },
+    "gate_proj": {
+      "ppl": 14.6,
+      "regret": 1.06
+    },
+    "up_proj": {
+      "ppl": 14.7,
+      "regret": 1.16
+    },
+    "down_proj": {
+      "ppl": 14.41,
+      "regret": 0.87
+    }
+  },
+  "simplified_wanda": {
+    "q_proj": {
+      "ppl": 14.19,
+      "regret": 0.65
+    },
+    "k_proj": {
+      "ppl": 13.8,
+      "regret": 0.26
+    },
+    "v_proj": {
+      "ppl": 15.73,
+      "regret": 2.19
+    },
+    "o_proj": {
+      "ppl": 16.83,
+      "regret": 3.29
+    },
+    "gate_proj": {
+      "ppl": 15.66,
+      "regret": 2.12
+    },
+    "up_proj": {
+      "ppl": 21.25,
+      "regret": 7.71
+    },
+    "down_proj": {
+      "ppl": 22.96,
+      "regret": 9.42
+    }
+  }
+}

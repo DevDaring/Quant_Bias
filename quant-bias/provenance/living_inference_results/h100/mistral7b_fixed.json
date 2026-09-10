@@ -1,0 +1,45 @@
+{
+  "model": "mistralai/Mistral-7B-v0.1",
+  "runtime": "Google Colab A100 40GB",
+  "eval_method": "model(tokens, labels=tokens) — correct HF auto-shift",
+  "n_chunks": 4,
+  "chunk_size": 1024,
+  "baseline_ppl": 6.31,
+  "lyapunov": {
+    "contracting": 20,
+    "total": 31,
+    "max_rho": 1.099,
+    "note": "Comprehensive run with 16 chunks showed 18/31 contract, max_rho=1.39"
+  },
+  "component_sensitivity_50pct_wanda": [
+    {"component": "v_proj", "ppl": 8.76, "regret": 2.45},
+    {"component": "down_proj", "ppl": 7.44, "regret": 1.13},
+    {"component": "gate_proj", "ppl": 6.95, "regret": 0.65},
+    {"component": "up_proj", "ppl": 6.87, "regret": 0.57},
+    {"component": "o_proj", "ppl": 6.66, "regret": 0.35},
+    {"component": "q_proj", "ppl": 6.42, "regret": 0.11},
+    {"component": "k_proj", "ppl": 6.32, "regret": 0.01}
+  ],
+  "single_layer_ablation_50pct_wanda": [
+    {"layer": 0, "ppl": 6.38, "regret": 0.07},
+    {"layer": 1, "ppl": 6.42, "regret": 0.12},
+    {"layer": 2, "ppl": 6.39, "regret": 0.09},
+    {"layer": 3, "ppl": 6.39, "regret": 0.08},
+    {"layer": 8, "ppl": 6.33, "regret": 0.03},
+    {"layer": 16, "ppl": 6.32, "regret": 0.01},
+    {"layer": 24, "ppl": 6.33, "regret": 0.03},
+    {"layer": 31, "ppl": 6.82, "regret": 0.52}
+  ],
+  "wanda_sparsity_sweep": [
+    {"sparsity": 0.3, "ppl": 19.61},
+    {"sparsity": 0.4, "ppl": 9.48},
+    {"sparsity": 0.5, "ppl": 15.13},
+    {"sparsity": 0.6, "ppl": 366.96},
+    {"sparsity": 0.7, "ppl": 8835.01}
+  ],
+  "qwen3_8b_partial": {
+    "note": "Partial results before OOM on comprehensive run",
+    "baseline_ppl": 10.38,
+    "lyapunov": {"contracting": 17, "total": 35, "max_rho": 1.33}
+  }
+}

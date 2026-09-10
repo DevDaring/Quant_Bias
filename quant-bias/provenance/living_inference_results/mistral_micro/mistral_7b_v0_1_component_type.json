@@ -1,0 +1,30 @@
+{
+  "q_proj": {
+    "ppl": 6.31,
+    "regret": 0.16
+  },
+  "k_proj": {
+    "ppl": 6.17,
+    "regret": 0.02
+  },
+  "v_proj": {
+    "ppl": 20.45,
+    "regret": 14.3
+  },
+  "o_proj": {
+    "ppl": 6.55,
+    "regret": 0.4
+  },
+  "gate_proj": {
+    "ppl": 6.74,
+    "regret": 0.59
+  },
+  "up_proj": {
+    "ppl": 6.76,
+    "regret": 0.61
+  },
+  "down_proj": {
+    "ppl": 7.77,
+    "regret": 1.62
+  }
+}

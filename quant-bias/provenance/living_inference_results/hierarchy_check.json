@@ -1,0 +1,75 @@
+{
+  "Qwen/Qwen3.5-2B": {
+    "baseline": 12.11,
+    "results": {
+      "linear_attn.in_proj_qkv": {
+        "ppl": 12.47,
+        "regret": 0.36
+      },
+      "linear_attn.in_proj_z": {
+        "ppl": 12.38,
+        "regret": 0.27
+      },
+      "linear_attn.out_proj": {
+        "ppl": 12.78,
+        "regret": 0.67
+      },
+      "mlp.down_proj": {
+        "ppl": 13.09,
+        "regret": 0.98
+      },
+      "mlp.gate_proj": {
+        "ppl": 12.78,
+        "regret": 0.68
+      },
+      "mlp.up_proj": {
+        "ppl": 12.88,
+        "regret": 0.77
+      }
+    },
+    "spread": 3.5,
+    "classification": "FLAT",
+    "components": [
+      "linear_attn.in_proj_qkv",
+      "linear_attn.in_proj_z",
+      "linear_attn.out_proj",
+      "mlp.down_proj",
+      "mlp.gate_proj",
+      "mlp.up_proj"
+    ]
+  },
+  "LiquidAI/LFM2.5-1.2B-Thinking": {
+    "baseline": 47.77,
+    "results": {
+      "conv.in_proj": {
+        "ppl": 58.55,
+        "regret": 10.78
+      },
+      "conv.out_proj": {
+        "ppl": 50.73,
+        "regret": 2.96
+      },
+      "feed_forward.w1": {
+        "ppl": 58.78,
+        "regret": 11.01
+      },
+      "feed_forward.w2": {
+        "ppl": 54.16,
+        "regret": 6.39
+      },
+      "feed_forward.w3": {
+        "ppl": 51.99,
+        "regret": 4.22
+      }
+    },
+    "spread": 3.7,
+    "classification": "FLAT",
+    "components": [
+      "conv.in_proj",
+      "conv.out_proj",
+      "feed_forward.w1",
+      "feed_forward.w2",
+      "feed_forward.w3"
+    ]
+  }
+}

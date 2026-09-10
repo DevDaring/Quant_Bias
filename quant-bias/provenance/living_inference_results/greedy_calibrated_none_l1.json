@@ -1,0 +1,917 @@
+{
+  "calibration_mode": "none",
+  "compression_level": 1,
+  "baseline_ppl": 28.900631421759783,
+  "results": [
+    {
+      "round": 0,
+      "group": null,
+      "ppl": 28.900631421759783,
+      "violations": 0,
+      "n_compressed_groups": 0,
+      "calibration_mode": "none"
+    },
+    {
+      "round": 1,
+      "group": "layer4.K",
+      "ppl": 28.6,
+      "violations": 0,
+      "n_compressed_groups": 1,
+      "n_approx_matrices": 12,
+      "delta_ppl": -0.3,
+      "elapsed": 9.7
+    },
+    {
+      "round": 2,
+      "group": "layer6.K",
+      "ppl": 28.3,
+      "violations": 0,
+      "n_compressed_groups": 2,
+      "n_approx_matrices": 24,
+      "delta_ppl": -0.3,
+      "elapsed": 10.1
+    },
+    {
+      "round": 3,
+      "group": "layer2.K",
+      "ppl": 28.1,
+      "violations": 0,
+      "n_compressed_groups": 3,
+      "n_approx_matrices": 36,
+      "delta_ppl": -0.2,
+      "elapsed": 13.5
+    },
+    {
+      "round": 4,
+      "group": "layer1.attn_proj",
+      "ppl": 27.9,
+      "violations": 0,
+      "n_compressed_groups": 4,
+      "n_approx_matrices": 37,
+      "delta_ppl": -0.2,
+      "elapsed": 14.4
+    },
+    {
+      "round": 5,
+      "group": "layer3.V",
+      "ppl": 27.9,
+      "violations": 0,
+      "n_compressed_groups": 5,
+      "n_approx_matrices": 49,
+      "delta_ppl": -0.0,
+      "elapsed": 15.5
+    },
+    {
+      "round": 6,
+      "group": "layer6.Q",
+      "ppl": 27.9,
+      "violations": 0,
+      "n_compressed_groups": 6,
+      "n_approx_matrices": 61,
+      "delta_ppl": -0.0,
+      "elapsed": 22.0
+    },
+    {
+      "round": 7,
+      "group": "layer5.Q",
+      "ppl": 29.2,
+      "violations": 0,
+      "n_compressed_groups": 7,
+      "n_approx_matrices": 73,
+      "delta_ppl": 1.3,
+      "elapsed": 20.9
+    },
+    {
+      "round": 8,
+      "group": "layer3.K",
+      "ppl": 29.0,
+      "violations": 0,
+      "n_compressed_groups": 8,
+      "n_approx_matrices": 85,
+      "delta_ppl": -0.2,
+      "elapsed": 21.6
+    },
+    {
+      "round": 9,
+      "group": "layer1.K",
+      "ppl": 29.0,
+      "violations": 0,
+      "n_compressed_groups": 9,
+      "n_approx_matrices": 97,
+      "delta_ppl": -0.0,
+      "elapsed": 19.5
+    },
+    {
+      "round": 10,
+      "group": "layer3.Q",
+      "ppl": 29.0,
+      "violations": 0,
+      "n_compressed_groups": 10,
+      "n_approx_matrices": 109,
+      "delta_ppl": -0.0,
+      "elapsed": 26.5
+    },
+    {
+      "round": 11,
+      "group": "layer0.K",
+      "ppl": 28.8,
+      "violations": 0,
+      "n_compressed_groups": 11,
+      "n_approx_matrices": 121,
+      "delta_ppl": -0.2,
+      "elapsed": 26.3
+    },
+    {
+      "round": 12,
+      "group": "layer1.Q",
+      "ppl": 28.9,
+      "violations": 0,
+      "n_compressed_groups": 12,
+      "n_approx_matrices": 133,
+      "delta_ppl": 0.1,
+      "elapsed": 27.0
+    },
+    {
+      "round": 13,
+      "group": "layer2.Q",
+      "ppl": 29.8,
+      "violations": 0,
+      "n_compressed_groups": 13,
+      "n_approx_matrices": 145,
+      "delta_ppl": 0.9,
+      "elapsed": 25.1
+    },
+    {
+      "round": 14,
+      "group": "layer2.V",
+      "ppl": 29.9,
+      "violations": 0,
+      "n_compressed_groups": 14,
+      "n_approx_matrices": 157,
+      "delta_ppl": 0.1,
+      "elapsed": 25.1
+    },
+    {
+      "round": 15,
+      "group": "layer2.attn_proj",
+      "ppl": 29.6,
+      "violations": 0,
+      "n_compressed_groups": 15,
+      "n_approx_matrices": 158,
+      "delta_ppl": -0.3,
+      "elapsed": 37.1
+    },
+    {
+      "round": 16,
+      "group": "layer8.Q",
+      "ppl": 29.6,
+      "violations": 0,
+      "n_compressed_groups": 16,
+      "n_approx_matrices": 170,
+      "delta_ppl": 0.0,
+      "elapsed": 36.3
+    },
+    {
+      "round": 17,
+      "group": "layer9.Q",
+      "ppl": 29.6,
+      "violations": 0,
+      "n_compressed_groups": 17,
+      "n_approx_matrices": 182,
+      "delta_ppl": -0.0,
+      "elapsed": 40.6
+    },
+    {
+      "round": 18,
+      "group": "layer5.K",
+      "ppl": 32.9,
+      "violations": 0,
+      "n_compressed_groups": 18,
+      "n_approx_matrices": 194,
+      "delta_ppl": 3.3,
+      "elapsed": 42.6
+    },
+    {
+      "round": 19,
+      "group": "layer7.K",
+      "ppl": 32.4,
+      "violations": 0,
+      "n_compressed_groups": 19,
+      "n_approx_matrices": 206,
+      "delta_ppl": -0.5,
+      "elapsed": 51.9
+    },
+    {
+      "round": 20,
+      "group": "layer10.V",
+      "ppl": 32.6,
+      "violations": 0,
+      "n_compressed_groups": 20,
+      "n_approx_matrices": 218,
+      "delta_ppl": 0.2,
+      "elapsed": 42.2
+    },
+    {
+      "round": 21,
+      "group": "layer10.Q",
+      "ppl": 32.8,
+      "violations": 0,
+      "n_compressed_groups": 21,
+      "n_approx_matrices": 230,
+      "delta_ppl": 0.2,
+      "elapsed": 43.3
+    },
+    {
+      "round": 22,
+      "group": "layer10.K",
+      "ppl": 32.9,
+      "violations": 0,
+      "n_compressed_groups": 22,
+      "n_approx_matrices": 242,
+      "delta_ppl": 0.1,
+      "elapsed": 38.7
+    },
+    {
+      "round": 23,
+      "group": "layer11.K",
+      "ppl": 32.9,
+      "violations": 0,
+      "n_compressed_groups": 23,
+      "n_approx_matrices": 254,
+      "delta_ppl": 0.0,
+      "elapsed": 47.6
+    },
+    {
+      "round": 24,
+      "group": "layer8.V",
+      "ppl": 33.4,
+      "violations": 0,
+      "n_compressed_groups": 24,
+      "n_approx_matrices": 266,
+      "delta_ppl": 0.5,
+      "elapsed": 51.9
+    },
+    {
+      "round": 25,
+      "group": "layer0.V",
+      "ppl": 34.5,
+      "violations": 0,
+      "n_compressed_groups": 25,
+      "n_approx_matrices": 278,
+      "delta_ppl": 1.1,
+      "elapsed": 49.8
+    },
+    {
+      "round": 26,
+      "group": "layer11.Q",
+      "ppl": 34.4,
+      "violations": 0,
+      "n_compressed_groups": 26,
+      "n_approx_matrices": 290,
+      "delta_ppl": -0.1,
+      "elapsed": 47.2
+    },
+    {
+      "round": 27,
+      "group": "layer0.Q",
+      "ppl": 34.7,
+      "violations": 0,
+      "n_compressed_groups": 27,
+      "n_approx_matrices": 302,
+      "delta_ppl": 0.3,
+      "elapsed": 50.0
+    },
+    {
+      "round": 28,
+      "group": "layer6.attn_proj",
+      "ppl": 36.7,
+      "violations": 0,
+      "n_compressed_groups": 28,
+      "n_approx_matrices": 303,
+      "delta_ppl": 2.0,
+      "elapsed": 58.2
+    },
+    {
+      "round": 29,
+      "group": "layer8.attn_proj",
+      "ppl": 37.4,
+      "violations": 0,
+      "n_compressed_groups": 29,
+      "n_approx_matrices": 304,
+      "delta_ppl": 0.7,
+      "elapsed": 73.6
+    },
+    {
+      "round": 30,
+      "group": "layer3.attn_proj",
+      "ppl": 38.6,
+      "violations": 0,
+      "n_compressed_groups": 30,
+      "n_approx_matrices": 305,
+      "delta_ppl": 1.2,
+      "elapsed": 65.4
+    },
+    {
+      "round": 31,
+      "group": "layer4.V",
+      "ppl": 38.0,
+      "violations": 0,
+      "n_compressed_groups": 31,
+      "n_approx_matrices": 317,
+      "delta_ppl": -0.6,
+      "elapsed": 69.9
+    },
+    {
+      "round": 32,
+      "group": "layer4.Q",
+      "ppl": 40.1,
+      "violations": 0,
+      "n_compressed_groups": 32,
+      "n_approx_matrices": 329,
+      "delta_ppl": 2.1,
+      "elapsed": 72.0
+    },
+    {
+      "round": 33,
+      "group": "layer7.Q",
+      "ppl": 41.1,
+      "violations": 0,
+      "n_compressed_groups": 33,
+      "n_approx_matrices": 341,
+      "delta_ppl": 1.0,
+      "elapsed": 66.9
+    },
+    {
+      "round": 34,
+      "group": "layer9.K",
+      "ppl": 41.1,
+      "violations": 0,
+      "n_compressed_groups": 34,
+      "n_approx_matrices": 353,
+      "delta_ppl": -0.0,
+      "elapsed": 72.2
+    },
+    {
+      "round": 35,
+      "group": "layer6.V",
+      "ppl": 39.8,
+      "violations": 0,
+      "n_compressed_groups": 35,
+      "n_approx_matrices": 365,
+      "delta_ppl": -1.3,
+      "elapsed": 73.8
+    },
+    {
+      "round": 36,
+      "group": "layer1.V",
+      "ppl": 41.0,
+      "violations": 0,
+      "n_compressed_groups": 36,
+      "n_approx_matrices": 377,
+      "delta_ppl": 1.2,
+      "elapsed": 84.7
+    },
+    {
+      "round": 37,
+      "group": "layer4.attn_proj",
+      "ppl": 43.3,
+      "violations": 0,
+      "n_compressed_groups": 37,
+      "n_approx_matrices": 378,
+      "delta_ppl": 2.3,
+      "elapsed": 73.1
+    },
+    {
+      "round": 38,
+      "group": "layer10.attn_proj",
+      "ppl": 43.9,
+      "violations": 0,
+      "n_compressed_groups": 38,
+      "n_approx_matrices": 379,
+      "delta_ppl": 0.6,
+      "elapsed": 79.0
+    },
+    {
+      "round": 39,
+      "group": "layer5.V",
+      "ppl": 41.6,
+      "violations": 0,
+      "n_compressed_groups": 39,
+      "n_approx_matrices": 391,
+      "delta_ppl": -2.3,
+      "elapsed": 70.9
+    },
+    {
+      "round": 40,
+      "group": "layer7.mlp_proj",
+      "ppl": 41.9,
+      "violations": 0,
+      "n_compressed_groups": 40,
+      "n_approx_matrices": 392,
+      "delta_ppl": 0.3,
+      "elapsed": 97.6
+    },
+    {
+      "round": 41,
+      "group": "layer3.mlp_proj",
+      "ppl": 45.6,
+      "violations": 0,
+      "n_compressed_groups": 41,
+      "n_approx_matrices": 393,
+      "delta_ppl": 3.7,
+      "elapsed": 85.8
+    },
+    {
+      "round": 42,
+      "group": "layer8.K",
+      "ppl": 45.8,
+      "violations": 0,
+      "n_compressed_groups": 42,
+      "n_approx_matrices": 405,
+      "delta_ppl": 0.2,
+      "elapsed": 92.3
+    },
+    {
+      "round": 43,
+      "group": "layer9.attn_proj",
+      "ppl": 47.7,
+      "violations": 0,
+      "n_compressed_groups": 43,
+      "n_approx_matrices": 406,
+      "delta_ppl": 1.9,
+      "elapsed": 86.0
+    },
+    {
+      "round": 44,
+      "group": "layer7.V",
+      "ppl": 49.2,
+      "violations": 0,
+      "n_compressed_groups": 44,
+      "n_approx_matrices": 418,
+      "delta_ppl": 1.5,
+      "elapsed": 96.3
+    },
+    {
+      "round": 45,
+      "group": "layer9.mlp_proj",
+      "ppl": 50.5,
+      "violations": 0,
+      "n_compressed_groups": 45,
+      "n_approx_matrices": 419,
+      "delta_ppl": 1.3,
+      "elapsed": 98.3
+    },
+    {
+      "round": 46,
+      "group": "layer11.V",
+      "ppl": 51.3,
+      "violations": 0,
+      "n_compressed_groups": 46,
+      "n_approx_matrices": 431,
+      "delta_ppl": 0.8,
+      "elapsed": 104.0
+    },
+    {
+      "round": 47,
+      "group": "layer1.mlp_proj",
+      "ppl": 56.2,
+      "violations": 0,
+      "n_compressed_groups": 47,
+      "n_approx_matrices": 432,
+      "delta_ppl": 4.9,
+      "elapsed": 94.0
+    },
+    {
+      "round": 48,
+      "group": "layer6.mlp_proj",
+      "ppl": 62.7,
+      "violations": 0,
+      "n_compressed_groups": 48,
+      "n_approx_matrices": 433,
+      "delta_ppl": 6.5,
+      "elapsed": 115.9
+    },
+    {
+      "round": 49,
+      "group": "layer9.V",
+      "ppl": 65.1,
+      "violations": 0,
+      "n_compressed_groups": 49,
+      "n_approx_matrices": 445,
+      "delta_ppl": 2.4,
+      "elapsed": 113.1
+    },
+    {
+      "round": 50,
+      "group": "layer7.attn_proj",
+      "ppl": 70.5,
+      "violations": 0,
+      "n_compressed_groups": 50,
+      "n_approx_matrices": 446,
+      "delta_ppl": 5.4,
+      "elapsed": 115.0
+    },
+    {
+      "round": 51,
+      "group": "layer11.mlp_proj",
+      "ppl": 73.3,
+      "violations": 0,
+      "n_compressed_groups": 51,
+      "n_approx_matrices": 447,
+      "delta_ppl": 2.8,
+      "elapsed": 111.9
+    },
+    {
+      "round": 52,
+      "group": "layer7.mlp_fc",
+      "ppl": 82.9,
+      "violations": 0,
+      "n_compressed_groups": 52,
+      "n_approx_matrices": 448,
+      "delta_ppl": 9.6,
+      "elapsed": 113.8
+    },
+    {
+      "round": 53,
+      "group": "layer2.mlp_proj",
+      "ppl": 100.8,
+      "violations": 0,
+      "n_compressed_groups": 53,
+      "n_approx_matrices": 449,
+      "delta_ppl": 17.9,
+      "elapsed": 115.3
+    },
+    {
+      "round": 54,
+      "group": "layer5.mlp_proj",
+      "ppl": 108.2,
+      "violations": 0,
+      "n_compressed_groups": 54,
+      "n_approx_matrices": 450,
+      "delta_ppl": 7.4,
+      "elapsed": 139.1
+    }
+  ],
+  "group_scores": [
+    [
+      "layer4.K",
+      28.6,
+      -0.3
+    ],
+    [
+      "layer6.K",
+      28.6,
+      -0.3
+    ],
+    [
+      "layer2.K",
+      28.7,
+      -0.2
+    ],
+    [
+      "layer1.attn_proj",
+      28.7,
+      -0.2
+    ],
+    [
+      "layer3.V",
+      28.7,
+      -0.2
+    ],
+    [
+      "layer6.Q",
+      28.7,
+      -0.2
+    ],
+    [
+      "layer5.Q",
+      28.8,
+      -0.1
+    ],
+    [
+      "layer3.K",
+      28.8,
+      -0.1
+    ],
+    [
+      "layer1.K",
+      28.8,
+      -0.1
+    ],
+    [
+      "layer3.Q",
+      28.8,
+      -0.1
+    ],
+    [
+      "layer0.K",
+      28.8,
+      -0.1
+    ],
+    [
+      "layer1.Q",
+      28.8,
+      -0.1
+    ],
+    [
+      "layer2.Q",
+      28.8,
+      -0.1
+    ],
+    [
+      "layer2.V",
+      28.9,
+      -0.0
+    ],
+    [
+      "layer2.attn_proj",
+      28.9,
+      -0.0
+    ],
+    [
+      "layer8.Q",
+      28.9,
+      -0.0
+    ],
+    [
+      "layer9.Q",
+      28.9,
+      -0.0
+    ],
+    [
+      "layer5.K",
+      28.9,
+      -0.0
+    ],
+    [
+      "layer7.K",
+      28.9,
+      0.0
+    ],
+    [
+      "layer10.V",
+      28.9,
+      0.0
+    ],
+    [
+      "layer10.Q",
+      29.0,
+      0.1
+    ],
+    [
+      "layer10.K",
+      29.0,
+      0.1
+    ],
+    [
+      "layer11.K",
+      29.0,
+      0.1
+    ],
+    [
+      "layer8.V",
+      29.0,
+      0.1
+    ],
+    [
+      "layer0.V",
+      29.0,
+      0.1
+    ],
+    [
+      "layer11.Q",
+      29.0,
+      0.1
+    ],
+    [
+      "layer0.Q",
+      29.0,
+      0.1
+    ],
+    [
+      "layer6.attn_proj",
+      29.0,
+      0.1
+    ],
+    [
+      "layer8.attn_proj",
+      29.0,
+      0.1
+    ],
+    [
+      "layer3.attn_proj",
+      29.0,
+      0.1
+    ],
+    [
+      "layer4.V",
+      29.1,
+      0.2
+    ],
+    [
+      "layer4.Q",
+      29.1,
+      0.2
+    ],
+    [
+      "layer7.Q",
+      29.1,
+      0.2
+    ],
+    [
+      "layer9.K",
+      29.1,
+      0.2
+    ],
+    [
+      "layer6.V",
+      29.1,
+      0.2
+    ],
+    [
+      "layer1.V",
+      29.2,
+      0.3
+    ],
+    [
+      "layer4.attn_proj",
+      29.2,
+      0.3
+    ],
+    [
+      "layer10.attn_proj",
+      29.3,
+      0.4
+    ],
+    [
+      "layer5.V",
+      29.3,
+      0.4
+    ],
+    [
+      "layer7.mlp_proj",
+      29.4,
+      0.5
+    ],
+    [
+      "layer3.mlp_proj",
+      29.4,
+      0.5
+    ],
+    [
+      "layer8.K",
+      29.4,
+      0.5
+    ],
+    [
+      "layer9.attn_proj",
+      29.4,
+      0.5
+    ],
+    [
+      "layer7.V",
+      29.5,
+      0.6
+    ],
+    [
+      "layer9.mlp_proj",
+      29.5,
+      0.6
+    ],
+    [
+      "layer11.V",
+      29.5,
+      0.6
+    ],
+    [
+      "layer1.mlp_proj",
+      29.7,
+      0.8
+    ],
+    [
+      "layer6.mlp_proj",
+      29.7,
+      0.8
+    ],
+    [
+      "layer9.V",
+      29.7,
+      0.8
+    ],
+    [
+      "layer7.attn_proj",
+      29.7,
+      0.8
+    ],
+    [
+      "layer11.mlp_proj",
+      29.8,
+      0.9
+    ],
+    [
+      "layer7.mlp_fc",
+      29.8,
+      0.9
+    ],
+    [
+      "layer2.mlp_proj",
+      29.8,
+      0.9
+    ],
+    [
+      "layer5.mlp_proj",
+      29.9,
+      1.0
+    ],
+    [
+      "layer9.mlp_fc",
+      30.0,
+      1.1
+    ],
+    [
+      "layer5.attn_proj",
+      30.0,
+      1.1
+    ],
+    [
+      "layer10.mlp_proj",
+      30.2,
+      1.3
+    ],
+    [
+      "layer8.mlp_proj",
+      30.2,
+      1.3
+    ],
+    [
+      "layer10.mlp_fc",
+      30.2,
+      1.3
+    ],
+    [
+      "layer11.attn_proj",
+      30.3,
+      1.4
+    ],
+    [
+      "layer6.mlp_fc",
+      30.7,
+      1.8
+    ],
+    [
+      "layer8.mlp_fc",
+      30.8,
+      1.9
+    ],
+    [
+      "layer0.attn_proj",
+      31.3,
+      2.4
+    ],
+    [
+      "layer11.mlp_fc",
+      31.4,
+      2.5
+    ],
+    [
+      "layer4.mlp_proj",
+      31.8,
+      2.9
+    ],
+    [
+      "layer2.mlp_fc",
+      32.2,
+      3.3
+    ],
+    [
+      "layer4.mlp_fc",
+      34.7,
+      5.8
+    ],
+    [
+      "layer5.mlp_fc",
+      35.0,
+      6.1
+    ],
+    [
+      "layer3.mlp_fc",
+      35.9,
+      7.0
+    ],
+    [
+      "layer1.mlp_fc",
+      36.5,
+      7.6
+    ],
+    [
+      "layer0.mlp_fc",
+      39.5,
+      10.6
+    ],
+    [
+      "layer0.mlp_proj",
+      42.2,
+      13.3
+    ]
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "lfm2": {
+    "baseline": 33.54,
+    "d_model": 2560,
+    "sweep": [
+      {
+        "sparsity": 0.5,
+        "ppl": 32.94,
+        "regret": -0.6
+      },
+      {
+        "sparsity": 0.7,
+        "ppl": 40.45,
+        "regret": 6.91
+      },
+      {
+        "sparsity": 0.8,
+        "ppl": 65.9,
+        "regret": 32.36
+      },
+      {
+        "sparsity": 0.9,
+        "ppl": 206.52,
+        "regret": 172.98
+      },
+      {
+        "sparsity": 0.95,
+        "ppl": 369.93,
+        "regret": 336.39
+      },
+      {
+        "sparsity": 0.99,
+        "ppl": 485.48,
+        "regret": 451.94
+      }
+    ],
+    "tau": 0.8
+  },
+  "mistral": {
+    "baseline": 6.15,
+    "d_model": 4096,
+    "sweep": [
+      {
+        "sparsity": 0.5,
+        "ppl": 6.76,
+        "regret": 0.61
+      },
+      {
+        "sparsity": 0.7,
+        "ppl": 9.12,
+        "regret": 2.98
+      },
+      {
+        "sparsity": 0.8,
+        "ppl": 15.71,
+        "regret": 9.56
+      },
+      {
+        "sparsity": 0.9,
+        "ppl": 39.17,
+        "regret": 33.02
+      },
+      {
+        "sparsity": 0.95,
+        "ppl": 62.35,
+        "regret": 56.2
+      },
+      {
+        "sparsity": 0.99,
+        "ppl": 119.98,
+        "regret": 113.83
+      }
+    ],
+    "tau": 0.95
+  },
+  "qwen3": {
+    "baseline": 11.21,
+    "d_model": 4096,
+    "sweep": [
+      {
+        "sparsity": 0.5,
+        "ppl": 11.36,
+        "regret": 0.15
+      },
+      {
+        "sparsity": 0.7,
+        "ppl": 11.6,
+        "regret": 0.39
+      },
+      {
+        "sparsity": 0.8,
+        "ppl": 12.8,
+        "regret": 1.59
+      },
+      {
+        "sparsity": 0.9,
+        "ppl": 164.35,
+        "regret": 153.13
+      },
+      {
+        "sparsity": 0.95,
+        "ppl": 10035.2,
+        "regret": 10023.99
+      },
+      {
+        "sparsity": 0.99,
+        "ppl": NaN,
+        "regret": NaN
+      }
+    ],
+    "tau": 0.8
+  }
+}

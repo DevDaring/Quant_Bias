@@ -1,0 +1,22 @@
+{
+  "model": "mistralai/Mistral-7B-v0.1",
+  "runtime": "Google Colab A100 40GB",
+  "baseline_ppl": 5.62,
+  "eval_chunks": 16,
+  "layer_ablation_90pct": {
+    "worst_layer": 0,
+    "worst_ppl": 45.28,
+    "worst_regret": 39.67,
+    "best_layer": 9,
+    "best_ppl": 5.82,
+    "best_regret": 0.20,
+    "catastrophic_layers": "NONE — no layer has regret > 100 even at 90% sparsity",
+    "note": "GPT-2 Small layer 0 at 5% sparsity has regret 459,904. Mistral-7B at 90% has regret 39.67. 11,600x more robust."
+  },
+  "hellaswag": {
+    "baseline_acc_norm": 0.8117,
+    "wanda_50pct_acc_norm": 0.722,
+    "absolute_drop": 0.0897,
+    "relative_drop_pct": 11.0
+  }
+}

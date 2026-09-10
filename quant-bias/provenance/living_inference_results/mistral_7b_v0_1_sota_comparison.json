@@ -1,0 +1,19 @@
+{
+  "model": "mistralai/Mistral-7B-v0.1",
+  "baseline": 6.15,
+  "wanda": {
+    "ppl": 8.44,
+    "deg": 1.37,
+    "sp": 0.5
+  },
+  "owl": {
+    "ppl": 9.35,
+    "deg": 1.52,
+    "sp": 0.5058
+  },
+  "rule": {
+    "ppl": 8.84,
+    "deg": 1.44,
+    "sp": 0.4726
+  }
+}

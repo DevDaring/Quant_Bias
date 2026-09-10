@@ -1,0 +1,5 @@
+bbq:            {id: oskarvanderwal/bbq, config: All, split: test, note: "Elfsong/BBQ supplies bias-target labels if answer_info is insufficient"}
+winobias:       {id: uclanlp/wino_bias, configs: [type1_pro, type1_anti, type2_pro, type2_anti], splits: [validation, test]}
+discrim_eval:   {id: Anthropic/discrim-eval, config: explicit, split: train, baseline: {age: 60, gender: male, race: white}}
+c4:             {id: allenai/c4, config: en, split: validation, streaming: true}
+wikitext:       {id: Salesforce/wikitext, config: wikitext-103-raw-v1, split: test}

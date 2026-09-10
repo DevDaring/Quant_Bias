@@ -1,0 +1,79 @@
+{
+  "baseline": 5.47,
+  "sp50": {
+    "alpha_0.0": {
+      "ppl": 6.88,
+      "actual_sp": 0.4999,
+      "max_layer_diff": 0.0002,
+      "alpha": 0.0
+    },
+    "alpha_0.2": {
+      "ppl": 6.94,
+      "actual_sp": 0.4964,
+      "max_layer_diff": 0.0073,
+      "alpha": 0.2
+    },
+    "alpha_0.4": {
+      "ppl": 7.2,
+      "actual_sp": 0.493,
+      "max_layer_diff": 0.0144,
+      "alpha": 0.4
+    },
+    "alpha_0.6": {
+      "ppl": 7.68,
+      "actual_sp": 0.4895,
+      "max_layer_diff": 0.0216,
+      "alpha": 0.6
+    },
+    "alpha_0.8": {
+      "ppl": 8.63,
+      "actual_sp": 0.486,
+      "max_layer_diff": 0.0288,
+      "alpha": 0.8
+    },
+    "alpha_1.0": {
+      "ppl": 10.56,
+      "actual_sp": 0.4826,
+      "max_layer_diff": 0.0359,
+      "alpha": 1.0
+    }
+  },
+  "sp70": {
+    "alpha_0.0": {
+      "ppl": 22.32,
+      "actual_sp": 0.6999,
+      "max_layer_diff": 0.0002,
+      "alpha": 0.0
+    },
+    "alpha_0.2": {
+      "ppl": 29.09,
+      "actual_sp": 0.6954,
+      "max_layer_diff": 0.0084,
+      "alpha": 0.2
+    },
+    "alpha_0.4": {
+      "ppl": 63.02,
+      "actual_sp": 0.6893,
+      "max_layer_diff": 0.0168,
+      "alpha": 0.4
+    },
+    "alpha_0.6": {
+      "ppl": 198.71,
+      "actual_sp": 0.6794,
+      "max_layer_diff": 0.0298,
+      "alpha": 0.6
+    },
+    "alpha_0.8": {
+      "ppl": 515.86,
+      "actual_sp": 0.6658,
+      "max_layer_diff": 0.05,
+      "alpha": 0.8
+    },
+    "alpha_1.0": {
+      "ppl": 1052.89,
+      "actual_sp": 0.6487,
+      "max_layer_diff": 0.0737,
+      "alpha": 1.0
+    }
+  }
+}

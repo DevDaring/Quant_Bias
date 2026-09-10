@@ -1,0 +1,166 @@
+{
+  "model": "gpt2",
+  "baseline_ppl": 15.673063744527244,
+  "configs": [
+    {
+      "sparsity": 0.3,
+      "rank": 128,
+      "calibration_mode": "naive",
+      "ppl": 8856.277551649799,
+      "violations": 0,
+      "elapsed": 70.4
+    },
+    {
+      "sparsity": 0.3,
+      "rank": 128,
+      "calibration_mode": "wanda",
+      "ppl": 6089.265490306509,
+      "violations": 0,
+      "elapsed": 78.7
+    },
+    {
+      "sparsity": 0.3,
+      "rank": 128,
+      "calibration_mode": "balanced",
+      "ppl": 6021.455501867553,
+      "violations": 0,
+      "elapsed": 166.8
+    },
+    {
+      "sparsity": 0.3,
+      "rank": 128,
+      "calibration_mode": "wanda+balanced",
+      "ppl": 6938.508962135617,
+      "violations": 0,
+      "elapsed": 164.6
+    },
+    {
+      "sparsity": 0.3,
+      "rank": 64,
+      "calibration_mode": "naive",
+      "ppl": 4374.877034785776,
+      "violations": 0,
+      "elapsed": 69.9
+    },
+    {
+      "sparsity": 0.3,
+      "rank": 64,
+      "calibration_mode": "wanda",
+      "ppl": 4468.8206880731805,
+      "violations": 0,
+      "elapsed": 82.3
+    },
+    {
+      "sparsity": 0.3,
+      "rank": 64,
+      "calibration_mode": "balanced",
+      "ppl": 5766.163061205736,
+      "violations": 0,
+      "elapsed": 163.5
+    },
+    {
+      "sparsity": 0.3,
+      "rank": 64,
+      "calibration_mode": "wanda+balanced",
+      "ppl": 5211.377219718646,
+      "violations": 0,
+      "elapsed": 160.4
+    },
+    {
+      "sparsity": 0.2,
+      "rank": 64,
+      "calibration_mode": "naive",
+      "ppl": 7055.285869274593,
+      "violations": 0,
+      "elapsed": 67.8
+    },
+    {
+      "sparsity": 0.2,
+      "rank": 64,
+      "calibration_mode": "wanda",
+      "ppl": 4624.424374673554,
+      "violations": 0,
+      "elapsed": 75.2
+    },
+    {
+      "sparsity": 0.2,
+      "rank": 64,
+      "calibration_mode": "balanced",
+      "ppl": 5895.05175974052,
+      "violations": 0,
+      "elapsed": 157.1
+    },
+    {
+      "sparsity": 0.2,
+      "rank": 64,
+      "calibration_mode": "wanda+balanced",
+      "ppl": 8996.653895139209,
+      "violations": 0,
+      "elapsed": 164.0
+    },
+    {
+      "sparsity": 0.2,
+      "rank": 32,
+      "calibration_mode": "naive",
+      "ppl": 6968.81724464377,
+      "violations": 0,
+      "elapsed": 69.1
+    },
+    {
+      "sparsity": 0.2,
+      "rank": 32,
+      "calibration_mode": "wanda",
+      "ppl": 5341.543283997622,
+      "violations": 0,
+      "elapsed": 79.7
+    },
+    {
+      "sparsity": 0.2,
+      "rank": 32,
+      "calibration_mode": "balanced",
+      "ppl": 4861.11911789576,
+      "violations": 0,
+      "elapsed": 163.8
+    },
+    {
+      "sparsity": 0.2,
+      "rank": 32,
+      "calibration_mode": "wanda+balanced",
+      "ppl": 6612.3163158009775,
+      "violations": 0,
+      "elapsed": 160.5
+    },
+    {
+      "sparsity": 0.1,
+      "rank": 32,
+      "calibration_mode": "naive",
+      "ppl": 14510.28937796538,
+      "violations": 0,
+      "elapsed": 67.1
+    },
+    {
+      "sparsity": 0.1,
+      "rank": 32,
+      "calibration_mode": "wanda",
+      "ppl": 7516.9351046125585,
+      "violations": 0,
+      "elapsed": 80.2
+    },
+    {
+      "sparsity": 0.1,
+      "rank": 32,
+      "calibration_mode": "balanced",
+      "ppl": 4147.331550272101,
+      "violations": 0,
+      "elapsed": 167.4
+    },
+    {
+      "sparsity": 0.1,
+      "rank": 32,
+      "calibration_mode": "wanda+balanced",
+      "ppl": 8367.599104534853,
+      "violations": 0,
+      "elapsed": 168.3
+    }
+  ]
+}

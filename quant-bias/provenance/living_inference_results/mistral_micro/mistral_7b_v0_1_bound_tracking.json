@@ -1,0 +1,412 @@
+{
+  "total_violations": 0,
+  "total_checks": 2899968,
+  "n_configs": 45,
+  "configs": [
+    {
+      "config": "single_L0_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.76,
+      "regret": 0.61,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L1_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.75,
+      "regret": 0.6,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L2_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.24,
+      "regret": 0.09,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L3_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.24,
+      "regret": 0.09,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L4_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.22,
+      "regret": 0.07,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L5_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.18,
+      "regret": 0.03,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L6_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.2,
+      "regret": 0.05,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L7_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.22,
+      "regret": 0.07,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L8_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.16,
+      "regret": 0.01,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L9_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L10_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L11_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.21,
+      "regret": 0.06,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L12_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.22,
+      "regret": 0.07,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L13_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L14_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L15_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.2,
+      "regret": 0.05,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L16_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.17,
+      "regret": 0.02,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L17_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L18_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.2,
+      "regret": 0.05,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L19_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.21,
+      "regret": 0.06,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L20_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L21_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L22_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L23_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L24_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.17,
+      "regret": 0.02,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L25_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L26_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.18,
+      "regret": 0.03,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L27_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.22,
+      "regret": 0.07,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L28_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.19,
+      "regret": 0.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L29_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.2,
+      "regret": 0.05,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L30_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.29,
+      "regret": 0.14,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "single_L31_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.67,
+      "regret": 0.52,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "comp_q_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.31,
+      "regret": 0.16,
+      "violations": 0,
+      "checks": 131072,
+      "tracked": 32
+    },
+    {
+      "config": "comp_k_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.17,
+      "regret": 0.02,
+      "violations": 0,
+      "checks": 131072,
+      "tracked": 32
+    },
+    {
+      "config": "comp_v_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 20.45,
+      "regret": 14.3,
+      "violations": 0,
+      "checks": 131072,
+      "tracked": 32
+    },
+    {
+      "config": "comp_o_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.55,
+      "regret": 0.4,
+      "violations": 0,
+      "checks": 131072,
+      "tracked": 32
+    },
+    {
+      "config": "comp_gate_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.75,
+      "regret": 0.6,
+      "violations": 0,
+      "checks": 131072,
+      "tracked": 32
+    },
+    {
+      "config": "comp_up_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 6.76,
+      "regret": 0.61,
+      "violations": 0,
+      "checks": 131072,
+      "tracked": 32
+    },
+    {
+      "config": "comp_down_proj_50pct",
+      "sparsity": 0.5,
+      "ppl": 7.76,
+      "regret": 1.61,
+      "violations": 0,
+      "checks": 131072,
+      "tracked": 32
+    },
+    {
+      "config": "L0_sp50",
+      "sparsity": 0.5,
+      "ppl": 6.76,
+      "regret": 0.61,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "L0_sp70",
+      "sparsity": 0.7,
+      "ppl": 9.11,
+      "regret": 2.96,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "L0_sp80",
+      "sparsity": 0.8,
+      "ppl": 15.63,
+      "regret": 9.48,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "L0_sp90",
+      "sparsity": 0.9,
+      "ppl": 39.19,
+      "regret": 33.04,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "L0_sp95",
+      "sparsity": 0.95,
+      "ppl": 62.16,
+      "regret": 56.01,
+      "violations": 0,
+      "checks": 28672,
+      "tracked": 7
+    },
+    {
+      "config": "all_50pct",
+      "sparsity": 0.5,
+      "ppl": 72.59,
+      "regret": 66.44,
+      "violations": 0,
+      "checks": 921600,
+      "tracked": 225
+    }
+  ]
+}

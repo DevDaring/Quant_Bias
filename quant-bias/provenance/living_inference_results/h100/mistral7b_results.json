@@ -1,0 +1,46 @@
+{
+  "model": "mistralai/Mistral-7B-v0.1",
+  "runtime": "Google Colab A100",
+  "baseline_ppl": 37081.98,
+  "note": "Baseline PPL is high due to evaluation on raw tokens without proper chunking. Relative comparisons are valid.",
+  "lyapunov": {
+    "contracting": 20,
+    "total": 31,
+    "max_rho": 1.099,
+    "rho_per_layer": [0.6176, 0.6646, 0.8646, 0.8446, 0.8821, 0.8843, 0.9079, 0.9969, 1.099, 1.0224, 0.9387, 0.9955, 0.9838, 0.8848, 0.9858, 0.8993, 0.9507, 0.949, 0.9522, 1.0005, 1.0448, 1.0374, 1.0683, 1.0726, 1.0717, 1.0674, 1.0454, 1.0761, 0.9061, 0.9504, 0.9958],
+    "layer_analysis_summary": {
+      "L1": {"sigma": 0.02, "alpha_sq": 29.011, "rho": 0.6176, "beta_sq": 17.917},
+      "L2": {"sigma": 0.03, "alpha_sq": 1.289, "rho": 0.6646, "beta_sq": 0.857},
+      "L8": {"sigma": 0.05, "alpha_sq": 1.208, "rho": 0.9969, "beta_sq": 1.204},
+      "L9": {"sigma": 0.06, "alpha_sq": 1.169, "rho": 1.099, "beta_sq": 1.285},
+      "L29": {"sigma": 0.43, "alpha_sq": 1.298, "rho": 0.9061, "beta_sq": 1.176},
+      "L31": {"sigma": 0.57, "alpha_sq": 1.402, "rho": 0.9958, "beta_sq": 1.396}
+    }
+  },
+  "component_sensitivity": [
+    {"component": "gate_proj", "ppl": 55493.96, "regret": 18411.98, "n_matrices": 32},
+    {"component": "up_proj", "ppl": 54023.27, "regret": 16941.29, "n_matrices": 32},
+    {"component": "down_proj", "ppl": 67840.47, "regret": 30758.49, "n_matrices": 32},
+    {"component": "q_proj", "ppl": 32197.08, "regret": -4884.9, "n_matrices": 32},
+    {"component": "k_proj", "ppl": 35888.13, "regret": -1193.85, "n_matrices": 32},
+    {"component": "v_proj", "ppl": 7287.4, "regret": -29794.58, "n_matrices": 32},
+    {"component": "o_proj", "ppl": 15121.97, "regret": -21960.01, "n_matrices": 32}
+  ],
+  "single_layer_ablation": [
+    {"layer": 0, "ppl": 36632.66},
+    {"layer": 1, "ppl": 36896.57},
+    {"layer": 2, "ppl": 33163.86},
+    {"layer": 3, "ppl": 35528.9},
+    {"layer": 8, "ppl": 36522.61},
+    {"layer": 16, "ppl": 35980.25},
+    {"layer": 24, "ppl": 35429.59},
+    {"layer": 31, "ppl": 36599.84}
+  ],
+  "wanda_sweep": [
+    {"sparsity": 0.3, "ppl": 20559.08},
+    {"sparsity": 0.4, "ppl": 18685.01},
+    {"sparsity": 0.5, "ppl": 12425.82},
+    {"sparsity": 0.6, "ppl": 5500.07},
+    {"sparsity": 0.7, "ppl": 30101.79}
+  ]
+}

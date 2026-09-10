@@ -1,0 +1,122 @@
+[
+  {
+    "layer": 0,
+    "ppl": 40.67,
+    "regret": 27.13
+  },
+  {
+    "layer": 1,
+    "ppl": 13.48,
+    "regret": -0.06
+  },
+  {
+    "layer": 2,
+    "ppl": 15.0,
+    "regret": 1.46
+  },
+  {
+    "layer": 3,
+    "ppl": 15.05,
+    "regret": 1.51
+  },
+  {
+    "layer": 4,
+    "ppl": 13.4,
+    "regret": -0.14
+  },
+  {
+    "layer": 5,
+    "ppl": 13.63,
+    "regret": 0.09
+  },
+  {
+    "layer": 6,
+    "ppl": 13.78,
+    "regret": 0.24
+  },
+  {
+    "layer": 7,
+    "ppl": 14.62,
+    "regret": 1.08
+  },
+  {
+    "layer": 8,
+    "ppl": 13.89,
+    "regret": 0.35
+  },
+  {
+    "layer": 9,
+    "ppl": 13.6,
+    "regret": 0.06
+  },
+  {
+    "layer": 10,
+    "ppl": 14.08,
+    "regret": 0.54
+  },
+  {
+    "layer": 11,
+    "ppl": 13.87,
+    "regret": 0.33
+  },
+  {
+    "layer": 12,
+    "ppl": 13.9,
+    "regret": 0.36
+  },
+  {
+    "layer": 13,
+    "ppl": 13.74,
+    "regret": 0.2
+  },
+  {
+    "layer": 14,
+    "ppl": 14.03,
+    "regret": 0.49
+  },
+  {
+    "layer": 15,
+    "ppl": 14.19,
+    "regret": 0.65
+  },
+  {
+    "layer": 16,
+    "ppl": 14.15,
+    "regret": 0.61
+  },
+  {
+    "layer": 17,
+    "ppl": 13.88,
+    "regret": 0.34
+  },
+  {
+    "layer": 18,
+    "ppl": 14.08,
+    "regret": 0.54
+  },
+  {
+    "layer": 19,
+    "ppl": 14.4,
+    "regret": 0.86
+  },
+  {
+    "layer": 20,
+    "ppl": 13.92,
+    "regret": 0.38
+  },
+  {
+    "layer": 21,
+    "ppl": 13.93,
+    "regret": 0.39
+  },
+  {
+    "layer": 22,
+    "ppl": 14.75,
+    "regret": 1.21
+  },
+  {
+    "layer": 23,
+    "ppl": 20.24,
+    "regret": 6.7
+  }
+]

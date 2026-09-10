@@ -1,0 +1,18 @@
+{
+  "mode": "atp_lyap_b",
+  "sparsity_target": 0.5,
+  "beta": 0.004,
+  "strength": 0.12,
+  "actual_sparsity": 0.4999073799410015,
+  "ppl": 6.860745429992676,
+  "ranking": "llama2_measured",
+  "regrets": {
+    "gate": 0.28,
+    "v": 0.276,
+    "down": 0.267,
+    "up": 0.2,
+    "o": 0.11,
+    "q": 0.054,
+    "k": 0.044
+  }
+}

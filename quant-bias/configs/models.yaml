@@ -1,0 +1,79 @@
+# Seven checkpoints that produced complete results in Codes/living-inference
+# (dense PPL + Lyapunov trace + Wanda-50%). `revision: main` is resolved to a
+# commit SHA at load time and recorded in every manifest; pin the SHA here once
+# the pilot fixes it.
+#
+# `li_key` links each model to its prior living-inference result file, which the
+# bridge experiment (E6) reads to test whether utility-derived sensitivity
+# predicts bias-conditioned harm. `tier` drives which experiments run.
+
+M1:
+  id: openai-community/gpt2
+  tag: gpt2_small
+  revision: main
+  dtype: fp32
+  batch_size: 16
+  li_key: gpt2_small
+  tier: instrument
+  role: adapter and instrumentation checks; 468-matrix ablation exists
+M6:
+  id: openai-community/gpt2-medium
+  tag: gpt2_medium
+  revision: main
+  dtype: fp32
+  batch_size: 12
+  li_key: gpt2_medium
+  tier: instrument
+  role: same family at 3x scale; tests scale within one architecture
+M7:
+  id: LiquidAI/LFM2-2.6B
+  tag: lfm2_2.6b
+  revision: main
+  dtype: bf16
+  batch_size: 8
+  li_key: lfm2_2.6b
+  tier: capable
+  # layer_types alternates conv / full_attention: the per-layer intervention is
+  # still well defined, but a "layer" is not the same object in every position,
+  # so E2 reports conv and attention blocks separately.
+  hybrid: true
+  role: hybrid conv+attention; architecture-diversity check
+M2:
+  id: Qwen/Qwen3.5-2B
+  tag: qwen3_5_2b
+  revision: main
+  dtype: bf16
+  batch_size: 4          # 248,320-token vocab makes scoring logits the memory peak
+  li_key: qwen3_5_2b
+  tier: capable
+  # Qwen3_5ForConditionalGeneration: decoder nested under model.language_model,
+  # vision tower excluded from every precision map.
+  multimodal: true
+  role: smallest capable model; full E1-E4
+M3:
+  id: mistralai/Mistral-7B-v0.1
+  tag: mistral_7b_v0_1
+  revision: main
+  dtype: bf16
+  batch_size: 8
+  li_key: mistral_7b
+  tier: primary
+  role: primary model for E2-E4; direct comparison to Rath and Maliakkal (2026)
+M4:
+  id: NousResearch/Llama-2-7b-hf
+  tag: llama_2_7b
+  revision: main
+  dtype: bf16
+  batch_size: 8
+  li_key: llama_2_7b
+  tier: capable
+  role: second 7B family; only model with saved downstream scores
+M5:
+  id: Qwen/Qwen3-8B
+  tag: qwen3_8b
+  revision: main
+  dtype: bf16
+  batch_size: 6
+  li_key: qwen3_8b
+  tier: primary
+  role: largest model; shared with Debias-SparseGPT (2026) for a matched pruning comparison

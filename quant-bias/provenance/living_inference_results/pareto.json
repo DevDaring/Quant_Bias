@@ -1,0 +1,103 @@
+{
+  "Dense": {
+    "tps": 11.9,
+    "ppl": 5.47,
+    "scores": {
+      "hellaswag": 68.33,
+      "arc_easy": 73.0,
+      "winogrande": 69.0,
+      "piqa": 79.0
+    },
+    "avg": 72.33
+  },
+  "Rho-4": {
+    "tps": 21.4,
+    "speedup": 1.8,
+    "ppl": 7.92,
+    "scores": {
+      "hellaswag": 61.67,
+      "arc_easy": 61.33,
+      "winogrande": 59.33,
+      "piqa": 78.0
+    },
+    "avg": 65.08,
+    "skip": [
+      10,
+      12,
+      13,
+      30
+    ]
+  },
+  "BI-4": {
+    "tps": 8.0,
+    "speedup": 0.67,
+    "ppl": 125.49,
+    "scores": {
+      "hellaswag": 43.33,
+      "arc_easy": 35.67,
+      "winogrande": 50.67,
+      "piqa": 58.0
+    },
+    "avg": 46.92,
+    "skip": [
+      2,
+      3,
+      4,
+      27
+    ]
+  },
+  "Pareto-4": {
+    "tps": 7.0,
+    "speedup": 0.59,
+    "ppl": 7.09,
+    "scores": {
+      "hellaswag": 63.0,
+      "arc_easy": 67.67,
+      "winogrande": 66.0,
+      "piqa": 76.67
+    },
+    "avg": 68.34,
+    "skip": [
+      8,
+      23,
+      24,
+      27
+    ]
+  },
+  "Blend-4": {
+    "tps": 18.2,
+    "speedup": 1.53,
+    "ppl": 125.49,
+    "scores": {
+      "hellaswag": 43.33,
+      "arc_easy": 35.67,
+      "winogrande": 50.67,
+      "piqa": 58.0
+    },
+    "avg": 46.92,
+    "skip": [
+      2,
+      3,
+      4,
+      27
+    ]
+  },
+  "PPLopt-4": {
+    "tps": 13.6,
+    "speedup": 1.14,
+    "ppl": 7.01,
+    "scores": {
+      "hellaswag": 63.67,
+      "arc_easy": 62.0,
+      "winogrande": 60.67,
+      "piqa": 76.67
+    },
+    "avg": 65.75,
+    "skip": [
+      11,
+      12,
+      14,
+      24
+    ]
+  }
+}

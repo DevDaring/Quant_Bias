@@ -1,0 +1,138 @@
+{
+  "baseline": {
+    "ppl": 17.875179880128925,
+    "violations": 0
+  },
+  "single_layer": [
+    {
+      "layer": 0,
+      "ppl": 874631.6993511891,
+      "regret": 874613.8241713089,
+      "violations": 0
+    },
+    {
+      "layer": 1,
+      "ppl": 643.2429244394622,
+      "regret": 625.3677445593332,
+      "violations": 0
+    },
+    {
+      "layer": 2,
+      "ppl": 39.491525789134485,
+      "regret": 21.61634590900556,
+      "violations": 0
+    },
+    {
+      "layer": 3,
+      "ppl": 18.790208661733153,
+      "regret": 0.915028781604228,
+      "violations": 0
+    },
+    {
+      "layer": 4,
+      "ppl": 18.328855773378685,
+      "regret": 0.4536758932497591,
+      "violations": 0
+    },
+    {
+      "layer": 5,
+      "ppl": 19.42870182280101,
+      "regret": 1.5535219426720843,
+      "violations": 0
+    },
+    {
+      "layer": 23,
+      "ppl": 21.976287044419813,
+      "regret": 4.101107164290887,
+      "violations": 0
+    }
+  ],
+  "component_type": [
+    {
+      "component": "Q",
+      "ppl": 2228.3246099775165,
+      "regret": 2210.4494300973874,
+      "violations": 0
+    },
+    {
+      "component": "K",
+      "ppl": 1683.9436758118284,
+      "regret": 1666.0684959316995,
+      "violations": 0
+    },
+    {
+      "component": "V",
+      "ppl": 530.6826271085267,
+      "regret": 512.8074472283978,
+      "violations": 0
+    },
+    {
+      "component": "attn_proj",
+      "ppl": 1181.8566505927856,
+      "regret": 1163.9814707126568,
+      "violations": 0
+    },
+    {
+      "component": "mlp_fc",
+      "ppl": 3897546.9047316276,
+      "regret": 3897529.0295517473,
+      "violations": 0
+    },
+    {
+      "component": "mlp_proj",
+      "ppl": 7479.067720592101,
+      "regret": 7461.1925407119725,
+      "violations": 0
+    }
+  ],
+  "mlp_cliff": [
+    {
+      "layer": 0,
+      "ppl": 315029.1027530799,
+      "regret": 315011.2275731998,
+      "violations": 0
+    },
+    {
+      "layer": 1,
+      "ppl": 20.884078783696904,
+      "regret": 3.008898903567978,
+      "violations": 0
+    },
+    {
+      "layer": 2,
+      "ppl": 48.50121055857322,
+      "regret": 30.626030678444295,
+      "violations": 0
+    },
+    {
+      "layer": 3,
+      "ppl": 397.0048408388893,
+      "regret": 379.1296609587604,
+      "violations": 0
+    },
+    {
+      "layer": 4,
+      "ppl": 30.648927132621285,
+      "regret": 12.77374725249236,
+      "violations": 0
+    },
+    {
+      "layer": 5,
+      "ppl": 44.44755257231108,
+      "regret": 26.572372692182157,
+      "violations": 0
+    },
+    {
+      "layer": 6,
+      "ppl": 23.697516743947336,
+      "regret": 5.8223368638184105,
+      "violations": 0
+    },
+    {
+      "layer": 7,
+      "ppl": 28.823011462100464,
+      "regret": 10.947831581971538,
+      "violations": 0
+    }
+  ]
+}

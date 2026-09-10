@@ -1,0 +1,408 @@
+[
+  {
+    "round": 0,
+    "ppl": 13.54,
+    "group": "none",
+    "n": 0
+  },
+  {
+    "round": 1,
+    "group": "L1_up_proj",
+    "ppl": 13.29,
+    "regret": -0.25,
+    "n": 1,
+    "frac": 0.006
+  },
+  {
+    "round": 2,
+    "group": "L4_up_proj",
+    "ppl": 13.15,
+    "regret": -0.39,
+    "n": 2,
+    "frac": 0.012
+  },
+  {
+    "round": 3,
+    "group": "L4_gate_proj",
+    "ppl": 13.07,
+    "regret": -0.47,
+    "n": 3,
+    "frac": 0.018
+  },
+  {
+    "round": 4,
+    "group": "L1_down_proj",
+    "ppl": 13.0,
+    "regret": -0.54,
+    "n": 4,
+    "frac": 0.024
+  },
+  {
+    "round": 5,
+    "group": "L2_up_proj",
+    "ppl": 13.06,
+    "regret": -0.48,
+    "n": 5,
+    "frac": 0.03
+  },
+  {
+    "round": 6,
+    "group": "L0_gate_proj",
+    "ppl": 13.07,
+    "regret": -0.47,
+    "n": 6,
+    "frac": 0.036
+  },
+  {
+    "round": 7,
+    "group": "L4_down_proj",
+    "ppl": 13.1,
+    "regret": -0.44,
+    "n": 7,
+    "frac": 0.042
+  },
+  {
+    "round": 8,
+    "group": "L0_up_proj",
+    "ppl": 13.13,
+    "regret": -0.41,
+    "n": 8,
+    "frac": 0.048
+  },
+  {
+    "round": 9,
+    "group": "L3_up_proj",
+    "ppl": 13.28,
+    "regret": -0.26,
+    "n": 9,
+    "frac": 0.054
+  },
+  {
+    "round": 10,
+    "group": "L23_v_proj",
+    "ppl": 13.27,
+    "regret": -0.27,
+    "n": 10,
+    "frac": 0.06
+  },
+  {
+    "round": 11,
+    "group": "L8_up_proj",
+    "ppl": 13.37,
+    "regret": -0.17,
+    "n": 11,
+    "frac": 0.065
+  },
+  {
+    "round": 12,
+    "group": "L8_down_proj",
+    "ppl": 13.38,
+    "regret": -0.16,
+    "n": 12,
+    "frac": 0.071
+  },
+  {
+    "round": 13,
+    "group": "L9_gate_proj",
+    "ppl": 13.41,
+    "regret": -0.13,
+    "n": 13,
+    "frac": 0.077
+  },
+  {
+    "round": 14,
+    "group": "L10_down_proj",
+    "ppl": 13.45,
+    "regret": -0.09,
+    "n": 14,
+    "frac": 0.083
+  },
+  {
+    "round": 15,
+    "group": "L13_gate_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 15,
+    "frac": 0.089
+  },
+  {
+    "round": 16,
+    "group": "L0_q_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 16,
+    "frac": 0.095
+  },
+  {
+    "round": 17,
+    "group": "L0_k_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 17,
+    "frac": 0.101
+  },
+  {
+    "round": 18,
+    "group": "L0_v_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 18,
+    "frac": 0.107
+  },
+  {
+    "round": 19,
+    "group": "L0_o_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 19,
+    "frac": 0.113
+  },
+  {
+    "round": 20,
+    "group": "L1_q_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 20,
+    "frac": 0.119
+  },
+  {
+    "round": 21,
+    "group": "L1_k_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 21,
+    "frac": 0.125
+  },
+  {
+    "round": 22,
+    "group": "L1_v_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 22,
+    "frac": 0.131
+  },
+  {
+    "round": 23,
+    "group": "L1_o_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 23,
+    "frac": 0.137
+  },
+  {
+    "round": 24,
+    "group": "L2_q_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 24,
+    "frac": 0.143
+  },
+  {
+    "round": 25,
+    "group": "L2_k_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 25,
+    "frac": 0.149
+  },
+  {
+    "round": 26,
+    "group": "L2_v_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 26,
+    "frac": 0.155
+  },
+  {
+    "round": 27,
+    "group": "L2_o_proj",
+    "ppl": 13.47,
+    "regret": -0.07,
+    "n": 27,
+    "frac": 0.161
+  },
+  {
+    "round": 28,
+    "group": "L3_gate_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 28,
+    "frac": 0.167
+  },
+  {
+    "round": 29,
+    "group": "L4_q_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 29,
+    "frac": 0.173
+  },
+  {
+    "round": 30,
+    "group": "L4_k_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 30,
+    "frac": 0.179
+  },
+  {
+    "round": 31,
+    "group": "L4_v_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 31,
+    "frac": 0.185
+  },
+  {
+    "round": 32,
+    "group": "L4_o_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 32,
+    "frac": 0.19
+  },
+  {
+    "round": 33,
+    "group": "L5_q_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 33,
+    "frac": 0.196
+  },
+  {
+    "round": 34,
+    "group": "L5_k_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 34,
+    "frac": 0.202
+  },
+  {
+    "round": 35,
+    "group": "L5_v_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 35,
+    "frac": 0.208
+  },
+  {
+    "round": 36,
+    "group": "L5_o_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 36,
+    "frac": 0.214
+  },
+  {
+    "round": 37,
+    "group": "L6_q_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 37,
+    "frac": 0.22
+  },
+  {
+    "round": 38,
+    "group": "L6_k_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 38,
+    "frac": 0.226
+  },
+  {
+    "round": 39,
+    "group": "L6_v_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 39,
+    "frac": 0.232
+  },
+  {
+    "round": 40,
+    "group": "L6_o_proj",
+    "ppl": 13.52,
+    "regret": -0.02,
+    "n": 40,
+    "frac": 0.238
+  },
+  {
+    "round": 41,
+    "group": "L6_gate_proj",
+    "ppl": 13.53,
+    "regret": -0.01,
+    "n": 41,
+    "frac": 0.244
+  },
+  {
+    "round": 42,
+    "group": "L8_q_proj",
+    "ppl": 13.53,
+    "regret": -0.01,
+    "n": 42,
+    "frac": 0.25
+  },
+  {
+    "round": 43,
+    "group": "L8_k_proj",
+    "ppl": 13.53,
+    "regret": -0.01,
+    "n": 43,
+    "frac": 0.256
+  },
+  {
+    "round": 44,
+    "group": "L8_v_proj",
+    "ppl": 13.53,
+    "regret": -0.01,
+    "n": 44,
+    "frac": 0.262
+  },
+  {
+    "round": 45,
+    "group": "L8_o_proj",
+    "ppl": 13.53,
+    "regret": -0.01,
+    "n": 45,
+    "frac": 0.268
+  },
+  {
+    "round": 46,
+    "group": "L9_q_proj",
+    "ppl": 13.53,
+    "regret": -0.01,
+    "n": 46,
+    "frac": 0.274
+  },
+  {
+    "round": 47,
+    "group": "L9_k_proj",
+    "ppl": 13.53,
+    "regret": -0.01,
+    "n": 47,
+    "frac": 0.28
+  },
+  {
+    "round": 48,
+    "group": "L9_v_proj",
+    "ppl": 13.53,
+    "regret": -0.01,
+    "n": 48,
+    "frac": 0.286
+  },
+  {
+    "round": 49,
+    "group": "L9_o_proj",
+    "ppl": 13.53,
+    "regret": -0.01,
+    "n": 49,
+    "frac": 0.292
+  },
+  {
+    "round": 50,
+    "group": "L10_q_proj",
+    "ppl": 13.53,
+    "regret": -0.01,
+    "n": 50,
+    "frac": 0.298
+  }
+]

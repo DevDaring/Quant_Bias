@@ -1,0 +1,553 @@
+{
+  "baseline": {
+    "label": "Full precision (no approximation)",
+    "perplexity": 22.982805535654126,
+    "violations": 0,
+    "n_approx_matrices": 0,
+    "n_total_matrices": 468,
+    "elapsed_sec": 59.2
+  },
+  "single_layer": [
+    {
+      "label": "Layer 0 only",
+      "perplexity": 1539139.709274713,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 120.1
+    },
+    {
+      "label": "Layer 1 only",
+      "perplexity": 30.73088484017514,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 116.4
+    },
+    {
+      "label": "Layer 2 only",
+      "perplexity": 65.7509929488959,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 114.4
+    },
+    {
+      "label": "Layer 3 only",
+      "perplexity": 26.976665429232973,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 117.7
+    },
+    {
+      "label": "Layer 4 only",
+      "perplexity": 28.93550687841208,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 104.1
+    },
+    {
+      "label": "Layer 5 only",
+      "perplexity": 32.15891058717108,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 100.1
+    },
+    {
+      "label": "Layer 6 only",
+      "perplexity": 27.245372695488246,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 87.9
+    },
+    {
+      "label": "Layer 7 only",
+      "perplexity": 26.52674328033157,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 125.9
+    },
+    {
+      "label": "Layer 8 only",
+      "perplexity": 26.77965736958492,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 85.6
+    },
+    {
+      "label": "Layer 9 only",
+      "perplexity": 26.194869818349083,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 125.5
+    },
+    {
+      "label": "Layer 10 only",
+      "perplexity": 27.406384468198652,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 115.6
+    },
+    {
+      "label": "Layer 11 only",
+      "perplexity": 59.85198160980227,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 112.0
+    }
+  ],
+  "component_type": [
+    {
+      "label": "Q projections only",
+      "perplexity": 22193.897633583347,
+      "violations": 0,
+      "n_approx_matrices": 144,
+      "n_total_matrices": 468,
+      "elapsed_sec": 96.4
+    },
+    {
+      "label": "K projections only",
+      "perplexity": 9153.5027129853,
+      "violations": 0,
+      "n_approx_matrices": 144,
+      "n_total_matrices": 468,
+      "elapsed_sec": 95.7
+    },
+    {
+      "label": "V projections only",
+      "perplexity": 764.0802860977091,
+      "violations": 0,
+      "n_approx_matrices": 144,
+      "n_total_matrices": 468,
+      "elapsed_sec": 105.1
+    },
+    {
+      "label": "Attention output proj only",
+      "perplexity": 1224.663893384595,
+      "violations": 0,
+      "n_approx_matrices": 12,
+      "n_total_matrices": 468,
+      "elapsed_sec": 94.8
+    },
+    {
+      "label": "MLP up-proj (c_fc) only",
+      "perplexity": 34418.56470634394,
+      "violations": 0,
+      "n_approx_matrices": 12,
+      "n_total_matrices": 468,
+      "elapsed_sec": 271.9
+    },
+    {
+      "label": "MLP down-proj (c_proj) only",
+      "perplexity": 3835.6613795733906,
+      "violations": 0,
+      "n_approx_matrices": 12,
+      "n_total_matrices": 468,
+      "elapsed_sec": 288.0
+    }
+  ],
+  "cumulative_forward": [
+    {
+      "label": "Forward: layers 0..0",
+      "perplexity": 1539139.709274713,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 110.0
+    },
+    {
+      "label": "Forward: layers 0..1",
+      "perplexity": 499088.1287529518,
+      "violations": 0,
+      "n_approx_matrices": 78,
+      "n_total_matrices": 468,
+      "elapsed_sec": 184.0
+    },
+    {
+      "label": "Forward: layers 0..2",
+      "perplexity": 66347.635354889,
+      "violations": 0,
+      "n_approx_matrices": 117,
+      "n_total_matrices": 468,
+      "elapsed_sec": 243.2
+    },
+    {
+      "label": "Forward: layers 0..3",
+      "perplexity": 166171.6748943122,
+      "violations": 0,
+      "n_approx_matrices": 156,
+      "n_total_matrices": 468,
+      "elapsed_sec": 242.6
+    },
+    {
+      "label": "Forward: layers 0..4",
+      "perplexity": 293592.19491582963,
+      "violations": 0,
+      "n_approx_matrices": 195,
+      "n_total_matrices": 468,
+      "elapsed_sec": 292.3
+    },
+    {
+      "label": "Forward: layers 0..5",
+      "perplexity": 48429.92741820711,
+      "violations": 0,
+      "n_approx_matrices": 234,
+      "n_total_matrices": 468,
+      "elapsed_sec": 429.0
+    },
+    {
+      "label": "Forward: layers 0..6",
+      "perplexity": 19219.15433553984,
+      "violations": 0,
+      "n_approx_matrices": 273,
+      "n_total_matrices": 468,
+      "elapsed_sec": 410.2
+    },
+    {
+      "label": "Forward: layers 0..7",
+      "perplexity": 16414.370834760335,
+      "violations": 0,
+      "n_approx_matrices": 312,
+      "n_total_matrices": 468,
+      "elapsed_sec": 507.8
+    },
+    {
+      "label": "Forward: layers 0..8",
+      "perplexity": 139833.34217831728,
+      "violations": 0,
+      "n_approx_matrices": 351,
+      "n_total_matrices": 468,
+      "elapsed_sec": 567.1
+    },
+    {
+      "label": "Forward: layers 0..9",
+      "perplexity": 22080.364268212936,
+      "violations": 0,
+      "n_approx_matrices": 390,
+      "n_total_matrices": 468,
+      "elapsed_sec": 627.6
+    },
+    {
+      "label": "Forward: layers 0..10",
+      "perplexity": 3935.263903484735,
+      "violations": 0,
+      "n_approx_matrices": 429,
+      "n_total_matrices": 468,
+      "elapsed_sec": 641.5
+    },
+    {
+      "label": "Forward: layers 0..11",
+      "perplexity": 4318.127787512188,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 707.4
+    }
+  ],
+  "cumulative_backward": [
+    {
+      "label": "Backward: layers 11..11",
+      "perplexity": 59.85198160980227,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 114.3
+    },
+    {
+      "label": "Backward: layers 10..11",
+      "perplexity": 86.16995234293037,
+      "violations": 0,
+      "n_approx_matrices": 78,
+      "n_total_matrices": 468,
+      "elapsed_sec": 132.6
+    },
+    {
+      "label": "Backward: layers 9..11",
+      "perplexity": 135.2763045812098,
+      "violations": 0,
+      "n_approx_matrices": 117,
+      "n_total_matrices": 468,
+      "elapsed_sec": 226.0
+    },
+    {
+      "label": "Backward: layers 8..11",
+      "perplexity": 207.22339234064876,
+      "violations": 0,
+      "n_approx_matrices": 156,
+      "n_total_matrices": 468,
+      "elapsed_sec": 354.6
+    },
+    {
+      "label": "Backward: layers 7..11",
+      "perplexity": 509.9397543427056,
+      "violations": 0,
+      "n_approx_matrices": 195,
+      "n_total_matrices": 468,
+      "elapsed_sec": 361.3
+    },
+    {
+      "label": "Backward: layers 6..11",
+      "perplexity": 749.493669145924,
+      "violations": 0,
+      "n_approx_matrices": 234,
+      "n_total_matrices": 468,
+      "elapsed_sec": 329.2
+    },
+    {
+      "label": "Backward: layers 5..11",
+      "perplexity": 1383.146121352553,
+      "violations": 0,
+      "n_approx_matrices": 273,
+      "n_total_matrices": 468,
+      "elapsed_sec": 449.5
+    },
+    {
+      "label": "Backward: layers 4..11",
+      "perplexity": 1894.2587488325019,
+      "violations": 0,
+      "n_approx_matrices": 312,
+      "n_total_matrices": 468,
+      "elapsed_sec": 408.0
+    },
+    {
+      "label": "Backward: layers 3..11",
+      "perplexity": 1568.7629490821068,
+      "violations": 0,
+      "n_approx_matrices": 351,
+      "n_total_matrices": 468,
+      "elapsed_sec": 435.7
+    },
+    {
+      "label": "Backward: layers 2..11",
+      "perplexity": 2448.012782802557,
+      "violations": 0,
+      "n_approx_matrices": 390,
+      "n_total_matrices": 468,
+      "elapsed_sec": 709.5
+    },
+    {
+      "label": "Backward: layers 1..11",
+      "perplexity": 2513.872796946908,
+      "violations": 0,
+      "n_approx_matrices": 429,
+      "n_total_matrices": 468,
+      "elapsed_sec": 639.0
+    },
+    {
+      "label": "Backward: layers 0..11",
+      "perplexity": 4318.127787512188,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 696.2
+    }
+  ],
+  "sparsity_only": [
+    {
+      "label": "Sparsity=1%, rank=768 (full)",
+      "perplexity": 3864.5640398864043,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 666.3
+    },
+    {
+      "label": "Sparsity=5%, rank=768 (full)",
+      "perplexity": 17118.830708067813,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 632.2
+    },
+    {
+      "label": "Sparsity=10%, rank=768 (full)",
+      "perplexity": 17459.883316336265,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 790.4
+    },
+    {
+      "label": "Sparsity=20%, rank=768 (full)",
+      "perplexity": 5081.776679703247,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 756.8
+    },
+    {
+      "label": "Sparsity=50%, rank=768 (full)",
+      "perplexity": 426.09316866548056,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 722.3
+    }
+  ],
+  "rank_only": [
+    {
+      "label": "Sparsity=100% (full), rank=4",
+      "perplexity": 5234.13925804383,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 628.6
+    },
+    {
+      "label": "Sparsity=100% (full), rank=16",
+      "perplexity": 6374.185103367739,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 693.7
+    },
+    {
+      "label": "Sparsity=100% (full), rank=32",
+      "perplexity": 16643.637481505793,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 659.4
+    },
+    {
+      "label": "Sparsity=100% (full), rank=64",
+      "perplexity": 5700.7115971714,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 523.1
+    },
+    {
+      "label": "Sparsity=100% (full), rank=128",
+      "perplexity": 7885.148393565586,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 485.9
+    },
+    {
+      "label": "Sparsity=100% (full), rank=256",
+      "perplexity": 6239.762781576175,
+      "violations": 0,
+      "n_approx_matrices": 468,
+      "n_total_matrices": 468,
+      "elapsed_sec": 647.9
+    }
+  ],
+  "worst_layer": 0,
+  "sensitivity_sweep": [
+    {
+      "label": "Layer 0: sp=5%, rank=4",
+      "perplexity": 138804.15992198483,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 135.1
+    },
+    {
+      "label": "Layer 0: sp=5%, rank=16",
+      "perplexity": 1539139.709274713,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 86.8
+    },
+    {
+      "label": "Layer 0: sp=5%, rank=32",
+      "perplexity": 482243.20106089336,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 89.9
+    },
+    {
+      "label": "Layer 0: sp=5%, rank=64",
+      "perplexity": 333843.44269140385,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 120.8
+    },
+    {
+      "label": "Layer 0: sp=5%, rank=128",
+      "perplexity": 29292.42605170915,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 93.0
+    },
+    {
+      "label": "Layer 0: sp=5%, rank=256",
+      "perplexity": 38536.39128397295,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 108.0
+    },
+    {
+      "label": "Layer 0: sp=5%, rank=384",
+      "perplexity": 34061.394583566274,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 127.8
+    },
+    {
+      "label": "Layer 0: sp=5%, rank=512",
+      "perplexity": 33633.23692805833,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 123.0
+    },
+    {
+      "label": "Layer 0: sp=1%, rank=128",
+      "perplexity": 29877.727656407398,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 140.1
+    },
+    {
+      "label": "Layer 0: sp=5%, rank=128",
+      "perplexity": 29292.42605170915,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 130.2
+    },
+    {
+      "label": "Layer 0: sp=10%, rank=128",
+      "perplexity": 25259.16815276924,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 126.9
+    },
+    {
+      "label": "Layer 0: sp=20%, rank=128",
+      "perplexity": 32416.77108285265,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 99.9
+    },
+    {
+      "label": "Layer 0: sp=50%, rank=128",
+      "perplexity": 2098.302262183848,
+      "violations": 0,
+      "n_approx_matrices": 39,
+      "n_total_matrices": 468,
+      "elapsed_sec": 109.6
+    }
+  ]
+}

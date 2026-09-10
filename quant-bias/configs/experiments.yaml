@@ -1,0 +1,87 @@
+# Frozen protocol. Change only before the pilot ends; every result file records
+# the hash of this file.
+seed: 20260908
+split_fractions: [0.2, 0.3, 0.5]      # calibration / selection / final, by template cluster
+
+# --- Sampling budget -------------------------------------------------------
+# Confidence intervals are driven by the number of template clusters, not the
+# number of examples, because the bootstrap resamples clusters. The budget
+# profile keeps every cluster and every design cell and caps only the number of
+# instantiations inside each cell. See statistics.subsample_cost and Section 5
+# of Future_Plan.md. Set profile: full to disable all caps.
+sampling:
+  profile: budget                      # budget | full
+  budget:
+    bbq_per_cluster_per_cell: 6        # 4 cells (ambig/disambig x neg/nonneg) -> 24 per template
+    discrim_ages: [20, 40, 60, 80, 100]   # thinned ordinal grid; 60 is the baseline age
+    winobias: all                      # 3,168 examples over 1,584 clusters: already small
+  full:
+    bbq_per_cluster_per_cell: null
+    discrim_ages: null
+    winobias: all
+
+scoring:
+  norm: sum                            # declared rule: sum of candidate log-probs
+  bbq_answer_format: text              # complete answer strings as candidates
+  max_len: 1024
+benchmarks: [bbq, winobias, discrim_eval]
+discrim_config: explicit
+utility:
+  wikitext_max_tokens: 4096
+  wikitext_chunk: 1024
+quantization:
+  group_size: 128
+  symmetric: false
+  percdamp: 0.01
+  configs:                             # E1 grid; 3-bit only after the utility gate
+    - {name: dense,  method: dense, bits: 16}
+    - {name: rtn8,   method: rtn,   bits: 8}
+    - {name: rtn4,   method: rtn,   bits: 4}
+    - {name: gptq4,  method: gptq,  bits: 4}
+    - {name: gptq8,  method: gptq,  bits: 8}
+  optional_configs:
+    - {name: rtn3,   method: rtn,   bits: 3}
+    - {name: gptq3,  method: gptq,  bits: 3}
+calibration:
+  n_seq: 128
+  max_tokens: 512
+  seeds: [0, 1, 2, 3, 4]               # E3 uses seeds_budget on the 7-8B models
+  seeds_budget: [0, 1, 2]
+  kinds: [generic, balanced, imbalanced]
+  demographic_fraction: 0.5
+statistics:
+  n_boot: 2000
+  alpha: 0.05
+  min_group_n: 20
+  equivalence_margin: 0.01             # for "no meaningful harm" claims
+  assumed_icc: 0.3                     # replaced by icc_from_records after the pilot
+e2:
+  bits: 4
+  granularity: layer                   # layer first; component only on shortlisted layers
+  method: rtn                          # single-site injection; gptq optional
+  max_pairs_per_benchmark: 300
+  max_bbq_pairs_per_cluster: 8         # full enumeration is ~9e5 pairs on BBQ All
+  refine_top_layers: 4                 # per-component pass over the worst layers
+e4:
+  score_subsample: 2500                # examples per allocator evaluation (search only)
+  search_ppl_tokens: 2048              # shorter PPL during search; full budget when frozen
+  budget_slack: 0.10                   # M = bytes(uniform 4-bit) * (1 + slack)
+  objective: {w_H: 1.0, w_A: 1.0, w_gap: 1.0}
+  gates: {max_acc_loss: 0.01, max_rel_ppl_increase: 0.05}
+  shortlist_k: 24
+  restore_k: 8
+  max_steps: 40
+  max_evals: 200
+e5:
+  wanda_sparsity: 0.5
+  freeze_on: bbq
+e6:
+  # Bridge to Codes/living-inference. No knobs: it reads whatever the prior
+  # study saved and correlates it with this study's E2 sites.
+  alpha: 0.05
+e7:
+  bits: 4                # every quantization comparator at the same width
+  sparsity: 0.5          # pruning comparators, reported separately
+  lam: 1.0               # weight on the contrastive second-order term
+  protect_frac: 0.01     # Critical Weight Protection: fraction kept at 16 bits
+  max_pairs: 256         # counterfactual pairs used to build the contrastive term

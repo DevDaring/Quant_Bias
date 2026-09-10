@@ -1,0 +1,104 @@
+{
+  "Dense": {
+    "tps": 24.2,
+    "speedup": 1.0,
+    "ppl": 5.47,
+    "scores": {
+      "hellaswag": 68.33,
+      "arc_easy": 73.0,
+      "winogrande": 69.0,
+      "piqa": 79.0
+    },
+    "avg": 72.33
+  },
+  "Rho-4": {
+    "tps": 29.5,
+    "speedup": 1.22,
+    "ppl": 7.92,
+    "scores": {
+      "hellaswag": 61.67,
+      "arc_easy": 61.33,
+      "winogrande": 59.33,
+      "piqa": 78.0
+    },
+    "avg": 65.08,
+    "skip": [
+      10,
+      12,
+      13,
+      30
+    ],
+    "prune": false
+  },
+  "BI-4": {
+    "tps": 28.6,
+    "speedup": 1.18,
+    "ppl": 8.45,
+    "scores": {
+      "hellaswag": 63.67,
+      "arc_easy": 62.0,
+      "winogrande": 71.33,
+      "piqa": 75.67
+    },
+    "avg": 68.17,
+    "skip": [
+      27,
+      26,
+      24,
+      28
+    ],
+    "prune": false
+  },
+  "ATP-50%": {
+    "tps": 23.2,
+    "speedup": 0.96,
+    "ppl": 6.94,
+    "scores": {
+      "hellaswag": 64.67,
+      "arc_easy": 67.33,
+      "winogrande": 66.0,
+      "piqa": 78.0
+    },
+    "avg": 69.0,
+    "skip": [],
+    "prune": true
+  },
+  "Rho-4+ATP": {
+    "tps": 18.8,
+    "speedup": 0.78,
+    "ppl": 11.09,
+    "scores": {
+      "hellaswag": 59.0,
+      "arc_easy": 60.0,
+      "winogrande": 57.0,
+      "piqa": 73.67
+    },
+    "avg": 62.42,
+    "skip": [
+      10,
+      12,
+      13,
+      30
+    ],
+    "prune": true
+  },
+  "BI-4+ATP": {
+    "tps": 19.0,
+    "speedup": 0.79,
+    "ppl": 19.96,
+    "scores": {
+      "hellaswag": 55.33,
+      "arc_easy": 59.0,
+      "winogrande": 59.33,
+      "piqa": 72.67
+    },
+    "avg": 61.58,
+    "skip": [
+      27,
+      26,
+      24,
+      28
+    ],
+    "prune": true
+  }
+}

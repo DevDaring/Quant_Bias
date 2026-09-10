@@ -1,0 +1,22 @@
+{
+  "gpt2": {
+    "baseline": 35.78,
+    "sparsity": 0.9,
+    "atp_best": 9818.83,
+    "atp_beta": 0.014,
+    "uniform": 24185.26,
+    "cgt_mk5": 8032.52,
+    "cgt_mk10": 5672.13,
+    "cgt_mk15": 6614.2
+  },
+  "llama2": {
+    "baseline": 6.59,
+    "sparsity": 0.9,
+    "atp_best": 12385.96,
+    "atp_beta": 0.004,
+    "uniform": 10620.07,
+    "cgt_mk25": 3175.64,
+    "cgt_mk35": 611.53,
+    "cgt_mk45": 19.84
+  }
+}

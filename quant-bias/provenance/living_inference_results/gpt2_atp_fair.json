@@ -1,0 +1,15 @@
+{
+  "baseline": 35.78,
+  "sp50": {
+    "atp_best": 150.4,
+    "atp_best_beta": 0.02,
+    "global_atp_sched": 76.13,
+    "global_uniform": 74.48
+  },
+  "sp70": {
+    "atp_best": 2052.87,
+    "atp_best_beta": 0.02,
+    "global_atp_sched": 775.36,
+    "global_uniform": 1887.98
+  }
+}

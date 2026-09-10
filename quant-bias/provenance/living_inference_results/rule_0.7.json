@@ -1,0 +1,6 @@
+{
+  "method": "rule",
+  "sparsity": 0.7,
+  "actual_sparsity": 0.6759842788617227,
+  "ppl": 52.62629318237305
+}

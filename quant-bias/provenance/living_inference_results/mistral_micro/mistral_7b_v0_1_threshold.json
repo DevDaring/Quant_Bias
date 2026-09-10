@@ -1,0 +1,40 @@
+{
+  "sweep": [
+    {
+      "sparsity": 0.5,
+      "ppl": 6.76,
+      "regret": 0.61
+    },
+    {
+      "sparsity": 0.6,
+      "ppl": 8.68,
+      "regret": 2.53
+    },
+    {
+      "sparsity": 0.7,
+      "ppl": 9.12,
+      "regret": 2.97
+    },
+    {
+      "sparsity": 0.8,
+      "ppl": 15.64,
+      "regret": 9.49
+    },
+    {
+      "sparsity": 0.9,
+      "ppl": 39.03,
+      "regret": 32.88
+    },
+    {
+      "sparsity": 0.95,
+      "ppl": 62.19,
+      "regret": 56.04
+    },
+    {
+      "sparsity": 0.99,
+      "ppl": 120.21,
+      "regret": 114.06
+    }
+  ],
+  "tau": 0.95
+}

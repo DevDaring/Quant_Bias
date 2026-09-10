@@ -1,0 +1,88 @@
+{
+  "Dense": {
+    "scores": {
+      "hellaswag": 67.6,
+      "arc_easy": 73.6,
+      "winogrande": 71.0,
+      "piqa": 80.2
+    },
+    "avg": 73.1,
+    "skip": [],
+    "atp": false
+  },
+  "Rho-4": {
+    "scores": {
+      "hellaswag": 60.2,
+      "arc_easy": 63.6,
+      "winogrande": 62.2,
+      "piqa": 78.0
+    },
+    "avg": 66.0,
+    "skip": [
+      10,
+      12,
+      13,
+      30
+    ],
+    "atp": false
+  },
+  "BI-4": {
+    "scores": {
+      "hellaswag": 61.4,
+      "arc_easy": 62.4,
+      "winogrande": 71.4,
+      "piqa": 76.6
+    },
+    "avg": 67.95,
+    "skip": [
+      24,
+      26,
+      27,
+      28
+    ],
+    "atp": false
+  },
+  "ATP-50%": {
+    "scores": {
+      "hellaswag": 63.8,
+      "arc_easy": 68.8,
+      "winogrande": 67.0,
+      "piqa": 79.0
+    },
+    "avg": 69.65,
+    "skip": [],
+    "atp": true
+  },
+  "Rho-4+ATP": {
+    "scores": {
+      "hellaswag": 57.4,
+      "arc_easy": 59.6,
+      "winogrande": 59.0,
+      "piqa": 75.0
+    },
+    "avg": 62.75,
+    "skip": [
+      10,
+      12,
+      13,
+      30
+    ],
+    "atp": true
+  },
+  "BI-4+ATP": {
+    "scores": {
+      "hellaswag": 56.0,
+      "arc_easy": 58.4,
+      "winogrande": 59.4,
+      "piqa": 72.4
+    },
+    "avg": 61.55,
+    "skip": [
+      24,
+      26,
+      27,
+      28
+    ],
+    "atp": true
+  }
+}

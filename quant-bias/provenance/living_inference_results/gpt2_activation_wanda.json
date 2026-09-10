@@ -1,0 +1,39 @@
+{
+  "baseline": 26.76,
+  "activation_wanda": {
+    "attn.c_attn": {
+      "ppl": 35.24,
+      "regret": 8.48
+    },
+    "attn.c_proj": {
+      "ppl": 27.5,
+      "regret": 0.74
+    },
+    "mlp.c_fc": {
+      "ppl": 32.19,
+      "regret": 5.43
+    },
+    "mlp.c_proj": {
+      "ppl": 30.83,
+      "regret": 4.07
+    }
+  },
+  "simplified_wanda": {
+    "attn.c_attn": {
+      "ppl": 130.17,
+      "regret": 103.4
+    },
+    "attn.c_proj": {
+      "ppl": 28.89,
+      "regret": 2.12
+    },
+    "mlp.c_fc": {
+      "ppl": 464.81,
+      "regret": 438.05
+    },
+    "mlp.c_proj": {
+      "ppl": 32.67,
+      "regret": 5.91
+    }
+  }
+}
