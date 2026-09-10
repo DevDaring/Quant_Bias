@@ -6,3 +6,46 @@
 [10:29:11]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
 Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 11420.43it/s]
 [10:29:16] adapter: {'model_id': 'Qwen/Qwen3-8B', 'revision': 'b968826d9c46dd6066d109eabc6255188de91218', 'family': 'llama', 'n_layers': 36, 'n_components': 252, 'component_weights': 6945767424, 'excluded_weights': 1244967936, 'tied_lm_head': False, 'dtype': 'torch.bfloat16', 'components_per_layer': ['self_attn.q_proj', 'self_attn.k_proj', 'self_attn.v_proj', 'self_attn.o_proj', 'mlp.gate_proj', 'mlp.up_proj', 'mlp.down_proj'], 'component_kinds': {'attn': 144, 'conv': 0, 'mlp': 108, 'other': 0}, 'layer_types': ['full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention', 'full_attention']}
+[10:29:51] BBQ: 7868 examples, 343 template clusters
+[10:29:58] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[10:29:59] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[10:30:05] calibration[generic] seed=20260908: 128x512 tokens, hash=2bd1aa26b9efddbb
+[10:30:12]   GPTQ layer 0: 7 components
+[10:30:18]   GPTQ layer 1: 7 components
+[10:30:23]   GPTQ layer 2: 7 components
+[10:30:28]   GPTQ layer 3: 7 components
+[10:30:34]   GPTQ layer 4: 7 components
+[10:30:39]   GPTQ layer 5: 7 components
+[10:30:44]   GPTQ layer 6: 7 components
+[10:30:50]   GPTQ layer 7: 7 components
+[10:30:55]   GPTQ layer 8: 7 components
+[10:31:00]   GPTQ layer 9: 7 components
+[10:31:06]   GPTQ layer 10: 7 components
+[10:31:11]   GPTQ layer 11: 7 components
+[10:31:16]   GPTQ layer 12: 7 components
+[10:31:22]   GPTQ layer 13: 7 components
+[10:31:27]   GPTQ layer 14: 7 components
+[10:31:32]   GPTQ layer 15: 7 components
+[10:31:38]   GPTQ layer 16: 7 components
+[10:31:43]   GPTQ layer 17: 7 components
+[10:31:48]   GPTQ layer 18: 7 components
+[10:31:54]   GPTQ layer 19: 7 components
+[10:31:59]   GPTQ layer 20: 7 components
+[10:32:04]   GPTQ layer 21: 7 components
+[10:32:10]   GPTQ layer 22: 7 components
+[10:32:15]   GPTQ layer 23: 7 components
+[10:32:20]   GPTQ layer 24: 7 components
+[10:32:26]   GPTQ layer 25: 7 components
+[10:32:31]   GPTQ layer 26: 7 components
+[10:32:36]   GPTQ layer 27: 7 components
+[10:32:42]   GPTQ layer 28: 7 components
+[10:32:47]   GPTQ layer 29: 7 components
+[10:32:52]   GPTQ layer 30: 7 components
+[10:32:58]   GPTQ layer 31: 7 components
+[10:33:03]   GPTQ layer 32: 7 components
+[10:33:08]   GPTQ layer 33: 7 components
+[10:33:14]   GPTQ layer 34: 7 components
+[10:33:19]   GPTQ layer 35: 7 components
+[10:33:44] Wanda per-row 50%: achieved 0.5000 over 6945767424 weights
+[10:34:00]   scored 3/3 candidate sequences
+[10:34:01] === done in 318s -> /workspace/Quant_Bias/quant-bias/results/e0/qwen3_8b ===
