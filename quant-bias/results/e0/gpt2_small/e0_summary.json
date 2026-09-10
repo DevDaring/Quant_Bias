@@ -1,0 +1,462 @@
+{
+  "adapter": {
+    "component_kinds": {
+      "attn": 24,
+      "conv": 0,
+      "mlp": 24,
+      "other": 0
+    },
+    "component_weights": 84934656,
+    "components_per_layer": [
+      "attn.c_attn",
+      "attn.c_proj",
+      "mlp.c_fc",
+      "mlp.c_proj"
+    ],
+    "dtype": "torch.float32",
+    "excluded_weights": 39505152,
+    "family": "gpt2",
+    "layer_types": null,
+    "model_id": "openai-community/gpt2",
+    "n_components": 48,
+    "n_layers": 12,
+    "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "tied_lm_head": true
+  },
+  "bytes_dense": {
+    "component_bytes": 170035200,
+    "metadata_bytes": 0,
+    "padding_bytes": 0,
+    "total_MiB": 237.51,
+    "total_bytes": 249045504,
+    "uncompressed_bytes": 79010304
+  },
+  "bytes_rtn4": {
+    "component_bytes": 42633216,
+    "metadata_bytes": 1658880,
+    "padding_bytes": 0,
+    "total_MiB": 117.59,
+    "total_bytes": 123302400,
+    "uncompressed_bytes": 79010304
+  },
+  "bytes_rtn8": {
+    "component_bytes": 85100544,
+    "metadata_bytes": 1990656,
+    "padding_bytes": 0,
+    "total_MiB": 158.41,
+    "total_bytes": 166101504,
+    "uncompressed_bytes": 79010304
+  },
+  "gptq4": {
+    "calibration_hash": "c33bcfa67386b8e3",
+    "grid_ok_all": true,
+    "max_rel_fro_err": 0.1733594834804535,
+    "mean_rel_fro_err": 0.13073769103114805,
+    "n_quantized": 48,
+    "ppl": {
+      "chunk_size": 1024,
+      "max_tokens": 4096,
+      "n_tokens": 4092,
+      "ppl": 28.11602873565126
+    },
+    "seconds": 8.870229244232178
+  },
+  "grid_rtn4": {
+    "grid_ok_all": true,
+    "max_rel_fro_err": 0.11907181143760681,
+    "mean_rel_fro_err": 0.1059811223919193,
+    "n_quantized": 48
+  },
+  "grid_rtn8": {
+    "grid_ok_all": true,
+    "max_rel_fro_err": 0.007694303523749113,
+    "mean_rel_fro_err": 0.006274228576027478,
+    "n_quantized": 48
+  },
+  "manifest": {
+    "backend": "simulated",
+    "calibration_hash": "",
+    "code_revision": "git:9cbf951+src:a17bd48e2e46",
+    "data_revisions": {},
+    "error": "",
+    "experiment_id": "e0",
+    "extra": {
+      "config_hash": "ec1f83fc2916df2a",
+      "limits": {
+        "bbq_answer_format": "text",
+        "bbq_per_cluster_per_cell": 6,
+        "discrim_ages": [
+          20,
+          40,
+          60,
+          80,
+          100
+        ],
+        "discrim_config": "explicit"
+      },
+      "quick": false,
+      "sampling_profile": "budget"
+    },
+    "finished": "2026-09-10T09:53:20",
+    "hardware": {
+      "cpu_count": 96,
+      "cuda": true,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "gpu_mem_gb": 79.2,
+      "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+      "python": "3.11.10",
+      "torch": "2.5.1+cu124",
+      "transformers": "5.17.0"
+    },
+    "method": "dense",
+    "model_id": "openai-community/gpt2",
+    "model_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "precision_map_hash": "",
+    "seed": 20260908,
+    "split_hash": "",
+    "started": "2026-09-10T09:52:22",
+    "status": "ok",
+    "tokenizer_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e"
+  },
+  "ppl_dense": {
+    "chunk_size": 1024,
+    "max_tokens": 4096,
+    "n_tokens": 4092,
+    "ppl": 26.761401365479376
+  },
+  "ppl_rtn4": {
+    "chunk_size": 1024,
+    "max_tokens": 4096,
+    "n_tokens": 4092,
+    "ppl": 29.38256035994495
+  },
+  "ppl_rtn8": {
+    "chunk_size": 1024,
+    "max_tokens": 4096,
+    "n_tokens": 4092,
+    "ppl": 26.785801619877308
+  },
+  "restored_exact": true,
+  "roundtrip": {
+    "max_abs_logit_diff": 0.0,
+    "n_components": 48,
+    "ok": true
+  },
+  "scoring": {
+    "acc": 0.3333333333333333,
+    "boundary_mismatch_rate": 0.0,
+    "known_answer_ok": true,
+    "n": 60,
+    "permutation_consistent": true
+  },
+  "splits": {
+    "clusters_per_split": {
+      "calibration": 397,
+      "final": 1004,
+      "selection": 596
+    },
+    "leaking": {},
+    "n_clusters": 1997,
+    "ok": true
+  },
+  "wanda": {
+    "components": {
+      "L0.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L0.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L0.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L0.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L1.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L1.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L1.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L1.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L10.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L10.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L10.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L10.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L11.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L11.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L11.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L11.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L2.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L2.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L2.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L2.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L3.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L3.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L3.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L3.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L4.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L4.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L4.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L4.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L5.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L5.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L5.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L5.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L6.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L6.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L6.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L6.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L7.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L7.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L7.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L7.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L8.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L8.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L8.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L8.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L9.attn.c_attn": {
+        "numel": 1769472,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 884736
+      },
+      "L9.attn.c_proj": {
+        "numel": 589824,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 294912
+      },
+      "L9.mlp.c_fc": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      },
+      "L9.mlp.c_proj": {
+        "numel": 2359296,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1179648
+      }
+    },
+    "ppl": {
+      "chunk_size": 1024,
+      "max_tokens": 4096,
+      "n_tokens": 4092,
+      "ppl": 42.329058064562055
+    },
+    "sparsity_achieved": 0.5,
+    "sparsity_target": 0.5
+  }
+}

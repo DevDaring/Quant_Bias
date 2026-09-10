@@ -72,3 +72,8 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-10_09:25:33] <<< e1/M3 ok in 412s
 [2026-09-10_09:25:38] >>> e1/M4
 [2026-09-10_09:32:06] <<< e1/M4 ok in 388s
+[2026-09-10_09:52:14] ===== MODE=full  flags:--profile budget --device cuda --attn flash_attention_2 =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-10_09:52:14] --- Stage A: adapter and pipeline checks (all models) ---
+[2026-09-10_09:52:14] >>> e0/M1
+[2026-09-10_09:53:21] <<< e0/M1 ok in 67s
