@@ -1,0 +1,8 @@
+[22:35:25] === E6 model=M5 tag=qwen3_8b device=cuda seed=20260908 profile=budget ===
+[22:35:26] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 12090.56it/s]
+[22:35:29]   attention: flash_attention_2
+[22:35:29]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 11680.12it/s]
+[22:35:33] E6: Prior Lyapunov rho tracks this study's utility measure at rho_s=-0.07 (n=63), confirming the two pipelines measure the same layers. It does not predict group-conditioned harmful flips (rho_s=-0.03, p=0.79), so utility-derived layer sensitivity does not identify where quantization changes socially relevant decisions. This study's group-conditioned residual energy relates to harm at rho_s=0.57 (n=64).
+[22:35:34] === done in 8s -> /workspace/Quant_Bias/quant-bias/results/e6/qwen3_8b ===
