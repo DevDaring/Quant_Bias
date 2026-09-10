@@ -1,36 +1,40 @@
-[08:25:20] === E0 model=M2 tag=qwen3_5_2b-smoke device=cuda seed=20260908 profile=smoke ===
-[08:25:21] Loading Qwen/Qwen3.5-2B@main (15852e8c16360a2fea060d615a32b45270f8a8fc) dtype=torch.bfloat16 device=cuda
-Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 5662.38it/s]
-[08:25:59]   attention: flash_attention_2
+[08:54:49] === E0 model=M2 tag=qwen3_5_2b-smoke device=cuda seed=20260908 profile=smoke ===
+[08:54:50] Loading Qwen/Qwen3.5-2B@main (15852e8c16360a2fea060d615a32b45270f8a8fc) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 13203.26it/s]
+[08:55:10]   attention: flash_attention_2
 [transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
 [transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
-[08:26:01] adapter: {'model_id': 'Qwen/Qwen3.5-2B', 'revision': '15852e8c16360a2fea060d615a32b45270f8a8fc', 'family': 'llama', 'n_layers': 24, 'n_components': 150, 'component_weights': 1371537408, 'excluded_weights': 510287680, 'tied_lm_head': True, 'dtype': 'torch.bfloat16', 'components_per_layer': ['linear_attn.out_proj', 'linear_attn.in_proj_qkv', 'linear_attn.in_proj_z', 'mlp.gate_proj', 'mlp.up_proj', 'mlp.down_proj'], 'component_kinds': {'attn': 78, 'conv': 0, 'mlp': 72, 'other': 0}, 'layer_types': ['linear_attention', 'linear_attention', 'linear_attention', 'full_attention', 'linear_attention', 'linear_attention', 'linear_attention', 'full_attention', 'linear_attention', 'linear_attention', 'linear_attention', 'full_attention', 'linear_attention', 'linear_attention', 'linear_attention', 'full_attention', 'linear_attention', 'linear_attention', 'linear_attention', 'full_attention', 'linear_attention', 'linear_attention', 'linear_attention', 'full_attention']}
-[08:26:42] BBQ: 22 examples, 11 template clusters
-[08:26:59] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[08:27:01] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[08:27:12] calibration[generic] seed=20260908: 8x128 tokens, hash=a172f9f44aeb1662
-[08:27:15]   GPTQ layer 0: 6 components
-[08:27:17]   GPTQ layer 1: 6 components
-[08:27:18]   GPTQ layer 2: 6 components
-[08:27:20]   GPTQ layer 3: 7 components
-[08:27:21]   GPTQ layer 4: 6 components
-[08:27:22]   GPTQ layer 5: 6 components
-[08:27:24]   GPTQ layer 6: 6 components
-[08:27:26]   GPTQ layer 7: 7 components
-[08:27:27]   GPTQ layer 8: 6 components
-[08:27:28]   GPTQ layer 9: 6 components
-[08:27:30]   GPTQ layer 10: 6 components
-[08:27:31]   GPTQ layer 11: 7 components
-[08:27:33]   GPTQ layer 12: 6 components
-[08:27:34]   GPTQ layer 13: 6 components
-[08:27:36]   GPTQ layer 14: 6 components
-[08:27:37]   GPTQ layer 15: 7 components
-[08:27:39]   GPTQ layer 16: 6 components
-[08:27:40]   GPTQ layer 17: 6 components
-[08:27:42]   GPTQ layer 18: 6 components
-[08:27:43]   GPTQ layer 19: 7 components
-[08:27:45]   GPTQ layer 20: 6 components
-[08:27:46]   GPTQ layer 21: 6 components
-[08:27:48]   GPTQ layer 22: 6 components
-[08:27:49]   GPTQ layer 23: 7 components
-[08:28:04] Wanda per-row 50%: achieved 0.5000 over 1371537408 weights
+[08:55:18]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 11424.05it/s]
+[08:55:20] adapter: {'model_id': 'Qwen/Qwen3.5-2B', 'revision': '15852e8c16360a2fea060d615a32b45270f8a8fc', 'family': 'llama', 'n_layers': 24, 'n_components': 150, 'component_weights': 1371537408, 'excluded_weights': 510287680, 'tied_lm_head': True, 'dtype': 'torch.bfloat16', 'components_per_layer': ['linear_attn.out_proj', 'linear_attn.in_proj_qkv', 'linear_attn.in_proj_z', 'mlp.gate_proj', 'mlp.up_proj', 'mlp.down_proj'], 'component_kinds': {'attn': 78, 'conv': 0, 'mlp': 72, 'other': 0}, 'layer_types': ['linear_attention', 'linear_attention', 'linear_attention', 'full_attention', 'linear_attention', 'linear_attention', 'linear_attention', 'full_attention', 'linear_attention', 'linear_attention', 'linear_attention', 'full_attention', 'linear_attention', 'linear_attention', 'linear_attention', 'full_attention', 'linear_attention', 'linear_attention', 'linear_attention', 'full_attention', 'linear_attention', 'linear_attention', 'linear_attention', 'full_attention']}
+[08:55:38] BBQ: 22 examples, 11 template clusters
+[08:55:45] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[08:55:46] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[08:55:51] calibration[generic] seed=20260908: 8x128 tokens, hash=a172f9f44aeb1662
+[08:55:53]   GPTQ layer 0: 6 components
+[08:55:55]   GPTQ layer 1: 6 components
+[08:55:57]   GPTQ layer 2: 6 components
+[08:55:58]   GPTQ layer 3: 7 components
+[08:56:00]   GPTQ layer 4: 6 components
+[08:56:02]   GPTQ layer 5: 6 components
+[08:56:04]   GPTQ layer 6: 6 components
+[08:56:06]   GPTQ layer 7: 7 components
+[08:56:07]   GPTQ layer 8: 6 components
+[08:56:09]   GPTQ layer 9: 6 components
+[08:56:11]   GPTQ layer 10: 6 components
+[08:56:13]   GPTQ layer 11: 7 components
+[08:56:15]   GPTQ layer 12: 6 components
+[08:56:16]   GPTQ layer 13: 6 components
+[08:56:18]   GPTQ layer 14: 6 components
+[08:56:20]   GPTQ layer 15: 7 components
+[08:56:22]   GPTQ layer 16: 6 components
+[08:56:24]   GPTQ layer 17: 6 components
+[08:56:25]   GPTQ layer 18: 6 components
+[08:56:27]   GPTQ layer 19: 7 components
+[08:56:29]   GPTQ layer 20: 6 components
+[08:56:31]   GPTQ layer 21: 6 components
+[08:56:32]   GPTQ layer 22: 6 components
+[08:56:34]   GPTQ layer 23: 7 components
+[08:56:42] Wanda per-row 50%: achieved 0.5000 over 1371537408 weights
+[08:56:49]   scored 3/3 candidate sequences
+[08:56:49] === done in 120s -> /workspace/Quant_Bias/quant-bias/results/e0/qwen3_5_2b-smoke ===
