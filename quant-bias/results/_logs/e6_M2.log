@@ -1,0 +1,10 @@
+[22:34:34] === E6 model=M2 tag=qwen3_5_2b device=cuda seed=20260908 profile=budget ===
+[22:34:34] Loading Qwen/Qwen3.5-2B@main (15852e8c16360a2fea060d615a32b45270f8a8fc) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 15889.58it/s]
+[22:34:38]   attention: flash_attention_2
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[22:34:44]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 11195.54it/s]
+[22:34:46] E6: Prior Lyapunov rho tracks this study's utility measure at rho_s=-0.06 (n=42), confirming the two pipelines measure the same layers. It does not predict group-conditioned harmful flips (rho_s=0.01, p=0.94), so utility-derived layer sensitivity does not identify where quantization changes socially relevant decisions. This study's group-conditioned residual energy relates to harm at rho_s=0.56 (n=49).
+[22:34:47] === done in 13s -> /workspace/Quant_Bias/quant-bias/results/e6/qwen3_5_2b ===
