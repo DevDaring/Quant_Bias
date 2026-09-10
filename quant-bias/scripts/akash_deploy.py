@@ -49,7 +49,8 @@ def call(method: str, path: str, body: dict | None = None, timeout: int = 120):
 
 def sdl(pubkey: str, gpu: str, ram: str, cpu: int, mem: str, disk: str, price: int,
         image: str = "pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime",
-        deploy_key: str = "", hf_token: str = "", autorun: str = "") -> str:
+        deploy_key: str = "", hf_token: str = "", autorun: str = "",
+        persistent: str = "") -> str:
     """Build the SDL. The container is self-healing.
 
     Akash containers are ephemeral: a restart wipes the filesystem entirely.
@@ -104,6 +105,8 @@ def sdl(pubkey: str, gpu: str, ram: str, cpu: int, mem: str, disk: str, price: i
                 "env": env,
                 "command": ["bash"],
                 "args": ["-c", "\n".join(lines)],
+                **({"params": {"storage": {"data": {"mount": "/workspace",
+                                                    "readOnly": False}}}} if persistent else {}),
             }
         },
         "profiles": {
@@ -112,7 +115,13 @@ def sdl(pubkey: str, gpu: str, ram: str, cpu: int, mem: str, disk: str, price: i
                     "resources": {
                         "cpu": {"units": cpu},
                         "memory": {"size": mem},
-                        "storage": [{"size": disk}],
+                        # Ephemeral root plus, optionally, a persistent volume.
+                        # Akash pods get recycled; without persistence every
+                        # restart re-downloads ~60GB of checkpoints.
+                        "storage": ([{"size": disk}] if not persistent else
+                                    [{"size": disk},
+                                     {"name": "data", "size": persistent,
+                                      "attributes": {"persistent": True, "class": "beta3"}}]),
                         "gpu": {"units": 1,
                                 "attributes": {"vendor": {"nvidia": [{"model": gpu, "ram": ram}]}}},
                     }
@@ -173,7 +182,8 @@ def cmd_create(a):
     pub = pathlib.Path(a.pubkey).expanduser().read_text().strip()
     dk = pathlib.Path(a.deploy_key).expanduser().read_text().strip() if a.deploy_key else ""
     manifest_sdl = sdl(pub, a.gpu, a.ram, a.cpu, a.mem, a.disk, a.price, a.image,
-                       dk, os.environ.get("HUGGINGFACE_TOKEN", ""), a.autorun)
+                       dk, os.environ.get("HUGGINGFACE_TOKEN", ""), a.autorun,
+                       a.persistent)
     print(f"creating deployment: gpu={a.gpu} ram={a.ram} disk={a.disk} limit={a.hours}h")
     code, d = call("POST", "/v1/deployments",
                    {"data": {"sdl": manifest_sdl, "runtimeLimitHours": a.hours}})
@@ -287,6 +297,7 @@ if __name__ == "__main__":
     c.add_argument("--image", default="pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime")
     c.add_argument("--deploy-key", default="", help="path to the repo-scoped private key")
     c.add_argument("--autorun", default="", help="smoke|full: self-heal and resume after a restart")
+    c.add_argument("--persistent", default="", help="size of a persistent /workspace volume, e.g. 200Gi")
     c.add_argument("--bid-wait", type=int, default=180)
     c.add_argument("--ready-wait", type=int, default=420)
     c.add_argument("--max-tries", type=int, default=4, help="how many bids to try before giving up")
