@@ -85,3 +85,31 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-10_10:00:22] <<< e0/M2 ok in 154s
 [2026-09-10_10:00:25] >>> e0/M3
 [2026-09-10_10:05:38] <<< e0/M3 ok in 313s
+[2026-09-10_10:08:38] ===== MODE=full  flags:--profile budget --device cuda --attn flash_attention_2 =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-10_10:08:38] --- Stage A: adapter and pipeline checks (all models) ---
+[2026-09-10_10:08:38] skip full/e0/M1 (already ok)
+[2026-09-10_10:08:38] skip full/e0/M6 (already ok)
+[2026-09-10_10:08:38] skip full/e0/M7 (already ok)
+[2026-09-10_10:08:38] skip full/e0/M2 (already ok)
+[2026-09-10_10:08:38] skip full/e0/M3 (already ok)
+[2026-09-10_10:08:38] skip full/e0/M4 (already ok)
+[2026-09-10_10:08:38] skip full/e0/M5 (already ok)
+[2026-09-10_10:08:38] --- Stage B: quantization x subgroup outcomes (all models) ---
+[2026-09-10_10:08:38] >>> full/e1/M1
+[2026-09-10_10:09:20] <<< full/e1/M1 FAILED in 42s -- see results/_logs/e1_M1.log
+    [10:09:10]   scored 12512/18514 candidate sequences
+    [10:09:11]   scored 13008/18514 candidate sequences
+    [10:09:11]   scored 13504/18514 candidate sequences
+    [10:09:12]   scored 14000/18514 candidate sequences
+    [10:09:12]   scored 14512/18514 candidate sequences
+    [10:09:13]   scored 15008/18514 candidate sequences
+    [10:09:14]   scored 15504/18514 candidate sequences
+    [10:09:14]   scored 16000/18514 candidate sequences
+    [10:09:15]   scored 16512/18514 candidate sequences
+    [10:09:16]   scored 17008/18514 candidate sequences
+    [10:09:16]   scored 17504/18514 candidate sequences
+    [10:09:17]   scored 18000/18514 candidate sequences
+    [10:09:18]   scored 18512/18514 candidate sequences
+    [10:09:18]   scored 18514/18514 candidate sequences
+    [transformers] `loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.

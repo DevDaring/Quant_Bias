@@ -1,44 +1,48 @@
-[09:10:10] === E1 model=M1 tag=gpt2_small-smoke device=cuda seed=20260908 profile=smoke ===
-[09:10:11] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15718.15it/s]
-[09:10:13]   attention: sdpa
-[09:10:13] === E1 dense on final ===
-[09:10:20] BBQ: 22 examples, 11 template clusters
-[09:10:27] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[09:10:28] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[10:08:40] === E1 model=M1 tag=gpt2_small device=cuda seed=20260908 profile=budget ===
+[10:08:40] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15351.21it/s]
+[10:08:43]   attention: sdpa
+[10:08:43] === E1 dense on final ===
+[10:08:50] BBQ: 7868 examples, 343 template clusters
+[10:08:57] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[10:08:58] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[10:09:03]   scored 512/18514 candidate sequences
+[10:09:04]   scored 1008/18514 candidate sequences
+[10:09:04]   scored 1504/18514 candidate sequences
+[10:09:04]   scored 2000/18514 candidate sequences
+[10:09:04]   scored 2512/18514 candidate sequences
+[10:09:05]   scored 3008/18514 candidate sequences
+[10:09:05]   scored 3504/18514 candidate sequences
+[10:09:05]   scored 4000/18514 candidate sequences
+[10:09:05]   scored 4512/18514 candidate sequences
+[10:09:06]   scored 5008/18514 candidate sequences
+[10:09:06]   scored 5504/18514 candidate sequences
+[10:09:06]   scored 6000/18514 candidate sequences
+[10:09:06]   scored 6512/18514 candidate sequences
+[10:09:07]   scored 7008/18514 candidate sequences
+[10:09:07]   scored 7504/18514 candidate sequences
+[10:09:07]   scored 8000/18514 candidate sequences
+[10:09:08]   scored 8512/18514 candidate sequences
+[10:09:08]   scored 9008/18514 candidate sequences
+[10:09:08]   scored 9504/18514 candidate sequences
+[10:09:09]   scored 10000/18514 candidate sequences
+[10:09:09]   scored 10512/18514 candidate sequences
+[10:09:09]   scored 11008/18514 candidate sequences
+[10:09:10]   scored 11504/18514 candidate sequences
+[10:09:10]   scored 12000/18514 candidate sequences
+[10:09:10]   scored 12512/18514 candidate sequences
+[10:09:11]   scored 13008/18514 candidate sequences
+[10:09:11]   scored 13504/18514 candidate sequences
+[10:09:12]   scored 14000/18514 candidate sequences
+[10:09:12]   scored 14512/18514 candidate sequences
+[10:09:13]   scored 15008/18514 candidate sequences
+[10:09:14]   scored 15504/18514 candidate sequences
+[10:09:14]   scored 16000/18514 candidate sequences
+[10:09:15]   scored 16512/18514 candidate sequences
+[10:09:16]   scored 17008/18514 candidate sequences
+[10:09:16]   scored 17504/18514 candidate sequences
+[10:09:17]   scored 18000/18514 candidate sequences
+[10:09:18]   scored 18512/18514 candidate sequences
+[10:09:18]   scored 18514/18514 candidate sequences
 [transformers] `loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
-[09:10:30] === E1 rtn8 on final ===
-[09:10:32] counterfactual pairs: 46
-[09:10:33] === E1 rtn4 on final ===
-[09:10:33] counterfactual pairs: 46
-[09:10:33] === E1 gptq4 on final ===
-[09:10:39] calibration[generic] seed=20260908: 8x128 tokens, hash=c370baf51c734559
-[09:10:40]   GPTQ layer 0: 4 components
-[09:10:40]   GPTQ layer 1: 4 components
-[09:10:41]   GPTQ layer 2: 4 components
-[09:10:41]   GPTQ layer 3: 4 components
-[09:10:42]   GPTQ layer 4: 4 components
-[09:10:43]   GPTQ layer 5: 4 components
-[09:10:43]   GPTQ layer 6: 4 components
-[09:10:44]   GPTQ layer 7: 4 components
-[09:10:44]   GPTQ layer 8: 4 components
-[09:10:45]   GPTQ layer 9: 4 components
-[09:10:46]   GPTQ layer 10: 4 components
-[09:10:46]   GPTQ layer 11: 4 components
-[09:10:46] counterfactual pairs: 46
-[09:10:47] === E1 gptq8 on final ===
-[09:10:47]   GPTQ layer 0: 4 components
-[09:10:48]   GPTQ layer 1: 4 components
-[09:10:48]   GPTQ layer 2: 4 components
-[09:10:49]   GPTQ layer 3: 4 components
-[09:10:49]   GPTQ layer 4: 4 components
-[09:10:50]   GPTQ layer 5: 4 components
-[09:10:51]   GPTQ layer 6: 4 components
-[09:10:51]   GPTQ layer 7: 4 components
-[09:10:52]   GPTQ layer 8: 4 components
-[09:10:52]   GPTQ layer 9: 4 components
-[09:10:53]   GPTQ layer 10: 4 components
-[09:10:54]   GPTQ layer 11: 4 components
-[09:10:54] counterfactual pairs: 46
-[09:10:54] report written: /workspace/Quant_Bias/quant-bias/results/e1/gpt2_small-smoke/REPORT.md
-[09:10:54] === done in 44s -> /workspace/Quant_Bias/quant-bias/results/e1/gpt2_small-smoke ===
