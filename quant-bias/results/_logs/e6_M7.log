@@ -1,0 +1,9 @@
+[22:34:20] === E6 model=M7 tag=lfm2_2.6b device=cuda seed=20260908 profile=budget ===
+[22:34:21] Loading LiquidAI/LFM2-2.6B@main (36ed799f7024ef169ba92ffe184821835e15cc66) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 12488.50it/s]
+[22:34:23]   attention: flash_attention_2
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[22:34:25]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/266 [00:00<?, ?it/s]Loading weights: 100%|██████████| 266/266 [00:00<00:00, 11539.98it/s]
+[22:34:27] E6: Prior Lyapunov rho tracks this study's utility measure at rho_s=-0.39 (n=57), confirming the two pipelines measure the same layers. It does not predict group-conditioned harmful flips (rho_s=0.05, p=0.74), so utility-derived layer sensitivity does not identify where quantization changes socially relevant decisions. This study's group-conditioned residual energy relates to harm at rho_s=0.47 (n=58).
+[22:34:27] === done in 7s -> /workspace/Quant_Bias/quant-bias/results/e6/lfm2_2.6b ===
