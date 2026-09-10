@@ -46,6 +46,8 @@ from .pruning import collect_feature_norms, wanda_per_row
 class Ctx:
     def __init__(self, args):
         load_env()
+        if getattr(args, 'smoke', False):
+            args.quick = True   # smoke reuses every quick-mode size cap, then shrinks further
         self.args = args
         self.cfg = load_yaml(CONFIG_DIR / "experiments.yaml")
         self.models = load_yaml(CONFIG_DIR / "models.yaml")
@@ -53,7 +55,7 @@ class Ctx:
         self.seed = args.seed if args.seed is not None else int(self.cfg.get("seed", default_seed()))
         set_seed(self.seed)
         self.device = get_device(args.device)
-        self.tag = self.mcfg["tag"] + ("-quick" if args.quick else "")
+        self.tag = self.mcfg["tag"] + ("-smoke" if args.smoke else "-quick" if args.quick else "")
         self.out = RESULTS_DIR / args.exp / self.tag
         self.out.mkdir(parents=True, exist_ok=True)
         self.norm = self.cfg["scoring"]["norm"]
@@ -64,12 +66,14 @@ class Ctx:
         self._wiki: str | None = None
         # Sampling profile: caps instantiations per template cell, never clusters.
         samp = self.cfg.get("sampling", {})
-        prof = args.profile or samp.get("profile", "budget")
+        prof = args.profile or ("smoke" if args.smoke else samp.get("profile", "budget"))
         self.profile = prof
         pcfg = samp.get(prof, {}) or {}
         self.limits = {"bbq_per_cluster_per_cell": pcfg.get("bbq_per_cluster_per_cell"),
                        "discrim_ages": pcfg.get("discrim_ages")}
-        if args.quick:
+        if args.smoke:
+            self.limits.update({"bbq_per_category": 2, "discrim_questions": 1})
+        elif args.quick:
             self.limits.update({"bbq_per_category": 40, "discrim_questions": 4})
         self.limits["bbq_answer_format"] = self.cfg["scoring"]["bbq_answer_format"]
         self.limits["discrim_config"] = self.cfg.get("discrim_config", "explicit")
@@ -808,7 +812,9 @@ def main(argv=None):
     p.add_argument("--device", default="auto")
     p.add_argument("--device-map", action="store_true", help="use accelerate device_map=auto on cuda")
     p.add_argument("--seed", type=int, default=None)
-    p.add_argument("--quick", action="store_true", help="tiny subsets for CPU smoke runs")
+    p.add_argument("--quick", action="store_true", help="small subsets for CPU dev runs")
+    p.add_argument("--smoke", action="store_true",
+                   help="two samples per category: proves every code path runs, produces no science")
     p.add_argument("--attn", default=None,
                    help="attn_implementation: flash_attention_2 | sdpa | eager (falls back if unavailable)")
     p.add_argument("--profile", choices=["budget", "full"], default=None,

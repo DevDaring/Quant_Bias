@@ -19,6 +19,12 @@ sampling:
     bbq_per_cluster_per_cell: null
     discrim_ages: null
     winobias: all
+  smoke:
+    # end-to-end wiring check on two samples per BBQ category. Produces no
+    # usable science; it exists to prove every code path runs on the GPU host.
+    bbq_per_cluster_per_cell: 1
+    discrim_ages: [60]
+    winobias: all
 
 scoring:
   norm: sum                            # declared rule: sum of candidate log-probs

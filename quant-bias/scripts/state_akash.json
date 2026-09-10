@@ -1,0 +1,17 @@
+{
+  "dseq": "1789028002343",
+  "created": "2026-09-10 08:13:29",
+  "gpu": "h100",
+  "hours": 30,
+  "updated": "2026-09-10 08:15:34",
+  "provider": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
+  "gseq": 1,
+  "oseq": 1,
+  "price_uakt_block": 3458.65846,
+  "ssh_host": "provider.h100.siamaidol.com",
+  "ssh_port": 30954,
+  "ssh_provider": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
+  "ssh_state": "active",
+  "closed": "2026-09-10 08:15:34",
+  "lease_state": "active"
+}
