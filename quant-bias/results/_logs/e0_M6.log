@@ -1,75 +1,37 @@
-[08:19:56] === E0 model=M6 tag=gpt2_medium-smoke device=cuda seed=20260908 profile=smoke ===
-[08:19:56] Loading openai-community/gpt2-medium@main (6dcaa7a952f72f9298047fd5137cd6e4f05f41da) dtype=torch.float32 device=cuda
-[transformers] Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in GPT2LMHeadModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2", dtype=torch.float16)`
-[transformers] Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in GPT2Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 9249.16it/s]
-[08:20:16]   attention: flash_attention_2
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/Quant_Bias/quant-bias/quantbias/run_experiment.py", line 834, in <module>
-    main()
-  File "/workspace/Quant_Bias/quant-bias/quantbias/run_experiment.py", line 828, in main
-    res = EXPS[args.exp](ctx)
-          ^^^^^^^^^^^^^^^^^^^
-  File "/workspace/Quant_Bias/quant-bias/quantbias/run_experiment.py", line 216, in run_e0
-    res: dict[str, Any] = {"adapter": a.summary(), "roundtrip": check_weight_roundtrip(a)}
-                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/Quant_Bias/quant-bias/quantbias/model_adapters.py", line 362, in check_weight_roundtrip
-    ref = adapter.model(**tok).logits.float().clone()
-          ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/transformers/utils/generic.py", line 939, in wrapper
-    output = func(self, *args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 682, in forward
-    transformer_outputs: BaseModelOutputWithPastAndCrossAttentions = self.transformer(
-                                                                     ^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/transformers/utils/generic.py", line 1068, in wrapper
-    output = func(self, *args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/transformers/utils/output_capturing.py", line 286, in wrapper
-    outputs = func(self, *args, **kwargs)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 608, in forward
-    hidden_states = block(
-                    ^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/transformers/modeling_layers.py", line 109, in __call__
-    return super().__call__(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 274, in forward
-    attn_output, _ = self.attn(
-                     ^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 211, in forward
-    attn_output, attn_weights = attention_interface(
-                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/transformers/integrations/flash_attention.py", line 71, in flash_attention_forward
-    target_dtype = get_target_dtype(query, module)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.11/site-packages/transformers/integrations/flash_attention.py", line 22, in get_target_dtype
-    return next(layer for layer in module.modules() if isinstance(layer, torch.nn.Linear)).weight.dtype
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-StopIteration
+[08:50:32] === E0 model=M6 tag=gpt2_medium-smoke device=cuda seed=20260908 profile=smoke ===
+[08:50:32] Loading openai-community/gpt2-medium@main (6dcaa7a952f72f9298047fd5137cd6e4f05f41da) dtype=torch.float32 device=cuda
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 14284.98it/s]
+[08:51:00]   attention: sdpa
+[08:51:00] adapter: {'model_id': 'openai-community/gpt2-medium', 'revision': '6dcaa7a952f72f9298047fd5137cd6e4f05f41da', 'family': 'gpt2', 'n_layers': 24, 'n_components': 96, 'component_weights': 301989888, 'excluded_weights': 52833280, 'tied_lm_head': True, 'dtype': 'torch.float32', 'components_per_layer': ['attn.c_attn', 'attn.c_proj', 'mlp.c_fc', 'mlp.c_proj'], 'component_kinds': {'attn': 48, 'conv': 0, 'mlp': 48, 'other': 0}, 'layer_types': None}
+[transformers] `loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+[08:51:14] BBQ: 22 examples, 11 template clusters
+[08:51:21] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[08:51:22] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[08:51:27] calibration[generic] seed=20260908: 8x128 tokens, hash=c370baf51c734559
+[08:51:28]   GPTQ layer 0: 4 components
+[08:51:29]   GPTQ layer 1: 4 components
+[08:51:30]   GPTQ layer 2: 4 components
+[08:51:31]   GPTQ layer 3: 4 components
+[08:51:32]   GPTQ layer 4: 4 components
+[08:51:32]   GPTQ layer 5: 4 components
+[08:51:33]   GPTQ layer 6: 4 components
+[08:51:34]   GPTQ layer 7: 4 components
+[08:51:35]   GPTQ layer 8: 4 components
+[08:51:36]   GPTQ layer 9: 4 components
+[08:51:36]   GPTQ layer 10: 4 components
+[08:51:37]   GPTQ layer 11: 4 components
+[08:51:38]   GPTQ layer 12: 4 components
+[08:51:39]   GPTQ layer 13: 4 components
+[08:51:40]   GPTQ layer 14: 4 components
+[08:51:40]   GPTQ layer 15: 4 components
+[08:51:41]   GPTQ layer 16: 4 components
+[08:51:42]   GPTQ layer 17: 4 components
+[08:51:43]   GPTQ layer 18: 4 components
+[08:51:44]   GPTQ layer 19: 4 components
+[08:51:45]   GPTQ layer 20: 4 components
+[08:51:45]   GPTQ layer 21: 4 components
+[08:51:46]   GPTQ layer 22: 4 components
+[08:51:47]   GPTQ layer 23: 4 components
+[08:51:51] Wanda per-row 50%: achieved 0.5000 over 301989888 weights
+[08:51:55]   scored 3/3 candidate sequences
+[08:51:55] === done in 84s -> /workspace/Quant_Bias/quant-bias/results/e0/gpt2_medium-smoke ===

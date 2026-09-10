@@ -1,0 +1,748 @@
+{
+  "adapter": {
+    "component_kinds": {
+      "attn": 48,
+      "conv": 0,
+      "mlp": 48,
+      "other": 0
+    },
+    "component_weights": 301989888,
+    "components_per_layer": [
+      "attn.c_attn",
+      "attn.c_proj",
+      "mlp.c_fc",
+      "mlp.c_proj"
+    ],
+    "dtype": "torch.float32",
+    "excluded_weights": 52833280,
+    "family": "gpt2",
+    "layer_types": null,
+    "model_id": "openai-community/gpt2-medium",
+    "n_components": 96,
+    "n_layers": 24,
+    "revision": "6dcaa7a952f72f9298047fd5137cd6e4f05f41da",
+    "tied_lm_head": true
+  },
+  "bytes_dense": {
+    "component_bytes": 604422144,
+    "metadata_bytes": 0,
+    "padding_bytes": 0,
+    "total_MiB": 677.19,
+    "total_bytes": 710088704,
+    "uncompressed_bytes": 105666560
+  },
+  "bytes_rtn4": {
+    "component_bytes": 151437312,
+    "metadata_bytes": 5898240,
+    "padding_bytes": 0,
+    "total_MiB": 250.82,
+    "total_bytes": 263002112,
+    "uncompressed_bytes": 105666560
+  },
+  "bytes_rtn8": {
+    "component_bytes": 302432256,
+    "metadata_bytes": 7077888,
+    "padding_bytes": 0,
+    "total_MiB": 395.94,
+    "total_bytes": 415176704,
+    "uncompressed_bytes": 105666560
+  },
+  "gptq4": {
+    "calibration_hash": "c370baf51c734559",
+    "grid_ok_all": true,
+    "max_rel_fro_err": 0.1831139177083969,
+    "mean_rel_fro_err": 0.15641215924794474,
+    "n_quantized": 96,
+    "ppl": {
+      "chunk_size": 1024,
+      "max_tokens": 1024,
+      "n_tokens": 1023,
+      "ppl": 13.363054503883351
+    },
+    "seconds": 19.879667282104492
+  },
+  "grid_rtn4": {
+    "grid_ok_all": true,
+    "max_rel_fro_err": 0.12092110514640808,
+    "mean_rel_fro_err": 0.10472996043972671,
+    "n_quantized": 96
+  },
+  "grid_rtn8": {
+    "grid_ok_all": true,
+    "max_rel_fro_err": 0.007388493046164513,
+    "mean_rel_fro_err": 0.006176990893436596,
+    "n_quantized": 96
+  },
+  "manifest": {
+    "backend": "simulated",
+    "calibration_hash": "",
+    "code_revision": "git:e1e1a34+src:a17bd48e2e46",
+    "data_revisions": {},
+    "error": "",
+    "experiment_id": "e0",
+    "extra": {
+      "config_hash": "ec1f83fc2916df2a",
+      "limits": {
+        "bbq_answer_format": "text",
+        "bbq_per_category": 2,
+        "bbq_per_cluster_per_cell": 1,
+        "discrim_ages": [
+          60
+        ],
+        "discrim_config": "explicit",
+        "discrim_questions": 1
+      },
+      "quick": true,
+      "sampling_profile": "smoke"
+    },
+    "finished": "2026-09-10T08:51:55",
+    "hardware": {
+      "cpu_count": 96,
+      "cuda": true,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "gpu_mem_gb": 79.2,
+      "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+      "python": "3.11.10",
+      "torch": "2.5.1+cu124",
+      "transformers": "5.17.0"
+    },
+    "method": "dense",
+    "model_id": "openai-community/gpt2-medium",
+    "model_revision": "6dcaa7a952f72f9298047fd5137cd6e4f05f41da",
+    "precision_map_hash": "",
+    "seed": 20260908,
+    "split_hash": "",
+    "started": "2026-09-10T08:51:00",
+    "status": "ok",
+    "tokenizer_revision": "6dcaa7a952f72f9298047fd5137cd6e4f05f41da"
+  },
+  "ppl_dense": {
+    "chunk_size": 1024,
+    "max_tokens": 1024,
+    "n_tokens": 1023,
+    "ppl": 12.496258116448985
+  },
+  "ppl_rtn4": {
+    "chunk_size": 1024,
+    "max_tokens": 1024,
+    "n_tokens": 1023,
+    "ppl": 13.052538046307383
+  },
+  "ppl_rtn8": {
+    "chunk_size": 1024,
+    "max_tokens": 1024,
+    "n_tokens": 1023,
+    "ppl": 12.532264567504724
+  },
+  "restored_exact": true,
+  "roundtrip": {
+    "max_abs_logit_diff": 0.0,
+    "n_components": 96,
+    "ok": true
+  },
+  "scoring": {
+    "acc": 0.42857142857142855,
+    "boundary_mismatch_rate": 0.0,
+    "known_answer_ok": true,
+    "n": 42,
+    "permutation_consistent": true
+  },
+  "splits": {
+    "clusters_per_split": {
+      "calibration": 12,
+      "final": 39,
+      "selection": 21
+    },
+    "leaking": {},
+    "n_clusters": 72,
+    "ok": true
+  },
+  "wanda": {
+    "components": {
+      "L0.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L0.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L0.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L0.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L1.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L1.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L1.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L1.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L10.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L10.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L10.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L10.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L11.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L11.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L11.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L11.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L12.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L12.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L12.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L12.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L13.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L13.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L13.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L13.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L14.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L14.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L14.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L14.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L15.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L15.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L15.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L15.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L16.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L16.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L16.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L16.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L17.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L17.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L17.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L17.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L18.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L18.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L18.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L18.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L19.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L19.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L19.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L19.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L2.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L2.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L2.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L2.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L20.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L20.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L20.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L20.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L21.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L21.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L21.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L21.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L22.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L22.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L22.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L22.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L23.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L23.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L23.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L23.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L3.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L3.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L3.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L3.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L4.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L4.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L4.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L4.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L5.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L5.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L5.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L5.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L6.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L6.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L6.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L6.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L7.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L7.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L7.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L7.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L8.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L8.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L8.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L8.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L9.attn.c_attn": {
+        "numel": 3145728,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 1572864
+      },
+      "L9.attn.c_proj": {
+        "numel": 1048576,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 524288
+      },
+      "L9.mlp.c_fc": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      },
+      "L9.mlp.c_proj": {
+        "numel": 4194304,
+        "per_row_exact": true,
+        "sparsity": 0.5,
+        "zeros": 2097152
+      }
+    },
+    "ppl": {
+      "chunk_size": 1024,
+      "max_tokens": 1024,
+      "n_tokens": 1023,
+      "ppl": 16.38315904305835
+    },
+    "sparsity_achieved": 0.5,
+    "sparsity_target": 0.5
+  }
+}
