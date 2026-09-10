@@ -50,33 +50,33 @@
   "gptq4": {
     "calibration_hash": "c370baf51c734559",
     "grid_ok_all": true,
-    "max_rel_fro_err": 0.18789373338222504,
-    "mean_rel_fro_err": 0.15706636384129524,
+    "max_rel_fro_err": 0.18789447844028473,
+    "mean_rel_fro_err": 0.15709429265310368,
     "n_quantized": 48,
     "ppl": {
       "chunk_size": 1024,
       "max_tokens": 1024,
       "n_tokens": 1023,
-      "ppl": 17.35871186770438
+      "ppl": 18.117049332052613
     },
-    "seconds": 2024.0639562606812
+    "seconds": 7.26006555557251
   },
   "grid_rtn4": {
     "grid_ok_all": true,
-    "max_rel_fro_err": 0.11907349526882172,
-    "mean_rel_fro_err": 0.10598207327226798,
+    "max_rel_fro_err": 0.11907181143760681,
+    "mean_rel_fro_err": 0.1059811223919193,
     "n_quantized": 48
   },
   "grid_rtn8": {
     "grid_ok_all": true,
-    "max_rel_fro_err": 0.007694373372942209,
-    "mean_rel_fro_err": 0.006274283834500238,
+    "max_rel_fro_err": 0.007694303523749113,
+    "mean_rel_fro_err": 0.006274228576027478,
     "n_quantized": 48
   },
   "manifest": {
     "backend": "simulated",
     "calibration_hash": "",
-    "code_revision": "git:7995e90+src:fe7f4be8b7fc",
+    "code_revision": "git:ca252e6+src:a17bd48e2e46",
     "data_revisions": {},
     "error": "",
     "experiment_id": "e0",
@@ -95,14 +95,16 @@
       "quick": true,
       "sampling_profile": "smoke"
     },
-    "finished": "2026-09-10T08:02:30",
+    "finished": "2026-09-10T08:29:19",
     "hardware": {
-      "cpu_count": 32,
-      "cuda": false,
-      "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35",
-      "python": "3.10.12",
-      "torch": "2.14.0+cpu",
-      "transformers": "5.16.1"
+      "cpu_count": 128,
+      "cuda": true,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "gpu_mem_gb": 79.2,
+      "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+      "python": "3.11.10",
+      "torch": "2.5.1+cu124",
+      "transformers": "5.17.0"
     },
     "method": "dense",
     "model_id": "openai-community/gpt2",
@@ -110,7 +112,7 @@
     "precision_map_hash": "",
     "seed": 20260908,
     "split_hash": "",
-    "started": "2026-09-10T07:24:15",
+    "started": "2026-09-10T08:28:18",
     "status": "ok",
     "tokenizer_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e"
   },
@@ -118,19 +120,19 @@
     "chunk_size": 1024,
     "max_tokens": 1024,
     "n_tokens": 1023,
-    "ppl": 15.789596179734543
+    "ppl": 15.789852170059486
   },
   "ppl_rtn4": {
     "chunk_size": 1024,
     "max_tokens": 1024,
     "n_tokens": 1023,
-    "ppl": 17.23525864340182
+    "ppl": 17.235772301790416
   },
   "ppl_rtn8": {
     "chunk_size": 1024,
     "max_tokens": 1024,
     "n_tokens": 1023,
-    "ppl": 15.789208437587643
+    "ppl": 15.78935901593129
   },
   "restored_exact": true,
   "roundtrip": {
@@ -450,7 +452,7 @@
       "chunk_size": 1024,
       "max_tokens": 1024,
       "n_tokens": 1023,
-      "ppl": 28.100189751533915
+      "ppl": 28.100853020485587
     },
     "sparsity_achieved": 0.5,
     "sparsity_target": 0.5

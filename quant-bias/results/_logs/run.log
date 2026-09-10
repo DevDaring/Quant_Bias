@@ -37,3 +37,8 @@ NVIDIA H100 80GB HBM3, 81559 MiB
     StopIteration
 [2026-09-10_08:20:24] >>> e0/M7
 [2026-09-10_08:25:10] <<< e0/M7 ok in 286s
+[2026-09-10_08:28:11] ===== MODE=smoke  flags:--smoke --device cuda --attn flash_attention_2 =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-10_08:28:11] --- Stage A: adapter and pipeline checks (all models) ---
+[2026-09-10_08:28:11] >>> e0/M1
+[2026-09-10_08:29:20] <<< e0/M1 ok in 69s
