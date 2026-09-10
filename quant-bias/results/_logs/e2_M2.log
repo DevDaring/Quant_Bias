@@ -342,3 +342,27 @@
 [16:27:48]   scored 2500/3425 candidate sequences
 [16:27:53]   scored 3000/3425 candidate sequences
 [16:28:44]   L1.linear_attn.in_proj_z: ppl=11.46 worst-group flip=0.200 viol=0 (171s)
+[16:30:20]   scored 500/3425 candidate sequences
+[16:30:25]   scored 1000/3425 candidate sequences
+[16:30:30]   scored 1500/3425 candidate sequences
+[16:30:35]   scored 2000/3425 candidate sequences
+[16:30:40]   scored 2500/3425 candidate sequences
+[16:30:45]   scored 3000/3425 candidate sequences
+[16:31:36]   L1.mlp.gate_proj: ppl=11.42 worst-group flip=0.286 viol=0 (172s)
+[16:33:08]   scored 500/3425 candidate sequences
+[16:33:13]   scored 1000/3425 candidate sequences
+[16:33:17]   scored 1500/3425 candidate sequences
+[16:33:22]   scored 2000/3425 candidate sequences
+[16:33:27]   scored 2500/3425 candidate sequences
+[16:33:33]   scored 3000/3425 candidate sequences
+[16:34:24]   L1.mlp.up_proj: ppl=11.47 worst-group flip=0.250 viol=0 (168s)
+[16:36:00]   scored 500/3425 candidate sequences
+[16:36:04]   scored 1000/3425 candidate sequences
+[16:36:09]   scored 1500/3425 candidate sequences
+[16:36:14]   scored 2000/3425 candidate sequences
+[16:36:19]   scored 2500/3425 candidate sequences
+[16:36:25]   scored 3000/3425 candidate sequences
+[16:37:16]   L1.mlp.down_proj: ppl=11.45 worst-group flip=0.333 viol=0 (172s)
+/workspace/Quant_Bias/quant-bias/quantbias/report.py:120: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho = spearmanr(xs[ok], ys[ok]).correlation if ok.sum() > 2 else float("nan")
+[16:37:22] === done in 8401s -> /workspace/Quant_Bias/quant-bias/results/e2/qwen3_5_2b ===
