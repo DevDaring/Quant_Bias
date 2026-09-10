@@ -13,18 +13,32 @@ N=0
 
 log(){ echo "[$(date -u +%F_%H:%M:%S)] $*"; }
 
+ssh_retry(){
+  # Transient SSH blips (a provider-side sshd reload, brief network flap)
+  # should not be reported as an incident; a real outage should. Try a few
+  # times before concluding the host is actually down.
+  local tries=0 out
+  while [ $tries -lt 4 ]; do
+    if out=$(ssh $SSHOPT -p $P $H "$1" 2>&1); then echo "$out"; return 0; fi
+    tries=$((tries+1))
+    sleep 15
+  done
+  echo "$out"
+  return 1
+}
+
 check_once(){
   N=$((N+1))
   log "===== 2-HOUR CHECK #$N ====="
-  out=$(ssh $SSHOPT -p $P $H '
+  out=$(ssh_retry '
     set -o pipefail
     echo "--- process count ---"
-    NRUN=$(ps aux | grep -c "[b]ash /workspace/Quant_Bias/quant-bias/scripts/vm_run.sh")
-    NPY=$(ps aux | grep -c "[r]un_experiment")
-    echo "vm_run.sh instances: $NRUN   run_experiment instances: $NPY"
-    if [ "$NRUN" -gt 1 ]; then echo "ALERT: duplicate vm_run.sh detected"; fi
-    if [ "$NRUN" -eq 0 ]; then echo "ALERT: no vm_run.sh running -- container may have restarted and not resumed; needs a manual relaunch (do NOT also rely on autorun if it is mid-relaunch, check bootstrap.log timestamp first)"; fi
-    if [ "$NPY" -gt 1 ]; then echo "ALERT: duplicate run_experiment detected"; fi
+    NRUN=$(ps -eo cmd= | grep -c "^bash /workspace/Quant_Bias/quant-bias/scripts/vm_run\.sh full$")
+    NPY=$(ps -eo cmd= | grep -c "^/opt/conda/bin/python -m quantbias\.run_experiment ")
+    echo "vm_run_count=$NRUN run_experiment_count=$NPY"
+    if [ "$NRUN" -gt 1 ]; then echo "PROC_ALERT: duplicate vm_run.sh, count=$NRUN"; fi
+    if [ "$NRUN" -eq 0 ]; then echo "PROC_ALERT: zero vm_run.sh -- container may have restarted; needs a manual relaunch (check bootstrap.log timestamp first, do not double-launch if autorun is already mid-boot)"; fi
+    if [ "$NPY" -gt 1 ]; then echo "PROC_ALERT: duplicate run_experiment, count=$NPY"; fi
     echo "--- gpu ---"
     nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total --format=csv,noheader
     echo "--- disk ---"
@@ -41,9 +55,9 @@ check_once(){
     awk -F"\t" "{c[\$2]++} END{for(k in c) printf \"  %s: %d\n\", k, c[k]}" results/_logs/state.tsv 2>/dev/null
     git add -A results 2>/dev/null
     git diff --cached --quiet || { git commit -q -m "watchdog: validator + retry pass"; git pull -q --rebase origin main 2>/dev/null; git push -q origin main 2>/dev/null; echo "pushed retry/validator results"; }
-  ' 2>&1)
+  ')
   echo "$out"
-  if echo "$out" | grep -qE "ALERT|VALIDATE FAIL|Permission denied|Connection refused|lost connection"; then
+  if echo "$out" | grep -qE "PROC_ALERT|VALIDATE FAIL|\] +FAIL |Permission denied|Connection refused|lost connection"; then
     echo "  >>> ATTENTION NEEDED (see ALERT/FAIL/connection lines above)"
   else
     echo "  >>> all clear"
