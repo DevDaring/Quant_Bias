@@ -285,11 +285,42 @@ def retry_failed(failed: list[tuple[str, str, str]], max_retries: int = 2) -> li
     return acted
 
 
+def rebuild_state(models_cfg: dict) -> dict[str, str]:
+    """Rebuild state.tsv from verified disk content, discarding whatever the
+    log said. Used after any incident where two writers may have raced (e.g.
+    a duplicate run loop), so 'ok' in state.tsv always means 'checked sane on
+    disk right now', not 'a process once exited zero'."""
+    exps = ["e0", "e1", "e2", "e3", "e4", "e5", "e6", "e7"]
+    rows: dict[str, str] = {}
+    for exp in exps:
+        for model_key, mcfg in models_cfg.items():
+            tag = mcfg["tag"]
+            r = Report()
+            CHECKERS[exp](tag, r)
+            key = f"full/{exp}/{model_key}"
+            if r.fail:
+                continue  # leave unset -> treated as not-yet-done, will be (re)run
+            rows[key] = "ok\t0s"
+    STATE.parent.mkdir(parents=True, exist_ok=True)
+    STATE.write_text("".join(f"{k}\t{v}\n" for k, v in sorted(rows.items())))
+    return rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--retry-failed", action="store_true")
+    ap.add_argument("--rebuild-state", action="store_true",
+                    help="discard state.tsv and reconstruct it from verified disk content")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
+
+    if args.rebuild_state:
+        import yaml
+        models = yaml.safe_load((ROOT / "configs" / "models.yaml").read_text())
+        rows = rebuild_state(models)
+        log(f"rebuilt state.tsv from disk: {len(rows)} stage(s) verified ok")
+        for k in sorted(rows):
+            log(f"  ok {k}")
 
     rows, failed = parse_state()
     r = Report()
