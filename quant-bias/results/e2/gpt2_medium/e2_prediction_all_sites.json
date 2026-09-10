@@ -1,0 +1,251 @@
+{
+  "observed": {
+    "L0.all": 0.0048209366391184574,
+    "L1.all": 0.004132231404958678,
+    "L10.all": 0.009641873278236915,
+    "L11.all": 0.007575757575757576,
+    "L12.all": 0.0048209366391184574,
+    "L12.attn.c_attn": 0.002066115702479339,
+    "L12.attn.c_proj": 0.0006887052341597796,
+    "L12.mlp.c_fc": 0.002066115702479339,
+    "L12.mlp.c_proj": 0.0013774104683195593,
+    "L13.all": 0.004132231404958678,
+    "L13.attn.c_attn": 0.0027548209366391185,
+    "L13.attn.c_proj": 0.0006887052341597796,
+    "L13.mlp.c_fc": 0.002066115702479339,
+    "L13.mlp.c_proj": 0.0013774104683195593,
+    "L14.all": 0.002066115702479339,
+    "L15.all": 0.005509641873278237,
+    "L16.all": 0.0048209366391184574,
+    "L17.all": 0.005509641873278237,
+    "L18.all": 0.005509641873278237,
+    "L19.all": 0.003443526170798898,
+    "L2.all": 0.002066115702479339,
+    "L20.all": 0.003443526170798898,
+    "L21.all": 0.0027548209366391185,
+    "L22.all": 0.003443526170798898,
+    "L23.all": 0.006198347107438017,
+    "L3.all": 0.006198347107438017,
+    "L4.all": 0.0013774104683195593,
+    "L5.all": 0.002066115702479339,
+    "L6.all": 0.008264462809917356,
+    "L6.attn.c_attn": 0.003443526170798898,
+    "L6.attn.c_proj": 0.0006887052341597796,
+    "L6.mlp.c_fc": 0.0027548209366391185,
+    "L6.mlp.c_proj": 0.0013774104683195593,
+    "L7.all": 0.005509641873278237,
+    "L8.all": 0.005509641873278237,
+    "L8.attn.c_attn": 0.004132231404958678,
+    "L8.attn.c_proj": 0.0006887052341597796,
+    "L8.mlp.c_fc": 0.0006887052341597796,
+    "L8.mlp.c_proj": 0.0013774104683195593,
+    "L9.all": 0.003443526170798898
+  },
+  "site_scores": {
+    "L0.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.13065791655601444,
+      "propagation_margin": 2.409857232700732
+    },
+    "L1.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.06401910893027463,
+      "propagation_margin": 2.6379726658961014
+    },
+    "L10.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.19859351584625173,
+      "propagation_margin": 4.687653581205931
+    },
+    "L11.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.10921871473461664,
+      "propagation_margin": 3.770855750209123
+    },
+    "L12.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.15355995243337262,
+      "propagation_margin": 9.093180325239315
+    },
+    "L12.attn.c_attn": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.11345420166404097,
+      "propagation_margin": 3.935032972335336
+    },
+    "L12.attn.c_proj": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.0953324381045455,
+      "propagation_margin": 3.668081610568444
+    },
+    "L12.mlp.c_fc": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.11197489319746978,
+      "propagation_margin": 1.8845218997121393
+    },
+    "L12.mlp.c_proj": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.08717370869689844,
+      "propagation_margin": 1.9057375094175337
+    },
+    "L13.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.10532595414312951,
+      "propagation_margin": 7.099237970064671
+    },
+    "L13.attn.c_attn": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.053184814417580384,
+      "propagation_margin": 2.4290878712782944
+    },
+    "L13.attn.c_proj": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.09437012147625268,
+      "propagation_margin": 1.4904416407272156
+    },
+    "L13.mlp.c_fc": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.12279083439818095,
+      "propagation_margin": 3.820734692811404
+    },
+    "L13.mlp.c_proj": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.07188416925142604,
+      "propagation_margin": 1.0850153133922338
+    },
+    "L14.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.13647005288316905,
+      "propagation_margin": 4.011377116496583
+    },
+    "L15.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.1145186047539326,
+      "propagation_margin": 2.4989860629069933
+    },
+    "L16.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.09876110879360311,
+      "propagation_margin": 5.455455105807532
+    },
+    "L17.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.13290505411228182,
+      "propagation_margin": 1.9368464145409428
+    },
+    "L18.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.08085157088227746,
+      "propagation_margin": 5.052750011658903
+    },
+    "L19.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.1133208869152611,
+      "propagation_margin": 2.7729117872775895
+    },
+    "L2.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.12967649594837738,
+      "propagation_margin": 2.806818536861299
+    },
+    "L20.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.10654248589067095,
+      "propagation_margin": 5.399323684177528
+    },
+    "L21.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.1652547540330893,
+      "propagation_margin": 1.7886618146184594
+    },
+    "L22.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.15750623718496826,
+      "propagation_margin": 2.80648049480128
+    },
+    "L23.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.0,
+      "propagation_margin": 3.349289009652589
+    },
+    "L3.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.037221814057755154,
+      "propagation_margin": 4.0618122776001755
+    },
+    "L4.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.06852281332003685,
+      "propagation_margin": 4.238604217960809
+    },
+    "L5.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.06985483905961232,
+      "propagation_margin": 2.444873724284635
+    },
+    "L6.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.11942642281333349,
+      "propagation_margin": 6.082119982824196
+    },
+    "L6.attn.c_attn": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.16874417961933474,
+      "propagation_margin": 1.888779384537772
+    },
+    "L6.attn.c_proj": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.07880620666123761,
+      "propagation_margin": 0.9293583132631525
+    },
+    "L6.mlp.c_fc": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.08301737766058892,
+      "propagation_margin": 6.01831888004901
+    },
+    "L6.mlp.c_proj": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.038896277833512016,
+      "propagation_margin": 1.6760252738640955
+    },
+    "L7.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.041414691168906614,
+      "propagation_margin": 4.3575250550963345
+    },
+    "L8.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.10064758549149389,
+      "propagation_margin": 7.2305211223329975
+    },
+    "L8.attn.c_attn": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.03643816724448712,
+      "propagation_margin": 2.261657309179555
+    },
+    "L8.attn.c_proj": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.08832889250769327,
+      "propagation_margin": 1.6503436070161694
+    },
+    "L8.mlp.c_fc": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.12240359396107436,
+      "propagation_margin": 2.9737163729861047
+    },
+    "L8.mlp.c_proj": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.10019206278521153,
+      "propagation_margin": 3.2134652009963283
+    },
+    "L9.all": {
+      "margin_only": 0.8246757110131433,
+      "ppl_regret": 0.23037700357936686,
+      "propagation_margin": 3.7557878753143745
+    }
+  },
+  "spearman": {
+    "margin_only": NaN,
+    "ppl_regret": 0.12099125948116113,
+    "propagation_margin": 0.5088805546976761
+  }
+}
