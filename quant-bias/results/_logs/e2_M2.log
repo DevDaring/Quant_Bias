@@ -1,0 +1,44 @@
+[14:17:21] === E2 model=M2 tag=qwen3_5_2b device=cuda seed=20260908 profile=budget ===
+[14:17:21] Loading Qwen/Qwen3.5-2B@main (15852e8c16360a2fea060d615a32b45270f8a8fc) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 12800.44it/s]
+[14:17:25]   attention: flash_attention_2
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[14:17:32]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 11625.31it/s]
+[14:17:42] BBQ: 7868 examples, 343 template clusters
+[14:17:48] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[14:17:49] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[14:17:49] counterfactual pairs: 3627
+[14:17:49] counterfactual pairs: 5326
+[14:17:49] E2: 1419 selection examples, 1452 final examples
+[14:19:21]   scored 500/3425 candidate sequences
+[14:19:26]   scored 1000/3425 candidate sequences
+[14:19:31]   scored 1500/3425 candidate sequences
+[14:19:36]   scored 2000/3425 candidate sequences
+[14:19:41]   scored 2500/3425 candidate sequences
+[14:19:46]   scored 3000/3425 candidate sequences
+[14:19:53] E2 stage 1: 24 sites at layer granularity
+[14:21:26]   scored 500/3425 candidate sequences
+[14:21:30]   scored 1000/3425 candidate sequences
+[14:21:35]   scored 1500/3425 candidate sequences
+[14:21:40]   scored 2000/3425 candidate sequences
+[14:21:46]   scored 2500/3425 candidate sequences
+[14:21:51]   scored 3000/3425 candidate sequences
+[14:22:43]   L0.all: ppl=11.56 worst-group flip=1.000 viol=0 (170s)
+[14:24:13]   scored 500/3425 candidate sequences
+[14:24:18]   scored 1000/3425 candidate sequences
+[14:24:23]   scored 1500/3425 candidate sequences
+[14:24:28]   scored 2000/3425 candidate sequences
+[14:24:33]   scored 2500/3425 candidate sequences
+[14:24:38]   scored 3000/3425 candidate sequences
+[14:25:28]   L1.all: ppl=11.45 worst-group flip=0.333 viol=0 (165s)
+[14:26:57]   scored 500/3425 candidate sequences
+[14:27:01]   scored 1000/3425 candidate sequences
+[14:27:06]   scored 1500/3425 candidate sequences
+[14:27:11]   scored 2000/3425 candidate sequences
+[14:27:16]   scored 2500/3425 candidate sequences
+[14:27:22]   scored 3000/3425 candidate sequences
+[14:28:13]   L2.all: ppl=11.67 worst-group flip=0.500 viol=0 (165s)
+[14:29:46]   scored 500/3425 candidate sequences
+[14:29:51]   scored 1000/3425 candidate sequences
