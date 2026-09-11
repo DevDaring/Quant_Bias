@@ -1,0 +1,142 @@
+[2026-09-10_09:52:14] ===== MODE=full  flags:--profile budget --device cuda --attn flash_attention_2 =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-10_09:52:14] --- Stage A: adapter and pipeline checks (all models) ---
+[2026-09-10_09:52:14] >>> e0/M1
+[2026-09-10_09:53:21] <<< e0/M1 ok in 67s
+[2026-09-10_09:53:24] >>> e0/M6
+[2026-09-10_09:54:46] <<< e0/M6 ok in 82s
+[2026-09-10_09:54:49] >>> e0/M7
+[2026-09-10_09:57:45] <<< e0/M7 ok in 176s
+[2026-09-10_09:57:48] >>> e0/M2
+[2026-09-10_10:00:22] <<< e0/M2 ok in 154s
+[2026-09-10_10:00:25] >>> e0/M3
+[2026-09-10_10:05:38] <<< e0/M3 ok in 313s
+[2026-09-10_10:05:41] >>> e0/M4
+[2026-09-10_10:13:03] ===== MODE=full  flags:--profile budget --device cuda --attn flash_attention_2 =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-10_10:13:03] --- Stage A: adapter and pipeline checks (all models) ---
+[2026-09-10_10:13:03] skip full/e0/M1 (already ok)
+[2026-09-10_10:13:03] skip full/e0/M6 (already ok)
+[2026-09-10_10:13:03] skip full/e0/M7 (already ok)
+[2026-09-10_10:13:03] skip full/e0/M2 (already ok)
+[2026-09-10_10:13:03] skip full/e0/M3 (already ok)
+[2026-09-10_10:13:03] skip full/e0/M4 (already ok)
+[2026-09-10_10:13:03] skip full/e0/M5 (already ok)
+[2026-09-10_10:13:03] --- Stage B: quantization x subgroup outcomes (all models) ---
+[2026-09-10_10:13:03] >>> full/e1/M1
+[2026-09-10_10:24:05] ===== MODE=full  flags:--profile budget --device cuda --attn flash_attention_2 =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-10_10:24:05] --- Stage A: adapter and pipeline checks (all models) ---
+[2026-09-10_10:24:05] skip full/e0/M1 (already ok)
+[2026-09-10_10:24:05] skip full/e0/M6 (already ok)
+[2026-09-10_10:24:05] skip full/e0/M7 (already ok)
+[2026-09-10_10:24:05] skip full/e0/M2 (already ok)
+[2026-09-10_10:24:05] skip full/e0/M3 (already ok)
+[2026-09-10_10:24:05] >>> full/e0/M4
+[2026-09-10_10:28:37] <<< full/e0/M4 ok in 272s
+[2026-09-10_10:28:41] >>> full/e0/M5
+[2026-09-10_10:34:03] <<< full/e0/M5 ok in 322s
+[2026-09-10_10:34:06] --- Stage B: quantization x subgroup outcomes (all models) ---
+[2026-09-10_10:34:06] >>> full/e1/M1
+[2026-09-10_10:37:11] <<< full/e1/M1 ok in 185s
+[2026-09-10_10:37:19] >>> full/e1/M6
+[2026-09-10_10:42:51] <<< full/e1/M6 ok in 332s
+[2026-09-10_10:42:58] >>> full/e1/M7
+[2026-09-10_10:51:02] <<< full/e1/M7 ok in 484s
+[2026-09-10_10:51:08] >>> full/e1/M2
+[2026-09-10_11:10:33] <<< full/e1/M2 ok in 1165s
+[2026-09-10_11:10:38] >>> full/e1/M3
+[2026-09-10_11:25:20] <<< full/e1/M3 ok in 882s
+[2026-09-10_11:25:26] >>> full/e1/M4
+[2026-09-10_11:39:01] <<< full/e1/M4 ok in 815s
+[2026-09-10_11:39:07] >>> full/e1/M5
+[2026-09-10_11:55:54] <<< full/e1/M5 ok in 1007s
+[2026-09-10_11:56:00] --- Stage C: layer attribution (all models) ---
+[2026-09-10_11:56:00] >>> full/e2/M1
+[2026-09-10_12:13:19] <<< full/e2/M1 ok in 1039s
+[2026-09-10_12:13:23] >>> full/e2/M6
+[2026-09-10_12:50:22] <<< full/e2/M6 ok in 2219s
+[2026-09-10_12:50:26] >>> full/e2/M7
+[2026-09-10_14:17:14] <<< full/e2/M7 ok in 5208s
+[2026-09-10_14:17:19] >>> full/e2/M2
+[2026-09-10_16:37:23] <<< full/e2/M2 ok in 8404s
+[2026-09-10_16:37:28] >>> full/e2/M3
+[2026-09-10_18:28:37] <<< full/e2/M3 ok in 6669s
+[2026-09-10_18:28:42] >>> full/e2/M4
+[2026-09-10_20:17:50] <<< full/e2/M4 ok in 6548s
+[2026-09-10_20:17:55] >>> full/e2/M5
+[2026-09-10_22:33:53] <<< full/e2/M5 ok in 8158s
+[2026-09-10_22:33:57] --- Stage D: bridge to living-inference (all models) ---
+[2026-09-10_22:33:57] >>> full/e6/M1
+[2026-09-10_22:34:04] <<< full/e6/M1 ok in 7s
+[2026-09-10_22:34:08] >>> full/e6/M6
+[2026-09-10_22:34:15] <<< full/e6/M6 ok in 7s
+[2026-09-10_22:34:18] >>> full/e6/M7
+[2026-09-10_22:34:28] <<< full/e6/M7 ok in 10s
+[2026-09-10_22:34:31] >>> full/e6/M2
+[2026-09-10_22:34:48] <<< full/e6/M2 ok in 17s
+[2026-09-10_22:34:51] >>> full/e6/M3
+[2026-09-10_22:35:02] <<< full/e6/M3 ok in 11s
+[2026-09-10_22:35:05] >>> full/e6/M4
+[2026-09-10_22:35:20] <<< full/e6/M4 ok in 15s
+[2026-09-10_22:35:23] >>> full/e6/M5
+[2026-09-10_22:35:34] <<< full/e6/M5 ok in 11s
+[2026-09-10_22:35:38] --- Stage E: calibration composition ---
+[2026-09-10_22:35:38] >>> full/e3/M2
+[2026-09-10_23:19:17] <<< full/e3/M2 ok in 2619s
+[2026-09-10_23:19:24] >>> full/e3/M3
+[2026-09-11_00:30:39] <<< full/e3/M3 ok in 4275s
+[2026-09-11_00:30:46] --- Stage F: restoration and allocation (primary models) ---
+[2026-09-11_00:30:46] >>> full/e4/M3
+[2026-09-11_02:24:51] <<< full/e4/M3 ok in 6845s
+[2026-09-11_02:24:55] >>> full/e4/M5
+[2026-09-11_04:50:59] <<< full/e4/M5 ok in 8764s
+[2026-09-11_04:51:02] --- Stage G: comparators from the literature (primary models) ---
+[2026-09-11_04:51:02] >>> full/e7/M3
+[2026-09-11_05:15:53] <<< full/e7/M3 ok in 1491s
+[2026-09-11_05:15:58] >>> full/e7/M5
+[2026-09-11_05:45:32] <<< full/e7/M5 ok in 1774s
+[2026-09-11_05:45:38] --- Stage H: transfer and pruning bridge ---
+[2026-09-11_05:45:38] >>> full/e5/M4
+[2026-09-11_05:49:13] <<< full/e5/M4 ok in 215s
+[2026-09-11_05:49:16] >>> full/e5/M5
+[2026-09-11_05:58:53] <<< full/e5/M5 ok in 577s
+[2026-09-11_05:58:56] ===== summary =====
+full/e0/M1	ok	0s
+full/e0/M2	ok	0s
+full/e0/M3	ok	0s
+full/e0/M6	ok	0s
+full/e0/M7	ok	0s
+full/e0/M4	ok	272s
+full/e0/M5	ok	322s
+full/e1/M1	ok	185s
+full/e1/M6	ok	332s
+full/e1/M7	ok	484s
+full/e1/M2	ok	1165s
+full/e1/M3	ok	882s
+full/e1/M4	ok	815s
+full/e1/M5	ok	1007s
+full/e2/M1	ok	1039s
+full/e2/M6	ok	2219s
+full/e2/M7	ok	5208s
+full/e2/M2	ok	8404s
+full/e2/M3	ok	6669s
+full/e2/M4	ok	6548s
+full/e2/M5	ok	8158s
+full/e6/M1	ok	7s
+full/e6/M6	ok	7s
+full/e6/M7	ok	10s
+full/e6/M2	ok	17s
+full/e6/M3	ok	11s
+full/e6/M4	ok	15s
+full/e6/M5	ok	11s
+full/e3/M2	ok	2619s
+full/e3/M3	ok	4275s
+full/e4/M3	ok	6845s
+full/e4/M5	ok	8764s
+full/e7/M3	ok	1491s
+full/e7/M5	ok	1774s
+full/e5/M4	ok	215s
+full/e5/M5	ok	577s
+[2026-09-11_05:58:56] completed with 0
+0 failed stage(s)

@@ -1,0 +1,9 @@
+[2026-09-10_10:16:36] ===== MODE=full  flags:--profile budget --device cuda --attn flash_attention_2 =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-10_10:16:36] --- Stage A: adapter and pipeline checks (all models) ---
+[2026-09-10_10:16:36] skip full/e0/M1 (already ok)
+[2026-09-10_10:16:36] skip full/e0/M6 (already ok)
+[2026-09-10_10:16:36] skip full/e0/M7 (already ok)
+[2026-09-10_10:16:36] skip full/e0/M2 (already ok)
+[2026-09-10_10:16:36] skip full/e0/M3 (already ok)
+[2026-09-10_10:16:36] >>> full/e0/M4
