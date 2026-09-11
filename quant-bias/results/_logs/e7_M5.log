@@ -1,0 +1,261 @@
+[05:16:01] === E7 model=M5 tag=qwen3_8b device=cuda seed=20260908 profile=budget ===
+[05:16:01] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 12692.85it/s]
+[05:16:04]   attention: flash_attention_2
+[05:16:04]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 11216.82it/s]
+[05:16:16] BBQ: 7868 examples, 343 template clusters
+[05:16:22] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[05:16:23] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[05:16:23] counterfactual pairs: 2717
+[05:16:29] calibration[generic] seed=20260908: 128x512 tokens, hash=2bd1aa26b9efddbb
+[05:16:37]   scored 504/18514 candidate sequences
+[05:16:39]   scored 1002/18514 candidate sequences
+[05:16:41]   scored 1500/18514 candidate sequences
+[05:16:43]   scored 2004/18514 candidate sequences
+[05:16:44]   scored 2502/18514 candidate sequences
+[05:16:46]   scored 3000/18514 candidate sequences
+[05:16:48]   scored 3504/18514 candidate sequences
+[05:16:50]   scored 4002/18514 candidate sequences
+[05:16:52]   scored 4500/18514 candidate sequences
+[05:16:54]   scored 5004/18514 candidate sequences
+[05:16:56]   scored 5502/18514 candidate sequences
+[05:16:58]   scored 6000/18514 candidate sequences
+[05:17:00]   scored 6504/18514 candidate sequences
+[05:17:02]   scored 7002/18514 candidate sequences
+[05:17:04]   scored 7500/18514 candidate sequences
+[05:17:06]   scored 8004/18514 candidate sequences
+[05:17:09]   scored 8502/18514 candidate sequences
+[05:17:11]   scored 9000/18514 candidate sequences
+[05:17:13]   scored 9504/18514 candidate sequences
+[05:17:15]   scored 10002/18514 candidate sequences
+[05:17:17]   scored 10500/18514 candidate sequences
+[05:17:19]   scored 11004/18514 candidate sequences
+[05:17:22]   scored 11502/18514 candidate sequences
+[05:17:24]   scored 12000/18514 candidate sequences
+[05:17:26]   scored 12504/18514 candidate sequences
+[05:17:29]   scored 13002/18514 candidate sequences
+[05:17:32]   scored 13500/18514 candidate sequences
+[05:17:35]   scored 14004/18514 candidate sequences
+[05:17:38]   scored 14502/18514 candidate sequences
+[05:17:41]   scored 15000/18514 candidate sequences
+[05:17:44]   scored 15504/18514 candidate sequences
+[05:17:48]   scored 16002/18514 candidate sequences
+[05:17:51]   scored 16500/18514 candidate sequences
+[05:17:55]   scored 17004/18514 candidate sequences
+[05:17:59]   scored 17502/18514 candidate sequences
+[05:18:03]   scored 18000/18514 candidate sequences
+[05:18:08]   scored 18504/18514 candidate sequences
+[05:18:08] counterfactual pairs: 5326
+[05:18:08] === E7 gptq_uniform ===
+[05:21:31]   scored 504/18514 candidate sequences
+[05:21:33]   scored 1002/18514 candidate sequences
+[05:21:35]   scored 1500/18514 candidate sequences
+[05:21:37]   scored 2004/18514 candidate sequences
+[05:21:38]   scored 2502/18514 candidate sequences
+[05:21:40]   scored 3000/18514 candidate sequences
+[05:21:42]   scored 3504/18514 candidate sequences
+[05:21:44]   scored 4002/18514 candidate sequences
+[05:21:46]   scored 4500/18514 candidate sequences
+[05:21:48]   scored 5004/18514 candidate sequences
+[05:21:50]   scored 5502/18514 candidate sequences
+[05:21:52]   scored 6000/18514 candidate sequences
+[05:21:54]   scored 6504/18514 candidate sequences
+[05:21:56]   scored 7002/18514 candidate sequences
+[05:21:58]   scored 7500/18514 candidate sequences
+[05:22:00]   scored 8004/18514 candidate sequences
+[05:22:03]   scored 8502/18514 candidate sequences
+[05:22:05]   scored 9000/18514 candidate sequences
+[05:22:07]   scored 9504/18514 candidate sequences
+[05:22:09]   scored 10002/18514 candidate sequences
+[05:22:11]   scored 10500/18514 candidate sequences
+[05:22:14]   scored 11004/18514 candidate sequences
+[05:22:16]   scored 11502/18514 candidate sequences
+[05:22:18]   scored 12000/18514 candidate sequences
+[05:22:21]   scored 12504/18514 candidate sequences
+[05:22:23]   scored 13002/18514 candidate sequences
+[05:22:26]   scored 13500/18514 candidate sequences
+[05:22:29]   scored 14004/18514 candidate sequences
+[05:22:32]   scored 14502/18514 candidate sequences
+[05:22:35]   scored 15000/18514 candidate sequences
+[05:22:38]   scored 15504/18514 candidate sequences
+[05:22:42]   scored 16002/18514 candidate sequences
+[05:22:45]   scored 16500/18514 candidate sequences
+[05:22:49]   scored 17004/18514 candidate sequences
+[05:22:53]   scored 17502/18514 candidate sequences
+[05:22:57]   scored 18000/18514 candidate sequences
+[05:23:02]   scored 18504/18514 candidate sequences
+[05:23:12]   gptq_uniform: ppl=11.81 H=0.16666666666666669
+[05:23:17] === E7 fair_gptq ===
+[05:25:26]   [fair-gptq] layer 0/36
+[05:26:08]   [fair-gptq] layer 8/36
+[05:26:50]   [fair-gptq] layer 16/36
+[05:27:32]   [fair-gptq] layer 24/36
+[05:28:13]   [fair-gptq] layer 32/36
+[05:28:37]   scored 504/18514 candidate sequences
+[05:28:39]   scored 1002/18514 candidate sequences
+[05:28:41]   scored 1500/18514 candidate sequences
+[05:28:43]   scored 2004/18514 candidate sequences
+[05:28:45]   scored 2502/18514 candidate sequences
+[05:28:47]   scored 3000/18514 candidate sequences
+[05:28:49]   scored 3504/18514 candidate sequences
+[05:28:51]   scored 4002/18514 candidate sequences
+[05:28:53]   scored 4500/18514 candidate sequences
+[05:28:55]   scored 5004/18514 candidate sequences
+[05:28:57]   scored 5502/18514 candidate sequences
+[05:28:59]   scored 6000/18514 candidate sequences
+[05:29:01]   scored 6504/18514 candidate sequences
+[05:29:03]   scored 7002/18514 candidate sequences
+[05:29:06]   scored 7500/18514 candidate sequences
+[05:29:08]   scored 8004/18514 candidate sequences
+[05:29:10]   scored 8502/18514 candidate sequences
+[05:29:12]   scored 9000/18514 candidate sequences
+[05:29:14]   scored 9504/18514 candidate sequences
+[05:29:16]   scored 10002/18514 candidate sequences
+[05:29:19]   scored 10500/18514 candidate sequences
+[05:29:21]   scored 11004/18514 candidate sequences
+[05:29:23]   scored 11502/18514 candidate sequences
+[05:29:25]   scored 12000/18514 candidate sequences
+[05:29:28]   scored 12504/18514 candidate sequences
+[05:29:31]   scored 13002/18514 candidate sequences
+[05:29:33]   scored 13500/18514 candidate sequences
+[05:29:36]   scored 14004/18514 candidate sequences
+[05:29:39]   scored 14502/18514 candidate sequences
+[05:29:42]   scored 15000/18514 candidate sequences
+[05:29:46]   scored 15504/18514 candidate sequences
+[05:29:49]   scored 16002/18514 candidate sequences
+[05:29:52]   scored 16500/18514 candidate sequences
+[05:29:56]   scored 17004/18514 candidate sequences
+[05:30:00]   scored 17502/18514 candidate sequences
+[05:30:04]   scored 18000/18514 candidate sequences
+[05:30:09]   scored 18504/18514 candidate sequences
+[05:30:18]   fair_gptq: ppl=11.76 H=0.16666666666666669
+[05:30:20] === E7 cwp ===
+[05:32:41]   scored 504/18514 candidate sequences
+[05:32:43]   scored 1002/18514 candidate sequences
+[05:32:45]   scored 1500/18514 candidate sequences
+[05:32:47]   scored 2004/18514 candidate sequences
+[05:32:49]   scored 2502/18514 candidate sequences
+[05:32:51]   scored 3000/18514 candidate sequences
+[05:32:53]   scored 3504/18514 candidate sequences
+[05:32:55]   scored 4002/18514 candidate sequences
+[05:32:57]   scored 4500/18514 candidate sequences
+[05:32:59]   scored 5004/18514 candidate sequences
+[05:33:01]   scored 5502/18514 candidate sequences
+[05:33:03]   scored 6000/18514 candidate sequences
+[05:33:05]   scored 6504/18514 candidate sequences
+[05:33:07]   scored 7002/18514 candidate sequences
+[05:33:09]   scored 7500/18514 candidate sequences
+[05:33:11]   scored 8004/18514 candidate sequences
+[05:33:13]   scored 8502/18514 candidate sequences
+[05:33:15]   scored 9000/18514 candidate sequences
+[05:33:18]   scored 9504/18514 candidate sequences
+[05:33:20]   scored 10002/18514 candidate sequences
+[05:33:22]   scored 10500/18514 candidate sequences
+[05:33:24]   scored 11004/18514 candidate sequences
+[05:33:27]   scored 11502/18514 candidate sequences
+[05:33:29]   scored 12000/18514 candidate sequences
+[05:33:31]   scored 12504/18514 candidate sequences
+[05:33:34]   scored 13002/18514 candidate sequences
+[05:33:37]   scored 13500/18514 candidate sequences
+[05:33:40]   scored 14004/18514 candidate sequences
+[05:33:43]   scored 14502/18514 candidate sequences
+[05:33:46]   scored 15000/18514 candidate sequences
+[05:33:49]   scored 15504/18514 candidate sequences
+[05:33:52]   scored 16002/18514 candidate sequences
+[05:33:56]   scored 16500/18514 candidate sequences
+[05:33:59]   scored 17004/18514 candidate sequences
+[05:34:04]   scored 17502/18514 candidate sequences
+[05:34:08]   scored 18000/18514 candidate sequences
+[05:34:12]   scored 18504/18514 candidate sequences
+[05:34:22]   cwp: ppl=11.99 H=0.16666666666666669
+[05:34:23] === E7 sparsegpt ===
+[05:34:28]   [sparsegpt] layer 0/36
+[05:35:03]   [sparsegpt] layer 8/36
+[05:35:38]   [sparsegpt] layer 16/36
+[05:36:14]   [sparsegpt] layer 24/36
+[05:36:49]   [sparsegpt] layer 32/36
+[05:37:10]   scored 504/18514 candidate sequences
+[05:37:12]   scored 1002/18514 candidate sequences
+[05:37:14]   scored 1500/18514 candidate sequences
+[05:37:16]   scored 2004/18514 candidate sequences
+[05:37:18]   scored 2502/18514 candidate sequences
+[05:37:20]   scored 3000/18514 candidate sequences
+[05:37:22]   scored 3504/18514 candidate sequences
+[05:37:24]   scored 4002/18514 candidate sequences
+[05:37:26]   scored 4500/18514 candidate sequences
+[05:37:28]   scored 5004/18514 candidate sequences
+[05:37:30]   scored 5502/18514 candidate sequences
+[05:37:32]   scored 6000/18514 candidate sequences
+[05:37:34]   scored 6504/18514 candidate sequences
+[05:37:36]   scored 7002/18514 candidate sequences
+[05:37:38]   scored 7500/18514 candidate sequences
+[05:37:40]   scored 8004/18514 candidate sequences
+[05:37:42]   scored 8502/18514 candidate sequences
+[05:37:44]   scored 9000/18514 candidate sequences
+[05:37:47]   scored 9504/18514 candidate sequences
+[05:37:49]   scored 10002/18514 candidate sequences
+[05:37:51]   scored 10500/18514 candidate sequences
+[05:37:53]   scored 11004/18514 candidate sequences
+[05:37:56]   scored 11502/18514 candidate sequences
+[05:37:58]   scored 12000/18514 candidate sequences
+[05:38:00]   scored 12504/18514 candidate sequences
+[05:38:03]   scored 13002/18514 candidate sequences
+[05:38:06]   scored 13500/18514 candidate sequences
+[05:38:09]   scored 14004/18514 candidate sequences
+[05:38:12]   scored 14502/18514 candidate sequences
+[05:38:15]   scored 15000/18514 candidate sequences
+[05:38:18]   scored 15504/18514 candidate sequences
+[05:38:21]   scored 16002/18514 candidate sequences
+[05:38:25]   scored 16500/18514 candidate sequences
+[05:38:28]   scored 17004/18514 candidate sequences
+[05:38:32]   scored 17502/18514 candidate sequences
+[05:38:37]   scored 18000/18514 candidate sequences
+[05:38:41]   scored 18504/18514 candidate sequences
+[05:38:50]   sparsegpt: ppl=13.04 H=0.16666666666666666
+[05:38:52] === E7 debias_sparsegpt ===
+[05:41:05]   [debias-sparsegpt] layer 0/36
+[05:41:41]   [debias-sparsegpt] layer 8/36
+[05:42:16]   [debias-sparsegpt] layer 16/36
+[05:42:52]   [debias-sparsegpt] layer 24/36
+[05:43:27]   [debias-sparsegpt] layer 32/36
+[05:43:48]   scored 504/18514 candidate sequences
+[05:43:50]   scored 1002/18514 candidate sequences
+[05:43:52]   scored 1500/18514 candidate sequences
+[05:43:54]   scored 2004/18514 candidate sequences
+[05:43:56]   scored 2502/18514 candidate sequences
+[05:43:58]   scored 3000/18514 candidate sequences
+[05:44:00]   scored 3504/18514 candidate sequences
+[05:44:02]   scored 4002/18514 candidate sequences
+[05:44:04]   scored 4500/18514 candidate sequences
+[05:44:06]   scored 5004/18514 candidate sequences
+[05:44:08]   scored 5502/18514 candidate sequences
+[05:44:10]   scored 6000/18514 candidate sequences
+[05:44:12]   scored 6504/18514 candidate sequences
+[05:44:14]   scored 7002/18514 candidate sequences
+[05:44:17]   scored 7500/18514 candidate sequences
+[05:44:19]   scored 8004/18514 candidate sequences
+[05:44:21]   scored 8502/18514 candidate sequences
+[05:44:23]   scored 9000/18514 candidate sequences
+[05:44:25]   scored 9504/18514 candidate sequences
+[05:44:27]   scored 10002/18514 candidate sequences
+[05:44:30]   scored 10500/18514 candidate sequences
+[05:44:32]   scored 11004/18514 candidate sequences
+[05:44:34]   scored 11502/18514 candidate sequences
+[05:44:36]   scored 12000/18514 candidate sequences
+[05:44:39]   scored 12504/18514 candidate sequences
+[05:44:42]   scored 13002/18514 candidate sequences
+[05:44:44]   scored 13500/18514 candidate sequences
+[05:44:47]   scored 14004/18514 candidate sequences
+[05:44:50]   scored 14502/18514 candidate sequences
+[05:44:53]   scored 15000/18514 candidate sequences
+[05:44:57]   scored 15504/18514 candidate sequences
+[05:45:00]   scored 16002/18514 candidate sequences
+[05:45:03]   scored 16500/18514 candidate sequences
+[05:45:07]   scored 17004/18514 candidate sequences
+[05:45:11]   scored 17502/18514 candidate sequences
+[05:45:15]   scored 18000/18514 candidate sequences
+[05:45:19]   scored 18504/18514 candidate sequences
+[05:45:29]   debias_sparsegpt: ppl=13.28 H=0.125
+[05:45:30] report written: /workspace/Quant_Bias/quant-bias/results/e7/qwen3_8b/REPORT.md
+[05:45:30] === done in 1770s -> /workspace/Quant_Bias/quant-bias/results/e7/qwen3_8b ===

@@ -192,3 +192,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-11_04:51:02] --- Stage G: comparators from the literature (primary models) ---
 [2026-09-11_04:51:02] >>> full/e7/M3
 [2026-09-11_05:15:53] <<< full/e7/M3 ok in 1491s
+[2026-09-11_05:15:58] >>> full/e7/M5
+[2026-09-11_05:45:32] <<< full/e7/M5 ok in 1774s
