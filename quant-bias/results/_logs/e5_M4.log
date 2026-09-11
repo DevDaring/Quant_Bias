@@ -1,0 +1,86 @@
+[05:45:40] === E5 model=M4 tag=llama_2_7b device=cuda seed=20260908 profile=budget ===
+[05:45:41] Loading NousResearch/Llama-2-7b-hf@main (8efe6c9b93655b934e27bd9981e3ec13e55aee9d) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   8%|▊         | 23/291 [00:00<00:01, 195.32it/s]Loading weights:  16%|█▌        | 47/291 [00:00<00:01, 215.45it/s]Loading weights:  24%|██▎       | 69/291 [00:00<00:01, 168.14it/s]Loading weights:  30%|██▉       | 87/291 [00:00<00:01, 158.04it/s]Loading weights:  36%|███▌      | 104/291 [00:00<00:01, 159.17it/s]Loading weights:  42%|████▏     | 121/291 [00:00<00:01, 136.46it/s]Loading weights:  47%|████▋     | 136/291 [00:00<00:01, 139.82it/s]Loading weights:  52%|█████▏    | 151/291 [00:00<00:00, 141.13it/s]Loading weights:  57%|█████▋    | 166/291 [00:01<00:00, 135.10it/s]Loading weights:  62%|██████▏   | 180/291 [00:01<00:00, 135.00it/s]Loading weights:  67%|██████▋   | 194/291 [00:01<00:00, 133.93it/s]Loading weights:  72%|███████▏  | 210/291 [00:01<00:00, 120.39it/s]Loading weights:  78%|███████▊  | 227/291 [00:01<00:00, 131.61it/s]Loading weights:  83%|████████▎ | 242/291 [00:01<00:00, 136.12it/s]Loading weights:  88%|████████▊ | 256/291 [00:01<00:00, 128.90it/s]Loading weights:  93%|█████████▎| 270/291 [00:01<00:00, 131.08it/s]Loading weights:  98%|█████████▊| 284/291 [00:02<00:00, 132.86it/s]Loading weights: 100%|██████████| 291/291 [00:02<00:00, 143.78it/s]
+[05:45:45]   attention: flash_attention_2
+[05:45:46]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   4%|▍         | 13/291 [00:00<00:02, 116.82it/s]Loading weights:  11%|█         | 32/291 [00:00<00:01, 157.75it/s]Loading weights:  16%|█▋        | 48/291 [00:00<00:01, 156.77it/s]Loading weights:  22%|██▏       | 64/291 [00:00<00:01, 154.01it/s]Loading weights:  28%|██▊       | 81/291 [00:00<00:01, 157.37it/s]Loading weights:  33%|███▎      | 97/291 [00:00<00:01, 145.66it/s]Loading weights:  40%|███▉      | 116/291 [00:00<00:01, 134.78it/s]Loading weights:  45%|████▍     | 130/291 [00:00<00:01, 134.40it/s]Loading weights:  50%|████▉     | 145/291 [00:01<00:01, 137.71it/s]Loading weights:  55%|█████▍    | 159/291 [00:01<00:01, 131.67it/s]Loading weights:  59%|█████▉    | 173/291 [00:01<00:00, 133.67it/s]Loading weights:  64%|██████▍   | 187/291 [00:01<00:00, 134.68it/s]Loading weights:  69%|██████▉   | 201/291 [00:01<00:00, 133.53it/s]Loading weights:  75%|███████▍  | 217/291 [00:01<00:00, 119.15it/s]Loading weights:  79%|███████▉  | 230/291 [00:01<00:00, 121.64it/s]Loading weights:  84%|████████▍ | 245/291 [00:01<00:00, 128.17it/s]Loading weights:  89%|████████▉ | 259/291 [00:01<00:00, 130.91it/s]Loading weights:  94%|█████████▍| 273/291 [00:02<00:00, 130.90it/s]Loading weights:  99%|█████████▊| 287/291 [00:02<00:00, 130.93it/s]Loading weights: 100%|██████████| 291/291 [00:02<00:00, 136.09it/s]
+[05:46:00] BBQ: 7868 examples, 343 template clusters
+[05:46:07] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[05:46:08] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[05:46:14]   scored 504/18514 candidate sequences
+[05:46:15]   scored 1000/18514 candidate sequences
+[05:46:16]   scored 1504/18514 candidate sequences
+[05:46:17]   scored 2000/18514 candidate sequences
+[05:46:18]   scored 2504/18514 candidate sequences
+[05:46:19]   scored 3000/18514 candidate sequences
+[05:46:20]   scored 3504/18514 candidate sequences
+[05:46:22]   scored 4000/18514 candidate sequences
+[05:46:23]   scored 4504/18514 candidate sequences
+[05:46:24]   scored 5000/18514 candidate sequences
+[05:46:25]   scored 5504/18514 candidate sequences
+[05:46:26]   scored 6000/18514 candidate sequences
+[05:46:27]   scored 6504/18514 candidate sequences
+[05:46:29]   scored 7000/18514 candidate sequences
+[05:46:30]   scored 7504/18514 candidate sequences
+[05:46:31]   scored 8000/18514 candidate sequences
+[05:46:33]   scored 8504/18514 candidate sequences
+[05:46:34]   scored 9000/18514 candidate sequences
+[05:46:36]   scored 9504/18514 candidate sequences
+[05:46:38]   scored 10000/18514 candidate sequences
+[05:46:39]   scored 10504/18514 candidate sequences
+[05:46:41]   scored 11000/18514 candidate sequences
+[05:46:43]   scored 11504/18514 candidate sequences
+[05:46:44]   scored 12000/18514 candidate sequences
+[05:46:46]   scored 12504/18514 candidate sequences
+[05:46:48]   scored 13000/18514 candidate sequences
+[05:46:50]   scored 13504/18514 candidate sequences
+[05:46:53]   scored 14000/18514 candidate sequences
+[05:46:55]   scored 14504/18514 candidate sequences
+[05:46:58]   scored 15000/18514 candidate sequences
+[05:47:01]   scored 15504/18514 candidate sequences
+[05:47:04]   scored 16000/18514 candidate sequences
+[05:47:07]   scored 16504/18514 candidate sequences
+[05:47:10]   scored 17000/18514 candidate sequences
+[05:47:14]   scored 17504/18514 candidate sequences
+[05:47:17]   scored 18000/18514 candidate sequences
+[05:47:21]   scored 18504/18514 candidate sequences
+[05:47:27] calibration[generic] seed=20260908: 128x512 tokens, hash=8912d49331fba930
+[05:47:44] Wanda per-row 50%: achieved 0.5000 over 6476005376 weights
+[05:47:49]   scored 504/18514 candidate sequences
+[05:47:50]   scored 1000/18514 candidate sequences
+[05:47:51]   scored 1504/18514 candidate sequences
+[05:47:52]   scored 2000/18514 candidate sequences
+[05:47:53]   scored 2504/18514 candidate sequences
+[05:47:54]   scored 3000/18514 candidate sequences
+[05:47:56]   scored 3504/18514 candidate sequences
+[05:47:57]   scored 4000/18514 candidate sequences
+[05:47:58]   scored 4504/18514 candidate sequences
+[05:47:59]   scored 5000/18514 candidate sequences
+[05:48:00]   scored 5504/18514 candidate sequences
+[05:48:01]   scored 6000/18514 candidate sequences
+[05:48:03]   scored 6504/18514 candidate sequences
+[05:48:04]   scored 7000/18514 candidate sequences
+[05:48:05]   scored 7504/18514 candidate sequences
+[05:48:07]   scored 8000/18514 candidate sequences
+[05:48:08]   scored 8504/18514 candidate sequences
+[05:48:10]   scored 9000/18514 candidate sequences
+[05:48:11]   scored 9504/18514 candidate sequences
+[05:48:13]   scored 10000/18514 candidate sequences
+[05:48:14]   scored 10504/18514 candidate sequences
+[05:48:16]   scored 11000/18514 candidate sequences
+[05:48:18]   scored 11504/18514 candidate sequences
+[05:48:20]   scored 12000/18514 candidate sequences
+[05:48:21]   scored 12504/18514 candidate sequences
+[05:48:23]   scored 13000/18514 candidate sequences
+[05:48:25]   scored 13504/18514 candidate sequences
+[05:48:28]   scored 14000/18514 candidate sequences
+[05:48:30]   scored 14504/18514 candidate sequences
+[05:48:33]   scored 15000/18514 candidate sequences
+[05:48:36]   scored 15504/18514 candidate sequences
+[05:48:39]   scored 16000/18514 candidate sequences
+[05:48:42]   scored 16504/18514 candidate sequences
+[05:48:45]   scored 17000/18514 candidate sequences
+[05:48:49]   scored 17504/18514 candidate sequences
+[05:48:52]   scored 18000/18514 candidate sequences
+[05:48:56]   scored 18504/18514 candidate sequences
+[05:49:11] === done in 211s -> /workspace/Quant_Bias/quant-bias/results/e5/llama_2_7b ===
