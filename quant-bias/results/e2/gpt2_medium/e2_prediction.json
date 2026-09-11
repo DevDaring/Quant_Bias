@@ -1,4 +1,7 @@
 {
+  "constant_predictors": [
+    "margin_only"
+  ],
   "observed": {
     "L0.all": 0.0048209366391184574,
     "L1.all": 0.004132231404958678,
@@ -25,6 +28,7 @@
     "L8.all": 0.005509641873278237,
     "L9.all": 0.003443526170798898
   },
+  "regenerated_note": "Recomputed from e2_sites.json (layer-granularity sites only, matching run_experiment.py) after fixing the constant-predictor NaN. Site measurements themselves are unchanged.",
   "site_scores": {
     "L0.all": {
       "margin_only": 0.8246757110131433,
@@ -148,7 +152,7 @@
     }
   },
   "spearman": {
-    "margin_only": NaN,
+    "margin_only": 0.0,
     "ppl_regret": -0.15176022480548945,
     "propagation_margin": 0.2855373015848949
   }

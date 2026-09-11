@@ -201,7 +201,8 @@ def align_with_sites(li_key: str, per_site: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
-def interpret(bridge: dict[str, Any], alpha: float = 0.05) -> str:
+def interpret(bridge: dict[str, Any], alpha: float = 0.05,
+              min_util_rho: float = 0.30) -> str:
     """Plain statement of what the bridge shows, for the report."""
     c = bridge["correlations"]
     lines = []
@@ -211,8 +212,37 @@ def interpret(bridge: dict[str, Any], alpha: float = 0.05) -> str:
     if util.get("spearman") is None:
         lines.append("Prior rho could not be aligned with this study's sites; no bridge claim is made.")
         return " ".join(lines)
+
+    # The alignment sanity check has to actually pass before anything is read
+    # into the bias result. If the prior study's rho does not even track this
+    # study's own utility measure at the same layers, then a null relation to
+    # harm is uninterpretable: it cannot be told apart from the two pipelines
+    # having been mis-aligned or measuring different things in the first place.
+    # An earlier version asserted "confirming the two pipelines measure the
+    # same layers" unconditionally, which stated the opposite of what a near
+    # zero correlation shows.
+    # A *positive* correlation is what alignment means here: prior rho is a
+    # contraction/amplification factor (higher = more sensitive) and ppl_utility
+    # is the perplexity when that site is quantized (higher = worse), so aligned
+    # pipelines should agree in direction. A strong negative correlation is an
+    # anomaly to investigate, not evidence of agreement, so abs() is wrong.
+    sane = util["spearman"] >= min_util_rho
+    if not sane:
+        lines.append(f"ALIGNMENT CHECK FAILED: prior Lyapunov rho does not track this study's own "
+                     f"utility measure at the same layers (rho_s={util['spearman']:.2f}, n={util['n']}, "
+                     f"threshold {min_util_rho:.2f}). The two pipelines cannot be shown to be measuring "
+                     "comparable quantities, so no claim is made about whether prior utility sensitivity "
+                     "predicts group-conditioned harm: a null result here is indistinguishable from a "
+                     "mis-aligned comparison.")
+        if own.get("spearman") is not None:
+            lines.append(f"Independently of that, this study's group-conditioned residual energy relates "
+                         f"to harm at rho_s={own['spearman']:.2f} (n={own['n']}); this stands on its own "
+                         "measurements and does not depend on the prior study.")
+        return " ".join(lines)
+
     lines.append(f"Prior Lyapunov rho tracks this study's utility measure at rho_s={util['spearman']:.2f} "
-                 f"(n={util['n']}), confirming the two pipelines measure the same layers.")
+                 f"(n={util['n']}), so the two pipelines are measuring comparable quantities at the same "
+                 "layers and the comparison below is meaningful.")
     if bias.get("spearman") is None:
         lines.append("Its relation to group-conditioned harm could not be estimated.")
     elif bias.get("p") is not None and bias["p"] > alpha:

@@ -42,6 +42,8 @@
     }
   },
   "interpretation": "Prior rho could not be aligned with this study's sites; no bridge claim is made.",
+  "interpretation_note": "Regenerated after fixing a bug in bridge.interpret(): the previous text asserted 'confirming the two pipelines measure the same layers' unconditionally, even when the alignment correlation was ~0, which stated the opposite of what the number showed.",
+  "interpretation_superseded": "Prior rho could not be aligned with this study's sites; no bridge claim is made.",
   "li_key": "llama_2_7b",
   "manifest": {
     "backend": "simulated",

@@ -41,7 +41,9 @@
       "spearman": 0.08526718121053482
     }
   },
-  "interpretation": "Prior Lyapunov rho tracks this study's utility measure at rho_s=-0.26 (n=27), confirming the two pipelines measure the same layers. It does not predict group-conditioned harmful flips (rho_s=-0.26, p=0.19), so utility-derived layer sensitivity does not identify where quantization changes socially relevant decisions. This study's group-conditioned residual energy relates to harm at rho_s=0.76 (n=28).",
+  "interpretation": "ALIGNMENT CHECK FAILED: prior Lyapunov rho does not track this study's own utility measure at the same layers (rho_s=-0.26, n=27, threshold 0.30). The two pipelines cannot be shown to be measuring comparable quantities, so no claim is made about whether prior utility sensitivity predicts group-conditioned harm: a null result here is indistinguishable from a mis-aligned comparison. Independently of that, this study's group-conditioned residual energy relates to harm at rho_s=0.76 (n=28); this stands on its own measurements and does not depend on the prior study.",
+  "interpretation_note": "Regenerated after fixing a bug in bridge.interpret(): the previous text asserted 'confirming the two pipelines measure the same layers' unconditionally, even when the alignment correlation was ~0, which stated the opposite of what the number showed.",
+  "interpretation_superseded": "ALIGNMENT CHECK FAILED: prior Lyapunov rho does not track this study's own utility measure at the same layers (rho_s=-0.26, n=27, threshold 0.30). The two pipelines cannot be shown to be measuring comparable quantities, so no claim is made about whether prior utility sensitivity predicts group-conditioned harm: a null result here is indistinguishable from a mis-aligned comparison. Independently of that, this study's group-conditioned residual energy relates to harm at rho_s=0.76 (n=28); this stands on its own measurements and does not depend on the prior study.",
   "li_key": "gpt2_small",
   "manifest": {
     "backend": "simulated",

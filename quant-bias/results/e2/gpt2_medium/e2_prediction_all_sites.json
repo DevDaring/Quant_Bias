@@ -1,4 +1,7 @@
 {
+  "constant_predictors": [
+    "margin_only"
+  ],
   "observed": {
     "L0.all": 0.0048209366391184574,
     "L1.all": 0.004132231404958678,
@@ -41,6 +44,7 @@
     "L8.mlp.c_proj": 0.0013774104683195593,
     "L9.all": 0.003443526170798898
   },
+  "regenerated_note": "Recomputed from all sites after the constant-predictor NaN fix.",
   "site_scores": {
     "L0.all": {
       "margin_only": 0.8246757110131433,
@@ -244,7 +248,7 @@
     }
   },
   "spearman": {
-    "margin_only": NaN,
+    "margin_only": 0.0,
     "ppl_regret": 0.12099125948116113,
     "propagation_margin": 0.5088805546976761
   }
