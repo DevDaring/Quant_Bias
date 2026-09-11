@@ -34,3 +34,4 @@ quant-bias/results/**/*-quick/
 # quant-bias/provenance/living_inference_results/ so the bridge experiment (E6)
 # is reproducible on a fresh clone.
 living-inference/
+living-inference

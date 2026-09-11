@@ -1,12 +1,12 @@
 {
-  "instance_id": 50478570,
-  "offer": "47195595",
-  "created": "2026-09-10 09:43:44",
-  "updated": "2026-09-10 09:48:56",
-  "ssh_host": "ssh4.vast.ai",
-  "ssh_port": 38570,
+  "instance_id": 50541523,
+  "offer": "49067611",
+  "created": "2026-09-11 01:39:29",
+  "updated": "2026-09-11 01:42:06",
+  "ssh_host": "ssh9.vast.ai",
+  "ssh_port": 21522,
   "status": "running",
-  "gpu": "A100 PCIE",
-  "dph": 1.075,
-  "destroyed": "2026-09-10 09:48:56"
+  "gpu": "A100 SXM4",
+  "dph": 1.4726666666666668,
+  "destroyed": "2026-09-11 01:42:06"
 }

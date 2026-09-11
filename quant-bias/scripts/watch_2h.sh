@@ -73,6 +73,12 @@ check_once(){
     nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader
     sleep 5
     nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader
+    echo "--- completion check ---"
+    if [ -f /workspace/Quant_Bias/quant-bias/results/_logs/full_COMPLETE ]; then
+      echo "RUN_COMPLETE: $(cat /workspace/Quant_Bias/quant-bias/results/_logs/full_COMPLETE)"
+    else
+      echo "still running (no full_COMPLETE marker yet)"
+    fi
     echo "--- content-correctness validator ---"
     cd /workspace/Quant_Bias/quant-bias
     export GIT_SSH_COMMAND="ssh -i /root/.ssh/quantbias_deploy -o StrictHostKeyChecking=no -o UserKnownHostsFile=/root/.ssh/known_hosts"
@@ -85,7 +91,7 @@ check_once(){
     git diff --cached --quiet || { git commit -q -m "watchdog: validator + retry pass"; git pull -q --rebase origin main 2>/dev/null; git push -q origin main 2>/dev/null; echo "pushed retry/validator results"; }
   ')
   echo "$out"
-  if echo "$out" | grep -qE "PROC_ALERT|VALIDATE FAIL|\] +FAIL |Permission denied|Connection refused|lost connection"; then
+  if echo "$out" | grep -qE "PROC_ALERT|VALIDATE FAIL|\] +FAIL |RUN_COMPLETE|Permission denied|Connection refused|lost connection"; then
     echo "  >>> ATTENTION NEEDED (see ALERT/FAIL/connection lines above)"
   else
     echo "  >>> all clear"
