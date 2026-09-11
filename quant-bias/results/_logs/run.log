@@ -182,3 +182,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-10_22:35:38] --- Stage E: calibration composition ---
 [2026-09-10_22:35:38] >>> full/e3/M2
 [2026-09-10_23:19:17] <<< full/e3/M2 ok in 2619s
+[2026-09-10_23:19:24] >>> full/e3/M3
+[2026-09-11_00:30:39] <<< full/e3/M3 ok in 4275s
