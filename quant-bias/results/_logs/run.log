@@ -197,3 +197,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-11_05:45:38] --- Stage H: transfer and pruning bridge ---
 [2026-09-11_05:45:38] >>> full/e5/M4
 [2026-09-11_05:49:13] <<< full/e5/M4 ok in 215s
+[2026-09-11_05:49:16] >>> full/e5/M5
+[2026-09-11_05:58:53] <<< full/e5/M5 ok in 577s
