@@ -1,0 +1,521 @@
+{
+  "gpt2_medium": {
+    "all": {
+      "V_macro_vs_anyflip": {
+        "n": 40,
+        "p": 1.7808040011988606e-06,
+        "rho": 0.6749607962724137
+      },
+      "V_macro_vs_harmful": {
+        "n": 40,
+        "p": 1.0609082163378406e-05,
+        "rho": 0.6353456777123064
+      },
+      "n": 40,
+      "ncomp_vs_harmful": {
+        "n": 40,
+        "p": 6.141894446534011e-07,
+        "rho": 0.6960465704745633
+      },
+      "ppl_vs_harmful": {
+        "n": 40,
+        "p": 0.4570643338821728,
+        "rho": 0.12099125948116113
+      }
+    },
+    "component": {
+      "V_macro_vs_anyflip": {
+        "n": 16,
+        "p": 0.05152419790106167,
+        "rho": 0.49448252393478315
+      },
+      "V_macro_vs_harmful": {
+        "n": 16,
+        "p": 0.16967876143335384,
+        "rho": 0.3608806424862589
+      },
+      "n": 16,
+      "ncomp_vs_harmful": {
+        "n": 16,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 16,
+        "p": 0.8198300687936885,
+        "rho": -0.06190839473613647
+      }
+    },
+    "layer": {
+      "V_macro_vs_anyflip": {
+        "n": 24,
+        "p": 0.0025782989488514884,
+        "rho": 0.5867764942577759
+      },
+      "V_macro_vs_harmful": {
+        "n": 24,
+        "p": 0.019118552104504968,
+        "rho": 0.4745796625420219
+      },
+      "n": 24,
+      "ncomp_vs_harmful": {
+        "n": 24,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 24,
+        "p": 0.479008753526838,
+        "rho": -0.15176022480548945
+      }
+    },
+    "n_sites_total": 40,
+    "note": "'all' pools whole-layer and single-component interventions of very different size; the component subset is selection-biased (drawn from the four layers the predictor shortlisted). Only 'layer' is an unselected, fixed-size sample."
+  },
+  "gpt2_small": {
+    "all": {
+      "V_macro_vs_anyflip": {
+        "n": 28,
+        "p": 1.0613997625263131e-07,
+        "rho": 0.8179970116400901
+      },
+      "V_macro_vs_harmful": {
+        "n": 28,
+        "p": 2.762551115121086e-06,
+        "rho": 0.7596076901036372
+      },
+      "n": 28,
+      "ncomp_vs_harmful": {
+        "n": 28,
+        "p": 0.00012083279297637959,
+        "rho": 0.6629528735638014
+      },
+      "ppl_vs_harmful": {
+        "n": 28,
+        "p": 0.05557236202792898,
+        "rho": 0.36580818313155644
+      }
+    },
+    "component": {
+      "V_macro_vs_anyflip": {
+        "n": 16,
+        "p": 0.0002140206050662103,
+        "rho": 0.797654391272935
+      },
+      "V_macro_vs_harmful": {
+        "n": 16,
+        "p": 0.00014828480689367085,
+        "rho": 0.8088615954599536
+      },
+      "n": 16,
+      "ncomp_vs_harmful": {
+        "n": 16,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 16,
+        "p": 0.20248229894678424,
+        "rho": 0.3365336565052362
+      }
+    },
+    "layer": {
+      "V_macro_vs_anyflip": {
+        "n": 12,
+        "p": 0.7268769636980736,
+        "rho": -0.11287916854710008
+      },
+      "V_macro_vs_harmful": {
+        "n": 12,
+        "p": 0.515511829043212,
+        "rho": -0.20849228035836478
+      },
+      "n": 12,
+      "ncomp_vs_harmful": {
+        "n": 12,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 12,
+        "p": 0.5524610735806731,
+        "rho": -0.1908234430398593
+      }
+    },
+    "n_sites_total": 28,
+    "note": "'all' pools whole-layer and single-component interventions of very different size; the component subset is selection-biased (drawn from the four layers the predictor shortlisted). Only 'layer' is an unselected, fixed-size sample."
+  },
+  "lfm2_2.6b": {
+    "all": {
+      "V_macro_vs_anyflip": {
+        "n": 58,
+        "p": 2.391604375661787e-08,
+        "rho": 0.6552379615933969
+      },
+      "V_macro_vs_harmful": {
+        "n": 58,
+        "p": 0.00022708160687425708,
+        "rho": 0.4660290330400987
+      },
+      "n": 58,
+      "ncomp_vs_harmful": {
+        "n": 58,
+        "p": 0.011690300606771854,
+        "rho": 0.3289608023720153
+      },
+      "ppl_vs_harmful": {
+        "n": 58,
+        "p": 0.28838757397740494,
+        "rho": 0.141784236946822
+      }
+    },
+    "component": {
+      "V_macro_vs_anyflip": {
+        "n": 28,
+        "p": 6.802185046369444e-05,
+        "rho": 0.6803053809521388
+      },
+      "V_macro_vs_harmful": {
+        "n": 28,
+        "p": 0.05705591037151608,
+        "rho": 0.36376535043408836
+      },
+      "n": 28,
+      "ncomp_vs_harmful": {
+        "n": 28,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 28,
+        "p": 0.4217558668668857,
+        "rho": -0.15807309186175333
+      }
+    },
+    "layer": {
+      "V_macro_vs_anyflip": {
+        "n": 30,
+        "p": 0.0007076361903720868,
+        "rho": 0.5837796762157378
+      },
+      "V_macro_vs_harmful": {
+        "n": 30,
+        "p": 0.020214118231552197,
+        "rho": 0.42191494919009415
+      },
+      "n": 30,
+      "ncomp_vs_harmful": {
+        "n": 30,
+        "p": 0.03156974776444523,
+        "rho": 0.3932418788198072
+      },
+      "ppl_vs_harmful": {
+        "n": 30,
+        "p": 0.42318604140622484,
+        "rho": 0.15182545520098084
+      }
+    },
+    "n_sites_total": 58,
+    "note": "'all' pools whole-layer and single-component interventions of very different size; the component subset is selection-biased (drawn from the four layers the predictor shortlisted). Only 'layer' is an unselected, fixed-size sample."
+  },
+  "llama_2_7b": {
+    "all": {
+      "V_macro_vs_anyflip": {
+        "n": 60,
+        "p": 3.297121403754379e-11,
+        "rho": 0.7310905553741818
+      },
+      "V_macro_vs_harmful": {
+        "n": 60,
+        "p": 5.858749154280757e-06,
+        "rho": 0.5479326720384153
+      },
+      "n": 60,
+      "ncomp_vs_harmful": {
+        "n": 60,
+        "p": 0.025598118989729298,
+        "rho": 0.2881030753515625
+      },
+      "ppl_vs_harmful": {
+        "n": 60,
+        "p": 0.05101914223817891,
+        "rho": 0.25311985635067147
+      }
+    },
+    "component": {
+      "V_macro_vs_anyflip": {
+        "n": 28,
+        "p": 3.971269469323948e-05,
+        "rho": 0.6955800213699931
+      },
+      "V_macro_vs_harmful": {
+        "n": 28,
+        "p": 0.0221429581360182,
+        "rho": 0.4306840930687964
+      },
+      "n": 28,
+      "ncomp_vs_harmful": {
+        "n": 28,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 28,
+        "p": 0.1214178787124899,
+        "rho": 0.29959427580911774
+      }
+    },
+    "layer": {
+      "V_macro_vs_anyflip": {
+        "n": 32,
+        "p": 0.01121091244118776,
+        "rho": 0.44250560307014325
+      },
+      "V_macro_vs_harmful": {
+        "n": 32,
+        "p": 0.0759592414113396,
+        "rho": 0.31816187654967143
+      },
+      "n": 32,
+      "ncomp_vs_harmful": {
+        "n": 32,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 32,
+        "p": 0.5221544955648807,
+        "rho": 0.11742127193635037
+      }
+    },
+    "n_sites_total": 60,
+    "note": "'all' pools whole-layer and single-component interventions of very different size; the component subset is selection-biased (drawn from the four layers the predictor shortlisted). Only 'layer' is an unselected, fixed-size sample."
+  },
+  "mistral_7b_v0_1": {
+    "all": {
+      "V_macro_vs_anyflip": {
+        "n": 60,
+        "p": 1.4504131388590883e-09,
+        "rho": 0.6860771302765756
+      },
+      "V_macro_vs_harmful": {
+        "n": 60,
+        "p": 0.004079262580189435,
+        "rho": 0.3655345531316247
+      },
+      "n": 60,
+      "ncomp_vs_harmful": {
+        "n": 60,
+        "p": 0.02332323030492571,
+        "rho": 0.29252664110485854
+      },
+      "ppl_vs_harmful": {
+        "n": 60,
+        "p": 0.0567498182983534,
+        "rho": 0.2473309554954881
+      }
+    },
+    "component": {
+      "V_macro_vs_anyflip": {
+        "n": 28,
+        "p": 0.03375123592411923,
+        "rho": 0.4024228034578449
+      },
+      "V_macro_vs_harmful": {
+        "n": 28,
+        "p": 0.025017644114606274,
+        "rho": 0.4227286038778194
+      },
+      "n": 28,
+      "ncomp_vs_harmful": {
+        "n": 28,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 28,
+        "p": 0.00859852430429948,
+        "rho": 0.48689779274875344
+      }
+    },
+    "layer": {
+      "V_macro_vs_anyflip": {
+        "n": 32,
+        "p": 0.0041599939332349735,
+        "rho": 0.4928373471826731
+      },
+      "V_macro_vs_harmful": {
+        "n": 32,
+        "p": 0.426229267128749,
+        "rho": 0.1456980440235554
+      },
+      "n": 32,
+      "ncomp_vs_harmful": {
+        "n": 32,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 32,
+        "p": 0.4172895400893021,
+        "rho": 0.14849992948554686
+      }
+    },
+    "n_sites_total": 60,
+    "note": "'all' pools whole-layer and single-component interventions of very different size; the component subset is selection-biased (drawn from the four layers the predictor shortlisted). Only 'layer' is an unselected, fixed-size sample."
+  },
+  "provenance": {
+    "codes_git": "9f29071",
+    "generated": "2026-09-12T15:43:48",
+    "li_results": "/home/Debz/Research/Quantization_with_Bias/Codes/living-inference/python/results",
+    "living_inference_git": "0a2a136",
+    "note": "source result files are read only; this is a corrected reanalysis",
+    "source_results": "/home/Debz/Research/Quantization_with_Bias/Codes/quant-bias/results"
+  },
+  "qwen3_5_2b": {
+    "all": {
+      "V_macro_vs_anyflip": {
+        "n": 49,
+        "p": 8.396955923565426e-12,
+        "rho": 0.7956891113505833
+      },
+      "V_macro_vs_harmful": {
+        "n": 49,
+        "p": 2.9106172481467635e-05,
+        "rho": 0.5596140525418124
+      },
+      "n": 49,
+      "ncomp_vs_harmful": {
+        "n": 49,
+        "p": 0.0009065323295772902,
+        "rho": 0.45909605970995326
+      },
+      "ppl_vs_harmful": {
+        "n": 49,
+        "p": 0.1352567031374611,
+        "rho": 0.2164332431528341
+      }
+    },
+    "component": {
+      "V_macro_vs_anyflip": {
+        "n": 25,
+        "p": 0.0065289505401381395,
+        "rho": 0.5291666147825218
+      },
+      "V_macro_vs_harmful": {
+        "n": 25,
+        "p": 0.08968846577878822,
+        "rho": 0.34654077191001376
+      },
+      "n": 25,
+      "ncomp_vs_harmful": {
+        "n": 25,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 25,
+        "p": 0.6207920989128126,
+        "rho": -0.10400103793044087
+      }
+    },
+    "layer": {
+      "V_macro_vs_anyflip": {
+        "n": 24,
+        "p": 8.805002287505703e-05,
+        "rho": 0.7143790949108675
+      },
+      "V_macro_vs_harmful": {
+        "n": 24,
+        "p": 0.01584438007477038,
+        "rho": 0.48681769842401046
+      },
+      "n": 24,
+      "ncomp_vs_harmful": {
+        "n": 24,
+        "p": 0.2112151659350245,
+        "rho": 0.26475211948648086
+      },
+      "ppl_vs_harmful": {
+        "n": 24,
+        "p": 0.6587742034928153,
+        "rho": 0.09501007901202711
+      }
+    },
+    "n_sites_total": 49,
+    "note": "'all' pools whole-layer and single-component interventions of very different size; the component subset is selection-biased (drawn from the four layers the predictor shortlisted). Only 'layer' is an unselected, fixed-size sample."
+  },
+  "qwen3_8b": {
+    "all": {
+      "V_macro_vs_anyflip": {
+        "n": 64,
+        "p": 7.264731186969751e-11,
+        "rho": 0.7059349995870817
+      },
+      "V_macro_vs_harmful": {
+        "n": 64,
+        "p": 9.904714384630892e-07,
+        "rho": 0.5678394595716016
+      },
+      "n": 64,
+      "ncomp_vs_harmful": {
+        "n": 64,
+        "p": 1.2959052884257792e-07,
+        "rho": 0.6035864896255748
+      },
+      "ppl_vs_harmful": {
+        "n": 64,
+        "p": 0.8199328067604383,
+        "rho": 0.029019895560526598
+      }
+    },
+    "component": {
+      "V_macro_vs_anyflip": {
+        "n": 28,
+        "p": 3.330934879160687e-06,
+        "rho": 0.7556617797699126
+      },
+      "V_macro_vs_harmful": {
+        "n": 28,
+        "p": 6.0235207763303444e-05,
+        "rho": 0.6838357099721233
+      },
+      "n": 28,
+      "ncomp_vs_harmful": {
+        "n": 28,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 28,
+        "p": 0.31508082536191034,
+        "rho": -0.1969668779230051
+      }
+    },
+    "layer": {
+      "V_macro_vs_anyflip": {
+        "n": 36,
+        "p": 0.15289229851063244,
+        "rho": 0.24322072544086548
+      },
+      "V_macro_vs_harmful": {
+        "n": 36,
+        "p": 0.46378666221871556,
+        "rho": 0.1260649359089142
+      },
+      "n": 36,
+      "ncomp_vs_harmful": {
+        "n": 36,
+        "p": null,
+        "rho": null
+      },
+      "ppl_vs_harmful": {
+        "n": 36,
+        "p": 0.9696152084850352,
+        "rho": -0.006580667074057958
+      }
+    },
+    "n_sites_total": 64,
+    "note": "'all' pools whole-layer and single-component interventions of very different size; the component subset is selection-biased (drawn from the four layers the predictor shortlisted). Only 'layer' is an unselected, fixed-size sample."
+  }
+}

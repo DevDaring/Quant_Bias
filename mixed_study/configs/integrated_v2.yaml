@@ -1,0 +1,57 @@
+# Frozen protocol for the integrated study (Next_Plan §10, P0 row 2).
+# Hash of this file is stamped into every v2 output. Change only before a
+# confirmatory run; the completed E0-E7 run is DISCOVERY evidence for these
+# choices and must not be re-scored as confirmation.
+version: 2
+seed: 20260908
+
+estimands:
+  # Section 3.1: never one pooled "harmful flip"
+  task_damage:            {population: labelled, denominators: [labelled, dense_correct]}
+  stereotype_damage:      {population: bbq_disambig, event: newly_incorrect_and_target_aligned}
+  disparity:              {population: bbq_disambig, unit: group, eligibility: {min_n: 20, min_clusters: 3}}
+  decision_sensitivity:   {population: discrim_eval, statistic: delta_p_yes, no_correctness_labels: true}
+  primary_social_outcome: stereotype_damage        # secondary: H (worst eligible group), macro +dE
+
+scoring:
+  primary_rule: sum                                 # sensitivity condition: mean
+  report_both_rules: true
+  margin_theorem: {argmax: dense_top2, gold: positive_gold_margin, tie_tol: 1.0e-9}
+
+competence_gates:
+  bbq_disambig_min_acc: 0.60
+  bbq_ambig_note: "ambiguous accuracy is near/below chance on all 7 dense models; report separately, not as fairness"
+  winobias_min_acc: 0.55                            # below this the adapter has not shown competence
+
+pairs:
+  confirmatory_kinds: [matched_by_construction]     # discrim_eval profiles, winobias pro/anti
+  bbq_template_pairs: template_matched_unaudited    # kept as comparisons only
+
+uncertainty:
+  scheme: dirichlet-multiplier                      # every cluster present in every draw
+  n_boot: 2000
+  alpha: 0.05
+  method_comparison: paired_difference_same_rows    # never two separate intervals
+  coverage_check: {n_sim: 150, required: 0.90}
+
+b1:                                                # Next_Plan §5
+  pilot_models: [M1, M3]
+  primary_models: [M3, M5]
+  k_layers: 8                                       # spread across depth incl. endpoints
+  granularities: [layer, component]                 # analysed separately, never pooled
+  component_panel: {kinds: [attn, mlp], per_kind: 1}
+  sources: [rtn4, rtn8, gptq4, wanda50]
+  n_random_directions: 3
+  propagation_batch: 8
+  answer_examples: 200
+
+restoration:                                       # Next_Plan §5.7
+  k_sites: 4
+  n_random_schedules: 5
+  start_bits: 4
+  restore_bits: 16
+  equal_cost_tolerance: 0.01
+
+holdout:
+  confirmation_source: "new independent templates or an untouched benchmark; NOT more instantiations of inspected templates"
+  status: not_yet_collected

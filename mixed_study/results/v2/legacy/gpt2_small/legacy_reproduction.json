@@ -1,0 +1,67 @@
+{
+  "convention": "rho[i] = v[i+1]/v[i]; v[i] = relative energy at block i OUTPUT",
+  "frac_saved_within_3sd_of_fresh": 1.0,
+  "fresh_rho": [
+    [
+      0.5992,
+      0.8402,
+      0.9572,
+      0.9523,
+      0.9297,
+      0.919,
+      0.9016,
+      0.9306,
+      0.9168,
+      0.6895,
+      0.8385
+    ],
+    [
+      0.5895,
+      0.8299,
+      0.9545,
+      0.9482,
+      0.9438,
+      0.9267,
+      0.9226,
+      0.9451,
+      0.924,
+      0.6897,
+      0.7972
+    ],
+    [
+      0.5871,
+      0.8295,
+      0.9496,
+      0.9479,
+      0.9277,
+      0.9091,
+      0.8881,
+      0.9197,
+      0.905,
+      0.6773,
+      0.7099
+    ]
+  ],
+  "fresh_seeds": [
+    0,
+    1,
+    2
+  ],
+  "length_matches": true,
+  "li_key": "gpt2_small",
+  "max_abs_diff_vs_fresh_mean": 0.09586666666666666,
+  "n_fresh": 11,
+  "n_saved": 11,
+  "provenance": {
+    "codes_git": "9f29071",
+    "generated": "2026-09-12T15:53:33",
+    "li_results": "/home/Debz/Research/Quantization_with_Bias/Codes/living-inference/python/results",
+    "living_inference_git": "0a2a136",
+    "model": "openai-community/gpt2",
+    "note": "source result files are read only; this is a corrected reanalysis",
+    "source_results": "/home/Debz/Research/Quantization_with_Bias/Codes/quant-bias/results"
+  },
+  "saved_source": "h100/gpt2_small_unified.json",
+  "shape_spearman": 1.0,
+  "verdict": "REPRODUCED"
+}

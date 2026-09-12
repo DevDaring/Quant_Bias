@@ -35,3 +35,4 @@ quant-bias/results/**/*-quick/
 # is reproducible on a fresh clone.
 living-inference/
 living-inference
+.venv

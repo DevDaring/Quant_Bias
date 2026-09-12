@@ -1,0 +1,590 @@
+{
+  "mistral_7b_v0_1": {
+    "eligible_groups": {
+      "Afghan|Iranian|Iraqi|Libyan|Moroccan|Palestinian|Saudi|Syrian|Yemeni": {
+        "clusters": 3,
+        "n": 36
+      },
+      "African American|Black": {
+        "clusters": 19,
+        "n": 228
+      },
+      "Arab|Middle Eastern": {
+        "clusters": 6,
+        "n": 72
+      },
+      "Asian": {
+        "clusters": 8,
+        "n": 96
+      },
+      "D/deaf|disabled": {
+        "clusters": 3,
+        "n": 30
+      },
+      "Eritrean|Ethiopian|Guinean|Kenyan|Malian|Mozambican|Namibian|Nigerian": {
+        "clusters": 3,
+        "n": 36
+      },
+      "F": {
+        "clusters": 11,
+        "n": 92
+      },
+      "Hispanic|Latino": {
+        "clusters": 8,
+        "n": 96
+      },
+      "M": {
+        "clusters": 7,
+        "n": 48
+      },
+      "White": {
+        "clusters": 3,
+        "n": 36
+      },
+      "autistic people|disabled": {
+        "clusters": 4,
+        "n": 48
+      },
+      "bisexual": {
+        "clusters": 4,
+        "n": 48
+      },
+      "disabled|physically disabled": {
+        "clusters": 7,
+        "n": 76
+      },
+      "gay": {
+        "clusters": 4,
+        "n": 48
+      },
+      "low SES": {
+        "clusters": 9,
+        "n": 108
+      },
+      "negDress": {
+        "clusters": 6,
+        "n": 64
+      },
+      "nonOld": {
+        "clusters": 7,
+        "n": 84
+      },
+      "old": {
+        "clusters": 8,
+        "n": 96
+      }
+    },
+    "excluded_groups": {
+      "African American|Black|Hispanic|Latino": {
+        "clusters": 2,
+        "n": 24
+      },
+      "African American|Black|Hispanic|Latino|Native American": {
+        "clusters": 2,
+        "n": 24
+      },
+      "American": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Atheist": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Burmese|Chinese|Indonesian|Japanese|Korean|Thai|Vietnamese": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Catholic": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Christian": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Down's syndrome|disabled": {
+        "clusters": 1,
+        "n": 8
+      },
+      "Hindu": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Irish": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Italian": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Jewish": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Muslim": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Native American": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Nigerian": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Transgender women|trans|transgender men": {
+        "clusters": 1,
+        "n": 12
+      },
+      "disabled|mentally-ill": {
+        "clusters": 1,
+        "n": 12
+      },
+      "disabled|people with blindness or low-vision": {
+        "clusters": 2,
+        "n": 24
+      },
+      "gay|lesbian": {
+        "clusters": 2,
+        "n": 24
+      },
+      "lesbian": {
+        "clusters": 1,
+        "n": 12
+      },
+      "obese": {
+        "clusters": 2,
+        "n": 24
+      },
+      "pregnant": {
+        "clusters": 1,
+        "n": 12
+      },
+      "short": {
+        "clusters": 1,
+        "n": 8
+      },
+      "trans|transgender women": {
+        "clusters": 1,
+        "n": 12
+      },
+      "visibleDifference": {
+        "clusters": 1,
+        "n": 12
+      }
+    },
+    "n_clusters": 156,
+    "n_rows": 1766,
+    "vs_gptq_uniform": {
+      "cwp": {
+        "H_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.0733266681844638,
+          "ci_low": -0.09513669935695021,
+          "estimate": -0.027777777777777762,
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "note": "H is a maximum; the bootstrap of a maximum is biased upward and its point estimate can fall outside its own interval. Treat as secondary.",
+          "scheme": "dirichlet-multiplier",
+          "se": 0.04212507807656314
+        },
+        "accuracy_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.011955501419352525,
+          "ci_low": -0.01946283666222092,
+          "estimate": -0.004530011325028313,
+          "interpretation": "not distinguishable on these examples (NOT equivalence)",
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "scheme": "dirichlet-multiplier",
+          "se": 0.007681141407901027
+        }
+      },
+      "debias_sparsegpt": {
+        "H_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.17933530868515823,
+          "ci_low": -0.12247086483551009,
+          "estimate": 0.04166666666666671,
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "note": "H is a maximum; the bootstrap of a maximum is biased upward and its point estimate can fall outside its own interval. Treat as secondary.",
+          "scheme": "dirichlet-multiplier",
+          "se": 0.07623279707546275
+        },
+        "accuracy_diff": {
+          "alpha": 0.05,
+          "ci_high": -0.008319280161562076,
+          "ci_low": -0.056179042846462475,
+          "estimate": -0.03454133635334088,
+          "interpretation": "B better than A",
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "scheme": "dirichlet-multiplier",
+          "se": 0.012604267711368945
+        }
+      },
+      "fair_gptq": {
+        "H_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.038075256473261945,
+          "ci_low": -0.1650209384204775,
+          "estimate": -0.11111111111111109,
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "note": "H is a maximum; the bootstrap of a maximum is biased upward and its point estimate can fall outside its own interval. Treat as secondary.",
+          "scheme": "dirichlet-multiplier",
+          "se": 0.053720960929808305
+        },
+        "accuracy_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.02121311588907363,
+          "ci_low": -0.004756423505099263,
+          "estimate": 0.007927519818799546,
+          "interpretation": "not distinguishable on these examples (NOT equivalence)",
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "scheme": "dirichlet-multiplier",
+          "se": 0.0066092591513986255
+        }
+      },
+      "sparsegpt": {
+        "H_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.32873156017801297,
+          "ci_low": -0.032902289565872614,
+          "estimate": 0.18055555555555555,
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "note": "H is a maximum; the bootstrap of a maximum is biased upward and its point estimate can fall outside its own interval. Treat as secondary.",
+          "scheme": "dirichlet-multiplier",
+          "se": 0.09161694671491574
+        },
+        "accuracy_diff": {
+          "alpha": 0.05,
+          "ci_high": -0.03338755563498904,
+          "ci_low": -0.09019193578507549,
+          "estimate": -0.061155152887882216,
+          "interpretation": "B better than A",
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "scheme": "dirichlet-multiplier",
+          "se": 0.014197406214602293
+        }
+      }
+    }
+  },
+  "qwen3_8b": {
+    "eligible_groups": {
+      "Afghan|Iranian|Iraqi|Libyan|Moroccan|Palestinian|Saudi|Syrian|Yemeni": {
+        "clusters": 3,
+        "n": 36
+      },
+      "African American|Black": {
+        "clusters": 19,
+        "n": 228
+      },
+      "Arab|Middle Eastern": {
+        "clusters": 6,
+        "n": 72
+      },
+      "Asian": {
+        "clusters": 8,
+        "n": 96
+      },
+      "D/deaf|disabled": {
+        "clusters": 3,
+        "n": 30
+      },
+      "Eritrean|Ethiopian|Guinean|Kenyan|Malian|Mozambican|Namibian|Nigerian": {
+        "clusters": 3,
+        "n": 36
+      },
+      "F": {
+        "clusters": 11,
+        "n": 92
+      },
+      "Hispanic|Latino": {
+        "clusters": 8,
+        "n": 96
+      },
+      "M": {
+        "clusters": 7,
+        "n": 48
+      },
+      "White": {
+        "clusters": 3,
+        "n": 36
+      },
+      "autistic people|disabled": {
+        "clusters": 4,
+        "n": 48
+      },
+      "bisexual": {
+        "clusters": 4,
+        "n": 48
+      },
+      "disabled|physically disabled": {
+        "clusters": 7,
+        "n": 76
+      },
+      "gay": {
+        "clusters": 4,
+        "n": 48
+      },
+      "low SES": {
+        "clusters": 9,
+        "n": 108
+      },
+      "negDress": {
+        "clusters": 6,
+        "n": 64
+      },
+      "nonOld": {
+        "clusters": 7,
+        "n": 84
+      },
+      "old": {
+        "clusters": 8,
+        "n": 96
+      }
+    },
+    "excluded_groups": {
+      "African American|Black|Hispanic|Latino": {
+        "clusters": 2,
+        "n": 24
+      },
+      "African American|Black|Hispanic|Latino|Native American": {
+        "clusters": 2,
+        "n": 24
+      },
+      "American": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Atheist": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Burmese|Chinese|Indonesian|Japanese|Korean|Thai|Vietnamese": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Catholic": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Christian": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Down's syndrome|disabled": {
+        "clusters": 1,
+        "n": 8
+      },
+      "Hindu": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Irish": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Italian": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Jewish": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Muslim": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Native American": {
+        "clusters": 1,
+        "n": 12
+      },
+      "Nigerian": {
+        "clusters": 2,
+        "n": 24
+      },
+      "Transgender women|trans|transgender men": {
+        "clusters": 1,
+        "n": 12
+      },
+      "disabled|mentally-ill": {
+        "clusters": 1,
+        "n": 12
+      },
+      "disabled|people with blindness or low-vision": {
+        "clusters": 2,
+        "n": 24
+      },
+      "gay|lesbian": {
+        "clusters": 2,
+        "n": 24
+      },
+      "lesbian": {
+        "clusters": 1,
+        "n": 12
+      },
+      "obese": {
+        "clusters": 2,
+        "n": 24
+      },
+      "pregnant": {
+        "clusters": 1,
+        "n": 12
+      },
+      "short": {
+        "clusters": 1,
+        "n": 8
+      },
+      "trans|transgender women": {
+        "clusters": 1,
+        "n": 12
+      },
+      "visibleDifference": {
+        "clusters": 1,
+        "n": 12
+      }
+    },
+    "n_clusters": 156,
+    "n_rows": 1766,
+    "vs_gptq_uniform": {
+      "cwp": {
+        "H_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.16256823518624197,
+          "ci_low": -0.08642463214390249,
+          "estimate": 0.09057971014492756,
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "note": "H is a maximum; the bootstrap of a maximum is biased upward and its point estimate can fall outside its own interval. Treat as secondary.",
+          "scheme": "dirichlet-multiplier",
+          "se": 0.06533925217332201
+        },
+        "accuracy_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.029947168992596293,
+          "ci_low": -0.005065710608709181,
+          "estimate": 0.013023782559456399,
+          "interpretation": "not distinguishable on these examples (NOT equivalence)",
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "scheme": "dirichlet-multiplier",
+          "se": 0.009332209668957791
+        }
+      },
+      "debias_sparsegpt": {
+        "H_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.12703954202486537,
+          "ci_low": -0.12306498006943735,
+          "estimate": 0.028079710144927564,
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "note": "H is a maximum; the bootstrap of a maximum is biased upward and its point estimate can fall outside its own interval. Treat as secondary.",
+          "scheme": "dirichlet-multiplier",
+          "se": 0.06135965941791579
+        },
+        "accuracy_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.05455525719376541,
+          "ci_low": 0.012781604183968816,
+          "estimate": 0.03227633069082673,
+          "interpretation": "A better than B",
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "scheme": "dirichlet-multiplier",
+          "se": 0.010886106191341073
+        }
+      },
+      "fair_gptq": {
+        "H_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.018676997213332942,
+          "ci_low": -0.1337318621338233,
+          "estimate": -0.010869565217391297,
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "note": "H is a maximum; the bootstrap of a maximum is biased upward and its point estimate can fall outside its own interval. Treat as secondary.",
+          "scheme": "dirichlet-multiplier",
+          "se": 0.03718318341768781
+        },
+        "accuracy_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.03618994033688686,
+          "ci_low": 0.007121687188602396,
+          "estimate": 0.022650056625141562,
+          "interpretation": "A better than B",
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "scheme": "dirichlet-multiplier",
+          "se": 0.00765856674922803
+        }
+      },
+      "sparsegpt": {
+        "H_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.11117938841918938,
+          "ci_low": -0.11411974170167259,
+          "estimate": 0.03260869565217392,
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "note": "H is a maximum; the bootstrap of a maximum is biased upward and its point estimate can fall outside its own interval. Treat as secondary.",
+          "scheme": "dirichlet-multiplier",
+          "se": 0.054570280646057547
+        },
+        "accuracy_diff": {
+          "alpha": 0.05,
+          "ci_high": 0.05446341259132073,
+          "ci_low": 0.010296997059589946,
+          "estimate": 0.030577576443941108,
+          "interpretation": "A better than B",
+          "n_boot": 300,
+          "n_boot_valid": 300,
+          "n_clusters": 156,
+          "n_rows": 1766,
+          "scheme": "dirichlet-multiplier",
+          "se": 0.012157199563620545
+        }
+      }
+    }
+  }
+}

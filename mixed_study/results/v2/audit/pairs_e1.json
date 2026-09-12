@@ -1,0 +1,828 @@
+{
+  "gpt2_medium": {
+    "gptq4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.011401015490026698,
+        "mean_abs_gap_comp": 0.2913669156886898,
+        "mean_abs_gap_dense": 0.279965900198663,
+        "mean_signed_change": -0.0005186665506699873,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.0007335630765058706,
+        "mean_abs_gap_comp": 0.006941879300204647,
+        "mean_abs_gap_dense": 0.0076754423767105145,
+        "mean_signed_change": -0.0013382048109612762,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.03026235192293021,
+        "mean_abs_gap_comp": 0.09192283655353387,
+        "mean_abs_gap_dense": 0.06166048463060373,
+        "mean_signed_change": 0.024387033394283657,
+        "n": 817
+      }
+    },
+    "gptq8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -8.884657185447464e-05,
+        "mean_abs_gap_comp": 0.27987705362680865,
+        "mean_abs_gap_dense": 0.279965900198663,
+        "mean_signed_change": 0.00010731164755839019,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": 4.171540229675534e-05,
+        "mean_abs_gap_comp": 0.007717157779007279,
+        "mean_abs_gap_dense": 0.0076754423767105145,
+        "mean_signed_change": -9.855667176320359e-05,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.0005111256621192941,
+        "mean_abs_gap_comp": 0.06114935896848439,
+        "mean_abs_gap_dense": 0.06166048463060373,
+        "mean_signed_change": -0.00047407824885920555,
+        "n": 817
+      }
+    },
+    "rtn4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0037742241592258635,
+        "mean_abs_gap_comp": 0.283740124357889,
+        "mean_abs_gap_dense": 0.279965900198663,
+        "mean_signed_change": 0.0022370572085080856,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.0013923248100771277,
+        "mean_abs_gap_comp": 0.0062831175666334055,
+        "mean_abs_gap_dense": 0.0076754423767105145,
+        "mean_signed_change": -0.0012214810394592603,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.02442829646529369,
+        "mean_abs_gap_comp": 0.08608878109589738,
+        "mean_abs_gap_dense": 0.06166048463060373,
+        "mean_signed_change": 0.019715772547329306,
+        "n": 817
+      }
+    },
+    "rtn8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0009149151262373101,
+        "mean_abs_gap_comp": 0.2808808153249009,
+        "mean_abs_gap_dense": 0.279965900198663,
+        "mean_signed_change": -0.0001422283306472785,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -7.0881714593686e-06,
+        "mean_abs_gap_comp": 0.007668354205251155,
+        "mean_abs_gap_dense": 0.0076754423767105145,
+        "mean_signed_change": -0.00011369363106807259,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0022320624574439217,
+        "mean_abs_gap_comp": 0.06389254708804758,
+        "mean_abs_gap_dense": 0.06166048463060373,
+        "mean_signed_change": 0.0018116375427587198,
+        "n": 817
+      }
+    }
+  },
+  "gpt2_small": {
+    "gptq4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.003590912805283581,
+        "mean_abs_gap_comp": 0.31319757444875845,
+        "mean_abs_gap_dense": 0.309606661643475,
+        "mean_signed_change": 0.003962185245310468,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": 0.0027160703275378264,
+        "mean_abs_gap_comp": 0.013960064812476282,
+        "mean_abs_gap_dense": 0.011243994484938472,
+        "mean_signed_change": 0.00505675159370634,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.005345182196609003,
+        "mean_abs_gap_comp": 0.03725746502672965,
+        "mean_abs_gap_dense": 0.04260264722333864,
+        "mean_signed_change": -0.005489458242292234,
+        "n": 817
+      }
+    },
+    "gptq8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0005710186793261872,
+        "mean_abs_gap_comp": 0.3101776803228007,
+        "mean_abs_gap_dense": 0.309606661643475,
+        "mean_signed_change": 0.00012244203729059686,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -9.675083601058681e-05,
+        "mean_abs_gap_comp": 0.011147243648927899,
+        "mean_abs_gap_dense": 0.011243994484938472,
+        "mean_signed_change": -5.053416078662026e-06,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.00031195727060052107,
+        "mean_abs_gap_comp": 0.04229068995273812,
+        "mean_abs_gap_dense": 0.04260264722333864,
+        "mean_signed_change": -0.0002718634655979821,
+        "n": 817
+      }
+    },
+    "rtn4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.0022744315708484106,
+        "mean_abs_gap_comp": 0.3073322300726263,
+        "mean_abs_gap_dense": 0.309606661643475,
+        "mean_signed_change": -0.0044858156521442585,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": 0.0033724415407949,
+        "mean_abs_gap_comp": 0.014616436025733376,
+        "mean_abs_gap_dense": 0.011243994484938472,
+        "mean_signed_change": 0.0036802519075037872,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.02975631379380395,
+        "mean_abs_gap_comp": 0.012846333429534706,
+        "mean_abs_gap_dense": 0.04260264722333864,
+        "mean_signed_change": -0.02505579950945601,
+        "n": 817
+      }
+    },
+    "rtn8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0005253900643854112,
+        "mean_abs_gap_comp": 0.31013205170785973,
+        "mean_abs_gap_dense": 0.309606661643475,
+        "mean_signed_change": -0.00013161669705685482,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": 0.00039933047855229847,
+        "mean_abs_gap_comp": 0.011643324963490772,
+        "mean_abs_gap_dense": 0.011243994484938472,
+        "mean_signed_change": 0.0006677169734363609,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -3.3107105775487876e-05,
+        "mean_abs_gap_comp": 0.04256954011756313,
+        "mean_abs_gap_dense": 0.04260264722333864,
+        "mean_signed_change": -0.00021170567320445648,
+        "n": 817
+      }
+    }
+  },
+  "lfm2_2.6b": {
+    "gptq4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.004385432641334624,
+        "mean_abs_gap_comp": 0.19465058865851992,
+        "mean_abs_gap_dense": 0.19026515601718552,
+        "mean_signed_change": -0.007577179192897783,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.0013452362591162103,
+        "mean_abs_gap_comp": 0.03470725674213434,
+        "mean_abs_gap_dense": 0.03605249300125047,
+        "mean_signed_change": -0.01143490649392644,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.01910369856697009,
+        "mean_abs_gap_comp": 0.049504169170905644,
+        "mean_abs_gap_dense": 0.030400470603935578,
+        "mean_signed_change": 0.004168746944802802,
+        "n": 817
+      }
+    },
+    "gptq8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.00035585122012569346,
+        "mean_abs_gap_comp": 0.1906210072373106,
+        "mean_abs_gap_dense": 0.19026515601718552,
+        "mean_signed_change": -0.000972552832940101,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": 0.00020352884327014018,
+        "mean_abs_gap_comp": 0.03625602184452088,
+        "mean_abs_gap_dense": 0.03605249300125047,
+        "mean_signed_change": -0.00014427618929148848,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0009060154825614064,
+        "mean_abs_gap_comp": 0.03130648608649699,
+        "mean_abs_gap_dense": 0.030400470603935578,
+        "mean_signed_change": 0.0011564683474727295,
+        "n": 817
+      }
+    },
+    "rtn4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.0010521487312733714,
+        "mean_abs_gap_comp": 0.18921300728591195,
+        "mean_abs_gap_dense": 0.19026515601718552,
+        "mean_signed_change": -0.012216669148374782,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": 0.012010688124628258,
+        "mean_abs_gap_comp": 0.04806318112587855,
+        "mean_abs_gap_dense": 0.03605249300125047,
+        "mean_signed_change": -0.006072566246340525,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0024473064374899273,
+        "mean_abs_gap_comp": 0.032847777041425524,
+        "mean_abs_gap_dense": 0.030400470603935578,
+        "mean_signed_change": 0.0058465701068884796,
+        "n": 817
+      }
+    },
+    "rtn8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0011703056882858204,
+        "mean_abs_gap_comp": 0.19143546170547093,
+        "mean_abs_gap_dense": 0.19026515601718552,
+        "mean_signed_change": -0.0006102271319176723,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": 0.0013325450407146759,
+        "mean_abs_gap_comp": 0.03738503804196525,
+        "mean_abs_gap_dense": 0.03605249300125047,
+        "mean_signed_change": 0.0012447204784775485,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0020234479238846214,
+        "mean_abs_gap_comp": 0.03242391852782021,
+        "mean_abs_gap_dense": 0.030400470603935578,
+        "mean_signed_change": 0.0012141513743631365,
+        "n": 817
+      }
+    }
+  },
+  "llama_2_7b": {
+    "gptq4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.004598161958484333,
+        "mean_abs_gap_comp": 0.20760090036704426,
+        "mean_abs_gap_dense": 0.20300273840855948,
+        "mean_signed_change": 0.0012355250916588263,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.001814266880395107,
+        "mean_abs_gap_comp": 0.021048547015958353,
+        "mean_abs_gap_dense": 0.022862813896353588,
+        "mean_signed_change": 0.005376633094484501,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.0010698680467669402,
+        "mean_abs_gap_comp": 0.0418897532661111,
+        "mean_abs_gap_dense": 0.04295962131287807,
+        "mean_signed_change": -0.0021706576448446945,
+        "n": 817
+      }
+    },
+    "gptq8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 2.836421115561171e-05,
+        "mean_abs_gap_comp": 0.20303110261971538,
+        "mean_abs_gap_dense": 0.20300273840855948,
+        "mean_signed_change": 0.0006801198796537708,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.0006921038228269847,
+        "mean_abs_gap_comp": 0.02217071007352646,
+        "mean_abs_gap_dense": 0.022862813896353588,
+        "mean_signed_change": 0.0034893235720242044,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0003322245531502348,
+        "mean_abs_gap_comp": 0.04329184586602822,
+        "mean_abs_gap_dense": 0.04295962131287807,
+        "mean_signed_change": 0.0002583761881340932,
+        "n": 817
+      }
+    },
+    "rtn4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.015977633079462757,
+        "mean_abs_gap_comp": 0.21898037148802293,
+        "mean_abs_gap_dense": 0.20300273840855948,
+        "mean_signed_change": 0.004375044475128061,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.004473919390773727,
+        "mean_abs_gap_comp": 0.018388894505579775,
+        "mean_abs_gap_dense": 0.022862813896353588,
+        "mean_signed_change": 0.005104163634908645,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.002745649188058679,
+        "mean_abs_gap_comp": 0.0402139721248193,
+        "mean_abs_gap_dense": 0.04295962131287807,
+        "mean_signed_change": -0.0019562476086441706,
+        "n": 817
+      }
+    },
+    "rtn8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0007414721677927433,
+        "mean_abs_gap_comp": 0.20374421057635259,
+        "mean_abs_gap_dense": 0.20300273840855948,
+        "mean_signed_change": 0.0009340890258652824,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.0005623989172131586,
+        "mean_abs_gap_comp": 0.02230041497914032,
+        "mean_abs_gap_dense": 0.022862813896353588,
+        "mean_signed_change": 0.0007954431997767486,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.00028122082055150516,
+        "mean_abs_gap_comp": 0.04267840049232644,
+        "mean_abs_gap_dense": 0.04295962131287807,
+        "mean_signed_change": -0.0001302783762113644,
+        "n": 817
+      }
+    }
+  },
+  "mistral_7b_v0_1": {
+    "gptq4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.005618552473715331,
+        "mean_abs_gap_comp": 0.1690798236457229,
+        "mean_abs_gap_dense": 0.1634612711720079,
+        "mean_signed_change": -0.001422896201835196,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": 0.0031602014804927975,
+        "mean_abs_gap_comp": 0.023764951730458457,
+        "mean_abs_gap_dense": 0.02060475024996559,
+        "mean_signed_change": -0.0018184963804706953,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.013237599507480567,
+        "mean_abs_gap_comp": 0.08237681325340399,
+        "mean_abs_gap_dense": 0.06913921374592338,
+        "mean_signed_change": 0.013502231399082673,
+        "n": 817
+      }
+    },
+    "gptq8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 9.16736548461268e-06,
+        "mean_abs_gap_comp": 0.16347043853749219,
+        "mean_abs_gap_dense": 0.1634612711720079,
+        "mean_signed_change": 0.00042745960925092205,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.0017218853850429472,
+        "mean_abs_gap_comp": 0.018882864864922612,
+        "mean_abs_gap_dense": 0.02060475024996559,
+        "mean_signed_change": 0.002363475483393841,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0012378046168478216,
+        "mean_abs_gap_comp": 0.07037701836277126,
+        "mean_abs_gap_dense": 0.06913921374592338,
+        "mean_signed_change": 0.0009406465102279846,
+        "n": 817
+      }
+    },
+    "rtn4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.020544904539637757,
+        "mean_abs_gap_comp": 0.18400617571164557,
+        "mean_abs_gap_dense": 0.1634612711720079,
+        "mean_signed_change": -0.002599312363686736,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.00028257120704156067,
+        "mean_abs_gap_comp": 0.020322179042924004,
+        "mean_abs_gap_dense": 0.02060475024996559,
+        "mean_signed_change": 0.001700477060345534,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.019342076756912987,
+        "mean_abs_gap_comp": 0.04979713698901042,
+        "mean_abs_gap_dense": 0.06913921374592338,
+        "mean_signed_change": -0.019395425643131303,
+        "n": 817
+      }
+    },
+    "rtn8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -3.528266583836907e-05,
+        "mean_abs_gap_comp": 0.16342598850616954,
+        "mean_abs_gap_dense": 0.1634612711720079,
+        "mean_signed_change": 0.0001608922043628088,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.0006069610972143343,
+        "mean_abs_gap_comp": 0.01999778915275125,
+        "mean_abs_gap_dense": 0.02060475024996559,
+        "mean_signed_change": -0.00018940124738986858,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.00042413023131538237,
+        "mean_abs_gap_comp": 0.06956334397723872,
+        "mean_abs_gap_dense": 0.06913921374592338,
+        "mean_signed_change": 0.00029642619687795916,
+        "n": 817
+      }
+    }
+  },
+  "qwen3_5_2b": {
+    "gptq4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.013027311433343767,
+        "mean_abs_gap_comp": 0.22047326575725984,
+        "mean_abs_gap_dense": 0.2074459543239153,
+        "mean_signed_change": -0.0023464797508529933,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": 0.001557586498972985,
+        "mean_abs_gap_comp": 0.02163711121318345,
+        "mean_abs_gap_dense": 0.020079524714210418,
+        "mean_signed_change": -0.0014681588671561167,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.05032238257149652,
+        "mean_abs_gap_comp": 0.16416386044840306,
+        "mean_abs_gap_dense": 0.11384147787690632,
+        "mean_signed_change": 0.042676226848121675,
+        "n": 817
+      }
+    },
+    "gptq8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.001569902006329446,
+        "mean_abs_gap_comp": 0.20901585633024541,
+        "mean_abs_gap_dense": 0.2074459543239153,
+        "mean_signed_change": 0.0006797881709293465,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -4.12695841889811e-05,
+        "mean_abs_gap_comp": 0.02003825513002148,
+        "mean_abs_gap_dense": 0.020079524714210418,
+        "mean_signed_change": 0.0006997733331289838,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.005203568787403319,
+        "mean_abs_gap_comp": 0.10863790908950309,
+        "mean_abs_gap_dense": 0.11384147787690632,
+        "mean_signed_change": -0.00461672333090999,
+        "n": 817
+      }
+    },
+    "rtn4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0014362177135412752,
+        "mean_abs_gap_comp": 0.2088821720374572,
+        "mean_abs_gap_dense": 0.2074459543239153,
+        "mean_signed_change": -0.00020505634316036832,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.001664638036283998,
+        "mean_abs_gap_comp": 0.018414886677926498,
+        "mean_abs_gap_dense": 0.020079524714210418,
+        "mean_signed_change": 0.004631630680044358,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.005375796962714866,
+        "mean_abs_gap_comp": 0.10846568091419156,
+        "mean_abs_gap_dense": 0.11384147787690632,
+        "mean_signed_change": -0.018362196142209356,
+        "n": 817
+      }
+    },
+    "rtn8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0020855839213965548,
+        "mean_abs_gap_comp": 0.20953153824531204,
+        "mean_abs_gap_dense": 0.2074459543239153,
+        "mean_signed_change": 0.0005681617625820161,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.00035167813845931174,
+        "mean_abs_gap_comp": 0.019727846575751176,
+        "mean_abs_gap_dense": 0.020079524714210418,
+        "mean_signed_change": -0.00021413682483667829,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0021016117988819022,
+        "mean_abs_gap_comp": 0.11594308967578837,
+        "mean_abs_gap_dense": 0.11384147787690632,
+        "mean_signed_change": 0.0014772667609739493,
+        "n": 817
+      }
+    }
+  },
+  "qwen3_8b": {
+    "gptq4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.035028449340490625,
+        "mean_abs_gap_comp": 0.16145515777800643,
+        "mean_abs_gap_dense": 0.12642670843751538,
+        "mean_signed_change": -0.0006540842161302809,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.011183281980427912,
+        "mean_abs_gap_comp": 0.05713819657566332,
+        "mean_abs_gap_dense": 0.06832147855609108,
+        "mean_signed_change": 0.012102407670036723,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.0712574839523067,
+        "mean_abs_gap_comp": 0.1806229848087295,
+        "mean_abs_gap_dense": 0.25188046876103637,
+        "mean_signed_change": -0.030526877167882875,
+        "n": 817
+      }
+    },
+    "gptq8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.0007792953951639017,
+        "mean_abs_gap_comp": 0.1272060038326794,
+        "mean_abs_gap_dense": 0.12642670843751538,
+        "mean_signed_change": -2.7888236056255494e-05,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": 0.0007375581893848754,
+        "mean_abs_gap_comp": 0.06905903674547607,
+        "mean_abs_gap_dense": 0.06832147855609108,
+        "mean_signed_change": 0.0022017120527079003,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.0023674587194745115,
+        "mean_abs_gap_comp": 0.24951301004156184,
+        "mean_abs_gap_dense": 0.25188046876103637,
+        "mean_signed_change": -0.001253732072480354,
+        "n": 817
+      }
+    },
+    "rtn4": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.026164916573195796,
+        "mean_abs_gap_comp": 0.1525916250107114,
+        "mean_abs_gap_dense": 0.12642670843751538,
+        "mean_signed_change": 0.0006427219817450205,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.00673803552206648,
+        "mean_abs_gap_comp": 0.061583443034024556,
+        "mean_abs_gap_dense": 0.06832147855609108,
+        "mean_signed_change": 0.01650904112881283,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.041198471401794466,
+        "mean_abs_gap_comp": 0.2106819973592421,
+        "mean_abs_gap_dense": 0.25188046876103637,
+        "mean_signed_change": -0.04015081031265685,
+        "n": 817
+      }
+    },
+    "rtn8": {
+      "bbq:template_matched_unaudited": {
+        "confirmatory_eligible": false,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": -0.000991889011988061,
+        "mean_abs_gap_comp": 0.12543481942552753,
+        "mean_abs_gap_dense": 0.12642670843751538,
+        "mean_signed_change": -0.000608220940808312,
+        "n": 1610
+      },
+      "discrim_eval:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "shared_decision_P(yes)",
+        "mean_abs_gap_change": -0.0037722087971790324,
+        "mean_abs_gap_comp": 0.06454926975891201,
+        "mean_abs_gap_dense": 0.06832147855609108,
+        "mean_signed_change": 0.005039760500227079,
+        "n": 2294
+      },
+      "winobias:matched_by_construction": {
+        "confirmatory_eligible": true,
+        "estimand": "own_correct_answer_probability",
+        "mean_abs_gap_change": 0.002416642891853795,
+        "mean_abs_gap_comp": 0.25429711165289004,
+        "mean_abs_gap_dense": 0.25188046876103637,
+        "mean_signed_change": 0.0038698526885571354,
+        "n": 817
+      }
+    }
+  }
+}

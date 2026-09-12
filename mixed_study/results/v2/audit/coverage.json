@@ -1,0 +1,9 @@
+{
+  "empirical_coverage": 1.0,
+  "mean_width": 0.0678670511386952,
+  "n_clusters_target": 3,
+  "n_sim": 150,
+  "nominal": 0.95,
+  "target_group": "Afghan|Iranian|Iraqi|Libyan|Moroccan|Palestinian|Saudi|Syrian|Yemeni",
+  "verdict": "adequate"
+}

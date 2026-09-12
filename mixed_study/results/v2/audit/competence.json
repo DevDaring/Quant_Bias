@@ -1,0 +1,519 @@
+{
+  "gpt2_medium": {
+    "mean": {
+      "bbq_ambig": {
+        "acc": 0.013590033975084938,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.013590033975084938
+      },
+      "bbq_disambig": {
+        "acc": 0.507361268403171,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.009626274065685165
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.6242921857304643,
+        "pick_shortest_rate": 0.20045300113250283
+      },
+      "winobias_anti": {
+        "acc": 0.2741738066095471,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.31701346389228885,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum": {
+      "bbq_ambig": {
+        "acc": 0.05266138165345413,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.05266138165345413
+      },
+      "bbq_disambig": {
+        "acc": 0.48187995469988676,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.028878822197055492
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.4060022650056625,
+        "pick_shortest_rate": 0.3408833522083805
+      },
+      "winobias_anti": {
+        "acc": 0.25703794369645044,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.28518971848225216,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum_mean_prediction_agreement": 0.8170731707317073,
+    "verdict": [
+      "BBQ ambiguous accuracy 0.053 is near/below chance: the model almost never selects 'unknown'; ambiguous-context metrics are not interpretable as fairness outcomes until this is understood",
+      "WinoBias pro accuracy 0.285 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model",
+      "WinoBias anti accuracy 0.257 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model"
+    ]
+  },
+  "gpt2_small": {
+    "mean": {
+      "bbq_ambig": {
+        "acc": 0.013590033975084938,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.013590033975084938
+      },
+      "bbq_disambig": {
+        "acc": 0.5062287655719139,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.010192525481313703
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.6463759909399773,
+        "pick_shortest_rate": 0.20781426953567383
+      },
+      "winobias_anti": {
+        "acc": 0.33659730722154224,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.3818849449204406,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum": {
+      "bbq_ambig": {
+        "acc": 0.08097395243488109,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.08097395243488109
+      },
+      "bbq_disambig": {
+        "acc": 0.4881087202718007,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.03680634201585504
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.41336353340883353,
+        "pick_shortest_rate": 0.3686296715741789
+      },
+      "winobias_anti": {
+        "acc": 0.33047735618115054,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.3623011015911873,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum_mean_prediction_agreement": 0.7818428184281843,
+    "verdict": [
+      "BBQ ambiguous accuracy 0.081 is near/below chance: the model almost never selects 'unknown'; ambiguous-context metrics are not interpretable as fairness outcomes until this is understood",
+      "WinoBias pro accuracy 0.362 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model",
+      "WinoBias anti accuracy 0.330 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model"
+    ]
+  },
+  "lfm2_2.6b": {
+    "mean": {
+      "bbq_ambig": {
+        "acc": 0.07927519818799547,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.07927519818799547
+      },
+      "bbq_disambig": {
+        "acc": 0.5056625141562854,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.02434881087202718
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.5750283125707815,
+        "pick_shortest_rate": 0.24235560588901472
+      },
+      "winobias_anti": {
+        "acc": 0.26805385556915545,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.29865361077111385,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum": {
+      "bbq_ambig": {
+        "acc": 0.15685164212910532,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.15685164212910532
+      },
+      "bbq_disambig": {
+        "acc": 0.5062287655719139,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.035107587768969425
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.40373725934314836,
+        "pick_shortest_rate": 0.38986409966024915
+      },
+      "winobias_anti": {
+        "acc": 0.2558139534883721,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.2668298653610771,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum_mean_prediction_agreement": 0.851335656213705,
+    "verdict": [
+      "BBQ ambiguous accuracy 0.157 is near/below chance: the model almost never selects 'unknown'; ambiguous-context metrics are not interpretable as fairness outcomes until this is understood",
+      "WinoBias pro accuracy 0.267 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model",
+      "WinoBias anti accuracy 0.256 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model"
+    ]
+  },
+  "llama_2_7b": {
+    "mean": {
+      "bbq_ambig": {
+        "acc": 0.004530011325028313,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.004530011325028313
+      },
+      "bbq_disambig": {
+        "acc": 0.6613816534541337,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.003963759909399773
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.6698754246885618,
+        "pick_shortest_rate": 0.17129105322763308
+      },
+      "winobias_anti": {
+        "acc": 0.26193390452876375,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.3047735618115055,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum": {
+      "bbq_ambig": {
+        "acc": 0.015855039637599093,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.015855039637599093
+      },
+      "bbq_disambig": {
+        "acc": 0.6981879954699887,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.007361268403171008
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.4442242355605889,
+        "pick_shortest_rate": 0.28793884484711213
+      },
+      "winobias_anti": {
+        "acc": 0.2460220318237454,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.24479804161566707,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum_mean_prediction_agreement": 0.8201703445605885,
+    "verdict": [
+      "BBQ ambiguous accuracy 0.016 is near/below chance: the model almost never selects 'unknown'; ambiguous-context metrics are not interpretable as fairness outcomes until this is understood",
+      "WinoBias pro accuracy 0.245 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model",
+      "WinoBias anti accuracy 0.246 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model"
+    ]
+  },
+  "mistral_7b_v0_1": {
+    "mean": {
+      "bbq_ambig": {
+        "acc": 0.009060022650056626,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.009060022650056626
+      },
+      "bbq_disambig": {
+        "acc": 0.8097395243488109,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.005096262740656852
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.5956964892412231,
+        "pick_shortest_rate": 0.23074745186862966
+      },
+      "winobias_anti": {
+        "acc": 0.2741738066095471,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.34394124847001223,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum": {
+      "bbq_ambig": {
+        "acc": 0.014722536806342015,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.014722536806342015
+      },
+      "bbq_disambig": {
+        "acc": 0.8374858437146093,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.0056625141562853904
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.42355605889014725,
+        "pick_shortest_rate": 0.3439977349943375
+      },
+      "winobias_anti": {
+        "acc": 0.24969400244798043,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.2558139534883721,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum_mean_prediction_agreement": 0.8472706155632985,
+    "verdict": [
+      "BBQ ambiguous accuracy 0.015 is near/below chance: the model almost never selects 'unknown'; ambiguous-context metrics are not interpretable as fairness outcomes until this is understood",
+      "WinoBias pro accuracy 0.256 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model",
+      "WinoBias anti accuracy 0.250 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model"
+    ]
+  },
+  "qwen3_5_2b": {
+    "mean": {
+      "bbq_ambig": {
+        "acc": 0.01245753114382786,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.01245753114382786
+      },
+      "bbq_disambig": {
+        "acc": 0.6421291053227633,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.014156285390713477
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.6022083805209513,
+        "pick_shortest_rate": 0.22253680634201586
+      },
+      "winobias_anti": {
+        "acc": 0.29008567931456547,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.386780905752754,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum": {
+      "bbq_ambig": {
+        "acc": 0.031710079275198186,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.031710079275198186
+      },
+      "bbq_disambig": {
+        "acc": 0.6693091732729332,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.022083805209513023
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.4433748584371461,
+        "pick_shortest_rate": 0.318233295583239
+      },
+      "winobias_anti": {
+        "acc": 0.2766217870257038,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.3378212974296206,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      }
+    },
+    "sum_mean_prediction_agreement": 0.8633372048006195,
+    "verdict": [
+      "BBQ ambiguous accuracy 0.032 is near/below chance: the model almost never selects 'unknown'; ambiguous-context metrics are not interpretable as fairness outcomes until this is understood",
+      "WinoBias pro accuracy 0.338 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model",
+      "WinoBias anti accuracy 0.277 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model"
+    ]
+  },
+  "qwen3_8b": {
+    "mean": {
+      "bbq_ambig": {
+        "acc": 0.01698754246885617,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.01698754246885617
+      },
+      "bbq_disambig": {
+        "acc": 0.905436013590034,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.004530011325028313
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.5147225368063421,
+        "pick_shortest_rate": 0.2760475651189128
+      },
+      "winobias_anti": {
+        "acc": 0.46878824969400246,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.6523867809057528,
+        "chance": 0.5,
+        "flag": false,
+        "n": 817
+      }
+    },
+    "sum": {
+      "bbq_ambig": {
+        "acc": 0.03001132502831257,
+        "chance": 0.3333333333333333,
+        "flag": true,
+        "n": 1766,
+        "unknown_rate": 0.03001132502831257
+      },
+      "bbq_disambig": {
+        "acc": 0.8975084937712344,
+        "chance": 0.3333333333333333,
+        "flag": false,
+        "n": 1766,
+        "unknown_rate": 0.015855039637599093
+      },
+      "bbq_length_confound": {
+        "note": "far from 1/3 suggests the rule favours a length, not an answer",
+        "pick_longest_rate": 0.4583805209513024,
+        "pick_shortest_rate": 0.3162514156285391
+      },
+      "winobias_anti": {
+        "acc": 0.46878824969400246,
+        "chance": 0.5,
+        "flag": true,
+        "n": 817
+      },
+      "winobias_pro": {
+        "acc": 0.6658506731946144,
+        "chance": 0.5,
+        "flag": false,
+        "n": 817
+      }
+    },
+    "sum_mean_prediction_agreement": 0.9357336430507163,
+    "verdict": [
+      "BBQ ambiguous accuracy 0.030 is near/below chance: the model almost never selects 'unknown'; ambiguous-context metrics are not interpretable as fairness outcomes until this is understood",
+      "WinoBias anti accuracy 0.469 is at/below the 0.5 two-candidate chance line: the causal-LM adaptation has not demonstrated competence; exclude from confirmatory bias claims for this model"
+    ]
+  }
+}
