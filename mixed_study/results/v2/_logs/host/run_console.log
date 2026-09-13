@@ -1,0 +1,190 @@
+[2026-09-13_07:54:54] ===== MODE=smoke flags:--device cuda --attn flash_attention_2 --quick =====
+[2026-09-13_07:54:54] spawned watchdog (pid 17599)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_07:54:54] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_07:54:54] skip smoke/legacy/M1 (already ok)
+[2026-09-13_07:54:54] skip smoke/legacy/M3 (already ok)
+[2026-09-13_07:54:54] skip smoke/legacy/M5 (already ok)
+[2026-09-13_07:54:54] skip smoke/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_07:54:54] skip smoke/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_07:54:54] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_07:54:54] skip smoke/b1/M1/--granularity/layer (already ok)
+[2026-09-13_07:54:54] skip smoke/b1/M1/--granularity/component (already ok)
+[2026-09-13_07:54:54] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_07:54:54] skip smoke/b1/M3/--granularity/layer (already ok)
+[2026-09-13_07:54:54] skip smoke/b1/M3/--granularity/component (already ok)
+[2026-09-13_07:54:54] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_07:54:54] skip smoke/b1/M5/--granularity/layer (already ok)
+[2026-09-13_07:54:54] skip smoke/b1/M5/--granularity/component (already ok)
+[2026-09-13_07:54:54] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_07:54:54] skip smoke/restore/M3 (already ok)
+[2026-09-13_07:54:54] skip smoke/restore/M5 (already ok)
+[2026-09-13_07:54:54] --- Stage 6: directional predictor on the ladder protocol (§6) ---
+[2026-09-13_07:54:54] >>> smoke/dladder/M1/--n-examples/48
+[2026-09-13_07:56:14] <<< smoke/dladder/M1/--n-examples/48 ok in 80s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_07:56:21]   pushed smoke/dladder/M1/--n-examples/48
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_07:56:21]   !! PUSH FAILED for smoke/dladder/M1/--n-examples/48 (will retry next stage)
+[2026-09-13_07:56:21] >>> smoke/dladder/M3/--n-examples/48
+[2026-09-13_07:58:39] <<< smoke/dladder/M3/--n-examples/48 ok in 138s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_07:58:46]   pushed smoke/dladder/M3/--n-examples/48
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_07:58:46]   !! PUSH FAILED for smoke/dladder/M3/--n-examples/48 (will retry next stage)
+[2026-09-13_07:58:46] >>> smoke/dladder/M5/--n-examples/48
+[2026-09-13_08:01:31] <<< smoke/dladder/M5/--n-examples/48 ok in 165s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:01:37]   pushed smoke/dladder/M5/--n-examples/48
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:01:37]   !! PUSH FAILED for smoke/dladder/M5/--n-examples/48 (will retry next stage)
+[2026-09-13_08:01:37] --- Stage 7: restoration sized by power analysis: full final split, two intervention sizes (§8) ---
+[2026-09-13_08:01:37] >>> smoke/restore/M3/--k/8/--n-examples/8000
+[2026-09-13_08:03:00] <<< smoke/restore/M3/--k/8/--n-examples/8000 ok in 83s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:03:06]   pushed smoke/restore/M3/--k/8/--n-examples/8000
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:03:06]   !! PUSH FAILED for smoke/restore/M3/--k/8/--n-examples/8000 (will retry next stage)
+[2026-09-13_08:03:06] >>> smoke/restore/M3/--k/16/--n-examples/8000
+[2026-09-13_08:04:29] <<< smoke/restore/M3/--k/16/--n-examples/8000 ok in 83s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:04:36]   pushed smoke/restore/M3/--k/16/--n-examples/8000
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:04:36]   !! PUSH FAILED for smoke/restore/M3/--k/16/--n-examples/8000 (will retry next stage)
+[2026-09-13_08:04:36] >>> smoke/restore/M5/--k/8/--n-examples/8000
+[2026-09-13_08:05:59] <<< smoke/restore/M5/--k/8/--n-examples/8000 ok in 83s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:06:06]   pushed smoke/restore/M5/--k/8/--n-examples/8000
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:06:06]   !! PUSH FAILED for smoke/restore/M5/--k/8/--n-examples/8000 (will retry next stage)
+[2026-09-13_08:06:06] >>> smoke/restore/M5/--k/16/--n-examples/8000
+[2026-09-13_08:07:30] <<< smoke/restore/M5/--k/16/--n-examples/8000 ok in 84s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:07:37]   pushed smoke/restore/M5/--k/16/--n-examples/8000
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:07:37]   !! PUSH FAILED for smoke/restore/M5/--k/16/--n-examples/8000 (will retry next stage)
+[2026-09-13_08:07:37] --- Stage 8: held-out confirmation on an untouched source (§3.6) ---
+[2026-09-13_08:07:37] >>> smoke/confirm/M3
+[2026-09-13_08:08:58] <<< smoke/confirm/M3 ok in 81s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:09:04]   pushed smoke/confirm/M3
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:09:04]   !! PUSH FAILED for smoke/confirm/M3 (will retry next stage)
+[2026-09-13_08:09:04] >>> smoke/confirm/M5
+[2026-09-13_08:10:26] <<< smoke/confirm/M5 ok in 82s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:10:32]   pushed smoke/confirm/M5
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:10:32]   !! PUSH FAILED for smoke/confirm/M5 (will retry next stage)
+[2026-09-13_08:10:32] ===== COMPLETE: 22 ok, 0 failed =====
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:10:39]   pushed final (smoke)
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_08:10:39]   !! PUSH FAILED for final (smoke) (will retry next stage)
+[2026-09-13_08:13:01] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_08:13:01] spawned watchdog (pid 21503)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_08:13:01] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_08:13:01] skip full/legacy/M1 (already ok)
+[2026-09-13_08:13:01] skip full/legacy/M3 (already ok)
+[2026-09-13_08:13:01] skip full/legacy/M5 (already ok)
+[2026-09-13_08:13:01] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_08:13:01] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_08:13:01] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_08:13:01] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_08:13:01] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_08:13:01] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_08:13:01] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_08:13:01] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_08:13:01] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_08:13:01] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_08:13:01] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_08:13:01] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_08:13:01] skip full/restore/M3 (already ok)
+[2026-09-13_08:13:01] skip full/restore/M5 (already ok)
+[2026-09-13_08:13:01] --- Stage 6: directional predictor on the ladder protocol (§6) ---
+[2026-09-13_08:13:01] >>> full/dladder/M1/--n-examples/48
+[2026-09-13_08:14:33] <<< full/dladder/M1/--n-examples/48 ok in 92s
+[2026-09-13_08:14:40]   pushed full/dladder/M1/--n-examples/48
+[2026-09-13_08:14:40] >>> full/dladder/M3/--n-examples/48
+[2026-09-13_08:17:22] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_08:17:22] spawned watchdog (pid 17563)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_08:17:22] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_08:17:22] skip full/legacy/M1 (already ok)
+[2026-09-13_08:17:22] skip full/legacy/M3 (already ok)
+[2026-09-13_08:17:22] skip full/legacy/M5 (already ok)
+[2026-09-13_08:17:22] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_08:17:22] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_08:17:22] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_08:17:22] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_08:17:22] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_08:17:22] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_08:17:22] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_08:17:22] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_08:17:22] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_08:17:22] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_08:17:22] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_08:17:22] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_08:17:22] skip full/restore/M3 (already ok)
+[2026-09-13_08:17:22] skip full/restore/M5 (already ok)
+[2026-09-13_08:17:22] --- Stage 6: directional predictor on the ladder protocol (§6) ---
+[2026-09-13_08:17:22] skip full/dladder/M1/--n-examples/48 (already ok)
+[2026-09-13_08:17:22] >>> full/dladder/M3/--n-examples/48
+[2026-09-13_08:23:46] <<< full/dladder/M3/--n-examples/48 ok in 384s
+[2026-09-13_08:23:53]   pushed full/dladder/M3/--n-examples/48
+[2026-09-13_08:23:53] >>> full/dladder/M5/--n-examples/48
+[2026-09-13_08:32:12] <<< full/dladder/M5/--n-examples/48 ok in 499s
+[2026-09-13_08:32:19]   pushed full/dladder/M5/--n-examples/48
+[2026-09-13_08:32:19] --- Stage 7: restoration sized by power analysis: full final split, two intervention sizes (§8) ---
+[2026-09-13_08:32:19] >>> full/restore/M3/--k/8/--n-examples/8000
+[2026-09-13_08:45:13] <<< full/restore/M3/--k/8/--n-examples/8000 ok in 774s
+[2026-09-13_08:45:20]   pushed full/restore/M3/--k/8/--n-examples/8000
+[2026-09-13_08:45:20] >>> full/restore/M3/--k/16/--n-examples/8000
+[2026-09-13_08:58:10] <<< full/restore/M3/--k/16/--n-examples/8000 ok in 770s
+[2026-09-13_08:58:17]   pushed full/restore/M3/--k/16/--n-examples/8000
+[2026-09-13_08:58:17] >>> full/restore/M5/--k/8/--n-examples/8000
+[2026-09-13_09:12:39] <<< full/restore/M5/--k/8/--n-examples/8000 ok in 862s
+[2026-09-13_09:12:46]   pushed full/restore/M5/--k/8/--n-examples/8000
+[2026-09-13_09:12:46] >>> full/restore/M5/--k/16/--n-examples/8000
+[2026-09-13_09:17:23] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_09:17:23] spawned watchdog (pid 17524)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_09:17:23] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_09:17:23] skip full/legacy/M1 (already ok)
+[2026-09-13_09:17:23] skip full/legacy/M3 (already ok)
+[2026-09-13_09:17:23] skip full/legacy/M5 (already ok)
+[2026-09-13_09:17:23] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_09:17:23] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_09:17:23] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_09:17:23] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_09:17:23] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_09:17:23] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_09:17:23] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_09:17:23] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_09:17:23] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_09:17:23] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_09:17:23] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_09:17:23] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_09:17:23] skip full/restore/M3 (already ok)
+[2026-09-13_09:17:23] skip full/restore/M5 (already ok)
+[2026-09-13_09:17:23] --- Stage 6: directional predictor on the ladder protocol (§6) ---
+[2026-09-13_09:17:23] skip full/dladder/M1/--n-examples/48 (already ok)
+[2026-09-13_09:17:23] skip full/dladder/M3/--n-examples/48 (already ok)
+[2026-09-13_09:17:23] skip full/dladder/M5/--n-examples/48 (already ok)
+[2026-09-13_09:17:23] --- Stage 7: restoration sized by power analysis: full final split, two intervention sizes (§8) ---
+[2026-09-13_09:17:23] skip full/restore/M3/--k/8/--n-examples/8000 (already ok)
+[2026-09-13_09:17:23] skip full/restore/M3/--k/16/--n-examples/8000 (already ok)
+[2026-09-13_09:17:23] skip full/restore/M5/--k/8/--n-examples/8000 (already ok)
+[2026-09-13_09:17:23] >>> full/restore/M5/--k/16/--n-examples/8000
+[2026-09-13_09:31:45] <<< full/restore/M5/--k/16/--n-examples/8000 ok in 862s
+[2026-09-13_09:31:51]   pushed full/restore/M5/--k/16/--n-examples/8000
+[2026-09-13_09:31:51] --- Stage 8: held-out confirmation on an untouched source (§3.6) ---
+[2026-09-13_09:31:51] >>> full/confirm/M3
+[2026-09-13_09:43:45] <<< full/confirm/M3 ok in 714s
+[2026-09-13_09:43:52]   pushed full/confirm/M3
+[2026-09-13_09:43:52] >>> full/confirm/M5
+[2026-09-13_09:56:28] <<< full/confirm/M5 ok in 756s
+[2026-09-13_09:56:34]   pushed full/confirm/M5
+[2026-09-13_09:56:34] ===== COMPLETE: 22 ok, 0 failed =====
+[2026-09-13_09:56:41]   pushed final (full)
