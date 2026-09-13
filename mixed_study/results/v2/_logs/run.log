@@ -374,3 +374,4 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_08:13:01] skip full/restore/M5 (already ok)
 [2026-09-13_08:13:01] --- Stage 6: directional predictor on the ladder protocol (§6) ---
 [2026-09-13_08:13:01] >>> full/dladder/M1/--n-examples/48
+[2026-09-13_08:14:33] <<< full/dladder/M1/--n-examples/48 ok in 92s

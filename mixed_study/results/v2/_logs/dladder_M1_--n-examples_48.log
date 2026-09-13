@@ -1,0 +1,25 @@
+[08:13:04] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
+[transformers] Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in GPT2LMHeadModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[transformers] Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in GPT2Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 14358.41it/s]
+[08:13:08]   attention: flash_attention_2
+[08:13:08]   flash_attention_2 failed a forward pass (StopIteration); reloading with sdpa
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 8259.25it/s]
+[08:13:19] BBQ: 7868 examples, 343 template clusters
+[08:13:37] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[08:13:40] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1232 > 1024). Running this sequence through the model will result in indexing errors
+[08:13:50] calibration[generic] seed=0: 32x512 tokens, hash=8514d6de1041bc7d
+[08:13:56]   L 0: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.9440 agree=1.00 (5s)
+[08:14:01]   L 1: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.9260 agree=1.00 (10s)
+[08:14:05]   L 2: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.9524 agree=1.00 (15s)
+[08:14:10]   L 3: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.9653 agree=1.00 (19s)
+[08:14:13]   L 4: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.9224 agree=1.00 (22s)
+[08:14:17]   L 5: pred_flip=0.042 obs_flip=0.062 harmful=0.042 ex-corr=0.7582 agree=0.94 (26s)
+[08:14:20]   L 6: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.7251 agree=1.00 (29s)
+[08:14:23]   L 7: pred_flip=0.042 obs_flip=0.062 harmful=0.000 ex-corr=0.8745 agree=0.98 (33s)
+[08:14:26]   L 8: pred_flip=0.021 obs_flip=0.042 harmful=0.000 ex-corr=0.7321 agree=0.98 (35s)
+[08:14:29]   L 9: pred_flip=0.042 obs_flip=0.021 harmful=0.021 ex-corr=0.8790 agree=0.98 (38s)
+[08:14:30]   L10: pred_flip=0.000 obs_flip=0.042 harmful=0.021 ex-corr=0.7800 agree=0.96 (40s)
+[08:14:32]   L11: pred_flip=0.000 obs_flip=0.021 harmful=0.000 ex-corr=0.0024 agree=0.98 (41s)
+[08:14:32] site-level: {'pred_flip_rate': {'vs_harmful': {'rho': 0.33592964345041854, 'p': 0.28571831232549383}, 'vs_anyflip': {'rho': 0.5760184328847832, 'p': 0.049982607604873344}}, 'pred_mean_margin_loss': {'vs_harmful': {'rho': -0.05984368987312576, 'p': 0.8534293818999871}, 'vs_anyflip': {'rho': 0.27034829779464153, 'p': 0.39540635333881907}}, 'V_final_proxy': {'vs_harmful': {'rho': -0.08746385442995304, 'p': 0.7869373182604892}, 'vs_anyflip': {'rho': -0.3905030968144822, 'p': 0.20946391178081056}}, 'example_level_first_order_validity': {'mean_pearson': 0.788496305958898, 'n_sites': 12}, 'total_grad_seconds': 35.74701380729675}
