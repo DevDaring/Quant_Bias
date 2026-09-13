@@ -90,3 +90,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_03:48:19] --- Stage 3: B1 primary panel, Mistral-7B ---
 [2026-09-13_03:48:19] >>> smoke/b1/M3/--granularity/layer
 [2026-09-13_03:49:17] <<< smoke/b1/M3/--granularity/layer ok in 58s
+[2026-09-13_03:49:23] >>> smoke/b1/M3/--granularity/component
+[2026-09-13_03:50:21] <<< smoke/b1/M3/--granularity/component ok in 58s
