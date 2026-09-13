@@ -1,0 +1,42 @@
+[03:39:52] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
+[transformers] Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in GPT2LMHeadModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[transformers] Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in GPT2Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 16029.88it/s]
+[03:39:55]   attention: flash_attention_2
+[03:39:55]   flash_attention_2 failed a forward pass (StopIteration); reloading with sdpa
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 7092.26it/s]
+Generating test split:   0%|          | 0/58492 [00:00<?, ? examples/s]Generating test split:  42%|████▏     | 24278/58492 [00:00<00:00, 130605.99 examples/s]Generating test split:  82%|████████▏ | 47777/58492 [00:00<00:00, 134810.63 examples/s]Generating test split: 100%|██████████| 58492/58492 [00:00<00:00, 129713.29 examples/s]
+[03:40:10] BBQ: 22 examples, 11 template clusters
+Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 23880.27 examples/s]
+Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 32171.39 examples/s]
+Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 30116.31 examples/s]
+Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 31282.50 examples/s]
+Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 32293.36 examples/s]
+Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 32071.37 examples/s]
+Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 32311.58 examples/s]
+Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 33179.74 examples/s]
+[03:40:48] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+Generating train split:   0%|          | 0/9450 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 9450/9450 [00:00<00:00, 119169.26 examples/s]
+[03:40:53] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (2234 > 1024). Running this sequence through the model will result in indexing errors
+[03:41:04] calibration[generic] seed=0: 4x128 tokens, hash=e65a6336653e1baa
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 143, in <module>
+    main()
+  File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 139, in main
+    a.fn(a)
+  File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 83, in cmd_b1
+    res = B.run_b1(a, q, fin, calib, sources=tuple(b["sources"]) if not args.quick else ("rtn4", "wanda50"),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Quant_Bias/mixed_study/mixed_study/matched_residuals.py", line 109, in run_b1
+    srcs = R.make_sources(residual, n_random, seed0=hash(key) % 10_000, mask=mask)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Quant_Bias/mixed_study/mixed_study/residuals.py", line 127, in make_sources
+    src[f"random_{k}"] = norm_matched_random(residual, seed0 + k, mask)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Quant_Bias/mixed_study/mixed_study/residuals.py", line 119, in norm_matched_random
+    out = out * mask.unsqueeze(-1).to(out.dtype)
+          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!

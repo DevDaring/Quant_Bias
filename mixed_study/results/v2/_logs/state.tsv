@@ -1,3 +1,4 @@
 smoke/legacy/M1	ok	36s
 smoke/legacy/M3	ok	100s
 smoke/legacy/M5	ok	125s
+smoke/b1/M1/--granularity/layer	FAILED	76s

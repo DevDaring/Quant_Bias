@@ -7,3 +7,31 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_03:37:31] <<< smoke/legacy/M3 ok in 100s
 [2026-09-13_03:37:37] >>> smoke/legacy/M5
 [2026-09-13_03:39:42] <<< smoke/legacy/M5 ok in 125s
+[2026-09-13_03:39:49] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_03:39:49] >>> smoke/b1/M1/--granularity/layer
+[2026-09-13_03:41:05] <<< smoke/b1/M1/--granularity/layer FAILED in 76s
+    [03:40:48] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+    Generating train split:   0%|          | 0/9450 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 9450/9450 [00:00<00:00, 119169.26 examples/s]
+    [03:40:53] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+    [transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (2234 > 1024). Running this sequence through the model will result in indexing errors
+    [03:41:04] calibration[generic] seed=0: 4x128 tokens, hash=e65a6336653e1baa
+    Traceback (most recent call last):
+      File "<frozen runpy>", line 198, in _run_module_as_main
+      File "<frozen runpy>", line 88, in _run_code
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 143, in <module>
+        main()
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 139, in main
+        a.fn(a)
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 83, in cmd_b1
+        res = B.run_b1(a, q, fin, calib, sources=tuple(b["sources"]) if not args.quick else ("rtn4", "wanda50"),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/matched_residuals.py", line 109, in run_b1
+        srcs = R.make_sources(residual, n_random, seed0=hash(key) % 10_000, mask=mask)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/residuals.py", line 127, in make_sources
+        src[f"random_{k}"] = norm_matched_random(residual, seed0 + k, mask)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/residuals.py", line 119, in norm_matched_random
+        out = out * mask.unsqueeze(-1).to(out.dtype)
+              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
