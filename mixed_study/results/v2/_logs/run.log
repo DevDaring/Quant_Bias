@@ -443,3 +443,4 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_09:17:23] skip full/restore/M3/--k/16/--n-examples/8000 (already ok)
 [2026-09-13_09:17:23] skip full/restore/M5/--k/8/--n-examples/8000 (already ok)
 [2026-09-13_09:17:23] >>> full/restore/M5/--k/16/--n-examples/8000
+[2026-09-13_09:31:45] <<< full/restore/M5/--k/16/--n-examples/8000 ok in 862s
