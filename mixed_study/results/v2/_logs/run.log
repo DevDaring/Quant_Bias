@@ -403,3 +403,7 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_08:23:53]   pushed full/dladder/M3/--n-examples/48
 [2026-09-13_08:23:53] >>> full/dladder/M5/--n-examples/48
 [2026-09-13_08:32:12] <<< full/dladder/M5/--n-examples/48 ok in 499s
+[2026-09-13_08:32:19]   pushed full/dladder/M5/--n-examples/48
+[2026-09-13_08:32:19] --- Stage 7: restoration sized by power analysis: full final split, two intervention sizes (§8) ---
+[2026-09-13_08:32:19] >>> full/restore/M3/--k/8/--n-examples/8000
+[2026-09-13_08:45:13] <<< full/restore/M3/--k/8/--n-examples/8000 ok in 774s

@@ -36,3 +36,4 @@ smoke/confirm/M5	ok	82s
 full/dladder/M1/--n-examples/48	ok	92s
 full/dladder/M3/--n-examples/48	ok	384s
 full/dladder/M5/--n-examples/48	ok	499s
+full/restore/M3/--k/8/--n-examples/8000	ok	774s
