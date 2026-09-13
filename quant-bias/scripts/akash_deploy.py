@@ -24,7 +24,7 @@ STATE = pathlib.Path(__file__).resolve().parent / "state_akash.json"
 
 
 def key() -> str:
-    k = os.environ.get("Bharat_AKASH_API_KEY") or os.environ.get("AKASH_API_KEY")
+    k = os.environ.get("AKASH_API_KEY_OVERRIDE") or os.environ.get("Bharat_AKASH_API_KEY") or os.environ.get("AKASH_API_KEY")
     if not k:
         sys.exit("Bharat_AKASH_API_KEY not in environment")
     return k
@@ -50,7 +50,7 @@ def call(method: str, path: str, body: dict | None = None, timeout: int = 120):
 def sdl(pubkey: str, gpu: str, ram: str, cpu: int, mem: str, disk: str, price: int,
         image: str = "pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime",
         deploy_key: str = "", hf_token: str = "", autorun: str = "",
-        persistent: str = "") -> str:
+        persistent: str = "", autorun_script: str = "") -> str:
     """Build the SDL. The container is self-healing.
 
     Akash containers are ephemeral: a restart wipes the filesystem entirely.
@@ -84,7 +84,7 @@ def sdl(pubkey: str, gpu: str, ram: str, cpu: int, mem: str, disk: str, price: i
         "    git clone -q git@github.com:DevDaring/Quant_Bias.git Quant_Bias 2>/dev/null || (cd Quant_Bias && git pull -q --rebase origin main)",
         "    export HF_TOKEN=\"$HF_TOKEN\" HF_HOME=/workspace/hf_cache WORK=/workspace ATTN=flash_attention_2 TOKENIZERS_PARALLELISM=false",
         "    bash /workspace/Quant_Bias/quant-bias/scripts/vm_bootstrap.sh >> /workspace/bootstrap.log 2>&1",
-        "    bash /workspace/Quant_Bias/quant-bias/scripts/vm_run.sh \"$AUTORUN\" >> /workspace/run.log 2>&1",
+        "    bash \"${AUTORUN_SCRIPT:-/workspace/Quant_Bias/quant-bias/scripts/vm_run.sh}\" \"$AUTORUN\" >> /workspace/run.log 2>&1",
         "  ) &",
         "fi",
         "sleep infinity",
@@ -96,6 +96,8 @@ def sdl(pubkey: str, gpu: str, ram: str, cpu: int, mem: str, disk: str, price: i
         env.append(f"HF_TOKEN={hf_token}")
     if autorun:
         env.append(f"AUTORUN={autorun}")
+    if autorun_script:
+        env.append(f"AUTORUN_SCRIPT={autorun_script}")
     doc = {
         "version": "2.0",
         "services": {
@@ -183,7 +185,7 @@ def cmd_create(a):
     dk = pathlib.Path(a.deploy_key).expanduser().read_text().strip() if a.deploy_key else ""
     manifest_sdl = sdl(pub, a.gpu, a.ram, a.cpu, a.mem, a.disk, a.price, a.image,
                        dk, os.environ.get("HUGGINGFACE_TOKEN", ""), a.autorun,
-                       a.persistent)
+                       a.persistent, a.autorun_script)
     print(f"creating deployment: gpu={a.gpu} ram={a.ram} disk={a.disk} limit={a.hours}h")
     code, d = call("POST", "/v1/deployments",
                    {"data": {"sdl": manifest_sdl, "runtimeLimitHours": a.hours}})
@@ -298,6 +300,7 @@ if __name__ == "__main__":
     c.add_argument("--deploy-key", default="", help="path to the repo-scoped private key")
     c.add_argument("--autorun", default="", help="smoke|full: self-heal and resume after a restart")
     c.add_argument("--persistent", default="", help="size of a persistent /workspace volume, e.g. 200Gi")
+    c.add_argument("--autorun-script", default="", help="script the supervisor runs (default: quant-bias vm_run.sh)")
     c.add_argument("--bid-wait", type=int, default=180)
     c.add_argument("--ready-wait", type=int, default=420)
     c.add_argument("--max-tries", type=int, default=4, help="how many bids to try before giving up")

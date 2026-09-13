@@ -101,4 +101,6 @@ print('  hf user:', HfApi().whoami(token=os.environ['HF_TOKEN'])['name'])"
 log "=== offline tests (no downloads) ==="
 $PY -m pytest tests -q -m "not network" 2>&1 | tail -3
 echo "$PY" > /workspace/PYTHON_BIN
+log "=== mixed_study offline tests ==="
+( cd /workspace/Quant_Bias/mixed_study && $PY -m pytest tests -q 2>&1 | tail -3 )
 log "bootstrap complete (python: $PY)"
