@@ -350,3 +350,4 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_08:08:58] <<< smoke/confirm/M3 ok in 81s
 [2026-09-13_08:09:04] >>> smoke/confirm/M5
 [2026-09-13_08:10:26] <<< smoke/confirm/M5 ok in 82s
+[2026-09-13_08:10:32] ===== COMPLETE: 22 ok, 0 failed =====
