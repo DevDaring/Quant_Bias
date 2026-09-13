@@ -1,5 +1,6 @@
 {
   "convention": "rho[i] = v[i+1]/v[i]; v[i] = relative energy at block i OUTPUT",
+  "dtype": "fp32",
   "frac_saved_within_3sd_of_fresh": 1.0,
   "fresh_rho": [
     [
@@ -53,8 +54,8 @@
   "n_fresh": 11,
   "n_saved": 11,
   "provenance": {
-    "codes_git": "d8a696f",
-    "generated": "2026-09-13T03:35:43",
+    "codes_git": "5d494ef",
+    "generated": "2026-09-13T03:59:12",
     "li_results": "/workspace/Quant_Bias/quant-bias/provenance/living_inference_results",
     "living_inference_git": "unknown",
     "model": "openai-community/gpt2",

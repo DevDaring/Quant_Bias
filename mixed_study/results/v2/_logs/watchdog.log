@@ -1,1 +1,10 @@
 [2026-09-13_03:58:58] watchdog started (interval 3600s, pid 17949)
+[2026-09-13_03:59:04] OK | procs=1/0 | gpu=[0 %, 0 MiB] | log_age=0s | validator=WARN | failed=0
+0 | push=pushed | complete=no | 
+    [03:58:58] VALIDATE_V2 WARN: 13 ok, 3 warn, 0 fail, 0 FAILED-in-state
+    [03:58:58]   WARN legacy/gpt2_small: dtype not recorded
+    [03:58:58]   WARN legacy/mistral_7b_v0_1: dtype not recorded
+    [03:58:58]   WARN legacy/qwen3_8b: dtype not recorded
+    [03:58:58]   INFO legacy/mistral_7b_v0_1: NOT REPRODUCED -- do not use for transfer (a finding, not an error)
+    [03:58:58]   INFO legacy/qwen3_8b: NOT REPRODUCED -- do not use for transfer (a finding, not an error)
+    [03:58:58]   INFO legacy/qwen3_8b-fp16: NOT REPRODUCED -- do not use for transfer (a finding, not an error)
