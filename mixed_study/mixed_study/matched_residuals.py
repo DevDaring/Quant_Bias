@@ -125,11 +125,11 @@ def run_b1(adapter: ModelAdapter, quantizer: Quantizer, examples, calib_batches,
                 f"cos(rand,actual)={sum((r.cos_final_vs_actual or 0) for r in rnd)/max(1,len(rnd)):+.2f} "
                 f"flips={flips} ({time.time()-t0:.0f}s)")
             if out_dir:
-                write_json(out_dir / "b1_cells.json", results)
+                write_json(out_dir / f"b1_cells_{granularity}.json", results)
     results["provenance"] = provenance()
     results["summary"] = summarize(results)
     if out_dir:
-        write_json(out_dir / "b1_cells.json", results)
+        write_json(out_dir / f"b1_cells_{granularity}.json", results)
     return results
 
 

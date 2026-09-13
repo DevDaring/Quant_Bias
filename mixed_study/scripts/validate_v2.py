@@ -51,8 +51,8 @@ def check_legacy(sub, out):
     out["ok"].append(f"legacy/{sub}")
 
 
-def check_b1(sub, out, k_layers=8):
-    d, err = load(V2 / "b1" / sub / "b1_cells.json")
+def check_b1(sub, out, k_layers=8, granularity="layer"):
+    d, err = load(V2 / "b1" / sub / f"b1_cells_{granularity}.json")
     if err: out["fail"].append(f"b1/{sub}: {err}"); return
     cells = d.get("cells", {})
     if not cells: out["fail"].append(f"b1/{sub}: no cells"); return
@@ -113,6 +113,8 @@ def main():
         parts = key.split("/")            # mode/stage/model[/--flag/value...]
         if len(parts) < 3: continue
         mode, stage, model = parts[0], parts[1], parts[2]
+        if mode == "smoke":
+            continue   # two-sample wiring checks; not results
         tag = TAGS.get(model, model)
         extras = parts[3:]
         if stage == "legacy":
@@ -121,8 +123,7 @@ def main():
         elif stage == "b1":
             gran = extras[extras.index("--granularity") + 1] if "--granularity" in extras else "layer"
             sub = tag + ("-quick" if mode == "smoke" else "")
-            # b1 writes one file per (model, quick); granularity overwrites -> check exists and granularity recorded
-            check_b1(sub, out)
+            check_b1(sub, out, granularity=gran)
         elif stage == "restore":
             check_restore(tag + ("-quick" if mode == "smoke" else ""), out)
     verdict = "FAIL" if out["fail"] else ("WARN" if out["warn"] else "PASS")
