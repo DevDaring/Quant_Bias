@@ -126,8 +126,8 @@
   "n_fresh": 35,
   "n_saved": 35,
   "provenance": {
-    "codes_git": "1906f2e",
-    "generated": "2026-09-13T03:43:56",
+    "codes_git": "f563946",
+    "generated": "2026-09-13T04:03:31",
     "li_results": "/workspace/Quant_Bias/quant-bias/provenance/living_inference_results",
     "living_inference_git": "unknown",
     "model": "Qwen/Qwen3-8B",

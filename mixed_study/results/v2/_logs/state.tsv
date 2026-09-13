@@ -15,3 +15,4 @@ full/legacy/M1	ok	14s
 full/legacy/M3	ok	16s
 full/legacy/M5	ok	19s
 full/legacy/M3/--dtype/fp16	ok	30s
+full/legacy/M5/--dtype/fp16	ok	31s
