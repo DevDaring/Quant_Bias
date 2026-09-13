@@ -1,15 +1,18 @@
-[03:54:12] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 16799.62it/s]
-[03:54:16]   attention: flash_attention_2
-[03:54:16]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5130.36it/s]
-[03:54:31] BBQ: 22 examples, 11 template clusters
-[03:54:48] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[03:54:51] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[03:55:01] calibration[generic] seed=0: 4x128 tokens, hash=e70c52deb066daab
-[03:55:18]   uniform_start        bytes=5816MiB restored=0 harmful/dc=0.0
-[03:55:21]   predicted            bytes=5958MiB restored=2 harmful/dc=0.0
-[03:55:24]   utility_matched      bytes=5958MiB restored=2 harmful/dc=0.0
-[03:55:27]   random_matched_0     bytes=5958MiB restored=2 harmful/dc=0.0
-[03:55:31]   random_matched_1     bytes=5958MiB restored=2 harmful/dc=0.0
-[03:55:31] equal_cost_ok=True  summary={'predicted_harmful': 0.0, 'utility_matched_harmful': 0.0, 'random_matched_harmful_mean': 0.0, 'random_matched_harmful_min': 0.0, 'uniform_start_harmful': 0.0}
+[04:24:00] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 11527.65it/s]
+[04:24:04]   attention: flash_attention_2
+[04:24:04]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 6728.91it/s]
+[04:24:19] BBQ: 7868 examples, 343 template clusters
+[04:24:36] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[04:24:39] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[04:24:50] calibration[generic] seed=0: 32x512 tokens, hash=4db9af9e12e097ff
+[04:25:12]   uniform_start        bytes=5816MiB restored=0 harmful/dc=0.0
+[04:25:17]   predicted            bytes=6035MiB restored=4 harmful/dc=0.0
+[04:25:23]   utility_matched      bytes=6035MiB restored=4 harmful/dc=0.0
+[04:25:30]   random_matched_0     bytes=6035MiB restored=4 harmful/dc=0.0
+[04:25:38]   random_matched_1     bytes=6035MiB restored=4 harmful/dc=0.0
+[04:25:44]   random_matched_2     bytes=6035MiB restored=4 harmful/dc=0.0
+[04:25:50]   random_matched_3     bytes=6035MiB restored=4 harmful/dc=0.0
+[04:25:56]   random_matched_4     bytes=6035MiB restored=4 harmful/dc=0.0
+[04:25:56] equal_cost_ok=True  summary={'predicted_harmful': 0.0, 'utility_matched_harmful': 0.0, 'random_matched_harmful_mean': 0.0, 'random_matched_harmful_min': 0.0, 'uniform_start_harmful': 0.0}

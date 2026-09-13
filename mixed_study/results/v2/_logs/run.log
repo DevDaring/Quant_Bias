@@ -143,3 +143,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_04:22:01] --- Stage 5: equal-cost selective restoration (§5.7) ---
 [2026-09-13_04:22:01] >>> full/restore/M3
 [2026-09-13_04:23:51] <<< full/restore/M3 ok in 110s
+[2026-09-13_04:23:57] >>> full/restore/M5
+[2026-09-13_04:25:57] <<< full/restore/M5 ok in 120s
