@@ -36,3 +36,7 @@ quant-bias/results/**/*-quick/
 living-inference/
 living-inference
 .venv
+
+# Documentation stays local; only the root README is published
+*.md
+!/README.md
