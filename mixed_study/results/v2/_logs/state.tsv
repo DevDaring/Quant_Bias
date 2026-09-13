@@ -28,3 +28,4 @@ smoke/dladder/M1/--n-examples/48	ok	80s
 smoke/dladder/M3/--n-examples/48	ok	138s
 smoke/dladder/M5/--n-examples/48	ok	165s
 smoke/restore/M3/--k/8/--n-examples/8000	ok	83s
+smoke/restore/M3/--k/16/--n-examples/8000	ok	83s

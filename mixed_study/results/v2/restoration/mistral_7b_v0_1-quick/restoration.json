@@ -584,8 +584,8 @@
   "k": 2,
   "n_random": 2,
   "provenance": {
-    "codes_git": "222925f",
-    "generated": "2026-09-13T08:02:59",
+    "codes_git": "873be47",
+    "generated": "2026-09-13T08:04:28",
     "li_results": "/workspace/Quant_Bias/quant-bias/provenance/living_inference_results",
     "living_inference_git": "unknown",
     "note": "source result files are read only; this is a corrected reanalysis",
