@@ -1,14 +1,46 @@
-[07:58:48] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
-Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:38<02:33, 38.35s/it]Fetching 5 files:  40%|████      | 2/5 [01:13<01:48, 36.20s/it]Fetching 5 files:  60%|██████    | 3/5 [01:29<00:54, 27.03s/it]Fetching 5 files:  80%|████████  | 4/5 [01:34<00:18, 18.49s/it]Fetching 5 files: 100%|██████████| 5/5 [01:34<00:00, 18.92s/it]
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8708.99it/s]
-[08:00:33]   attention: flash_attention_2
-[08:00:33]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7197.90it/s]
-[08:00:48] BBQ: 22 examples, 11 template clusters
-[08:01:06] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[08:01:08] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[08:01:19] calibration[generic] seed=0: 4x128 tokens, hash=e70c52deb066daab
-[08:01:23]   L 0: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.8763 agree=1.00 (4s)
-[08:01:27]   L18: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.3507 agree=1.00 (8s)
-[08:01:29]   L35: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.3693 agree=1.00 (10s)
-[08:01:29] site-level: {'note': 'too few sites'}
+[08:23:57] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 11674.33it/s]
+[08:24:01]   attention: flash_attention_2
+[08:24:01]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7746.23it/s]
+[08:24:16] BBQ: 7868 examples, 343 template clusters
+[08:24:33] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[08:24:36] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[08:24:47] calibration[generic] seed=0: 32x512 tokens, hash=4db9af9e12e097ff
+[08:25:01]   L 0: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.7930 agree=1.00 (12s)
+[08:25:13]   L 1: pred_flip=0.021 obs_flip=0.000 harmful=0.000 ex-corr=0.8225 agree=0.98 (25s)
+[08:25:26]   L 2: pred_flip=0.021 obs_flip=0.000 harmful=0.000 ex-corr=0.8657 agree=0.98 (38s)
+[08:25:39]   L 3: pred_flip=0.042 obs_flip=0.042 harmful=0.000 ex-corr=0.8103 agree=1.00 (51s)
+[08:25:52]   L 4: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.7217 agree=1.00 (64s)
+[08:26:05]   L 5: pred_flip=0.021 obs_flip=0.000 harmful=0.000 ex-corr=0.8892 agree=0.98 (77s)
+[08:26:19]   L 6: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.8331 agree=1.00 (90s)
+[08:26:31]   L 7: pred_flip=0.021 obs_flip=0.000 harmful=0.000 ex-corr=0.7773 agree=0.98 (103s)
+[08:26:44]   L 8: pred_flip=0.021 obs_flip=0.000 harmful=0.000 ex-corr=0.8781 agree=0.98 (115s)
+[08:26:57]   L 9: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.9541 agree=1.00 (128s)
+[08:27:10]   L10: pred_flip=0.000 obs_flip=0.021 harmful=0.000 ex-corr=0.7759 agree=0.98 (141s)
+[08:27:22]   L11: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.8324 agree=1.00 (154s)
+[08:27:35]   L12: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.8302 agree=1.00 (166s)
+[08:27:47]   L13: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.8237 agree=1.00 (179s)
+[08:28:00]   L14: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.7519 agree=1.00 (192s)
+[08:28:13]   L15: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.7658 agree=1.00 (205s)
+[08:28:26]   L16: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.8584 agree=1.00 (217s)
+[08:28:39]   L17: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.9475 agree=1.00 (231s)
+[08:28:53]   L18: pred_flip=0.000 obs_flip=0.021 harmful=0.000 ex-corr=0.4894 agree=0.98 (244s)
+[08:29:05]   L19: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.9374 agree=1.00 (257s)
+[08:29:18]   L20: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.8319 agree=1.00 (269s)
+[08:29:30]   L21: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.8603 agree=1.00 (281s)
+[08:29:42]   L22: pred_flip=0.000 obs_flip=0.021 harmful=0.000 ex-corr=0.8703 agree=0.98 (293s)
+[08:29:54]   L23: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.8363 agree=1.00 (306s)
+[08:30:07]   L24: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.6672 agree=1.00 (318s)
+[08:30:19]   L25: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.7625 agree=1.00 (331s)
+[08:30:31]   L26: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.4602 agree=1.00 (343s)
+[08:30:44]   L27: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.4893 agree=1.00 (355s)
+[08:30:56]   L28: pred_flip=0.000 obs_flip=0.042 harmful=0.000 ex-corr=0.4522 agree=0.96 (367s)
+[08:31:07]   L29: pred_flip=0.021 obs_flip=0.000 harmful=0.000 ex-corr=0.2396 agree=0.98 (378s)
+[08:31:19]   L30: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.4325 agree=1.00 (390s)
+[08:31:30]   L31: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.4275 agree=1.00 (401s)
+[08:31:40]   L32: pred_flip=0.000 obs_flip=0.021 harmful=0.000 ex-corr=0.3872 agree=0.98 (411s)
+[08:31:52]   L33: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.5093 agree=1.00 (423s)
+[08:32:02]   L34: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.3096 agree=1.00 (433s)
+[08:32:11]   L35: pred_flip=0.000 obs_flip=0.042 harmful=0.000 ex-corr=-0.009 agree=0.96 (442s)
+[08:32:11] site-level: {'pred_flip_rate': {'vs_harmful': None, 'vs_anyflip': {'rho': 0.2767211752344398, 'p': 0.10229792367500075}}, 'pred_mean_margin_loss': {'vs_harmful': None, 'vs_anyflip': {'rho': 0.2881751309912589, 'p': 0.08830643601154316}}, 'V_final_proxy': {'vs_harmful': None, 'vs_anyflip': {'rho': 0.08871601291454677, 'p': 0.6068836683324537}}, 'example_level_first_order_validity': {'mean_pearson': 0.6912788154538778, 'n_sites': 36}, 'total_grad_seconds': 329.11393547058105}
