@@ -128,3 +128,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_04:03:39] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
 [2026-09-13_04:03:39] >>> full/b1/M1/--granularity/layer
 [2026-09-13_04:04:58] <<< full/b1/M1/--granularity/layer ok in 79s
+[2026-09-13_04:05:05] >>> full/b1/M1/--granularity/component
+[2026-09-13_04:06:46] <<< full/b1/M1/--granularity/component ok in 101s

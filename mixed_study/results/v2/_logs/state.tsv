@@ -17,3 +17,4 @@ full/legacy/M5	ok	19s
 full/legacy/M3/--dtype/fp16	ok	30s
 full/legacy/M5/--dtype/fp16	ok	31s
 full/b1/M1/--granularity/layer	ok	79s
+full/b1/M1/--granularity/component	ok	101s

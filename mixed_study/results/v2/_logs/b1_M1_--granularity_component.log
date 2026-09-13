@@ -1,31 +1,93 @@
-[03:47:24] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
+[04:05:08] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
 [transformers] Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in GPT2LMHeadModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2", dtype=torch.float16)`
 [transformers] Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in GPT2Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 13092.82it/s]
-[03:47:28]   attention: flash_attention_2
-[03:47:28]   flash_attention_2 failed a forward pass (StopIteration); reloading with sdpa
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 8593.58it/s]
-[03:47:39] BBQ: 22 examples, 11 template clusters
-[03:47:56] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[03:47:59] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (2234 > 1024). Running this sequence through the model will result in indexing errors
-[03:48:09] calibration[generic] seed=0: 4x128 tokens, hash=e65a6336653e1baa
-[03:48:10]   L0.attn.c_attn|rtn4: local_rel=3.28e-02 amp(actual)=2.44 amp(random)=1.76 cos(rand,actual)=+0.05 flips=0 (0s)
-[03:48:10] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
-[03:48:10]   L0.attn.c_attn|wanda50: local_rel=7.88e-02 amp(actual)=2.85 amp(random)=1.91 cos(rand,actual)=+0.02 flips=1 (0s)
-[03:48:10]   L0.mlp.c_fc|rtn4: local_rel=4.98e-02 amp(actual)=2.18 amp(random)=1.90 cos(rand,actual)=-0.01 flips=1 (1s)
-[03:48:10] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
-[03:48:10]   L0.mlp.c_fc|wanda50: local_rel=7.94e-02 amp(actual)=2.77 amp(random)=2.12 cos(rand,actual)=-0.00 flips=1 (1s)
-[03:48:11]   L6.attn.c_attn|rtn4: local_rel=4.29e-02 amp(actual)=2.40 amp(random)=2.00 cos(rand,actual)=+0.00 flips=2 (1s)
-[03:48:11] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
-[03:48:11]   L6.attn.c_attn|wanda50: local_rel=6.06e-02 amp(actual)=3.24 amp(random)=1.94 cos(rand,actual)=+0.02 flips=3 (1s)
-[03:48:11]   L6.mlp.c_fc|rtn4: local_rel=4.38e-02 amp(actual)=2.49 amp(random)=1.99 cos(rand,actual)=+0.02 flips=1 (1s)
-[03:48:11] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
-[03:48:11]   L6.mlp.c_fc|wanda50: local_rel=9.18e-02 amp(actual)=2.48 amp(random)=2.00 cos(rand,actual)=+0.03 flips=3 (1s)
-[03:48:11]   L11.attn.c_attn|rtn4: local_rel=2.80e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=2 (1s)
-[03:48:11] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
-[03:48:11]   L11.attn.c_attn|wanda50: local_rel=4.36e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=-0.00 flips=2 (1s)
-[03:48:11]   L11.mlp.c_fc|rtn4: local_rel=1.76e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=1 (2s)
-[03:48:11] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
-[03:48:12]   L11.mlp.c_fc|wanda50: local_rel=5.13e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=1 (2s)
-[03:48:12] summary: {'rtn4': {'n_sites': 6, 'amp_actual_mean': 1.917, 'amp_random_mean': 1.606, 'amp_reversed_mean': 1.985, 'actual_over_random_ratio': 1.165, 'cos_random_vs_actual_final': 0.012, 'logit_linf_actual_over_random': 1.738, 'direction_matters': False}, 'wanda50': {'n_sites': 6, 'amp_actual_mean': 2.223, 'amp_random_mean': 1.662, 'amp_reversed_mean': 2.186, 'actual_over_random_ratio': 1.284, 'cos_random_vs_actual_final': 0.009, 'logit_linf_actual_over_random': 1.72, 'direction_matters': True}}
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15761.25it/s]
+[04:05:12]   attention: flash_attention_2
+[04:05:12]   flash_attention_2 failed a forward pass (StopIteration); reloading with sdpa
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 6192.15it/s]
+[04:05:23] BBQ: 7868 examples, 343 template clusters
+[04:05:41] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[04:05:44] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1232 > 1024). Running this sequence through the model will result in indexing errors
+[04:05:54] calibration[generic] seed=0: 32x512 tokens, hash=8514d6de1041bc7d
+[04:05:56]   L0.attn.c_attn|rtn4: local_rel=3.29e-02 amp(actual)=2.35 amp(random)=1.77 cos(rand,actual)=+0.01 flips=3 (1s)
+[04:05:57]   L0.attn.c_attn|rtn8: local_rel=1.79e-03 amp(actual)=2.73 amp(random)=1.80 cos(rand,actual)=+0.05 flips=0 (2s)
+[04:05:58]   L0.attn.c_attn|gptq4: local_rel=1.90e-02 amp(actual)=3.42 amp(random)=2.17 cos(rand,actual)=-0.01 flips=1 (3s)
+[04:05:58] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
+[04:05:59]   L0.attn.c_attn|wanda50: local_rel=8.31e-02 amp(actual)=2.62 amp(random)=1.86 cos(rand,actual)=+0.02 flips=6 (4s)
+[04:05:59]   L0.mlp.c_fc|rtn4: local_rel=4.89e-02 amp(actual)=2.16 amp(random)=1.89 cos(rand,actual)=+0.00 flips=2 (4s)
+[04:06:00]   L0.mlp.c_fc|rtn8: local_rel=2.96e-03 amp(actual)=1.85 amp(random)=1.86 cos(rand,actual)=+0.00 flips=0 (5s)
+[04:06:01]   L0.mlp.c_fc|gptq4: local_rel=2.79e-02 amp(actual)=2.54 amp(random)=2.19 cos(rand,actual)=-0.01 flips=2 (6s)
+[04:06:01] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
+[04:06:02]   L0.mlp.c_fc|wanda50: local_rel=7.99e-02 amp(actual)=2.59 amp(random)=2.11 cos(rand,actual)=-0.00 flips=2 (7s)
+[04:06:02]   L2.attn.c_attn|rtn4: local_rel=4.71e-02 amp(actual)=2.59 amp(random)=2.26 cos(rand,actual)=+0.04 flips=2 (7s)
+[04:06:03]   L2.attn.c_attn|rtn8: local_rel=3.50e-03 amp(actual)=2.64 amp(random)=2.25 cos(rand,actual)=-0.01 flips=0 (8s)
+[04:06:04]   L2.attn.c_attn|gptq4: local_rel=2.66e-02 amp(actual)=2.93 amp(random)=2.50 cos(rand,actual)=+0.03 flips=1 (9s)
+[04:06:04] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
+[04:06:05]   L2.attn.c_attn|wanda50: local_rel=4.98e-02 amp(actual)=2.44 amp(random)=2.32 cos(rand,actual)=-0.00 flips=4 (10s)
+[04:06:06]   L2.mlp.c_fc|rtn4: local_rel=5.43e-02 amp(actual)=2.67 amp(random)=3.37 cos(rand,actual)=-0.00 flips=3 (10s)
+[04:06:06]   L2.mlp.c_fc|rtn8: local_rel=3.33e-03 amp(actual)=2.85 amp(random)=2.70 cos(rand,actual)=+0.01 flips=0 (11s)
+[04:06:07]   L2.mlp.c_fc|gptq4: local_rel=3.14e-02 amp(actual)=2.80 amp(random)=2.84 cos(rand,actual)=-0.03 flips=4 (12s)
+[04:06:07] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
+[04:06:08]   L2.mlp.c_fc|wanda50: local_rel=9.66e-02 amp(actual)=2.43 amp(random)=2.56 cos(rand,actual)=+0.02 flips=8 (13s)
+[04:06:09]   L3.attn.c_attn|rtn4: local_rel=5.41e-02 amp(actual)=2.51 amp(random)=2.14 cos(rand,actual)=-0.01 flips=4 (14s)
+[04:06:09]   L3.attn.c_attn|rtn8: local_rel=3.64e-03 amp(actual)=2.64 amp(random)=2.06 cos(rand,actual)=+0.01 flips=0 (14s)
+[04:06:10]   L3.attn.c_attn|gptq4: local_rel=2.83e-02 amp(actual)=3.62 amp(random)=2.24 cos(rand,actual)=-0.02 flips=2 (15s)
+[04:06:10] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
+[04:06:11]   L3.attn.c_attn|wanda50: local_rel=6.64e-02 amp(actual)=2.56 amp(random)=2.27 cos(rand,actual)=-0.01 flips=4 (16s)
+[04:06:12]   L3.mlp.c_fc|rtn4: local_rel=4.49e-02 amp(actual)=2.32 amp(random)=2.20 cos(rand,actual)=+0.02 flips=4 (17s)
+[04:06:12]   L3.mlp.c_fc|rtn8: local_rel=2.66e-03 amp(actual)=2.40 amp(random)=2.21 cos(rand,actual)=-0.02 flips=0 (17s)
+[04:06:13]   L3.mlp.c_fc|gptq4: local_rel=2.94e-02 amp(actual)=2.72 amp(random)=2.37 cos(rand,actual)=-0.02 flips=2 (18s)
+[04:06:13] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
+[04:06:14]   L3.mlp.c_fc|wanda50: local_rel=9.60e-02 amp(actual)=2.11 amp(random)=2.18 cos(rand,actual)=+0.04 flips=12 (19s)
+[04:06:15]   L5.attn.c_attn|rtn4: local_rel=4.15e-02 amp(actual)=2.48 amp(random)=2.19 cos(rand,actual)=+0.01 flips=4 (20s)
+[04:06:15]   L5.attn.c_attn|rtn8: local_rel=2.94e-03 amp(actual)=2.81 amp(random)=2.03 cos(rand,actual)=+0.01 flips=0 (20s)
+[04:06:16]   L5.attn.c_attn|gptq4: local_rel=4.04e-02 amp(actual)=3.04 amp(random)=2.04 cos(rand,actual)=-0.00 flips=8 (21s)
+[04:06:16] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
+[04:06:17]   L5.attn.c_attn|wanda50: local_rel=6.24e-02 amp(actual)=2.38 amp(random)=2.06 cos(rand,actual)=+0.01 flips=5 (22s)
+[04:06:18]   L5.mlp.c_fc|rtn4: local_rel=4.41e-02 amp(actual)=2.30 amp(random)=2.14 cos(rand,actual)=+0.00 flips=7 (23s)
+[04:06:18]   L5.mlp.c_fc|rtn8: local_rel=2.62e-03 amp(actual)=2.13 amp(random)=2.05 cos(rand,actual)=-0.00 flips=0 (23s)
+[04:06:19]   L5.mlp.c_fc|gptq4: local_rel=2.96e-02 amp(actual)=2.50 amp(random)=2.12 cos(rand,actual)=+0.00 flips=2 (24s)
+[04:06:20] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
+[04:06:20]   L5.mlp.c_fc|wanda50: local_rel=9.40e-02 amp(actual)=2.05 amp(random)=2.01 cos(rand,actual)=+0.01 flips=2 (25s)
+[04:06:21]   L6.attn.c_attn|rtn4: local_rel=4.08e-02 amp(actual)=2.28 amp(random)=1.96 cos(rand,actual)=+0.01 flips=5 (26s)
+[04:06:21]   L6.attn.c_attn|rtn8: local_rel=2.74e-03 amp(actual)=2.28 amp(random)=1.93 cos(rand,actual)=-0.01 flips=0 (26s)
+[04:06:22]   L6.attn.c_attn|gptq4: local_rel=3.77e-02 amp(actual)=3.97 amp(random)=1.98 cos(rand,actual)=+0.01 flips=1 (27s)
+[04:06:23] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
+[04:06:23]   L6.attn.c_attn|wanda50: local_rel=5.70e-02 amp(actual)=2.63 amp(random)=1.92 cos(rand,actual)=+0.01 flips=8 (28s)
+[04:06:24]   L6.mlp.c_fc|rtn4: local_rel=4.29e-02 amp(actual)=2.33 amp(random)=1.95 cos(rand,actual)=+0.01 flips=3 (29s)
+[04:06:25]   L6.mlp.c_fc|rtn8: local_rel=2.58e-03 amp(actual)=2.26 amp(random)=1.95 cos(rand,actual)=-0.01 flips=0 (29s)
+[04:06:25]   L6.mlp.c_fc|gptq4: local_rel=3.06e-02 amp(actual)=2.26 amp(random)=1.97 cos(rand,actual)=+0.01 flips=2 (30s)
+[04:06:26] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
+[04:06:26]   L6.mlp.c_fc|wanda50: local_rel=8.92e-02 amp(actual)=2.20 amp(random)=1.95 cos(rand,actual)=+0.01 flips=8 (31s)
+[04:06:27]   L8.attn.c_attn|rtn4: local_rel=3.50e-02 amp(actual)=1.79 amp(random)=1.58 cos(rand,actual)=+0.01 flips=5 (32s)
+[04:06:28]   L8.attn.c_attn|rtn8: local_rel=2.29e-03 amp(actual)=1.85 amp(random)=1.57 cos(rand,actual)=-0.00 flips=0 (33s)
+[04:06:29]   L8.attn.c_attn|gptq4: local_rel=3.01e-02 amp(actual)=2.12 amp(random)=1.59 cos(rand,actual)=-0.01 flips=4 (33s)
+[04:06:29] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
+[04:06:29]   L8.attn.c_attn|wanda50: local_rel=5.62e-02 amp(actual)=1.90 amp(random)=1.59 cos(rand,actual)=+0.01 flips=9 (34s)
+[04:06:30]   L8.mlp.c_fc|rtn4: local_rel=3.73e-02 amp(actual)=2.02 amp(random)=1.61 cos(rand,actual)=-0.00 flips=2 (35s)
+[04:06:31]   L8.mlp.c_fc|rtn8: local_rel=2.17e-03 amp(actual)=2.07 amp(random)=1.60 cos(rand,actual)=+0.01 flips=0 (36s)
+[04:06:32]   L8.mlp.c_fc|gptq4: local_rel=2.76e-02 amp(actual)=1.84 amp(random)=1.64 cos(rand,actual)=-0.01 flips=7 (36s)
+[04:06:32] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
+[04:06:32]   L8.mlp.c_fc|wanda50: local_rel=7.94e-02 amp(actual)=1.80 amp(random)=1.62 cos(rand,actual)=+0.01 flips=3 (37s)
+[04:06:33]   L9.attn.c_attn|rtn4: local_rel=2.99e-02 amp(actual)=1.71 amp(random)=1.40 cos(rand,actual)=+0.00 flips=3 (38s)
+[04:06:34]   L9.attn.c_attn|rtn8: local_rel=1.88e-03 amp(actual)=1.63 amp(random)=1.40 cos(rand,actual)=-0.00 flips=0 (39s)
+[04:06:35]   L9.attn.c_attn|gptq4: local_rel=3.04e-02 amp(actual)=1.65 amp(random)=1.41 cos(rand,actual)=+0.01 flips=2 (40s)
+[04:06:35] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
+[04:06:35]   L9.attn.c_attn|wanda50: local_rel=4.57e-02 amp(actual)=1.51 amp(random)=1.40 cos(rand,actual)=+0.00 flips=8 (40s)
+[04:06:36]   L9.mlp.c_fc|rtn4: local_rel=3.41e-02 amp(actual)=1.43 amp(random)=1.42 cos(rand,actual)=-0.00 flips=1 (41s)
+[04:06:37]   L9.mlp.c_fc|rtn8: local_rel=2.12e-03 amp(actual)=1.44 amp(random)=1.41 cos(rand,actual)=-0.01 flips=0 (42s)
+[04:06:38]   L9.mlp.c_fc|gptq4: local_rel=2.45e-02 amp(actual)=1.62 amp(random)=1.42 cos(rand,actual)=+0.00 flips=2 (43s)
+[04:06:38] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
+[04:06:39]   L9.mlp.c_fc|wanda50: local_rel=7.26e-02 amp(actual)=1.60 amp(random)=1.41 cos(rand,actual)=-0.01 flips=4 (43s)
+[04:06:39]   L11.attn.c_attn|rtn4: local_rel=2.87e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=3 (44s)
+[04:06:40]   L11.attn.c_attn|rtn8: local_rel=1.60e-03 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=-0.00 flips=0 (45s)
+[04:06:41]   L11.attn.c_attn|gptq4: local_rel=1.77e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=2 (46s)
+[04:06:41] Wanda per-row 50%: achieved 0.5000 over 1769472 weights
+[04:06:42]   L11.attn.c_attn|wanda50: local_rel=4.46e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=8 (47s)
+[04:06:42]   L11.mlp.c_fc|rtn4: local_rel=1.73e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=-0.00 flips=2 (47s)
+[04:06:43]   L11.mlp.c_fc|rtn8: local_rel=1.12e-03 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=-0.00 flips=0 (48s)
+[04:06:44]   L11.mlp.c_fc|gptq4: local_rel=1.36e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=-0.00 flips=1 (49s)
+[04:06:44] Wanda per-row 50%: achieved 0.5000 over 2359296 weights
+[04:06:45]   L11.mlp.c_fc|wanda50: local_rel=5.04e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=-0.00 flips=5 (50s)
+[04:06:45] summary: {'rtn4': {'n_sites': 16, 'amp_actual_mean': 2.059, 'amp_random_mean': 1.868, 'amp_reversed_mean': 2.124, 'actual_over_random_ratio': 1.113, 'cos_random_vs_actual_final': 0.006, 'logit_linf_actual_over_random': 1.597, 'direction_matters': False}, 'rtn8': {'n_sites': 16, 'amp_actual_mean': 2.1, 'amp_random_mean': 1.801, 'amp_reversed_mean': 2.103, 'actual_over_random_ratio': 1.159, 'cos_random_vs_actual_final': 0.001, 'logit_linf_actual_over_random': 1.302, 'direction_matters': False}, 'gptq4': {'n_sites': 16, 'amp_actual_mean': 2.438, 'amp_random_mean': 1.905, 'amp_reversed_mean': 2.486, 'actual_over_random_ratio': 1.265, 'cos_random_vs_actual_final': -0.003, 'logit_linf_actual_over_random': 1.481, 'direction_matters': True}, 'wanda50': {'n_sites': 16, 'amp_actual_mean': 2.051, 'amp_random_mean': 1.829, 'amp_reversed_mean': 2.097, 'actual_over_random_ratio': 1.12, 'cos_random_vs_actual_final': 0.007, 'logit_linf_actual_over_random': 1.152, 'direction_matters': False}}
