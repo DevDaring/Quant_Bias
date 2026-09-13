@@ -8,6 +8,10 @@
 # stage; a swallowed push failure is logged loudly rather than hidden.
 set -uo pipefail
 MODE=${1:-full}
+# The container supervisor relaunches with the AUTORUN value fixed at deploy
+# time. A mode-override file lets a restart resume FULL even if the SDL says
+# smoke, without redeploying.
+[ -f /workspace/MODE_OVERRIDE ] && MODE=$(cat /workspace/MODE_OVERRIDE)
 ROOT=/workspace/Quant_Bias
 MS=$ROOT/mixed_study
 cd "$MS"
@@ -48,6 +52,11 @@ run(){  # run <stage> <model> [extra args]
 }
 
 log "===== MODE=$MODE flags:$FLAGS ====="
+# hourly VM-resident watchdog: validate + push, independent of any operator session
+if ! { [ -f /workspace/mixed_watchdog.pid ] && kill -0 "$(cat /workspace/mixed_watchdog.pid)" 2>/dev/null; }; then
+  setsid nohup bash "$MS/scripts/vm_watchdog.sh" > /workspace/mixed_watchdog.out 2>&1 < /dev/null &
+  log "spawned watchdog (pid $!)"
+fi
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader | tee -a "$LOGS/run.log"
 
 log "--- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---"
