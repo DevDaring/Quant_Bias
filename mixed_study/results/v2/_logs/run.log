@@ -102,3 +102,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_03:54:02] <<< smoke/restore/M3 ok in 80s
 [2026-09-13_03:54:09] >>> smoke/restore/M5
 [2026-09-13_03:55:32] <<< smoke/restore/M5 ok in 83s
+[2026-09-13_03:55:39] ===== COMPLETE: 13 ok, 0
+0 failed =====
