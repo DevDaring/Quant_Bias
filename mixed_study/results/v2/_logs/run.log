@@ -104,3 +104,8 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_03:55:32] <<< smoke/restore/M5 ok in 83s
 [2026-09-13_03:55:39] ===== COMPLETE: 13 ok, 0
 0 failed =====
+[2026-09-13_03:58:58] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_03:58:58] spawned watchdog (pid 17949)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_03:58:58] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_03:58:58] >>> full/legacy/M1
