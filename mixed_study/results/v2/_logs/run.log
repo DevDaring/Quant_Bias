@@ -308,3 +308,26 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_05:11:07] skip full/restore/M5 (already ok)
 [2026-09-13_05:11:07] ===== COMPLETE: 13 ok, 0
 0 failed =====
+[2026-09-13_07:54:54] ===== MODE=smoke flags:--device cuda --attn flash_attention_2 --quick =====
+[2026-09-13_07:54:54] spawned watchdog (pid 17599)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_07:54:54] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_07:54:54] skip smoke/legacy/M1 (already ok)
+[2026-09-13_07:54:54] skip smoke/legacy/M3 (already ok)
+[2026-09-13_07:54:54] skip smoke/legacy/M5 (already ok)
+[2026-09-13_07:54:54] skip smoke/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_07:54:54] skip smoke/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_07:54:54] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_07:54:54] skip smoke/b1/M1/--granularity/layer (already ok)
+[2026-09-13_07:54:54] skip smoke/b1/M1/--granularity/component (already ok)
+[2026-09-13_07:54:54] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_07:54:54] skip smoke/b1/M3/--granularity/layer (already ok)
+[2026-09-13_07:54:54] skip smoke/b1/M3/--granularity/component (already ok)
+[2026-09-13_07:54:54] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_07:54:54] skip smoke/b1/M5/--granularity/layer (already ok)
+[2026-09-13_07:54:54] skip smoke/b1/M5/--granularity/component (already ok)
+[2026-09-13_07:54:54] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_07:54:54] skip smoke/restore/M3 (already ok)
+[2026-09-13_07:54:54] skip smoke/restore/M5 (already ok)
+[2026-09-13_07:54:54] --- Stage 6: directional predictor on the ladder protocol (§6) ---
+[2026-09-13_07:54:54] >>> smoke/dladder/M1/--n-examples/48
