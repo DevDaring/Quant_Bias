@@ -25,3 +25,4 @@ full/b1/M5/--granularity/component	ok	265s
 full/restore/M3	ok	110s
 full/restore/M5	ok	120s
 smoke/dladder/M1/--n-examples/48	ok	80s
+smoke/dladder/M3/--n-examples/48	ok	138s

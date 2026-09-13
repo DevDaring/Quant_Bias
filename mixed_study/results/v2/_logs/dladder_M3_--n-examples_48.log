@@ -1,0 +1,14 @@
+[07:56:24] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:54<00:54, 54.73s/it]Fetching 2 files: 100%|██████████| 2/2 [01:10<00:00, 32.06s/it]Fetching 2 files: 100%|██████████| 2/2 [01:10<00:00, 35.46s/it]
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9719.01it/s]
+[07:57:44]   attention: flash_attention_2
+[07:57:44]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 6696.42it/s]
+[07:57:58] BBQ: 22 examples, 11 template clusters
+[07:58:15] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[07:58:18] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[07:58:29] calibration[generic] seed=0: 4x128 tokens, hash=a3b61f91b7741d0a
+[07:58:33]   L 0: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.8730 agree=1.00 (4s)
+[07:58:36]   L16: pred_flip=0.062 obs_flip=0.000 harmful=0.000 ex-corr=0.2163 agree=0.94 (7s)
+[07:58:38]   L31: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.3079 agree=1.00 (9s)
+[07:58:38] site-level: {'note': 'too few sites'}
