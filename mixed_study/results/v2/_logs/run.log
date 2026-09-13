@@ -110,3 +110,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_03:58:58] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
 [2026-09-13_03:58:58] >>> full/legacy/M1
 [2026-09-13_03:59:12] <<< full/legacy/M1 ok in 14s
+[2026-09-13_03:59:19] >>> full/legacy/M3
+[2026-09-13_03:59:35] <<< full/legacy/M3 ok in 16s

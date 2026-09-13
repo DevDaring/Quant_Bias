@@ -12,3 +12,4 @@ smoke/b1/M5/--granularity/component	ok	61s
 smoke/restore/M3	ok	80s
 smoke/restore/M5	ok	83s
 full/legacy/M1	ok	14s
+full/legacy/M3	ok	16s

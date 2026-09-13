@@ -1,7 +1,6 @@
-[03:35:54] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
-Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:49<00:49, 49.35s/it]Fetching 2 files: 100%|██████████| 2/2 [01:13<00:00, 34.36s/it]Fetching 2 files: 100%|██████████| 2/2 [01:13<00:00, 36.61s/it]
-Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 8363.20it/s]
-[03:37:20]   attention: flash_attention_2
-[03:37:20]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 6827.29it/s]
-[03:37:30] mistral_7b_v0_1: NOT REPRODUCED -- do not use for transfer  shape_spearman=0.31975806451612904  within3sd=0.6129032258064516  saved n=31 fresh n=31
+[03:59:22] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9921.74it/s]
+[03:59:26]   attention: flash_attention_2
+[03:59:26]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9049.17it/s]
+[03:59:34] mistral_7b_v0_1: NOT REPRODUCED -- do not use for transfer  shape_spearman=0.31975806451612904  within3sd=0.6129032258064516  saved n=31 fresh n=31
