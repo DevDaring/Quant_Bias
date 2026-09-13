@@ -62,3 +62,11 @@ NVIDIA H100 80GB HBM3, 81559 MiB
         out = out * mask.unsqueeze(-1).to(out.dtype)
               ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+[2026-09-13_03:42:47] ===== MODE=smoke flags:--device cuda --attn flash_attention_2 --quick =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_03:42:47] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_03:42:47] skip smoke/legacy/M1 (already ok)
+[2026-09-13_03:42:47] skip smoke/legacy/M3 (already ok)
+[2026-09-13_03:42:47] skip smoke/legacy/M5 (already ok)
+[2026-09-13_03:42:47] >>> smoke/legacy/M3/--dtype/fp16
+[2026-09-13_03:43:17] <<< smoke/legacy/M3/--dtype/fp16 ok in 30s
