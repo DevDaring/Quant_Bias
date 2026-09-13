@@ -3,3 +3,4 @@ smoke/legacy/M3	ok	100s
 smoke/legacy/M5	ok	125s
 smoke/legacy/M3/--dtype/fp16	ok	30s
 smoke/legacy/M5/--dtype/fp16	ok	33s
+smoke/b1/M1/--granularity/layer	ok	51s

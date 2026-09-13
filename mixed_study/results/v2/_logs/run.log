@@ -72,3 +72,6 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_03:43:17] <<< smoke/legacy/M3/--dtype/fp16 ok in 30s
 [2026-09-13_03:43:24] >>> smoke/legacy/M5/--dtype/fp16
 [2026-09-13_03:43:57] <<< smoke/legacy/M5/--dtype/fp16 ok in 33s
+[2026-09-13_03:44:04] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_03:44:04] >>> smoke/b1/M1/--granularity/layer
+[2026-09-13_03:44:55] <<< smoke/b1/M1/--granularity/layer ok in 51s

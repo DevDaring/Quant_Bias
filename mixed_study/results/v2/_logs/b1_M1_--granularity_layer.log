@@ -1,42 +1,23 @@
-[03:39:52] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
+[03:44:06] Loading openai-community/gpt2@main (607a30d783dfa663caf39e06633721c8d4cfcd7e) dtype=torch.float32 device=cuda
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 [transformers] Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in GPT2LMHeadModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2", dtype=torch.float16)`
 [transformers] Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in GPT2Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 16029.88it/s]
-[03:39:55]   attention: flash_attention_2
-[03:39:55]   flash_attention_2 failed a forward pass (StopIteration); reloading with sdpa
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 7092.26it/s]
-Generating test split:   0%|          | 0/58492 [00:00<?, ? examples/s]Generating test split:  42%|████▏     | 24278/58492 [00:00<00:00, 130605.99 examples/s]Generating test split:  82%|████████▏ | 47777/58492 [00:00<00:00, 134810.63 examples/s]Generating test split: 100%|██████████| 58492/58492 [00:00<00:00, 129713.29 examples/s]
-[03:40:10] BBQ: 22 examples, 11 template clusters
-Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 23880.27 examples/s]
-Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 32171.39 examples/s]
-Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 30116.31 examples/s]
-Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 31282.50 examples/s]
-Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 32293.36 examples/s]
-Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 32071.37 examples/s]
-Generating validation split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 396/396 [00:00<00:00, 32311.58 examples/s]
-Generating test split:   0%|          | 0/396 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 396/396 [00:00<00:00, 33179.74 examples/s]
-[03:40:48] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-Generating train split:   0%|          | 0/9450 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 9450/9450 [00:00<00:00, 119169.26 examples/s]
-[03:40:53] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 13538.28it/s]
+[03:44:10]   attention: flash_attention_2
+[03:44:10]   flash_attention_2 failed a forward pass (StopIteration); reloading with sdpa
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 6267.80it/s]
+[03:44:21] BBQ: 22 examples, 11 template clusters
+[03:44:39] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[03:44:42] Discrim-Eval[explicit]: 15 examples, 1 decision questions
 [transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (2234 > 1024). Running this sequence through the model will result in indexing errors
-[03:41:04] calibration[generic] seed=0: 4x128 tokens, hash=e65a6336653e1baa
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 143, in <module>
-    main()
-  File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 139, in main
-    a.fn(a)
-  File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 83, in cmd_b1
-    res = B.run_b1(a, q, fin, calib, sources=tuple(b["sources"]) if not args.quick else ("rtn4", "wanda50"),
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/Quant_Bias/mixed_study/mixed_study/matched_residuals.py", line 109, in run_b1
-    srcs = R.make_sources(residual, n_random, seed0=hash(key) % 10_000, mask=mask)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/Quant_Bias/mixed_study/mixed_study/residuals.py", line 127, in make_sources
-    src[f"random_{k}"] = norm_matched_random(residual, seed0 + k, mask)
-                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/Quant_Bias/mixed_study/mixed_study/residuals.py", line 119, in norm_matched_random
-    out = out * mask.unsqueeze(-1).to(out.dtype)
-          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+[03:44:52] calibration[generic] seed=0: 4x128 tokens, hash=e65a6336653e1baa
+[03:44:53]   L0.all|rtn4: local_rel=9.58e-02 amp(actual)=2.03 amp(random)=1.85 cos(rand,actual)=+0.04 flips=1 (0s)
+[03:44:53] Wanda per-row 50%: achieved 0.5000 over 7077888 weights
+[03:44:53]   L0.all|wanda50: local_rel=1.52e-01 amp(actual)=3.12 amp(random)=2.06 cos(rand,actual)=-0.02 flips=0 (0s)
+[03:44:53]   L6.all|rtn4: local_rel=7.57e-02 amp(actual)=2.38 amp(random)=2.04 cos(rand,actual)=-0.00 flips=3 (1s)
+[03:44:53] Wanda per-row 50%: achieved 0.5000 over 7077888 weights
+[03:44:54]   L6.all|wanda50: local_rel=1.37e-01 amp(actual)=2.50 amp(random)=1.95 cos(rand,actual)=+0.03 flips=4 (1s)
+[03:44:54]   L11.all|rtn4: local_rel=4.63e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=-0.00 flips=3 (1s)
+[03:44:54] Wanda per-row 50%: achieved 0.5000 over 7077888 weights
+[03:44:54]   L11.all|wanda50: local_rel=7.85e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=3 (1s)
+[03:44:54] summary: {'rtn4': {'n_sites': 3, 'amp_actual_mean': 1.804, 'amp_random_mean': 1.631, 'amp_reversed_mean': 1.847, 'actual_over_random_ratio': 1.088, 'cos_random_vs_actual_final': 0.014, 'logit_linf_actual_over_random': 2.051, 'direction_matters': False}, 'wanda50': {'n_sites': 3, 'amp_actual_mean': 2.207, 'amp_random_mean': 1.669, 'amp_reversed_mean': 2.178, 'actual_over_random_ratio': 1.266, 'cos_random_vs_actual_final': 0.006, 'logit_linf_actual_over_random': 2.165, 'direction_matters': True}}
