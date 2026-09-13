@@ -262,7 +262,35 @@ beats uniform quantization, and says so.
 - A check that a real packed int4 kernel reproduces the simulated-quantisation
   numbers.
 
-## 7. How to check any claim here
+## 7. Status for paper writing
+
+**The experimental programme is complete.** Every item in `Next_Plan.md`
+marked P0 or P1 has a result with an evidence file, and every GPU-run
+artifact passes the validator. No further computation is needed to write
+the paper; the open items in §6 are limitations to state, not gaps that
+block a submission.
+
+What the paper can be built from, in order of strength:
+
+| claim | basis | strength |
+|---|---|---|
+| Decision-score sensitivity, not internal drift, predicts which layers flip answers | §3.2, 192 injection cells, 3 models | main result; confirmed on the layer ladder with a parameter-free predictor (§3.3) |
+| 4-bit compression changes ~10% of individual decisions on 7B models with <1 pp change in group gaps; 8-bit ≈ 1–3% | §3.1, §3.6 | confirmed on a held-out split |
+| Error direction matters modestly (1.0–1.6×); 8-bit error is noise; large models funnel perturbations | §3.3 | discovery evidence, 3 models |
+| Correct measurement (four outcomes, valid margin test, support-preserving bootstrap, template eligibility) changes conclusions more than any method | §3.5 | reanalysis of all 7 models |
+| Bias-aware allocation, three published methods, and predictor-guided restoration do not beat uniform quantisation at equal cost | §4 | negative results with stated power |
+| The two projects are one framework (fp16 reproduction of the legacy profile) | §3.4 | 2 of 3 models fully; Qwen3-8B partial |
+
+What a reviewer will ask for and what to answer: (i) *BBQ results on unseen
+templates* — not run; state as a limitation, or budget one more GPU day for a
+new template set. (ii) *Real int4 kernels* — quantisation is simulated with
+exact byte accounting; state it. (iii) *Authors' own comparator code* —
+re-implementations from the papers; state it. (iv) *Why only three models in
+mixed_study* — the seven-model measurement is in `quant-bias`; the mechanism
+experiments used the two 7B models plus GPT-2 Small as the small-model
+control.
+
+## 8. How to check any claim here
 
 ```bash
 cd Codes/mixed_study
@@ -275,7 +303,7 @@ The GPU stages (`legacy`, `b1`, `restore`, `dladder`, `confirm`) are recorded
 with their full per-cell output; re-running all of them needs one 80 GB GPU
 for about 2¼ hours (`mixed_study/scripts/vm_run.sh full`).
 
-## 8. Provenance
+## 9. Provenance
 
 | run | date (UTC) | hardware | stages | wall time | cost |
 |---|---|---|---|---|---|
@@ -294,4 +322,4 @@ effective sample for 13 % of the compute; the calculation is in
 
 Related: `../../Future_Plan.md` (original design), `../../Next_Plan.md`
 (critical review that produced `mixed_study`),
-`../../mixed_study/results/v2/FINDINGS_v2.md` (full detail of §3.2–3.4).
+`../../mixed_study/results/v2/FINDINGS_v2.md` (full detail of §3.2–3.6).
