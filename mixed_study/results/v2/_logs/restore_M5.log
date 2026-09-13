@@ -1,0 +1,15 @@
+[03:54:12] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 16799.62it/s]
+[03:54:16]   attention: flash_attention_2
+[03:54:16]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5130.36it/s]
+[03:54:31] BBQ: 22 examples, 11 template clusters
+[03:54:48] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[03:54:51] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[03:55:01] calibration[generic] seed=0: 4x128 tokens, hash=e70c52deb066daab
+[03:55:18]   uniform_start        bytes=5816MiB restored=0 harmful/dc=0.0
+[03:55:21]   predicted            bytes=5958MiB restored=2 harmful/dc=0.0
+[03:55:24]   utility_matched      bytes=5958MiB restored=2 harmful/dc=0.0
+[03:55:27]   random_matched_0     bytes=5958MiB restored=2 harmful/dc=0.0
+[03:55:31]   random_matched_1     bytes=5958MiB restored=2 harmful/dc=0.0
+[03:55:31] equal_cost_ok=True  summary={'predicted_harmful': 0.0, 'utility_matched_harmful': 0.0, 'random_matched_harmful_mean': 0.0, 'random_matched_harmful_min': 0.0, 'uniform_start_harmful': 0.0}
