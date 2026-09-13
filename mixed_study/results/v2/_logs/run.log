@@ -140,3 +140,6 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_04:17:22] <<< full/b1/M5/--granularity/layer ok in 194s
 [2026-09-13_04:17:29] >>> full/b1/M5/--granularity/component
 [2026-09-13_04:21:54] <<< full/b1/M5/--granularity/component ok in 265s
+[2026-09-13_04:22:01] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_04:22:01] >>> full/restore/M3
+[2026-09-13_04:23:51] <<< full/restore/M3 ok in 110s
