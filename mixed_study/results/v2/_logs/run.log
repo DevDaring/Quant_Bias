@@ -138,3 +138,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_04:14:08] --- Stage 4: B1 primary panel, Qwen3-8B ---
 [2026-09-13_04:14:08] >>> full/b1/M5/--granularity/layer
 [2026-09-13_04:17:22] <<< full/b1/M5/--granularity/layer ok in 194s
+[2026-09-13_04:17:29] >>> full/b1/M5/--granularity/component
+[2026-09-13_04:21:54] <<< full/b1/M5/--granularity/component ok in 265s
