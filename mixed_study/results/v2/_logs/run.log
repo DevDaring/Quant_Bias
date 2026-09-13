@@ -331,3 +331,4 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_07:54:54] skip smoke/restore/M5 (already ok)
 [2026-09-13_07:54:54] --- Stage 6: directional predictor on the ladder protocol (§6) ---
 [2026-09-13_07:54:54] >>> smoke/dladder/M1/--n-examples/48
+[2026-09-13_07:56:14] <<< smoke/dladder/M1/--n-examples/48 ok in 80s
