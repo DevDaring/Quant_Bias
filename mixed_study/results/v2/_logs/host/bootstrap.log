@@ -1,0 +1,260 @@
+[03:33:39] === host ===
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[03:33:39] python: /opt/conda/bin/python  (3.11.10)
+/dev/rbd3       196G  577M  196G   1% /workspace
+[03:33:39] === system packages ===
+debconf: delaying package configuration, since apt-utils is not installed
+[03:33:46] === clone ===
+[03:33:52] at commit d8a696f
+[03:33:52] === python deps ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[03:34:20] === flash-attention (prebuilt wheel, optional) ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  flash-attn 2.8.3 installed
+[03:34:41] === sanity ===
+  torch 2.5.1+cu124 cuda=True dev=NVIDIA H100 80GB HBM3
+  transformers 5.17.0  datasets 5.0.1
+  flash_attn 2.8.3
+  hf user: Debk
+[03:34:45] === offline tests (no downloads) ===
+...................................                                      [100%]
+35 passed, 1 deselected in 15.02s
+[03:35:01] === mixed_study offline tests ===
+..................                                                       [100%]
+18 passed in 5.72s
+[03:35:08] bootstrap complete (python: /opt/conda/bin/python)
+[03:46:04] === host ===
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[03:46:04] python: /opt/conda/bin/python  (3.11.10)
+/dev/rbd3       196G   31G  166G  16% /workspace
+[03:46:04] === system packages ===
+debconf: delaying package configuration, since apt-utils is not installed
+[03:46:10] === clone ===
+[03:46:14] at commit 6a32598
+[03:46:14] === python deps ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[03:46:44] === flash-attention (prebuilt wheel, optional) ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  flash-attn 2.8.3 installed
+[03:46:57] === sanity ===
+  torch 2.5.1+cu124 cuda=True dev=NVIDIA H100 80GB HBM3
+  transformers 5.17.0  datasets 5.0.1
+  flash_attn 2.8.3
+  hf user: Debk
+[03:47:01] === offline tests (no downloads) ===
+...................................                                      [100%]
+35 passed, 1 deselected in 12.63s
+[03:47:15] === mixed_study offline tests ===
+..................                                                       [100%]
+18 passed in 5.64s
+[03:47:22] bootstrap complete (python: /opt/conda/bin/python)
+[04:01:06] === host ===
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[04:01:06] python: /opt/conda/bin/python  (3.11.10)
+/dev/rbd3       196G   31G  166G  16% /workspace
+[04:01:06] === system packages ===
+debconf: delaying package configuration, since apt-utils is not installed
+[04:01:12] === clone ===
+[04:01:16] at commit d9ab2b6
+[04:01:16] === python deps ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[04:01:46] === flash-attention (prebuilt wheel, optional) ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  flash-attn 2.8.3 installed
+[04:01:59] === sanity ===
+  torch 2.5.1+cu124 cuda=True dev=NVIDIA H100 80GB HBM3
+  transformers 5.17.0  datasets 5.0.1
+  flash_attn 2.8.3
+  hf user: Debk
+[04:02:03] === offline tests (no downloads) ===
+...................................                                      [100%]
+35 passed, 1 deselected in 14.65s
+[04:02:18] === mixed_study offline tests ===
+..................                                                       [100%]
+18 passed in 5.67s
+[04:02:25] bootstrap complete (python: /opt/conda/bin/python)
+[04:31:07] === host ===
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[04:31:07] python: /opt/conda/bin/python  (3.11.10)
+/dev/rbd3       196G   31G  166G  16% /workspace
+[04:31:07] === system packages ===
+debconf: delaying package configuration, since apt-utils is not installed
+[04:31:15] === clone ===
+[04:31:19] at commit 356bb3d
+[04:31:19] === python deps ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[04:31:51] === flash-attention (prebuilt wheel, optional) ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  flash-attn 2.8.3 installed
+[04:32:03] === sanity ===
+  torch 2.5.1+cu124 cuda=True dev=NVIDIA H100 80GB HBM3
+  transformers 5.17.0  datasets 5.0.1
+  flash_attn 2.8.3
+  hf user: Debk
+[04:32:07] === offline tests (no downloads) ===
+...................................                                      [100%]
+35 passed, 1 deselected in 13.72s
+[04:32:22] === mixed_study offline tests ===
+..................                                                       [100%]
+18 passed in 5.92s
+[04:32:29] bootstrap complete (python: /opt/conda/bin/python)
+[04:36:56] === host ===
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[04:36:56] python: /opt/conda/bin/python  (3.11.10)
+/dev/rbd3       196G   31G  166G  16% /workspace
+[04:36:56] === system packages ===
+debconf: delaying package configuration, since apt-utils is not installed
+[04:37:05] === clone ===
+[04:37:09] at commit 7910a1a
+[04:37:09] === python deps ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[04:37:38] === flash-attention (prebuilt wheel, optional) ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  flash-attn 2.8.3 installed
+[04:38:00] === sanity ===
+  torch 2.5.1+cu124 cuda=True dev=NVIDIA H100 80GB HBM3
+  transformers 5.17.0  datasets 5.0.1
+  flash_attn 2.8.3
+  hf user: Debk
+[04:38:04] === offline tests (no downloads) ===
+...................................                                      [100%]
+35 passed, 1 deselected in 14.64s
+[04:38:20] === mixed_study offline tests ===
+..................                                                       [100%]
+18 passed in 6.11s
+[04:38:27] bootstrap complete (python: /opt/conda/bin/python)
+[04:41:30] === host ===
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[04:41:30] python: /opt/conda/bin/python  (3.11.10)
+/dev/rbd3       196G   31G  166G  16% /workspace
+[04:41:30] === system packages ===
+debconf: delaying package configuration, since apt-utils is not installed
+[04:41:36] === clone ===
+[04:41:40] at commit 308a91f
+[04:41:40] === python deps ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[04:42:09] === flash-attention (prebuilt wheel, optional) ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  flash-attn 2.8.3 installed
+[04:42:21] === sanity ===
+  torch 2.5.1+cu124 cuda=True dev=NVIDIA H100 80GB HBM3
+  transformers 5.17.0  datasets 5.0.1
+  flash_attn 2.8.3
+  hf user: Debk
+[04:42:25] === offline tests (no downloads) ===
+...................................                                      [100%]
+35 passed, 1 deselected in 12.38s
+[04:42:38] === mixed_study offline tests ===
+..................                                                       [100%]
+18 passed in 5.58s
+[04:42:44] bootstrap complete (python: /opt/conda/bin/python)
+[04:46:54] === host ===
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[04:46:54] python: /opt/conda/bin/python  (3.11.10)
+/dev/rbd3       196G   31G  166G  16% /workspace
+[04:46:54] === system packages ===
+debconf: delaying package configuration, since apt-utils is not installed
+[04:47:01] === clone ===
+[04:47:05] at commit e0b82c4
+[04:47:05] === python deps ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[04:47:33] === flash-attention (prebuilt wheel, optional) ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  flash-attn 2.8.3 installed
+[04:47:46] === sanity ===
+  torch 2.5.1+cu124 cuda=True dev=NVIDIA H100 80GB HBM3
+  transformers 5.17.0  datasets 5.0.1
+  flash_attn 2.8.3
+  hf user: Debk
+[04:47:49] === offline tests (no downloads) ===
+...................................                                      [100%]
+35 passed, 1 deselected in 13.32s
+[04:48:04] === mixed_study offline tests ===
+..................                                                       [100%]
+18 passed in 5.89s
+[04:48:11] bootstrap complete (python: /opt/conda/bin/python)
+[04:52:35] === host ===
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[04:52:35] python: /opt/conda/bin/python  (3.11.10)
+/dev/rbd3       196G   31G  166G  16% /workspace
+[04:52:35] === system packages ===
+debconf: delaying package configuration, since apt-utils is not installed
+[04:52:42] === clone ===
+[04:52:46] at commit bb8111b
+[04:52:46] === python deps ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[04:53:16] === flash-attention (prebuilt wheel, optional) ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  flash-attn 2.8.3 installed
+[04:53:29] === sanity ===
+  torch 2.5.1+cu124 cuda=True dev=NVIDIA H100 80GB HBM3
+  transformers 5.17.0  datasets 5.0.1
+  flash_attn 2.8.3
+  hf user: Debk
+[04:53:33] === offline tests (no downloads) ===
+...................................                                      [100%]
+35 passed, 1 deselected in 14.56s
+[04:53:48] === mixed_study offline tests ===
+..................                                                       [100%]
+18 passed in 5.87s
+[04:53:55] bootstrap complete (python: /opt/conda/bin/python)
+[04:58:42] === host ===
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[04:58:42] python: /opt/conda/bin/python  (3.11.10)
+/dev/rbd3       196G   31G  166G  16% /workspace
+[04:58:42] === system packages ===
+debconf: delaying package configuration, since apt-utils is not installed
+[04:58:49] === clone ===
+[04:58:53] at commit 1573c9f
+[04:58:53] === python deps ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[04:59:23] === flash-attention (prebuilt wheel, optional) ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  flash-attn 2.8.3 installed
+[04:59:35] === sanity ===
+  torch 2.5.1+cu124 cuda=True dev=NVIDIA H100 80GB HBM3
+  transformers 5.17.0  datasets 5.0.1
+  flash_attn 2.8.3
+  hf user: Debk
+[04:59:39] === offline tests (no downloads) ===
+...................................                                      [100%]
+35 passed, 1 deselected in 13.66s
+[04:59:54] === mixed_study offline tests ===
+..................                                                       [100%]
+18 passed in 5.99s
+[05:00:01] bootstrap complete (python: /opt/conda/bin/python)
+[05:09:47] === host ===
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[05:09:48] python: /opt/conda/bin/python  (3.11.10)
+/dev/rbd3       196G   31G  166G  16% /workspace
+[05:09:48] === system packages ===
+debconf: delaying package configuration, since apt-utils is not installed
+[05:09:55] === clone ===
+[05:10:00] at commit 3a982cf
+[05:10:00] === python deps ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[05:10:29] === flash-attention (prebuilt wheel, optional) ===
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  flash-attn 2.8.3 installed
+[05:10:42] === sanity ===
+  torch 2.5.1+cu124 cuda=True dev=NVIDIA H100 80GB HBM3
+  transformers 5.17.0  datasets 5.0.1
+  flash_attn 2.8.3
+  hf user: Debk
+[05:10:46] === offline tests (no downloads) ===
+...................................                                      [100%]
+35 passed, 1 deselected in 13.58s
+[05:11:00] === mixed_study offline tests ===
+..................                                                       [100%]
+18 passed in 5.90s
+[05:11:07] bootstrap complete (python: /opt/conda/bin/python)

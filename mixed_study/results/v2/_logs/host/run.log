@@ -1,0 +1,413 @@
+[2026-09-13_03:35:08] ===== MODE=smoke flags:--device cuda --attn flash_attention_2 --quick =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_03:35:08] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_03:35:08] >>> smoke/legacy/M1
+[2026-09-13_03:35:44] <<< smoke/legacy/M1 ok in 36s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:35:51]   pushed smoke/legacy/M1
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:35:51]   !! PUSH FAILED for smoke/legacy/M1 (will retry next stage)
+[2026-09-13_03:35:51] >>> smoke/legacy/M3
+[2026-09-13_03:37:31] <<< smoke/legacy/M3 ok in 100s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:37:37]   pushed smoke/legacy/M3
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:37:37]   !! PUSH FAILED for smoke/legacy/M3 (will retry next stage)
+[2026-09-13_03:37:37] >>> smoke/legacy/M5
+[2026-09-13_03:39:42] <<< smoke/legacy/M5 ok in 125s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:39:49]   pushed smoke/legacy/M5
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:39:49]   !! PUSH FAILED for smoke/legacy/M5 (will retry next stage)
+[2026-09-13_03:39:49] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_03:39:49] >>> smoke/b1/M1/--granularity/layer
+[2026-09-13_03:41:05] <<< smoke/b1/M1/--granularity/layer FAILED in 76s
+    [03:40:48] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+    Generating train split:   0%|          | 0/9450 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 9450/9450 [00:00<00:00, 119169.26 examples/s]
+    [03:40:53] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+    [transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (2234 > 1024). Running this sequence through the model will result in indexing errors
+    [03:41:04] calibration[generic] seed=0: 4x128 tokens, hash=e65a6336653e1baa
+    Traceback (most recent call last):
+      File "<frozen runpy>", line 198, in _run_module_as_main
+      File "<frozen runpy>", line 88, in _run_code
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 143, in <module>
+        main()
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 139, in main
+        a.fn(a)
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 83, in cmd_b1
+        res = B.run_b1(a, q, fin, calib, sources=tuple(b["sources"]) if not args.quick else ("rtn4", "wanda50"),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/matched_residuals.py", line 109, in run_b1
+        srcs = R.make_sources(residual, n_random, seed0=hash(key) % 10_000, mask=mask)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/residuals.py", line 127, in make_sources
+        src[f"random_{k}"] = norm_matched_random(residual, seed0 + k, mask)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/residuals.py", line 119, in norm_matched_random
+        out = out * mask.unsqueeze(-1).to(out.dtype)
+              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:41:12]   pushed smoke/b1/M1/--granularity/layer
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:41:12]   !! PUSH FAILED for smoke/b1/M1/--granularity/layer (will retry next stage)
+[2026-09-13_03:41:12] >>> smoke/b1/M1/--granularity/component
+[2026-09-13_03:42:01] <<< smoke/b1/M1/--granularity/component FAILED in 49s
+    [03:41:29] BBQ: 22 examples, 11 template clusters
+    [03:41:47] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+    [03:41:49] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+    [transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (2234 > 1024). Running this sequence through the model will result in indexing errors
+    [03:41:59] calibration[generic] seed=0: 4x128 tokens, hash=e65a6336653e1baa
+    Traceback (most recent call last):
+      File "<frozen runpy>", line 198, in _run_module_as_main
+      File "<frozen runpy>", line 88, in _run_code
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 143, in <module>
+        main()
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 139, in main
+        a.fn(a)
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/run.py", line 83, in cmd_b1
+        res = B.run_b1(a, q, fin, calib, sources=tuple(b["sources"]) if not args.quick else ("rtn4", "wanda50"),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/matched_residuals.py", line 109, in run_b1
+        srcs = R.make_sources(residual, n_random, seed0=hash(key) % 10_000, mask=mask)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/residuals.py", line 127, in make_sources
+        src[f"random_{k}"] = norm_matched_random(residual, seed0 + k, mask)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/mixed_study/mixed_study/residuals.py", line 119, in norm_matched_random
+        out = out * mask.unsqueeze(-1).to(out.dtype)
+              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:42:08]   pushed smoke/b1/M1/--granularity/component
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:42:08]   !! PUSH FAILED for smoke/b1/M1/--granularity/component (will retry next stage)
+[2026-09-13_03:42:08] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_03:42:08] >>> smoke/b1/M3/--granularity/layer
+[2026-09-13_03:47:22] ===== MODE=smoke flags:--device cuda --attn flash_attention_2 --quick =====
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_03:47:22] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_03:47:22] skip smoke/legacy/M1 (already ok)
+[2026-09-13_03:47:22] skip smoke/legacy/M3 (already ok)
+[2026-09-13_03:47:22] skip smoke/legacy/M5 (already ok)
+[2026-09-13_03:47:22] skip smoke/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_03:47:22] skip smoke/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_03:47:22] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_03:47:22] skip smoke/b1/M1/--granularity/layer (already ok)
+[2026-09-13_03:47:22] >>> smoke/b1/M1/--granularity/component
+[2026-09-13_03:48:12] <<< smoke/b1/M1/--granularity/component ok in 50s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:48:19]   pushed smoke/b1/M1/--granularity/component
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:48:19]   !! PUSH FAILED for smoke/b1/M1/--granularity/component (will retry next stage)
+[2026-09-13_03:48:19] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_03:48:19] >>> smoke/b1/M3/--granularity/layer
+[2026-09-13_03:49:17] <<< smoke/b1/M3/--granularity/layer ok in 58s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:49:23]   pushed smoke/b1/M3/--granularity/layer
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:49:23]   !! PUSH FAILED for smoke/b1/M3/--granularity/layer (will retry next stage)
+[2026-09-13_03:49:23] >>> smoke/b1/M3/--granularity/component
+[2026-09-13_03:50:21] <<< smoke/b1/M3/--granularity/component ok in 58s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:50:28]   pushed smoke/b1/M3/--granularity/component
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:50:28]   !! PUSH FAILED for smoke/b1/M3/--granularity/component (will retry next stage)
+[2026-09-13_03:50:28] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_03:50:28] >>> smoke/b1/M5/--granularity/layer
+[2026-09-13_03:51:27] <<< smoke/b1/M5/--granularity/layer ok in 59s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:51:34]   pushed smoke/b1/M5/--granularity/layer
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:51:34]   !! PUSH FAILED for smoke/b1/M5/--granularity/layer (will retry next stage)
+[2026-09-13_03:51:34] >>> smoke/b1/M5/--granularity/component
+[2026-09-13_03:52:35] <<< smoke/b1/M5/--granularity/component ok in 61s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:52:42]   pushed smoke/b1/M5/--granularity/component
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:52:42]   !! PUSH FAILED for smoke/b1/M5/--granularity/component (will retry next stage)
+[2026-09-13_03:52:42] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_03:52:42] >>> smoke/restore/M3
+[2026-09-13_03:54:02] <<< smoke/restore/M3 ok in 80s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:54:09]   pushed smoke/restore/M3
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:54:09]   !! PUSH FAILED for smoke/restore/M3 (will retry next stage)
+[2026-09-13_03:54:09] >>> smoke/restore/M5
+[2026-09-13_03:55:32] <<< smoke/restore/M5 ok in 83s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:55:39]   pushed smoke/restore/M5
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:55:39]   !! PUSH FAILED for smoke/restore/M5 (will retry next stage)
+[2026-09-13_03:55:39] ===== COMPLETE: 13 ok, 0
+0 failed =====
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:55:45]   pushed final (smoke)
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:55:45]   !! PUSH FAILED for final (smoke) (will retry next stage)
+[2026-09-13_04:02:25] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_04:02:25] spawned watchdog (pid 15350)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_04:02:25] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_04:02:25] skip full/legacy/M1 (already ok)
+[2026-09-13_04:02:25] skip full/legacy/M3 (already ok)
+[2026-09-13_04:02:25] skip full/legacy/M5 (already ok)
+[2026-09-13_04:02:25] >>> full/legacy/M3/--dtype/fp16
+[2026-09-13_04:02:55] <<< full/legacy/M3/--dtype/fp16 ok in 30s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:03:01]   pushed full/legacy/M3/--dtype/fp16
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:03:01]   !! PUSH FAILED for full/legacy/M3/--dtype/fp16 (will retry next stage)
+[2026-09-13_04:03:01] >>> full/legacy/M5/--dtype/fp16
+[2026-09-13_04:03:32] <<< full/legacy/M5/--dtype/fp16 ok in 31s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:03:39]   pushed full/legacy/M5/--dtype/fp16
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:03:39]   !! PUSH FAILED for full/legacy/M5/--dtype/fp16 (will retry next stage)
+[2026-09-13_04:03:39] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_04:03:39] >>> full/b1/M1/--granularity/layer
+[2026-09-13_04:04:58] <<< full/b1/M1/--granularity/layer ok in 79s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:05:05]   pushed full/b1/M1/--granularity/layer
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:05:05]   !! PUSH FAILED for full/b1/M1/--granularity/layer (will retry next stage)
+[2026-09-13_04:05:05] >>> full/b1/M1/--granularity/component
+[2026-09-13_04:06:46] <<< full/b1/M1/--granularity/component ok in 101s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:06:52]   pushed full/b1/M1/--granularity/component
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:06:52]   !! PUSH FAILED for full/b1/M1/--granularity/component (will retry next stage)
+[2026-09-13_04:06:52] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_04:06:52] >>> full/b1/M3/--granularity/layer
+[2026-09-13_04:09:55] <<< full/b1/M3/--granularity/layer ok in 183s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:10:02]   pushed full/b1/M3/--granularity/layer
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:10:02]   !! PUSH FAILED for full/b1/M3/--granularity/layer (will retry next stage)
+[2026-09-13_04:10:02] >>> full/b1/M3/--granularity/component
+[2026-09-13_04:14:01] <<< full/b1/M3/--granularity/component ok in 239s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:14:08]   pushed full/b1/M3/--granularity/component
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:14:08]   !! PUSH FAILED for full/b1/M3/--granularity/component (will retry next stage)
+[2026-09-13_04:14:08] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_04:14:08] >>> full/b1/M5/--granularity/layer
+[2026-09-13_04:17:22] <<< full/b1/M5/--granularity/layer ok in 194s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:17:29]   pushed full/b1/M5/--granularity/layer
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:17:29]   !! PUSH FAILED for full/b1/M5/--granularity/layer (will retry next stage)
+[2026-09-13_04:17:29] >>> full/b1/M5/--granularity/component
+[2026-09-13_04:21:54] <<< full/b1/M5/--granularity/component ok in 265s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:22:01]   pushed full/b1/M5/--granularity/component
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:22:01]   !! PUSH FAILED for full/b1/M5/--granularity/component (will retry next stage)
+[2026-09-13_04:22:01] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_04:22:01] >>> full/restore/M3
+[2026-09-13_04:23:51] <<< full/restore/M3 ok in 110s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:23:57]   pushed full/restore/M3
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:23:57]   !! PUSH FAILED for full/restore/M3 (will retry next stage)
+[2026-09-13_04:23:57] >>> full/restore/M5
+[2026-09-13_04:25:57] <<< full/restore/M5 ok in 120s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:26:04]   pushed full/restore/M5
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:26:04]   !! PUSH FAILED for full/restore/M5 (will retry next stage)
+[2026-09-13_04:26:04] ===== COMPLETE: 13 ok, 0
+0 failed =====
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:26:11]   pushed final (full)
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:26:11]   !! PUSH FAILED for final (full) (will retry next stage)
+[2026-09-13_04:32:29] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_04:32:29] spawned watchdog (pid 15322)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_04:32:29] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_04:32:29] skip full/legacy/M1 (already ok)
+[2026-09-13_04:32:29] skip full/legacy/M3 (already ok)
+[2026-09-13_04:32:29] skip full/legacy/M5 (already ok)
+[2026-09-13_04:32:29] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_04:32:29] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_04:32:29] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_04:32:29] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_04:32:29] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_04:32:29] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_04:32:29] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_04:32:29] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_04:32:29] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_04:32:29] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_04:32:29] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_04:32:29] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_04:32:29] skip full/restore/M3 (already ok)
+[2026-09-13_04:32:29] skip full/restore/M5 (already ok)
+[2026-09-13_04:32:29] ===== COMPLETE: 13 ok, 0
+0 failed =====
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:32:36]   pushed final (full)
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:32:36]   !! PUSH FAILED for final (full) (will retry next stage)
+[2026-09-13_04:38:27] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_04:38:27] spawned watchdog (pid 15314)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_04:38:27] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_04:38:27] skip full/legacy/M1 (already ok)
+[2026-09-13_04:38:27] skip full/legacy/M3 (already ok)
+[2026-09-13_04:38:27] skip full/legacy/M5 (already ok)
+[2026-09-13_04:38:27] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_04:38:27] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_04:38:27] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_04:38:27] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_04:38:27] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_04:38:27] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_04:38:27] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_04:38:27] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_04:38:27] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_04:38:27] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_04:38:27] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_04:38:27] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_04:38:27] skip full/restore/M3 (already ok)
+[2026-09-13_04:38:27] skip full/restore/M5 (already ok)
+[2026-09-13_04:38:27] ===== COMPLETE: 13 ok, 0
+0 failed =====
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:38:33]   pushed final (full)
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:38:33]   !! PUSH FAILED for final (full) (will retry next stage)
+[2026-09-13_04:42:44] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_04:42:44] spawned watchdog (pid 15314)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_04:42:44] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_04:42:44] skip full/legacy/M1 (already ok)
+[2026-09-13_04:42:44] skip full/legacy/M3 (already ok)
+[2026-09-13_04:42:44] skip full/legacy/M5 (already ok)
+[2026-09-13_04:42:44] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_04:42:44] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_04:42:44] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_04:42:44] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_04:42:44] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_04:42:44] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_04:42:44] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_04:42:44] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_04:42:44] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_04:42:44] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_04:42:44] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_04:42:45] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_04:42:45] skip full/restore/M3 (already ok)
+[2026-09-13_04:42:45] skip full/restore/M5 (already ok)
+[2026-09-13_04:42:45] ===== COMPLETE: 13 ok, 0
+0 failed =====
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:42:51]   pushed final (full)
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:42:51]   !! PUSH FAILED for final (full) (will retry next stage)
+[2026-09-13_04:48:11] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_04:48:11] spawned watchdog (pid 15312)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_04:48:11] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_04:48:11] skip full/legacy/M1 (already ok)
+[2026-09-13_04:48:11] skip full/legacy/M3 (already ok)
+[2026-09-13_04:48:11] skip full/legacy/M5 (already ok)
+[2026-09-13_04:48:11] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_04:48:11] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_04:48:11] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_04:48:11] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_04:48:11] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_04:48:11] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_04:48:11] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_04:48:11] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_04:48:11] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_04:48:11] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_04:48:11] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_04:48:11] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_04:48:11] skip full/restore/M3 (already ok)
+[2026-09-13_04:48:11] skip full/restore/M5 (already ok)
+[2026-09-13_04:48:11] ===== COMPLETE: 13 ok, 0
+0 failed =====
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:48:18]   pushed final (full)
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:48:18]   !! PUSH FAILED for final (full) (will retry next stage)
+[2026-09-13_04:53:55] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_04:53:55] spawned watchdog (pid 15313)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_04:53:55] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_04:53:55] skip full/legacy/M1 (already ok)
+[2026-09-13_04:53:55] skip full/legacy/M3 (already ok)
+[2026-09-13_04:53:55] skip full/legacy/M5 (already ok)
+[2026-09-13_04:53:55] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_04:53:55] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_04:53:55] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_04:53:55] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_04:53:55] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_04:53:55] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_04:53:55] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_04:53:55] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_04:53:55] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_04:53:55] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_04:53:55] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_04:53:55] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_04:53:55] skip full/restore/M3 (already ok)
+[2026-09-13_04:53:55] skip full/restore/M5 (already ok)
+[2026-09-13_04:53:55] ===== COMPLETE: 13 ok, 0
+0 failed =====
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:54:01]   pushed final (full)
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:54:01]   !! PUSH FAILED for final (full) (will retry next stage)
+[2026-09-13_05:00:01] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_05:00:01] spawned watchdog (pid 15314)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_05:00:01] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_05:00:01] skip full/legacy/M1 (already ok)
+[2026-09-13_05:00:01] skip full/legacy/M3 (already ok)
+[2026-09-13_05:00:01] skip full/legacy/M5 (already ok)
+[2026-09-13_05:00:01] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_05:00:01] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_05:00:01] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_05:00:01] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_05:00:01] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_05:00:01] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_05:00:01] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_05:00:01] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_05:00:01] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_05:00:01] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_05:00:01] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_05:00:01] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_05:00:01] skip full/restore/M3 (already ok)
+[2026-09-13_05:00:01] skip full/restore/M5 (already ok)
+[2026-09-13_05:00:01] ===== COMPLETE: 13 ok, 0
+0 failed =====
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_05:00:08]   pushed final (full)
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_05:00:08]   !! PUSH FAILED for final (full) (will retry next stage)
+[2026-09-13_05:11:07] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_05:11:07] spawned watchdog (pid 15313)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_05:11:07] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_05:11:07] skip full/legacy/M1 (already ok)
+[2026-09-13_05:11:07] skip full/legacy/M3 (already ok)
+[2026-09-13_05:11:07] skip full/legacy/M5 (already ok)
+[2026-09-13_05:11:07] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_05:11:07] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_05:11:07] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_05:11:07] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_05:11:07] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_05:11:07] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_05:11:07] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_05:11:07] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_05:11:07] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_05:11:07] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_05:11:07] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_05:11:07] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_05:11:07] skip full/restore/M3 (already ok)
+[2026-09-13_05:11:07] skip full/restore/M5 (already ok)
+[2026-09-13_05:11:07] ===== COMPLETE: 13 ok, 0
+0 failed =====
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_05:11:14]   pushed final (full)
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_05:11:14]   !! PUSH FAILED for final (full) (will retry next stage)

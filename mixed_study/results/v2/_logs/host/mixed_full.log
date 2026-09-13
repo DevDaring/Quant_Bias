@@ -1,0 +1,23 @@
+[2026-09-13_03:58:58] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_03:58:58] spawned watchdog (pid 17949)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_03:58:58] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_03:58:58] >>> full/legacy/M1
+[2026-09-13_03:59:12] <<< full/legacy/M1 ok in 14s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:59:19]   pushed full/legacy/M1
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:59:19]   !! PUSH FAILED for full/legacy/M1 (will retry next stage)
+[2026-09-13_03:59:19] >>> full/legacy/M3
+[2026-09-13_03:59:35] <<< full/legacy/M3 ok in 16s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:59:41]   pushed full/legacy/M3
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_03:59:41]   !! PUSH FAILED for full/legacy/M3 (will retry next stage)
+[2026-09-13_03:59:41] >>> full/legacy/M5
+[2026-09-13_04:00:00] <<< full/legacy/M5 ok in 19s
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:00:07]   pushed full/legacy/M5
+tee: results/v2/_logs/run.log: No such file or directory
+[2026-09-13_04:00:07]   !! PUSH FAILED for full/legacy/M5 (will retry next stage)
+[2026-09-13_04:00:07] >>> full/legacy/M3/--dtype/fp16
