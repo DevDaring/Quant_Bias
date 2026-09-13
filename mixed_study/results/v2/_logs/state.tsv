@@ -7,3 +7,4 @@ smoke/b1/M1/--granularity/layer	ok	51s
 smoke/b1/M1/--granularity/component	ok	50s
 smoke/b1/M3/--granularity/layer	ok	58s
 smoke/b1/M3/--granularity/component	ok	58s
+smoke/b1/M5/--granularity/layer	ok	59s
