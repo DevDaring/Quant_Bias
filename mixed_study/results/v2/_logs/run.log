@@ -413,3 +413,33 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_08:58:17]   pushed full/restore/M3/--k/16/--n-examples/8000
 [2026-09-13_08:58:17] >>> full/restore/M5/--k/8/--n-examples/8000
 [2026-09-13_09:12:39] <<< full/restore/M5/--k/8/--n-examples/8000 ok in 862s
+[2026-09-13_09:17:23] ===== MODE=full flags:--device cuda --attn flash_attention_2 =====
+[2026-09-13_09:17:23] spawned watchdog (pid 17524)
+NVIDIA H100 80GB HBM3, 81559 MiB
+[2026-09-13_09:17:23] --- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral ---
+[2026-09-13_09:17:23] skip full/legacy/M1 (already ok)
+[2026-09-13_09:17:23] skip full/legacy/M3 (already ok)
+[2026-09-13_09:17:23] skip full/legacy/M5 (already ok)
+[2026-09-13_09:17:23] skip full/legacy/M3/--dtype/fp16 (already ok)
+[2026-09-13_09:17:23] skip full/legacy/M5/--dtype/fp16 (already ok)
+[2026-09-13_09:17:23] --- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---
+[2026-09-13_09:17:23] skip full/b1/M1/--granularity/layer (already ok)
+[2026-09-13_09:17:23] skip full/b1/M1/--granularity/component (already ok)
+[2026-09-13_09:17:23] --- Stage 3: B1 primary panel, Mistral-7B ---
+[2026-09-13_09:17:23] skip full/b1/M3/--granularity/layer (already ok)
+[2026-09-13_09:17:23] skip full/b1/M3/--granularity/component (already ok)
+[2026-09-13_09:17:23] --- Stage 4: B1 primary panel, Qwen3-8B ---
+[2026-09-13_09:17:23] skip full/b1/M5/--granularity/layer (already ok)
+[2026-09-13_09:17:23] skip full/b1/M5/--granularity/component (already ok)
+[2026-09-13_09:17:23] --- Stage 5: equal-cost selective restoration (§5.7) ---
+[2026-09-13_09:17:23] skip full/restore/M3 (already ok)
+[2026-09-13_09:17:23] skip full/restore/M5 (already ok)
+[2026-09-13_09:17:23] --- Stage 6: directional predictor on the ladder protocol (§6) ---
+[2026-09-13_09:17:23] skip full/dladder/M1/--n-examples/48 (already ok)
+[2026-09-13_09:17:23] skip full/dladder/M3/--n-examples/48 (already ok)
+[2026-09-13_09:17:23] skip full/dladder/M5/--n-examples/48 (already ok)
+[2026-09-13_09:17:23] --- Stage 7: restoration sized by power analysis: full final split, two intervention sizes (§8) ---
+[2026-09-13_09:17:23] skip full/restore/M3/--k/8/--n-examples/8000 (already ok)
+[2026-09-13_09:17:23] skip full/restore/M3/--k/16/--n-examples/8000 (already ok)
+[2026-09-13_09:17:23] skip full/restore/M5/--k/8/--n-examples/8000 (already ok)
+[2026-09-13_09:17:23] >>> full/restore/M5/--k/16/--n-examples/8000
