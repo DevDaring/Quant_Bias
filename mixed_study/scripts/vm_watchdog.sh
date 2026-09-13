@@ -31,7 +31,7 @@ check(){
   [ -n "$newest" ] && age=$(( now - $(stat -c %Y "$newest") ))
   if [ -z "$complete" ] && [ "$age" -gt 1200 ]; then alerts+=("no log written in ${age}s (>20min)"); fi
   local gpu; gpu=$(nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader 2>/dev/null | head -1)
-  local nfail; nfail=$(grep -c FAILED "$LOGS/state.tsv" 2>/dev/null || echo 0)
+  local nfail; nfail=$(grep -c FAILED "$LOGS/state.tsv" 2>/dev/null); nfail=${nfail:-0}   # grep -c prints 0 AND exits 1 on no match
   [ "$nfail" -gt 0 ] && alerts+=("$nfail FAILED stage(s) in state.tsv")
   # content + consistency
   local vout; vout=$(cd "$MS" && $PY scripts/validate_v2.py 2>&1); verdict=$(echo "$vout" | grep -oE "VALIDATE_V2 (PASS|WARN|FAIL)" | awk '{print $2}')
