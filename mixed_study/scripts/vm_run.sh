@@ -19,7 +19,7 @@ PY=$(cat /workspace/PYTHON_BIN 2>/dev/null || echo python3)
 export GIT_SSH_COMMAND="ssh -i /root/.ssh/quantbias_deploy -o StrictHostKeyChecking=no -o UserKnownHostsFile=/root/.ssh/known_hosts"
 export HF_HOME=${HF_HOME:-/workspace/hf_cache} TOKENIZERS_PARALLELISM=false
 ATTN=${ATTN:-flash_attention_2}
-LOGS=results/v2/_logs; mkdir -p "$LOGS"; STATE=$LOGS/state.tsv; touch "$STATE"
+LOGS=$MS/results/v2/_logs; mkdir -p "$LOGS"; STATE=$LOGS/state.tsv; touch "$STATE"
 log(){ echo "[$(date -u +%F_%T)] $*" | tee -a "$LOGS/run.log"; }
 
 FLAGS="--device cuda --attn $ATTN"
