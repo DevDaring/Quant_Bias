@@ -122,3 +122,4 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_04:02:25] skip full/legacy/M3 (already ok)
 [2026-09-13_04:02:25] skip full/legacy/M5 (already ok)
 [2026-09-13_04:02:25] >>> full/legacy/M3/--dtype/fp16
+[2026-09-13_04:02:55] <<< full/legacy/M3/--dtype/fp16 ok in 30s

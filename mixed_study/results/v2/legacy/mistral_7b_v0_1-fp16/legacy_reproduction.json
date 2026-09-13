@@ -114,8 +114,8 @@
   "n_fresh": 31,
   "n_saved": 31,
   "provenance": {
-    "codes_git": "c221c53",
-    "generated": "2026-09-13T03:43:16",
+    "codes_git": "1ef6ca1",
+    "generated": "2026-09-13T04:02:54",
     "li_results": "/workspace/Quant_Bias/quant-bias/provenance/living_inference_results",
     "living_inference_git": "unknown",
     "model": "mistralai/Mistral-7B-v0.1",

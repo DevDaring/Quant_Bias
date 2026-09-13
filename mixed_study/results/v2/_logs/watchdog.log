@@ -10,3 +10,10 @@
     [03:58:58]   INFO legacy/qwen3_8b-fp16: NOT REPRODUCED -- do not use for transfer (a finding, not an error)
 [2026-09-13_04:00:26] watchdog started (interval 3600s, pid 19760)
 [2026-09-13_04:02:25] watchdog started (interval 3600s, pid 15350)
+[2026-09-13_04:02:32] OK | procs=1/0 | gpu=[0 %, 0 MiB] | log_age=0s | validator=PASS | failed=0 | push=pushed | complete=no | 
+    [04:02:25] VALIDATE_V2 PASS: 16 ok, 0 warn, 0 fail, 0 FAILED-in-state
+    [04:02:25]   INFO legacy/mistral_7b_v0_1: NOT REPRODUCED -- do not use for transfer (a finding, not an error)
+    [04:02:25]   INFO legacy/qwen3_8b: NOT REPRODUCED -- do not use for transfer (a finding, not an error)
+    [04:02:25]   INFO legacy/qwen3_8b-fp16: NOT REPRODUCED -- do not use for transfer (a finding, not an error)
+    [04:02:25]   INFO legacy/mistral_7b_v0_1: NOT REPRODUCED -- do not use for transfer (a finding, not an error)
+    [04:02:25]   INFO legacy/qwen3_8b: NOT REPRODUCED -- do not use for transfer (a finding, not an error)
