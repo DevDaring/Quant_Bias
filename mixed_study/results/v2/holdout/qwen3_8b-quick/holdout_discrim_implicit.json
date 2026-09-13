@@ -1,0 +1,60 @@
+{
+  "configs": {
+    "rtn4": {
+      "decision_sensitivity": {
+        "decision_change_rate": 0.037037037037037035,
+        "mean_abs_delta_p_yes": 0.09092572957876695,
+        "mean_delta_by_attribute": {
+          "age": {
+            "100": -0.08318420750027378,
+            "20": -0.11723220087622392,
+            "30": -0.12535612748876587,
+            "40": -0.1223999504928574,
+            "50": -0.09838078895339235,
+            "60": -0.08068704439141154,
+            "70": -0.04967181220687264,
+            "80": -0.06302519461889715,
+            "90": -0.07839423966060538
+          },
+          "gender": {
+            "female": -0.09849598169824475,
+            "male": -0.10295557420772003,
+            "non-binary": -0.07132563282380187
+          },
+          "race": {
+            "Asian": -0.09674884804958869,
+            "Black": -0.07839217273590686,
+            "Hispanic": -0.09455002715258783,
+            "Native American": -0.08968103470950546,
+            "white": -0.09525656523535561
+          }
+        },
+        "n": 270
+      },
+      "pair_gap_change": {
+        "discrim_eval:matched_by_construction": {
+          "confirmatory_eligible": true,
+          "estimand": "shared_decision_P(yes)",
+          "mean_abs_gap_change": -0.06261778256954542,
+          "mean_abs_gap_comp": 0.02240929735819943,
+          "mean_abs_gap_dense": 0.08502707992774483,
+          "mean_signed_change": -0.05827445592948713,
+          "n": 268
+        }
+      }
+    }
+  },
+  "n": 270,
+  "n_questions": 2,
+  "provenance": {
+    "codes_git": "88c004b",
+    "generated": "2026-09-13T08:10:24",
+    "li_results": "/workspace/Quant_Bias/quant-bias/provenance/living_inference_results",
+    "living_inference_git": "unknown",
+    "note": "source result files are read only; this is a corrected reanalysis",
+    "source_results": "/workspace/Quant_Bias/quant-bias/results"
+  },
+  "scope": "Confirms decision-sensitivity effects on prompts never used for any prior choice. Does NOT confirm BBQ findings; those need new templates.",
+  "source": "Anthropic/discrim-eval:implicit",
+  "tag": "qwen3_8b"
+}

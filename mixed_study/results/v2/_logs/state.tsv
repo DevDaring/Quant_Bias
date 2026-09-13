@@ -32,3 +32,4 @@ smoke/restore/M3/--k/16/--n-examples/8000	ok	83s
 smoke/restore/M5/--k/8/--n-examples/8000	ok	83s
 smoke/restore/M5/--k/16/--n-examples/8000	ok	84s
 smoke/confirm/M3	ok	81s
+smoke/confirm/M5	ok	82s
