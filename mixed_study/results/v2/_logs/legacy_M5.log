@@ -1,7 +1,6 @@
-[03:37:40] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
-Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:40<02:42, 40.57s/it]Fetching 5 files:  40%|████      | 2/5 [01:28<02:14, 44.69s/it]Fetching 5 files:  60%|██████    | 3/5 [01:33<00:53, 26.81s/it]Fetching 5 files:  80%|████████  | 4/5 [01:35<00:16, 16.86s/it]Fetching 5 files: 100%|██████████| 5/5 [01:35<00:00, 19.06s/it]
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 11104.58it/s]
-[03:39:30]   attention: flash_attention_2
-[03:39:30]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 6699.79it/s]
-[03:39:41] qwen3_8b: NOT REPRODUCED -- do not use for transfer  shape_spearman=0.3120448179271709  within3sd=0.4857142857142857  saved n=35 fresh n=35
+[03:59:44] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8279.62it/s]
+[03:59:49]   attention: flash_attention_2
+[03:59:49]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7224.44it/s]
+[04:00:00] qwen3_8b: NOT REPRODUCED -- do not use for transfer  shape_spearman=0.3120448179271709  within3sd=0.4857142857142857  saved n=35 fresh n=35
