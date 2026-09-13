@@ -1,6 +1,19 @@
-[03:42:11] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
-Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 10728.72it/s]
-[03:42:15]   attention: flash_attention_2
-[03:42:15]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 7377.51it/s]
-[03:42:29] BBQ: 22 examples, 11 template clusters
+[03:48:21] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9483.40it/s]
+[03:48:26]   attention: flash_attention_2
+[03:48:26]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 5240.92it/s]
+[03:48:39] BBQ: 22 examples, 11 template clusters
+[03:48:56] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[03:48:59] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[03:49:10] calibration[generic] seed=0: 4x128 tokens, hash=a3b61f91b7741d0a
+[03:49:12]   L0.all|rtn4: local_rel=1.32e-01 amp(actual)=29.46 amp(random)=25.02 cos(rand,actual)=+0.12 flips=0 (1s)
+[03:49:12] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[03:49:12]   L0.all|wanda50: local_rel=1.39e-01 amp(actual)=33.88 amp(random)=29.53 cos(rand,actual)=+0.14 flips=1 (2s)
+[03:49:13]   L16.all|rtn4: local_rel=6.79e-02 amp(actual)=2.58 amp(random)=2.19 cos(rand,actual)=+0.10 flips=0 (3s)
+[03:49:13] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[03:49:14]   L16.all|wanda50: local_rel=1.54e-01 amp(actual)=2.46 amp(random)=2.01 cos(rand,actual)=+0.03 flips=1 (3s)
+[03:49:15]   L31.all|rtn4: local_rel=5.29e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=0 (4s)
+[03:49:15] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[03:49:16]   L31.all|wanda50: local_rel=9.31e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=0 (5s)
+[03:49:16] summary: {'rtn4': {'n_sites': 3, 'amp_actual_mean': 11.014, 'amp_random_mean': 9.404, 'amp_reversed_mean': 11.202, 'actual_over_random_ratio': 1.118, 'cos_random_vs_actual_final': 0.074, 'logit_linf_actual_over_random': 1.056, 'direction_matters': False}, 'wanda50': {'n_sites': 3, 'amp_actual_mean': 12.446, 'amp_random_mean': 10.846, 'amp_reversed_mean': 10.477, 'actual_over_random_ratio': 1.124, 'cos_random_vs_actual_final': 0.054, 'logit_linf_actual_over_random': 1.149, 'direction_matters': False}}

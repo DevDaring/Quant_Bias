@@ -5,3 +5,4 @@ smoke/legacy/M3/--dtype/fp16	ok	30s
 smoke/legacy/M5/--dtype/fp16	ok	33s
 smoke/b1/M1/--granularity/layer	ok	51s
 smoke/b1/M1/--granularity/component	ok	50s
+smoke/b1/M3/--granularity/layer	ok	58s
