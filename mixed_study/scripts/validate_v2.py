@@ -102,6 +102,44 @@ def check_restore(sub, out):
         if h is not None and not fin(h, 0, 1): out["fail"].append(f"restoration/{sub}/{a}: harmful rate out of range")
     out["ok"].append(f"restoration/{sub} ({len(arms)} arms, equal_cost={d.get('equal_cost_ok')})")
 
+def check_directional(sub, out):
+    d, err = load(V2 / "directional" / sub / "directional_sites.json")
+    if err: out["fail"].append(f"directional/{sub}: {err}"); return
+    sites = d.get("sites") or {}
+    n_ex = d.get("n_examples", 0)
+    if len(sites) < 3: out["fail"].append(f"directional/{sub}: only {len(sites)} sites"); return
+    bad_n = [k for k, v in sites.items() if v.get("n") != n_ex]
+    if bad_n: out["fail"].append(f"directional/{sub}: sites with n != {n_ex}: {bad_n[:4]}")
+    for k, v in sites.items():
+        for f in ("pred_flip_rate", "obs_flip_rate", "obs_harmful_rate"):
+            if not fin(v.get(f), 0, 1): out["fail"].append(f"directional/{sub}/{k}: {f} out of range"); break
+        if not fin(v.get("example_pearson_pred_vs_actual"), -1, 1):
+            out["fail"].append(f"directional/{sub}/{k}: first-order pearson invalid")
+    fo = (d.get("site_level") or {}).get("example_level_first_order_validity") or {}
+    if fo.get("n_sites") != len(sites): out["fail"].append(f"directional/{sub}: site_level n_sites != sites")
+    if fin(fo.get("mean_pearson"), -1, 1) and fo["mean_pearson"] < 0.3:
+        out["warn"].append(f"directional/{sub}: mean first-order pearson {fo['mean_pearson']:.2f} < 0.3")
+    if all(v.get("obs_harmful_rate") == 0 for v in sites.values()):
+        out["info"].append(f"directional/{sub}: zero harmful flips at every site (vs_harmful correlations undefined by design)")
+    out["ok"].append(f"directional/{sub} ({len(sites)} sites x n={n_ex}, first-order r={fo.get('mean_pearson', float('nan')):.2f})")
+
+
+def check_holdout(sub, out):
+    d, err = load(V2 / "holdout" / sub / "holdout_discrim_implicit.json")
+    if err: out["fail"].append(f"holdout/{sub}: {err}"); return
+    if d.get("source") != "Anthropic/discrim-eval:implicit": out["fail"].append(f"holdout/{sub}: wrong source {d.get('source')}")
+    cfgs = d.get("configs") or {}
+    if not cfgs: out["fail"].append(f"holdout/{sub}: no configs"); return
+    if (d.get("n") or 0) < 1000: out["warn"].append(f"holdout/{sub}: only n={d.get('n')} prompts")
+    for c, v in cfgs.items():
+        ds = v.get("decision_sensitivity") or {}
+        if not fin(ds.get("decision_change_rate"), 0, 1): out["fail"].append(f"holdout/{sub}/{c}: decision_change_rate invalid")
+        if not fin(ds.get("mean_abs_delta_p_yes"), 0, 1): out["fail"].append(f"holdout/{sub}/{c}: mean_abs_delta_p_yes invalid")
+        if ds.get("n") != d.get("n"): out["fail"].append(f"holdout/{sub}/{c}: n mismatch {ds.get('n')} vs {d.get('n')}")
+        pg = (v.get("pair_gap_change") or {}).get("discrim_eval:matched_by_construction") or {}
+        if not pg.get("confirmatory_eligible"): out["fail"].append(f"holdout/{sub}/{c}: pair gap not confirmatory-eligible")
+    out["ok"].append(f"holdout/{sub} ({len(cfgs)} configs, n={d.get('n')}, {d.get('n_questions')} questions)")
+
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--json", action="store_true"); a = ap.parse_args()
@@ -125,7 +163,17 @@ def main():
             sub = tag + ("-quick" if mode == "smoke" else "")
             check_b1(sub, out, granularity=gran)
         elif stage == "restore":
-            check_restore(tag + ("-quick" if mode == "smoke" else ""), out)
+            if "--k" in extras:
+                k = extras[extras.index("--k") + 1]
+                hits = sorted((V2 / "restoration").glob(f"{tag}-k{k}-n*"))
+                if not hits: out["fail"].append(f"restoration/{tag}-k{k}-n*: no output directory"); continue
+                check_restore(hits[-1].name, out)
+            else:
+                check_restore(tag + ("-quick" if mode == "smoke" else ""), out)
+        elif stage == "dladder":
+            check_directional(tag, out)
+        elif stage == "confirm":
+            check_holdout(tag, out)
     verdict = "FAIL" if out["fail"] else ("WARN" if out["warn"] else "PASS")
     if a.json:
         print(json.dumps({"verdict": verdict, "n_failed_in_state": n_failed, **out}, indent=2))
