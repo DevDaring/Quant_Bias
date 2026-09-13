@@ -40,3 +40,4 @@ full/restore/M3/--k/8/--n-examples/8000	ok	774s
 full/restore/M3/--k/16/--n-examples/8000	ok	770s
 full/restore/M5/--k/8/--n-examples/8000	ok	862s
 full/restore/M5/--k/16/--n-examples/8000	ok	862s
+full/confirm/M3	ok	714s

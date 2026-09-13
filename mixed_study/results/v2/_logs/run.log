@@ -444,3 +444,7 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_09:17:23] skip full/restore/M5/--k/8/--n-examples/8000 (already ok)
 [2026-09-13_09:17:23] >>> full/restore/M5/--k/16/--n-examples/8000
 [2026-09-13_09:31:45] <<< full/restore/M5/--k/16/--n-examples/8000 ok in 862s
+[2026-09-13_09:31:51]   pushed full/restore/M5/--k/16/--n-examples/8000
+[2026-09-13_09:31:51] --- Stage 8: held-out confirmation on an untouched source (§3.6) ---
+[2026-09-13_09:31:51] >>> full/confirm/M3
+[2026-09-13_09:43:45] <<< full/confirm/M3 ok in 714s
