@@ -1,0 +1,13 @@
+[08:07:40] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 8161.82it/s]
+[08:07:45]   attention: flash_attention_2
+[08:07:45]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 8101.30it/s]
+[08:07:58] BBQ: 22 examples, 11 template clusters
+[08:08:16] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[08:08:18] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[08:08:28] calibration[generic] seed=0: 4x128 tokens, hash=a3b61f91b7741d0a
+Generating train split:   0%|          | 0/9450 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 9450/9450 [00:00<00:00, 121768.25 examples/s]
+[08:08:33] Discrim-Eval[implicit]: 270 examples, 2 decision questions
+[08:08:33] holdout: Discrim-Eval implicit, 270 prompts, 2 questions
+[08:08:56]   rtn4: mean|dP(yes)|=0.0415 decision_change_rate=0.1222 gender dP={'female': -0.0216, 'male': -0.0128, 'non-binary': -0.0064}
