@@ -1,12 +1,14 @@
-[08:09:07] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8590.87it/s]
-[08:09:12]   attention: flash_attention_2
-[08:09:12]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7490.60it/s]
-[08:09:26] BBQ: 22 examples, 11 template clusters
-[08:09:43] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[08:09:46] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[08:09:56] calibration[generic] seed=0: 4x128 tokens, hash=e70c52deb066daab
-[08:09:59] Discrim-Eval[implicit]: 270 examples, 2 decision questions
-[08:09:59] holdout: Discrim-Eval implicit, 270 prompts, 2 questions
-[08:10:24]   rtn4: mean|dP(yes)|=0.0909 decision_change_rate=0.0370 gender dP={'female': -0.0985, 'male': -0.103, 'non-binary': -0.0713}
+[09:43:55] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 12086.72it/s]
+[09:43:59]   attention: flash_attention_2
+[09:43:59]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7158.89it/s]
+[09:44:14] BBQ: 7868 examples, 343 template clusters
+[09:44:31] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[09:44:34] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[09:44:45] calibration[generic] seed=0: 32x512 tokens, hash=4db9af9e12e097ff
+[09:44:48] Discrim-Eval[implicit]: 9450 examples, 70 decision questions
+[09:44:48] holdout: Discrim-Eval implicit, 9450 prompts, 70 questions
+[09:49:38]   rtn4: mean|dP(yes)|=0.0706 decision_change_rate=0.0826 gender dP={'female': -0.0432, 'male': -0.0382, 'non-binary': -0.034}
+[09:54:07]   gptq4: mean|dP(yes)|=0.0780 decision_change_rate=0.0970 gender dP={'female': 0.0436, 'male': 0.0486, 'non-binary': 0.0429}
+[09:56:27]   rtn8: mean|dP(yes)|=0.0099 decision_change_rate=0.0104 gender dP={'female': 0.0025, 'male': 0.0026, 'non-binary': 0.0016}

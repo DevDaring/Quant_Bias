@@ -1,0 +1,146 @@
+{
+  "configs": {
+    "gptq4": {
+      "decision_sensitivity": {
+        "decision_change_rate": 0.09703703703703703,
+        "mean_abs_delta_p_yes": 0.07796970270289598,
+        "mean_delta_by_attribute": {
+          "age": {
+            "100": 0.049229778446037535,
+            "20": 0.04194194304132936,
+            "30": 0.04201446814198875,
+            "40": 0.0482522750784787,
+            "50": 0.050287104245488205,
+            "60": 0.04333037210151637,
+            "70": 0.04479645876566206,
+            "80": 0.04311448348843736,
+            "90": 0.04230859276112022
+          },
+          "gender": {
+            "female": 0.0436035731979796,
+            "male": 0.04860370600634177,
+            "non-binary": 0.04288454615236464
+          },
+          "race": {
+            "Asian": 0.04121747042268719,
+            "Black": 0.04503106190529463,
+            "Hispanic": 0.05156431385166983,
+            "Native American": 0.04449342545513367,
+            "white": 0.0428467706263581
+          }
+        },
+        "n": 9450
+      },
+      "pair_gap_change": {
+        "discrim_eval:matched_by_construction": {
+          "confirmatory_eligible": true,
+          "estimand": "shared_decision_P(yes)",
+          "mean_abs_gap_change": -0.006648923975367515,
+          "mean_abs_gap_comp": 0.05643043310165811,
+          "mean_abs_gap_dense": 0.06307935707702475,
+          "mean_signed_change": 0.00064266236204284,
+          "n": 9380
+        }
+      }
+    },
+    "rtn4": {
+      "decision_sensitivity": {
+        "decision_change_rate": 0.08264550264550265,
+        "mean_abs_delta_p_yes": 0.07064125986803338,
+        "mean_delta_by_attribute": {
+          "age": {
+            "100": -0.03636534546140685,
+            "20": -0.045243615989478625,
+            "30": -0.041706391778836775,
+            "40": -0.03915178932167295,
+            "50": -0.038064087540345626,
+            "60": -0.039268545001131666,
+            "70": -0.03775363520847438,
+            "80": -0.03471706777316413,
+            "90": -0.03413735244180901
+          },
+          "gender": {
+            "female": -0.04323530815517811,
+            "male": -0.03818803749836041,
+            "non-binary": -0.03404593118523482
+          },
+          "race": {
+            "Asian": -0.03341582780503427,
+            "Black": -0.04132744215103971,
+            "Hispanic": -0.04085137449941524,
+            "Native American": -0.03281137548721853,
+            "white": -0.04404277478858123
+          }
+        },
+        "n": 9450
+      },
+      "pair_gap_change": {
+        "discrim_eval:matched_by_construction": {
+          "confirmatory_eligible": true,
+          "estimand": "shared_decision_P(yes)",
+          "mean_abs_gap_change": 0.007396320164240965,
+          "mean_abs_gap_comp": 0.0704756772412667,
+          "mean_abs_gap_dense": 0.06307935707702475,
+          "mean_signed_change": -0.006019959015666449,
+          "n": 9380
+        }
+      }
+    },
+    "rtn8": {
+      "decision_sensitivity": {
+        "decision_change_rate": 0.01037037037037037,
+        "mean_abs_delta_p_yes": 0.009889735673479495,
+        "mean_delta_by_attribute": {
+          "age": {
+            "100": 0.0022296628549678616,
+            "20": 0.0022598356579122286,
+            "30": 0.0019100609719417648,
+            "40": 0.0022733192514697662,
+            "50": 0.0030259243982845943,
+            "60": 0.002166542721253374,
+            "70": 0.0026649848822695044,
+            "80": 0.0019883783358509545,
+            "90": 0.001533096943469426
+          },
+          "gender": {
+            "female": 0.0025436567245199805,
+            "male": 0.002580793213677006,
+            "non-binary": 0.0015594854009428481
+          },
+          "race": {
+            "Asian": 0.0022000345269565006,
+            "Black": 0.0029196813077677097,
+            "Hispanic": 0.0022612389025776693,
+            "Native American": 0.0017160616869676298,
+            "white": 0.0020428758076301992
+          }
+        },
+        "n": 9450
+      },
+      "pair_gap_change": {
+        "discrim_eval:matched_by_construction": {
+          "confirmatory_eligible": true,
+          "estimand": "shared_decision_P(yes)",
+          "mean_abs_gap_change": -0.000372165924167128,
+          "mean_abs_gap_comp": 0.06270719115285818,
+          "mean_abs_gap_dense": 0.06307935707702475,
+          "mean_signed_change": -0.000390920875893705,
+          "n": 9380
+        }
+      }
+    }
+  },
+  "n": 9450,
+  "n_questions": 70,
+  "provenance": {
+    "codes_git": "74a85f4",
+    "generated": "2026-09-13T09:56:27",
+    "li_results": "/workspace/Quant_Bias/quant-bias/provenance/living_inference_results",
+    "living_inference_git": "unknown",
+    "note": "source result files are read only; this is a corrected reanalysis",
+    "source_results": "/workspace/Quant_Bias/quant-bias/results"
+  },
+  "scope": "Confirms decision-sensitivity effects on prompts never used for any prior choice. Does NOT confirm BBQ findings; those need new templates.",
+  "source": "Anthropic/discrim-eval:implicit",
+  "tag": "qwen3_8b"
+}
