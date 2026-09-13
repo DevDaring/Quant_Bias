@@ -19,14 +19,15 @@ from pathlib import Path
 from .common import CONFIGS, RESULTS, TAGS, load_env, log, read_json, write_json, provenance
 
 
-def _ctx(model_key: str, device: str, attn: str | None):
+def _ctx(model_key: str, device: str, attn: str | None, dtype: str | None = None):
     import yaml
     from quantbias.model_adapters import ModelAdapter
     from quantbias.quantization import Quantizer
     load_env()
     models = yaml.safe_load((Path(__file__).resolve().parents[2] / "quant-bias" / "configs" / "models.yaml").read_text())
     m = models[model_key]
-    a = ModelAdapter.from_pretrained(m["id"], revision=m.get("revision", "main"), dtype=m.get("dtype", "auto"),
+    a = ModelAdapter.from_pretrained(m["id"], revision=m.get("revision", "main"),
+                                     dtype=dtype or m.get("dtype", "auto"),
                                      device=device, attn_implementation=attn)
     q = Quantizer(a)
     return m, a, q
@@ -62,10 +63,15 @@ def cmd_ladder(args):
 def cmd_legacy(args):
     from . import legacy_trace as LT
     from quantbias.data import wikitext_test_text
-    m, a, q = _ctx(args.model, args.device, args.attn)
+    m, a, q = _ctx(args.model, args.device, args.attn, args.dtype)
     text = wikitext_test_text(max_chars=60_000)
     res = LT.compare_to_saved(a, m["li_key"], text, seq_len=512)
-    out = RESULTS / "legacy" / TAGS[args.model]; out.mkdir(parents=True, exist_ok=True)
+    # The legacy 7B profiles were measured in fp16 (colab_unified_eval.py); the
+    # study's default is bf16. Keep dtype in the output path so both conditions
+    # are stored and the numerical-precision hypothesis can be tested directly.
+    sub = TAGS[args.model] + (f"-{args.dtype}" if args.dtype else "")
+    out = RESULTS / "legacy" / sub; out.mkdir(parents=True, exist_ok=True)
+    res["dtype"] = args.dtype or m.get("dtype", "auto")
     res["provenance"] = provenance(model=m["id"])
     write_json(out / "legacy_reproduction.json", res)
     log(f"{TAGS[args.model]}: {res['verdict']}  shape_spearman={res.get('shape_spearman')}  "
@@ -135,6 +141,7 @@ def main(argv=None):
         s.add_argument("--model", default="M1"); s.add_argument("--device", default="cpu")
         s.add_argument("--attn", default=None); s.add_argument("--quick", action="store_true")
         s.add_argument("--granularity", default="layer", choices=["layer", "component"])
+        s.add_argument("--dtype", default=None, help="override model dtype, e.g. fp16 to match the legacy runs")
     a = p.parse_args(argv)
     a.fn(a)
 

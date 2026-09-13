@@ -54,6 +54,9 @@ log "--- Stage 1: instrumentation pilot (§5.1): legacy trace on GPT-2 + Mistral
 run legacy M1
 run legacy M3
 run legacy M5
+# the saved 7B profiles were measured in fp16; test the precision hypothesis directly
+run legacy M3 --dtype fp16
+run legacy M5 --dtype fp16
 
 log "--- Stage 2: B1 pilot on GPT-2 Small (cheap; proves the panel end to end) ---"
 run b1 M1 --granularity layer
