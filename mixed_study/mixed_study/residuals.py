@@ -105,7 +105,7 @@ def per_token_norm(x: torch.Tensor, mask: torch.Tensor | None = None) -> torch.T
     """(batch, seq) L2 norm over hidden; padding positions zeroed if mask given."""
     n = x.norm(dim=-1)
     if mask is not None:
-        n = n * mask.to(n.dtype)
+        n = n * mask.to(n.device, n.dtype)
     return n
 
 
@@ -116,7 +116,9 @@ def norm_matched_random(residual: torch.Tensor, seed: int, mask: torch.Tensor | 
     z = z / z.norm(dim=-1, keepdim=True).clamp(min=1e-12)
     out = z * residual.norm(dim=-1, keepdim=True)
     if mask is not None:
-        out = out * mask.unsqueeze(-1).to(out.dtype)
+        # mask arrives as the CPU batch tensor; residual lives wherever the model
+        # ran. A CPU-only test can never catch this, the GPU smoke run did.
+        out = out * mask.unsqueeze(-1).to(out.device, out.dtype)
     return out
 
 
@@ -197,7 +199,8 @@ def propagate(adapter: ModelAdapter, boundary: Boundary, delta: torch.Tensor,
     final_abs = mean_norm(drift_final)
     cos = None
     if reference_final is not None:
-        a = drift_final[m.bool()]; b = reference_final[m.bool()]
+        mb = m.bool()
+        a = drift_final[mb]; b = reference_final.to(drift_final.device)[mb]
         cos = float(torch.nn.functional.cosine_similarity(a, b, dim=-1).mean())
     return Propagation(
         source="", boundary=boundary.layer, local_abs=local_abs, local_rel=local_rel,

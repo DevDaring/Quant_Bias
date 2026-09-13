@@ -41,6 +41,8 @@ def test_norm_matched_random_matches_per_token_norm(tiny):
     rnd = R.norm_matched_random(res, seed=3, mask=mask)
     n1, n2 = R.per_token_norm(res, mask), R.per_token_norm(rnd, mask)
     assert torch.allclose(n1, n2, atol=1e-5)
+    # the mask must be moved to the residual's device inside the function, not assumed to match
+    assert torch.allclose(R.norm_matched_random(res, seed=3, mask=mask.to(torch.int64)), rnd)
     assert not torch.allclose(res, rnd)
 
 
