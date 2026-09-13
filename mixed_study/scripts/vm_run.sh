@@ -83,7 +83,22 @@ log "--- Stage 5: equal-cost selective restoration (§5.7) ---"
 run restore M3
 run restore M5
 
-NF=$(grep -c FAILED "$STATE" 2>/dev/null || echo 0)
+log "--- Stage 6: directional predictor on the ladder protocol (§6) ---"
+run dladder M1 --n-examples 48
+run dladder M3 --n-examples 48
+run dladder M5 --n-examples 48
+
+log "--- Stage 7: restoration sized by power analysis: full final split, two intervention sizes (§8) ---"
+run restore M3 --k 8  --n-examples 8000
+run restore M3 --k 16 --n-examples 8000
+run restore M5 --k 8  --n-examples 8000
+run restore M5 --k 16 --n-examples 8000
+
+log "--- Stage 8: held-out confirmation on an untouched source (§3.6) ---"
+run confirm M3
+run confirm M5
+
+NF=$(grep -c FAILED "$STATE" 2>/dev/null); NF=${NF:-0}
 log "===== COMPLETE: $(grep -c "^$MODE/.*	ok	" "$STATE") ok, $NF failed ====="
 echo "$MODE DONE failed=$NF" > "$LOGS/${MODE}_COMPLETE"
 push "final ($MODE)"

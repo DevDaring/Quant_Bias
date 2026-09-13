@@ -118,3 +118,30 @@ def test_legacy_trace_reproduction_is_deterministic_and_correctly_shaped(tiny):
     assert LT.site_rho([0.5, 0.6], layer=1, mapping="into") == 0.5
     assert LT.site_rho([0.5, 0.6], layer=1, mapping="out") == 0.6
     assert LT.site_rho([0.5, 0.6], layer=0, mapping="into") is None
+
+
+def test_directional_ladder_runs_and_validates_first_order(tiny):
+    from mixed_study import directional_ladder as DL
+    from quantbias.data import Example
+    from quantbias.quantization import Quantizer
+    q = Quantizer(tiny)
+    ex = [Example(f"u{i}", "bbq", f"c{i}", "final", "g", f"Question {i}: pick one.\nAnswer:",
+                  [" yes", " no", " maybe"], i % 3, meta={"context_condition": "disambig"}) for i in range(6)]
+    res = DL.run(tiny, q, ex, layers=[0, 1, 2], bits=3, tag="tiny")
+    assert set(res["sites"]) == {"L0.all", "L1.all", "L2.all"}
+    for s in res["sites"].values():
+        assert s["n"] == 6 and 0 <= s["pred_flip_rate"] <= 1 and 0 <= s["obs_flip_rate"] <= 1
+        assert all(("pred_delta_s" in r and "actual_delta_s" in r) for r in s["rows"])
+    assert "site_level" in res and res["site_level"]["n_sites"] == 3
+    assert all(q.is_restored(c.id) for c in tiny.components)
+
+
+def test_power_model_is_net_zero_under_pure_churn():
+    import numpy as np
+    from mixed_study.power import paired_power
+    rng = np.random.default_rng(0)
+    n = 600; dc = np.ones(n, bool); harm = rng.random(n) < 0.06
+    clusters = [f"c{i // 4}" for i in range(n)]
+    # zero true reduction, heavy churn -> power should be near alpha, not 0 and not 1
+    p = paired_power(dc, harm, clusters, relative_reduction=0.0, churn=0.6, n_sim=60, n_boot=100)
+    assert p < 0.25, p

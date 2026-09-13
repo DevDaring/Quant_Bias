@@ -1,0 +1,26 @@
+{
+  "churn_between_comparable_4bit_methods": 0.6233766233766234,
+  "decision": "the full final split can detect a >= 35% reduction; a restoration that does less than that is not resolvable here and must not be claimed",
+  "harm_rate_per_dense_correct": 0.052062204192021636,
+  "n_clusters": 156,
+  "n_dense_correct": 1479,
+  "n_harmful_events": 77,
+  "n_rows": 1766,
+  "power": {
+    "reduce_15pct": 0.0,
+    "reduce_25pct": 0.03333333333333333,
+    "reduce_35pct": 0.94,
+    "reduce_50pct": 1.0
+  },
+  "provenance": {
+    "codes_git": "2a7e4cb",
+    "generated": "2026-09-13T07:13:58",
+    "li_results": "/home/Debz/Research/Quantization_with_Bias/Codes/living-inference/python/results",
+    "living_inference_git": "0a2a136",
+    "note": "source result files are read only; this is a corrected reanalysis",
+    "source_results": "/home/Debz/Research/Quantization_with_Bias/Codes/quant-bias/results"
+  },
+  "reference_config": "rtn4",
+  "smallest_effect_at_80pct_power": 0.35,
+  "tag": "mistral_7b_v0_1"
+}

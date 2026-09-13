@@ -33,7 +33,7 @@ def _ctx(model_key: str, device: str, attn: str | None, dtype: str | None = None
     return m, a, q
 
 
-def _examples_and_calib(a, cfg, quick: bool):
+def _examples_and_calib(a, cfg, quick: bool, n_override: int | None = None):
     import yaml
     from quantbias import data as D
     qcfg = yaml.safe_load((Path(__file__).resolve().parents[2] / "quant-bias" / "configs" / "experiments.yaml").read_text())
@@ -44,7 +44,7 @@ def _examples_and_calib(a, cfg, quick: bool):
         lim.update({"bbq_per_category": 2, "discrim_questions": 1})
     ex = D.load_benchmarks(qcfg["seed"], ("bbq", "winobias", "discrim_eval"), tuple(qcfg["split_fractions"]), lim)
     sel = D.by_split(ex, "selection"); fin = D.by_split(ex, "final")
-    n = 16 if quick else int(cfg["b1"]["answer_examples"])
+    n = 16 if quick else (n_override or int(cfg["b1"]["answer_examples"]))
     calib = D.build_calibration(a.tokenizer, "generic", 0, 4 if quick else 32, 128 if quick else 512, examples=ex,
                                 c4_docs=100 if quick else 2000)
     return sel[:n], fin[:n], calib.batches(a.tokenizer.pad_token_id, a.device)
@@ -101,7 +101,7 @@ def cmd_restore(args):
     from .records import Row
     cfg = yaml.safe_load((CONFIGS / "integrated_v2.yaml").read_text())
     m, a, q = _ctx(args.model, args.device, args.attn)
-    sel, fin, _ = _examples_and_calib(a, cfg, args.quick)
+    sel, fin, _ = _examples_and_calib(a, cfg, args.quick, n_override=args.n_examples)
     tag = TAGS[args.model]
     # predicted sites from the saved E2 map (selection split); utility ranking from ppl regret
     sites = read_json(Path(__file__).resolve().parents[2] / "quant-bias" / "results" / "e2" / tag / "e2_sites.json")
@@ -126,22 +126,51 @@ def cmd_restore(args):
                     [(d, c) for d, c in pairs if d.benchmark == "bbq" and d.context_condition == "disambig"])),
                 "stereotype_damage": (lambda t: t.__dict__ | t.rates())(harm.stereotype_damage(pairs)),
                 "group_disparity_bbq": harm.group_disparity(pairs)}
-    out = RESULTS / "restoration" / (tag + ("-quick" if args.quick else "")); out.mkdir(parents=True, exist_ok=True)
+    k = args.k or cfg["restoration"]["k_sites"]
+    sub = tag + ("-quick" if args.quick else "") + (f"-k{k}-n{len(fin)}" if not args.quick else "")
+    out = RESULTS / "restoration" / sub; out.mkdir(parents=True, exist_ok=True)
     r = cfg["restoration"]
-    res = MR.run(a, q, evaluate, predicted, utility, k=r["k_sites"] if not args.quick else 2,
+    log(f"restoration: k={k} sites, {len(fin)} final examples")
+    res = MR.run(a, q, evaluate, predicted, utility, k=k if not args.quick else 2,
                  n_random=r["n_random_schedules"] if not args.quick else 2, out_path=out / "restoration.json", tag=tag)
     log(f"equal_cost_ok={res['equal_cost_ok']}  summary={res['summary']}")
+
+
+def cmd_dladder(args):
+    from . import directional_ladder as DL
+    import yaml
+    cfg = yaml.safe_load((CONFIGS / "integrated_v2.yaml").read_text())
+    m, a, q = _ctx(args.model, args.device, args.attn)
+    sel, fin, _ = _examples_and_calib(a, cfg, args.quick, n_override=args.n_examples)
+    layers = list(range(a.n_layers)) if not args.quick else [0, a.n_layers // 2, a.n_layers - 1]
+    out = RESULTS / "directional" / (TAGS[args.model] + ("-quick" if args.quick else "")); out.mkdir(parents=True, exist_ok=True)
+    res = DL.run(a, q, fin, layers, out_dir=out, tag=TAGS[args.model])
+    log("site-level: " + str({k: v for k, v in res["site_level"].items() if k != "n_sites"}))
+
+
+def cmd_confirm(args):
+    from . import confirm_holdout as CH
+    import yaml
+    cfg = yaml.safe_load((CONFIGS / "integrated_v2.yaml").read_text())
+    m, a, q = _ctx(args.model, args.device, args.attn)
+    _, _, calib = _examples_and_calib(a, cfg, args.quick)
+    out = RESULTS / "holdout" / (TAGS[args.model] + ("-quick" if args.quick else "")); out.mkdir(parents=True, exist_ok=True)
+    CH.run(a, q, configs=("rtn4", "gptq4", "rtn8") if not args.quick else ("rtn4",), calib_batches=calib,
+           max_questions=2 if args.quick else None, out_dir=out, tag=TAGS[args.model])
 
 
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
-    for name, fn in (("audit", cmd_audit), ("ladder", cmd_ladder), ("legacy", cmd_legacy), ("b1", cmd_b1), ("restore", cmd_restore)):
+    for name, fn in (("audit", cmd_audit), ("ladder", cmd_ladder), ("legacy", cmd_legacy), ("b1", cmd_b1),
+                     ("restore", cmd_restore), ("dladder", cmd_dladder), ("confirm", cmd_confirm)):
         s = sub.add_parser(name); s.set_defaults(fn=fn)
         s.add_argument("--model", default="M1"); s.add_argument("--device", default="cpu")
         s.add_argument("--attn", default=None); s.add_argument("--quick", action="store_true")
         s.add_argument("--granularity", default="layer", choices=["layer", "component"])
         s.add_argument("--dtype", default=None, help="override model dtype, e.g. fp16 to match the legacy runs")
+        s.add_argument("--n-examples", type=int, default=None, help="override number of held-out examples")
+        s.add_argument("--k", type=int, default=None, help="restoration: number of sites to restore")
     a = p.parse_args(argv)
     a.fn(a)
 
