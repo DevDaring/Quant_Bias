@@ -1,16 +1,19 @@
-[08:03:09] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
-Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 11101.59it/s]
-[08:03:14]   attention: flash_attention_2
-[08:03:14]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 6886.11it/s]
-[08:03:28] BBQ: 22 examples, 11 template clusters
-[08:03:45] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[08:03:47] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[08:03:58] calibration[generic] seed=0: 4x128 tokens, hash=a3b61f91b7741d0a
-[08:03:59] restoration: k=16 sites, 16 final examples
-[08:04:15]   uniform_start        bytes=3959MiB restored=0 harmful/dc=0.0
-[08:04:18]   predicted            bytes=4124MiB restored=2 harmful/dc=0.0
-[08:04:21]   utility_matched      bytes=4124MiB restored=2 harmful/dc=0.0
-[08:04:25]   random_matched_0     bytes=4124MiB restored=2 harmful/dc=0.0
-[08:04:28]   random_matched_1     bytes=4124MiB restored=2 harmful/dc=0.0
-[08:04:28] equal_cost_ok=True  summary={'predicted_harmful': 0.0, 'utility_matched_harmful': 0.0, 'random_matched_harmful_mean': 0.0, 'random_matched_harmful_min': 0.0, 'uniform_start_harmful': 0.0}
+[08:45:23] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9241.98it/s]
+[08:45:27]   attention: flash_attention_2
+[08:45:27]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 7312.89it/s]
+[08:45:41] BBQ: 7868 examples, 343 template clusters
+[08:45:58] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[08:46:01] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[08:46:11] calibration[generic] seed=0: 32x512 tokens, hash=fc232d3702c843af
+[08:47:27] restoration: k=16 sites, 7491 final examples
+[08:48:55]   uniform_start        bytes=3959MiB restored=0 harmful/dc=0.052062204192021636
+[08:50:16]   predicted            bytes=4859MiB restored=16 harmful/dc=0.04056795131845842
+[08:51:35]   utility_matched      bytes=4859MiB restored=16 harmful/dc=0.048005409060175794
+[08:52:53]   random_matched_0     bytes=4859MiB restored=16 harmful/dc=0.05070993914807302
+[08:54:12]   random_matched_1     bytes=4859MiB restored=16 harmful/dc=0.05476673427991886
+[08:55:31]   random_matched_2     bytes=4859MiB restored=16 harmful/dc=0.05273833671399594
+[08:56:50]   random_matched_3     bytes=4859MiB restored=16 harmful/dc=0.04935767410412441
+[08:58:09]   random_matched_4     bytes=4859MiB restored=16 harmful/dc=0.041244083840432724
+[08:58:09] equal_cost_ok=True  summary={'predicted_harmful': 0.04056795131845842, 'utility_matched_harmful': 0.048005409060175794, 'random_matched_harmful_mean': 0.04976335361730899, 'random_matched_harmful_min': 0.041244083840432724, 'uniform_start_harmful': 0.052062204192021636}
