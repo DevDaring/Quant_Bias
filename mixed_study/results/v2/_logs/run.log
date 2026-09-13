@@ -70,3 +70,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_03:42:47] skip smoke/legacy/M5 (already ok)
 [2026-09-13_03:42:47] >>> smoke/legacy/M3/--dtype/fp16
 [2026-09-13_03:43:17] <<< smoke/legacy/M3/--dtype/fp16 ok in 30s
+[2026-09-13_03:43:24] >>> smoke/legacy/M5/--dtype/fp16
+[2026-09-13_03:43:57] <<< smoke/legacy/M5/--dtype/fp16 ok in 33s
