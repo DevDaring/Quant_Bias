@@ -1,19 +1,50 @@
-[03:48:21] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
-Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9483.40it/s]
-[03:48:26]   attention: flash_attention_2
-[03:48:26]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
-Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 5240.92it/s]
-[03:48:39] BBQ: 22 examples, 11 template clusters
-[03:48:56] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
-[03:48:59] Discrim-Eval[explicit]: 15 examples, 1 decision questions
-[03:49:10] calibration[generic] seed=0: 4x128 tokens, hash=a3b61f91b7741d0a
-[03:49:12]   L0.all|rtn4: local_rel=1.32e-01 amp(actual)=29.46 amp(random)=25.02 cos(rand,actual)=+0.12 flips=0 (1s)
-[03:49:12] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
-[03:49:12]   L0.all|wanda50: local_rel=1.39e-01 amp(actual)=33.88 amp(random)=29.53 cos(rand,actual)=+0.14 flips=1 (2s)
-[03:49:13]   L16.all|rtn4: local_rel=6.79e-02 amp(actual)=2.58 amp(random)=2.19 cos(rand,actual)=+0.10 flips=0 (3s)
-[03:49:13] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
-[03:49:14]   L16.all|wanda50: local_rel=1.54e-01 amp(actual)=2.46 amp(random)=2.01 cos(rand,actual)=+0.03 flips=1 (3s)
-[03:49:15]   L31.all|rtn4: local_rel=5.29e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=0 (4s)
-[03:49:15] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
-[03:49:16]   L31.all|wanda50: local_rel=9.31e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=+0.00 flips=0 (5s)
-[03:49:16] summary: {'rtn4': {'n_sites': 3, 'amp_actual_mean': 11.014, 'amp_random_mean': 9.404, 'amp_reversed_mean': 11.202, 'actual_over_random_ratio': 1.118, 'cos_random_vs_actual_final': 0.074, 'logit_linf_actual_over_random': 1.056, 'direction_matters': False}, 'wanda50': {'n_sites': 3, 'amp_actual_mean': 12.446, 'amp_random_mean': 10.846, 'amp_reversed_mean': 10.477, 'actual_over_random_ratio': 1.124, 'cos_random_vs_actual_final': 0.054, 'logit_linf_actual_over_random': 1.149, 'direction_matters': False}}
+[04:06:55] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 12266.27it/s]
+[04:06:59]   attention: flash_attention_2
+[04:06:59]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 7953.18it/s]
+[04:07:12] BBQ: 7868 examples, 343 template clusters
+[04:07:29] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[04:07:32] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[04:07:43] calibration[generic] seed=0: 32x512 tokens, hash=fc232d3702c843af
+[04:07:49]   L0.all|rtn4: local_rel=1.31e-01 amp(actual)=32.31 amp(random)=23.75 cos(rand,actual)=+0.19 flips=4 (3s)
+[04:07:51]   L0.all|rtn8: local_rel=1.04e-02 amp(actual)=130.65 amp(random)=131.71 cos(rand,actual)=+0.48 flips=2 (5s)
+[04:07:58]   L0.all|gptq4: local_rel=6.97e-02 amp(actual)=30.68 amp(random)=31.45 cos(rand,actual)=+0.24 flips=1 (12s)
+[04:07:59] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[04:08:01]   L0.all|wanda50: local_rel=1.30e-01 amp(actual)=30.99 amp(random)=26.60 cos(rand,actual)=+0.20 flips=1 (15s)
+[04:08:04]   L4.all|rtn4: local_rel=8.06e-02 amp(actual)=9.61 amp(random)=8.83 cos(rand,actual)=+0.20 flips=6 (18s)
+[04:08:06]   L4.all|rtn8: local_rel=6.57e-03 amp(actual)=56.41 amp(random)=52.34 cos(rand,actual)=+0.47 flips=3 (20s)
+[04:08:13]   L4.all|gptq4: local_rel=8.20e-02 amp(actual)=12.26 amp(random)=9.33 cos(rand,actual)=+0.12 flips=5 (27s)
+[04:08:14] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[04:08:16]   L4.all|wanda50: local_rel=1.69e-01 amp(actual)=15.51 amp(random)=7.75 cos(rand,actual)=+0.03 flips=6 (30s)
+[04:08:19]   L9.all|rtn4: local_rel=7.38e-02 amp(actual)=4.10 amp(random)=3.59 cos(rand,actual)=+0.15 flips=4 (33s)
+[04:08:22]   L9.all|rtn8: local_rel=5.98e-03 amp(actual)=23.18 amp(random)=24.38 cos(rand,actual)=+0.47 flips=1 (36s)
+[04:08:28]   L9.all|gptq4: local_rel=7.67e-02 amp(actual)=4.52 amp(random)=3.94 cos(rand,actual)=+0.16 flips=3 (43s)
+[04:08:29] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[04:08:32]   L9.all|wanda50: local_rel=1.63e-01 amp(actual)=4.43 amp(random)=3.44 cos(rand,actual)=+0.01 flips=6 (46s)
+[04:08:35]   L13.all|rtn4: local_rel=6.96e-02 amp(actual)=3.35 amp(random)=2.79 cos(rand,actual)=+0.13 flips=1 (49s)
+[04:08:37]   L13.all|rtn8: local_rel=5.69e-03 amp(actual)=17.19 amp(random)=16.20 cos(rand,actual)=+0.47 flips=2 (51s)
+[04:08:44]   L13.all|gptq4: local_rel=7.10e-02 amp(actual)=3.35 amp(random)=2.75 cos(rand,actual)=+0.14 flips=2 (58s)
+[04:08:45] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[04:08:48]   L13.all|wanda50: local_rel=1.52e-01 amp(actual)=3.03 amp(random)=2.40 cos(rand,actual)=+0.08 flips=8 (62s)
+[04:08:51]   L18.all|rtn4: local_rel=6.19e-02 amp(actual)=2.23 amp(random)=1.94 cos(rand,actual)=+0.07 flips=2 (65s)
+[04:08:53]   L18.all|rtn8: local_rel=5.21e-03 amp(actual)=8.12 amp(random)=7.53 cos(rand,actual)=+0.44 flips=3 (68s)
+[04:09:00]   L18.all|gptq4: local_rel=6.52e-02 amp(actual)=2.10 amp(random)=1.91 cos(rand,actual)=+0.07 flips=2 (75s)
+[04:09:01] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[04:09:04]   L18.all|wanda50: local_rel=1.32e-01 amp(actual)=2.13 amp(random)=1.89 cos(rand,actual)=+0.02 flips=5 (78s)
+[04:09:07]   L22.all|rtn4: local_rel=3.88e-02 amp(actual)=1.76 amp(random)=1.70 cos(rand,actual)=+0.06 flips=1 (81s)
+[04:09:10]   L22.all|rtn8: local_rel=3.67e-03 amp(actual)=5.12 amp(random)=5.13 cos(rand,actual)=+0.42 flips=1 (84s)
+[04:09:17]   L22.all|gptq4: local_rel=4.15e-02 amp(actual)=1.74 amp(random)=1.68 cos(rand,actual)=+0.06 flips=1 (91s)
+[04:09:18] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[04:09:20]   L22.all|wanda50: local_rel=8.55e-02 amp(actual)=1.74 amp(random)=1.62 cos(rand,actual)=+0.02 flips=4 (94s)
+[04:09:23]   L27.all|rtn4: local_rel=3.34e-02 amp(actual)=1.47 amp(random)=1.43 cos(rand,actual)=+0.03 flips=2 (98s)
+[04:09:26]   L27.all|rtn8: local_rel=3.34e-03 amp(actual)=3.01 amp(random)=2.95 cos(rand,actual)=+0.34 flips=3 (101s)
+[04:09:33]   L27.all|gptq4: local_rel=3.35e-02 amp(actual)=1.48 amp(random)=1.44 cos(rand,actual)=+0.04 flips=4 (108s)
+[04:09:34] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[04:09:37]   L27.all|wanda50: local_rel=6.87e-02 amp(actual)=1.43 amp(random)=1.40 cos(rand,actual)=+0.01 flips=3 (111s)
+[04:09:40]   L31.all|rtn4: local_rel=5.17e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=-0.00 flips=5 (115s)
+[04:09:43]   L31.all|rtn8: local_rel=4.51e-03 amp(actual)=1.00 amp(random)=1.03 cos(rand,actual)=+0.00 flips=1 (118s)
+[04:09:51]   L31.all|gptq4: local_rel=3.87e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=-0.00 flips=3 (125s)
+[04:09:52] Wanda per-row 50%: achieved 0.5000 over 218103808 weights
+[04:09:54]   L31.all|wanda50: local_rel=9.30e-02 amp(actual)=1.00 amp(random)=1.00 cos(rand,actual)=-0.00 flips=12 (128s)
+[04:09:54] summary: {'rtn4': {'n_sites': 8, 'amp_actual_mean': 6.979, 'amp_random_mean': 5.628, 'amp_reversed_mean': 6.813, 'actual_over_random_ratio': 1.126, 'cos_random_vs_actual_final': 0.105, 'logit_linf_actual_over_random': 1.161, 'direction_matters': False}, 'rtn8': {'n_sites': 8, 'amp_actual_mean': 30.584, 'amp_random_mean': 30.16, 'amp_reversed_mean': 29.303, 'actual_over_random_ratio': 1.019, 'cos_random_vs_actual_final': 0.387, 'logit_linf_actual_over_random': 1.047, 'direction_matters': False}, 'gptq4': {'n_sites': 8, 'amp_actual_mean': 7.141, 'amp_random_mean': 6.688, 'amp_reversed_mean': 7.118, 'actual_over_random_ratio': 1.102, 'cos_random_vs_actual_final': 0.102, 'logit_linf_actual_over_random': 1.175, 'direction_matters': False}, 'wanda50': {'n_sites': 8, 'amp_actual_mean': 7.533, 'amp_random_mean': 5.763, 'amp_reversed_mean': 6.612, 'actual_over_random_ratio': 1.242, 'cos_random_vs_actual_final': 0.047, 'logit_linf_actual_over_random': 1.277, 'direction_matters': False}}
