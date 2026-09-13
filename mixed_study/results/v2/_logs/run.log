@@ -334,3 +334,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_07:56:14] <<< smoke/dladder/M1/--n-examples/48 ok in 80s
 [2026-09-13_07:56:21] >>> smoke/dladder/M3/--n-examples/48
 [2026-09-13_07:58:39] <<< smoke/dladder/M3/--n-examples/48 ok in 138s
+[2026-09-13_07:58:46] >>> smoke/dladder/M5/--n-examples/48
+[2026-09-13_08:01:31] <<< smoke/dladder/M5/--n-examples/48 ok in 165s

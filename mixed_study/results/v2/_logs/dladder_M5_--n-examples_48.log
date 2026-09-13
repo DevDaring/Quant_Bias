@@ -1,0 +1,14 @@
+[07:58:48] Loading Qwen/Qwen3-8B@main (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:38<02:33, 38.35s/it]Fetching 5 files:  40%|████      | 2/5 [01:13<01:48, 36.20s/it]Fetching 5 files:  60%|██████    | 3/5 [01:29<00:54, 27.03s/it]Fetching 5 files:  80%|████████  | 4/5 [01:34<00:18, 18.49s/it]Fetching 5 files: 100%|██████████| 5/5 [01:34<00:00, 18.92s/it]
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8708.99it/s]
+[08:00:33]   attention: flash_attention_2
+[08:00:33]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7197.90it/s]
+[08:00:48] BBQ: 22 examples, 11 template clusters
+[08:01:06] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[08:01:08] Discrim-Eval[explicit]: 15 examples, 1 decision questions
+[08:01:19] calibration[generic] seed=0: 4x128 tokens, hash=e70c52deb066daab
+[08:01:23]   L 0: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.8763 agree=1.00 (4s)
+[08:01:27]   L18: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.3507 agree=1.00 (8s)
+[08:01:29]   L35: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.3693 agree=1.00 (10s)
+[08:01:29] site-level: {'note': 'too few sites'}
