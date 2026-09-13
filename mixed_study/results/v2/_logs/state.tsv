@@ -20,3 +20,4 @@ full/b1/M1/--granularity/layer	ok	79s
 full/b1/M1/--granularity/component	ok	101s
 full/b1/M3/--granularity/layer	ok	183s
 full/b1/M3/--granularity/component	ok	239s
+full/b1/M5/--granularity/layer	ok	194s
