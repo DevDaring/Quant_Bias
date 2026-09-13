@@ -1,293 +1,244 @@
-# Next plan: integrate compression mechanics with social-bias measurement
+# Completion plan for the integrated compression–bias study
 
-**Date:** 11 September 2026. **Status:** evidence review and proposed next experiments; no new model runs were performed for this document.
+**Updated:** 13 September 2026. **Purpose:** finish the scientific work needed for a defensible TACL-targeted manuscript. This document specifies remaining work; it does not report new experimental results or authorize infrastructure spending.
 
-## 1. Recommendation
+## 1. Decision and finite scope
 
-**Develop one integrated mechanistic study: “From Compression Error to Unequal Outcomes: Propagation, Decision Margins, and Social Bias in Language Models.”**
+Complete **three focused experiments**, preceded by a measurement/code audit. Keep the seven-model exploratory results; use **Mistral-7B-v0.1 and Qwen3-8B** for the main confirmation experiments. Use GPT-2 Small for numerical and implementation checks. No additional model family, broad allocator sweep, or new compression algorithm is required.
 
-The two projects have complementary roles. `living-inference` supplies local compression-error analysis, perturbation instrumentation, and pruning/structural-sensitivity experiments. `quant-bias` supplies actual quantization interventions, demographic tasks, group metrics, calibration experiments, and allocation controls. The scientific connection is:
+The final research question is:
 
-```text
-Compression operation
-    → local residual magnitude and direction
-    → propagation through the remaining network
-    → change in task-relevant answer scores
-    → errors, stereotypes, and disparities across groups
-```
+> How do compression residuals propagate into task-relevant score changes, and when do those changes create stereotype-aligned errors or unequal outcomes across groups?
 
-The best route is a **measurement and mechanism contribution**, with mitigation as a conditional extension. Successful execution is already demonstrated; the current data do not yet establish a reliable bias predictor, a successful quantitative transfer of the earlier rho profile, or an allocator that beats uniform quantization. Integration should establish which parts of the compression analysis transfer, and under which conditions, rather than require every existing method to win.
+The three experiments are:
 
-**Immediate priority:** reanalyse existing records and correct the measurement issues below, then run a small matched pruning–quantization experiment on Mistral-7B and Qwen3-8B. Expand examples and independent templates after that pilot. Another seven-model allocator sweep is premature.
+1. **C1 — Independent behavioral confirmation and predictor evaluation:** new templates, validated scoring, and out-of-sample comparison of directional, energy, and utility diagnostics.
+2. **C2 — Direction and dtype controls:** establish the scope of residual-direction effects and the fp16/bf16 reproduction result, using matched inputs and valid uncertainty.
+3. **C3 — Selective restoration:** test whether the diagnostic identifies useful interventions at matched added cost, with a sample size justified before evaluation.
 
-## 2. Evidence reviewed and current results
+Successful completion means these questions have defensible answers, including negative answers. It does not require a mitigation win. If C3 establishes no practical benefit, the manuscript remains a measurement-and-mechanism paper. TACL readiness additionally requires a clear contribution beyond existing compression–bias studies and claims supported by the final evidence; completion cannot guarantee acceptance. [TACL criteria](https://transacl.org/ojs/index.php/tacl/about/submissions).
 
-I read [FINDINGS.md](quant-bias/results/FINDINGS.md), E0–E7 result summaries and selected per-example records, the experiment configurations, and the relevant measurement, bridge, allocation, and statistical code. I compared these with the surviving `living-inference` result files and propagation implementation.
+## 2. What is already complete and should be reused
 
-The result validator was run without retry actions: **36 checked stages, zero artifact failures, three margin-check warnings, and one repository-freshness warning**. This confirms artifact completeness under the validator's checks, not scientific validity of every metric. Although stage names contain `full/`, this completed run used the **budget sampling profile**. Quick-run directories are excluded from the tables below.
-
-### 2.1 Residual energy is promising, but the strongest summary mixes intervention types
-
-I recomputed Spearman correlations from each model's [E6 bridge rows](quant-bias/results/e6), using average ranks for ties. These compare selection-set `V_final_mean` with final-set `harmful_flip_rate`. The group-conditioned energies are first averaged across groups; the outcome is an aggregate correct-to-incorrect flip rate.
-
-| Model | All sites: n / correlation | Whole layers only: n / correlation | Components only: n / correlation |
-|---|---:|---:|---:|
-| GPT-2 Small | 28 / **0.760** | 12 / **−0.208** | 16 / 0.809 |
-| GPT-2 Medium | 40 / **0.635** | 24 / **0.475** | 16 / 0.361 |
-| LFM2-2.6B | 58 / **0.466** | 30 / **0.422** | 28 / 0.364 |
-| Qwen3.5-2B | 49 / **0.560** | 24 / **0.487** | 25 / 0.346 |
-| Mistral-7B-v0.1 | 60 / **0.366** | 32 / **0.146** | 28 / 0.423 |
-| Qwen3-8B | 64 / **0.568** | 36 / **0.126** | 28 / 0.684 |
-| Llama-2-7B | 60 / **0.548** | 32 / **0.318** | 28 / 0.431 |
-
-These are exploratory point estimates, without new uncertainty intervals. The site counts in `FINDINGS.md` §2.1 do not consistently match the corresponding `V_final_vs_harmful_flips.n` fields; use the source-specific counts above when reporting this calculation.
-
-**Interpretation:** a positive pooled association is present in all seven models. It is not uniform evidence of predictive success at a fixed intervention granularity. Whole-layer quantization changes many more weights than individual-component quantization. Components are additionally sampled from four layers shortlisted using the selection-set predictor. Pooling these intervention types can inflate a correlation through intervention size and selection effects. Layers and their subcomponents are also dependent observations.
-
-Component-only correlations remain promising, but concern selected components, not an unbiased sample of all components. The layer-only results identify a real next question: **does residual direction and answer-score sensitivity explain what residual magnitude misses?**
-
-### 2.2 Allocation and restoration results
-
-The original objective is `J = H + A + gap`, with signed disparity/gap changes. Preserve its results as originally defined.
-
-| Model / final allocation | J, lower better | H | Disambiguated BBQ accuracy | Accounted MiB |
-|---|---:|---:|---:|---:|
-| Mistral uniform4 | **0.0902** | 0.1389 | 0.8194 | 3958.51 |
-| Mistral greedy | 0.1048 | 0.1111 | 0.8199 | 3988.74 |
-| Qwen3-8B uniform4 | **0.2731** | 0.1667 | 0.8641 | 5815.96 |
-| Qwen3-8B greedy | 0.3344 | 0.1875 | 0.8641 | 5819.99 |
-
-Sources: [Mistral E4](quant-bias/results/e4/mistral_7b_v0_1/e4_results.json), [Qwen3-8B E4](quant-bias/results/e4/qwen3_8b/e4_results.json).
-
-The greedy allocator loses to uniform4 on the declared objective on **both** models. Mistral's lower H alone does not establish superiority. Both searches used 200 evaluations and accepted two steps; their wall times were approximately 99 and 127 minutes. This documents the behavior of the current search, not an optimum over all allocations.
-
-The allocations obey a common budget ceiling, but do not consume identical bytes. The restoration controls are a different experiment: for example, Mistral `restore_predicted` uses **5806.13 MiB**, exceeding the **4354.36 MiB** allocation ceiling. Predicted, random, and utility restoration also change different numbers of weights because whole layers and components are mixed. They cannot establish a fixed-cost restoration advantage.
-
-E3 does not support “balanced calibration always helps.” On Mistral, mean H is 0.0972 for generic, 0.1111 for balanced, and 0.0833 for imbalanced calibration across three saved seeds; Qwen3.5-2B also has a higher H for balanced than generic calibration. These are descriptive values under the current metric and protocol, not evidence favoring deliberate imbalance. [E3 results](quant-bias/results/e3).
-
-### 2.3 Evidence that remains reusable
-
-- E0 records exact weight round-trip and restoration checks across seven models. This is valuable experimental infrastructure.
-- E1 provides dense/RTN/GPTQ records with candidate scores and demographic metadata. These support substantial reanalysis without GPU inference.
-- E2 measures actual quantization residuals on selection inputs and evaluates answer flips on final inputs. This separation is useful even though the current predictor and target need refinement.
-- `living-inference` contributes local operator-norm inequalities and a substantial library of compression interventions. Its random-noise profiles, pruning results, and local proofs retain value within their actual assumptions.
-- E5 provides pruning outcomes, but transfer coverage is incomplete: the Llama-2-7B result explicitly says its E4 allocation is missing. Stage completion should not be described as completion of every intended scientific comparison.
-
-## 3. Measurement issues to resolve before spending on larger runs
-
-### 3.1 Define social harm separately from generic answer damage
-
-In [evaluate.py](quant-bias/quantbias/evaluate.py), `flip_table` labels a correct-to-incorrect transition a `harmful_flip`. This is a utility-loss event. It does not require a stereotype-aligned error, unequal treatment, or a group disparity. Its denominator includes all scored rows, including Discrim-Eval rows without correctness labels; those cannot contribute a correct-to-incorrect event.
-
-For the next protocol, report separate outcomes:
-
-1. **Task damage:** correct-to-incorrect transitions among labeled examples, with both total-labeled and dense-correct denominators declared.
-2. **Stereotype-aligned damage:** newly incorrect stereotype-aligned answers on disambiguated BBQ; report unconditional counts/rates and the official bias metrics.
-3. **Disparity:** group-specific changes in error and their contrasts, adjusting for benchmark/category and task composition.
-4. **Decision sensitivity to identity:** changed answer probabilities on genuinely matched Discrim-Eval or audited counterfactual inputs, without inventing correctness labels.
-
-Retain beneficial flips and absolute dense/compressed performance. A smaller gap achieved by damaging the better-performing group is not sufficient evidence of mitigation. BBQ groups in this implementation describe benchmark stereotype targets; they should not be presented as observed outcomes for real demographic populations.
-
-The present E6 macro-average of group energies versus aggregate task damage does **not** show that group conditioning adds predictive value. Compare a global diagnostic, a group-macro diagnostic, and a model-by-site-by-group diagnostic explicitly.
-
-### 3.2 Correct the margin check before attributing violations to rounding
-
-[trace.py](quant-bias/quantbias/trace.py) computes a margin relative to the gold answer, takes its absolute value, and checks stability of the predicted answer. With three candidates, these are different statements when the dense answer is already wrong.
-
-An exact-arithmetic counterexample, with candidate 0 the gold answer:
-
-```text
-dense logits:      [-10, 1, 0]       prediction = 1
-compressed logits: [-10, 0, 1]       prediction = 2
-epsilon = 1; absolute gold margin = 11 > 2 × epsilon
-```
-
-The predicted wrong answer changes, while the gold answer remains wrong. This satisfies the implemented violation condition without violating a correct margin-stability theorem. It provides a concrete alternative explanation for the recorded warnings; the individual events must be examined before assigning their cause.
-
-Use either the **dense winner's top-two margin** to certify argmax stability, or a **positive gold margin** to certify preservation of a correct answer. Treat ties and duplicate first-token candidate IDs explicitly. Apply the theorem to the same score and candidate set used in evaluation. Full-continuation answers require sequence-score analysis; the first-token diagnostic is only a proxy. Unify BOS insertion, truncation, and boundary handling between tracing and candidate scoring.
-
-### 3.3 Audit counterfactual pairs and answer correspondence
-
-[data.py](quant-bias/quantbias/data.py) constructs BBQ pairs from rows sharing a template/polarity but having different correct-answer groups. This does not ensure that only an irrelevant identity cue changed. These pairs remain unaudited. Meanwhile, `pair_gap_summary` in [evaluate.py](quant-bias/quantbias/evaluate.py) uses the first example's label index to score both examples, even when labels/candidate ordering differ.
-
-Fix semantic answer correspondence first. If the estimand compares probabilities of the correct answer, use each example's own correct-answer mapping. If it compares a shared decision, map that decision explicitly. Neither fix alone makes arbitrary template-matched examples valid counterfactuals. Exclude unaudited pairs from confirmatory counterfactual claims and retain them as template-matched comparisons if useful.
-
-This affects the interpretation of the E4 `gap` term, calibration/comparator contrasts, and any claim that identity changes caused an observed effect. Preserve the original results; create a corrected protocol version with fresh validation.
-
-### 3.4 Establish competence under the scoring adaptation
-
-The dense results need attention before treating all seven models as equally informative fairness evaluations:
-
-- Mistral's disambiguated BBQ accuracy is **83.75%**, but its ambiguous-context accuracy is **1.47%**. Qwen3-8B has **89.75%** and **3.00%**, respectively.
-- Mistral's WinoBias pro-/anti-stereotypical accuracies are approximately **25.6% / 25.0%** in a two-candidate task; Llama-2-7B is similarly below the 50% chance reference.
-
-These observations do not prove a parser or scoring bug, but they require label, prompt, and candidate-length checks. The saved records include both summed and mean log-probabilities: compare their behavior as a declared sensitivity analysis. Audit example labels manually, inspect answer lengths and identity words, and validate a balanced answer-letter format on the selection set. Do not choose a format because it improves the desired fairness outcome. Preserve the original sum-score results as one evaluation condition.
-
-Use GPT-2 variants principally for mechanistic instrumentation until task competence is established. Limit claims for other low-performing model/task combinations accordingly. BBQ ambiguous and disambiguated conditions serve different purposes and should remain separate. [BBQ protocol](https://aclanthology.org/2022.findings-acl.165/), [WinoBias source](https://github.com/uclanlp/corefBias).
-
-### 3.5 Repair uncertainty estimation; full sampling alone is insufficient
-
-In the Mistral and Qwen3-8B E7 results, the H/A bootstrap retains only **293 of 2000 draws (14.65%)**. [statistics.py](quant-bias/quantbias/statistics.py) returns NaN whenever any included group is absent from a bootstrap draw, then discards that draw. The reported interval is therefore conditional on a restrictive group-presence event, in addition to the difficulties of bootstrapping a maximum.
-
-The final disambiguated BBQ records contain 43 groups, of which 29 meet the current minimum of 20 examples. The smallest included group has 24 examples, and some included groups have only **two distinct template clusters**. More variants of those two templates do not create new independent templates. A full sampling profile can improve within-template estimation but cannot guarantee reliable generalization across templates.
-
-Reanalyse group-wise paired differences, record examples **and supporting clusters per group**, and construct a joint interval using a resampling scheme appropriate to the shared-template structure. A cluster-weight or multiplier approach can preserve group support, but its finite-sample coverage must be checked in simulations matching this design. Groups with too few independent templates need a restricted descriptive claim or more independent data. Do not merely suppress NaNs, pool unlike identities to obtain significance, or apply the current bootstrap more times.
-
-Overlapping method-specific confidence intervals do **not** establish that methods are statistically indistinguishable. Compare paired differences between methods on the same examples/clusters. Failure to establish superiority is also not equivalence. Report the existing E7 ranking as unresolved under the current analysis, and recompute direct comparisons with valid uncertainty.
-
-### 3.6 Preserve clean validation and comparator identities
-
-- The existing final results have now informed this revised plan. They are discovery evidence for new scores, metrics, and methods. Reserve new independent templates/data or a genuinely untouched evaluation source for confirmation; merely adding instantiations of inspected templates is weaker evidence.
-- E5 describes transfer from BBQ, but E4 constructs its search examples from the available selection split across benchmarks, and its pair-gap term uses those pairs. WinoBias/Discrim-Eval are therefore not necessarily unseen task formats. Audit actual benchmark membership and enforce BBQ-only selection for any new task-transfer claim.
-- [baselines.py](quant-bias/quantbias/baselines.py) explicitly implements literature-inspired methods with stated assumptions, in some cases from abstracts. Their results are evidence about those implementations. Validate the authors' code or full-method reproduction before making claims against Fair-GPTQ, Debias-SparseGPT, or Critical Weight Protection.
-- The present quantization is simulated; MiB values are accounted storage, not packed-runtime measurements. Pruning comparator `bytes_total=0` is a missing-value convention, not zero storage. Mark it missing in comparison tables.
-
-## 4. The integrated research question and contribution
-
-**Question:** Which properties of a compression residual determine whether it damages general performance, changes a socially relevant decision, or creates a disparity between groups?
-
-Use three parts, each traceable to both projects:
-
-| Part | Existing foundation | Required integrated evidence |
+| Existing evidence | Status | Use in the final paper |
 |---|---|---|
-| Local error | `living-inference` norm inequalities, pruning, and component interventions | Quantization and pruning measured at the same component interfaces with the same input tensors. |
-| Propagation | Existing random-perturbation traces; `quant-bias` actual-residual traces | Transfer tests for residual magnitude **and direction**, controlling site, perturbation size, depth, and architecture. |
-| Behavioral consequence | `quant-bias` candidate scores and demographic metadata | Output-score changes connected to task damage, stereotype errors, and group contrasts separately. |
+| `quant-bias` E0–E7 across seven models | Completed exploratory run | Breadth, baseline outcomes, calibration/allocation findings, and records for reanalysis. |
+| Corrected behavioral outcome definitions, pair handling, and margin checks | Implemented in `mixed_study`; validation caveats below | Measurement methods, with explicit scope and tests. |
+| Legacy reproduction | GPT-2 reproduced; Mistral improves from approximately 0.32 in bf16 to 0.93 in fp16; Qwen remains partial | Controlled reproducibility finding with model-specific conclusions. |
+| B1 layer/component/source panels | Completed discovery panels | Hypothesis generation and planning; strengthen before confirmatory mechanism claims. |
+| Fixed-granularity predictor ladder | Completed exploratory analysis; no consistent group-conditioning advantage | Negative evidence, after correcting baseline labels and targets. |
+| Equal-cost restoration pilot | Completed, with identical reported harm rates across arms at n=200 | Pilot for selecting effect size, intervention size, and sample design. |
+| Local error accounting in `living-inference` | Existing Lean source and numerical evidence | Technical foundation; verify exact theorem assumptions, build status, and provenance before manuscript claims. |
 
-Do not define success as showing that the earlier rho “fails fairness.” A local contraction ratio from random embedding noise is not automatically a ranking of the PPL cost of quantizing a layer. `bridge.interpret`'s positive-correlation threshold of 0.30 is neither necessary nor sufficient to establish matching pipelines.
+Sources: [current findings](quant-bias/results/FINDINGS.md), [integrated findings](mixed_study/results/v2/FINDINGS_v2.md), [audit](mixed_study/results/v2/audit/AUDIT.md), [predictor ladder](mixed_study/results/v2/group_prediction/LADDER.md).
 
-**A successful bridge can show transfer, limited transfer, or a well-controlled boundary.** For example, if norm-matched random residuals propagate differently from quantization residuals, that is a useful mechanistic result when demonstrated on the same model, tensors, and tasks. It would explain why the earlier diagnostic requires an extension, while preserving its role in the research.
+Preserve E0–E7 and `results/v2/`. Write corrected analyses and new runs under **`Codes/mixed_study/results/v3/`**, with independent manifests and source hashes. Update the final findings only after the relevant evidence exists.
 
-## 5. Minimal experiment that makes the integration substantive
+## 3. P0: prerequisites before new scientific runs
 
-Call this **B1: matched residual-source and direction experiment**. Implement it within `quant-bias` using a common adapter and read-only provenance from `living-inference`.
+### 3.1 Correct specific reporting claims
 
-1. **Instrumentation pilot:** GPT-2 Small plus Mistral-7B. Match checkpoint, dtype, tokenizer, sequence, attention settings, and hidden-state boundaries. Reproduce a selected legacy random-perturbation trace numerically before testing its transfer. Record whether an array includes embeddings or only post-block states; never infer the mapping solely from its length.
-2. **Primary models:** Mistral-7B and Qwen3-8B. Retain the seven-model results as breadth evidence; no new model family is necessary now.
-3. **Prespecified sites:** eight layers spread across depth per primary model, including endpoints. Quantize complete layers in one analysis; analyse an equal, prespecified attention/MLP component panel separately. Avoid selecting all sites using the outcome or new predictor.
-4. **Residual sources:** actual RTN quantization, validated GPTQ, and verified activation-based Wanda pruning. Use 8/4-bit quantization where useful and pruning settings chosen on calibration data to span overlapping local residual magnitudes. Equal sparsity and bit width are not equal cost or equal error.
-5. **Direction controls:** at the same boundary, inject the actual residual, its sign-reversed version, and several norm-matched random directions through an otherwise dense downstream network. For clean mechanistic comparisons, preserve the full affected sequence-state shape and per-token norm convention. Match residual magnitudes on calibration data or analyse them as a covariate.
-6. **Outcomes:** local absolute/relative error, downstream absolute/relative drift, change in each full answer score, correctness transitions, stereotype-aligned transitions, and category-conditioned group effects. Store per-example records, not only group means.
-7. **Restoration:** on fresh inputs, restore single sites selected using development data and compare with utility-selected and random sites matched by added bytes, intervention type, and parameter count. Repeat random selections. Test a few two-site combinations to identify interaction effects.
+- The Mistral B1 RTN4 table has **6 answer flips at layer 4 and 5 at layer 31**. Remove the claim that the last layer flips the most. The weaker observation that maximum amplification does not coincide with maximum flips is supported.
+- Distinguish absolute amplification, final absolute drift, and relative energy. They are different variables; “internal drift” should not stand for all three.
+- Treat “8-bit behaves like random noise” as an untested equivalence hypothesis. Ratios near one are insufficient to establish equivalence.
+- Treat “larger networks funnel errors because their downstream maps have low effective rank” as a hypothesis. Cosine alignment alone does not identify rank or isolate model size from architecture and dtype.
+- Describe new stereotype-aligned errors alongside stereotype errors removed and total error changes. New stereotype errors alone do not establish net bias amplification.
+- Verify the source for **14,040 checks over 30 configurations**. `gpt2_ablation.json` is not automatically the correct source for a Pareto-sweep count. Trace the figure to its records and generating code, or remove the unsupported count.
+- Attribute dramatic legacy “Wanda” PPL changes to the implementation actually used. The previously inspected `colab_unified_eval.py` uses weight statistics in its pruning heuristic. Do not present those numbers as standard activation-aware Wanda results without a validated reproduction.
+- Separate numerical correctness checks and corrected project bugs from externally novel methodological contributions.
 
-Random and sign-reversed interventions are mechanism probes, not deployment methods. Restoring all compressed weights reproduces the dense model by construction; only selective restoration against appropriate controls tests the diagnostic's usefulness.
+These are reporting corrections, not reasons to discard the work.
 
-**Exit criteria:** reproducible legacy/new tensor correspondence; a valid outcome metric; evidence on independent inputs that the propagation description transfers or that residual direction explains a transfer boundary. A positive scalar-rho/PPL correlation is not an exit criterion.
+### 3.2 Fix the predictor baseline and score definition
 
-## 6. Improve prediction using task-relevant direction
+The current [group_prediction.py](mixed_study/mixed_study/group_prediction.py) labels `V_macro` as `local_energy`, but `_rows` constructs it from `features_selection[g]["V_final"]`. It is an endpoint-energy baseline. Add actual injected energy from `V_inject` and keep the final-energy baseline separate. The current size feature counts components, not parameters; add exact parameter counts and compressed bytes. Whole-layer sizes can differ, particularly in hybrid models.
 
-The current `2 × mean(logit_linf) / mean(abs(group_mean_margin)) + mean(V_final)` mixes a loose global-vocabulary bound with averaged margins. It need not estimate flip probability. `margin_only` is constant across sites; its Spearman correlation is undefined, despite being stored as 0. Its allocator baseline becomes an ordering/tie-break control, not a competitive margin-based method.
+The ladder still uses the original pooled `harmful_flip_rate`. New social-outcome prediction must use the corrected stereotype-aligned and group-specific targets, with declared denominators. Retain the original target only as a separately named task-damage analysis.
 
-For a task-relevant answer contrast `s(x)`, define a new hypothesis:
+The current [directional.py](mixed_study/mixed_study/directional.py) evaluates full-continuation scores but differentiates and injects the residual only at **prompt positions**, padding candidate-position residuals with zeros. This is a well-defined prompt-boundary intervention. It is not automatically the same as weight quantization, which also changes candidate-token computation. Establish both:
 
-```text
-delta_s(j,x) ≈ gradient_hj s(x) · residual_j(x)
-```
+1. Approximation accuracy for the exact prompt-only intervention it models.
+2. Predictive accuracy for actual quantization, using candidate-specific residuals over the relevant teacher-forced sequence where needed.
 
-This combines the local residual from compression with downstream directional sensitivity. Use a differentiable full-continuation contrast and account for all prompt/candidate states required by that score. A gradient at only the last prompt token is a restricted approximation, not automatically a model of the complete answer. Compare the approximation with finite differences and actual score changes.
+Unify joint prompt/continuation tokenization, BOS handling, truncation, attention masks, and score normalization with the main evaluator. A finite-difference test using the same incomplete representation cannot establish parity with the actual compression experiment.
 
-For audited pairs, compare **aligned decision-score changes** across the two inputs. For gold-answer preservation, compare predicted score decreases with the dense positive gold margin, per example, before aggregation. Do not divide group-mean error by group-mean margin and call the result an event probability.
+For three or more candidates, evaluate contrasts against **every competing candidate**. A dense runner-up crossing is only one route to an argmax change. Use a positive gold margin for preservation of correctness, and the dense winner's margins for preservation of its decision. Report ties and duplicate candidate tokens separately.
 
-Evaluate a nested set of baselines:
+### 3.3 Put propagation and behavior on the same examples
 
-- Parameter count, intervention type, and layer depth.
-- Local residual norm/energy alone.
-- Dense full-answer margin alone at the **example** level.
-- General PPL/NLL sensitivity under the same intervention, with a genuine dense reference.
-- Global final residual energy and global output-score drift.
-- Group-conditioned energy and propagation summaries.
-- Directional score change plus margin; then any group-conditioned extension.
+In [matched_residuals.py](mixed_study/mixed_study/matched_residuals.py), propagation uses `examples[:batch_size]`, ordinarily **eight prompts**, while actual-compression behavior uses the full example set, ordinarily 200. Also, behavior is scored under real compression; random and reversed injections are currently evaluated for propagation without the corresponding behavioral comparison.
 
-Report both explanatory diagnostics requiring compressed forward passes and predictors that estimate new sites without those passes. `V_final` already requires a compressed forward pass; its useful claim may be transfer from a small calibration sample, not avoiding quantization altogether. Gradient-based features have a compute cost that must be measured.
+For v3, collect per-example propagation and candidate-score changes on the same audited inputs for actual, reversed, and random interventions. Batch and stream these records to avoid retaining all hidden states. Record separate sample counts for each analysis. The existing eight-prompt measurements remain discovery observations, not a 200-example matched mechanism test.
 
-Use fixed granularity, development-only fitting, template-held-out validation, and leave-layer-out tests. If features are selected using these runs, confirm them on new inputs. Compare dependent correlations with paired resampling; report uncertainty for differences, not only separate p-values. For rare harmful events, include precision–recall and calibration against prevalence. Demonstrate added value beyond intervention size and generic task damage before calling a predictor bias-specific.
+Replace `hash(key)` for direction seeds with a deterministic digest of model revision, site, source, example/cluster, and seed. Python's default string hash can change between processes. Verify that changing batching or rerunning the same manifest preserves inputs, interventions, and recorded outputs within declared numerical tolerances.
 
-## 7. Theory: a useful, limited connection
+### 3.4 Repair the coverage validation
 
-For a compressed linear map, reuse the local inequality:
+The current [uncertainty.py](mixed_study/mixed_study/uncertainty.py) simulation defines `truth` from the realized sample difference between `comp_err` and `dense_err`. It therefore measures whether an interval contains its own sample estimate, not coverage of a fixed population estimand. The reported 100% coverage does **not** validate nominal 95% coverage.
 
-```text
-||(W_compressed − W_dense)x|| ≤ ||W_compressed − W_dense||op ||x||.
-```
+Replace this with a data-generating process whose true marginal effect is known analytically or from an independent, very large reference population. For example, specify dense error probability `p`, loss probability `a` conditional on a correct answer, and recovery probability `b` conditional on an incorrect answer. With homogeneous probabilities the true added error is `(1 − p)a − pb`; with cluster effects integrate over their declared distribution rather than substitute the observed sample effect.
 
-Combine this with an explicitly assumed downstream Lipschitz/sensitivity bound for the **same states and score**. If candidate-score changes satisfy `|S_c(k) − S_d(k)| ≤ epsilon` for every candidate, the dense winner remains the winner whenever its top-two score margin exceeds `2 epsilon`. This applies to full sequence scores if their bounds have actually been established; it does not obtain those bounds for free.
+Simulate the actual unbalanced cluster/group structure, rare events, null effects, heterogeneous effects, and 2/3/5/10/20 supporting-template regimes. Examine coverage, interval width, type-I error, and power for group differences and paired method differences; assess the maximum statistic separately. Report Monte Carlo uncertainty. Start with 500 simulation replicates and increase only if simulation precision is inadequate. Keeping all resamples is useful but is not itself proof of valid inference.
 
-The extension worth formalizing is the chain from a local compression perturbation to stability of a specified decision contrast. These norm/margin inequalities are standard; their value here is correct composition and empirical validation, not a claim that elementary algebra is new or that it certifies fairness.
+Retain H as secondary. Three independent templates are an eligibility rule, not a guarantee of adequate inference. Freeze a common eligible group set across methods, disclose restricted groups, and do not merge identities merely to obtain narrow intervals.
 
-Do not use measured rho values as certified constants. A product of ratios measured along the same trace telescopes to its endpoint ratio; that is an identity, not independent evidence of predictive accuracy. Estimate any transferable propagation model on separate perturbations/inputs and test it out of sample. Keep a source-level proof audit and a fresh Lean build separate from numerical validation of its premises.
+### 3.5 Audit restoration controls
 
-## 8. Sampling and a defensible primary outcome
+The existing restoration code checks a 1% tolerance on **total model bytes**. For a small intervention that can hide a substantial mismatch in the **added bytes**. Match `bytes(arm) − bytes(uniform4)` directly, record exact component counts/kinds, and assert the intended number of restorations. Choose an explicit added-cost tolerance before runs, preferably exact matching where tensor shapes permit.
 
-Use BBQ disambiguated stereotype-aligned errors and group error changes as the primary social-bias outcomes after scoring validation. Retain ambiguous BBQ as a separately audited condition. Use WinoBias only where its adapter and dense competence pass checks. Discrim-Eval supplies a different, decision-probability outcome with no accuracy ground truth. [Discrim-Eval study](https://arxiv.org/abs/2312.03689).
+Allow a utility baseline to select the same component as the proposed method when it ranks it highest. The present control construction excludes predicted components; that is an exclusion-constrained control rather than an unrestricted utility baseline. Retain it only as an additional labeled control. Independent random schedules may also overlap naturally with the predicted set.
 
-For each group report dense error, compressed error, harmful and beneficial transitions, sample count, independent cluster count, and uncertainty. Standardize or stratify across comparable task categories before interpreting group contrasts; differences in task difficulty are not evidence of an identity effect.
+**P0 completion:** tests demonstrate the corrected score semantics, true local/final features, same-example tracing, stable seeds, restoration costs, and statistically meaningful coverage. No GPU sweep starts before this gate passes.
 
-Retain H as a secondary worst-observed-group statistic with its limitations. Consider a prespecified category-macro average of positive added group error, with group/category eligibility frozen in advance, alongside individual group estimates. Changing the metric defines a new protocol: do not retrospectively relabel the current allocator as a success under it. A smoother training/search objective is acceptable only if assessed against independent social outcomes and utility gates.
+## 4. Shared confirmation protocol
 
-Use the existing paired records to estimate variance and within-template dependence. Choose the smallest effect of practical interest before new evaluation, then perform simulation-based power/coverage analysis. Expand full examples for the primary models where useful, but add independent templates or an independent task when the number of supporting clusters is the limiting factor. Treat repeated calibration seeds as algorithm variability, not additional independent people or prompts.
+### Models and tasks
 
-## 9. Mitigation as a second-stage contribution
+- **Primary:** the exact Mistral-7B-v0.1 and Qwen3-8B checkpoints already used, with resolved revisions and explicit dtype/attention/tokenizer settings.
+- **Instrumentation:** GPT-2 Small. Other completed models remain exploratory breadth evidence.
+- **Primary social task:** independently authored and audited disambiguated QA with a stereotype annotation, plus the existing BBQ results as discovery context. Label new data as a new evaluation set, not official BBQ.
+- **Independent task format:** new matched decision scenarios following a Discrim-Eval-style yes/no design. State their provenance and validation; never invent correctness labels for decisions without ground truth.
+- **Utility:** disambiguated task accuracy and a separate language-modeling evaluation passage set. Calibration, site selection, and final utility passages must be disjoint.
+- **Conditional:** WinoBias only for model/adapter combinations that demonstrate competence. Ambiguous BBQ remains a separately reported scoring-limitation analysis unless its adapter is repaired and independently validated.
 
-After B1 and prediction validation, test **selective precision protection** with fixed byte ceilings and measured frontier points. Start with a small candidate set and full-answer loss/group constraints that avoid the current pair-mapping and maximum-statistic issues. Include uniform4, a size-matched random schedule, utility-only protection, local-error-only protection, balanced calibration, and the validated directional predictor.
+### New templates and audit
 
-Prespecify a utility gate on both the primary task and an independent utility workload; for example, a maximum one-percentage-point loss against the utility baseline is an engineering tolerance to justify and freeze, not an achieved result. Protect worst-group absolute performance as well as average disparity so the method cannot look fairer by damaging everyone.
+All inspected templates are discovery data for this protocol. Prepare a versioned confirmation set with new underlying situations, not simple name substitutions or paraphrases of inspected templates. A development starting design is **four social dimensions × 24 independent templates × eight balanced variants = 768 questions**. The number of independent templates, their group coverage, and the power analysis determine the final size; 768 is not a promised adequate sample.
 
-Use identical candidate coverage and search-evaluation budgets. Deduplicate overlapping layer/component expansions. Report actual bytes consumed and a frontier across budgets; label common-ceiling comparisons accurately. Compare multiple random schedules rather than one lucky or unlucky order. Diagnose selection-to-evaluation generalization before spending another 200 evaluations per model.
+Balance stereotype-aligned and counter-stereotypical correct answers, answer positions, name/cue lengths, and task difficulty. Make identity changes task-irrelevant only where the intended counterfactual requires that. Store explicit semantic answer mappings. Have annotators independently verify labels and stereotype/counterfactual validity, record agreement and adjudication, and keep validators blind to model outcomes. Generated drafts require this validation too.
 
-For claims against published methods, validate the authors' algorithms and record revisions/configurations. Existing literature already includes [Fair-GPTQ](https://arxiv.org/abs/2509.15206), [Critical Weight Protection](https://arxiv.org/abs/2601.12033), and [Debias-SparseGPT](https://arxiv.org/abs/2609.02496). The provisional distinction is the matched cross-compression mechanism and validated directional explanation, not merely bias-aware protection.
+Freeze dataset hashes, group taxonomy, primary metrics, hypothesis directions, exclusion rules, model settings, and analysis code before scoring the confirmation set. Developers can inspect the data for validity but must not adapt models or methods to its outcomes. Use separate development templates for selecting prompts, thresholds, sites, and restoration budgets. New scenarios must also be checked for overlap with existing calibration and evaluation inputs.
 
-If selective protection does not outperform validated controls, retain it as a boundary on the diagnostic's intervention value. The measurement study can still succeed if its mechanism and transfer evidence are strong. Do not make an allocator win a prerequisite for completing the research.
+### Outcomes and uncertainty
 
-## 10. Concrete work packages and cost control
+The primary social endpoint is the rate of **newly incorrect stereotype-aligned answers**, with both all-labeled and dense-correct denominators reported. Also report removed stereotype errors, net stereotype-error change, generic harmful/beneficial transitions, accuracy, and category-conditioned group contrasts. Decision-probability sensitivity is a separate endpoint for matched yes/no cases.
 
-All paths below are proposed additions or future edits under `quant-bias`; only this plan was written during the current review. Keep source result files unchanged and place corrected analyses/runs under a versioned results directory.
+Use paired intervals over the same template clusters for method comparisons. Shared templates, sites, and calibration seeds are not independent observations; the analysis must reflect their crossed or nested dependence. Freeze multiplicity handling, for example Holm correction for the small confirmatory hypothesis family. For rare-event prediction use precision–recall, calibration, and prevalence baselines, not agreement dominated by unchanged answers.
 
-| Priority | Work package / likely files | Reuse | Completion evidence |
-|---|---|---|---|
-| P0 | `analysis/audit_results.py`; fixes to `evaluate.py`, `trace.py`, `statistics.py`, `data.py` | E1/E2/E7 records and existing tests | Counts reconciled; no mixed-granularity headline; explicit harm definitions; semantic pair mapping; correct margin tests; uncertainty coverage checks. |
-| P0 | `configs/integrated_v2.yaml`, data audit and holdout manifest | Existing checkpoint SHAs and split metadata | Scoring, estimands, site sampling, and untouched confirmation set frozen. |
-| P1 | `bridge.py` plus `experiments/matched_residuals.py` | Legacy perturbation routines and new adapters | Same-model, same-input trace correspondence; B1 source/direction controls. |
-| P1 | `analysis/group_prediction.py` and richer trace records | Existing per-group V and site maps | Fixed-granularity predictive evaluation, global/local baselines, per-example/group outcomes. |
-| P1 | `experiments/matched_restoration.py` | E4 restoration machinery | Equal-cost controls, repeated random schedules, independent outcome evaluation. |
-| P2 | `allocate.py` and official comparator adapters | Existing byte accounting and search logging | Held-out frontier with paired method comparisons; complete utility gates. |
-| P2 | Packed-backend audit | Simulated quantization maps | Numerical agreement and measured serialized size/latency on a small representative panel. |
+Choose a minimum practically relevant effect and desired interval precision **before** final evaluation. Use development data and the corrected simulations to choose sample size with approximately 80% power for that effect where feasible. Report which conclusions remain descriptive when power cannot be achieved. Do not increase samples repeatedly until a desired p-value appears.
 
-**Suggested order:** approximately 2–3 working days for CPU reanalysis and protocol checks; 2–4 days for the matched instrumentation pilot; about a week for the focused primary-model experiments and analysis; then expand only the comparisons supported by those results. These are scheduling estimates, not measured GPU requirements.
+## 5. C1 — Does directional sensitivity predict new social outcomes?
 
-Estimate GPU time from a small B1 pilot. The initial core panel is two models × eight layers × three compression sources = **48 source/site cells**, before direction controls, seeds, and scoring variants. Control runs can reuse dense captures and residuals. Run a short single-seed development panel first, then freeze a confirmatory panel with multiple independent calibration/noise seeds. Do not extrapolate uncertainty from repeated timings or repeated evaluation of identical deterministic weights.
+**Primary question:** does task-relevant directional information improve prediction beyond local error, depth, intervention size, and general utility sensitivity?
 
-Increasing `sampling.profile` to `full` alone will not solve all coverage problems: E2 separately caps counterfactual pairs per benchmark/cluster, and E4 caps search examples. Budget these explicitly. The easiest money to save is avoiding broad reruns before the scoring, pairing, and inference issues are fixed.
+### Design
 
-## 11. How to present the integrated study
+1. Begin with both primary models, RTN4, and eight prespecified layers spread across depth. Treat whole layers and individual components as separate panels. Use GPTQ4 on a smaller prespecified replication panel after RTN instrumentation passes.
+2. Development pilot: four sites × 64 development examples per model. Measure gradient cost, finite-difference accuracy, and harmful-event prevalence. Choose the final panel size from these measurements rather than assuming the earlier 30-minute runtime applies.
+3. Fit/tune only on development templates. Test on independent confirmation templates, with held-out layers for any learned site predictor. Model-wide normalization and feature selection must not use held-out targets. Site selection must not use confirmation outcomes.
+4. Capture per-example local residuals, absolute/relative final drift, task-relevant score changes, directional estimates, group/category, template ID, and all candidate predictions. Candidate-score gradients should be computed once per reusable dense input/site where possible.
 
-Use a single problem statement: **compression quality depends on how numerical perturbations interact with the decisions a model makes for different groups.** Introduce both repositories as parts of the same experimental framework, with traceable provenance for reused results and clear labels for new measurements.
+### Required baselines
 
-Suggested manuscript structure:
-
-1. Task and harm definitions, with dense competence and scoring checks.
-2. Local compression residuals and the established error-accounting framework.
-3. Matched pruning/quantization propagation experiments and directional controls.
-4. Group-conditioned answer-score and behavioral analysis, including where global sensitivity succeeds or fails.
-5. Selective restoration and, if supported, precision protection under resource constraints.
-6. Scope: English benchmarks, task adaptations, model/architecture limits, empirical versus certified quantities, negative transfer/allocation results.
-
-| Main figure/table | What it would establish |
+| Baseline | Purpose |
 |---|---|
-| Shared error-to-decision diagram and evidence ledger | Both projects contribute to one testable chain. |
-| Legacy/new matched traces plus residual-direction controls | The technical integration is measured rather than inferred from model names. |
-| Fixed-granularity correlation table | Existing pooled effects and their limits are visible. |
-| Group prediction versus global prediction | Whether demographic conditioning adds information beyond generic damage. |
-| Equal-cost selective restoration | Whether the diagnostic supports a useful intervention. |
-| Utility–social-outcome–memory frontier | Mitigation success or its limits under feasible budgets. |
+| Parameter count + depth + intervention type | Control structural/size confounds. |
+| True injected residual energy | Test the local-error explanation inherited from `living-inference`. |
+| Final residual energy | Separate local error from empirical downstream propagation. |
+| Dense answer margins | Control pre-existing decision fragility at the example level. |
+| General NLL/PPL sensitivity | Test a utility-only explanation under the same intervention. |
+| Global task-score sensitivity | Test whether demographic conditioning adds anything. |
+| Directional contrast estimate + margins | Proposed mechanistic predictor. |
+| Group-conditioned extension of that predictor | Test the additional social-group hypothesis explicitly. |
 
-Broad quantization-bias surveys and subgroup-change analyses already exist: [How Quantization Shapes Bias](https://aclanthology.org/2026.eacl-long.17/) and [The Asymmetric Harms of LLM Compression](https://arxiv.org/abs/2608.19670). The proposed niche is **controlled transfer from compression mechanics to task- and group-specific behavior**, supported by matched perturbations and selective interventions. Verify this distinction against the full methods before making a priority claim.
+Observed final score changes are an explanatory upper-reference diagnostic, not a cheap predictor if their computation already performs the intervention. Disclose which methods require backward passes, compressed passes, or labels. A group-macro feature versus an aggregate error rate does not establish group-specific prediction.
 
-### Claims available now versus claims to earn
+### Completion and interpretation
 
-**Available now:** seven-model simulated-quantization measurements; reusable exact-restoration infrastructure; a positive pooled residual-energy association with task-damaging flips; substantial variation when intervention granularity is controlled; negative results for the current allocator objective.
+Report confidence intervals for **differences in predictive performance**, separately by model, granularity, and endpoint. A general predictive claim needs an independently validated improvement over the strongest relevant baseline; if improvement occurs only on one model or task, narrow the claim. If no improvement is supported, retain a bounded negative result with precision sufficient to assess a declared meaningful effect, or clearly state the unresolved range. Do not require the predictor to win to finish the experiment.
 
-**Require new evidence:** a faithful quantitative bridge to the legacy propagation profiles; bias-specific predictive value beyond global error and task difficulty; valid counterfactual conclusions; superiority over published methods; improved deployed speed or memory; formal fairness guarantees.
+**Outputs proposed:** `results/v3/c1/predictions.jsonl`, `comparisons.json`, `REPORT.md`, input/site split manifests, and compute logs.
 
-**Draft positioning paragraph:** “We investigate how compression perturbations become changes in task outcomes across demographic groups. We connect local error accounting and pruning diagnostics with quantization measurements under a shared intervention protocol. Initial experiments reveal positive pooled associations between residual energy and answer damage, while stratification by intervention granularity exposes important limits. Our next experiments test whether residual direction and task-relevant margins explain these limits and support selective precision protection.”
+## 6. C2 — Which direction effects survive dtype and magnitude controls?
 
-The project can become a strong integrated study through a reproducible explanation, even if uniform quantization remains difficult to beat. The next decisive result is a controlled connection between residual source, downstream behavior, and valid group outcomes—not another favorable aggregate score.
+**Primary question:** does residual direction affect task-relevant scores beyond magnitude, and is the apparent 8-bit boundary distinguishable from a numerical floor?
+
+### Design
+
+Use the same primary models and a small panel of early/middle/late layers plus a prespecified component panel. Include actual RTN4, RTN8, GPTQ4, and verified Wanda residuals. Reuse C1 inputs/captures where compatible. For each example/site compare actual residuals with sign-reversed and at least five deterministically seeded, per-token-norm-matched random directions.
+
+Measure both full-sequence prompt-boundary interventions and actual compression, labeling their distinct scopes. Evaluate candidate-score changes and social outcomes under the injected controls too, not only hidden-state statistics. Report per-example effects and paired template-level intervals rather than ratios of unrelated averages.
+
+On a smaller development panel, rescale the **same** residual directions over a fixed amplitude grid. Compare 4-bit residual directions rescaled to 8-bit magnitude and vice versa. Include no-injection repeatability checks, fp16 and bf16, and fp32 reference computations where feasible. Measure the residual actually realized **after** casting and addition; a nominal matched norm is insufficient if many entries round away.
+
+For an equivalence claim, freeze a justified practical margin—for example, ±10% for a specified actual/random score-drift ratio is a candidate tolerance, not an established standard. Use log ratios where well-defined, absolute differences near the numerical floor, and require the appropriate equivalence interval to lie inside the declared bounds. A nonsignificant difference means unresolved, not equivalent.
+
+Finish the Qwen legacy audit by matching the saved script, dtype, checkpoint, input tokens, perturbation scaling, and attention implementation as far as provenance permits. Keep the already successful GPT-2/Mistral cases. If missing provenance prevents exact Qwen reproduction, document that boundary and omit a universal reproduction claim; this should not trigger endless reruns.
+
+### Claims to retain or omit
+
+“Low effective rank explains output alignment” is optional. To keep it, estimate the relevant downstream Jacobian spectrum or perturbation covariance spectrum and use architecture/size controls. Otherwise report observed alignment without a rank or scaling explanation. A controlled direction effect across two primary models is sufficient scope; a general law of model size is not required.
+
+**Completion:** supported direction effects, equivalence within a specified margin, or quantified inconclusive/negative effects, each with dtype and magnitude scope. Correct interpretation is the deliverable.
+
+**Outputs proposed:** `results/v3/c2/cells.jsonl`, `equivalence.json`, `legacy_audit.json`, and `REPORT.md`.
+
+## 7. C3 — Does selective restoration improve outcomes at equal added cost?
+
+**Primary question:** can sites selected on development data reduce stereotype-aligned damage or added group error on independent cases, beyond utility and random controls?
+
+Start from uniform4. Compare the validated diagnostic, unrestricted utility-only selection, local-error-only selection, and at least five independently sampled matched random schedules. Uniform4 is the zero-added-cost anchor. Restore the same tensor kinds and match **added bytes**, using the P0 corrections. Let controls overlap naturally.
+
+Pilot a small predefined intervention-size grid on development data, such as 4/8/16 components or equivalent added-byte budgets. Choose one primary and, if affordable, one secondary budget before the final run. Increase independent template support according to power, not merely the number of repeated instances. If the development task has essentially zero damage under uniform4, change the development design or declare the mitigation endpoint uninformative before opening confirmation results.
+
+Use C1's frozen site-selection method, but keep C3 confirmation outcomes hidden until its allocations are fixed. Report recovery of previously correct answers, stereotype errors created and removed, group error changes, and net utility. A smaller disparity obtained by lowering both groups' competence is not mitigation.
+
+Specify utility noninferiority criteria in advance. An initial candidate is no more than one percentage point loss in disambiguated accuracy and 5% relative PPL increase against the utility-selected schedule, subject to scientific justification and adequate uncertainty. Do not accept schedules based only on their point estimates if the claim is noninferiority.
+
+If hypothesis-test resolution remains inadequate, report a bound on the detectable/relevant effect rather than asserting that the method cannot help. Identical outcomes at n=200 do not alone prove underpower or equivalence; inspect whether the restored sites change scores at all, whether the arms differ as intended, and whether the endpoint has room to improve.
+
+**Completion:** a valid, independent comparison with uncertainty and recorded costs. If the diagnostic loses, end the mitigation branch and retain the mechanism/measurement contribution. No additional allocator tuning on the final set.
+
+**Outputs proposed:** `results/v3/c3/arms.json`, `records.jsonl`, `paired_comparisons.json`, and `REPORT.md`.
+
+## 8. Necessary checks that do not require another broad study
+
+### Comparator fidelity
+
+Before claiming a result against Fair-GPTQ, CWP, or Debias-SparseGPT, validate the authors' code or a faithful full-method reproduction at matched settings. For a limited completion scope, reproduce **one closest comparator**, such as Fair-GPTQ, on the two primary models and final tasks if making comparative mitigation claims. Preserve other variants as explicitly named literature-inspired implementations. If no mitigation-superiority claim is made, author-code reproduction can be omitted, but the paper must then remove claims that the published methods themselves fail.
+
+### Numerical and deployment scope
+
+The main work can be complete as a **simulated weight-quantization study**. A small packed-backend parity experiment is needed if claiming deployment behavior or practical savings; measured speedup is not required for the mechanism paper. Do not present accounted storage as measured runtime memory. Record dtype, packing assumptions, scales, zero points, and excluded tensors.
+
+### Proofs and provenance
+
+Rebuild the Lean project in a pinned environment, inspect theorem assumptions and unproved declarations, and link each quantitative claim to an exact artifact. Local norm inequalities and standard margin arguments are foundations, not fairness guarantees. Reusing their empirical checks does not make them new bias results.
+
+### Final integrity audit
+
+Regenerate tables directly from immutable records. Check denominators, template counts, overlap, method names, granularity, and actual source paths. Reconcile 300-draw versus 2000-draw statements in the current reports. Update stale READMEs that still describe completed B1/restoration work as unfinished. Keep exploratory and confirmatory results clearly distinguishable.
+
+## 9. Implementation order and proposed file changes
+
+| Order | Proposed work | Files to extend/create | Exit gate |
+|---|---|---|---|
+| 1 | P0 correctness and reporting audit | Existing `directional.py`, `group_prediction.py`, `uncertainty.py`, `matched_residuals.py`, `matched_restoration.py`; focused regression tests | Correct estimands, parity, coverage evaluation, seed reproducibility, and cost checks. |
+| 2 | New data and power planning | `data/confirmation_v3/`, `configs/integrated_v3.yaml`, `analysis/power_v3.py` | Audited templates; independent splits; frozen hypotheses and sample-size decision. |
+| 3 | Small primary-model pilot | Proposed `experiments/confirm_predictor.py`, `experiments/direction_controls.py` | Gradients and actual interventions agree within characterized approximation error; runtime/memory measured. |
+| 4 | C1/C2 confirmation | Same runners with frozen manifests | Complete independent records and paired uncertainty for the principal claims. |
+| 5 | C3 confirmation | Restoration runner with frozen schedules | Equal-added-cost comparison, utility checks, and final decision on mitigation scope. |
+| 6 | Comparator/proof audit and manuscript evidence freeze | Optional official comparator adapter; report generator; proof build record | Every headline has direct support; unresolved extensions removed from main claims. |
+
+These v3 files and commands are **proposed**, not implemented by writing this document. The current CLI does not yet provide the C1–C3 runners; do not treat existing `b1` or `restore` commands as execution of this new protocol.
+
+Estimate runtime from the pilot's per-example/per-site forward and backward costs. Gradient studies on full continuations can cost much more than the approximately 30-minute v2 GPU panel. Stream sufficient statistics, cache only reusable dense data, load models sequentially, and record actual GPU-hours. Choose the affordable final design before confirmation; do not launch a new seven-model sweep by default.
+
+## 10. Definition of a scientifically complete paper
+
+The study is ready for its final manuscript when all of the following hold:
+
+- [ ] Scoring and labels are validated for the tasks/models carrying the main claims.
+- [ ] The P0 fixes pass meaningful tests; same-example propagation/behavior records and stable seeds are used.
+- [ ] At least one genuinely independent confirmation set is evaluated under a frozen protocol.
+- [ ] C1 reports task damage and social outcomes separately, with valid baselines and uncertainty.
+- [ ] C2 states exactly which direction/dtype/magnitude effects are supported; equivalence claims have equivalence evidence.
+- [ ] C3 is completed with adequate design and uncertainty, or the final scope explicitly omits intervention-effectiveness claims and reports the pilot as inconclusive.
+- [ ] Statistical coverage is assessed against known population quantities; sparse-template limitations remain visible.
+- [ ] Legacy integration is documented model by model; incomplete Qwen reproduction is bounded and disclosed.
+- [ ] Published-method comparisons use validated implementations or are explicitly restricted to the implemented variants.
+- [ ] The strongest contribution is clearly distinguished from existing compression–bias work and ordinary implementation corrections.
+- [ ] All headline numbers, formal claims, tables, and figures match their source artifacts.
+- [ ] Negative results and exploratory analyses remain in the evidence record; no final-set retuning is used to manufacture a positive result.
+
+**Writing can begin now** for the problem, related work, methods, and verified discovery results. Finalize the abstract and contributions after C1/C2, and finalize any mitigation claim after C3. If directional prediction and restoration both remain negative, write the narrower study of measurement validity and controlled limits of compression diagnostics only to the extent its independent evidence demonstrates a substantive new insight. Do not keep adding experiments solely to force a success narrative.
