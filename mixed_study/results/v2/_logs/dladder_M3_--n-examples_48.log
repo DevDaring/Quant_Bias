@@ -1,0 +1,42 @@
+[08:17:24] Loading mistralai/Mistral-7B-v0.1@main (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 10954.92it/s]
+[08:17:28]   attention: flash_attention_2
+[08:17:28]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 7429.42it/s]
+[08:17:41] BBQ: 7868 examples, 343 template clusters
+[08:18:00] WinoBias: 3168 examples (0 skipped), 1584 sentence clusters
+[08:18:02] Discrim-Eval[explicit]: 5250 examples, 70 decision questions
+[08:18:13] calibration[generic] seed=0: 32x512 tokens, hash=fc232d3702c843af
+[08:18:25]   L 0: pred_flip=0.083 obs_flip=0.021 harmful=0.000 ex-corr=0.8059 agree=0.94 (11s)
+[08:18:35]   L 1: pred_flip=0.104 obs_flip=0.042 harmful=0.000 ex-corr=0.7955 agree=0.94 (21s)
+[08:18:46]   L 2: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.6220 agree=1.00 (32s)
+[08:18:57]   L 3: pred_flip=0.062 obs_flip=0.062 harmful=0.042 ex-corr=0.8475 agree=1.00 (43s)
+[08:19:08]   L 4: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.8005 agree=1.00 (54s)
+[08:19:18]   L 5: pred_flip=0.042 obs_flip=0.021 harmful=0.000 ex-corr=0.7730 agree=0.98 (64s)
+[08:19:29]   L 6: pred_flip=0.062 obs_flip=0.062 harmful=0.042 ex-corr=0.8364 agree=1.00 (75s)
+[08:19:39]   L 7: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.8691 agree=1.00 (85s)
+[08:19:50]   L 8: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.8361 agree=1.00 (96s)
+[08:20:01]   L 9: pred_flip=0.021 obs_flip=0.042 harmful=0.000 ex-corr=0.7921 agree=0.98 (107s)
+[08:20:12]   L10: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.7232 agree=1.00 (118s)
+[08:20:24]   L11: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.8360 agree=1.00 (130s)
+[08:20:35]   L12: pred_flip=0.042 obs_flip=0.042 harmful=0.021 ex-corr=0.5289 agree=1.00 (141s)
+[08:20:46]   L13: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.7494 agree=1.00 (152s)
+[08:20:57]   L14: pred_flip=0.021 obs_flip=0.042 harmful=0.042 ex-corr=0.5160 agree=0.98 (163s)
+[08:21:08]   L15: pred_flip=0.021 obs_flip=0.021 harmful=0.000 ex-corr=0.6916 agree=1.00 (174s)
+[08:21:19]   L16: pred_flip=0.021 obs_flip=0.062 harmful=0.021 ex-corr=0.5918 agree=0.92 (185s)
+[08:21:30]   L17: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.4382 agree=1.00 (196s)
+[08:21:42]   L18: pred_flip=0.021 obs_flip=0.000 harmful=0.000 ex-corr=0.2143 agree=0.98 (208s)
+[08:21:53]   L19: pred_flip=0.021 obs_flip=0.021 harmful=0.021 ex-corr=0.6243 agree=1.00 (219s)
+[08:22:04]   L20: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.2404 agree=1.00 (230s)
+[08:22:15]   L21: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.1999 agree=1.00 (241s)
+[08:22:25]   L22: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.3185 agree=1.00 (251s)
+[08:22:36]   L23: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.1552 agree=1.00 (262s)
+[08:22:46]   L24: pred_flip=0.021 obs_flip=0.000 harmful=0.000 ex-corr=-0.199 agree=0.98 (272s)
+[08:22:57]   L25: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.4702 agree=1.00 (283s)
+[08:23:06]   L26: pred_flip=0.000 obs_flip=0.042 harmful=0.021 ex-corr=0.3012 agree=0.96 (292s)
+[08:23:15]   L27: pred_flip=0.000 obs_flip=0.000 harmful=0.000 ex-corr=0.1239 agree=1.00 (301s)
+[08:23:24]   L28: pred_flip=0.000 obs_flip=0.021 harmful=0.021 ex-corr=0.4070 agree=0.98 (310s)
+[08:23:31]   L29: pred_flip=0.021 obs_flip=0.062 harmful=0.042 ex-corr=0.8538 agree=0.96 (317s)
+[08:23:38]   L30: pred_flip=0.021 obs_flip=0.000 harmful=0.000 ex-corr=0.3718 agree=0.98 (324s)
+[08:23:45]   L31: pred_flip=0.000 obs_flip=0.021 harmful=0.021 ex-corr=-0.069 agree=0.98 (331s)
+[08:23:45] site-level: {'pred_flip_rate': {'vs_harmful': {'rho': 0.2578527936208362, 'p': 0.15420705631062703}, 'vs_anyflip': {'rho': 0.656697391003746, 'p': 4.4644470567208424e-05}}, 'pred_mean_margin_loss': {'vs_harmful': {'rho': 0.1099532845863992, 'p': 0.5491300459187456}, 'vs_anyflip': {'rho': 0.050149532384099485, 'p': 0.7851813011992802}}, 'V_final_proxy': {'vs_harmful': {'rho': 0.05385467000150165, 'p': 0.7697210749258742}, 'vs_anyflip': {'rho': -0.08960827298089094, 'p': 0.6257506278249972}}, 'example_level_first_order_validity': {'mean_pearson': 0.5333176071014571, 'n_sites': 32}, 'total_grad_seconds': 239.26413369178772}
