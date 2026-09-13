@@ -5,3 +5,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB
 [2026-09-13_03:35:44] <<< smoke/legacy/M1 ok in 36s
 [2026-09-13_03:35:51] >>> smoke/legacy/M3
 [2026-09-13_03:37:31] <<< smoke/legacy/M3 ok in 100s
+[2026-09-13_03:37:37] >>> smoke/legacy/M5
+[2026-09-13_03:39:42] <<< smoke/legacy/M5 ok in 125s
