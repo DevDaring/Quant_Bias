@@ -71,7 +71,10 @@ demonstrably measuring the same thing), corrects four measurement flaws found
 in `quant-bias`, and adds the experiment that ties everything together: inject
 a compression error of controlled size and *direction* at one layer, let it
 travel through an otherwise-uncompressed network, and record what reaches
-the decision and which answers flip.
+the decision and which answers flip. On top of that it tests whether the
+error direction can be *used*: a gradient-based predictor of answer change
+evaluated layer by layer, a restoration experiment sized by a power
+simulation, and a confirmation on prompts held out from every earlier choice.
 
 The whole pipeline was first run on two samples per category to prove every
 code path, then in full. Every stage pushes its output to GitHub the moment
@@ -141,6 +144,20 @@ direction matters less at scale.
 *Evidence:* `../../mixed_study/results/v2/b1/*/b1_cells_{layer,component}.json`;
 192 experimental cells summarised in `FINDINGS_v2.md` §2.
 
+A follow-up asked whether the direction can be *used*. For each layer of
+three models, the layer was compressed alone and the change in the model's
+answer score was predicted from a single gradient — no fitted parameters —
+and compared with the change actually measured on 48 held-out questions. The
+prediction is a good local model (sign correct on 98–99% of questions; mean
+correlation 0.53–0.79 across 80 layer sites), and its ranking of layers tracks
+where answers change (Mistral-7B: Spearman 0.66 across 32 layers), while the
+internal-energy measures used earlier are uncorrelated with flips on the same
+layers. Whether it also ranks the layers that matter for *stereotyped* flips
+could not be resolved this way — a single 4-bit layer flips only 0–3 of 48
+answers — so that question went to the sized restoration test in §4.
+*Evidence:* `../../mixed_study/results/v2/directional/*/directional_sites.json`;
+`FINDINGS_v2.md` §5.
+
 ### 3.4 The two projects measure the same thing — once numerical precision is matched
 
 The earlier project's per-layer sensitivity profiles were recorded in 16-bit
@@ -175,6 +192,21 @@ Reanalysing the same records with corrected definitions:
   results cannot be read as fairness outcomes under this scoring.
 *Evidence:* `../../mixed_study/results/v2/audit/AUDIT.md` §3, §5, §6, §7.
 
+### 3.6 The decision-sensitivity result survives a held-out set
+
+The Discrim-Eval *implicit* prompts — 9,450 hiring/lending-style decisions
+with the demographic cue embedded in the wording rather than stated — were
+never loaded during any earlier stage. Scored once, under the frozen rule,
+for the three configurations named in advance, they reproduce what the
+explicit split showed: 4-bit compression changes about one decision in ten on
+the 7-billion models (Mistral-7B 0.098–0.100; Qwen3-8B 0.083–0.097), 8-bit
+changes one to three in a hundred, and in every configuration the gap between
+demographically matched prompts moves by less than one percentage point. The
+decisions move; they do not move against a group. The BBQ findings were
+selected on BBQ and still need a fresh template set to be called confirmed.
+*Evidence:* `../../mixed_study/results/v2/holdout/*/holdout_discrim_implicit.json`;
+`FINDINGS_v2.md` §7.
+
 ## 4. What was tried and did not work
 
 Stating these is part of the contribution: a reader should not repeat them.
@@ -184,7 +216,8 @@ Stating these is part of the contribution: a reader should not repeat them.
 | A search that spends a fixed memory budget unevenly across layers to reduce group harm | Lost to plain uniform 4-bit on its own objective, on both primary models (J = 0.105 vs 0.090 on Mistral) | `e4/*/e4_results.json` |
 | Three published bias-aware compression methods, re-implemented from their papers | No method's worst-group harm is distinguishable from uniform GPTQ once compared as paired differences on the same questions | `../../mixed_study/results/v2/audit/AUDIT.md` §6 |
 | Predicting which layer will cause harm from internal-signal energy, tested on layers the predictor never saw | No consistent gain over a size-and-depth baseline | `../../mixed_study/results/v2/group_prediction/LADDER.md` |
-| Restoring four "predicted" components to full precision at fixed cost | Every arm — predicted, utility-chosen, five random — gave an identical result; 200 test questions cannot resolve an intervention this small | `../../mixed_study/results/v2/restoration/*/restoration.json` |
+| Restoring four "predicted" components to full precision at fixed cost (pilot) | Every arm — predicted, utility-chosen, five random — gave an identical result; 200 test questions cannot resolve an intervention this small | `../../mixed_study/results/v2/restoration/{mistral_7b_v0_1,qwen3_8b}/restoration.json` |
+| The same test sized by a power simulation: 8 or 16 components, the full 7,491-question final split, a null that discounts mere reshuffling of which answers flip | Predicted-site restoration cut stereotyped errors by 3–25% (median 14%) — below the 35% the design can detect, and inside the −22% to +11% range that *random* equal-cost restorations produce on the same questions. Choosing components by the bias predictor is not detectably better than choosing them by task loss or at random | `../../mixed_study/results/v2/power/`, `restoration/*-k{8,16}-n7491/`; `FINDINGS_v2.md` §4, §6 |
 
 ## 5. The contribution, stated directly
 
@@ -203,23 +236,31 @@ Stating these is part of the contribution: a reader should not repeat them.
 3. **A verified link between two studies** (dtype-controlled reproduction of
    the earlier propagation profile), so their results can be combined
    without inferring compatibility from model names.
-4. **Reproducible negative results** for a mixed-precision allocator and for
-   three re-implemented published methods, with the sample-size reason stated.
+4. **Reproducible negative results** for a mixed-precision allocator, for
+   three re-implemented published methods, and — in a test powered in advance
+   to see a 35% effect — for predictor-guided selective restoration, with the
+   sample-size reason stated in each case.
+5. **A held-out confirmation** of the decision-sensitivity finding on 9,450
+   prompts never used in any earlier choice.
 
 This is a measurement-and-mechanism study. It does not deliver a method that
 beats uniform quantization, and says so.
 
 ## 6. What is still open
 
-- A held-out confirmation set of *new* question templates. Everything above
-  is discovery evidence; the templates have been inspected.
-- The decision-score-gradient predictor (`mixed_study/mixed_study/directional.py`,
-  already validated against finite differences) evaluated on the same
-  held-out-layer protocol that the energy predictor failed.
-- A restoration test sized from this pilot's variance rather than guessed.
+- A held-out confirmation set of *new BBQ question templates*. The
+  Discrim-Eval result is confirmed on held-out prompts (§3.6); the BBQ results
+  are still discovery evidence, since their templates have been inspected.
+- Whether the gradient predictor ranks the layers that matter for
+  *stereotyped* flips specifically: the per-layer test sees too few such
+  events, and the powered restoration test says the ranking is not actionable
+  at 8–16 components. A larger intervention (more components, or 2-bit) is
+  the untested regime.
 - Qwen3-8B's legacy profile is only partly reproduced in fp16; the remainder
   is unexplained.
 - Comparisons against the published authors' own code, not re-implementations.
+- A check that a real packed int4 kernel reproduces the simulated-quantisation
+  numbers.
 
 ## 7. How to check any claim here
 
@@ -230,8 +271,9 @@ cd Codes/mixed_study
 .venv/bin/python scripts/validate_v2.py      # checks every GPU-run artifact is complete and sane
 ```
 
-The GPU stages (`legacy`, `b1`, `restore`) are recorded with their full
-per-cell output; re-running them needs one 80 GB GPU for about 30 minutes.
+The GPU stages (`legacy`, `b1`, `restore`, `dladder`, `confirm`) are recorded
+with their full per-cell output; re-running all of them needs one 80 GB GPU
+for about 2¼ hours (`mixed_study/scripts/vm_run.sh full`).
 
 ## 8. Provenance
 
@@ -240,7 +282,8 @@ per-cell output; re-running them needs one 80 GB GPU for about 30 minutes.
 | living-inference GPT-2 ablations, Lean proofs | 2026-02 → 2026-03 | CPU + Colab | — | — | — |
 | living-inference 7-model profiles + pruning | 2026-03 → 2026-09 | Colab A100 / H100 | — | — | — |
 | quant-bias E0–E7 | 2026-09-10 → 09-11 | 1× H100 80 GB (Akash) | 36/36 ok | ~20 h | ~$55 |
-| mixed_study B1 + restoration | 2026-09-13 | 1× H100 80 GB (Akash) | 13/13 ok | ~30 min | ~$1 |
+| mixed_study B1 + restoration pilot | 2026-09-13 | 1× H100 80 GB (Akash) | 13/13 ok | ~30 min | ~$1 |
+| mixed_study ladder predictor, sized restoration, held-out confirmation | 2026-09-13 | 1× H100 80 GB (Akash) | 9/9 ok | ~1 h 45 min | ~$5 |
 | mixed_study P0 reanalysis | 2026-09-12 | CPU | — | ~1 min | — |
 
 Sampling used the `budget` profile: every BBQ question template is kept, and

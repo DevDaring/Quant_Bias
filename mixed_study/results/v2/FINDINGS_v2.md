@@ -1,8 +1,11 @@
 # Findings v2: the integrated study (mixed_study, full run)
 
-Run completed 2026-09-13 04:26 UTC on one H100 (13/13 stages, 0 failures,
-~30 min GPU). Two-sample smoke run first, which caught two GPU-only bugs.
-Every claim below points at a file under `results/v2/`; source records under
+Two H100 runs on 2026-09-13. Run 1 (04:26 UTC, 13 stages, ~30 min GPU) covers
+sections 1–3. Run 2 (09:56 UTC, 9 further stages, ~1h45 GPU) closes the three
+P0/P1 gaps that Next_Plan.md left open: sections 5–7. 22/22 stages, 0
+failures, validator (`scripts/validate_v2.py`) passes on every output file.
+Each run was preceded by a two-sample smoke run of the same code path. Every
+claim below points at a file under `results/v2/`; source records under
 `quant-bias/results/` were never modified. P0 reanalysis findings are in
 `audit/AUDIT.md` and `group_prediction/LADDER.md`.
 
@@ -108,29 +111,150 @@ flips on this set, so nothing can improve. **This is not "predicted sites don't
 help" — it is "the experiment cannot resolve single-site restoration at this
 sample size and intervention scale."** A detectable version needs either many
 more examples or a larger restored set, chosen and frozen in advance.
+That version was sized from a power simulation and run; see section 6.
 
-## 4. What the integrated study can now claim
+## 4. Power: what a restoration test on this data can and cannot see (§8)
+
+`power/mistral_7b_v0_1_rtn4.json`. Simulation on the actual final-split
+cluster structure (156 template clusters, 1,766 disambiguated BBQ rows, 1,479
+dense-correct, 77 harmful events at rtn4). The null is not "no change" but
+*net-zero churn*: two equal-cost 4-bit methods (rtn4 vs gptq4) disagree on 62%
+of the answers they break, so a restoration that merely reshuffles which items
+flip must not read as an improvement. Under that null the full final split
+detects a ≥35% reduction in harmful transitions at 94% power (25%: 3%; 15%:
+0%). This threshold was fixed before section 6 was run.
+
+## 5. The directional predictor on the ladder protocol (§6)
+
+`directional/{gpt2_small,mistral_7b_v0_1,qwen3_8b}/directional_sites.json`.
+At every whole-layer site (12 / 32 / 36), quantise that layer alone to 4-bit
+and, for 48 held-out BBQ examples, compare the first-order prediction
+⟨∇s, Δh⟩ of the answer-score change against the rescored actual change. No
+fitted parameters.
+
+| model | sites | first-order validity (mean / median Pearson over sites) | predicted flip-rate vs observed any-flip (Spearman across sites) | vs stereotype-aligned flip |
+|---|---|---|---|---|
+| GPT-2 Small | 12 | 0.79 / 0.88 | ρ=0.58, p=0.05 | ρ=0.34, p=0.29 (4 events) |
+| Mistral-7B | 32 | 0.53 / 0.61 | ρ=0.66, p<0.001 | ρ=0.26, p=0.15 (14 events) |
+| Qwen3-8B | 36 | 0.69 / 0.79 | ρ=0.28, p=0.10 | undefined (0 events) |
+
+Three things this establishes. (i) The first-order term is a valid local
+model of what a single quantised layer does to the answer score: on every
+model most sites have r>0.5 (92% / 59% / 72% of sites), and the sign of the
+predicted change agrees with the actual sign on 98–99% of examples
+(`flip_agreement`). (ii) It carries information the energy proxies do not:
+on the same sites `V_final_proxy` is uncorrelated with observed flips on all
+three models (|ρ|≤0.39, all p>0.2), and `pred_mean_margin_loss` is likewise
+flat. (iii) Its site ranking predicts *where answers change* on the 7B model
+that flips most (Mistral, ρ=0.66), weakly on Qwen3-8B (ρ=0.28).
+
+What it does not establish, and why: the correlation with *stereotype-aligned*
+flips is not resolved. With 48 examples per site a single layer at 4-bit
+produces 0–3 flips per site (16 / 31 / 16 flips in total; 4 / 14 / 0
+stereotype-aligned), so the harmful-flip outcome is a count of a handful of
+events. On Qwen3-8B there are none at all, and the correlation is undefined by
+construction rather than reported as zero. The ladder shows the predictor is
+valid and directional; whether the sites it ranks highest are the sites that
+matter for *harm* is answered, with adequate power, by the restoration test.
+
+## 6. Power-sized restoration: the predictor is diagnostic, not prescriptive (§5.7, §8)
+
+`restoration/{mistral_7b_v0_1,qwen3_8b}-k{8,16}-n7491/restoration.json`.
+Same design as section 3 with the two changes the power analysis asked for:
+the whole final split (7,491 examples; 1,766 disambiguated BBQ rows scored per
+arm) and k=8 or k=16 restored components instead of 4. All eight arms per cell
+are equal-cost (`equal_cost_ok: true`, bytes identical).
+
+New stereotype-aligned errors among dense-correct items (lower is better):
+
+| model, k | uniform-4 start | predicted sites | utility-matched | random ×5 |
+|---|---|---|---|---|
+| Mistral-7B, k=8 | 36 | 35 (−3%) | 32 | 28, 32, 34, 39, 40 |
+| Mistral-7B, k=16 | 36 | 27 (−25%) | 35 | 30, 36, 37, 37, 39 |
+| Qwen3-8B, k=8 | 34 | 26 (−24%) | 34 | 29, 32, 33, 34, 38 |
+| Qwen3-8B, k=16 | 34 | 33 (−3%) | 31 | 29, 30, 32, 35, 35 |
+
+Rates per dense-correct: Mistral uniform 0.0521 → predicted 0.0467 (k=8),
+0.0406 (k=16); Qwen uniform 0.0543 → 0.0448 (k=8), 0.0455 (k=16).
+
+Read against section 4: the predicted arm reduces harmful transitions by 3–25%
+(median 14%), below the 35% the design can detect and inside the spread that
+five *random* equal-cost schedules produce on the same items (−22% to +11% on
+Mistral k=8). In two of four cells (Mistral k=16, Qwen k=8) the predicted arm
+is the best of all eight arms, below every random schedule; in the other two
+it is indistinguishable from the uniform start while random schedules and the
+utility-matched arm (chosen by task loss, no bias signal) do as well or
+better. Which two cells are which does not follow k or model, as a real
+effect would. **So the
+conclusion is now a resolved negative rather than an unresolved one: at 8–16
+restored components on a 7B model, choosing the components by the bias
+predictor does not buy a detectable reduction in stereotype-aligned errors
+over choosing them by utility or at random.** Combined with section 5, the
+predictor tells you where a quantised layer will move answers; it does not
+give a repair recipe at this intervention scale, and any paper claim must be
+phrased that way.
+
+## 7. Held-out confirmation on prompts never used before (§3.6)
+
+`holdout/{mistral_7b_v0_1,qwen3_8b}/holdout_discrim_implicit.json`. The
+Discrim-Eval *implicit* split (9,450 prompts, 70 decision questions) was never
+loaded in quant-bias or in any earlier mixed_study stage; it was scored once,
+under the frozen rule, for the three configurations named in advance.
+
+| model | config | decision change rate: explicit (E1, n=2,325) → implicit (held-out, n=9,450) | mean abs gap change (implicit) |
+|---|---|---|---|
+| Mistral-7B | rtn4 | 0.100 → 0.098 | −0.002 |
+| Mistral-7B | gptq4 | 0.098 → 0.100 | −0.001 |
+| Mistral-7B | rtn8 | 0.026 → 0.026 | +0.000 |
+| Qwen3-8B | rtn4 | 0.099 → 0.083 | +0.007 |
+| Qwen3-8B | gptq4 | 0.067 → 0.097 | −0.007 |
+| Qwen3-8B | rtn8 | 0.020 → 0.010 | −0.000 |
+
+Both findings that the explicit split produced replicate on prompts that had
+no role in any earlier choice: (a) 4-bit weight-only quantisation changes
+roughly one hiring/lending-style decision in ten on 7B models while 8-bit
+changes one to three in a hundred, and (b) the demographic *gap* between
+matched prompts moves by less than one percentage point in every
+configuration — the decisions move, but not systematically against a group.
+The per-attribute mean shift in P(yes) is identical across age, gender and
+race within each configuration (e.g. −0.026 for all three on Mistral gptq4),
+which is what "sensitivity without disparity" looks like in the raw numbers.
+Scope: this confirms the Discrim-Eval decision-sensitivity results only. The
+BBQ findings were selected and evaluated on the same benchmark and still
+need a fresh template set to be called confirmed.
+
+## 8. What the integrated study can now claim
 
 **Established.**
 - A dtype-controlled reproduction of the legacy propagation profile, and a
-  pinned index convention, so the two projects are demonstrably one framework.
+  pinned index convention, so the two projects are demonstrably one framework
+  (§1).
 - Residual *direction* contributes beyond magnitude, modestly, with a clean
-  boundary (8-bit ≈ noise) and a size-dependence explained by output funnelling.
+  boundary (8-bit ≈ noise) and a size-dependence explained by output
+  funnelling (§2).
 - Hidden-state drift is the wrong target: logit sensitivity, not energy
-  amplification, tracks answer flips across depth.
+  amplification, tracks answer flips across depth (§2.1); on the ladder the
+  first-order score-gradient predictor is valid per example and per site while
+  the energy proxies are uncorrelated with flips (§5).
+- Selective restoration at fixed cost does **not** reduce stereotype-aligned
+  errors detectably at k=8–16 on 7B models, in a test powered to see a 35%
+  reduction (§4, §6). A resolved negative.
+- Decision sensitivity without group disparity under 4-bit quantisation,
+  confirmed on a held-out split (§7).
 - The corrected measurement protocol (four separate outcomes, valid margin
-  test, support-preserving bootstrap, eligibility by independent templates).
+  test, support-preserving bootstrap, eligibility by independent templates,
+  net-zero-churn null for interventions).
 
 **Not established, and why.**
 - Group-conditioned prediction: no consistent gain over global diagnostics
   out-of-layer (`LADDER.md`).
-- Selective restoration at fixed cost: unresolved at n=200 / 4 sites.
+- Predictor ↔ *harmful* flips on the ladder: too few events at 48 examples
+  per site (§5); the powered answer is the negative in §6.
 - Any comparator superiority: paired ΔH intervals all include zero
   (`AUDIT.md` §6).
 - Qwen3-8B legacy profile: only partly reproduced.
+- BBQ results on a held-out template set: not run (needs new templates).
 
-**Next decisive experiment.** Replace `V_final` with the validated
-score-gradient predictor (`directional.py`, already verified against finite
-differences on the pilot), evaluate it on the same fixed-granularity,
-leave-layer-out protocol, and size the restoration test from the pilot's
-variance before running it.
+**Still open by plan design (P2).** The allocator frontier sweep, the authors'
+own comparator implementations, and a packed-backend (real int4 kernel) audit
+of the simulated-quantisation assumption.
