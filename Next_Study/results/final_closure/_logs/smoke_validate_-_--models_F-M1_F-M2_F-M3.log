@@ -1,0 +1,3 @@
+[09:31:38] VALIDATE_FINAL_CLOSURE FAIL: 77 ok, 2 failed
+[09:31:38]   FAIL stage_status_present: None
+[09:31:38]   FAIL analysis_present: None

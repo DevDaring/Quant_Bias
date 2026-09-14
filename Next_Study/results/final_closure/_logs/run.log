@@ -86,3 +86,10 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
         mean_rule = {"D_task": sum(not comp[i]["correct_mean_rule"] for i in C) / len(C) if C else None,
                                        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^
     KeyError: 'correct_mean_rule'
+[2026-09-14_09:31:38]   pushed smoke/analysis/-/--models/F-M1/F-M2/F-M3
+[2026-09-14_09:31:38] --- F8: validation ---
+[2026-09-14_09:31:38] >>> smoke/validate/-/--models/F-M1/F-M2/F-M3
+[2026-09-14_09:31:38] <<< smoke/validate/-/--models/F-M1/F-M2/F-M3 FAILED in 0s
+    [09:31:38] VALIDATE_FINAL_CLOSURE FAIL: 77 ok, 2 failed
+    [09:31:38]   FAIL stage_status_present: None
+    [09:31:38]   FAIL analysis_present: None
