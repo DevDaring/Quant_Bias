@@ -52,3 +52,7 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_09:13:48]   pushed smoke/residual/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
 [2026-09-14_09:13:48] >>> smoke/residual/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16
 [2026-09-14_09:14:25] <<< smoke/residual/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 37s
+[2026-09-14_09:14:32]   pushed smoke/residual/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_09:14:32] --- F6: packed GPTQ4 (separate environment) ---
+[2026-09-14_09:14:32] >>> smoke/packed/F-M1/--batch-size/16
+[2026-09-14_09:24:56] <<< smoke/packed/F-M1/--batch-size/16 ok in 624s

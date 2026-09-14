@@ -14,3 +14,4 @@ smoke/directional/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok
 smoke/directional/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	15s
 smoke/residual/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	36s
 smoke/residual/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	37s
+smoke/packed/F-M1/--batch-size/16	ok	624s
