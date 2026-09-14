@@ -139,3 +139,22 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_10:02:11]   pushed full/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4
 [2026-09-14_10:02:11] >>> full/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4
 [2026-09-14_10:06:16] <<< full/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4 ok in 245s
+[2026-09-14_10:17:34] ===== MODE=full =====
+[2026-09-14_10:17:58] spawned watchdog (pid 18096)
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[2026-09-14_10:17:58] --- F2: dense prompt selection, dense records, order-swap audit ---
+[2026-09-14_10:17:58] skip full/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16 (already ok)
+[2026-09-14_10:17:58] skip full/dense/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16 (already ok)
+[2026-09-14_10:17:58] skip full/dense/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16 (already ok)
+[2026-09-14_10:17:58] --- F3: simulated RTN8, RTN4, GPTQ4 on the final split ---
+[2026-09-14_10:17:58] skip full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8 (already ok)
+[2026-09-14_10:17:58] skip full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4 (already ok)
+[2026-09-14_10:17:58] skip full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4 (already ok)
+[2026-09-14_10:17:58] skip full/quant/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8 (already ok)
+[2026-09-14_10:17:58] skip full/quant/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4 (already ok)
+[2026-09-14_10:17:58] skip full/quant/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4 (already ok)
+[2026-09-14_10:17:58] skip full/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8 (already ok)
+[2026-09-14_10:17:58] skip full/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4 (already ok)
+[2026-09-14_10:17:58] skip full/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4 (already ok)
+[2026-09-14_10:17:58] --- F4: expanded directional ladder ---
+[2026-09-14_10:17:58] >>> full/directional/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16

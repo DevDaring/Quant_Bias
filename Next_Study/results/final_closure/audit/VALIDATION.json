@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-09-14T09:52:42Z",
+  "checked_utc": "2026-09-14T10:18:00Z",
   "checks": {
     "F-M1/dense_covers_final_split": {
       "detail": {
@@ -142,21 +142,88 @@
       "detail": null,
       "ok": true
     },
-    "F-M2/gptq4_records": {
-      "detail": "missing",
-      "ok": false
+    "F-M2/gptq4_calibration_hash_recorded": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M2/gptq4_finite": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M2/gptq4_grid_valid": {
+      "detail": {
+        "grid_ok_all": true,
+        "max_rel_fro_err": 0.1758642941713333,
+        "mean_rel_fro_err": 0.1262176411692053,
+        "n_quantized": 224
+      },
+      "ok": true
+    },
+    "F-M2/gptq4_restored_exact": {
+      "detail": {
+        "max_abs_logit_diff": 0.0,
+        "n_components": 224,
+        "ok": true
+      },
+      "ok": true
+    },
+    "F-M2/gptq4_row_alignment": {
+      "detail": null,
+      "ok": true
     },
     "F-M2/manifest_hardware": {
       "detail": null,
       "ok": true
     },
-    "F-M2/rtn4_records": {
-      "detail": "missing",
-      "ok": false
+    "F-M2/rtn4_finite": {
+      "detail": null,
+      "ok": true
     },
-    "F-M2/rtn8_records": {
-      "detail": "missing",
-      "ok": false
+    "F-M2/rtn4_grid_valid": {
+      "detail": {
+        "grid_ok_all": true,
+        "max_rel_fro_err": 0.12511399388313293,
+        "mean_rel_fro_err": 0.1039741651953331,
+        "n_quantized": 224
+      },
+      "ok": true
+    },
+    "F-M2/rtn4_restored_exact": {
+      "detail": {
+        "max_abs_logit_diff": 0.0,
+        "n_components": 224,
+        "ok": true
+      },
+      "ok": true
+    },
+    "F-M2/rtn4_row_alignment": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M2/rtn8_finite": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M2/rtn8_grid_valid": {
+      "detail": {
+        "grid_ok_all": true,
+        "max_rel_fro_err": 0.00859307125210762,
+        "mean_rel_fro_err": 0.006135710088918651,
+        "n_quantized": 224
+      },
+      "ok": true
+    },
+    "F-M2/rtn8_restored_exact": {
+      "detail": {
+        "max_abs_logit_diff": 0.0,
+        "n_components": 224,
+        "ok": true
+      },
+      "ok": true
+    },
+    "F-M2/rtn8_row_alignment": {
+      "detail": null,
+      "ok": true
     },
     "F-M3/dense_covers_final_split": {
       "detail": {
@@ -185,9 +252,34 @@
       "detail": null,
       "ok": false
     },
-    "F-M3/gptq4_records": {
-      "detail": "missing",
-      "ok": false
+    "F-M3/gptq4_calibration_hash_recorded": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M3/gptq4_finite": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M3/gptq4_grid_valid": {
+      "detail": {
+        "grid_ok_all": true,
+        "max_rel_fro_err": 0.20216962695121765,
+        "mean_rel_fro_err": 0.13178159837566672,
+        "n_quantized": 252
+      },
+      "ok": true
+    },
+    "F-M3/gptq4_restored_exact": {
+      "detail": {
+        "max_abs_logit_diff": 0.0,
+        "n_components": 252,
+        "ok": true
+      },
+      "ok": true
+    },
+    "F-M3/gptq4_row_alignment": {
+      "detail": null,
+      "ok": true
     },
     "F-M3/manifest_hardware": {
       "detail": null,
@@ -201,9 +293,30 @@
       "detail": null,
       "ok": false
     },
-    "F-M3/rtn4_records": {
-      "detail": "missing",
-      "ok": false
+    "F-M3/rtn4_finite": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M3/rtn4_grid_valid": {
+      "detail": {
+        "grid_ok_all": true,
+        "max_rel_fro_err": 0.12576104700565338,
+        "mean_rel_fro_err": 0.10480786230237711,
+        "n_quantized": 252
+      },
+      "ok": true
+    },
+    "F-M3/rtn4_restored_exact": {
+      "detail": {
+        "max_abs_logit_diff": 0.0,
+        "n_components": 252,
+        "ok": true
+      },
+      "ok": true
+    },
+    "F-M3/rtn4_row_alignment": {
+      "detail": null,
+      "ok": true
     },
     "F-M3/rtn8_finite": {
       "detail": null,
