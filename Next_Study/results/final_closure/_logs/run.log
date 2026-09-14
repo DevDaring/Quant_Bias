@@ -35,3 +35,6 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_09:08:35]   pushed smoke/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8
 [2026-09-14_09:08:35] >>> smoke/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4
 [2026-09-14_09:09:18] <<< smoke/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4 ok in 43s
+[2026-09-14_09:09:25]   pushed smoke/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4
+[2026-09-14_09:09:25] >>> smoke/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4
+[2026-09-14_09:12:17] <<< smoke/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4 ok in 172s
