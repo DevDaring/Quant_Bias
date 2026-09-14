@@ -1,0 +1,63 @@
+{
+  "accuracy": {
+    "acc_anti": 0.75,
+    "acc_pos0": 0.8181818181818182,
+    "acc_pos1": 0.8571428571428571,
+    "acc_pro": 0.9375,
+    "accuracy": 0.84375,
+    "boundary_mismatch_rate": 0.0,
+    "min_pro_anti": 0.75,
+    "n": 32,
+    "n_anti": 16,
+    "n_anti_correct": 12,
+    "n_pro": 16,
+    "position_gap": 0.03896103896103886
+  },
+  "bits": 4,
+  "calibration_hash": null,
+  "finished_utc": "2026-09-14T09:04:50Z",
+  "git_commit": "b36ef5b79832ce09a0047637dc8cc32909e958d7",
+  "hardware": {
+    "cuda": "12.4",
+    "driver": "595.71.05",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_mem_gb": 79.2,
+    "hostname_class": "akash-h100",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "python": "3.11.10",
+    "torch": "2.5.1+cu124",
+    "transformers": "5.17.0"
+  },
+  "model": "F-M3",
+  "n_restored": 252,
+  "n_rows": 32,
+  "peak_allocated_gb": 17.06,
+  "precision_map_hash": "cfa7e797db77daf0",
+  "quant_settings": {
+    "gptq_actorder": false,
+    "gptq_blocksize": 128,
+    "gptq_percdamp": 0.01,
+    "group_size": 128,
+    "sym": false
+  },
+  "quant_stats": {
+    "grid_ok_all": true,
+    "max_rel_fro_err": 0.12576104700565338,
+    "mean_rel_fro_err": 0.10480786230237711,
+    "n_quantized": 252
+  },
+  "quantize_seconds": 19.4,
+  "restored_exact": true,
+  "roundtrip": {
+    "max_abs_logit_diff": 0.0,
+    "n_components": 252,
+    "ok": true
+  },
+  "smoke": true,
+  "stage": "F3_rtn4",
+  "started_utc": "2026-09-14T09:04:16Z",
+  "status": "complete",
+  "template": "P3",
+  "time_utc": "2026-09-14T09:04:50Z",
+  "wall_seconds": 33.9
+}
