@@ -1,0 +1,30 @@
+[10:59:14] Loading mistralai/Mistral-7B-v0.1@27d67f1b5f57dc0953326b2601d68371d40ea8da (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 15012.45it/s]
+[10:59:17]   attention: flash_attention_2
+[10:59:17]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 8514.42it/s]
+[10:59:33] calibration[generic] seed=20260908: 128x512 tokens, hash=905970a5ebc93504
+[10:59:39]   L 0 rtn4 : amp ratio=1.072 logit ratio=1.074 pct=0.68 (5s)
+[10:59:43]   L 0 rtn8 : amp ratio=0.970 logit ratio=0.984 pct=0.33 (9s)
+[11:00:15]   L 0 gptq4: amp ratio=1.311 logit ratio=2.044 pct=0.93 (42s)
+[11:00:20]   L 4 rtn4 : amp ratio=1.271 logit ratio=1.341 pct=0.95 (47s)
+[11:00:25]   L 4 rtn8 : amp ratio=1.015 logit ratio=1.244 pct=0.64 (51s)
+[11:00:57]   L 4 gptq4: amp ratio=1.178 logit ratio=1.166 pct=0.87 (84s)
+[11:01:02]   L 9 rtn4 : amp ratio=1.128 logit ratio=1.084 pct=0.96 (89s)
+[11:01:07]   L 9 rtn8 : amp ratio=0.946 logit ratio=0.814 pct=0.28 (94s)
+[11:01:40]   L 9 gptq4: amp ratio=1.125 logit ratio=1.186 pct=0.95 (127s)
+[11:01:46]   L13 rtn4 : amp ratio=1.146 logit ratio=1.231 pct=1.00 (132s)
+[11:01:51]   L13 rtn8 : amp ratio=0.931 logit ratio=0.768 pct=0.14 (138s)
+[11:02:24]   L13 gptq4: amp ratio=1.116 logit ratio=1.053 pct=0.99 (170s)
+[11:02:30]   L18 rtn4 : amp ratio=1.103 logit ratio=0.993 pct=1.00 (176s)
+[11:02:35]   L18 rtn8 : amp ratio=1.018 logit ratio=1.201 pct=0.73 (182s)
+[11:03:08]   L18 gptq4: amp ratio=1.072 logit ratio=0.964 pct=1.00 (215s)
+[11:03:15]   L22 rtn4 : amp ratio=1.030 logit ratio=1.069 pct=0.97 (221s)
+[11:03:20]   L22 rtn8 : amp ratio=0.945 logit ratio=0.821 pct=0.29 (227s)
+[11:03:54]   L22 gptq4: amp ratio=1.038 logit ratio=1.238 pct=0.99 (260s)
+[11:04:01]   L27 rtn4 : amp ratio=1.030 logit ratio=1.039 pct=0.98 (267s)
+[11:04:07]   L27 rtn8 : amp ratio=0.959 logit ratio=0.776 pct=0.40 (274s)
+[11:04:41]   L27 gptq4: amp ratio=1.020 logit ratio=1.108 pct=0.95 (308s)
+[11:04:48]   L31 rtn4 : amp ratio=1.000 logit ratio=1.213 pct=0.00 (315s)
+[11:04:55]   L31 rtn8 : amp ratio=0.974 logit ratio=1.012 pct=0.00 (321s)
+[11:05:29]   L31 gptq4: amp ratio=0.999 logit ratio=1.032 pct=0.00 (356s)
