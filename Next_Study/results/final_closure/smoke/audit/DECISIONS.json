@@ -1,0 +1,17 @@
+{
+  "H1_models": [],
+  "H2_models": [],
+  "H4_models": [],
+  "H5_models": [],
+  "eligible_models": [],
+  "rows": {
+    "H4": "The directional score does not rank layers by flip frequency on either model; direction is a per-example, not a per-layer, predictor here.",
+    "H5": "Direction predicts general answer changes only; remove any claim that it locates harmful layers.",
+    "gate/F-M1": "Competence gate failed: report the failure and exclude the model from competence-conditioned inference.",
+    "gate/F-M2": "Competence gate failed: report the failure and exclude the model from competence-conditioned inference.",
+    "gate/F-M3": "Competence gate failed: report the failure and exclude the model from competence-conditioned inference.",
+    "generalisation": "BBQ is a dataset-specific discovery result. Reframe the paper around measurement and decision sensitivity.",
+    "packed/F-M1": "Report packed outcomes as the deployment result and restrict simulated conclusions to controlled mechanistic analysis.",
+    "packed/F-M3": "Report packed outcomes as the deployment result and restrict simulated conclusions to controlled mechanistic analysis."
+  }
+}

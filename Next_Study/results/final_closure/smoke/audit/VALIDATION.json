@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-09-14T09:31:38Z",
+  "checked_utc": "2026-09-14T09:33:06Z",
   "checks": {
     "F-M1/dense_finite": {
       "detail": null,
@@ -15,29 +15,6 @@
     },
     "F-M1/dense_unique_rows": {
       "detail": null,
-      "ok": true
-    },
-    "F-M1/directional_all_layers": {
-      "detail": {
-        "expected": 2,
-        "found": 2
-      },
-      "ok": true
-    },
-    "F-M1/directional_complete": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M1/directional_finite": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M1/directional_restored_exact": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M1/directional_sample_size": {
-      "detail": 8,
       "ok": true
     },
     "F-M1/gptq4_finite": {
@@ -66,29 +43,6 @@
       "ok": true
     },
     "F-M1/manifest_hardware": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M1/packed_backend_manifest": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M1/packed_row_alignment": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M1/packed_status": {
-      "detail": "VALID_COMPLETE",
-      "ok": true
-    },
-    "F-M1/residual_all_cells": {
-      "detail": {
-        "expected": 6,
-        "found": 6
-      },
-      "ok": true
-    },
-    "F-M1/residual_complete": {
       "detail": null,
       "ok": true
     },
@@ -253,29 +207,6 @@
       "detail": null,
       "ok": true
     },
-    "F-M3/directional_all_layers": {
-      "detail": {
-        "expected": 2,
-        "found": 2
-      },
-      "ok": true
-    },
-    "F-M3/directional_complete": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M3/directional_finite": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M3/directional_restored_exact": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M3/directional_sample_size": {
-      "detail": 8,
-      "ok": true
-    },
     "F-M3/gptq4_finite": {
       "detail": null,
       "ok": true
@@ -302,29 +233,6 @@
       "ok": true
     },
     "F-M3/manifest_hardware": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M3/packed_backend_manifest": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M3/packed_row_alignment": {
-      "detail": null,
-      "ok": true
-    },
-    "F-M3/packed_status": {
-      "detail": "VALID_COMPLETE",
-      "ok": true
-    },
-    "F-M3/residual_all_cells": {
-      "detail": {
-        "expected": 6,
-        "found": 6
-      },
-      "ok": true
-    },
-    "F-M3/residual_complete": {
       "detail": null,
       "ok": true
     },
@@ -378,12 +286,24 @@
       "detail": null,
       "ok": true
     },
+    "all_bootstrap_draws_retained": {
+      "detail": 200,
+      "ok": true
+    },
     "analysis_present": {
       "detail": null,
-      "ok": false
+      "ok": true
     },
     "data_hash_matches": {
       "detail": null,
+      "ok": true
+    },
+    "estimates_reproduce_from_records": {
+      "detail": null,
+      "ok": true
+    },
+    "every_cell_terminal": {
+      "detail": [],
       "ok": true
     },
     "no_cluster_leakage": {
@@ -392,6 +312,10 @@
         "final&selection": 0,
         "mechanism&selection": 0
       },
+      "ok": true
+    },
+    "no_smoke_records_in_analysis": {
+      "detail": null,
       "ok": true
     },
     "protocol_hash_matches": {
@@ -408,18 +332,15 @@
     },
     "stage_status_present": {
       "detail": null,
-      "ok": false
+      "ok": true
     },
     "unique_row_ids": {
       "detail": null,
       "ok": true
     }
   },
-  "failed": [
-    "stage_status_present",
-    "analysis_present"
-  ],
+  "failed": [],
   "smoke": true,
   "validator_version": "1.0",
-  "verdict": "FAIL"
+  "verdict": "PASS"
 }

@@ -1,0 +1,1504 @@
+{
+  "hypotheses": {
+    "H1_D_task_4bit_gt_rtn8": {},
+    "H2_D_stereo_4bit_gt_rtn8": {},
+    "H3_Delta_G_positive": {},
+    "H3b_Delta_G_gt_rtn8": {},
+    "min_effect_pp": 0.5,
+    "n_boot": 200,
+    "seed": 20260914
+  },
+  "models": {
+    "F-M1": {
+      "conditions": {
+        "gptq4": {
+          "D_stereo": {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0
+          },
+          "D_task": {
+            "ci_high": 0.20387960092644436,
+            "ci_low": 0.008018505419265548,
+            "estimate": 0.07692307692307693,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.051557214661549604
+          },
+          "Delta_G": {
+            "ci_high": -0.04374384426723731,
+            "ci_low": -0.3879168527514109,
+            "estimate": -0.1875,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.08829520187087944
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.0,
+              "D_task": 0.125,
+              "inferential": false,
+              "n_anti_dense_correct": 5,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            },
+            "her": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 4,
+              "n_dense_correct": 4
+            },
+            "him": {
+              "D_stereo": null,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 0,
+              "n_clusters": 1,
+              "n_dense_correct": 1
+            },
+            "his": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.125,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 11,
+            "n_dense_correct": 26,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 0,
+            "task_damage_events": 2
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 1,
+            "counterpart_consistency": 0.8571428571428571,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.09375,
+            "mean_abs_margin_change": 0.468242384493351,
+            "mean_rule": {
+              "D_stereo": 0.1,
+              "D_task": 0.05
+            },
+            "median_abs_margin_change": 0.3744131326675415,
+            "n_anti_dense_wrong": 5,
+            "net_accuracy_change": -0.03125
+          },
+          "vs_rtn8": {
+            "D_stereo": {
+              "above_min_effect": false,
+              "ci_high": -0.0030440789957703472,
+              "ci_low": -0.28621963884032836,
+              "estimate": -0.09090909090909091,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 1.0,
+              "se": 0.0789784620174213
+            },
+            "D_task": {
+              "above_min_effect": true,
+              "ci_high": 0.18431351470935844,
+              "ci_low": -0.0700322612580296,
+              "estimate": 0.038461538461538464,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.24875621890547264,
+              "se": 0.06054010918267809
+            },
+            "Delta_G": {
+              "above_min_effect": false,
+              "ci_high": -0.08692646835794596,
+              "ci_low": -0.48684830950039204,
+              "estimate": -0.25,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 1.0,
+              "se": 0.10170117243169023
+            }
+          }
+        },
+        "packed_gptq4": {
+          "D_stereo": {
+            "ci_high": 0.6605523303155485,
+            "ci_low": 0.13782005233407985,
+            "estimate": 0.36363636363636365,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.14235599680464855
+          },
+          "D_task": {
+            "ci_high": 0.6313422694275032,
+            "ci_low": 0.14541055113579013,
+            "estimate": 0.34615384615384615,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.12728806591700928
+          },
+          "Delta_G": {
+            "ci_high": -0.08476667127616783,
+            "ci_low": -0.4379330480078016,
+            "estimate": -0.25,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.09461376294099377
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.6,
+              "D_task": 0.375,
+              "inferential": false,
+              "n_anti_dense_correct": 5,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            },
+            "her": {
+              "D_stereo": 0.0,
+              "D_task": 0.25,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 4,
+              "n_dense_correct": 4
+            },
+            "him": {
+              "D_stereo": null,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 0,
+              "n_clusters": 1,
+              "n_dense_correct": 1
+            },
+            "his": {
+              "D_stereo": 0.5,
+              "D_task": 0.2,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.5,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 11,
+            "n_dense_correct": 26,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 4,
+            "task_damage_events": 9
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 3,
+            "counterpart_consistency": 0.7857142857142857,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.375,
+            "mean_abs_margin_change": 7.447938308119774,
+            "mean_rule": {
+              "D_stereo": 0.1,
+              "D_task": 0.1
+            },
+            "median_abs_margin_change": 6.069963693618774,
+            "n_anti_dense_wrong": 5,
+            "net_accuracy_change": -0.1875
+          }
+        },
+        "rtn4": {
+          "D_stereo": {
+            "ci_high": 0.42848819559345075,
+            "ci_low": 0.029872995752666085,
+            "estimate": 0.18181818181818182,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.10886029710799558
+          },
+          "D_task": {
+            "ci_high": 0.3005930748772456,
+            "ci_low": 0.05554139208417471,
+            "estimate": 0.15384615384615385,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.06857842414947427
+          },
+          "Delta_G": {
+            "ci_high": 0.17449897279345097,
+            "ci_low": -0.368225894052079,
+            "estimate": -0.125,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.1347875546372437
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.4,
+              "D_task": 0.375,
+              "inferential": false,
+              "n_anti_dense_correct": 5,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            },
+            "her": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 4,
+              "n_dense_correct": 4
+            },
+            "him": {
+              "D_stereo": null,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 0,
+              "n_clusters": 1,
+              "n_dense_correct": 1
+            },
+            "his": {
+              "D_stereo": 0.0,
+              "D_task": 0.2,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 11,
+            "n_dense_correct": 26,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 2,
+            "task_damage_events": 4
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 2,
+            "counterpart_consistency": 0.6428571428571429,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.1875,
+            "mean_abs_margin_change": 0.7006145045161247,
+            "mean_rule": {
+              "D_stereo": 0.2,
+              "D_task": 0.15
+            },
+            "median_abs_margin_change": 0.6108379364013672,
+            "n_anti_dense_wrong": 5,
+            "net_accuracy_change": -0.0625
+          },
+          "vs_rtn8": {
+            "D_stereo": {
+              "above_min_effect": true,
+              "ci_high": 0.2842311630726502,
+              "ci_low": 0.0018974762981495055,
+              "estimate": 0.09090909090909091,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.004975124378109453,
+              "se": 0.08225782040300247
+            },
+            "D_task": {
+              "above_min_effect": true,
+              "ci_high": 0.2692087355618939,
+              "ci_low": 0.030118288892623222,
+              "estimate": 0.11538461538461539,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.004975124378109453,
+              "se": 0.06306160464646521
+            },
+            "Delta_G": {
+              "above_min_effect": false,
+              "ci_high": 0.060169546245093755,
+              "ci_low": -0.4145374156592505,
+              "estimate": -0.1875,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.9353233830845771,
+              "se": 0.12086518908238798
+            }
+          }
+        },
+        "rtn8": {
+          "D_stereo": {
+            "ci_high": 0.28621963884032847,
+            "ci_low": 0.0030440789957703477,
+            "estimate": 0.09090909090909091,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0789784620174213
+          },
+          "D_task": {
+            "ci_high": 0.11879585009587701,
+            "ci_low": 0.0013200588163316794,
+            "estimate": 0.038461538461538464,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.03326481767203125
+          },
+          "Delta_G": {
+            "ci_high": 0.2039102019534794,
+            "ci_low": 0.002245829085855672,
+            "estimate": 0.0625,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.05520380086932199
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.2,
+              "D_task": 0.125,
+              "inferential": false,
+              "n_anti_dense_correct": 5,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            },
+            "her": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 4,
+              "n_dense_correct": 4
+            },
+            "him": {
+              "D_stereo": null,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 0,
+              "n_clusters": 1,
+              "n_dense_correct": 1
+            },
+            "his": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 11,
+            "n_dense_correct": 26,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 1,
+            "task_damage_events": 1
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 0,
+            "counterpart_consistency": 0.9285714285714286,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.03125,
+            "mean_abs_margin_change": 0.047016602009534836,
+            "mean_rule": {
+              "D_stereo": 0.0,
+              "D_task": 0.0
+            },
+            "median_abs_margin_change": 0.062473297119140625,
+            "n_anti_dense_wrong": 5,
+            "net_accuracy_change": -0.03125
+          }
+        }
+      },
+      "gate": {
+        "checks": {
+          "accuracy>=0.60": true,
+          "anti>=0.55": true,
+          "anti_correct>=500": false,
+          "order_swap<=5%": true,
+          "pos0>=0.55": true,
+          "pos1>=0.55": true,
+          "pro>=0.55": true
+        },
+        "eligible": false,
+        "thresholds": {
+          "accuracy": 0.6,
+          "anti_correct": 500,
+          "order_swap_max": 0.05,
+          "position": 0.55,
+          "pro_anti": 0.55
+        },
+        "values": {
+          "acc_anti": 0.6875,
+          "acc_pos0": 0.9090909090909091,
+          "acc_pos1": 0.7619047619047619,
+          "acc_pro": 0.9375,
+          "accuracy": 0.8125,
+          "n": 32,
+          "n_anti_correct": 11,
+          "order_swap_changed_rate": 0.0
+        }
+      },
+      "packed_vs_simulated": {
+        "backend": {
+          "backend": {
+            "backend": "gptqmodel",
+            "calibration_hash": "18d155618c6a2322",
+            "calibration_n_seq": 1,
+            "checkpoint_bytes": 4159405327,
+            "checkpoint_dir": "/workspace/Quant_Bias/Next_Study/results/final_closure/smoke/packed/F-M1/checkpoint",
+            "checkpoint_hashes": {
+              "model.safetensors": "28a3194b20666682eee04c6e53ad1bc9b5b1c68dc2fc604baca6d8d62a7057bf"
+            },
+            "differences": [],
+            "quantize_config": {
+              "act_group_aware": false,
+              "bits": 4,
+              "damp_percent": 0.01,
+              "desc_act": false,
+              "group_size": 128,
+              "static_groups": true,
+              "sym": false
+            },
+            "quantize_seconds": 313.6,
+            "reconstruction_command": "python -m next_study.run packed --model F-M1 --smoke",
+            "versions": {
+              "auto_gptq": null,
+              "gptqmodel": "7.4.0",
+              "optimum": null,
+              "torch": "2.14.0+cu130",
+              "transformers": "5.17.0"
+            }
+          },
+          "memory": {
+            "backend_reported_weight_memory_gb": 4.13
+          },
+          "perplexity": {
+            "chunk_size": 1024,
+            "max_tokens": 4096,
+            "n_tokens": 4092,
+            "ppl": 6.630637696439568
+          },
+          "throughput": {
+            "batch_prompts": 32,
+            "descriptive_only": true,
+            "tokens_per_second": [
+              2827.87573310989,
+              2828.098525453739,
+              2828.3068825243954
+            ]
+          }
+        },
+        "close_agreement": false,
+        "margin_pearson": -0.21338012084973804,
+        "margin_spearman": -0.08247800586510264,
+        "paired_vs_simulated": {
+          "D_stereo": {
+            "ci_high": 0.6605523303155485,
+            "ci_low": 0.13782005233407985,
+            "estimate": 0.36363636363636365,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.14235599680464855
+          },
+          "D_task": {
+            "ci_high": 0.5634886949061065,
+            "ci_low": 0.008796933885304182,
+            "estimate": 0.2692307692307692,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.1344464413826452
+          },
+          "Delta_G": {
+            "ci_high": -0.002502867814278306,
+            "ci_low": -0.21853265748854853,
+            "estimate": -0.0625,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0552370946835472
+          }
+        },
+        "top_answer_agreement": 0.65625
+      },
+      "template": "P1"
+    },
+    "F-M2": {
+      "conditions": {
+        "gptq4": {
+          "D_stereo": {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0
+          },
+          "D_task": {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0
+          },
+          "Delta_G": {
+            "ci_high": -0.047301220131067565,
+            "ci_low": -0.39513572531703,
+            "estimate": -0.1875,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.08985955492838311
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 4,
+              "n_clusters": 7,
+              "n_dense_correct": 7
+            },
+            "her": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 6,
+              "n_dense_correct": 6
+            },
+            "him": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 2,
+              "n_dense_correct": 2
+            },
+            "his": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 9,
+              "n_dense_correct": 9
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 13,
+            "n_dense_correct": 29,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 0,
+            "task_damage_events": 0
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 3,
+            "counterpart_consistency": 0.8571428571428571,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.09375,
+            "mean_abs_margin_change": 1.9809591472148895,
+            "mean_rule": {
+              "D_stereo": 0.0,
+              "D_task": 0.0
+            },
+            "median_abs_margin_change": 1.0156147480010986,
+            "n_anti_dense_wrong": 3,
+            "net_accuracy_change": 0.09375
+          },
+          "vs_rtn8": {
+            "D_stereo": {
+              "above_min_effect": false,
+              "ci_high": 0.0,
+              "ci_low": 0.0,
+              "estimate": 0.0,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 1.0,
+              "se": 0.0
+            },
+            "D_task": {
+              "above_min_effect": false,
+              "ci_high": 0.0,
+              "ci_low": 0.0,
+              "estimate": 0.0,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 1.0,
+              "se": 0.0
+            },
+            "Delta_G": {
+              "above_min_effect": false,
+              "ci_high": -0.047301220131067565,
+              "ci_low": -0.39513572531703,
+              "estimate": -0.1875,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 1.0,
+              "se": 0.08985955492838311
+            }
+          }
+        },
+        "rtn4": {
+          "D_stereo": {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0
+          },
+          "D_task": {
+            "ci_high": 0.1330173249900579,
+            "ci_low": 0.001120387990099095,
+            "estimate": 0.034482758620689655,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.033601387724801514
+          },
+          "Delta_G": {
+            "ci_high": -0.046799655867390884,
+            "ci_low": -0.4083372339858479,
+            "estimate": -0.1875,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.10000061221452082
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 4,
+              "n_clusters": 7,
+              "n_dense_correct": 7
+            },
+            "her": {
+              "D_stereo": 0.0,
+              "D_task": 0.16666666666666666,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 6,
+              "n_dense_correct": 6
+            },
+            "him": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 2,
+              "n_dense_correct": 2
+            },
+            "his": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 9,
+              "n_dense_correct": 9
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 13,
+            "n_dense_correct": 29,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 0,
+            "task_damage_events": 1
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 2,
+            "counterpart_consistency": 0.9285714285714286,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.09375,
+            "mean_abs_margin_change": 1.989711806178093,
+            "mean_rule": {
+              "D_stereo": 0.07692307692307693,
+              "D_task": 0.07142857142857142
+            },
+            "median_abs_margin_change": 1.4515681266784668,
+            "n_anti_dense_wrong": 3,
+            "net_accuracy_change": 0.03125
+          },
+          "vs_rtn8": {
+            "D_stereo": {
+              "above_min_effect": false,
+              "ci_high": 0.0,
+              "ci_low": 0.0,
+              "estimate": 0.0,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 1.0,
+              "se": 0.0
+            },
+            "D_task": {
+              "above_min_effect": true,
+              "ci_high": 0.1330173249900579,
+              "ci_low": 0.001120387990099095,
+              "estimate": 0.034482758620689655,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.004975124378109453,
+              "se": 0.033601387724801514
+            },
+            "Delta_G": {
+              "above_min_effect": false,
+              "ci_high": -0.046799655867390884,
+              "ci_low": -0.4083372339858479,
+              "estimate": -0.1875,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 1.0,
+              "se": 0.10000061221452082
+            }
+          }
+        },
+        "rtn8": {
+          "D_stereo": {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0
+          },
+          "D_task": {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0
+          },
+          "Delta_G": {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 4,
+              "n_clusters": 7,
+              "n_dense_correct": 7
+            },
+            "her": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 6,
+              "n_dense_correct": 6
+            },
+            "him": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 2,
+              "n_dense_correct": 2
+            },
+            "his": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 2,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 9,
+              "n_dense_correct": 9
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 13,
+            "n_dense_correct": 29,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 0,
+            "task_damage_events": 0
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 0,
+            "counterpart_consistency": 1.0,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.0,
+            "mean_abs_margin_change": 0.12913984060287476,
+            "mean_rule": {
+              "D_stereo": 0.0,
+              "D_task": 0.0
+            },
+            "median_abs_margin_change": 0.09131121635437012,
+            "n_anti_dense_wrong": 3,
+            "net_accuracy_change": 0.0
+          }
+        }
+      },
+      "gate": {
+        "checks": {
+          "accuracy>=0.60": true,
+          "anti>=0.55": true,
+          "anti_correct>=500": false,
+          "order_swap<=5%": true,
+          "pos0>=0.55": true,
+          "pos1>=0.55": true,
+          "pro>=0.55": true
+        },
+        "eligible": false,
+        "thresholds": {
+          "accuracy": 0.6,
+          "anti_correct": 500,
+          "order_swap_max": 0.05,
+          "position": 0.55,
+          "pro_anti": 0.55
+        },
+        "values": {
+          "acc_anti": 0.8125,
+          "acc_pos0": 1.0,
+          "acc_pos1": 0.8571428571428571,
+          "acc_pro": 1.0,
+          "accuracy": 0.90625,
+          "n": 32,
+          "n_anti_correct": 13,
+          "order_swap_changed_rate": 0.0
+        }
+      },
+      "template": "P1"
+    },
+    "F-M3": {
+      "conditions": {
+        "gptq4": {
+          "D_stereo": {
+            "ci_high": 0.48385389678475677,
+            "ci_low": 0.052886777844771894,
+            "estimate": 0.23076923076923078,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.11047319902845197
+          },
+          "D_task": {
+            "ci_high": 0.2712813083842849,
+            "ci_low": 0.04808985316476236,
+            "estimate": 0.14285714285714285,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.05666801541966255
+          },
+          "Delta_G": {
+            "ci_high": 0.3614603247203234,
+            "ci_low": -0.10312936392500245,
+            "estimate": 0.125,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.11929499514842867
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.0,
+              "D_task": 0.125,
+              "inferential": false,
+              "n_anti_dense_correct": 5,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            },
+            "her": {
+              "D_stereo": 0.3333333333333333,
+              "D_task": 0.2,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "him": {
+              "D_stereo": 1.0,
+              "D_task": 0.5,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 2,
+              "n_dense_correct": 2
+            },
+            "his": {
+              "D_stereo": 1.0,
+              "D_task": 0.25,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 4,
+              "n_dense_correct": 4
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 9,
+              "n_dense_correct": 9
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 13,
+            "n_dense_correct": 28,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 3,
+            "task_damage_events": 4
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 0,
+            "counterpart_consistency": 0.7857142857142857,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.125,
+            "mean_abs_margin_change": 6.485994944256083,
+            "mean_rule": {
+              "D_stereo": 0.23076923076923078,
+              "D_task": 0.14285714285714285
+            },
+            "median_abs_margin_change": 6.74999946312137,
+            "n_anti_dense_wrong": 3,
+            "net_accuracy_change": -0.125
+          },
+          "vs_rtn8": {
+            "D_stereo": {
+              "above_min_effect": true,
+              "ci_high": 0.48385389678475677,
+              "ci_low": 0.052886777844771894,
+              "estimate": 0.23076923076923078,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.004975124378109453,
+              "se": 0.11047319902845197
+            },
+            "D_task": {
+              "above_min_effect": true,
+              "ci_high": 0.2712813083842849,
+              "ci_low": 0.04808985316476236,
+              "estimate": 0.14285714285714285,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.004975124378109453,
+              "se": 0.05666801541966255
+            },
+            "Delta_G": {
+              "above_min_effect": true,
+              "ci_high": 0.3614603247203234,
+              "ci_low": -0.10312936392500245,
+              "estimate": 0.125,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.13432835820895522,
+              "se": 0.11929499514842867
+            }
+          }
+        },
+        "packed_gptq4": {
+          "D_stereo": {
+            "ci_high": 0.3574757908101513,
+            "ci_low": 0.021823625119953848,
+            "estimate": 0.15384615384615385,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.08691718218409585
+          },
+          "D_task": {
+            "ci_high": 0.161054141258616,
+            "ci_low": 0.009815142416439236,
+            "estimate": 0.07142857142857142,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.041030790072486535
+          },
+          "Delta_G": {
+            "ci_high": 0.36926201078498166,
+            "ci_low": -0.06767972336969094,
+            "estimate": 0.125,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.10721412468179108
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 5,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            },
+            "her": {
+              "D_stereo": 0.3333333333333333,
+              "D_task": 0.2,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "him": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 2,
+              "n_dense_correct": 2
+            },
+            "his": {
+              "D_stereo": 1.0,
+              "D_task": 0.25,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 4,
+              "n_dense_correct": 4
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 9,
+              "n_dense_correct": 9
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 13,
+            "n_dense_correct": 28,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 2,
+            "task_damage_events": 2
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 1,
+            "counterpart_consistency": 0.7857142857142857,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.125,
+            "mean_abs_margin_change": 6.127664272432688,
+            "mean_rule": {
+              "D_stereo": 0.15384615384615385,
+              "D_task": 0.07142857142857142
+            },
+            "median_abs_margin_change": 5.115519388281882,
+            "n_anti_dense_wrong": 3,
+            "net_accuracy_change": 0.0
+          }
+        },
+        "rtn4": {
+          "D_stereo": {
+            "ci_high": 0.39964175894279824,
+            "ci_low": 0.021064282648086567,
+            "estimate": 0.15384615384615385,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.09780618760667535
+          },
+          "D_task": {
+            "ci_high": 0.18275442072295772,
+            "ci_low": 0.01005282640772019,
+            "estimate": 0.07142857142857142,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.044911916178423085
+          },
+          "Delta_G": {
+            "ci_high": 0.2661228405944053,
+            "ci_low": -0.1120263724510811,
+            "estimate": 0.0625,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.10051781680172536
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.2,
+              "D_task": 0.125,
+              "inferential": false,
+              "n_anti_dense_correct": 5,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            },
+            "her": {
+              "D_stereo": 0.3333333333333333,
+              "D_task": 0.2,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "him": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 2,
+              "n_dense_correct": 2
+            },
+            "his": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 4,
+              "n_dense_correct": 4
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 9,
+              "n_dense_correct": 9
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 13,
+            "n_dense_correct": 28,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 2,
+            "task_damage_events": 2
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 1,
+            "counterpart_consistency": 0.7857142857142857,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.09375,
+            "mean_abs_margin_change": 4.985201266725943,
+            "mean_rule": {
+              "D_stereo": 0.15384615384615385,
+              "D_task": 0.07142857142857142
+            },
+            "median_abs_margin_change": 2.81249344338028,
+            "n_anti_dense_wrong": 3,
+            "net_accuracy_change": -0.03125
+          },
+          "vs_rtn8": {
+            "D_stereo": {
+              "above_min_effect": true,
+              "ci_high": 0.39964175894279824,
+              "ci_low": 0.021064282648086567,
+              "estimate": 0.15384615384615385,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.004975124378109453,
+              "se": 0.09780618760667535
+            },
+            "D_task": {
+              "above_min_effect": true,
+              "ci_high": 0.18275442072295772,
+              "ci_low": 0.01005282640772019,
+              "estimate": 0.07142857142857142,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.004975124378109453,
+              "se": 0.044911916178423085
+            },
+            "Delta_G": {
+              "above_min_effect": true,
+              "ci_high": 0.2661228405944053,
+              "ci_low": -0.1120263724510811,
+              "estimate": 0.0625,
+              "n_boot": 200,
+              "n_boot_valid": 200,
+              "p_one_sided": 0.263681592039801,
+              "se": 0.10051781680172536
+            }
+          }
+        },
+        "rtn8": {
+          "D_stereo": {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0
+          },
+          "D_task": {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0
+          },
+          "Delta_G": {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0
+          },
+          "by_pronoun": {
+            "he": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 5,
+              "n_clusters": 8,
+              "n_dense_correct": 8
+            },
+            "her": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 5,
+              "n_dense_correct": 5
+            },
+            "him": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 2,
+              "n_dense_correct": 2
+            },
+            "his": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 1,
+              "n_clusters": 4,
+              "n_dense_correct": 4
+            },
+            "she": {
+              "D_stereo": 0.0,
+              "D_task": 0.0,
+              "inferential": false,
+              "n_anti_dense_correct": 3,
+              "n_clusters": 9,
+              "n_dense_correct": 9
+            }
+          },
+          "counts": {
+            "n_anti": 16,
+            "n_anti_dense_correct": 13,
+            "n_dense_correct": 28,
+            "n_pos0": 11,
+            "n_pos1": 21,
+            "n_pro": 16,
+            "stereo_events": 0,
+            "task_damage_events": 0
+          },
+          "n_clusters": 16,
+          "n_rows": 32,
+          "secondary": {
+            "beneficial_anti_transitions": 0,
+            "counterpart_consistency": 1.0,
+            "counterpart_pairs": 14,
+            "decision_change_rate": 0.0,
+            "mean_abs_margin_change": 0.5509000056517976,
+            "mean_rule": {
+              "D_stereo": 0.0,
+              "D_task": 0.0
+            },
+            "median_abs_margin_change": 0.3768132261830033,
+            "n_anti_dense_wrong": 3,
+            "net_accuracy_change": 0.0
+          }
+        }
+      },
+      "gate": {
+        "checks": {
+          "accuracy>=0.60": true,
+          "anti>=0.55": true,
+          "anti_correct>=500": false,
+          "order_swap<=5%": true,
+          "pos0>=0.55": true,
+          "pos1>=0.55": true,
+          "pro>=0.55": true
+        },
+        "eligible": false,
+        "thresholds": {
+          "accuracy": 0.6,
+          "anti_correct": 500,
+          "order_swap_max": 0.05,
+          "position": 0.55,
+          "pro_anti": 0.55
+        },
+        "values": {
+          "acc_anti": 0.8125,
+          "acc_pos0": 0.8181818181818182,
+          "acc_pos1": 0.9047619047619048,
+          "acc_pro": 0.9375,
+          "accuracy": 0.875,
+          "n": 32,
+          "n_anti_correct": 13,
+          "order_swap_changed_rate": 0.0
+        }
+      },
+      "packed_vs_simulated": {
+        "backend": {
+          "backend": {
+            "backend": "gptqmodel",
+            "calibration_hash": "c51cd04cf85217e6",
+            "calibration_n_seq": 1,
+            "checkpoint_bytes": 6115455118,
+            "checkpoint_dir": "/workspace/Quant_Bias/Next_Study/results/final_closure/smoke/packed/F-M3/checkpoint",
+            "checkpoint_hashes": {
+              "model-00001-of-00002.safetensors": "e59e06edadef7af71acf0fdee599957eceb014a59cebe113e81d2001b3c5b599",
+              "model-00002-of-00002.safetensors": "2f8d54762e4d263668408ca496bee617b1899962042d3fcf50e7f9dfdc4ad631"
+            },
+            "differences": [],
+            "quantize_config": {
+              "act_group_aware": false,
+              "bits": 4,
+              "damp_percent": 0.01,
+              "desc_act": false,
+              "group_size": 128,
+              "static_groups": true,
+              "sym": false
+            },
+            "quantize_seconds": 318.8,
+            "reconstruction_command": "python -m next_study.run packed --model F-M3 --smoke",
+            "versions": {
+              "auto_gptq": null,
+              "gptqmodel": "7.4.0",
+              "optimum": null,
+              "torch": "2.14.0+cu130",
+              "transformers": "5.17.0"
+            }
+          },
+          "memory": {
+            "backend_reported_weight_memory_gb": 5.95
+          },
+          "perplexity": {
+            "chunk_size": 1024,
+            "max_tokens": 4096,
+            "n_tokens": 4092,
+            "ppl": 11.96540754328796
+          },
+          "throughput": {
+            "batch_prompts": 32,
+            "descriptive_only": true,
+            "tokens_per_second": [
+              3093.3284225798707,
+              3098.2570685156697,
+              3095.964590970053
+            ]
+          }
+        },
+        "close_agreement": false,
+        "margin_pearson": 0.9466528638923566,
+        "margin_spearman": 0.9560117302052785,
+        "paired_vs_simulated": {
+          "D_stereo": {
+            "ci_high": -0.0026223607428847934,
+            "ci_low": -0.30058953256340293,
+            "estimate": -0.07692307692307693,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.07869688846800715
+          },
+          "D_task": {
+            "ci_high": -0.012265512830559846,
+            "ci_low": -0.1780662127979319,
+            "estimate": -0.07142857142857142,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.0458559056885265
+          },
+          "Delta_G": {
+            "ci_high": 0.1796848711349007,
+            "ci_low": -0.1791262819381405,
+            "estimate": 0.0,
+            "n_boot": 200,
+            "n_boot_valid": 200,
+            "se": 0.08912873592495509
+          }
+        },
+        "top_answer_agreement": 0.875
+      },
+      "template": "P3"
+    }
+  }
+}

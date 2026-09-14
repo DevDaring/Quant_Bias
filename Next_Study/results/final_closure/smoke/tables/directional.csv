@@ -1,0 +1,3 @@
+model,layers,n_rows,total_stereo_events,rho_flip,rho_flip_lo,rho_flip_hi,rho_stereo,rho_energy_stereo,diff_dir_minus_energy,diff_lo,diff_hi,p_holm_H4,p_holm_H5
+F-M1,2,8,2,nan,nan,nan,nan,nan,nan,nan,nan,None,None
+F-M3,2,8,0,nan,nan,nan,nan,nan,nan,nan,nan,None,None

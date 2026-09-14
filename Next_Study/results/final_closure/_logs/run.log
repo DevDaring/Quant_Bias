@@ -95,3 +95,9 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
     [09:31:38]   FAIL analysis_present: None
 [2026-09-14_09:31:45]   pushed smoke/validate/-/--models/F-M1/F-M2/F-M3
 [2026-09-14_09:31:45] ===== COMPLETE: 18 ok, 2 failed =====
+[2026-09-14_09:31:51]   pushed final (smoke)
+[2026-09-14_09:33:26] ===== MODE=full =====
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[2026-09-14_09:33:52] --- F2: dense prompt selection, dense records, order-swap audit ---
+[2026-09-14_09:33:52] >>> full/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_09:35:24] <<< full/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 92s

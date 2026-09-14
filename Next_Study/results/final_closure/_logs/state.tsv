@@ -18,3 +18,6 @@ smoke/packed/F-M1/--batch-size/16	ok	624s
 smoke/packed/F-M3/--batch-size/16	ok	381s
 smoke/analysis/-/--models/F-M1/F-M2/F-M3	FAILED	0s
 smoke/validate/-/--models/F-M1/F-M2/F-M3	FAILED	0s
+smoke/analysis/-/--models/F-M1/F-M2/F-M3	ok	rerun-after-fix
+smoke/validate/-/--models/F-M1/F-M2/F-M3	ok	rerun-after-fix
+full/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	92s

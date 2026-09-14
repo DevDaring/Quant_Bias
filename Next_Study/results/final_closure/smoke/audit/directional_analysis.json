@@ -1,0 +1,338 @@
+{
+  "hypotheses": {
+    "H4_rho_flip_positive": {
+      "F-M1": {
+        "p": null,
+        "p_holm": null,
+        "reject_0.05": false,
+        "undefined": true
+      },
+      "F-M3": {
+        "p": null,
+        "p_holm": null,
+        "reject_0.05": false,
+        "undefined": true
+      }
+    },
+    "H5_direction_beats_energy_on_stereo": {
+      "F-M1": {
+        "p": null,
+        "p_holm": null,
+        "reject_0.05": false,
+        "undefined": true
+      },
+      "F-M3": {
+        "p": null,
+        "p_holm": null,
+        "reject_0.05": false,
+        "undefined": true
+      }
+    }
+  },
+  "models": {
+    "F-M1": {
+      "across_layers": {
+        "diff_stereo_dir_minus_energy": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_depth_flip": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_depth_stereo": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_energy_flip": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_energy_stereo": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_flip": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_stereo": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        }
+      },
+      "baselines_note": "dense-margin-only is constant across layers on a fixed sample; its layer ranking is undefined by construction",
+      "layers": [
+        0,
+        1
+      ],
+      "n_clusters": 7,
+      "n_rows": 8,
+      "per_layer": {
+        "0": {
+          "bits": 4,
+          "components": [
+            "L0.self_attn.q_proj",
+            "L0.self_attn.k_proj",
+            "L0.self_attn.v_proj",
+            "L0.self_attn.o_proj",
+            "L0.mlp.gate_proj",
+            "L0.mlp.up_proj",
+            "L0.mlp.down_proj"
+          ],
+          "dense_margin_quantiles": {
+            "25": 0.8269064426422119,
+            "5": 0.32056306600570683,
+            "50": 1.7417165040969849,
+            "75": 2.5321781039237976,
+            "95": 3.246362280845642
+          },
+          "grad_seconds_total": 1.3,
+          "inject_seconds": 0.6,
+          "layer": 0,
+          "mean_final_energy": 0.0018811900081345811,
+          "mean_resid_energy": 0.0035008208360522985,
+          "n": 8,
+          "n_anti": 4,
+          "n_nonzero": 8,
+          "obs_flip_rate": 0.125,
+          "obs_stereo_events": 1,
+          "obs_stereo_rate": 0.25,
+          "pearson": 0.9708350774982315,
+          "pred_flip_rate": 0.125,
+          "pred_stereo_rate": 0.25,
+          "restored_exact": true,
+          "score_seconds": 0.6,
+          "sign_agreement_nonzero": 1.0,
+          "spearman": 0.880952380952381
+        },
+        "1": {
+          "bits": 4,
+          "components": [
+            "L1.self_attn.q_proj",
+            "L1.self_attn.k_proj",
+            "L1.self_attn.v_proj",
+            "L1.self_attn.o_proj",
+            "L1.mlp.gate_proj",
+            "L1.mlp.up_proj",
+            "L1.mlp.down_proj"
+          ],
+          "dense_margin_quantiles": {
+            "25": 0.8269064426422119,
+            "5": 0.32056306600570683,
+            "50": 1.7417165040969849,
+            "75": 2.5321781039237976,
+            "95": 3.246362280845642
+          },
+          "grad_seconds_total": 1.3,
+          "inject_seconds": 0.6,
+          "layer": 1,
+          "mean_final_energy": 0.14867918752133846,
+          "mean_resid_energy": 0.0009925208796630614,
+          "n": 8,
+          "n_anti": 4,
+          "n_nonzero": 8,
+          "obs_flip_rate": 0.125,
+          "obs_stereo_events": 1,
+          "obs_stereo_rate": 0.25,
+          "pearson": 0.9253798582468478,
+          "pred_flip_rate": 0.125,
+          "pred_stereo_rate": 0.25,
+          "restored_exact": true,
+          "score_seconds": 0.6,
+          "sign_agreement_nonzero": 0.75,
+          "spearman": 0.9047619047619048
+        }
+      },
+      "total_stereo_events": 2
+    },
+    "F-M3": {
+      "across_layers": {
+        "diff_stereo_dir_minus_energy": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_depth_flip": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_depth_stereo": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_energy_flip": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_energy_stereo": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_flip": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        },
+        "rho_stereo": {
+          "ci_high": null,
+          "ci_low": null,
+          "estimate": NaN,
+          "n_boot": 100,
+          "n_boot_valid": 0,
+          "p_one_sided": null,
+          "se": null
+        }
+      },
+      "baselines_note": "dense-margin-only is constant across layers on a fixed sample; its layer ranking is undefined by construction",
+      "layers": [
+        0,
+        1
+      ],
+      "n_clusters": 8,
+      "n_rows": 8,
+      "per_layer": {
+        "0": {
+          "bits": 4,
+          "components": [
+            "L0.self_attn.q_proj",
+            "L0.self_attn.k_proj",
+            "L0.self_attn.v_proj",
+            "L0.self_attn.o_proj",
+            "L0.mlp.gate_proj",
+            "L0.mlp.up_proj",
+            "L0.mlp.down_proj"
+          ],
+          "dense_margin_quantiles": {
+            "25": 11.875000716413751,
+            "5": 7.462509624784434,
+            "50": 15.50000048734023,
+            "75": 18.09374973177946,
+            "95": 30.612499487400633
+          },
+          "grad_seconds_total": 2.0,
+          "inject_seconds": 0.4,
+          "layer": 0,
+          "mean_final_energy": 0.00040753692883299664,
+          "mean_resid_energy": 0.005383541574701667,
+          "n": 8,
+          "n_anti": 4,
+          "n_nonzero": 8,
+          "obs_flip_rate": 0.0,
+          "obs_stereo_events": 0,
+          "obs_stereo_rate": 0.0,
+          "pearson": 0.9293724617626161,
+          "pred_flip_rate": 0.0,
+          "pred_stereo_rate": 0.0,
+          "restored_exact": true,
+          "score_seconds": 0.6,
+          "sign_agreement_nonzero": 0.75,
+          "spearman": 0.8333333333333335
+        },
+        "1": {
+          "bits": 4,
+          "components": [
+            "L1.self_attn.q_proj",
+            "L1.self_attn.k_proj",
+            "L1.self_attn.v_proj",
+            "L1.self_attn.o_proj",
+            "L1.mlp.gate_proj",
+            "L1.mlp.up_proj",
+            "L1.mlp.down_proj"
+          ],
+          "dense_margin_quantiles": {
+            "25": 11.875000716413751,
+            "5": 7.462509624784434,
+            "50": 15.50000048734023,
+            "75": 18.09374973177946,
+            "95": 30.612499487400633
+          },
+          "grad_seconds_total": 2.0,
+          "inject_seconds": 0.6,
+          "layer": 1,
+          "mean_final_energy": 0.0004159469172009267,
+          "mean_resid_energy": 0.0034097005263902247,
+          "n": 8,
+          "n_anti": 4,
+          "n_nonzero": 8,
+          "obs_flip_rate": 0.0,
+          "obs_stereo_events": 0,
+          "obs_stereo_rate": 0.0,
+          "pearson": 0.9147290001476583,
+          "pred_flip_rate": 0.0,
+          "pred_stereo_rate": 0.0,
+          "restored_exact": true,
+          "score_seconds": 0.6,
+          "sign_agreement_nonzero": 0.75,
+          "spearman": 0.9047619047619048
+        }
+      },
+      "total_stereo_events": 0
+    }
+  },
+  "n_boot": 100,
+  "seed": 20260914
+}
