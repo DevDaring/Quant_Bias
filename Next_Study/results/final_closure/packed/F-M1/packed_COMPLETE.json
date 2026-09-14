@@ -1,0 +1,86 @@
+{
+  "accuracy": {
+    "acc_anti": 0.5942310808620969,
+    "acc_pos0": 0.7320176153971619,
+    "acc_pos1": 0.7251650297858638,
+    "acc_pro": 0.8629071463296062,
+    "accuracy": 0.7285691135958515,
+    "boundary_mismatch_rate": 0.0,
+    "min_pro_anti": 0.5942310808620969,
+    "n": 12342,
+    "n_anti": 6171,
+    "n_anti_correct": 3667,
+    "n_pro": 6171,
+    "position_gap": 0.00685258561129809
+  },
+  "backend": {
+    "backend": "gptqmodel",
+    "calibration_hash": "905970a5ebc93504",
+    "calibration_n_seq": 128,
+    "checkpoint_bytes": 4159405327,
+    "checkpoint_dir": "/workspace/Quant_Bias/Next_Study/results/final_closure/packed/F-M1/checkpoint",
+    "checkpoint_hashes": {
+      "model.safetensors": "b50b23f114dd6643dc1b635ce5d688d63e9508aa3234aaa4b6c9996caf642cb3"
+    },
+    "differences": [],
+    "quantize_config": {
+      "act_group_aware": false,
+      "bits": 4,
+      "damp_percent": 0.01,
+      "desc_act": false,
+      "group_size": 128,
+      "static_groups": true,
+      "sym": false
+    },
+    "quantize_seconds": 353.4,
+    "reconstruction_command": "python -m next_study.run packed --model F-M1",
+    "versions": {
+      "auto_gptq": null,
+      "gptqmodel": "7.4.0",
+      "optimum": null,
+      "torch": "2.14.0+cu130",
+      "transformers": "5.17.0"
+    }
+  },
+  "finished_utc": "2026-09-14T11:27:51Z",
+  "git_commit": "adddb72869ecf1dc6c65d9f31ac1209f71048ad8",
+  "hardware": {
+    "cuda": "13.0",
+    "driver": "595.71.05",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_mem_gb": 79.2,
+    "hostname_class": "akash-h100",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "python": "3.11.10",
+    "torch": "2.14.0+cu130",
+    "transformers": "5.17.0"
+  },
+  "memory": {
+    "backend_reported_weight_memory_gb": 4.63
+  },
+  "model": "F-M1",
+  "n_rows": 12342,
+  "peak_allocated_gb": 5.14,
+  "perplexity": {
+    "chunk_size": 1024,
+    "max_tokens": 4096,
+    "n_tokens": 4092,
+    "ppl": 6.393346491960283
+  },
+  "smoke": false,
+  "stage": "F6_packed",
+  "started_utc": "2026-09-14T11:12:27Z",
+  "status": "VALID_COMPLETE",
+  "template": "P1",
+  "throughput": {
+    "batch_prompts": 32,
+    "descriptive_only": true,
+    "tokens_per_second": [
+      2839.295768325317,
+      2843.4485408831883,
+      2841.7611970459543
+    ]
+  },
+  "time_utc": "2026-09-14T11:27:51Z",
+  "wall_seconds": 924.0
+}
