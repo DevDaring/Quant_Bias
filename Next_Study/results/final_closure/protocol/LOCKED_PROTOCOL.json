@@ -74,7 +74,7 @@
     "n_rows": 512,
     "per_stratum": 256
   },
-  "git_commit": "9cca3e1b05477571e5e856d9eb696257f74c7876",
+  "git_commit": "54d511c95f63a4e4251fc8e4789ddfecc5b3878d",
   "holm_families": {
     "H1": 6,
     "H2": 6,
@@ -90,7 +90,7 @@
     "H5": "directional predictor ranks stereotype-aligned layer damage better than final hidden-state energy (Spearman difference)"
   },
   "implementation_layout": "Codes/Next_Study (package next_study) at the user's direction; reuses quantbias and mixed_study unchanged",
-  "locked_utc": "2026-09-14T08:45:54Z",
+  "locked_utc": "2026-09-14T08:46:16Z",
   "min_effect_pp": 0.5,
   "models": {
     "F-M1": {
