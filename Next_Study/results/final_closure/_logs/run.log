@@ -115,3 +115,6 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_09:42:38] --- F3: simulated RTN8, RTN4, GPTQ4 on the final split ---
 [2026-09-14_09:42:38] >>> full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8
 [2026-09-14_09:44:07] <<< full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8 ok in 89s
+[2026-09-14_09:44:15]   pushed full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8
+[2026-09-14_09:44:15] >>> full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4
+[2026-09-14_09:45:45] <<< full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4 ok in 90s
