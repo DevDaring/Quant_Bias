@@ -1,0 +1,22 @@
+{
+  "layers": [
+    0,
+    4
+  ],
+  "seed": 20260914,
+  "sources": [
+    "rtn4",
+    "rtn8",
+    "gptq4"
+  ],
+  "uids": [
+    "sb-42cdcb9514916f6576cd",
+    "sb-11fb83e34837361bca3b",
+    "sb-1973fc7956f0391595bd",
+    "sb-05ec96823815e199ce8f",
+    "sb-b365e337705a540f40a9",
+    "sb-a46b715cc54b820d3092",
+    "sb-80a80655c055f3f90c8f",
+    "sb-c5f9886fabd3557dd8ad"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "cells": [
+    "L00_rtn4",
+    "L00_rtn8",
+    "L00_gptq4",
+    "L04_rtn4",
+    "L04_rtn8",
+    "L04_gptq4"
+  ],
+  "depth_mapping": {
+    "0/7": 0,
+    "1/7": 4
+  },
+  "finished_utc": "2026-09-14T09:13:40Z",
+  "git_commit": "07da107aad056460243f609d9363c5e087c692ef",
+  "hardware": {
+    "cuda": "12.4",
+    "driver": "595.71.05",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_mem_gb": 79.2,
+    "hostname_class": "akash-h100",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "python": "3.11.10",
+    "torch": "2.5.1+cu124",
+    "transformers": "5.17.0"
+  },
+  "layers": [
+    0,
+    4
+  ],
+  "model": "F-M1",
+  "n_prompts": 8,
+  "n_random": 2,
+  "peak_allocated_gb": 18.8,
+  "smoke": true,
+  "sources": [
+    "rtn4",
+    "rtn8",
+    "gptq4"
+  ],
+  "stage": "F5_residual_controls",
+  "started_utc": "2026-09-14T09:13:14Z",
+  "status": "complete",
+  "template": "P1",
+  "time_utc": "2026-09-14T09:13:40Z",
+  "wall_seconds": 26.0
+}

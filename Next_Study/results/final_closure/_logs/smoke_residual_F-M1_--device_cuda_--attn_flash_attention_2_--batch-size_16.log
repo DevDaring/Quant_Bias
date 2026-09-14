@@ -1,0 +1,12 @@
+[09:13:08] Loading mistralai/Mistral-7B-v0.1@27d67f1b5f57dc0953326b2601d68371d40ea8da (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9422.71it/s]
+[09:13:11]   attention: flash_attention_2
+[09:13:11]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 7321.79it/s]
+[09:13:27] calibration[generic] seed=20260908: 1x512 tokens, hash=18d155618c6a2322
+[09:13:28]   L 0 rtn4 : amp ratio=1.106 logit ratio=1.097 pct=0.81 (1s)
+[09:13:29]   L 0 rtn8 : amp ratio=0.954 logit ratio=0.861 pct=0.25 (2s)
+[09:13:34]   L 0 gptq4: amp ratio=0.885 logit ratio=0.980 pct=0.19 (7s)
+[09:13:35]   L 4 rtn4 : amp ratio=1.257 logit ratio=1.548 pct=1.00 (8s)
+[09:13:36]   L 4 rtn8 : amp ratio=1.028 logit ratio=1.320 pct=0.81 (9s)
+[09:13:40]   L 4 gptq4: amp ratio=1.516 logit ratio=1.921 pct=1.00 (14s)
