@@ -1,0 +1,59 @@
+{
+  "model": "F-M2",
+  "ranking": [
+    "P1",
+    "P3",
+    "P2"
+  ],
+  "rule": [
+    "max min(pro,anti) accuracy",
+    "min |position gap|",
+    "max accuracy",
+    "lowest template id"
+  ],
+  "stats": {
+    "P1": {
+      "acc_anti": 0.6875,
+      "acc_pos0": 0.8666666666666667,
+      "acc_pos1": 0.8235294117647058,
+      "acc_pro": 1.0,
+      "accuracy": 0.84375,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.6875,
+      "n": 32,
+      "n_anti": 16,
+      "n_anti_correct": 11,
+      "n_pro": 16,
+      "position_gap": 0.04313725490196085
+    },
+    "P2": {
+      "acc_anti": 0.5625,
+      "acc_pos0": 0.8,
+      "acc_pos1": 0.7647058823529411,
+      "acc_pro": 1.0,
+      "accuracy": 0.78125,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.5625,
+      "n": 32,
+      "n_anti": 16,
+      "n_anti_correct": 9,
+      "n_pro": 16,
+      "position_gap": 0.03529411764705892
+    },
+    "P3": {
+      "acc_anti": 0.625,
+      "acc_pos0": 0.6666666666666666,
+      "acc_pos1": 0.8235294117647058,
+      "acc_pro": 0.875,
+      "accuracy": 0.75,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.625,
+      "n": 32,
+      "n_anti": 16,
+      "n_anti_correct": 10,
+      "n_pro": 16,
+      "position_gap": 0.1568627450980392
+    }
+  },
+  "template": "P1"
+}

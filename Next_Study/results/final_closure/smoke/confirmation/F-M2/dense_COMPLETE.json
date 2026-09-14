@@ -1,0 +1,79 @@
+{
+  "finished_utc": "2026-09-14T08:58:33Z",
+  "git_commit": "9df437c4281b2d26a65a3e2f22e38d9663a328c6",
+  "hardware": {
+    "cuda": "12.4",
+    "driver": "595.71.05",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_mem_gb": 79.2,
+    "hostname_class": "akash-h100",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "python": "3.11.10",
+    "torch": "2.5.1+cu124",
+    "transformers": "5.17.0"
+  },
+  "model": "F-M2",
+  "n_rows": {
+    "final": 32,
+    "mechanism": 32,
+    "selection": 32
+  },
+  "order_swap": {
+    "changed": 0,
+    "changed_rate": 0.0,
+    "n": 32,
+    "seed": 20260914
+  },
+  "peak_allocated_gb": 14.02,
+  "smoke": true,
+  "stage": "F2_dense",
+  "started_utc": "2026-09-14T08:58:32Z",
+  "stats": {
+    "final": {
+      "acc_anti": 0.8125,
+      "acc_pos0": 1.0,
+      "acc_pos1": 0.8571428571428571,
+      "acc_pro": 1.0,
+      "accuracy": 0.90625,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.8125,
+      "n": 32,
+      "n_anti": 16,
+      "n_anti_correct": 13,
+      "n_pro": 16,
+      "position_gap": 0.1428571428571429
+    },
+    "mechanism": {
+      "acc_anti": 0.5625,
+      "acc_pos0": 0.6923076923076923,
+      "acc_pos1": 0.8421052631578947,
+      "acc_pro": 1.0,
+      "accuracy": 0.78125,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.5625,
+      "n": 32,
+      "n_anti": 16,
+      "n_anti_correct": 9,
+      "n_pro": 16,
+      "position_gap": 0.1497975708502024
+    },
+    "selection": {
+      "acc_anti": 0.6875,
+      "acc_pos0": 0.8666666666666667,
+      "acc_pos1": 0.8235294117647058,
+      "acc_pro": 1.0,
+      "accuracy": 0.84375,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.6875,
+      "n": 32,
+      "n_anti": 16,
+      "n_anti_correct": 11,
+      "n_pro": 16,
+      "position_gap": 0.04313725490196085
+    }
+  },
+  "status": "complete",
+  "template": "P1",
+  "time_utc": "2026-09-14T08:58:33Z",
+  "wall_seconds": 1.3
+}
