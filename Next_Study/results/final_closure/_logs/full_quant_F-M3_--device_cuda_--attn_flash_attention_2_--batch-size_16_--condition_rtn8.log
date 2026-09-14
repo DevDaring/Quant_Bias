@@ -1,0 +1,17 @@
+[09:50:04] Loading Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218 (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 9401.20it/s]
+[09:50:08]   attention: flash_attention_2
+[09:50:08]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8624.25it/s]
+[09:50:38]   scored 2000/24684 candidate sequences
+[09:50:43]   scored 4000/24684 candidate sequences
+[09:50:47]   scored 6000/24684 candidate sequences
+[09:50:52]   scored 8000/24684 candidate sequences
+[09:50:57]   scored 10000/24684 candidate sequences
+[09:51:02]   scored 12000/24684 candidate sequences
+[09:51:07]   scored 14000/24684 candidate sequences
+[09:51:12]   scored 16000/24684 candidate sequences
+[09:51:17]   scored 18000/24684 candidate sequences
+[09:51:22]   scored 20000/24684 candidate sequences
+[09:51:27]   scored 22000/24684 candidate sequences
+[09:51:32]   scored 24000/24684 candidate sequences

@@ -26,3 +26,4 @@ full/dense/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	100s
 full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8	ok	89s
 full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4	ok	90s
 full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4	ok	240s
+full/quant/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8	ok	110s
