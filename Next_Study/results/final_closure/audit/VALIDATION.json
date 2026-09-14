@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-09-14T10:52:48Z",
+  "checked_utc": "2026-09-14T11:18:08Z",
   "checks": {
     "F-M1/dense_covers_final_split": {
       "detail": {
@@ -84,9 +84,24 @@
       "detail": "missing",
       "ok": false
     },
+    "F-M1/residual_all_cells": {
+      "detail": {
+        "expected": 24,
+        "found": 24
+      },
+      "ok": true
+    },
     "F-M1/residual_complete": {
       "detail": null,
-      "ok": false
+      "ok": true
+    },
+    "F-M1/residual_panel_size": {
+      "detail": {
+        "layers": 8,
+        "prompts": 64,
+        "random": 10
+      },
+      "ok": true
     },
     "F-M1/rtn4_finite": {
       "detail": null,
@@ -267,9 +282,28 @@
       "detail": null,
       "ok": true
     },
+    "F-M3/directional_all_layers": {
+      "detail": {
+        "expected": 36,
+        "found": 36
+      },
+      "ok": true
+    },
     "F-M3/directional_complete": {
       "detail": null,
-      "ok": false
+      "ok": true
+    },
+    "F-M3/directional_finite": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M3/directional_restored_exact": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M3/directional_sample_size": {
+      "detail": 512,
+      "ok": true
     },
     "F-M3/gptq4_calibration_hash_recorded": {
       "detail": null,
@@ -308,9 +342,24 @@
       "detail": "missing",
       "ok": false
     },
+    "F-M3/residual_all_cells": {
+      "detail": {
+        "expected": 24,
+        "found": 24
+      },
+      "ok": true
+    },
     "F-M3/residual_complete": {
       "detail": null,
-      "ok": false
+      "ok": true
+    },
+    "F-M3/residual_panel_size": {
+      "detail": {
+        "layers": 8,
+        "prompts": 64,
+        "random": 10
+      },
+      "ok": true
     },
     "F-M3/rtn4_finite": {
       "detail": null,
