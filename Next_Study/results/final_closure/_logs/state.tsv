@@ -23,3 +23,4 @@ smoke/validate/-/--models/F-M1/F-M2/F-M3	ok	rerun-after-fix
 full/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	92s
 full/dense/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	130s
 full/dense/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	100s
+full/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8	ok	89s
