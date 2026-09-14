@@ -1,0 +1,9 @@
+[2026-09-14_08:50:56] setup: === SynthBias ===
+[2026-09-14_08:50:57] setup: csv sha256 verified (6bf346256a12eeb959dfbe610948694e8da26c74306bb202c2f6cd177af84588)
+  split assignment hash verified 9016583a1828ec8a | type2 final rows: 12342
+[2026-09-14_08:50:58] setup: === tests ===
+..............                                                           [100%]
+14 passed in 19.86s
+[2026-09-14_08:51:19] setup: === packed backend environment ===
+ModuleNotFoundError: No module named 'torchvision'
+[2026-09-14_08:53:11] setup: setup complete

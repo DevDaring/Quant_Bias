@@ -1,0 +1,81 @@
+{
+  "checked_utc": "2026-09-14T08:53:11Z",
+  "checks": {
+    "F-M1/dense_records": {
+      "detail": null,
+      "ok": false
+    },
+    "F-M1/directional_complete": {
+      "detail": null,
+      "ok": false
+    },
+    "F-M1/packed_status": {
+      "detail": "missing",
+      "ok": false
+    },
+    "F-M1/residual_complete": {
+      "detail": null,
+      "ok": false
+    },
+    "F-M2/dense_records": {
+      "detail": null,
+      "ok": false
+    },
+    "F-M3/dense_records": {
+      "detail": null,
+      "ok": false
+    },
+    "F-M3/directional_complete": {
+      "detail": null,
+      "ok": false
+    },
+    "F-M3/packed_status": {
+      "detail": "missing",
+      "ok": false
+    },
+    "F-M3/residual_complete": {
+      "detail": null,
+      "ok": false
+    },
+    "analysis_present": {
+      "detail": null,
+      "ok": false
+    },
+    "data_hash_matches": {
+      "detail": null,
+      "ok": true
+    },
+    "no_cluster_leakage": {
+      "detail": {
+        "final&mechanism": 0,
+        "final&selection": 0,
+        "mechanism&selection": 0
+      },
+      "ok": true
+    },
+    "protocol_hash_matches": {
+      "detail": "8697e979fb9eb789",
+      "ok": true
+    },
+    "protocol_present": {
+      "detail": null,
+      "ok": true
+    },
+    "split_assignment_hash_matches": {
+      "detail": null,
+      "ok": true
+    },
+    "stage_status_present": {
+      "detail": null,
+      "ok": false
+    },
+    "unique_row_ids": {
+      "detail": null,
+      "ok": true
+    }
+  },
+  "failed": [],
+  "smoke": false,
+  "validator_version": "1.0",
+  "verdict": "PASS"
+}

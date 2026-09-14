@@ -1,0 +1,5 @@
+[2026-09-14_08:50:56] ===== MODE=smoke =====
+[2026-09-14_08:53:11] spawned watchdog (pid 18616)
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[2026-09-14_08:53:11] --- F2: dense prompt selection, dense records, order-swap audit ---
+[2026-09-14_08:53:11] >>> smoke/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
