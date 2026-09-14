@@ -1,0 +1,42 @@
+[09:05:00] Loading Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218 (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 9024.39it/s]
+[09:05:03]   attention: flash_attention_2
+[09:05:03]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 6566.92it/s]
+[09:05:19] calibration[generic] seed=20260908: 1x512 tokens, hash=c51cd04cf85217e6
+[09:05:24]   GPTQ layer 0: 7 components
+[09:05:28]   GPTQ layer 1: 7 components
+[09:05:31]   GPTQ layer 2: 7 components
+[09:05:35]   GPTQ layer 3: 7 components
+[09:05:38]   GPTQ layer 4: 7 components
+[09:05:42]   GPTQ layer 5: 7 components
+[09:05:45]   GPTQ layer 6: 7 components
+[09:05:49]   GPTQ layer 7: 7 components
+[09:05:52]   GPTQ layer 8: 7 components
+[09:05:55]   GPTQ layer 9: 7 components
+[09:05:59]   GPTQ layer 10: 7 components
+[09:06:02]   GPTQ layer 11: 7 components
+[09:06:05]   GPTQ layer 12: 7 components
+[09:06:09]   GPTQ layer 13: 7 components
+[09:06:12]   GPTQ layer 14: 7 components
+[09:06:15]   GPTQ layer 15: 7 components
+[09:06:19]   GPTQ layer 16: 7 components
+[09:06:22]   GPTQ layer 17: 7 components
+[09:06:25]   GPTQ layer 18: 7 components
+[09:06:29]   GPTQ layer 19: 7 components
+[09:06:32]   GPTQ layer 20: 7 components
+[09:06:36]   GPTQ layer 21: 7 components
+[09:06:39]   GPTQ layer 22: 7 components
+[09:06:42]   GPTQ layer 23: 7 components
+[09:06:46]   GPTQ layer 24: 7 components
+[09:06:49]   GPTQ layer 25: 7 components
+[09:06:52]   GPTQ layer 26: 7 components
+[09:06:56]   GPTQ layer 27: 7 components
+[09:06:59]   GPTQ layer 28: 7 components
+[09:07:02]   GPTQ layer 29: 7 components
+[09:07:06]   GPTQ layer 30: 7 components
+[09:07:09]   GPTQ layer 31: 7 components
+[09:07:13]   GPTQ layer 32: 7 components
+[09:07:16]   GPTQ layer 33: 7 components
+[09:07:19]   GPTQ layer 34: 7 components
+[09:07:23]   GPTQ layer 35: 7 components
