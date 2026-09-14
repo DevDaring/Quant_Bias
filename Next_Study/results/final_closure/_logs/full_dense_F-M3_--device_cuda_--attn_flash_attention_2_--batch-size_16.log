@@ -1,0 +1,29 @@
+[09:38:33] Loading Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218 (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 32314.96it/s]
+[09:38:36]   attention: flash_attention_2
+[09:38:36]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7226.91it/s]
+[09:38:46]   scored 2000/3480 candidate sequences
+[09:38:51]   F-M3 P1: acc=0.833 pro=0.903 anti=0.762 posgap=0.014
+[09:38:57]   scored 2000/3480 candidate sequences
+[09:39:02]   F-M3 P2: acc=0.798 pro=0.907 anti=0.689 posgap=0.062
+[09:39:08]   scored 2000/3480 candidate sequences
+[09:39:11]   F-M3 P3: acc=0.871 pro=0.960 anti=0.782 posgap=0.005
+[09:39:11]   F-M3: selected P3
+[09:39:17]   scored 2000/7052 candidate sequences
+[09:39:22]   scored 4000/7052 candidate sequences
+[09:39:27]   scored 6000/7052 candidate sequences
+[09:39:39]   scored 2000/24684 candidate sequences
+[09:39:44]   scored 4000/24684 candidate sequences
+[09:39:48]   scored 6000/24684 candidate sequences
+[09:39:53]   scored 8000/24684 candidate sequences
+[09:39:58]   scored 10000/24684 candidate sequences
+[09:40:03]   scored 12000/24684 candidate sequences
+[09:40:08]   scored 14000/24684 candidate sequences
+[09:40:13]   scored 16000/24684 candidate sequences
+[09:40:17]   scored 18000/24684 candidate sequences
+[09:40:22]   scored 20000/24684 candidate sequences
+[09:40:27]   scored 22000/24684 candidate sequences
+[09:40:32]   scored 24000/24684 candidate sequences
+[09:40:40]   scored 2000/2000 candidate sequences
+[09:40:40]   F-M3: order-swap audit changed 0/1000 (0.000%)

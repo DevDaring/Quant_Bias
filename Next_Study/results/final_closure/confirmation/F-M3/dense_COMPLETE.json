@@ -1,0 +1,79 @@
+{
+  "finished_utc": "2026-09-14T09:40:40Z",
+  "git_commit": "a4242a7ca233c0435225a8126f952f1f8d3ae8ce",
+  "hardware": {
+    "cuda": "12.4",
+    "driver": "595.71.05",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_mem_gb": 79.2,
+    "hostname_class": "akash-h100",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "python": "3.11.10",
+    "torch": "2.5.1+cu124",
+    "transformers": "5.17.0"
+  },
+  "model": "F-M3",
+  "n_rows": {
+    "final": 12342,
+    "mechanism": 3526,
+    "selection": 1740
+  },
+  "order_swap": {
+    "changed": 0,
+    "changed_rate": 0.0,
+    "n": 1000,
+    "seed": 20260914
+  },
+  "peak_allocated_gb": 17.81,
+  "smoke": false,
+  "stage": "F2_dense",
+  "started_utc": "2026-09-14T09:38:40Z",
+  "stats": {
+    "final": {
+      "acc_anti": 0.7877167395883974,
+      "acc_pos0": 0.8719621595172077,
+      "acc_pos1": 0.8729673160521655,
+      "acc_pro": 0.9572192513368984,
+      "accuracy": 0.8724679954626479,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.7877167395883974,
+      "n": 12342,
+      "n_anti": 6171,
+      "n_anti_correct": 4861,
+      "n_pro": 6171,
+      "position_gap": 0.0010051565349578073
+    },
+    "mechanism": {
+      "acc_anti": 0.7804878048780488,
+      "acc_pos0": 0.8719955282280604,
+      "acc_pos1": 0.8618307426597582,
+      "acc_pro": 0.9534883720930233,
+      "accuracy": 0.866988088485536,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.7804878048780488,
+      "n": 3526,
+      "n_anti": 1763,
+      "n_anti_correct": 1376,
+      "n_pro": 1763,
+      "position_gap": 0.010164785568302137
+    },
+    "selection": {
+      "acc_anti": 0.7816091954022989,
+      "acc_pos0": 0.8731762065095399,
+      "acc_pos1": 0.8680800942285041,
+      "acc_pro": 0.9597701149425287,
+      "accuracy": 0.8706896551724138,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.7816091954022989,
+      "n": 1740,
+      "n_anti": 870,
+      "n_anti_correct": 680,
+      "n_pro": 870,
+      "position_gap": 0.005096112281035792
+    }
+  },
+  "status": "complete",
+  "template": "P3",
+  "time_utc": "2026-09-14T09:40:40Z",
+  "wall_seconds": 119.5
+}
