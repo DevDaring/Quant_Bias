@@ -1,0 +1,11 @@
+[08:55:03] Loading Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218 (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:39<02:39, 39.79s/it]Fetching 5 files:  40%|████      | 2/5 [01:24<02:07, 42.52s/it]Fetching 5 files:  60%|██████    | 3/5 [01:24<00:46, 23.24s/it]Fetching 5 files:  80%|████████  | 4/5 [01:26<00:14, 14.68s/it]Fetching 5 files: 100%|██████████| 5/5 [01:29<00:00, 10.50s/it]Fetching 5 files: 100%|██████████| 5/5 [01:29<00:00, 17.83s/it]
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 9582.62it/s]
+[08:56:45]   attention: flash_attention_2
+[08:56:45]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7524.21it/s]
+[08:56:50]   F-M3 P1: acc=0.812 pro=0.875 anti=0.750 posgap=0.024
+[08:56:50]   F-M3 P2: acc=0.844 pro=0.938 anti=0.750 posgap=0.082
+[08:56:50]   F-M3 P3: acc=0.844 pro=0.875 anti=0.812 posgap=0.169
+[08:56:50]   F-M3: selected P3
+[08:56:51]   F-M3: order-swap audit changed 0/32 (0.000%)

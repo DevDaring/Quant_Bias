@@ -4,3 +4,6 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_08:53:11] --- F2: dense prompt selection, dense records, order-swap audit ---
 [2026-09-14_08:53:11] >>> smoke/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
 [2026-09-14_08:54:54] <<< smoke/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 103s
+[2026-09-14_08:55:01]   pushed smoke/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_08:55:01] >>> smoke/dense/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_08:56:52] <<< smoke/dense/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 111s
