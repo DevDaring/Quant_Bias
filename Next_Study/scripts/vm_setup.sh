@@ -45,7 +45,7 @@ if [ ! -x "$VP/bin/python" ]; then
 fi
 if ! "$VP/bin/python" -c "import gptqmodel" 2>/dev/null; then
   "$VP/bin/pip" install -q -v gptqmodel > /workspace/gptqmodel_install.log 2>&1 || log "!! gptqmodel install failed (see /workspace/gptqmodel_install.log); packed stage will record BACKEND_UNSUPPORTED"
-  "$VP/bin/pip" install -q datasets scipy pyyaml numpy huggingface_hub accelerate >> /workspace/gptqmodel_install.log 2>&1 || true
+  "$VP/bin/pip" install -q torchvision datasets scipy pyyaml numpy huggingface_hub accelerate >> /workspace/gptqmodel_install.log 2>&1 || true
 fi
 "$VP/bin/python" -c "import gptqmodel, torch, transformers; print('  gptqmodel', gptqmodel.__version__, '| torch', torch.__version__, '| transformers', transformers.__version__)" 2>&1 | tail -1
 echo "$VP/bin/python" > /workspace/PYTHON_PACKED
