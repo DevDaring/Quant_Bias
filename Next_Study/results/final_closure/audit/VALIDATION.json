@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-09-14T09:38:31Z",
+  "checked_utc": "2026-09-14T09:52:42Z",
   "checks": {
     "F-M1/dense_covers_final_split": {
       "detail": {
@@ -28,9 +28,34 @@
       "detail": null,
       "ok": false
     },
-    "F-M1/gptq4_records": {
-      "detail": "missing",
-      "ok": false
+    "F-M1/gptq4_calibration_hash_recorded": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M1/gptq4_finite": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M1/gptq4_grid_valid": {
+      "detail": {
+        "grid_ok_all": true,
+        "max_rel_fro_err": 0.18445052206516266,
+        "mean_rel_fro_err": 0.1267283764734332,
+        "n_quantized": 224
+      },
+      "ok": true
+    },
+    "F-M1/gptq4_restored_exact": {
+      "detail": {
+        "max_abs_logit_diff": 0.0,
+        "n_components": 224,
+        "ok": true
+      },
+      "ok": true
+    },
+    "F-M1/gptq4_row_alignment": {
+      "detail": null,
+      "ok": true
     },
     "F-M1/manifest_hardware": {
       "detail": null,
@@ -44,25 +69,129 @@
       "detail": null,
       "ok": false
     },
-    "F-M1/rtn4_records": {
-      "detail": "missing",
-      "ok": false
+    "F-M1/rtn4_finite": {
+      "detail": null,
+      "ok": true
     },
-    "F-M1/rtn8_records": {
-      "detail": "missing",
-      "ok": false
+    "F-M1/rtn4_grid_valid": {
+      "detail": {
+        "grid_ok_all": true,
+        "max_rel_fro_err": 0.12505054473876953,
+        "mean_rel_fro_err": 0.10391353965470833,
+        "n_quantized": 224
+      },
+      "ok": true
+    },
+    "F-M1/rtn4_restored_exact": {
+      "detail": {
+        "max_abs_logit_diff": 0.0,
+        "n_components": 224,
+        "ok": true
+      },
+      "ok": true
+    },
+    "F-M1/rtn4_row_alignment": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M1/rtn8_finite": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M1/rtn8_grid_valid": {
+      "detail": {
+        "grid_ok_all": true,
+        "max_rel_fro_err": 0.008502345532178879,
+        "mean_rel_fro_err": 0.0061324479237165564,
+        "n_quantized": 224
+      },
+      "ok": true
+    },
+    "F-M1/rtn8_restored_exact": {
+      "detail": {
+        "max_abs_logit_diff": 0.0,
+        "n_components": 224,
+        "ok": true
+      },
+      "ok": true
+    },
+    "F-M1/rtn8_row_alignment": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M2/dense_covers_final_split": {
+      "detail": {
+        "dense": 12342,
+        "final": 12342
+      },
+      "ok": true
+    },
+    "F-M2/dense_finite": {
+      "detail": null,
+      "ok": true
     },
     "F-M2/dense_records": {
       "detail": null,
+      "ok": true
+    },
+    "F-M2/dense_template_locked": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M2/dense_unique_rows": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M2/gptq4_records": {
+      "detail": "missing",
       "ok": false
+    },
+    "F-M2/manifest_hardware": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M2/rtn4_records": {
+      "detail": "missing",
+      "ok": false
+    },
+    "F-M2/rtn8_records": {
+      "detail": "missing",
+      "ok": false
+    },
+    "F-M3/dense_covers_final_split": {
+      "detail": {
+        "dense": 12342,
+        "final": 12342
+      },
+      "ok": true
+    },
+    "F-M3/dense_finite": {
+      "detail": null,
+      "ok": true
     },
     "F-M3/dense_records": {
       "detail": null,
-      "ok": false
+      "ok": true
+    },
+    "F-M3/dense_template_locked": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M3/dense_unique_rows": {
+      "detail": null,
+      "ok": true
     },
     "F-M3/directional_complete": {
       "detail": null,
       "ok": false
+    },
+    "F-M3/gptq4_records": {
+      "detail": "missing",
+      "ok": false
+    },
+    "F-M3/manifest_hardware": {
+      "detail": null,
+      "ok": true
     },
     "F-M3/packed_status": {
       "detail": "missing",
@@ -71,6 +200,35 @@
     "F-M3/residual_complete": {
       "detail": null,
       "ok": false
+    },
+    "F-M3/rtn4_records": {
+      "detail": "missing",
+      "ok": false
+    },
+    "F-M3/rtn8_finite": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M3/rtn8_grid_valid": {
+      "detail": {
+        "grid_ok_all": true,
+        "max_rel_fro_err": 0.00843886286020279,
+        "mean_rel_fro_err": 0.006180655647305742,
+        "n_quantized": 252
+      },
+      "ok": true
+    },
+    "F-M3/rtn8_restored_exact": {
+      "detail": {
+        "max_abs_logit_diff": 0.0,
+        "n_components": 252,
+        "ok": true
+      },
+      "ok": true
+    },
+    "F-M3/rtn8_row_alignment": {
+      "detail": null,
+      "ok": true
     },
     "analysis_present": {
       "detail": null,
