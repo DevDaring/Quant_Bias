@@ -101,3 +101,9 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_09:33:52] --- F2: dense prompt selection, dense records, order-swap audit ---
 [2026-09-14_09:33:52] >>> full/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
 [2026-09-14_09:35:24] <<< full/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 92s
+[2026-09-14_09:38:06] ===== MODE=full =====
+[2026-09-14_09:38:30] spawned watchdog (pid 18115)
+NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
+[2026-09-14_09:38:30] --- F2: dense prompt selection, dense records, order-swap audit ---
+[2026-09-14_09:38:30] skip full/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16 (already ok)
+[2026-09-14_09:38:30] >>> full/dense/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16

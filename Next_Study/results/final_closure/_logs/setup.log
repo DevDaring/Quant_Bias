@@ -29,3 +29,25 @@ Torch        : 2.14.0+cu130
 Triton       : 3.8.0
   gptqmodel 7.4.0 | torch 2.14.0+cu130 | transformers 5.17.0
 [2026-09-14_09:33:52] setup: setup complete
+[2026-09-14_09:38:06] setup: === SynthBias ===
+[2026-09-14_09:38:06] setup: csv sha256 verified (6bf346256a12eeb959dfbe610948694e8da26c74306bb202c2f6cd177af84588)
+  split assignment hash verified 9016583a1828ec8a | type2 final rows: 12342
+[2026-09-14_09:38:07] setup: === tests ===
+..............                                                           [100%]
+14 passed in 12.25s
+[2026-09-14_09:38:20] setup: === packed backend environment ===
+
+WARN  Python GIL is enabled: Multi-gpu quant acceleration for MoE models is sub-optimal and multi-core accelerated cpu packing is also disabled. We recommend Python >= 3.13.3t with Pytorch > 2.8 for mult-gpu quantization and multi-cpu packing with env `PYTHON_GIL=0`.
+INFO  ENV: Auto setting PYTORCH_ALLOC_CONF='expandable_segments:True,max_split_size_mb:256,garbage_collection_threshold:0.7' for memory saving.
+INFO  ENV: Auto setting CUDA_DEVICE_ORDER=PCI_BUS_ID for correctness.           
+INFO  
+
+┌─────────────┐    ┌────────────────────────┐    ┌────────────┐    ┌─────────┐
+│ GPT-QModel  │ -> │ ▓▓▓▓▓▓▓▓▓▓▓▓ 16bit     │ -> │ ▒▒▒▒ 8bit  │ -> │ ░░ 4bit │
+└─────────────┘    └────────────────────────┘    └────────────┘    └─────────┘
+GPT-QModel   : 7.4.0+dd63437
+Transformers : 5.17.0
+Torch        : 2.14.0+cu130
+Triton       : 3.8.0
+  gptqmodel 7.4.0 | torch 2.14.0+cu130 | transformers 5.17.0
+[2026-09-14_09:38:30] setup: setup complete

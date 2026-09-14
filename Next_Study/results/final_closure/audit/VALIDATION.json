@@ -1,13 +1,40 @@
 {
-  "checked_utc": "2026-09-14T08:53:11Z",
+  "checked_utc": "2026-09-14T09:38:31Z",
   "checks": {
+    "F-M1/dense_covers_final_split": {
+      "detail": {
+        "dense": 12342,
+        "final": 12342
+      },
+      "ok": true
+    },
+    "F-M1/dense_finite": {
+      "detail": null,
+      "ok": true
+    },
     "F-M1/dense_records": {
       "detail": null,
-      "ok": false
+      "ok": true
+    },
+    "F-M1/dense_template_locked": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M1/dense_unique_rows": {
+      "detail": null,
+      "ok": true
     },
     "F-M1/directional_complete": {
       "detail": null,
       "ok": false
+    },
+    "F-M1/gptq4_records": {
+      "detail": "missing",
+      "ok": false
+    },
+    "F-M1/manifest_hardware": {
+      "detail": null,
+      "ok": true
     },
     "F-M1/packed_status": {
       "detail": "missing",
@@ -15,6 +42,14 @@
     },
     "F-M1/residual_complete": {
       "detail": null,
+      "ok": false
+    },
+    "F-M1/rtn4_records": {
+      "detail": "missing",
+      "ok": false
+    },
+    "F-M1/rtn8_records": {
+      "detail": "missing",
       "ok": false
     },
     "F-M2/dense_records": {
