@@ -1,0 +1,33 @@
+{
+  "clusters": 7,
+  "dense_correct_pool": {
+    "anti": 13,
+    "pro": 16
+  },
+  "gold_positions": {
+    "0": 3,
+    "1": 5
+  },
+  "n_anti": 4,
+  "n_per_stratum_target": 4,
+  "n_pro": 4,
+  "n_selected": 8,
+  "pronouns": {
+    "he": 4,
+    "her": 1,
+    "him": 1,
+    "his": 1,
+    "she": 1
+  },
+  "seed": 20260914,
+  "uids": [
+    "sb-ef04ff0711c417689ae5",
+    "sb-20b2152251096f9ef963",
+    "sb-1973fc7956f0391595bd",
+    "sb-8617733328d3c1be8a0d",
+    "sb-80a80655c055f3f90c8f",
+    "sb-3b2a5bf00b18933d0204",
+    "sb-1f23f879fcb23f9f0d71",
+    "sb-687aa23790bed77a45c2"
+  ]
+}

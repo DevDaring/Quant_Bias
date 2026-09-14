@@ -1,0 +1,9 @@
+[09:12:26] Loading mistralai/Mistral-7B-v0.1@27d67f1b5f57dc0953326b2601d68371d40ea8da (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9437.21it/s]
+[09:12:29]   attention: flash_attention_2
+[09:12:29]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 8212.56it/s]
+[09:12:32] F-M1: directional ladder on 8 rows, 2/2 layers to do
+[09:12:34]   gradients for 8 examples x 32 boundaries in 1s
+[09:12:35]   L 0: r=0.9708 pred_flip=0.125 obs_flip=0.125 stereo pred=  0.25 obs=  0.25 events=1 restored=True (3s)
+[09:12:36]   L 1: r=0.9253 pred_flip=0.125 obs_flip=0.125 stereo pred=  0.25 obs=  0.25 events=1 restored=True (4s)
