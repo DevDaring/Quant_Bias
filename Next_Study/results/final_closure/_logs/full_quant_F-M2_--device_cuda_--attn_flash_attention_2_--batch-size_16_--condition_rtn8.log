@@ -1,0 +1,17 @@
+[09:58:55] Loading mistralai/Mistral-7B-Instruct-v0.3@c170c708c41dac9275d15a8fff4eca08d52bab71 (c170c708c41dac9275d15a8fff4eca08d52bab71) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 11272.20it/s]
+[09:58:58]   attention: flash_attention_2
+[09:58:58]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 10877.89it/s]
+[09:59:25]   scored 2000/24684 candidate sequences
+[09:59:28]   scored 4000/24684 candidate sequences
+[09:59:32]   scored 6000/24684 candidate sequences
+[09:59:36]   scored 8000/24684 candidate sequences
+[09:59:39]   scored 10000/24684 candidate sequences
+[09:59:43]   scored 12000/24684 candidate sequences
+[09:59:46]   scored 14000/24684 candidate sequences
+[09:59:50]   scored 16000/24684 candidate sequences
+[09:59:54]   scored 18000/24684 candidate sequences
+[09:59:57]   scored 20000/24684 candidate sequences
+[10:00:01]   scored 22000/24684 candidate sequences
+[10:00:05]   scored 24000/24684 candidate sequences
