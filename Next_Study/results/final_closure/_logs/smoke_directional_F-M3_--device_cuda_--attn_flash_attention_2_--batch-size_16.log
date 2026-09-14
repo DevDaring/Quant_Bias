@@ -1,0 +1,9 @@
+[09:12:46] Loading Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218 (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 26602.77it/s]
+[09:12:50]   attention: flash_attention_2
+[09:12:50]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7732.20it/s]
+[09:12:54] F-M3: directional ladder on 8 rows, 2/2 layers to do
+[09:12:56]   gradients for 8 examples x 36 boundaries in 2s
+[09:12:57]   L 0: r=0.9293 pred_flip=0.000 obs_flip=0.000 stereo pred=   0.0 obs=   0.0 events=0 restored=True (3s)
+[09:12:58]   L 1: r=0.9147 pred_flip=0.000 obs_flip=0.000 stereo pred=   0.0 obs=   0.0 events=0 restored=True (4s)

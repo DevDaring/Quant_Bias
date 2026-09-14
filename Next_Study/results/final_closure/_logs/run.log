@@ -42,3 +42,6 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_09:12:24] --- F4: expanded directional ladder ---
 [2026-09-14_09:12:24] >>> smoke/directional/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
 [2026-09-14_09:12:37] <<< smoke/directional/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 13s
+[2026-09-14_09:12:44]   pushed smoke/directional/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_09:12:44] >>> smoke/directional/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_09:12:59] <<< smoke/directional/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 15s

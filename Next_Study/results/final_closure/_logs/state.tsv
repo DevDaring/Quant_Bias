@@ -11,3 +11,4 @@ smoke/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condit
 smoke/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4	ok	43s
 smoke/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4	ok	172s
 smoke/directional/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	13s
+smoke/directional/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	15s

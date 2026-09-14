@@ -1,0 +1,34 @@
+{
+  "finished_utc": "2026-09-14T09:12:58Z",
+  "git_commit": "ec06a7eef8552eb005e3de6a9bca768c179a8ad4",
+  "grad_seconds": 2.0,
+  "hardware": {
+    "cuda": "12.4",
+    "driver": "595.71.05",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_mem_gb": 79.2,
+    "hostname_class": "akash-h100",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "python": "3.11.10",
+    "torch": "2.5.1+cu124",
+    "transformers": "5.17.0"
+  },
+  "layers": [
+    0,
+    1
+  ],
+  "layers_done": [
+    0,
+    1
+  ],
+  "model": "F-M3",
+  "n_examples": 8,
+  "peak_allocated_gb": 16.9,
+  "smoke": true,
+  "stage": "F4_directional",
+  "started_utc": "2026-09-14T09:12:54Z",
+  "status": "complete",
+  "template": "P3",
+  "time_utc": "2026-09-14T09:12:58Z",
+  "wall_seconds": 4.4
+}
