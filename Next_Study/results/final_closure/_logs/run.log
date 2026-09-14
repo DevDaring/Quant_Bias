@@ -166,3 +166,6 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_10:59:11] --- F5: residual-direction controls ---
 [2026-09-14_10:59:11] >>> full/residual/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
 [2026-09-14_11:05:31] <<< full/residual/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 380s
+[2026-09-14_11:05:39]   pushed full/residual/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_11:05:39] >>> full/residual/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_11:12:18] <<< full/residual/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 399s
