@@ -1,0 +1,38 @@
+[09:00:20] Loading mistralai/Mistral-7B-v0.1@27d67f1b5f57dc0953326b2601d68371d40ea8da (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 8018.02it/s]
+[09:00:22]   attention: flash_attention_2
+[09:00:22]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 8229.34it/s]
+[09:00:39] calibration[generic] seed=20260908: 1x512 tokens, hash=18d155618c6a2322
+[09:00:44]   GPTQ layer 0: 7 components
+[09:00:48]   GPTQ layer 1: 7 components
+[09:00:52]   GPTQ layer 2: 7 components
+[09:00:56]   GPTQ layer 3: 7 components
+[09:01:00]   GPTQ layer 4: 7 components
+[09:01:04]   GPTQ layer 5: 7 components
+[09:01:08]   GPTQ layer 6: 7 components
+[09:01:12]   GPTQ layer 7: 7 components
+[09:01:16]   GPTQ layer 8: 7 components
+[09:01:20]   GPTQ layer 9: 7 components
+[09:01:24]   GPTQ layer 10: 7 components
+[09:01:29]   GPTQ layer 11: 7 components
+[09:01:33]   GPTQ layer 12: 7 components
+[09:01:37]   GPTQ layer 13: 7 components
+[09:01:41]   GPTQ layer 14: 7 components
+[09:01:45]   GPTQ layer 15: 7 components
+[09:01:49]   GPTQ layer 16: 7 components
+[09:01:53]   GPTQ layer 17: 7 components
+[09:01:57]   GPTQ layer 18: 7 components
+[09:02:01]   GPTQ layer 19: 7 components
+[09:02:05]   GPTQ layer 20: 7 components
+[09:02:09]   GPTQ layer 21: 7 components
+[09:02:14]   GPTQ layer 22: 7 components
+[09:02:18]   GPTQ layer 23: 7 components
+[09:02:22]   GPTQ layer 24: 7 components
+[09:02:26]   GPTQ layer 25: 7 components
+[09:02:30]   GPTQ layer 26: 7 components
+[09:02:34]   GPTQ layer 27: 7 components
+[09:02:38]   GPTQ layer 28: 7 components
+[09:02:42]   GPTQ layer 29: 7 components
+[09:02:46]   GPTQ layer 30: 7 components
+[09:02:50]   GPTQ layer 31: 7 components
