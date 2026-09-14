@@ -21,7 +21,7 @@ check(){
   local now; now=$(date -u +%s)
   local nrun npy alerts=() verdict
   nrun=$(ps -eo cmd= | grep -c "^bash /workspace/Quant_Bias/Next_Study/scripts/run_final_closure\.sh ")
-  npy=$(ps -eo cmd= | grep -c "^/opt/conda/bin/python -m next_study\.run ")
+  npy=$(ps -eo cmd= | grep -cE "^/(opt/conda|workspace/venv_packed)/bin/python -m next_study\.run ")
   [ "$nrun" -gt 1 ] && alerts+=("duplicate vm_run.sh ($nrun)")
   [ "$npy" -gt 1 ] && alerts+=("duplicate run_experiment ($npy)")
   local complete=""; [ -f "$LOGS/full_COMPLETE" ] && complete=$(cat "$LOGS/full_COMPLETE")
