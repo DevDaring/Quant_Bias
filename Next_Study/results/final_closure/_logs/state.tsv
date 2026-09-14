@@ -30,3 +30,4 @@ full/quant/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16/--conditi
 full/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8	ok	91s
 full/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4	ok	91s
 full/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4	ok	245s
+full/directional/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	563s

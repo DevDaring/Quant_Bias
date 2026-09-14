@@ -158,3 +158,4 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_10:17:58] skip full/quant/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4 (already ok)
 [2026-09-14_10:17:58] --- F4: expanded directional ladder ---
 [2026-09-14_10:17:58] >>> full/directional/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_10:27:21] <<< full/directional/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 563s
