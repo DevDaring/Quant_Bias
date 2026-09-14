@@ -173,3 +173,6 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_11:12:27] --- F6: packed GPTQ4 (separate environment) ---
 [2026-09-14_11:12:27] >>> full/packed/F-M1/--batch-size/16
 [2026-09-14_11:27:53] <<< full/packed/F-M1/--batch-size/16 ok in 926s
+[2026-09-14_11:28:02]   pushed full/packed/F-M1/--batch-size/16
+[2026-09-14_11:28:02] >>> full/packed/F-M3/--batch-size/16
+[2026-09-14_11:42:54] <<< full/packed/F-M3/--batch-size/16 ok in 892s

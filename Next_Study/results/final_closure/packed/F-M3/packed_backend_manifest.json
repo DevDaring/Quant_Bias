@@ -1,0 +1,30 @@
+{
+  "backend": "gptqmodel",
+  "calibration_hash": "2bd1aa26b9efddbb",
+  "calibration_n_seq": 128,
+  "checkpoint_bytes": 6115455118,
+  "checkpoint_dir": "/workspace/Quant_Bias/Next_Study/results/final_closure/packed/F-M3/checkpoint",
+  "checkpoint_hashes": {
+    "model-00001-of-00002.safetensors": "6c49ffd124debf8cabba907079cb12f35af1a9499ddab9d6fc376c7f422a117a",
+    "model-00002-of-00002.safetensors": "fbe93aee86018fe72c8aab56e77a9b43c2f0ad8f4bf5ea95b5947be52a57940e"
+  },
+  "differences": [],
+  "quantize_config": {
+    "act_group_aware": false,
+    "bits": 4,
+    "damp_percent": 0.01,
+    "desc_act": false,
+    "group_size": 128,
+    "static_groups": true,
+    "sym": false
+  },
+  "quantize_seconds": 380.0,
+  "reconstruction_command": "python -m next_study.run packed --model F-M3",
+  "versions": {
+    "auto_gptq": null,
+    "gptqmodel": "7.4.0",
+    "optimum": null,
+    "torch": "2.14.0+cu130",
+    "transformers": "5.17.0"
+  }
+}

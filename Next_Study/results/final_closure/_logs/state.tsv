@@ -35,3 +35,4 @@ full/directional/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	
 full/residual/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	380s
 full/residual/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	399s
 full/packed/F-M1/--batch-size/16	ok	926s
+full/packed/F-M3/--batch-size/16	ok	892s
