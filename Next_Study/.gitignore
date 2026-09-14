@@ -1,0 +1,9 @@
+# raw and derived data are regenerated on the VM from the hashed source (CC BY-NC-ND: not redistributed here)
+data/synthbias/*.csv
+data/synthbias/*.jsonl
+data/synthbias/LICENSE_DATA
+# packed checkpoints are archived separately; their hashes live in packed_backend_manifest.json
+results/final_closure/**/checkpoint/
+__pycache__/
+*.pyc
+.pytest_cache/

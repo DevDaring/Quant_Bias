@@ -1,0 +1,19 @@
+{
+  "columns": [
+    "type",
+    "sample",
+    "occ_1",
+    "occ_2",
+    "pronoun",
+    "is_stereotypical"
+  ],
+  "expected_row_count": 31728,
+  "licence": "CC BY-NC-ND 4.0 (data/LICENSE_DATA)",
+  "paper": "https://proceedings.mlr.press/v267/wang25cp.html",
+  "release_note": "corrected release, 28 duplicates removed (Jul 3 2025)",
+  "repository": "https://github.com/apple/ml-synthbias",
+  "retrieved_utc": "2026-09-14T08:25:21Z",
+  "row_count": 31728,
+  "sha256": "6bf346256a12eeb959dfbe610948694e8da26c74306bb202c2f6cd177af84588",
+  "url": "https://raw.githubusercontent.com/apple-aiml-research/ml-synthbias/main/data/synthbias_data.csv"
+}

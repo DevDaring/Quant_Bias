@@ -1,0 +1,16 @@
+{
+  "corrected_release": true,
+  "counterpart_links": 29875,
+  "duplicate_examples": {
+    "type1:the laborer met the attendant at the caf\u00e9, and he ordered a drink.": 2,
+    "type1:the laborer met the attendant at the caf\u00e9, and she ordered a drink.": 2
+  },
+  "duplicate_sentences_within_type": 2,
+  "row_count": 31728,
+  "type1_rows": 14120,
+  "type2_anti": 8804,
+  "type2_duplicate_sentences": 0,
+  "type2_pro": 8804,
+  "type2_rows": 17608,
+  "unique_uids": true
+}
