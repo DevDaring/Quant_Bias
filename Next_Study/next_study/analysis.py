@@ -157,11 +157,16 @@ def secondary(dense: list[dict], comp: list[dict], rows_by_uid: dict[str, dict])
             d2, c2 = cd[cp]
             pairs += 1
             consistent += (d["pred"] != c["pred"]) == (d2["pred"] != c2["pred"])
-    # mean-rule outcomes
-    C = [i for i, d in enumerate(dense) if d["correct_mean_rule"]]
+    # mean-rule outcomes (derived from the stored mean log-probabilities when a record lacks the fields)
+    def mean_pred(r):
+        if "pred_mean_rule" in r:
+            return r["pred_mean_rule"]
+        g = r["gold_position"]; mm = r["logprob_mean"][g] - r["logprob_mean"][1 - g]
+        return g if mm > 0 else (1 - g if mm < 0 else r["pred"])
+    C = [i for i, d in enumerate(dense) if mean_pred(d) == d["gold_position"]]
     Ca = [i for i in C if dense[i]["stereo"] == "anti"]
-    mean_rule = {"D_task": sum(not comp[i]["correct_mean_rule"] for i in C) / len(C) if C else None,
-                 "D_stereo": sum(comp[i]["pred_mean_rule"] == 1 - dense[i]["gold_position"] for i in Ca) / len(Ca) if Ca else None}
+    mean_rule = {"D_task": sum(mean_pred(comp[i]) != dense[i]["gold_position"] for i in C) / len(C) if C else None,
+                 "D_stereo": sum(mean_pred(comp[i]) == 1 - dense[i]["gold_position"] for i in Ca) / len(Ca) if Ca else None}
     return {"decision_change_rate": change, "beneficial_anti_transitions": int(beneficial), "n_anti_dense_wrong": len(anti_wrong),
             "net_accuracy_change": acc_c - acc_d, "mean_abs_margin_change": float(dm.mean()), "median_abs_margin_change": float(np.median(dm)),
             "counterpart_pairs": pairs, "counterpart_consistency": consistent / pairs if pairs else None, "mean_rule": mean_rule}

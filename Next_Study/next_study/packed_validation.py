@@ -124,10 +124,13 @@ def score_packed(key: str, ckpt: Path, rows: Sequence[S.Row], template: str, bat
     recs = []
     for s, e in zip(scored, ex):
         r = by[s.uid]; g = e.label; o = 1 - g
+        mm = s.logprob_mean[g] - s.logprob_mean[o]
+        pred_mean = g if mm > 0 else (o if mm < 0 else s.pred)
         recs.append({"uid": s.uid, "cluster": r.cluster, "split": r.split, "type": r.type, "stereo": r.stereo,
                      "pronoun": r.pronoun.lower(), "template": template, "model": key, "condition": "packed_gptq4",
                      "gold_position": g, "pred": s.pred, "correct": bool(s.pred == g), "pred_other": bool(s.pred == o),
-                     "margin_sum": s.logprob_sum[g] - s.logprob_sum[o], "margin_mean": s.logprob_mean[g] - s.logprob_mean[o],
+                     "margin_sum": s.logprob_sum[g] - s.logprob_sum[o], "margin_mean": mm,
+                     "pred_mean_rule": pred_mean, "correct_mean_rule": bool(pred_mean == g),
                      "logprob_sum": s.logprob_sum, "logprob_mean": s.logprob_mean, "n_tokens": s.n_tokens,
                      "boundary_mismatch": s.boundary_mismatch})
     # perplexity on the completed study's utility corpus
