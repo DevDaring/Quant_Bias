@@ -1,0 +1,12 @@
+[09:13:51] Loading Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218 (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7995.33it/s]
+[09:13:55]   attention: flash_attention_2
+[09:13:55]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8596.34it/s]
+[09:14:12] calibration[generic] seed=20260908: 1x512 tokens, hash=c51cd04cf85217e6
+[09:14:13]   L 0 rtn4 : amp ratio=1.259 logit ratio=1.742 pct=0.75 (2s)
+[09:14:14]   L 0 rtn8 : amp ratio=0.957 logit ratio=1.105 pct=0.12 (2s)
+[09:14:19]   L 0 gptq4: amp ratio=2.192 logit ratio=1.552 pct=1.00 (7s)
+[09:14:20]   L 5 rtn4 : amp ratio=1.319 logit ratio=1.575 pct=1.00 (8s)
+[09:14:21]   L 5 rtn8 : amp ratio=0.965 logit ratio=1.105 pct=0.44 (9s)
+[09:14:24]   L 5 gptq4: amp ratio=1.390 logit ratio=1.779 pct=0.94 (13s)
