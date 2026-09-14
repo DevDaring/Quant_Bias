@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-09-14T10:18:00Z",
+  "checked_utc": "2026-09-14T10:52:48Z",
   "checks": {
     "F-M1/dense_covers_final_split": {
       "detail": {
@@ -24,9 +24,28 @@
       "detail": null,
       "ok": true
     },
+    "F-M1/directional_all_layers": {
+      "detail": {
+        "expected": 32,
+        "found": 32
+      },
+      "ok": true
+    },
     "F-M1/directional_complete": {
       "detail": null,
-      "ok": false
+      "ok": true
+    },
+    "F-M1/directional_finite": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M1/directional_restored_exact": {
+      "detail": null,
+      "ok": true
+    },
+    "F-M1/directional_sample_size": {
+      "detail": 512,
+      "ok": true
     },
     "F-M1/gptq4_calibration_hash_recorded": {
       "detail": null,

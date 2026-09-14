@@ -1,0 +1,51 @@
+[10:27:33] Loading Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218 (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8653.28it/s]
+[10:27:36]   attention: flash_attention_2
+[10:27:36]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8329.16it/s]
+[10:27:40] F-M3: directional ladder on 512 rows, 36/36 layers to do
+[10:27:53]     gradients 64/512 (13s)
+[10:28:04]     gradients 128/512 (24s)
+[10:28:16]     gradients 192/512 (36s)
+[10:28:26]     gradients 256/512 (46s)
+[10:28:38]     gradients 320/512 (57s)
+[10:28:49]     gradients 384/512 (69s)
+[10:29:01]     gradients 448/512 (80s)
+[10:29:13]     gradients 512/512 (92s)
+[10:29:13]   gradients for 512 examples x 36 boundaries in 92s
+[10:29:22]   L 0: r=0.7865 pred_flip=0.008 obs_flip=0.010 stereo pred=0.0156 obs=0.0156 events=4 restored=True (101s)
+[10:29:33]   L 1: r=0.8408 pred_flip=0.008 obs_flip=0.012 stereo pred=0.0117 obs=0.0195 events=5 restored=True (113s)
+[10:29:46]   L 2: r=0.7989 pred_flip=0.008 obs_flip=0.010 stereo pred=0.0156 obs=0.0195 events=5 restored=True (126s)
+[10:30:02]   L 3: r=0.8772 pred_flip=0.004 obs_flip=0.006 stereo pred=0.0039 obs=0.0078 events=2 restored=True (142s)
+[10:30:21]   L 4: r=0.9045 pred_flip=0.012 obs_flip=0.014 stereo pred=0.0234 obs=0.0273 events=7 restored=True (161s)
+[10:30:42]   L 5: r=0.8482 pred_flip=0.010 obs_flip=0.012 stereo pred=0.0195 obs=0.0234 events=6 restored=True (181s)
+[10:31:05]   L 6: r=0.9002 pred_flip=0.012 obs_flip=0.014 stereo pred=0.0195 obs=0.0234 events=6 restored=True (205s)
+[10:31:30]   L 7: r=0.9064 pred_flip=0.025 obs_flip=0.021 stereo pred=0.0468 obs=0.0390 events=10 restored=True (230s)
+[10:31:58]   L 8: r=0.9194 pred_flip=0.010 obs_flip=0.008 stereo pred=0.0156 obs=0.0117 events=3 restored=True (258s)
+[10:32:28]   L 9: r=0.8927 pred_flip=0.012 obs_flip=0.006 stereo pred=0.0234 obs=0.0117 events=3 restored=True (288s)
+[10:33:01]   L10: r=0.9106 pred_flip=0.012 obs_flip=0.012 stereo pred=0.0234 obs=0.0195 events=5 restored=True (321s)
+[10:33:37]   L11: r=0.9272 pred_flip=0.016 obs_flip=0.018 stereo pred=0.0273 obs=0.0312 events=8 restored=True (356s)
+[10:34:14]   L12: r=0.9342 pred_flip=0.012 obs_flip=0.012 stereo pred=0.0156 obs=0.0156 events=4 restored=True (394s)
+[10:34:54]   L13: r=0.8870 pred_flip=0.006 obs_flip=0.006 stereo pred=0.0117 obs=0.0117 events=3 restored=True (434s)
+[10:35:36]   L14: r=0.9256 pred_flip=0.006 obs_flip=0.010 stereo pred=0.0117 obs=0.0156 events=4 restored=True (476s)
+[10:36:19]   L15: r=0.9275 pred_flip=0.004 obs_flip=0.006 stereo pred=0.0078 obs=0.0078 events=2 restored=True (519s)
+[10:37:05]   L16: r=0.9122 pred_flip=0.008 obs_flip=0.006 stereo pred=0.0117 obs=0.0117 events=3 restored=True (565s)
+[10:37:53]   L17: r=0.8898 pred_flip=0.010 obs_flip=0.008 stereo pred=0.0195 obs=0.0156 events=4 restored=True (613s)
+[10:38:44]   L18: r=0.9183 pred_flip=0.014 obs_flip=0.012 stereo pred=0.0195 obs=0.0156 events=4 restored=True (664s)
+[10:39:37]   L19: r=0.9346 pred_flip=0.004 obs_flip=0.004 stereo pred=0.0039 obs=0.0039 events=1 restored=True (717s)
+[10:40:32]   L20: r=0.9085 pred_flip=0.008 obs_flip=0.012 stereo pred=0.0156 obs=0.0195 events=5 restored=True (772s)
+[10:41:30]   L21: r=0.9282 pred_flip=0.010 obs_flip=0.006 stereo pred=0.0195 obs=0.0117 events=3 restored=True (830s)
+[10:42:31]   L22: r=0.8997 pred_flip=0.004 obs_flip=0.006 stereo pred=0.0078 obs=0.0078 events=2 restored=True (891s)
+[10:43:35]   L23: r=0.9070 pred_flip=0.002 obs_flip=0.004 stereo pred=0.0039 obs=0.0039 events=1 restored=True (955s)
+[10:44:40]   L24: r=0.8108 pred_flip=0.004 obs_flip=0.006 stereo pred=0.0078 obs=0.0078 events=2 restored=True (1020s)
+[10:45:48]   L25: r=0.6803 pred_flip=0.000 obs_flip=0.004 stereo pred=   0.0 obs=0.0039 events=1 restored=True (1088s)
+[10:46:58]   L26: r=0.5896 pred_flip=0.004 obs_flip=0.004 stereo pred=0.0078 obs=0.0039 events=1 restored=True (1158s)
+[10:48:10]   L27: r=0.7317 pred_flip=0.000 obs_flip=0.002 stereo pred=   0.0 obs=0.0039 events=1 restored=True (1230s)
+[10:49:24]   L28: r=0.6776 pred_flip=0.004 obs_flip=0.004 stereo pred=0.0078 obs=0.0039 events=1 restored=True (1304s)
+[10:50:41]   L29: r=0.7021 pred_flip=0.004 obs_flip=0.006 stereo pred=0.0078 obs=0.0078 events=2 restored=True (1381s)
+[10:51:58]   L30: r=0.5252 pred_flip=0.002 obs_flip=0.004 stereo pred=0.0039 obs=0.0039 events=1 restored=True (1457s)
+[10:53:17]   L31: r=0.6487 pred_flip=0.002 obs_flip=0.004 stereo pred=0.0039 obs=0.0039 events=1 restored=True (1536s)
+[10:54:39]   L32: r=0.6670 pred_flip=0.006 obs_flip=0.006 stereo pred=0.0117 obs=0.0078 events=2 restored=True (1619s)
+[10:56:02]   L33: r=0.7151 pred_flip=0.000 obs_flip=0.004 stereo pred=   0.0 obs=0.0039 events=1 restored=True (1701s)
+[10:57:29]   L34: r=0.6179 pred_flip=0.002 obs_flip=0.004 stereo pred=0.0039 obs=0.0039 events=1 restored=True (1789s)
+[10:59:00]   L35: r=0.8428 pred_flip=0.002 obs_flip=0.004 stereo pred=0.0039 obs=0.0039 events=1 restored=True (1880s)
