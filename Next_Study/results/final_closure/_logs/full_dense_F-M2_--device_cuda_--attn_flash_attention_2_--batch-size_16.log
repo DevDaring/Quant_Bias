@@ -1,0 +1,29 @@
+[09:40:51] Loading mistralai/Mistral-7B-Instruct-v0.3@c170c708c41dac9275d15a8fff4eca08d52bab71 (c170c708c41dac9275d15a8fff4eca08d52bab71) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 11191.89it/s]
+[09:40:54]   attention: flash_attention_2
+[09:40:54]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9066.78it/s]
+[09:41:03]   scored 2000/3480 candidate sequences
+[09:41:06]   F-M2 P1: acc=0.816 pro=0.946 anti=0.686 posgap=0.003
+[09:41:12]   scored 2000/3480 candidate sequences
+[09:41:16]   F-M2 P2: acc=0.744 pro=0.882 anti=0.606 posgap=0.091
+[09:41:19]   scored 2000/3480 candidate sequences
+[09:41:22]   F-M2 P3: acc=0.815 pro=0.916 anti=0.714 posgap=0.007
+[09:41:22]   F-M2: selected P3
+[09:41:27]   scored 2000/7052 candidate sequences
+[09:41:30]   scored 4000/7052 candidate sequences
+[09:41:34]   scored 6000/7052 candidate sequences
+[09:41:43]   scored 2000/24684 candidate sequences
+[09:41:46]   scored 4000/24684 candidate sequences
+[09:41:50]   scored 6000/24684 candidate sequences
+[09:41:53]   scored 8000/24684 candidate sequences
+[09:41:57]   scored 10000/24684 candidate sequences
+[09:42:01]   scored 12000/24684 candidate sequences
+[09:42:04]   scored 14000/24684 candidate sequences
+[09:42:08]   scored 16000/24684 candidate sequences
+[09:42:12]   scored 18000/24684 candidate sequences
+[09:42:15]   scored 20000/24684 candidate sequences
+[09:42:19]   scored 22000/24684 candidate sequences
+[09:42:23]   scored 24000/24684 candidate sequences
+[09:42:29]   scored 2000/2000 candidate sequences
+[09:42:29]   F-M2: order-swap audit changed 0/1000 (0.000%)

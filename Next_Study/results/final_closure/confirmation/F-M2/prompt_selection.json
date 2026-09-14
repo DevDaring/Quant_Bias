@@ -1,0 +1,59 @@
+{
+  "model": "F-M2",
+  "ranking": [
+    "P3",
+    "P1",
+    "P2"
+  ],
+  "rule": [
+    "max min(pro,anti) accuracy",
+    "min |position gap|",
+    "max accuracy",
+    "lowest template id"
+  ],
+  "stats": {
+    "P1": {
+      "acc_anti": 0.6862068965517242,
+      "acc_pos0": 0.8148148148148148,
+      "acc_pos1": 0.817432273262662,
+      "acc_pro": 0.9459770114942528,
+      "accuracy": 0.8160919540229885,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.6862068965517242,
+      "n": 1740,
+      "n_anti": 870,
+      "n_anti_correct": 597,
+      "n_pro": 870,
+      "position_gap": 0.0026174584478472207
+    },
+    "P2": {
+      "acc_anti": 0.6057471264367816,
+      "acc_pos0": 0.6992143658810326,
+      "acc_pos1": 0.790341578327444,
+      "acc_pro": 0.8816091954022989,
+      "accuracy": 0.7436781609195402,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.6057471264367816,
+      "n": 1740,
+      "n_anti": 870,
+      "n_anti_correct": 527,
+      "n_pro": 870,
+      "position_gap": 0.09112721244641142
+    },
+    "P3": {
+      "acc_anti": 0.7137931034482758,
+      "acc_pos0": 0.8114478114478114,
+      "acc_pos1": 0.8186101295641932,
+      "acc_pro": 0.9160919540229885,
+      "accuracy": 0.8149425287356322,
+      "boundary_mismatch_rate": 0.0,
+      "min_pro_anti": 0.7137931034482758,
+      "n": 1740,
+      "n_anti": 870,
+      "n_anti_correct": 621,
+      "n_pro": 870,
+      "position_gap": 0.007162318116381794
+    }
+  },
+  "template": "P3"
+}

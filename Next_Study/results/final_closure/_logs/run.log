@@ -108,3 +108,6 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_09:38:30] skip full/dense/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16 (already ok)
 [2026-09-14_09:38:30] >>> full/dense/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16
 [2026-09-14_09:40:40] <<< full/dense/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 130s
+[2026-09-14_09:40:49]   pushed full/dense/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_09:40:49] >>> full/dense/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16
+[2026-09-14_09:42:29] <<< full/dense/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16 ok in 100s
