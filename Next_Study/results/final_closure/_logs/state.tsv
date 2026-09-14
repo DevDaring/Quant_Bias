@@ -4,3 +4,4 @@ smoke/dense/F-M2/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	95s
 smoke/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8	ok	41s
 smoke/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn4	ok	41s
 smoke/quant/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/gptq4	ok	170s
+smoke/quant/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16/--condition/rtn8	ok	45s

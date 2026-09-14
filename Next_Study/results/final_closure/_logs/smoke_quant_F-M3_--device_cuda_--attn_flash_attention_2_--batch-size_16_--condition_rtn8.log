@@ -1,0 +1,5 @@
+[09:03:17] Loading Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218 (b968826d9c46dd6066d109eabc6255188de91218) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8492.52it/s]
+[09:03:20]   attention: flash_attention_2
+[09:03:20]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 6778.76it/s]
