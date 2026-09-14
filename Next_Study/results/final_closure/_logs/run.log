@@ -93,3 +93,5 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
     [09:31:38] VALIDATE_FINAL_CLOSURE FAIL: 77 ok, 2 failed
     [09:31:38]   FAIL stage_status_present: None
     [09:31:38]   FAIL analysis_present: None
+[2026-09-14_09:31:45]   pushed smoke/validate/-/--models/F-M1/F-M2/F-M3
+[2026-09-14_09:31:45] ===== COMPLETE: 18 ok, 2 failed =====
