@@ -59,3 +59,30 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_09:25:03]   pushed smoke/packed/F-M1/--batch-size/16
 [2026-09-14_09:25:03] >>> smoke/packed/F-M3/--batch-size/16
 [2026-09-14_09:31:24] <<< smoke/packed/F-M3/--batch-size/16 ok in 381s
+[2026-09-14_09:31:31]   pushed smoke/packed/F-M3/--batch-size/16
+[2026-09-14_09:31:31] --- F7: locked analysis ---
+[2026-09-14_09:31:31] >>> smoke/analysis/-/--models/F-M1/F-M2/F-M3
+[2026-09-14_09:31:31] <<< smoke/analysis/-/--models/F-M1/F-M2/F-M3 FAILED in 0s
+    [09:31:31] confirmation analysis ...
+    Traceback (most recent call last):
+      File "<frozen runpy>", line 198, in _run_module_as_main
+      File "<frozen runpy>", line 88, in _run_code
+      File "/workspace/Quant_Bias/Next_Study/next_study/run.py", line 178, in <module>
+        main()
+      File "/workspace/Quant_Bias/Next_Study/next_study/run.py", line 174, in main
+        globals()["cmd_" + a.cmd](a)
+      File "/workspace/Quant_Bias/Next_Study/next_study/run.py", line 144, in cmd_analysis
+        A.run(root, keys, nb, nbd)
+      File "/workspace/Quant_Bias/Next_Study/next_study/analysis.py", line 556, in run
+        conf = confirmation_analysis(root, rows_by_uid, keys, n_boot)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/Next_Study/next_study/analysis.py", line 207, in confirmation_analysis
+        cond["secondary"] = secondary(d, q, rows_by_uid)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/Next_Study/next_study/analysis.py", line 163, in secondary
+        mean_rule = {"D_task": sum(not comp[i]["correct_mean_rule"] for i in C) / len(C) if C else None,
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/workspace/Quant_Bias/Next_Study/next_study/analysis.py", line 163, in <genexpr>
+        mean_rule = {"D_task": sum(not comp[i]["correct_mean_rule"] for i in C) / len(C) if C else None,
+                                       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+    KeyError: 'correct_mean_rule'
