@@ -1,0 +1,33 @@
+{
+  "H1_models": [
+    "F-M1",
+    "F-M2",
+    "F-M3"
+  ],
+  "H2_models": [
+    "F-M1",
+    "F-M2",
+    "F-M3"
+  ],
+  "H4_models": [
+    "F-M1",
+    "F-M3"
+  ],
+  "H5_models": [
+    "F-M1",
+    "F-M3"
+  ],
+  "eligible_models": [
+    "F-M1",
+    "F-M2",
+    "F-M3"
+  ],
+  "rows": {
+    "F-M2": "Instruction tuning is a boundary condition; do not average it with base checkpoints.",
+    "H4": "The directional score transfers across the two tested architecture families for general flips.",
+    "H5": "Direction provides evidence about stereotype-aligned layer sensitivity beyond hidden-state energy on F-M1, F-M3.",
+    "generalisation": "Compression-induced stereotype damage generalises from BBQ to SynthBias under the named settings.",
+    "packed/F-M1": "Report packed outcomes as the deployment result and restrict simulated conclusions to controlled mechanistic analysis.",
+    "packed/F-M3": "Report packed outcomes as the deployment result and restrict simulated conclusions to controlled mechanistic analysis."
+  }
+}

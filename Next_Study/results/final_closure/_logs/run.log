@@ -176,3 +176,7 @@ NVIDIA H100 80GB HBM3, 81559 MiB, 595.71.05
 [2026-09-14_11:28:02]   pushed full/packed/F-M1/--batch-size/16
 [2026-09-14_11:28:02] >>> full/packed/F-M3/--batch-size/16
 [2026-09-14_11:42:54] <<< full/packed/F-M3/--batch-size/16 ok in 892s
+[2026-09-14_11:43:03]   pushed full/packed/F-M3/--batch-size/16
+[2026-09-14_11:43:03] --- F7: locked analysis ---
+[2026-09-14_11:43:03] >>> full/analysis/-/--models/F-M1/F-M2/F-M3
+[2026-09-14_11:43:29] <<< full/analysis/-/--models/F-M1/F-M2/F-M3 ok in 26s

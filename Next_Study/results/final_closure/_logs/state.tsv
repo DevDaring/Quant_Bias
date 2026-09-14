@@ -36,3 +36,4 @@ full/residual/F-M1/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	380
 full/residual/F-M3/--device/cuda/--attn/flash_attention_2/--batch-size/16	ok	399s
 full/packed/F-M1/--batch-size/16	ok	926s
 full/packed/F-M3/--batch-size/16	ok	892s
+full/analysis/-/--models/F-M1/F-M2/F-M3	ok	26s

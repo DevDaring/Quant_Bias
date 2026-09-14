@@ -1,0 +1,20 @@
+{
+  "F-M1/dense": "VALID_COMPLETE",
+  "F-M1/directional": "VALID_COMPLETE",
+  "F-M1/gptq4": "VALID_COMPLETE",
+  "F-M1/packed_gptq4": "VALID_COMPLETE",
+  "F-M1/residual_controls": "VALID_COMPLETE",
+  "F-M1/rtn4": "VALID_COMPLETE",
+  "F-M1/rtn8": "VALID_COMPLETE",
+  "F-M2/dense": "VALID_COMPLETE",
+  "F-M2/gptq4": "VALID_COMPLETE",
+  "F-M2/rtn4": "VALID_COMPLETE",
+  "F-M2/rtn8": "VALID_COMPLETE",
+  "F-M3/dense": "VALID_COMPLETE",
+  "F-M3/directional": "VALID_COMPLETE",
+  "F-M3/gptq4": "VALID_COMPLETE",
+  "F-M3/packed_gptq4": "VALID_COMPLETE",
+  "F-M3/residual_controls": "VALID_COMPLETE",
+  "F-M3/rtn4": "VALID_COMPLETE",
+  "F-M3/rtn8": "VALID_COMPLETE"
+}
