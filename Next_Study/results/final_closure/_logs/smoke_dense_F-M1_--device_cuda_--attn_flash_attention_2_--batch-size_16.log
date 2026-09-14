@@ -1,0 +1,11 @@
+[08:53:13] Loading mistralai/Mistral-7B-v0.1@27d67f1b5f57dc0953326b2601d68371d40ea8da (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:46<00:46, 46.95s/it]Fetching 2 files: 100%|██████████| 2/2 [01:23<00:00, 40.73s/it]Fetching 2 files: 100%|██████████| 2/2 [01:23<00:00, 41.66s/it]
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 8533.17it/s]
+[08:54:49]   attention: flash_attention_2
+[08:54:49]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9287.06it/s]
+[08:54:52]   F-M1 P1: acc=0.812 pro=0.938 anti=0.688 posgap=0.102
+[08:54:52]   F-M1 P2: acc=0.656 pro=0.938 anti=0.375 posgap=0.106
+[08:54:53]   F-M1 P3: acc=0.625 pro=0.938 anti=0.312 posgap=0.078
+[08:54:53]   F-M1: selected P1
+[08:54:53]   F-M1: order-swap audit changed 0/32 (0.000%)
