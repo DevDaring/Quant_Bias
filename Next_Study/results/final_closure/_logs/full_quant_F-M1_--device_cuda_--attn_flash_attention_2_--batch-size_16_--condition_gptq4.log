@@ -1,0 +1,50 @@
+[09:45:56] Loading mistralai/Mistral-7B-v0.1@27d67f1b5f57dc0953326b2601d68371d40ea8da (27d67f1b5f57dc0953326b2601d68371d40ea8da) dtype=torch.bfloat16 device=cuda
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 10505.34it/s]
+[09:45:58]   attention: flash_attention_2
+[09:45:58]   flash_attention_2 failed a forward pass (NotImplementedError); reloading with sdpa
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 10545.92it/s]
+[09:46:14] calibration[generic] seed=20260908: 128x512 tokens, hash=905970a5ebc93504
+[09:46:20]   GPTQ layer 0: 7 components
+[09:46:25]   GPTQ layer 1: 7 components
+[09:46:30]   GPTQ layer 2: 7 components
+[09:46:35]   GPTQ layer 3: 7 components
+[09:46:40]   GPTQ layer 4: 7 components
+[09:46:45]   GPTQ layer 5: 7 components
+[09:46:50]   GPTQ layer 6: 7 components
+[09:46:54]   GPTQ layer 7: 7 components
+[09:46:59]   GPTQ layer 8: 7 components
+[09:47:04]   GPTQ layer 9: 7 components
+[09:47:09]   GPTQ layer 10: 7 components
+[09:47:14]   GPTQ layer 11: 7 components
+[09:47:18]   GPTQ layer 12: 7 components
+[09:47:23]   GPTQ layer 13: 7 components
+[09:47:28]   GPTQ layer 14: 7 components
+[09:47:33]   GPTQ layer 15: 7 components
+[09:47:37]   GPTQ layer 16: 7 components
+[09:47:42]   GPTQ layer 17: 7 components
+[09:47:47]   GPTQ layer 18: 7 components
+[09:47:52]   GPTQ layer 19: 7 components
+[09:47:57]   GPTQ layer 20: 7 components
+[09:48:02]   GPTQ layer 21: 7 components
+[09:48:06]   GPTQ layer 22: 7 components
+[09:48:11]   GPTQ layer 23: 7 components
+[09:48:16]   GPTQ layer 24: 7 components
+[09:48:21]   GPTQ layer 25: 7 components
+[09:48:26]   GPTQ layer 26: 7 components
+[09:48:30]   GPTQ layer 27: 7 components
+[09:48:35]   GPTQ layer 28: 7 components
+[09:48:40]   GPTQ layer 29: 7 components
+[09:48:45]   GPTQ layer 30: 7 components
+[09:48:50]   GPTQ layer 31: 7 components
+[09:48:56]   scored 2000/24684 candidate sequences
+[09:48:59]   scored 4000/24684 candidate sequences
+[09:49:02]   scored 6000/24684 candidate sequences
+[09:49:06]   scored 8000/24684 candidate sequences
+[09:49:09]   scored 10000/24684 candidate sequences
+[09:49:13]   scored 12000/24684 candidate sequences
+[09:49:16]   scored 14000/24684 candidate sequences
+[09:49:20]   scored 16000/24684 candidate sequences
+[09:49:24]   scored 18000/24684 candidate sequences
+[09:49:27]   scored 20000/24684 candidate sequences
+[09:49:31]   scored 22000/24684 candidate sequences
+[09:49:35]   scored 24000/24684 candidate sequences
